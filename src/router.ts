@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import PostList from "@/views/PostList.vue";
 import posts from "@/posts";
+import PostList from "@/views/PostList.vue";
 
 export const routes = [
   {
