@@ -11,7 +11,7 @@ import NavBar from "@/components/NavBar.vue";
 <style lang="scss">
 @font-face {
   font-family: "Open Sans Regular";
-  src: url("@/assets/opensans-regular.ttf") format("truetype");
+  src: url("@/assets/fonts/opensans-regular.ttf") format("truetype");
 }
 * {
   font-family: "Open Sans Regular";
