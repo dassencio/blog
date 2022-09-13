@@ -1,0 +1,11 @@
+@use "sass:math";
+
+// Strip unit from input value and convert it to a number (e.g. "10px" --> 10).
+@function stripUnit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+// Convert input values in px to rem (e.g. "32px" --> 2rem).
+@function rem($pxValue) {
+  @return math.div(stripUnit($pxValue), 16) * 1rem;
+}
