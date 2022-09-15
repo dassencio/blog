@@ -9,3 +9,6 @@
 @function rem($pxValue) {
   @return math.div(stripUnit($pxValue), 16) * 1rem;
 }
+
+$view-paragraph-font-size: rem(16px);
+$view-paragraph-line-height: 1.6;
