@@ -18,14 +18,14 @@ const props = defineProps<{
 
 <style scoped lang="scss">
 .header {
-  margin-bottom: 1.5 * $base-length;
+  margin-bottom: $view-header-margin-bottom;
   &__title {
     color: $view-title-color;
-    font-size: 1.6 * $base-length;
-    line-height: 2.1 * $base-length;
+    font-size: $view-title-font-size;
+    line-height: fontSizeToLineHeight($view-title-font-size);
   }
   &__separator {
-    margin: (0.5 * $base-length) 0;
+    margin: $view-post-details-vertical-margin 0;
   }
 }
 </style>

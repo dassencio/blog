@@ -25,19 +25,19 @@ defineProps<{
 .details {
   align-items: center;
   display: flex;
-  flex-wrap: wrap-reverse;
-  font-size: 0.8 * $base-length;
-  gap: (0.5 * $base-length) $base-length;
+  flex-wrap: wrap;
+  font-size: $view-post-details-font-size;
+  gap: $view-post-details-vertical-margin $view-post-details-horizontal-gap;
   &__labels {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.3 * $base-length;
+    gap: $view-label-space-around;
   }
   &__label {
     background-color: $view-label-background-color-normal;
-    border-radius: 0.6 * $base-length;
+    border-radius: $view-label-border-radius;
     color: $view-text-color-normal !important;
-    padding: (0.2 * $base-length) (0.5 * $base-length);
+    padding: $view-label-vertical-padding $view-label-horizontal-padding;
     text-decoration: none !important;
     &:active,
     &:focus,

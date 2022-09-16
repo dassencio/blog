@@ -14,7 +14,7 @@ function onNavLogoClick() {
 .logo {
   color: $nav-bar-logo-color-normal;
   font-family: "Open Sans Light";
-  font-size: 2 * $base-length;
+  font-size: $nav-bar-logo-font-size;
   text-decoration: none;
   &:active,
   &:focus,

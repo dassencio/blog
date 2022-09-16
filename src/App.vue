@@ -20,14 +20,14 @@ const post = computed(() => posts.find((post) => post.id === route.name));
 <style scoped lang="scss">
 .view {
   color: $view-text-color-normal;
-  font-size: $base-length;
   margin: 0 auto;
   max-width: 100%;
-  padding: (3.5 * $base-length) $base-length;
+  padding: $view-content-vertical-padding $content-horizontal-padding;
   width: $desktop-width-mode;
   :deep(p) {
+    font-size: $view-paragraph-font-size;
     line-height: $view-paragraph-line-height;
-    margin: $base-length 0;
+    margin: $view-paragraph-vertical-margin 0;
     text-align: left;
     @media (min-width: $desktop-width-mode) {
       text-align: justify;

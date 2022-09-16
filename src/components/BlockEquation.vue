@@ -14,16 +14,16 @@ defineProps<{
 
 <style scoped lang="scss">
 .equation {
+  /*
+   * Equations need extra margin to account for paragraph line height,
+   * otherwise they appear too close to the paragraphs above and below.
+   */
+  margin: $view-block-equation-vertical-margin 0 !important;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
   :deep(mjx-container[display="true"]) {
-    margin: 0 !important;
-    /*
-     * Add extra padding to account for paragraph line height. Without this
-     * correction, equations appear too close to the paragraphs above and below.
-     */
-    padding: (0.5 * ($view-paragraph-line-height - 1) * $base-length) 0 !important;
+    margin: 0;
   }
 }
 </style>

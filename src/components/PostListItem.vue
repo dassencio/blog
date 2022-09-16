@@ -21,11 +21,11 @@ defineProps<{
   list-style: none;
   &__title {
     display: block;
-    font-size: 1.25 * $base-length;
-    line-height: 1.75 * $base-length;
+    font-size: $view-subtitle-font-size;
+    line-height: fontSizeToLineHeight($view-subtitle-font-size);
   }
   &__details {
-    margin-top: 0.5 * $base-length;
+    margin: $view-post-details-vertical-margin 0;
   }
 }
 </style>

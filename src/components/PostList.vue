@@ -32,16 +32,16 @@ const matchingPosts = computed(() => {
 
 <style scoped lang="scss">
 .header {
-  margin-bottom: 2.5 * $base-length;
+  margin-bottom: $view-header-margin-bottom;
   &__title {
     color: $view-title-color;
-    font-size: 2 * $base-length;
-    line-height: 2.5 * $base-length;
+    font-size: $view-title-font-size;
+    line-height: fontSizeToLineHeight($view-title-font-size);
   }
 }
 .post-list {
   &__item {
-    margin-top: 1.5 * $base-length;
+    margin-top: $view-subtitle-font-size;
   }
 }
 </style>

@@ -24,11 +24,11 @@ import NavBarLogo from "./NavBarLogo.vue";
   &__content {
     align-items: center;
     display: flex;
-    height: 5 * $base-length;
+    height: $nav-bar-height;
     justify-content: space-between;
     margin: 0 auto;
     max-width: 100%;
-    padding: 0 $base-length;
+    padding: 0 $content-horizontal-padding;
     width: $desktop-width-mode;
   }
 }
