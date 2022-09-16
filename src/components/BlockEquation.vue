@@ -13,8 +13,6 @@ defineProps<{
 </script>
 
 <style scoped lang="scss">
-$base-length: $view-paragraph-font-size;
-
 .equation {
   max-width: 100%;
   overflow-x: auto;

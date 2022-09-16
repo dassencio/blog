@@ -10,6 +10,9 @@
   @return math.div(stripUnit($pxValue), 16) * 1rem;
 }
 
+// Primary unit of length.
+$base-length: rem(16px);
+
 // Fonts.
 @font-face {
   font-family: "Open Sans Regular";
@@ -45,7 +48,7 @@ $view-label-background-color-active: #dddddd;
 $view-label-background-color-normal: #e8e8e8;
 $view-link-color-active: #247aca;
 $view-link-color-normal: #0000ff;
-$view-paragraph-font-size: rem(16px);
+$view-paragraph-font-size: $base-length;
 $view-paragraph-line-height: 1.6;
 $view-separator-primary-color: #a8a8a8;
 $view-separator-secondary-color: #e8e8e8;

@@ -11,8 +11,6 @@ function onNavLogoClick() {
 </script>
 
 <style scoped lang="scss">
-$base-length: $view-paragraph-font-size;
-
 .logo {
   color: $nav-bar-logo-color-normal;
   font-family: "Open Sans Light";

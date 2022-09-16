@@ -22,8 +22,6 @@ defineProps<{
 </script>
 
 <style scoped lang="scss">
-$base-length: $view-paragraph-font-size;
-
 .details {
   align-items: center;
   display: flex;

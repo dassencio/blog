@@ -18,8 +18,6 @@ const post = computed(() => posts.find((post) => post.id === route.name));
 </script>
 
 <style scoped lang="scss">
-$base-length: $view-paragraph-font-size;
-
 .view {
   color: $view-text-color-normal;
   font-size: $base-length;

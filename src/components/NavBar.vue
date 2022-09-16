@@ -18,8 +18,6 @@ import NavBarLogo from "./NavBarLogo.vue";
 </script>
 
 <style scoped lang="scss">
-$base-length: $view-paragraph-font-size;
-
 .header {
   background-color: $nav-bar-background-color;
   border-bottom: rem(1px) solid $nav-bar-separator-color;

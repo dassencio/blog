@@ -31,8 +31,6 @@ const matchingPosts = computed(() => {
 </script>
 
 <style scoped lang="scss">
-$base-length: $view-paragraph-font-size;
-
 .header {
   margin-bottom: 2.5 * $base-length;
   &__title {

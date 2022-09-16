@@ -6,8 +6,6 @@
 </template>
 
 <style scoped lang="scss">
-$base-length: $view-paragraph-font-size;
-
 .separator {
   display: block;
   &__top-line {
