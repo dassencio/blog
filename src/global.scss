@@ -10,7 +10,7 @@
   @return math.div(stripUnit($pxValue), 16) * 1rem;
 }
 
-// Computes the line height for a given font size.
+// Compute the line height for a given font size.
 @function fontSizeToLineHeight($fontSize) {
   @return $fontSize + (0.5 * $base-length);
 }
