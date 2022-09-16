@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import NavBarIcon from "@/components/NavBarIcon.vue";
-import NavBarLogo from "./NavBarLogo.vue";
+import NavBarLogo from "@/components/NavBarLogo.vue";
 import linkedInLogo from "@/assets/images/linkedin.svg";
 </script>
 

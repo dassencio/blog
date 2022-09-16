@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import type { Post } from "@/types";
-import PostDetails from "./PostDetails.vue";
+import PostDetails from "@/components/PostDetails.vue";
 
 defineProps<{
   post: Post;
