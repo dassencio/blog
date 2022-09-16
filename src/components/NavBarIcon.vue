@@ -1,6 +1,6 @@
 <template>
   <a class="icon" :href="url"
-    ><img :alt="name" class="icon__image" :src="image"
+    ><img class="icon__image" :alt="name" :src="image"
   /></a>
 </template>
 
