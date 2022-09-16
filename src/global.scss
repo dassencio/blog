@@ -10,6 +10,27 @@
   @return math.div(stripUnit($pxValue), 16) * 1rem;
 }
 
+// Fonts.
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("@/assets/fonts/opensans-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("@/assets/fonts/opensans-light.ttf") format("truetype");
+}
+
+// Global styling.
+* {
+  font-family: "Open Sans Regular";
+  font-weight: normal;
+  line-height: 1;
+}
+html {
+  background-color: white;
+  height: 100%;
+}
+
 // General styling.
 $desktop-width-mode: rem(720px);
 
