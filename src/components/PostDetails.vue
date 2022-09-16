@@ -36,9 +36,9 @@ defineProps<{
   &__label {
     background-color: $view-label-background-color-normal;
     border-radius: $view-label-border-radius;
-    color: $view-text-color-normal !important;
+    color: $view-text-color-normal;
     padding: $view-label-vertical-padding $view-label-horizontal-padding;
-    text-decoration: none !important;
+    text-decoration: none;
     &:active,
     &:focus,
     &:hover {

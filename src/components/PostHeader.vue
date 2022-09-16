@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h1 class="header__title">{{ props.post.title }}</h1>
+    <h1 class="header__title">{{ post.title }}</h1>
     <PostHeaderSeparator class="header__separator" />
     <PostDetails :post="post" />
   </header>
@@ -11,7 +11,7 @@ import PostDetails from "@/components/PostDetails.vue";
 import PostHeaderSeparator from "@/components/PostHeaderSeparator.vue";
 import type { Post } from "@/types";
 
-const props = defineProps<{
+defineProps<{
   post: Post;
 }>();
 </script>
