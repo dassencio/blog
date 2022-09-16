@@ -6,7 +6,7 @@
         class="details__label"
         v-for="label in post.labels"
         :key="label"
-        :to="`/?label=${label}`"
+        :to="{ name: 'post-list', query: { label } }"
         >{{ label }}</RouterLink
       >
     </div>

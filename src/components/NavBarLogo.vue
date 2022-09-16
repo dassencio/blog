@@ -1,5 +1,5 @@
 <template>
-  <RouterLink class="logo" @click="onNavLogoClick" to="/"
+  <RouterLink class="logo" @click="onNavLogoClick" :to="{ name: 'post-list' }"
     >Diego Assencio
   </RouterLink>
 </template>
