@@ -19,6 +19,8 @@ import NavBar from "@/components/NavBar.vue";
 }
 * {
   font-family: "Open Sans Regular";
+  font-weight: normal;
+  line-height: 1;
 }
 html {
   background-color: white;
