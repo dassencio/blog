@@ -18,7 +18,7 @@ defineProps<{
    * Equations need extra margin to account for paragraph line height,
    * otherwise they appear too close to the paragraphs above and below.
    */
-  margin: $view-block-equation-vertical-margin 0 !important;
+  margin: $view-block-equation-vertical-margin 0;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;

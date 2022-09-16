@@ -54,24 +54,3 @@ $view-subtitle-font-size: 1.2 * $base-length;
 $view-text-color-normal: #2f2f2f;
 $view-title-color: #0000bb;
 $view-title-font-size: 1.6 * $base-length;
-
-// Fonts.
-@font-face {
-  font-family: "Open Sans Regular";
-  src: url("@/assets/fonts/opensans-regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Open Sans Light";
-  src: url("@/assets/fonts/opensans-light.ttf") format("truetype");
-}
-
-// Global styling.
-* {
-  font-family: "Open Sans Regular";
-  font-weight: normal;
-  line-height: 1;
-}
-html {
-  background-color: white;
-  height: 100%;
-}
