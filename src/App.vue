@@ -13,6 +13,10 @@ import NavBar from "@/components/NavBar.vue";
   font-family: "Open Sans Regular";
   src: url("@/assets/fonts/opensans-regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("@/assets/fonts/opensans-light.ttf") format("truetype");
+}
 * {
   font-family: "Open Sans Regular";
 }

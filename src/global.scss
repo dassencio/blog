@@ -10,5 +10,14 @@
   @return math.div(stripUnit($pxValue), 16) * 1rem;
 }
 
+// General styling.
+$desktop-width-mode: rem(720px);
+
+// Styling for navigation bar.
+$nav-bar-background-color: #f5f5f5;
+$nav-bar-logo-color-active: #2f2f2f;
+$nav-bar-logo-color-normal: #959595;
+$nav-bar-separator-color: #c0c0c0;
+
 $view-paragraph-font-size: rem(16px);
 $view-paragraph-line-height: 1.6;
