@@ -26,6 +26,7 @@ $desktop-width-mode: 45 * $base-length;
 $nav-bar-background-color: #f5f5f5;
 $nav-bar-height: 5 * $base-length;
 $nav-bar-icon-border-radius: 0.4 * $base-length;
+$nav-bar-icon-filter: grayscale(1) opacity(0.2);
 $nav-bar-icon-width: 2.75 * $base-length;
 $nav-bar-logo-color-active: #2f2f2f;
 $nav-bar-logo-color-normal: #959595;

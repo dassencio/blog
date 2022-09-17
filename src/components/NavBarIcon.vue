@@ -13,7 +13,7 @@ defineProps<{
 <style scoped lang="scss">
 .icon {
   border-radius: $nav-bar-icon-border-radius;
-  filter: grayscale(1) opacity(0.2);
+  filter: $nav-bar-icon-filter;
   width: $nav-bar-icon-width;
   &:active,
   &:focus,
