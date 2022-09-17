@@ -8,8 +8,8 @@
 </template>
 
 <script setup lang="ts">
-import type { Post } from "@/types";
 import PostDetails from "@/components/PostDetails.vue";
+import type { Post } from "@/types";
 
 defineProps<{
   post: Post;
