@@ -1,13 +1,18 @@
 <template>
   <p class="equation">
-    $${{ boxed ? "\\boxed{" : "" }}
+    $$
+    {{ boxed ? "\\boxed{" : "" }}
+    {{ align ? "\\begin{align}" : "" }}
     <slot></slot>
-    {{ boxed ? "}" : "" }}$$
+    {{ align ? "\\end{align}" : "" }}
+    {{ boxed ? "}" : "" }}
+    $$
   </p>
 </template>
 
 <script setup lang="ts">
 defineProps<{
+  align?: boolean;
   boxed?: boolean;
 }>();
 </script>
