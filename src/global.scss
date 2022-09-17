@@ -1,16 +1,16 @@
 @use "sass:math";
 
-// Strip unit from input value and convert it to a number (e.g. "10px" --> 10).
+// Strips unit from input value (e.g. stripUnit(10px) --> 10).
 @function stripUnit($value) {
   @return math.div($value, ($value * 0 + 1));
 }
 
-// Convert input values in px to rem (e.g. "32px" --> 2rem).
+// Converts input values in px to rem (e.g. rem(32px) --> 2rem).
 @function rem($pxValue) {
   @return math.div(stripUnit($pxValue), 16) * 1rem;
 }
 
-// Compute the line height for a given font size.
+// Computes the line height for a given font size.
 @function fontSizeToLineHeight($fontSize) {
   @return $fontSize + (0.5 * $base-length);
 }
@@ -33,7 +33,7 @@ $nav-bar-logo-color-normal: #959595;
 $nav-bar-logo-font-size: 2 * $base-length;
 $nav-bar-separator-color: #c0c0c0;
 
-// Styling for page view area.
+// Styling for main view area.
 $view-block-equation-vertical-margin: 1.3 * $base-length;
 $view-content-vertical-padding: 3.5 * $base-length;
 $view-header-margin-bottom: 1.75 * $base-length;
