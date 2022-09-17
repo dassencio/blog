@@ -1,7 +1,5 @@
 <template>
-  <a class="icon" :href="url"
-    ><img class="icon__image" :alt="name" :src="image"
-  /></a>
+  <a :href="url"><img class="icon" :alt="name" :src="image" /></a>
 </template>
 
 <script setup lang="ts">
@@ -13,18 +11,14 @@ defineProps<{
 </script>
 
 <style scoped lang="scss">
-$base-width: $view-paragraph-font-size;
-
 .icon {
+  border-radius: $nav-bar-icon-border-radius;
   filter: grayscale(1) opacity(0.2);
+  width: $nav-bar-icon-width;
   &:active,
   &:focus,
   &:hover {
     filter: none;
-  }
-  &__image {
-    border-radius: 0.4 * $base-width;
-    width: 2.75 * $base-width;
   }
 }
 </style>
