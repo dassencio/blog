@@ -23,13 +23,15 @@
   </p>
 
   <BlockEquation>
-    P(A|B) := \frac{P(A \cap B)}{P(B)} \Longrightarrow P(A \cap B) = P(A|B)P(B)
+    P(A|B) \coloneqq \frac{P(A \cap B)}{P(B)} \Longrightarrow P(A \cap B) =
+    P(A|B)P(B)
   </BlockEquation>
 
-  <BlockEquation>
-    \begin{eqnarray} P(A) &amp; = &amp; P((A \cap B) \cup (A \cap B^c))
-    \nonumber\\[5pt] &amp; = &amp; P(A \cap B) + P(A \cap B^c) \nonumber\\[5pt]
-    &amp; = &amp; P(A|B)P(B) + P(A|B^c)P(B^c) \label{second_fact} \end{eqnarray}
+  <!-- prettier-ignore -->
+  <BlockEquation align>
+    P(A) &= P((A \cap B) \cup (A \cap B^c)) \nonumber\newline
+         &= P(A \cap B) + P(A \cap B^c) \nonumber\newline
+         &= P(A|B)P(B) + P(A|B^c)P(B^c) \label{second_fact}
   </BlockEquation>
 
   <p>
@@ -38,11 +40,11 @@
     B\cap A$:
   </p>
 
-  <BlockEquation>
-    \begin{eqnarray} P(B|A) &amp;=&amp; \frac{P(B \cap A)}{P(A)}
-    \nonumber\\[5pt] &amp;=&amp; \frac{P(A|B)P(B)}{P(A)} \nonumber\\[5pt]
-    &amp;=&amp; \frac{P(A|B)P(B)}{P(A|B)P(B)+ P(A|B^c)P(B^c)} \label{proof}
-    \end{eqnarray}
+  <!-- prettier-ignore -->
+  <BlockEquation align>
+    P(B|A) &= \frac{P(B \cap A)}{P(A)} \nonumber\newline
+           &= \frac{P(A|B)P(B)}{P(A)} \nonumber\newline
+           &= \frac{P(A|B)P(B)}{P(A|B)P(B) + P(A|B^c)P(B^c)}\label{proof}
   </BlockEquation>
 
   <p>
