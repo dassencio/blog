@@ -1,5 +1,6 @@
 // Global MathJax configuration.
 const mathJaxConfig = {
+  loader: { load: ["[tex]/mathtools"] },
   startup: {
     pageReady: () => (readyToRender = true),
   },
@@ -11,6 +12,7 @@ const mathJaxConfig = {
   tex: {
     displayMath: [["$$", "$$"]],
     inlineMath: [["$", "$"]],
+    packages: { "[+]": ["mathtools"] },
     tags: "all",
   },
   texReset: () => undefined,
