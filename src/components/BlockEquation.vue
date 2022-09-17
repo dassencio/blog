@@ -20,10 +20,12 @@ defineProps<{
 <style scoped lang="scss">
 .equation {
   /*
-   * Equations need extra margin to account for paragraph line height,
-   * otherwise they appear too close to the paragraphs above and below.
+   * Equations need extra padding to account for paragraph line height,
+   * otherwise they appear too close to the paragraphs above and below. Using
+   * margin instead of padding does not fix the problem since adjacent equations
+   * still appear closer to each other than adjacent text paragraphs.
    */
-  margin: $view-block-equation-vertical-margin 0;
+  padding: 0.5 * ($view-paragraph-line-height - $view-paragraph-font-size) 0;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
