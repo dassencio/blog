@@ -1,6 +1,6 @@
 <template>
   <div class="details">
-    <span class="details__date"> Posted on {{ post.date }} </span>
+    <div class="details__date">Posted on {{ post.date }}</div>
     <div class="details__labels">
       <RouterLink
         class="details__label"
