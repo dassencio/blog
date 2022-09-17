@@ -3,7 +3,7 @@
     $$
     {{ boxed ? "\\boxed{" : "" }}
     {{ align ? "\\begin{align}" : "" }}
-    <slot></slot>
+    {{ slotText }}
     {{ align ? "\\end{align}" : "" }}
     {{ boxed ? "}" : "" }}
     $$
@@ -11,10 +11,23 @@
 </template>
 
 <script setup lang="ts">
+import { computed, useSlots } from "vue";
+
 defineProps<{
   align?: boolean;
   boxed?: boolean;
 }>();
+
+const slots = useSlots();
+const slotText = computed(() => {
+  if (slots.default) {
+    return (slots.default()[0].children as string).replace(
+      /\\newline/g,
+      "\\\\[5pt]"
+    );
+  }
+  throw new Error("Equation cannot be empty.");
+});
 </script>
 
 <style scoped lang="scss">
