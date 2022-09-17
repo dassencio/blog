@@ -29,8 +29,8 @@ const routes = [
       }
     },
     component: PostList,
-    path: "/",
     name: "post-list",
+    path: "/",
   },
   ...posts.map((post) => ({
     component: post.component,
