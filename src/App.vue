@@ -44,17 +44,22 @@ p {
     text-align: justify;
   }
 }
-a,
-mjx-container a > g {
+a {
   color: $view-link-color-normal;
-  fill: $view-link-color-normal;
   text-decoration: none;
   &:active,
   &:focus,
   &:hover {
     color: $view-link-color-active;
-    fill: $view-link-color-active;
     text-decoration: underline;
+  }
+}
+mjx-container a > g {
+  fill: $view-link-color-normal;
+  &:active,
+  &:focus,
+  &:hover {
+    fill: $view-link-color-active;
   }
 }
 </style>
