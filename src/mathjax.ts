@@ -13,12 +13,8 @@ const mathJaxConfig = {
     inlineMath: [["$", "$"]],
     tags: "all",
   },
-  texReset: () => {
-    return;
-  },
-  typeset: () => {
-    return;
-  },
+  texReset: () => undefined,
+  typeset: () => undefined,
 };
 
 declare global {
