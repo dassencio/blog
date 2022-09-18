@@ -35,9 +35,9 @@
   </BlockEquation>
 
   <p>
-    where on equation \eqref{second_fact} the fact that $A \cap B$ and $A \cap
-    B^c$ are mutually exclusive events was used. Therefore, since $A\cap B =
-    B\cap A$:
+    where in equation \eqref{second_fact} the fact that $A \cap B$ and $A \cap
+    B^c$ are mutually exclusive events was used. Therefore, since $A \cap B = B
+    \cap A$:
   </p>
 
   <!-- prettier-ignore -->
