@@ -26,6 +26,10 @@ const post = computed(() => posts.find((post) => post.id === route.name));
   font-family: "Open Sans Light";
   src: url("@/assets/fonts/opensans-light.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Open Sans SemiBold";
+  src: url("@/assets/fonts/opensans-semibold.ttf") format("truetype");
+}
 * {
   font-family: "Open Sans Regular";
   font-weight: normal;
