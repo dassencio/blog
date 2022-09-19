@@ -29,8 +29,8 @@
 
   <!-- prettier-ignore -->
   <BlockEquation align>
-    P(A) &= P((A \cap B) \cup (A \cap B^c)) \nonumber\newline
-         &= P(A \cap B) + P(A \cap B^c) \nonumber\newline
+    P(A) &= P((A \cap B) \cup (A \cap B^c)) \\
+         &= P(A \cap B) + P(A \cap B^c) \\
          &= P(A|B)P(B) + P(A|B^c)P(B^c) \label{second_fact}
   </BlockEquation>
 
@@ -42,8 +42,8 @@
 
   <!-- prettier-ignore -->
   <BlockEquation align>
-    P(B|A) &= \frac{P(B \cap A)}{P(A)} \nonumber\newline
-           &= \frac{P(A|B)P(B)}{P(A)} \nonumber\newline
+    P(B|A) &= \frac{P(B \cap A)}{P(A)} \\
+           &= \frac{P(A|B)P(B)}{P(A)} \\
            &= \frac{P(A|B)P(B)}{P(A|B)P(B) + P(A|B^c)P(B^c)}\label{proof}
   </BlockEquation>
 

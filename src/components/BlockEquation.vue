@@ -13,17 +13,18 @@
 <script setup lang="ts">
 import { computed, useSlots } from "vue";
 
-defineProps<{
+const props = defineProps<{
   align?: boolean;
   boxed?: boolean;
+  numberLines?: boolean;
 }>();
 
 const slots = useSlots();
 const slotText = computed(() => {
   if (slots.default) {
     return (slots.default()[0].children as string).replace(
-      /\\newline/g,
-      "\\\\[5pt]"
+      /\\\\/g,
+      `${props.numberLines ? "" : "\\nonumber"}\\\\[5pt]`
     );
   }
   throw new Error("Equation cannot be empty.");
