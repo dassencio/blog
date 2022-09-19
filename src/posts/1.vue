@@ -65,7 +65,6 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
-import BlockEquation from "@/components/BlockEquation.vue";
 import mathjax from "@/mathjax";
 
 onMounted(() => {
