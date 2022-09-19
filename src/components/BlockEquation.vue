@@ -40,6 +40,7 @@ const slotText = computed(() => {
    * still appear closer to each other than adjacent text paragraphs.
    */
   padding: 0.5 * ($view-paragraph-line-height - $view-paragraph-font-size) 0;
+  margin-left: $view-indentation-length;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
