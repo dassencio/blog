@@ -24,7 +24,7 @@ const slotText = computed(() => {
   if (slots.default) {
     return (slots.default()[0].children as string).replace(
       /\\\\/g,
-      `${props.numberLines ? "" : "\\nonumber"}\\\\[5pt]`
+      `${props.numberLines ? "" : "\\nonumber"}\\\\[6px]`
     );
   }
   throw new Error("Equation cannot be empty.");
