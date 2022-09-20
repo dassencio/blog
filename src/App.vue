@@ -66,7 +66,7 @@ mjx-container a > g {
     fill: $view-link-color-active;
   }
 }
-strong {
+b {
   font-family: "Open Sans SemiBold";
 }
 </style>

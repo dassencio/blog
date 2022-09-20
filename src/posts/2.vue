@@ -55,11 +55,11 @@
   </ResponsiveList>
 
   <p>
-    These quantities are called the <strong>sensitivity</strong> and
-    <strong>specificity</strong> of the test respectively. Ideally, we would
-    have $P(+|D) = P(-|D^c) = 1.0$ ($100\%$), meaning the result of the test
-    would always correspond to the actual state of the subject (sick or not
-    sick). For real world tests, however, this is often not the case.
+    These quantities are called the <b>sensitivity</b> and <b>specificity</b> of
+    the test respectively. Ideally, we would have $P(+|D) = P(-|D^c) = 1.0$
+    ($100\%$), meaning the result of the test would always correspond to the
+    actual state of the subject (sick or not sick). For real world tests,
+    however, this is often not the case.
   </p>
 
   <p>
