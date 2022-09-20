@@ -3,9 +3,11 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "huizhou.githd",
+    "streetsidesoftware.code-spell-checker",
     "vue.volar"
   ],
   "settings": {
+    "cSpell.words": ["coloneqq", "eqref", "mathjax"],
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
