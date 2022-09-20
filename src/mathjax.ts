@@ -6,7 +6,7 @@ const mathJaxConfig = {
   },
   svg: {
     displayAlign: "left",
-    scale: 0.925,
+    scale: 0.9,
   },
   tex: {
     displayMath: [["$$", "$$"]],
