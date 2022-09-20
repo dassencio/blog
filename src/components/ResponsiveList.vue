@@ -11,11 +11,9 @@ const props = defineProps<{
   itemized?: boolean;
 }>();
 
-const style = computed(() => {
-  return {
-    gridTemplateColumns: props.itemized ? "auto minmax(0, 1fr)" : "1fr",
-  };
-});
+const style = computed(() => ({
+  gridTemplateColumns: props.itemized ? "auto minmax(0, 1fr)" : "1fr",
+}));
 </script>
 
 <style scoped lang="scss">
