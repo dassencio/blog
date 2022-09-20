@@ -17,15 +17,17 @@
   </p>
 
   <p>
-    Bayes' theorem is very important in the design of medical tests. To
+    Bayes' theorem is very important in the evaluation of medical tests. To
     understand why, let's start by assuming that we have a laboratory test
-    designed to detect if a subject has a certain disease. In what follows, the
-    following three events will be relevant:
+    designed to detect if a subject has a certain disease. In order to assess
+    the quality of this test, the following events will be relevant:
   </p>
 
   <ResponsiveList itemized>
     <div>$D$</div>
     <div>The subject has the disease.</div>
+    <div>$D^c$</div>
+    <div>The subject does not have the disease.</div>
     <div>$+$</div>
     <div>The laboratory test result for the subject is positive.</div>
     <div>$-$</div>
@@ -61,13 +63,14 @@
   </p>
 
   <p>
-    To better understand the relevance of a test's sensitivity and specifity,
-    suppose that our laboratory test has $P(+|D) = 0.997$, $P(-|D^c) = 0.985$
-    and $P(D) = 0.001$. For such a test, the result for a subject who has the
-    disease will be positive with probability $99.7\%$ while the test result for
-    a subject who does not have the disease will be negative with probability
-    $98.5\%$. Finally, the probability that a subject chosen randomly from the
-    population has the disease is $0.1\%$.
+    To better understand the relevance of a test's sensitivity and specificity,
+    suppose that our laboratory test has $P(+|D) = 0.997$ and $P(-|D^c) =
+    0.985$. For such a test, the result for a subject who has the disease will
+    be positive with probability $99.7\%$ while the test result for a subject
+    who does not have the disease will be negative with probability $98.5\%$.
+    Additionally, let's assume that $P(D) = 0.001$, i.e., that the probability
+    that a subject chosen randomly from the population has the disease is
+    $0.1\%$.
   </p>
 
   <p>
@@ -99,12 +102,12 @@
 
   <p>
     In this scenario, the problem arises from the fact that the fraction of the
-    population which has the disease is very small ($0.1\%$). To clarify, assume
-    we have a very large population and randomly choose $N = 1000000$
-    individuals from this population to take the test. Let $S$ be the set of
-    chosen subjects who have the disease ("sick") and let $H$ be the set of
-    chosen subjects who do not have it ("healthy"). Denoting $|S|$ and $|H|$ as
-    the number of subjects in each of these groups, we can expect that:
+    population which has the disease is very small ($0.1\%$). To illustrate why
+    this is the case, assume we have a very large population from which we
+    randomly choose $N = 1000000$ individuals to take the test. Let $S$ be the
+    set of tested subjects who have the disease ("sick") and let $H$ be the set
+    of tested subjects who do not have it ("healthy"). Denoting $|S|$ and $|H|$
+    as the number of subjects in each of these groups, we can expect that:
   </p>
 
   <BlockEquation> |S| \approx N\times P(D) = 1000 </BlockEquation>
@@ -125,13 +128,14 @@
   <BlockEquation> R^+_H \approx |H|\times P(+|D^c) = 14985 </BlockEquation>
 
   <p>
-    So $R^+_T \coloneqq R^+_H + R^+_S = 15982$ is the expected total number of
-    performed tests which will result positive. However, among the subjects who
-    tested positive, the fraction of those who actually have the disease is:
+    So $R^+_T \coloneqq R^+_H + R^+_S \approx 15982$ is the expected total
+    number of performed tests which will result positive. However, among the
+    subjects who tested positive, the fraction of those who actually have the
+    disease is:
   </p>
 
   <BlockEquation>
-    \frac{R^+_S}{R^+_T} = \frac{997}{15982} = 0.062 = P(D|+)
+    \frac{R^+_S}{R^+_T} \approx \frac{997}{15982} = 0.062 = P(D|+)
   </BlockEquation>
 
   <p>
@@ -139,10 +143,10 @@
     the subjects who have the disease, the number $|H|$ of tested subjects who
     do not have the disease being so much larger than the number $|S|$ of tested
     subjects who have it means the number of false positives of the former set
-    ($R^+_H = 14985$) greatly exceeds the number of true positives of the latter
-    set ($R^+_S = 997$). The accuracy of positive results is therefore not
-    enough to make the test appropriate for detecting whether a randomly chosen
-    subject in this population has the disease or not.
+    ($R^+_H \approx 14985$) greatly exceeds the number of true positives of the
+    latter set ($R^+_S \approx 997$). The accuracy of positive test results is
+    therefore not good enough to make the test appropriate for detecting whether
+    a randomly chosen subject in this population has the disease or not.
   </p>
 </template>
 
