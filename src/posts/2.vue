@@ -24,14 +24,14 @@
   </p>
 
   <ResponsiveList itemized>
-    <div>$D$</div>
-    <div>The subject has the disease.</div>
-    <div>$D^c$</div>
-    <div>The subject does not have the disease.</div>
-    <div>$+$</div>
-    <div>The laboratory test result for the subject is positive.</div>
-    <div>$-$</div>
-    <div>The laboratory test result for the subject is negative.</div>
+    <span>$D$</span>
+    <span>The subject has the disease.</span>
+    <span>$D^c$</span>
+    <span>The subject does not have the disease.</span>
+    <span>$+$</span>
+    <span>The laboratory test result for the subject is positive.</span>
+    <span>$-$</span>
+    <span>The laboratory test result for the subject is negative.</span>
   </ResponsiveList>
 
   <p>
@@ -42,16 +42,16 @@
   </p>
 
   <ResponsiveList itemized>
-    <div>$P(+|D)$</div>
-    <div>
+    <span>$P(+|D)$</span>
+    <span>
       Probability that the test result for a subject who has the disease is
       positive.
-    </div>
-    <div>$P(-|D^c)$</div>
-    <div>
+    </span>
+    <span>$P(-|D^c)$</span>
+    <span>
       Probability that the test result for a subject who does not have the
       disease is negative.
-    </div>
+    </span>
   </ResponsiveList>
 
   <p>
