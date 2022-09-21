@@ -36,7 +36,9 @@ const post = computed(() => posts.find((post) => post.id === route.name));
 }
 * {
   background-color: transparent;
+  color: $view-text-color-normal;
   font-family: "Open Sans Regular";
+  font-size: $view-paragraph-font-size;
   font-weight: normal;
   line-height: 1;
 }
@@ -45,7 +47,6 @@ html {
   height: 100%;
 }
 p {
-  font-size: $view-paragraph-font-size;
   line-height: $view-paragraph-line-height;
   margin: $view-paragraph-vertical-margin 0;
   text-align: left;
@@ -78,7 +79,6 @@ b {
 
 <style scoped lang="scss">
 .view {
-  color: $view-text-color-normal;
   margin: 0 auto;
   max-width: 100%;
   padding: $view-content-vertical-padding $content-horizontal-padding;
