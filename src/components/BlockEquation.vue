@@ -33,13 +33,7 @@ const slotText = computed(() => {
 
 <style scoped lang="scss">
 .equation {
-  /*
-   * Equations need extra padding to account for paragraph line height,
-   * otherwise they appear too close to the paragraphs above and below. Using
-   * margin instead of padding does not fix the problem since adjacent equations
-   * still appear closer to each other than adjacent text paragraphs.
-   */
-  padding: 0.5 * ($view-paragraph-line-height - $view-paragraph-font-size) 0;
+  padding: $view-vertical-correction-padding 0;
   margin-left: $view-indentation-length;
   max-width: 100%;
   overflow-x: auto;
