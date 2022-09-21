@@ -35,6 +35,7 @@ const post = computed(() => posts.find((post) => post.id === route.name));
   src: url("@/assets/fonts/opensans-italic.ttf") format("truetype");
 }
 * {
+  background-color: transparent;
   font-family: "Open Sans Regular";
   font-weight: normal;
   line-height: 1;
