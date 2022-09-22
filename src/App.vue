@@ -60,7 +60,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: $view-link-color-active;
+    color: $view-link-color-focus;
     text-decoration: underline;
   }
 }
@@ -69,7 +69,7 @@ mjx-container a > g {
   &:active,
   &:focus,
   &:hover {
-    fill: $view-link-color-active;
+    fill: $view-link-color-focus;
   }
 }
 b {

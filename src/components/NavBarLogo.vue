@@ -19,7 +19,7 @@ function onNavLogoClick() {
   &:active,
   &:focus,
   &:hover {
-    color: $nav-bar-logo-color-active;
+    color: $nav-bar-logo-color-focus;
   }
 }
 </style>

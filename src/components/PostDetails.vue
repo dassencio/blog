@@ -45,7 +45,7 @@ defineProps<{
     &:active,
     &:focus,
     &:hover {
-      background-color: $view-label-background-color-active;
+      background-color: $view-label-background-color-focus;
     }
   }
 }
