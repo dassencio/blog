@@ -64,12 +64,16 @@ a {
     text-decoration: underline;
   }
 }
-mjx-container a > g {
-  fill: $view-link-color-normal;
+mjx-container {
+  a > g {
+    fill: $view-link-color-normal;
+  }
   &:active,
   &:focus,
   &:hover {
-    fill: $view-link-color-focus;
+    a > g {
+      fill: $view-link-color-focus;
+    }
   }
 }
 b {
