@@ -34,10 +34,15 @@ $nav-bar-logo-font-size: 2 * $base-length;
 $nav-bar-separator-color: #c0c0c0;
 
 // Styling for main view area.
+$view-binary-option-horizontal-gap: 0.5 * $base-length;
 $view-button-background-color-focus: #dddddd;
 $view-button-background-color-normal: #e8e8e8;
 $view-button-horizontal-padding: 2 * $base-length;
 $view-button-vertical-padding: 0.75 * $base-length;
+$view-checkbox-cross-line-border-radius: 0.05 * $base-length;
+$view-checkbox-cross-line-height: 0.1 * $base-length;
+$view-checkbox-cross-line-width: 0.9 * $base-length;
+$view-checkbox-size: 1.25 * $base-length;
 $view-content-vertical-padding: 3.5 * $base-length;
 $view-form-element-border-active: rem(1px) solid #000000;
 $view-form-element-border-focus: rem(1px) solid #727272;
