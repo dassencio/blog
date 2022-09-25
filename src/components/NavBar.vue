@@ -20,7 +20,7 @@ import linkedInLogo from "@/assets/images/linkedin.svg";
 <style scoped lang="scss">
 .header {
   background-color: $nav-bar-background-color;
-  border-bottom: rem(1px) solid $nav-bar-separator-color;
+  border-bottom: $nav-bar-separator-line;
   &__content {
     align-items: center;
     display: flex;
