@@ -34,7 +34,15 @@ $nav-bar-logo-font-size: 2 * $base-length;
 $nav-bar-separator-color: #c0c0c0;
 
 // Styling for main view area.
+$view-button-background-color-focus: #dddddd;
+$view-button-background-color-normal: #e8e8e8;
+$view-button-horizontal-padding: 2 * $base-length;
+$view-button-vertical-padding: 0.75 * $base-length;
 $view-content-vertical-padding: 3.5 * $base-length;
+$view-form-element-border-active: rem(1px) solid #000000;
+$view-form-element-border-focus: rem(1px) solid #727272;
+$view-form-element-border-normal: rem(1px) solid #a8a8a8;
+$view-form-element-border-radius: 0.2 * $base-length;
 $view-header-margin-bottom: 1.75 * $base-length;
 $view-indentation-length: 1.6 * $base-length;
 $view-label-background-color-focus: #dddddd;
