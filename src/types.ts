@@ -1,6 +1,8 @@
 import type { RouteComponent } from "vue-router";
 
 export enum PostLabel {
+  Algorithms = "Algorithms",
+  Compsci = "Computer science",
   Mathematics = "Mathematics",
   Probability = "Probability theory",
   Statistics = "Statistics",

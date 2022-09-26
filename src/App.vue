@@ -84,6 +84,9 @@ mjx-container {
 b {
   font-family: "Open Sans SemiBold";
 }
+i {
+  font-family: "Open Sans Italic";
+}
 </style>
 
 <style scoped lang="scss">
