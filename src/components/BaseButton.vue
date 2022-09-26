@@ -2,10 +2,10 @@
   <button
     class="button"
     :class="buttonClass"
-    @keydown.enter="onKeyDown"
-    @keydown.space="onKeyDown"
-    @keyup.enter="onKeyUp"
-    @keyup.space="onKeyUp"
+    @keydown.enter="onPress"
+    @keydown.space="onPress"
+    @keyup.enter="onRelease"
+    @keyup.space="onRelease"
   >
     <slot></slot>
   </button>
@@ -17,10 +17,10 @@ import { ref } from "vue";
 const buttonClass = ref("");
 const emit = defineEmits(["clicked"]);
 
-function onKeyDown() {
+function onPress() {
   buttonClass.value = "active";
 }
-function onKeyUp() {
+function onRelease() {
   buttonClass.value = "";
   emit("clicked");
 }

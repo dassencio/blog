@@ -4,10 +4,10 @@
     :class="optionClass"
     tabindex="0"
     @click="onClick"
-    @keydown.enter="onKeyDown"
-    @keydown.space="onKeyDown"
-    @keyup.enter="onKeyUp"
-    @keyup.space="onKeyUp"
+    @keydown.enter="onPress"
+    @keydown.space="onPress"
+    @keyup.enter="onRelease"
+    @keyup.space="onRelease"
   >
     <span class="option__checkbox">
       <span class="option__cross-line-1"></span>
@@ -35,10 +35,10 @@ const optionClass = computed(() => ({
 function onClick() {
   toggleModelValue();
 }
-function onKeyDown() {
+function onPress() {
   checkboxActive.value = true;
 }
-function onKeyUp() {
+function onRelease() {
   checkboxActive.value = false;
   toggleModelValue();
 }
