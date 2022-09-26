@@ -43,6 +43,7 @@ const post = computed(() => posts.find((post) => post.id === route.name));
   color: $view-text-color-normal;
   font-family: "Open Sans Regular";
   font-size: $view-paragraph-font-size;
+  font-synthesis: none;
   font-weight: normal;
   line-height: 1;
 }
