@@ -1,5 +1,5 @@
 <template>
-  <label class="input" ref="input" @click="input.focus">
+  <label class="input">
     {{ label }}
     <input
       class="input__field"
@@ -11,14 +11,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-
 defineProps<{
   label: string;
   modelValue: string;
 }>();
 
-const input = ref();
 const emit = defineEmits(["update:modelValue"]);
 
 function updateValue(event: Event) {
