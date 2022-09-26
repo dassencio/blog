@@ -34,6 +34,10 @@ const post = computed(() => posts.find((post) => post.id === route.name));
   font-family: "Open Sans Italic";
   src: url("@/assets/fonts/opensans-italic.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Noto Sans Mono Regular";
+  src: url("@/assets/fonts/notosansmono-regular.ttf") format("truetype");
+}
 * {
   background-color: transparent;
   color: $view-text-color-normal;
