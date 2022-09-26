@@ -6,10 +6,10 @@
     states that:
   </p>
 
-  <BlockEquation boxed>
+  <EquationBlock boxed>
     P(B|A) = \frac{P(A|B)P(B)}{P(A)} = \frac{P(A|B)P(B)}{P(A|B)P(B)+
     P(A|B^c)P(B^c)}
-  </BlockEquation>
+  </EquationBlock>
 
   <p>
     In other words, Bayes' theorem gives us the conditional probability of $B$
@@ -22,17 +22,17 @@
     facts:
   </p>
 
-  <BlockEquation>
+  <EquationBlock>
     P(A|B) \coloneqq \frac{P(A \cap B)}{P(B)} \Longrightarrow P(A \cap B) =
     P(A|B)P(B)
-  </BlockEquation>
+  </EquationBlock>
 
   <!-- prettier-ignore -->
-  <BlockEquation align>
+  <EquationBlock align>
     P(A) &= P((A \cap B) \cup (A \cap B^c)) \\
          &= P(A \cap B) + P(A \cap B^c) \\
          &= P(A|B)P(B) + P(A|B^c)P(B^c) \label{second_fact}
-  </BlockEquation>
+  </EquationBlock>
 
   <p>
     where in equation \eqref{second_fact} the fact that $A \cap B$ and $A \cap
@@ -41,11 +41,11 @@
   </p>
 
   <!-- prettier-ignore -->
-  <BlockEquation align>
+  <EquationBlock align>
     P(B|A) &= \frac{P(B \cap A)}{P(A)} \\
            &= \frac{P(A|B)P(B)}{P(A)} \\
            &= \frac{P(A|B)P(B)}{P(A|B)P(B) + P(A|B^c)P(B^c)}\label{proof}
-  </BlockEquation>
+  </EquationBlock>
 
   <p>
     as we wanted to prove. We can also prove a very interesting formula using
@@ -53,14 +53,14 @@
     and equation \eqref{second_fact}, we have:
   </p>
 
-  <BlockEquation>
+  <EquationBlock>
     P(B|A) + P(B^c|A) = \frac{P(A|B)P(B)}{P(A)} + \frac{P(A|B^c)P(B^c)}{P(A)} =
     \frac{P(A)}{P(A)} = 1
-  </BlockEquation>
+  </EquationBlock>
 
   <p>so we obtain:</p>
 
-  <BlockEquation boxed> P(B|A) = 1 - P(B^c|A) </BlockEquation>
+  <EquationBlock boxed> P(B|A) = 1 - P(B^c|A) </EquationBlock>
 </template>
 
 <script setup lang="ts">

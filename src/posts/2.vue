@@ -6,9 +6,9 @@
     states that:
   </p>
 
-  <BlockEquation>
+  <EquationBlock>
     P(B|A) = \frac{P(A|B)P(B)}{P(A|B)P(B)+ P(A|B^c)P(B^c)}
-  </BlockEquation>
+  </EquationBlock>
 
   <p>
     In other words, Bayes' theorem gives us the conditional probability of $B$
@@ -82,17 +82,17 @@
   </p>
 
   <!-- prettier-ignore -->
-  <BlockEquation align>
+  <EquationBlock align>
     P(D|+) &= \frac{P(+|D)P(D)}{P(+|D)P(D)+ P(+|D^c)P(D^c)} \\
            &= \frac{P(+|D)P(D)}{P(+|D)P(D)+ [1 - P(-|D^c)][1 - P(D)]}
-  </BlockEquation>
+  </EquationBlock>
 
   <p>which yields, after plugging in the numbers mentioned above:</p>
 
-  <BlockEquation>
+  <EquationBlock>
     P(D|+) = \displaystyle\frac{0.997\times 0.001}{0.997 \times 0.001 + 0.015
     \times 0.999} = 0.062
-  </BlockEquation>
+  </EquationBlock>
 
   <p>
     In other words, despite the fact that the test seems very accurate, if we
@@ -110,22 +110,22 @@
     as the number of subjects in each of these groups, we can expect that:
   </p>
 
-  <BlockEquation> |S| \approx N\times P(D) = 1000 </BlockEquation>
-  <BlockEquation> |H| \approx N\times P(D^c) = 999000 </BlockEquation>
+  <EquationBlock> |S| \approx N\times P(D) = 1000 </EquationBlock>
+  <EquationBlock> |H| \approx N\times P(D^c) = 999000 </EquationBlock>
 
   <p>
     The number $R^+_S$ of positive test results among the subjects in $S$ (true
     positives) will then satisfy:
   </p>
 
-  <BlockEquation> R^+_S \approx |S|\times P(+|D) = 997 </BlockEquation>
+  <EquationBlock> R^+_S \approx |S|\times P(+|D) = 997 </EquationBlock>
 
   <p>
     and the number $R^+_H$ of positive test results among the subjects in $H$
     (false positives) will satisfy:
   </p>
 
-  <BlockEquation> R^+_H \approx |H|\times P(+|D^c) = 14985 </BlockEquation>
+  <EquationBlock> R^+_H \approx |H|\times P(+|D^c) = 14985 </EquationBlock>
 
   <p>
     So $R^+_T \coloneqq R^+_H + R^+_S \approx 15982$ is the expected total
@@ -134,9 +134,9 @@
     disease is:
   </p>
 
-  <BlockEquation>
+  <EquationBlock>
     \frac{R^+_S}{R^+_T} \approx \frac{997}{15982} = 0.062 = P(D|+)
-  </BlockEquation>
+  </EquationBlock>
 
   <p>
     To summarize, even though positive test results are correct for $99.7\%$ of
