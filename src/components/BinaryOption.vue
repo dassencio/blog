@@ -77,11 +77,11 @@ function toggleModelValue() {
   }
   &__cross-line-1,
   &__cross-line-2 {
-    display: none;
-    width: $view-checkbox-cross-line-width;
-    height: $view-checkbox-cross-line-height;
     background-color: $view-text-color-normal;
     border-radius: $view-checkbox-cross-line-border-radius;
+    display: none;
+    height: $view-checkbox-cross-line-height;
+    width: $view-checkbox-cross-line-width;
   }
   &__cross-line-1 {
     transform: translateY(0.5 * $view-checkbox-cross-line-height) rotate(45deg);
