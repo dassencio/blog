@@ -37,7 +37,6 @@ const slotText = computed(() => {
   margin-left: $view-indentation-length;
   max-width: 100%;
   overflow-x: auto;
-  overflow-y: hidden;
   :deep(mjx-container[display="true"]) {
     margin: 0;
   }
