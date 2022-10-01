@@ -375,7 +375,7 @@ function solve() {
     return;
   }
 
-  solverStartTime = new Date().getTime();
+  solverStartTime = Date.now();
 
   const solutionsFound: Solution[] = [];
 
