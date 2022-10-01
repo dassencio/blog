@@ -20,7 +20,6 @@ defineProps<{
 .post {
   list-style: none;
   &__title {
-    display: block;
     font-size: $view-subtitle-font-size;
     line-height: fontSizeToLineHeight($view-subtitle-font-size);
   }
