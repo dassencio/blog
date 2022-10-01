@@ -364,7 +364,8 @@ function simulationTime() {
 }
 
 function solve() {
-  if (!/^(\d+)(\s*,\s*\d+)*$/.test(fugitiveTimes.value)) {
+  // At least two fugitives are required.
+  if (!/^(\d+)(,\d+){1,}$/.test(fugitiveTimes.value.replace(/\s/g, ""))) {
     solverOutput.value = "Invalid fugitive times (valid example: 1, 2, 5, 10).";
     return;
   }
@@ -382,11 +383,6 @@ function solve() {
     JSON.parse(`[${fugitiveTimes.value}]`),
     Number(policeTime.value)
   );
-
-  if (initialState.policeSide.length < 2) {
-    solverOutput.value = "Number of fugitives must be >= 2.";
-    return;
-  }
 
   nextMove(initialState, solutionsFound);
 
