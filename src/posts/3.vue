@@ -317,8 +317,6 @@ class SimulationState {
     });
     this.nextFromSide = this.oppositeSide(fromSide);
     this.timeTaken += Math.max(...fugitives);
-
-    return true;
   }
 
   reverseLastMove() {
