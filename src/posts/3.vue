@@ -277,6 +277,9 @@ class SimulationState {
   }
 
   private isValidMove(fugitives: number[]) {
+    if (fugitives.length !== (this.nextFromSide === Side.Police ? 2 : 1)) {
+      return false;
+    }
     const source = [...this.moveSource(this.nextFromSide)];
     const sourceLengthAfterMove = source.length - fugitives.length;
     fugitives.forEach((fugitive) => _.pullAt(source, source.indexOf(fugitive)));
