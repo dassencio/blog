@@ -252,12 +252,12 @@ interface Solution {
 }
 
 class SimulationState {
+  private moves: Move[];
   private nextFromSide: Side;
+  private policeSide: number[];
+  private policeTime: number;
+  private safeSide: number[];
   private timeTaken: number;
-  readonly moves: Move[];
-  readonly policeSide: number[];
-  readonly policeTime: number;
-  readonly safeSide: number[];
 
   constructor(policeSide: number[], policeTime: number) {
     this.moves = [];
