@@ -429,6 +429,14 @@ function nextMove(state: SimulationState, solutionsFound: Solution[]) {
     if (simulationTime() > maxSimulationTime) {
       break;
     }
+    if (solutionsFound.length > 0) {
+      if (
+        !findAllSolutions.value ||
+        solutionsFound.length > maxSolutionsLimit
+      ) {
+        break;
+      }
+    }
     state.moveFugitives(move);
     if (state.finished()) {
       const newSolution = state.toSolution();
@@ -436,12 +444,6 @@ function nextMove(state: SimulationState, solutionsFound: Solution[]) {
         !solutionsFound.some((solution) => _.isEqual(solution, newSolution))
       ) {
         solutionsFound.push(newSolution);
-      }
-      if (
-        !findAllSolutions.value ||
-        solutionsFound.length > maxSolutionsLimit
-      ) {
-        break;
       }
     } else {
       nextMove(state, solutionsFound);
