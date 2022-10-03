@@ -1,0 +1,41 @@
+name: Deployment
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Allow only one concurrent deployment.
+concurrency:
+  group: server
+  cancel-in-progress: true
+
+jobs:
+  deploy-to-server:
+    name: Deploy to server
+    runs-on: ubuntu-latest
+    environment:
+      name: server
+      url: https://dassencio.org
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build website
+        run: npm run build
+
+      - name: Deploy website
+        run: |
+          mkdir -p $HOME/.ssh
+          echo "LogLevel ERROR" > $HOME/.ssh/config
+          echo "${{secrets.SSH_DEPLOY_KEY}}" > $HOME/.ssh/id_rsa
+          echo "${{secrets.SSH_KNOWN_HOSTS}}" > $HOME/.ssh/known_hosts
+          chmod 600 $HOME/.ssh/id_rsa
+          rsync -azv --delete ./dist/ "${{secrets.RSYNC_DEST}}"
