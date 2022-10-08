@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, watch } from "vue";
 import { useRoute } from "vue-router";
 import NavBar from "@/components/NavBar.vue";
 import PostHeader from "@/components/PostHeader.vue";
@@ -15,6 +15,10 @@ import posts from "@/posts";
 
 const route = useRoute();
 const post = computed(() => posts.find((post) => post.id === route.name));
+
+watch(post, (post) => {
+  document.title = (post ? `${post.title} - ` : "") + "Diego Assencio";
+});
 </script>
 
 <style lang="scss">
