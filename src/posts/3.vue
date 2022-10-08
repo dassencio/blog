@@ -2,8 +2,8 @@
   <p>
     <i>
       A group of $N$ fugitives is running away from the police. They reach a
-      very narrow bridge. Since it's dark and they have a single flashlight,
-      they can only cross the bridge in pairs. The $i^{th}$ fugitive takes $T_i$
+      very narrow bridge. Since it's dark and they have only one flashlight,
+      they must cross the bridge in pairs. The $i^{th}$ fugitive needs $T_i$
       minutes to cross the bridge. When a pair of fugitives crosses the bridge,
       they must go at the speed of the slowest fugitive. In other words, the
       crossing time for the pair of fugitives $(i, j)$ is $\max\{T_i, T_j\}$.
@@ -22,7 +22,7 @@
 
   <p>
     <i>
-      If the police is $T_P$ minutes behind the prisoners, and assuming they can
+      If the police is $T_P$ minutes behind the fugitives, and assuming they can
       no longer safely escape unless all of them have crossed the bridge by the
       time the police gets to it, can they make it? If yes, how?
     </i>
@@ -39,13 +39,13 @@
 
   <p>
     <b>NOTE:</b> Readers who just wish to play with the brute-force solver
-    should go directly to the end of this post. If you are interested in the
+    should go directly to the bottom of this post. If you are interested in the
     discussion of the problem, read on!
   </p>
 
   <p>
-    Let's consider the simplest possible scenarios first. The case $N = 1$ is
-    technically excluded as the statement of the problem requires that a
+    Let's start by considering the simplest possible scenarios. The case $N = 1$
+    is technically excluded as the statement of the problem requires that a
     fugitive pair exists for the initial bridge crossing, but even without that
     requirement, this scenario is uninteresting as it's obvious that the
     fugitive would manage to flee only if $T_1 \leq T_P$. If $N = 2$, the two
@@ -56,15 +56,15 @@
   </p>
 
   <p>
-    Let's first compute the number of steps $S_N$ which must happen until all
-    $N$ fugitives have crossed the bridge. A step can be either a pair of
-    fugitives crossing the bridge or one fugitive returning. We will prove that:
+    Now let's compute the number of steps $S_N$ which must happen until all $N$
+    fugitives have crossed the bridge. A step can be either a pair of fugitives
+    crossing the bridge or one fugitive returning. We will prove that:
   </p>
 
   <EquationBlock boxed> S_N = 2N - 3 </EquationBlock>
 
   <p>
-    We start by first noticing that for $N = 2$, we have only one step (the two
+    We begin by noticing that for $N = 2$, we have only one step (the two
     fugitives cross the bridge), so the equation above applies since $S_2 = 1$.
     Now assume the equation is valid for $N - 1$ fugitives and consider the case
     where we have $N$ fugitives. After the first two cross and one returns with
@@ -80,10 +80,10 @@
   <p>as we wanted to prove.</p>
 
   <p>
-    Now let's compute the theoretical maximum number of possibilities that one
-    has to try when using brute force to solve the problem. First, notice that
-    if $N$ fugitives have not yet crossed the bridge, the number of possible
-    pairs for crossing it is:
+    Finally, let's compute the theoretical maximum number of possibilities that
+    one has to try when using brute force to solve the problem. First, notice
+    that if $N$ fugitives have not yet crossed the bridge, the number of
+    possible pairs for crossing it is:
   </p>
 
   <EquationBlock>
@@ -187,19 +187,19 @@
     $2^{N - 1}$ and $N$. This will impose limitations on the maximum number of
     fugitives we can handle when trying to solve the problem using brute force,
     but this limitation can be partially circumvented by ignoring moves which
-    would exceed the police time, eliminating entire subtrees of possibilities
-    which would never lead to a solution. The total number of possibilities to
-    consider is also further reduced by not distinguishing between fugitives
-    which take the same time to cross the bridge.
+    would exceed the police time, thereby eliminating entire subtrees of
+    possibilities which would never lead to a solution. The total number of
+    possibilities to consider is also further reduced by not distinguishing
+    between fugitives which need the same time to cross the bridge.
   </p>
 
   <p>
-    Now, to the brute-force solver! On the text fields below, enter the times
-    taken by each fugitive to cross the bridge and the time the police will take
-    to reach it. The values already entered are the ones I was given in my job
-    interview. If two or more fugitives take the same amount of time to cross
-    the bridge, the solver will not differentiate between them when computing
-    solutions.
+    It's now time to play with the brute-force solver! On the text fields below,
+    enter the times needed by each fugitive to cross the bridge and the time the
+    police will take to reach it. The values already entered are the ones I was
+    given in my job interview. If two or more fugitives need the same amount of
+    time to cross the bridge, the solver will not differentiate between them
+    when computing solutions.
   </p>
 
   <ResponsiveForm class="solver">
