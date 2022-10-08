@@ -38,6 +38,12 @@
   </p>
 
   <p>
+    <b>NOTE:</b> Readers who just wish to play with the brute-force solver
+    should go directly to the end of this post. If you are interested in the
+    discussion of the problem, read on!
+  </p>
+
+  <p>
     Let's consider the simplest possible scenarios first. The case $N = 1$ is
     technically excluded as the statement of the problem requires that a
     fugitive pair exists for the initial bridge crossing, but even without that
@@ -47,12 +53,6 @@
     slower fugitive needs longer than $T_P$ to cross the bridge, the police will
     arrive before they can safely flee. In light of these facts, we will assume
     $N \ge 2$ from here on.
-  </p>
-
-  <p>
-    <b>NOTE:</b> Readers who just wish to play with the brute-force solver
-    should go directly to the end of this post. If you are interested in the
-    discussion of the problem, read on!
   </p>
 
   <p>
