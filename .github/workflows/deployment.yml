@@ -16,10 +16,10 @@ on:
         description: "Private SSH key used to deploy the website"
         required: true
       ssh-known-hosts:
-        description: "SSH known-host list for automatic host verification"
+        description: "SSH known-host list for automatic target host verification"
         required: true
       rsync-destination:
-        description: "Rsync destination (user@host:/path)"
+        description: "Rsync destination (user@target-host:/path)"
         required: true
 
 jobs:
