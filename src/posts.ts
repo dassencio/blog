@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "8f1e844d7916305b8e0b5e85e4073d9b",
+    component: () => import("@/posts/4.vue"),
+    date: dateToString(2013, 11, 5),
+    id: "4",
+    labels: [PostLabel.IPv6, PostLabel.Networks, PostLabel.Technology],
+    title: "IPv6 address space: how large is it?",
+  },
+  {
     compatibilityIndex: "eeb0a9ec9ceed243221955dad220b478",
     component: () => import("@/posts/3.vue"),
     date: dateToString(2013, 10, 27),
