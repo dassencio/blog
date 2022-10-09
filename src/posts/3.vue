@@ -182,21 +182,21 @@
 
   <p>
     The numbers above indicate that the computational work required to simulate
-    all possibilities grows extremely fast, which is to be expected from
-    equation \eqref{num_possibilities} since $N!$ grows much faster than both
-    $2^{N - 1}$ and $N$. This will impose limitations on the maximum number of
-    fugitives we can handle when trying to solve the problem using brute force,
-    but this limitation can be partially circumvented by ignoring bridge
-    crossings which would exceed the police time, thereby eliminating entire
-    subtrees of possibilities which would never lead to a solution. The total
-    number of possibilities to consider is also further reduced by not
-    distinguishing between fugitives which need the same amount of time to cross
-    the bridge.
+    all possibilities grows extremely fast as $N$ increases, which is to be
+    expected from equation \eqref{num_possibilities} since $N!$ grows much
+    faster than both $2^{N - 1}$ and $N$. This imposes practical limitations on
+    the maximum number of fugitives we can handle when trying to solve the
+    problem using brute force, but these limitations can be at least partially
+    circumvented by ignoring bridge crossings which would exceed the police
+    time, thereby eliminating entire subtrees of possibilities which would never
+    lead to a solution. The total number of possibilities to consider is also
+    further reduced by not distinguishing between fugitives which need the same
+    amount of time to cross the bridge.
   </p>
 
   <p>
     It's now time to play with the brute-force solver! On the text fields below,
-    enter the times needed by each fugitive to cross the bridge and the time the
+    enter the time needed by each fugitive to cross the bridge and the time the
     police will take to reach it. The values already entered are the ones I was
     given in my job interview.
   </p>
