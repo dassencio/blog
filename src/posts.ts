@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "3a9fab02df4edf42cf495bf087b37c2d",
+    component: () => import("@/posts/5.vue"),
+    date: dateToString(2013, 11, 9),
+    id: "5",
+    labels: [PostLabel.Git, PostLabel.Programming],
+    title: "How to backport changes to renamed files using Git",
+  },
+  {
     compatibilityIndex: "8f1e844d7916305b8e0b5e85e4073d9b",
     component: () => import("@/posts/4.vue"),
     date: dateToString(2013, 11, 5),

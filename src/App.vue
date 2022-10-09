@@ -91,6 +91,9 @@ b {
 i {
   font-family: "Open Sans Italic";
 }
+code {
+  font-family: "Noto Sans Mono Regular";
+}
 </style>
 
 <style scoped lang="scss">
