@@ -91,7 +91,8 @@ b {
 i {
   font-family: "Open Sans Italic";
 }
-code {
+code,
+code * {
   font-family: "Noto Sans Mono Regular";
 }
 </style>
