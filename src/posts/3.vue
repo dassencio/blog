@@ -195,7 +195,7 @@
   </p>
 
   <p>
-    It's now time to play with the brute-force solver! On the text fields below,
+    It's now time to play with the brute-force solver! In the text fields below,
     enter the time needed by each fugitive to cross the bridge and the time the
     police will take to reach it. The values already entered are the ones I was
     given in my job interview.
