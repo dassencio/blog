@@ -13,9 +13,9 @@
   <p>
     <i>
       After a pair of fugitives crosses the bridge, one of those who already
-      crossed must return with the flashlight so that another pair of fugitives
+      crossed must return with the flashlight so that a new pair of fugitives
       can go too (this new pair can include the fugitive who just brought back
-      the flashlight). The process goes on until everyone has crossed the
+      the flashlight). This process is repeated until everyone has crossed the
       bridge.
     </i>
   </p>
@@ -70,7 +70,7 @@
     where we have $N$ fugitives. After the first two cross and one returns with
     the flashlight (in other words, after two steps), we have $N - 1$ fugitives
     left to cross the bridge. From there on, there are $S_{N - 1}$ steps left
-    until all fugitives have crossed. So:
+    until all fugitives have crossed. Hence:
   </p>
 
   <EquationBlock>
@@ -80,10 +80,10 @@
   <p>as we wanted to prove.</p>
 
   <p>
-    Finally, let's compute the theoretical maximum number of possibilities that
-    one has to try when using brute force to solve the problem. First, notice
-    that if $N$ fugitives have not yet crossed the bridge, the number of
-    possible pairs for crossing it is:
+    Finally, let's compute the total number of ways the fugitives can cross the
+    bridge without taking into account the possibility of being caught by the
+    police in the process. First, notice that if $N$ fugitives have not yet
+    crossed the bridge, the number of possible pairs for crossing it is:
   </p>
 
   <EquationBlock>
@@ -92,7 +92,7 @@
 
   <p>
     When a fugitive must return with the flashlight, and if $M$ fugitives have
-    already crossed the bridge, then the number of choices is simply $M$.
+    already crossed the bridge, the number of possible choices is simply $M$.
   </p>
 
   <p>
@@ -137,8 +137,8 @@
   </MultiModeGrid>
 
   <p>
-    The theoretical maximum number of moves $P_N$ which a brute-force solver may
-    have to simulate is therefore:
+    The total number $P_N$ of ways the fugitives can cross the bridge is
+    therefore:
   </p>
 
   <!-- prettier-ignore -->
@@ -186,20 +186,19 @@
     equation \eqref{num_possibilities} since $N!$ grows much faster than both
     $2^{N - 1}$ and $N$. This will impose limitations on the maximum number of
     fugitives we can handle when trying to solve the problem using brute force,
-    but this limitation can be partially circumvented by ignoring moves which
-    would exceed the police time, thereby eliminating entire subtrees of
-    possibilities which would never lead to a solution. The total number of
-    possibilities to consider is also further reduced by not distinguishing
-    between fugitives which need the same time to cross the bridge.
+    but this limitation can be partially circumvented by ignoring bridge
+    crossings which would exceed the police time, thereby eliminating entire
+    subtrees of possibilities which would never lead to a solution. The total
+    number of possibilities to consider is also further reduced by not
+    distinguishing between fugitives which need the same amount of time to cross
+    the bridge.
   </p>
 
   <p>
     It's now time to play with the brute-force solver! On the text fields below,
     enter the times needed by each fugitive to cross the bridge and the time the
     police will take to reach it. The values already entered are the ones I was
-    given in my job interview. If two or more fugitives need the same amount of
-    time to cross the bridge, the solver will not differentiate between them
-    when computing solutions.
+    given in my job interview.
   </p>
 
   <ResponsiveForm class="solver">
