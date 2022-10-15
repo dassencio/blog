@@ -1,0 +1,92 @@
+<template>
+  <p>
+    According to the theory of general relativity, if a body of mass $M$ is
+    compressed into a sphere of radius equal to or smaller than the
+    <a href="https://en.wikipedia.org/wiki/Schwarzschild_radius"
+      >Schwarzschild radius</a
+    >
+    $R_s$ of that body:
+  </p>
+
+  <EquationBlock> R_s \coloneqq \frac{2GM}{c^2} </EquationBlock>
+
+  <p>
+    then the body collapses into a
+    <a href="https://en.wikipedia.org/wiki/Black_hole">black hole</a>, a region
+    of spacetime where gravity is so strong that nothing can escape from it, not
+    even light.
+  </p>
+
+  <p>
+    Curiously, the Schwarzschild radius $R_s$ also appears in the Newtonian
+    theory of gravitation. To see that, let's compute the escape velocity of a
+    particle of mass $m$ when in the presence of the gravitational field of a
+    spherical and uniformly dense body of mass $M$ and radius $r \leq R_s$.
+    Since energy is conserved as $m$ escapes the gravitational field of $M$ (the
+    gravitational force is conservative), we have that:
+  </p>
+
+  <EquationBlock>
+    E_i = E_f \Longrightarrow \frac{1}{2}mv_i^2 - \frac{GMm}{r_i} =
+    \frac{1}{2}mv_f^2 - \frac{GMm}{r_f}
+  </EquationBlock>
+
+  <p>
+    where $v_i$ and $v_f$ are the initial and final velocities of the particle
+    $m$, and $r_i$ and $r_f$ are the initial and final distances between $m$ and
+    the center of mass of $M$ respectively.
+  </p>
+
+  <p>
+    The escape velocity $v_e$ which $m$ needs to initially have to escape the
+    gravitational field of $M$ is such that when $m$ reaches "infinity", its
+    velocity $v_f$ is zero ("infinity" here means an $r_f$ large enough so that
+    the gravitational force of $M$ on $m$ becomes negligible). If $v_f \gt 0$,
+    then $m$ had initially more kinetic energy than necessary to escape from
+    $M$. From these facts, we have that:
+  </p>
+
+  <EquationBlock>
+    \frac{1}{2}mv_e^2 - \frac{GMm}{r_i} = \frac{1}{2}m(0)^2 - \frac{GMm}{\infty}
+    = 0 \Longrightarrow v_e = \sqrt{\frac{2GM}{r_i}}
+  </EquationBlock>
+
+  <p>
+    If $m$ is initially at a distance $r_i = R_s = 2GM/c^2$ from $M$, then its
+    escape velocity is:
+  </p>
+
+  <EquationBlock>
+    v_e = \sqrt{\frac{2GM}{r_i}} = \sqrt{2GM \left(\frac{c^2}{2GM}\right)} = c
+  </EquationBlock>
+
+  <p>
+    In other words, Newtonian gravity predicts that a particle of mass $m$
+    situated at a distance $R_s$ from $M$ must have an initial velocity equal to
+    or larger than the speed of light to escape the gravitational field produced
+    by $M$. Assuming that a photon has mass (this must be true according to
+    Newtonian gravity as it requires particles to have mass to interact
+    gravitationally, and we know for a fact that light is bent by gravitational
+    fields), then light itself could never escape such a gravitational field.
+  </p>
+
+  <p>
+    Before you jump to the conclusion that black holes can exist in Newtonian
+    gravity, notice that any object can escape any gravitational field in a
+    Newtonian universe. For that to happen, all one needs to do is build a
+    sufficiently powerful rocket which, when attached to the object, is capable
+    of producing a force larger than the total gravitational force produced by
+    $M$ on the object and the rocket itself. Provided that the rocket can store
+    enough fuel for its entire journey towards infinity, it will get the object
+    to escape the gravitational field of $M$.
+  </p>
+</template>
+
+<script setup lang="ts">
+import { onMounted } from "vue";
+import mathjax from "@/mathjax";
+
+onMounted(() => {
+  mathjax.render();
+});
+</script>

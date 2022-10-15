@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "dd84af0964fb8d47db6e9cd6e73abac9",
+    component: () => import("@/posts/6.vue"),
+    date: dateToString(2013, 11, 10),
+    id: "6",
+    labels: [PostLabel.Gravitation, PostLabel.Physics],
+    title: "Do black holes exist in Newtonian physics?",
+  },
+  {
     compatibilityIndex: "3a9fab02df4edf42cf495bf087b37c2d",
     component: () => import("@/posts/5.vue"),
     date: dateToString(2013, 11, 9),
