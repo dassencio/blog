@@ -18,12 +18,10 @@
   </p>
 
   <p>
-    Curiously, the Schwarzschild radius $R_s$ also appears in the Newtonian
-    theory of gravitation. To see that, let's compute the escape velocity of a
-    particle of mass $m$ when in the presence of the gravitational field of a
-    spherical and uniformly dense body of mass $M$ and radius $r \leq R_s$.
-    Since energy is conserved as $m$ escapes the gravitational field of $M$ (the
-    gravitational force is conservative), we have that:
+    Curiously, the Schwarzschild radius is also relevant in the Newtonian theory
+    of gravitation. To see why, consider a particle of mass $m$ subject to the
+    gravitational force of a spherical and uniformly dense body of mass $M$ and
+    radius $r \leq R_s$. Since gravity is a conservative force, we have that:
   </p>
 
   <EquationBlock>
@@ -38,12 +36,12 @@
   </p>
 
   <p>
-    The escape velocity $v_e$ which $m$ needs to initially have to escape the
-    gravitational field of $M$ is such that when $m$ reaches "infinity", its
-    velocity $v_f$ is zero ("infinity" here means an $r_f$ large enough so that
-    the gravitational force of $M$ on $m$ becomes negligible). If $v_f \gt 0$,
-    then $m$ had initially more kinetic energy than necessary to escape from
-    $M$. From these facts, we have that:
+    The minimum velocity (also called the
+    <a href="https://en.wikipedia.org/wiki/Escape_velocity">escape velocity</a>)
+    $v_e$ which $m$ needs to initially have to escape the gravitational field of
+    $M$ is such that when $m$ reaches "infinity", its velocity $v_f$ is zero
+    ("infinity" here means an $r_f$ large enough so that the gravitational force
+    of $M$ on $m$ becomes negligible). From this fact, we have that:
   </p>
 
   <EquationBlock>
@@ -72,12 +70,13 @@
 
   <p>
     Before you jump to the conclusion that black holes can exist in Newtonian
-    gravity, notice that any object can escape any gravitational field in a
-    Newtonian universe. For that to happen, all one needs to do is build a
-    sufficiently powerful rocket which, when attached to the object, is capable
-    of producing a force larger than the total gravitational force produced by
-    $M$ on the object and the rocket itself. Provided that the rocket can store
-    enough fuel for its entire journey towards infinity, it will get the object
+    gravity, notice that any object of mass $m$ can escape any gravitational
+    field in a Newtonian universe. For that to happen, all one needs to do is
+    build a rocket capable of transporting $m$ and containing an engine powerful
+    enough to produce an amount of
+    <a href="https://en.wikipedia.org/wiki/Thrust">thrust</a> exceeding the
+    total gravitational force produced by $M$. Provided that the rocket can
+    store enough fuel for its entire journey towards infinity, it will get $m$
     to escape the gravitational field of $M$.
   </p>
 </template>
