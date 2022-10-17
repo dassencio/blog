@@ -20,8 +20,11 @@
   <p>
     Curiously, the Schwarzschild radius is also relevant in the Newtonian theory
     of gravitation. To see why, consider a particle of mass $m$ subject to the
-    gravitational force of a spherical and uniformly dense body of mass $M$ and
-    radius $r \leq R_s$. Since gravity is a conservative force, we have that:
+    gravitational field of a spherical and uniformly dense body of mass $M$ and
+    radius $r \leq R_s$. Since gravity is a conservative force, we have that,
+    for any two locations $i$ (initial) and $f$ (final) along the particle's
+    trajectory, the following applies when both $i$ and $f$ are outside the
+    volume occupied by $M$:
   </p>
 
   <EquationBlock>
@@ -30,9 +33,8 @@
   </EquationBlock>
 
   <p>
-    where $v_i$ and $v_f$ are the initial and final velocities of the particle
-    $m$, and $r_i$ and $r_f$ are the initial and final distances between $m$ and
-    the center of mass of $M$ respectively.
+    where $r_i$ and $r_f$ are the initial and final distances between the
+    particle and the center of mass of $M$ respectively.
   </p>
 
   <p>
@@ -72,12 +74,12 @@
     Before you jump to the conclusion that black holes can exist in Newtonian
     gravity, notice that any object of mass $m$ can escape any gravitational
     field in a Newtonian universe. For that to happen, all one needs to do is
-    build a rocket capable of transporting $m$ and containing an engine powerful
+    build a rocket big enough to transport $m$ and with an engine powerful
     enough to produce an amount of
     <a href="https://en.wikipedia.org/wiki/Thrust">thrust</a> exceeding the
-    total gravitational force produced by $M$. Provided that the rocket can
-    store enough fuel for its entire journey towards infinity, it will get $m$
-    to escape the gravitational field of $M$.
+    total gravitational force exerted by $M$. Provided that the rocket can store
+    enough fuel for its entire journey towards infinity, it will get $m$ to
+    escape the gravitational field of $M$.
   </p>
 </template>
 
