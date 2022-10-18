@@ -38,10 +38,10 @@
   </p>
 
   <p>
-    The minimum velocity (also called the
-    <a href="https://en.wikipedia.org/wiki/Escape_velocity">escape velocity</a>)
+    The minimum speed (also called the
+    <a href="https://en.wikipedia.org/wiki/Escape_velocity">escape speed</a>)
     $v_e$ which $m$ needs to initially have to escape the gravitational field of
-    $M$ is such that when $m$ reaches "infinity", its velocity $v_f$ is zero
+    $M$ is such that when $m$ reaches "infinity", its speed $v_f$ is zero
     ("infinity" here means an $r_f$ large enough so that the gravitational force
     of $M$ on $m$ becomes negligible). From this fact, we have that:
   </p>
@@ -53,7 +53,7 @@
 
   <p>
     If $m$ is initially at a distance $r_i = R_s = 2GM/c^2$ from $M$, then its
-    escape velocity is:
+    escape speed is:
   </p>
 
   <EquationBlock>
@@ -62,9 +62,9 @@
 
   <p>
     In other words, Newtonian gravity predicts that a particle of mass $m$
-    situated at a distance $R_s$ from $M$ must have an initial velocity equal to
-    or larger than the speed of light to escape the gravitational field produced
-    by $M$. Assuming that a photon has mass (this must be true according to
+    situated at a distance $R_s$ from $M$ must have an initial speed equal to or
+    larger than the speed of light to escape the gravitational field produced by
+    $M$. Assuming that a photon has mass (which must be the case according to
     Newtonian gravity as it requires particles to have mass to interact
     gravitationally, and we know for a fact that light is bent by gravitational
     fields), then light itself could never escape such a gravitational field.
@@ -74,8 +74,8 @@
     Before you jump to the conclusion that black holes can exist in Newtonian
     gravity, notice that any object of mass $m$ can escape any gravitational
     field in a Newtonian universe. For that to happen, all one needs to do is
-    build a rocket big enough to transport $m$ and with an engine powerful
-    enough to produce an amount of
+    build a rocket big enough to transport $m$, with an engine powerful enough
+    to produce an amount of
     <a href="https://en.wikipedia.org/wiki/Thrust">thrust</a> exceeding the
     total gravitational force exerted by $M$. Provided that the rocket can store
     enough fuel for its entire journey towards infinity, it will get $m$ to
