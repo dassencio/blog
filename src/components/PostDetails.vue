@@ -26,10 +26,8 @@ defineProps<{
   align-items: center;
   display: flex;
   flex-wrap: wrap;
+  font-size: $view-post-details-font-size;
   gap: $view-post-details-vertical-margin $view-post-details-horizontal-gap;
-  &__date {
-    font-size: $view-post-details-font-size;
-  }
   &__labels {
     display: flex;
     flex-wrap: wrap;
@@ -39,7 +37,6 @@ defineProps<{
     background-color: $view-label-background-color-normal;
     border-radius: $view-label-border-radius;
     color: $view-text-color-normal;
-    font-size: $view-post-details-font-size;
     padding: $view-label-vertical-padding $view-label-horizontal-padding;
     text-decoration: none;
     &:active,
