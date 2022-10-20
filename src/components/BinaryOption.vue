@@ -55,6 +55,7 @@ function toggleModelValue() {
   cursor: pointer;
   display: flex;
   outline: none;
+  user-select: none;
   &.active &__checkbox,
   &:active &__checkbox {
     border: $view-form-element-border-active;
