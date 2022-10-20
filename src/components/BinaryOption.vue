@@ -52,11 +52,9 @@ function toggleModelValue() {
 .option {
   align-items: center;
   column-gap: $view-binary-option-horizontal-gap;
+  cursor: pointer;
   display: flex;
   outline: none;
-  &:hover {
-    cursor: pointer;
-  }
   &.active &__checkbox,
   &:active &__checkbox {
     border: $view-form-element-border-active;
