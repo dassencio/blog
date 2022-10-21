@@ -2,7 +2,7 @@
   <p>
     Suppose you want to buy some candy at a store. You search your pockets and
     find that you have, in your local currency, an amount of money equal to
-    $i^i$ ($i$ here is really the complex number $i$). You choose a snack and
+    $i^i$ ($i$ here is really the complex number $i$). You choose your candy and
     check its price: its costs $0.10$. Do you have enough money to buy it?
   </p>
 
@@ -97,27 +97,26 @@
   <p>
     The value of $\log{z}$ is uniquely defined provided that we enforce $0 \leq
     \theta \lt 2\pi$. This restriction is important since on $z = |z|(\cos\theta
-    + i\sin\theta)$ there are infinitely many possible values of $\theta$ values
-    since:
+    + i\sin\theta)$, there are infinitely many possible values of $\theta$
+    because for any integer $n$:
   </p>
 
-  <EquationBlock>
-    \cos(\theta + 2\pi n) = \cos\theta \quad \sin(\theta + 2\pi n) = \sin\theta
+  <!-- prettier-ignore -->
+  <EquationBlock align numberLines>
+    \cos(\theta + 2\pi n) &= \cos\theta \\
+    \sin(\theta + 2\pi n) &= \sin\theta
   </EquationBlock>
 
   <p>
-    for any integer $n$. As an example, let's compute $\log i$. Since $|i| = 1$,
-    then:
+    As a next step, let's use equation \eqref{complex_log} to compute $\log i$.
+    Since $|i| = 1$, we have that:
   </p>
 
   <EquationBlock>
-    i = 0 + i = \cos(\pi/2) + i\sin\left(\pi/2) = |i|(\cos(\pi/2) +
-    i\sin(\pi/2)\right)
+    i = 0 + i = \cos(\pi/2) + i\sin(\pi/2) = e^{i\pi/2} = |i|e^{i\pi/2}
   </EquationBlock>
 
-  <p>
-    Using equations \eqref{polar_form} and \eqref{complex_log}, we then get:
-  </p>
+  <p>Therefore:</p>
 
   <EquationBlock>
     \log i = \log|i| + i\pi/2 = \log 1 + i\pi/2 = i\pi/2 \label{log_i}
@@ -133,12 +132,12 @@
 
   <p>
     which is motivated by the fact that for any pair of real numbers $x \gt 0$
-    and $y \neq 0$, we have $x^y = e^{\log x^y} = e^{y\log x}$.
+    and $y$, we have $x^y = e^{\log x^y} = e^{y\log x}$.
   </p>
 
   <p>
     If you have endured all of this, you're probably eager to know what the
-    value of $i^i$ is. So let's go ahead and compute it:
+    value of $i^i$ is. Let's go ahead and compute it:
   </p>
 
   <EquationBlock boxed>
