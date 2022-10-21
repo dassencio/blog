@@ -54,6 +54,7 @@ function toggleModelValue() {
   column-gap: $view-binary-option-horizontal-gap;
   cursor: pointer;
   display: flex;
+  line-height: 1;
   outline: none;
   user-select: none;
   &.active &__checkbox,

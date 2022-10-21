@@ -42,18 +42,21 @@ watch(post, (post) => {
   font-family: "Noto Sans Mono Regular";
   src: url("@/assets/fonts/notosansmono-regular.ttf") format("truetype");
 }
-* {
-  background-color: transparent;
+html {
+  background-color: white;
   color: $view-text-color-normal;
   font-family: "Open Sans Regular";
   font-size: $view-paragraph-font-size;
   font-synthesis: none;
-  font-weight: normal;
+  height: 100%;
   line-height: 1;
 }
-html {
-  background-color: white;
-  height: 100%;
+button,
+input {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
 }
 p {
   line-height: $view-paragraph-line-height;
@@ -71,16 +74,7 @@ a {
   &:hover {
     color: $view-link-color-focus;
     text-decoration: underline;
-  }
-}
-mjx-container {
-  a > g {
-    fill: $view-link-color-normal;
-  }
-  &:active,
-  &:focus,
-  &:hover {
-    a > g {
+    .MathJax_ref {
       fill: $view-link-color-focus;
     }
   }
@@ -91,8 +85,7 @@ b {
 i {
   font-family: "Open Sans Italic";
 }
-code,
-code * {
+code {
   font-family: "Noto Sans Mono Regular";
 }
 </style>
