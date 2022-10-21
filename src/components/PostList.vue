@@ -15,9 +15,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import PostListItem from "@/components/PostListItem.vue";
+import mathjax from "@/mathjax";
 import posts from "@/posts";
 import type { PostLabel } from "@/types";
 
@@ -27,6 +28,10 @@ const matchingPosts = computed(() => {
   return label.value
     ? posts.filter((post) => post.labels.includes(label.value))
     : posts;
+});
+
+onMounted(() => {
+  mathjax.render();
 });
 </script>
 

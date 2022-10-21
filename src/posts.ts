@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "827f3801cb1a0f2b336b0fc67f9e1abd",
+    component: () => import("@/posts/7.vue"),
+    date: dateToString(2013, 11, 12),
+    id: "7",
+    labels: [PostLabel.CompAnalysis, PostLabel.Mathematics],
+    title: "How much can $i^i$ buy?",
+  },
+  {
     compatibilityIndex: "dd84af0964fb8d47db6e9cd6e73abac9",
     component: () => import("@/posts/6.vue"),
     date: dateToString(2013, 11, 10),
