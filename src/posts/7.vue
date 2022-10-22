@@ -3,7 +3,7 @@
     Suppose you want to buy some candy at a store. You search your pockets and
     find that you have, in your local currency, an amount of money equal to
     $i^i$ ($i$ here is really the complex number $i$). You choose your candy and
-    check its price: its costs $0.10$. Do you have enough money to buy it?
+    check its price: it costs $0.10$. Do you have enough money to buy it?
   </p>
 
   <p>
@@ -11,11 +11,8 @@
     is such a thing as
     <a href="http://mathworld.wolfram.com/ComplexExponentiation.html"
       >complex exponentiation</a
-    >. It turns out that complex exponentiation is extremely important in
-    mathematics, in the natural sciences and in engineering. Being myself a
-    physicist, I dealt with complex exponentiation countless times when learning
-    topics such as waves, circuits, fluids, classical mechanics, quantum
-    mechanics and many others.
+    >, and that it's an extremely important tool with countless applications in
+    mathematics, in the natural sciences and in engineering.
   </p>
 
   <p>
