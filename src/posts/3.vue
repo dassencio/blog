@@ -205,7 +205,7 @@
     <InputField label="Fugitive times:" v-model.trim="fugitiveTimes" />
     <InputField label="Police time:" v-model.trim="policeTime" />
     <span class="solver__controls">
-      <BinaryOption v-model="findAllSolutions">Find all solutions</BinaryOption>
+      <BaseCheckbox v-model="findAllSolutions">Find all solutions</BaseCheckbox>
       <BaseButton @click="solve">Solve</BaseButton>
     </span>
   </ResponsiveForm>

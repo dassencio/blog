@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import "ress";
 import App from "@/App.vue";
 import BaseButton from "@/components/BaseButton.vue";
-import BinaryOption from "@/components/BinaryOption.vue";
+import BaseCheckbox from "@/components/BaseCheckbox.vue";
 import CodeBlock from "@/components/CodeBlock.vue";
 import EquationBlock from "@/components/EquationBlock.vue";
 import InputField from "@/components/InputField.vue";
@@ -13,7 +13,7 @@ import router from "@/router";
 const app = createApp(App);
 
 app.component("BaseButton", BaseButton);
-app.component("BinaryOption", BinaryOption);
+app.component("BaseCheckbox", BaseCheckbox);
 app.component("CodeBlock", CodeBlock);
 app.component("EquationBlock", EquationBlock);
 app.component("InputField", InputField);

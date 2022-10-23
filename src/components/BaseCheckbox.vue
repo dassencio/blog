@@ -51,7 +51,7 @@ function toggleModelValue() {
 <style scoped lang="scss">
 .option {
   align-items: center;
-  column-gap: $view-binary-option-horizontal-gap;
+  column-gap: $view-checkbox-horizontal-gap;
   cursor: pointer;
   display: flex;
   line-height: 1;
