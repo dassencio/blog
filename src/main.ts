@@ -9,6 +9,7 @@ import EquationBlock from "@/components/EquationBlock.vue";
 import InputField from "@/components/InputField.vue";
 import MultiModeGrid from "@/components/MultiModeGrid.vue";
 import ResponsiveForm from "@/components/ResponsiveForm.vue";
+import ResponsiveImage from "@/components/ResponsiveImage.vue";
 import router from "@/router";
 
 const app = createApp(App);
@@ -21,6 +22,7 @@ app.component("EquationBlock", EquationBlock);
 app.component("InputField", InputField);
 app.component("MultiModeGrid", MultiModeGrid);
 app.component("ResponsiveForm", ResponsiveForm);
+app.component("ResponsiveImage", ResponsiveImage);
 
 app.use(router);
 
