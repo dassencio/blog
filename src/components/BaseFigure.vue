@@ -29,7 +29,7 @@ defineProps<{
   &__contents {
     display: flex;
     flex-wrap: wrap;
-    gap: $view-figure-content-gap;
+    gap: $view-figure-contents-gap;
     justify-content: center;
   }
   &__description {
