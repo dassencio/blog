@@ -17,12 +17,12 @@ defineProps<{
 
 <style scoped lang="scss">
 .figure {
-  padding: 0 $view-indentation-length;
   text-align: center;
   &__caption {
     column-gap: $view-figure-caption-horizontal-gap;
     display: flex;
     margin: $view-figure-caption-vertical-margin 0;
+    padding: 0 $view-indentation-length;
   }
   &__contents {
     display: flex;
