@@ -27,6 +27,7 @@ defineProps<{
   &__contents {
     display: flex;
     flex-wrap: wrap;
+    gap: $view-figure-content-gap;
     justify-content: center;
   }
   &__description {
