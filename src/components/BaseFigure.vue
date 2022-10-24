@@ -20,8 +20,8 @@ defineProps<{
   padding: 0 $view-indentation-length;
   text-align: center;
   &__caption {
+    column-gap: $view-figure-caption-horizontal-gap;
     display: flex;
-    gap: $view-figure-caption-horizontal-gap;
     margin: $view-figure-caption-vertical-margin 0;
   }
   &__contents {
