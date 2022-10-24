@@ -24,7 +24,7 @@ defineProps<{
     display: flex;
     justify-content: center;
     margin: $view-figure-caption-vertical-margin 0;
-    padding: 0 $view-indentation-length;
+    padding: 0 $view-figure-caption-horizontal-padding;
   }
   &__contents {
     display: flex;
