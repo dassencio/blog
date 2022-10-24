@@ -3,6 +3,7 @@ import "ress";
 import App from "@/App.vue";
 import BaseButton from "@/components/BaseButton.vue";
 import BaseCheckbox from "@/components/BaseCheckbox.vue";
+import BaseFigure from "@/components/BaseFigure.vue";
 import CodeBlock from "@/components/CodeBlock.vue";
 import EquationBlock from "@/components/EquationBlock.vue";
 import InputField from "@/components/InputField.vue";
@@ -14,6 +15,7 @@ const app = createApp(App);
 
 app.component("BaseButton", BaseButton);
 app.component("BaseCheckbox", BaseCheckbox);
+app.component("BaseFigure", BaseFigure);
 app.component("CodeBlock", CodeBlock);
 app.component("EquationBlock", EquationBlock);
 app.component("InputField", InputField);
