@@ -25,8 +25,9 @@ defineProps<{
     margin: $view-figure-caption-vertical-margin 0;
   }
   &__contents {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   &__description {
     text-align: left;
