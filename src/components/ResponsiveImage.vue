@@ -1,7 +1,7 @@
 <template>
-  <a class="image" :href="src"
-    ><img class="image__file" :alt="alt" :src="src"
-  /></a>
+  <a class="image" :href="src">
+    <img class="image__file" :alt="alt" :src="src" />
+  </a>
 </template>
 
 <script setup lang="ts">
