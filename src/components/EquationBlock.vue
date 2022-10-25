@@ -2,9 +2,9 @@
   <p class="equation">
     $$
     {{ boxed ? "\\boxed{" : "" }}
-    {{ align ? "\\begin{align}" : "" }}
+    {{ align ? "\\begin{alignat}{99}" : "" }}
     {{ slotText }}
-    {{ align ? "\\end{align}" : "" }}
+    {{ align ? "\\end{alignat}" : "" }}
     {{ boxed ? "}" : "" }}
     $$
   </p>
