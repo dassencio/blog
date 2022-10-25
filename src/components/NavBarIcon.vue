@@ -1,7 +1,7 @@
 <template>
-  <a class="icon" tabindex="0" :href="url"
-    ><img class="icon__image" :alt="name" :src="image"
-  /></a>
+  <a class="icon" tabindex="0" :href="url">
+    <img class="icon__image" :alt="name" :src="image" />
+  </a>
 </template>
 
 <script setup lang="ts">
@@ -14,6 +14,7 @@ defineProps<{
 
 <style scoped lang="scss">
 .icon {
+  display: flex;
   filter: $nav-bar-icon-filter;
   &:active,
   &:focus,
