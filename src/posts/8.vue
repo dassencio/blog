@@ -1,10 +1,10 @@
 <template>
   <p>
     Consider an object traveling along a circle of radius $r$ on the $(x,y)$
-    plane (see <a href="#fig_1">figure 1</a>). The circle is centered at the
-    origin $O$ of the plane. The object travels with constant angular velocity
-    $\omega$, meaning the angle $\theta(t)$ formed by its path with the positive
-    $x$ axis at time $t$ is given by:
+    plane as shown in <a href="#fig_1">figure 1</a>. The circle is centered at
+    the origin $O$ of the plane. The object travels with constant angular
+    velocity $\omega$, meaning the angle $\theta(t)$ formed by its path with the
+    positive $x$ axis at time $t$ is given by:
   </p>
 
   <EquationBlock> \theta(t) = \theta_0 + \omega t </EquationBlock>
@@ -28,7 +28,7 @@
     />
   </BaseFigure>
 
-  <p>The equations of motion for the object are given by:</p>
+  <p>The equations of motion of the object are given by:</p>
 
   <!-- prettier-ignore -->
   <EquationBlock align numberLines>
@@ -53,18 +53,18 @@
 
   <p>
     Here is where the interesting physics starts. Let the position vector ${\bf
-    x}(t)$ be the vector connecting the origin $O$ to the mass $m$ as in
+    x}(t)$ be the vector connecting the origin $O$ to the object as in
     <a href="#fig_1">figure 1</a>. In other words:
   </p>
 
   <EquationBlock>
-    {\bf x}(t) \coloneqq (x(t), y(t)) = r(\cos(\omega t), \sin(\omega t))
+    {\bf x}(t) = (x(t), y(t)) = r(\cos(\omega t), \sin(\omega t))
     \label{eq_motion_vec}
   </EquationBlock>
 
   <p>
-    Then, writing ${\bf v}(t) = (v_x(t), v_y(t))$ and ${\bf a}(t) = (a_x(t),
-    a_y(t))$ for the velocity and acceleration vectors at time $t$ respectively,
+    Then, if ${\bf v}(t) = (v_x(t), v_y(t))$ and ${\bf a}(t) = (a_x(t), a_y(t))$
+    are the object velocity and acceleration vectors at time $t$ respectively,
     we obtain the following:
   </p>
 
@@ -78,17 +78,15 @@
   </EquationBlock>
 
   <p>
-    where equations \eqref{eq_motion_x}, \eqref{eq_motion_y},
-    \eqref{vel_accel_x} and \eqref{vel_accel_y} were used.
-    <a href="#%INDEX%_fig_2">Figure 2</a> visually depicts velocities and
-    accelerations at different positions along the circular path.
+    <a href="#fig_2">Figure 2</a> visually depicts velocities and accelerations
+    at different positions along the circular path:
   </p>
 
   <BaseFigure
-    description="Accelerations (blue) and velocities (red) when $\theta= 0,
+    description="Accelerations (blue) and velocities (red) at $\theta= 0,
                  \pi/2, \pi$ and $3\pi/2$. Notice how the acceleration always
                  points to the center of the circle while the velocity is always
-                 tangential to the circle."
+                 tangential to it."
     :number="2"
   >
     <ResponsiveImage
@@ -103,7 +101,7 @@
     then the acceleration ${\bf a}(t)$, called <b>centripetal acceleration</b>,
     points always towards the center of the circle. To gain more intuition about
     why this is so, notice first that the velocity vector ${\bf v}(t)$ is
-    perpendicular to the position vector ${\bf x}(t)$ at all times:
+    orthogonal to the position vector ${\bf x}(t)$ at all times:
   </p>
 
   <!-- prettier-ignore -->
@@ -116,16 +114,15 @@
   </EquationBlock>
 
   <p>
-    where equations \eqref{eq_motion_vec} and \eqref{vel_vec} were used.
     Therefore, for circular motion, the velocity of the object is always
     tangential to the circle. This is true even if the angular velocity $\omega$
-    is not constant over time (I strongly recommend you check this fact on your
-    own by computing the derivative of ${\bf x}(t) =
-    (r\cos\theta(t),r\sin\theta(t))$ with respect to time for an arbitrary
-    $\theta(t)$ and taking the dot product of ${\bf x}(t)$ and ${\bf v}(t)$).
-    Since in our case the motion is circular with constant angular velocity
-    $\omega$, the magnitude $v(t)$ of the velocity must be always constant. In
-    fact:
+    is not constant over time, and I strongly recommend any unconvinced reader
+    to check this fact on their own by computing the derivative of ${\bf x}(t) =
+    (r\cos\theta(t), r\sin\theta(t))$ with respect to time for an arbitrary
+    $\theta(t)$ and taking the dot product of ${\bf x}(t)$ and the resulting
+    ${\bf v}(t)$. Since in our case the motion is circular with constant angular
+    velocity $\omega$, the magnitude $v(t)$ of the velocity is always constant.
+    In fact:
   </p>
 
   <!-- prettier-ignore -->
@@ -134,30 +131,26 @@
       &= \|{\bf v}(t)\| \\
       &= \sqrt{v_x^2(t) + v_y^2(t)} \\
       &= \sqrt{\omega^2 r^2 \sin^2(\omega t) + \omega^2 r^2\cos^2(\omega t)} \\
-      &= \omega r \sqrt{\sin^2(\omega t) + r^2\cos^2(\omega t)} \\
+      &= \omega r \sqrt{\sin^2(\omega t) + \cos^2(\omega t)} \\
       &= \omega r \label{mag_v}
   </EquationBlock>
 
   <p>
-    The velocity ${\bf v}(t)$ and the acceleration ${\bf a}(t)$ are also always
-    perpendicular to each other. To see this, notice that from equations
-    \eqref{vel_accel_x} and \eqref{vel_accel_y}, we have that:
+    Since, as shown in equation \eqref{accel_vec}, ${\bf a}(t)$ is parallel to
+    ${\bf x}(t)$, the velocity ${\bf v}(t)$ and the acceleration ${\bf a}(t)$
+    are also always orthogonal to each other:
   </p>
 
-  <!-- prettier-ignore -->
-  <EquationBlock align>
-    {\bf v}(t) \cdot {\bf a}(t)
-      &= v_x(t)a_x(t) + v_y(t)a_y(t) \\
-      &= \omega^3 r^2\left[ \sin(\omega t)\cos(\omega t) -
-         \cos(\omega t)\sin(\omega t) \right] \\
-      &= 0
+  <EquationBlock>
+    {\bf v}(t) \cdot {\bf a}(t) = {\bf v}(t) \cdot \left(-\omega^2 {\bf
+    x}(t)\right) = -\omega^2 {\bf v}(t) \cdot {\bf x}(t) = 0
   </EquationBlock>
 
   <p>
     The effect of the acceleration ${\bf a}(t)$ is then to constantly change the
     direction of the velocity ${\bf v}(t)$ without changing its magnitude. To
-    better understand this, let's compute how the magnitude of a general ${\bf
-    v}(t)$ (for any kind of motion) changes over time:
+    better understand this, let's compute how the magnitude of ${\bf v}(t)$
+    changes over time for any arbitrary motion:
   </p>
 
   <!-- prettier-ignore -->
@@ -169,11 +162,11 @@
   </EquationBlock>
 
   <p>
-    When ${\bf a}(t)$ is perpendicular to ${\bf v}(t)$, the magnitude of ${\bf
+    When ${\bf a}(t)$ is orthogonal to ${\bf v}(t)$, the magnitude of ${\bf
     v}(t)$ remains constant despite the fact that its direction will change if
     the acceleration is not zero. Since we made no assumptions on ${\bf v}(t)$
-    and ${\bf a}(t)$ when deriving equation \eqref{dv_dt}, it must be valid for
-    any kind of motion.
+    and ${\bf a}(t)$ when deriving equation \eqref{dv_dt}, it must be valid in
+    general.
   </p>
 
   <p>
@@ -191,10 +184,10 @@
   <p>
     To sum up, whenever an object moves along a circular path with constant
     angular velocity, its acceleration points always to the center of the circle
-    while its velocity is always tangential to the circle. Notice that we have
-    not discussed what causes the motion of the object; we simply assumed it
-    moves along a circle while ignoring the underlying cause of the motion (in
-    other words, we treated it as a
+    while its velocity is always tangential to it. Notice that we have not
+    discussed what causes the motion of the object; we simply assumed it moves
+    along a circle while ignoring the underlying cause of the motion (in other
+    words, we treated the object motion as a
     <a href="https://en.wikipedia.org/wiki/Kinematics">kinematics</a> problem).
   </p>
 </template>
