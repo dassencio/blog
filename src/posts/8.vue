@@ -11,8 +11,8 @@
 
   <p>
     where $\theta_0$ is the value of $\theta(t)$ at $t = 0$. We will assume here
-    that $\theta_0 = 0$. In other words, the object is at the position $(x_0,
-    y_0) = (r, 0)$ at $t = 0$.
+    that $\theta_0 = 0$. In other words, the object is at position $(x_0, y_0) =
+    (r, 0)$ at $t = 0$.
   </p>
 
   <BaseFigure
@@ -57,9 +57,9 @@
   </EquationBlock>
 
   <p>
-    Here is where the interesting physics starts. Let the position vector ${\bf
-    x}(t)$ be the vector connecting the origin $O$ to the object as in
-    <a href="#fig_1">figure 1</a>. In other words:
+    Here is where the interesting physics starts. Let ${\bf x}(t)$ be the
+    position vector connecting the origin $O$ to the object as in
+    <a href="#fig_1">figure 1</a>:
   </p>
 
   <EquationBlock>
@@ -67,17 +67,15 @@
   </EquationBlock>
 
   <p>
-    Then, if ${\bf v}(t) = (v_x(t), v_y(t))$ and ${\bf a}(t) = (a_x(t), a_y(t))$
-    are the object velocity and acceleration vectors at time $t$ respectively,
-    we obtain the following:
+    Then, with ${\bf v}(t) = (v_x(t), v_y(t))$ and ${\bf a}(t) = (a_x(t),
+    a_y(t))$ being the object velocity and acceleration vectors respectively at
+    time $t$, we obtain:
   </p>
 
-  <EquationBlock>
-    {\bf v}(t) = \omega r (-\sin(\omega t), \cos(\omega t))
-  </EquationBlock>
-
-  <EquationBlock>
-    {\bf a}(t) = -\omega^2 r (\cos(\omega t), \sin(\omega t)) = -\omega^2 {\bf
+  <!-- prettier-ignore -->
+  <EquationBlock align numberLines>
+    {\bf v}(t) &= \omega r (-\sin(\omega t), \cos(\omega t)) \\
+    {\bf a}(t) &= -\omega^2 r (\cos(\omega t), \sin(\omega t)) = -\omega^2 {\bf
     x}(t) \label{accel_vec}
   </EquationBlock>
 
@@ -120,12 +118,9 @@
 
   <p>
     Therefore, for circular motion, the velocity of the object is always
-    tangential to the circle. This is true even if the angular velocity $\omega$
-    is not constant over time, and I recommend any unconvinced reader to check
-    this fact themselves by computing the derivative of ${\bf x}(t) =
-    (r\cos\theta(t), r\sin\theta(t))$ with respect to time for an arbitrary
-    $\theta(t)$ and taking the dot product of ${\bf x}(t)$ and the resulting
-    ${\bf v}(t)$.
+    tangential to the circle. As a matter of fact, this is true even when the
+    angular velocity $\dot{\theta}(t)$ changes over time, and I recommend the
+    unconvinced reader to verify this by themselves as an exercise.
   </p>
 
   <p>
