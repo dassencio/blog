@@ -117,10 +117,10 @@
   </EquationBlock>
 
   <p>
-    Therefore, for circular motion, the velocity of the object is always
-    tangential to the circle. As a matter of fact, this is true even when the
-    angular velocity $\dot{\theta}(t)$ changes over time, and I recommend the
-    unconvinced reader to verify this by themselves as an exercise.
+    The velocity of the object is therefore always tangential to the circle. As
+    a matter of fact, this is true even when the angular velocity
+    $\dot{\theta}(t)$ changes over time, and I recommend the unconvinced reader
+    to verify this by themselves as an exercise.
   </p>
 
   <p>
