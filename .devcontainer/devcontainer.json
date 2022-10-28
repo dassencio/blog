@@ -7,7 +7,17 @@
     "vue.volar"
   ],
   "settings": {
-    "cSpell.words": ["coloneqq", "eqref", "mathjax"],
+    "cSpell.words": [
+      "backporting",
+      "coloneqq",
+      "eqref",
+      "infty",
+      "mathjax",
+      "picometer",
+      "Schwarzschild",
+      "subfigure",
+      "textrm"
+    ],
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
