@@ -110,9 +110,9 @@
   <!-- prettier-ignore -->
   <EquationBlock align>
     {\bf v}(t)\cdot{\bf x}(t)
-      &= x(t)v_x(t) + y(t)v_y(t) \\
-      &= \omega r^2\left[\cos(\omega t)(-\sin(\omega t)) +
-         \sin(\omega t)\cos(\omega t)\right] \\
+      &= v_x(t)x(t) + v_y(t)y(t) \\
+      &= \omega r^2\left[-\sin(\omega t)\cos(\omega t) +
+         \cos(\omega t)\sin(\omega t)\right] \\
       &= 0
   </EquationBlock>
 
