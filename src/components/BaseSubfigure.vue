@@ -16,6 +16,7 @@ defineProps<{
   align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   row-gap: $view-subfigure-vertical-gap;
   &__label {
     line-height: 1;
