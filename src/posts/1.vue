@@ -6,7 +6,7 @@
     states that:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock>
     P(B|A) = \frac{P(A|B)P(B)}{P(A)} = \frac{P(A|B)P(B)}{P(A|B)P(B)+
     P(A|B^c)P(B^c)}
   </EquationBlock>
@@ -60,7 +60,7 @@
 
   <p>so we obtain:</p>
 
-  <EquationBlock boxed> P(B|A) = 1 - P(B^c|A) </EquationBlock>
+  <EquationBlock> P(B|A) = 1 - P(B^c|A) </EquationBlock>
 </template>
 
 <script setup lang="ts">

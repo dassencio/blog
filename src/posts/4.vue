@@ -6,7 +6,7 @@
     $128$ bits long, the number of possible IPv6 addresses is:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock>
     N_{\textrm{IPv6}} = 2^{128} \approx 3.4 \times 10^{38}
   </EquationBlock>
 
@@ -56,7 +56,7 @@
     then:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock>
     \sigma_{\textrm{IPv6}} \coloneqq
     \frac{N_{\textrm{IPv6}}}{A_{\textrm{Earth}}} \approx 6.6 \times 10^{23}
     \textrm{m}^{-2}
@@ -71,7 +71,7 @@
     single IPv6 address would "occupy". This value is given by:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock>
     A_{\textrm{IPv6}} \coloneqq \frac{1}{\sigma_{\textrm{IPv6}}} \approx 1.5
     \times 10^{-24} \textrm{m}^2 = 1.5 \textrm{pm}^2
   </EquationBlock>

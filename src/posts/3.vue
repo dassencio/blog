@@ -61,7 +61,7 @@
     crossing the bridge or one fugitive returning. We will prove that:
   </p>
 
-  <EquationBlock boxed> S_N = 2N - 3 </EquationBlock>
+  <EquationBlock> S_N = 2N - 3 </EquationBlock>
 
   <p>
     We begin by noticing that for $N = 2$, we have only one step (the two
@@ -155,7 +155,7 @@
 
   <p>and therefore:</p>
 
-  <EquationBlock boxed>
+  <EquationBlock>
     P_N = \frac{N!^3}{2^{N - 1} N^2} \label{num_possibilities}
   </EquationBlock>
 

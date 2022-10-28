@@ -21,7 +21,7 @@
     $i\theta$, where $\theta$ is a real number:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock>
     e^{i\theta} \coloneqq \cos\theta + i\sin\theta \label{euler_eq}
   </EquationBlock>
 
@@ -66,7 +66,7 @@
     $a$ and $b$ being real numbers, then we can compute $e^{a + ib}$ through:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock>
     e^z = e^{a + ib} \coloneqq e^a e^{ib} = e^a(\cos{b} + i\sin{b})
   </EquationBlock>
 
@@ -86,7 +86,7 @@
     This leads us to define the logarithm of a complex number $z \neq 0$ as:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock>
     \log{z} = \log(e^{\log|z| + i\theta}) \coloneqq \log|z| + i\theta
     \label{complex_log}
   </EquationBlock>
@@ -125,7 +125,7 @@
     definition:
   </p>
 
-  <EquationBlock boxed> z^w \coloneqq e^{w\log z} </EquationBlock>
+  <EquationBlock> z^w \coloneqq e^{w\log z} </EquationBlock>
 
   <p>
     which is motivated by the fact that for any pair of real numbers $x \gt 0$
