@@ -51,7 +51,7 @@ $view-code-block-vertical-padding: 0.5 * $base-length;
 $view-content-vertical-padding: 3.5 * $base-length;
 $view-figure-caption-horizontal-gap: 0.5 * $base-length;
 $view-figure-caption-horizontal-padding: 0.75 * $base-length;
-$view-figure-caption-vertical-margin: 0.5 * $base-length;
+$view-figure-caption-vertical-margin: $base-length;
 $view-figure-contents-gap: 0.5 * $base-length;
 $view-form-element-border-active: rem(1px) solid #000000;
 $view-form-element-border-focus: rem(1px) solid #727272;
