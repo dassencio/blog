@@ -39,8 +39,8 @@
   <EquationBlock> a = \omega^2 r = \frac{v^2}{r} </EquationBlock>
 
   <p>
-    where $v$ is the magnitude of the velocity. With ${\bf x}(t) = (x(t), y(t))$
-    being the position vector of the object at time $t$ (see
+    where $v = \omega r$ is the magnitude of the velocity. With ${\bf x}(t) =
+    (x(t), y(t))$ being the position vector of the object at time $t$ (see
     <a href="#fig_1">figure 1</a>), the acceleration ${\bf a}(t)$ of the object
     satisfies:
   </p>
@@ -108,24 +108,24 @@
     which acts as the centripetal force for each set of clothes. Gravity and
     friction with the walls are also present, but washing machines typically
     rotate so fast that these forces are negligible. To be precise, if $m_r$,
-    $m_g$ and $m_b$ are the masses of the green, red and blue set of clothes
+    $m_g$ and $m_b$ are the masses of the red, green and blue set of clothes
     respectively, then the normal forces acting on them are:
   </p>
 
   <!-- prettier-ignore -->
   <EquationBlock align numberLines>
-    N_r &= \|{\bf N}_r\| &&= \frac{m_rv^2}{r} \\
-    N_g &= \|{\bf N}_g\| &&= \frac{m_gv^2}{r} \\
-    N_b &= \|{\bf N}_b\| &&= \frac{m_bv^2}{r}
+    N_r &= \|{\bf N}_r\| &&= \frac{m_r \omega^2 r}{r} \\
+    N_g &= \|{\bf N}_g\| &&= \frac{m_g \omega^2 r}{r} \\
+    N_b &= \|{\bf N}_b\| &&= \frac{m_b \omega^2 r}{r}
   </EquationBlock>
 
   <p>
-    where $v = \omega r$. This type of contact force is what prevents you from
-    falling through your chair or from sinking into the ground towards the
-    center of the Earth due the gravitational force which constantly pulls you
-    down. Microscopically, this force is the result of the repulsive
-    electromagnetic forces which prevent atoms from overlapping. In our example,
-    the normal forces prevent the clothes from going through the machine walls.
+    This type of contact force is what prevents you from falling through your
+    chair or from sinking into the ground towards the center of the Earth due
+    the gravitational force which constantly pulls you down. Microscopically,
+    this force is the result of the repulsive electromagnetic forces which
+    prevent atoms from overlapping. In our example, the normal forces prevent
+    the clothes from going through the machine walls.
   </p>
 
   <p>
