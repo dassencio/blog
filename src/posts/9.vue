@@ -12,7 +12,7 @@
     <a href="https://en.wikipedia.org/wiki/Kinematics">kinematic</a>
     perspective. In other words, the cause of the motion was ignored. Here, we
     will go over this same problem from a purely
-    <a href="https://en.wikipedia.org/wiki/Newtonian_mechanics">mechanical</a>
+    <a href="https://en.wikipedia.org/wiki/Mechanics">mechanical</a>
     perspective, meaning the main goal will be to better understand the forces
     which cause the object to move along a circular path.
   </p>
@@ -51,17 +51,17 @@
     <a href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion"
       >Newton's second law of motion</a
     >
-    states that the acceleration ${\bf a}(t)$ of a body and the net force ${\bf
-    F}(t)$ acting on that body (i.e., the sum of all forces acting on it) at
-    time $t$ are related through:
+    states that the acceleration ${\bf a}(t)$ of a body and the
+    <a href="https://en.wikipedia.org/wiki/Net_force">net force</a> ${\bf F}(t)$
+    acting on that body at time $t$ are related through:
   </p>
 
   <EquationBlock> {\bf F}(t) = m{\bf a}(t) </EquationBlock>
 
   <p>
     where $m$ is the mass of the body. Therefore, for uniform circular motion,
-    the net force ${\bf F}(t)$ must also point to the center of the circle since
-    it is parallel to ${\bf a}(t)$. This net force is called the
+    ${\bf F}(t)$ must also point to the center of the circle since it is
+    parallel to ${\bf a}(t)$. This net force is called the
     <b>centripetal force</b>. It causes the object to always travel along the
     circle. For completeness, the magnitude of ${\bf F}(t)$ is given by:
   </p>
@@ -98,11 +98,11 @@
 
   <p>
     One could think "well, there is clearly some kind of centrifugal force
-    pushing the clothes against the walls of cylindrical body". However, as we
-    have seen above, this is incorrect. In fact, the force acting on each set of
-    clothes must point to the center of the machine. But then, what is providing
-    this force? It may sound odd, but the answer is: the walls of the washing
-    machine. They provide a contact force, called the
+    pushing the clothes against the walls of the cylindrical body". However,
+    based on what we learned above, this is incorrect. In fact, the force acting
+    on each set of clothes must point to the center of the machine. But then,
+    what is providing this force? It may sound odd, but the answer is: the walls
+    of the washing machine. They provide a contact force, called the
     <a href="https://en.wikipedia.org/wiki/Normal_force">normal force</a>, which
     is always perpendicular to the contact surface. It is this contact force
     which acts as the centripetal force for each set of clothes. Gravity and
