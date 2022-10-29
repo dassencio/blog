@@ -47,7 +47,7 @@ const posts: Post[] = [
     component: () => import("@/posts/4.vue"),
     date: dateToString(2013, 11, 5),
     id: "4",
-    labels: [PostLabel.IPv6, PostLabel.Networks, PostLabel.Technology],
+    labels: [PostLabel.IPv6, PostLabel.Networking, PostLabel.Technology],
     title: "IPv6 address space: how large is it?",
   },
   {
