@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "e15c85cda7ddf7bfc212109fa121a283",
+    component: () => import("@/posts/10.vue"),
+    date: dateToString(2013, 11, 24),
+    id: "10",
+    labels: [PostLabel.Linux, PostLabel.Networking],
+    title: "Disabling the Network Manager",
+  },
+  {
     compatibilityIndex: "d4492209add19ed9842b79411f21657d",
     component: () => import("@/posts/9.vue"),
     date: dateToString(2013, 11, 23),
