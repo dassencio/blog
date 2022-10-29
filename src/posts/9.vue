@@ -97,7 +97,7 @@
   </BaseFigure>
 
   <p>
-    One could think "well, there is clearly some kind of centrifugal force
+    One could think: "well, there is clearly some kind of centrifugal force
     pushing the clothes against the walls of the cylindrical body". However,
     based on what we learned above, this is incorrect. In fact, the force acting
     on each set of clothes must point to the center of the machine. But then,
