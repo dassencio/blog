@@ -101,7 +101,7 @@
     pushing the clothes against the walls of the cylindrical body". However,
     based on what we learned above, this is incorrect. In fact, the force acting
     on each set of clothes must point to the center of the machine. But then,
-    what is providing this force? It may sound odd, but the answer is: the walls
+    what is producing this force? It may sound odd, but the answer is: the walls
     of the washing machine. They provide a contact force, called the
     <a href="https://en.wikipedia.org/wiki/Normal_force">normal force</a>, which
     is always orthogonal to the contact surface. It is this contact force which
