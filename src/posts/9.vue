@@ -13,7 +13,7 @@
     perspective. In other words, the cause of the motion was ignored. Here, we
     will go over this same problem from a purely
     <a href="https://en.wikipedia.org/wiki/Newtonian_mechanics">mechanical</a>
-    perspective, meaning the main focus will be to better understand the forces
+    perspective, meaning the main goal will be to better understand the forces
     which cause the object to move along a circular path.
   </p>
 
@@ -71,22 +71,22 @@
   </EquationBlock>
 
   <p>
-    Let's now consider a situation where the above applies: imagine you're
-    washing your clothes in your washing machine. The interior of the washing
-    machine is a cylindrical body of radius $r$ as in
-    <a href="#fig_2">figure 2</a>, and it spins very fast. The clothes seem to
-    be "compressed against" the walls of the washing machine, right?
+    Let's now consider a situation where the above applies. Imagine you're
+    washing your clothes in your washing machine, and that its interior is a
+    cylindrical body of radius $r$ spinning very fast as shown in
+    <a href="#fig_2">figure 2</a>. The clothes seem to be "compressed against"
+    the walls of the washing machine, right?
   </p>
 
   <BaseFigure
-    description="Washing machine spinning with constant angular velocity
+    description='Washing machine spinning with constant angular velocity
                  $\omega$. There is no centrifugal force acting on each set of
                  clothes (shown in colors in the figure). Instead, the forces
                  which keep the clothes traveling along a circle point
                  to the center of the machine (these forces are labeled
-                 {\bf N}_r$, ${\bf N}_g and ${\bf N}_b$ in the figure, with
-                 subscripts $r$, $g$ and $b$ standing for red, green and blue
-                 respectively)."
+                 ${\bf N}_r$, ${\bf N}_g$ and ${\bf N}_b$ in the figure, with
+                 subscripts $r$, $g$ and $b$ standing for "red", "green" and
+                 "blue" respectively).'
     :number="2"
   >
     <ResponsiveImage
@@ -98,17 +98,17 @@
 
   <p>
     One could think "well, there is clearly some kind of centrifugal force
-    pushing the clothes against the walls of the washing machine". However, as
-    we have seen above, this is incorrect. In fact, the force acting on each set
-    of clothes must point to the center of the machine. But then, what is
-    providing this force? It may sound odd, but the answer is: the walls of the
-    washing machine. They provide a contact force, called the
+    pushing the clothes against the walls of cylindrical body". However, as we
+    have seen above, this is incorrect. In fact, the force acting on each set of
+    clothes must point to the center of the machine. But then, what is providing
+    this force? It may sound odd, but the answer is: the walls of the washing
+    machine. They provide a contact force, called the
     <a href="https://en.wikipedia.org/wiki/Normal_force">normal force</a>, which
     is always perpendicular to the contact surface. It is this contact force
     which acts as the centripetal force for each set of clothes. Gravity and
     friction with the walls are also present, but washing machines typically
-    rotate so fast that these forces are negligible. To be precise, if $m_g$,
-    $m_r$ and $m_b$ are the masses of the green, red and blue set of clothes
+    rotate so fast that these forces are negligible. To be precise, if $m_r$,
+    $m_g$ and $m_b$ are the masses of the green, red and blue set of clothes
     respectively, then the normal forces acting on them are:
   </p>
 
@@ -141,15 +141,15 @@
     "centripetal") which keeps the car on the arc. This is the reason why icy
     roads are very dangerous: the tires do not properly adhere to the ground and
     therefore the friction forces are not strong enough to act as the
-    centripetal force the car need to stay on the road.
+    centripetal force the car needs to remain on the road.
   </p>
 
   <BaseFigure
     description="Car traveling along a circular arc. Figure (a) shows the
                  net force ${\bf F}_{\textrm{cp}}$ acting on the car (the
-                 centripetal force). Figure (b) friction forces acting on the
-                 tires of the car, the sum of which yield the centripetal force
-                 ${\bf F}_{\textrm{cp}}$."
+                 centripetal force). Figure (b) shows friction forces acting on
+                 the tires of the car, the sum of which yield the centripetal
+                 force ${\bf F}_{\textrm{cp}}$."
     :number="3"
   >
     <BaseSubfigure label="(a)">
