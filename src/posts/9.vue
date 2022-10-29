@@ -104,28 +104,28 @@
     what is providing this force? It may sound odd, but the answer is: the walls
     of the washing machine. They provide a contact force, called the
     <a href="https://en.wikipedia.org/wiki/Normal_force">normal force</a>, which
-    is always perpendicular to the contact surface. It is this contact force
-    which acts as the centripetal force for each set of clothes. Gravity and
-    friction with the walls are also present, but washing machines typically
-    rotate so fast that these forces are negligible. To be precise, if $m_r$,
-    $m_g$ and $m_b$ are the masses of the red, green and blue set of clothes
-    respectively, then the normal forces acting on them are:
+    is always orthogonal to the contact surface. It is this contact force which
+    acts as the centripetal force for each set of clothes. Gravity and friction
+    with the walls are also present, but washing machines typically rotate so
+    fast that these forces are negligible. If $m_r$, $m_g$ and $m_b$ are the
+    masses of the red, green and blue sets of clothes respectively, then the
+    normal forces acting on them are:
   </p>
 
   <!-- prettier-ignore -->
   <EquationBlock align numberLines>
-    N_r &= \|{\bf N}_r\| &&= \frac{m_r \omega^2 r}{r} \\
-    N_g &= \|{\bf N}_g\| &&= \frac{m_g \omega^2 r}{r} \\
-    N_b &= \|{\bf N}_b\| &&= \frac{m_b \omega^2 r}{r}
+    N_r &= \|{\bf N}_r\| &&= m_r \omega^2 r \\
+    N_g &= \|{\bf N}_g\| &&= m_g \omega^2 r \\
+    N_b &= \|{\bf N}_b\| &&= m_b \omega^2 r
   </EquationBlock>
 
   <p>
     This type of contact force is what prevents you from falling through your
-    chair or from sinking into the ground towards the center of the Earth due
-    the gravitational force which constantly pulls you down. Microscopically,
-    this force is the result of the repulsive electromagnetic forces which
-    prevent atoms from overlapping. In our example, the normal forces prevent
-    the clothes from going through the machine walls.
+    chair or from sinking into the ground toward the center of the Earth due the
+    gravitational force which constantly pulls you down. Microscopically, this
+    force is the result of the repulsive electromagnetic forces which prevent
+    atoms from overlapping. In our example, the normal forces prevent the
+    clothes from going through the machine walls.
   </p>
 
   <p>
@@ -136,12 +136,12 @@
     the center of the circle which contains the arc the car is traveling on. But
     where is this force coming from? From the friction with the ground! The
     friction forces between the tires and the ground point to the left of the
-    car, towards the center of the circle, and when summed, yield the
-    centripetal force ${\bf F}_{\textrm{cp}}$ ("cp" here stands for
-    "centripetal") which keeps the car on the arc. This is the reason why icy
-    roads are very dangerous: the tires do not properly adhere to the ground and
-    therefore the friction forces are not strong enough to act as the
-    centripetal force the car needs to remain on the road.
+    car, toward the center of the circle, and when summed, yield the centripetal
+    force ${\bf F}_{\textrm{cp}}$ ("cp" here stands for "centripetal") which
+    keeps the car on the arc. This is the reason why icy roads are very
+    dangerous: the tires do not properly adhere to the ground and therefore the
+    friction forces are not strong enough to act as the centripetal force the
+    car needs to remain on the road.
   </p>
 
   <BaseFigure
