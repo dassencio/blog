@@ -101,9 +101,9 @@
   <p>
     Since ${\bf x}(t)$ always points away from the center $O$ of the circle,
     equation \eqref{accel_vec} tells us that the acceleration ${\bf a}(t)$,
-    called <b>centripetal acceleration</b>, points always towards the center of
-    the circle. To gain more intuition about why this is so, notice first that
-    the velocity vector ${\bf v}(t)$ is orthogonal to the position vector ${\bf
+    called <b>centripetal acceleration</b>, points always to the center of the
+    circle. To gain more intuition about why this is so, notice first that the
+    velocity vector ${\bf v}(t)$ is orthogonal to the position vector ${\bf
     x}(t)$ at all times:
   </p>
 
