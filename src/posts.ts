@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "1d16b3e5666a13fc6cfa572b64f47dd2",
+    component: () => import("@/posts/12.vue"),
+    date: dateToString(2013, 11, 26),
+    id: "12",
+    labels: [PostLabel.Electromagnetism, PostLabel.Physics],
+    title: "Electric field at the center of a polygon: symmetry!",
+  },
+  {
     compatibilityIndex: "ad242ecf67be43e63f86a43f0fa71426",
     component: () => import("@/posts/11.vue"),
     date: dateToString(2013, 11, 24),
