@@ -42,8 +42,8 @@
   <SectionTitle>Option #2: uninstall it</SectionTitle>
 
   <p>
-    If you're sure you will never use the Network Manager again, you can
-    uninstall it by running:
+    If you're using Ubuntu/Debian and are sure you will never need the Network
+    Manager again, you can uninstall it by running:
   </p>
 
   <CodeBlock
