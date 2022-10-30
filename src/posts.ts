@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "ad242ecf67be43e63f86a43f0fa71426",
+    component: () => import("@/posts/11.vue"),
+    date: dateToString(2013, 11, 24),
+    id: "11",
+    labels: [PostLabel.Linux],
+    title: "How to concatenate (join) PDF files on Linux",
+  },
+  {
     compatibilityIndex: "e15c85cda7ddf7bfc212109fa121a283",
     component: () => import("@/posts/10.vue"),
     date: dateToString(2013, 11, 24),
