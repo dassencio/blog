@@ -15,10 +15,10 @@
   <CodeBlock>sudo service network-manager start</CodeBlock>
 
   <p>
-    To prevent the Network Manager from starting on boot, create a file called
-    <code>network-manager.override</code> in <code>/etc/init/</code> and add
-    "<code>manual</code>" to its contents. This can be done with the following
-    command:
+    To prevent the Network Manager from starting again on boot, create a file
+    called <code>network-manager.override</code> in <code>/etc/init/</code> and
+    add "<code>manual</code>" to its contents. This can be done with the
+    following command:
   </p>
 
   <CodeBlock
@@ -26,17 +26,18 @@
   </CodeBlock>
 
   <p>
-    To have the Network Manager start on boot again, just remove the file you
+    To have the Network Manager start on boot again, simply remove the file you
     generated:
   </p>
 
   <CodeBlock>sudo rm /etc/init/network-manager.override</CodeBlock>
 
   <p>
-    This is the option I recommend as it's easily reversible and keeps the
+    This is the approach I recommend as it's easily reversible and keeps the
     Network Manager installed but inactive. If you run into trouble while trying
-    to connect to the internet, you can simply manually start the Network
-    Manager and investigate the problem without being stuck offline.
+    to connect to the internet, you can still manually start the Network Manager
+    to reestablish internet connection and then search for a solution to the
+    problem you encountered.
   </p>
 
   <SectionTitle>Option #2: uninstall it</SectionTitle>
@@ -50,7 +51,7 @@
     >sudo apt-get remove network-manager network-manager-gnome
   </CodeBlock>
 
-  <p>To stop a possibly running instance of the Network Manager, run:</p>
+  <p>To stop a running instance of the Network Manager, run:</p>
 
   <CodeBlock>sudo service network-manager stop</CodeBlock>
 
