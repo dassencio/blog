@@ -15,6 +15,7 @@ export enum PostLabel {
   Physics = "Physics",
   Probability = "Probability theory",
   Programming = "Programming",
+  Shell = "Shell",
   Statistics = "Statistics",
   Technology = "Technology",
 }

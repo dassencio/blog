@@ -7,7 +7,7 @@ const posts: Post[] = [
     component: () => import("@/posts/11.vue"),
     date: dateToString(2013, 11, 24),
     id: "11",
-    labels: [PostLabel.Linux],
+    labels: [PostLabel.Linux, PostLabel.Shell],
     title: "How to concatenate (join) PDF files on Linux",
   },
   {
