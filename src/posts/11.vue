@@ -1,6 +1,6 @@
 <template>
   <p>
-    On Linux, you can concatenate PDF files using a program called
+    On Linux, you can concatenate PDF files using a CLI tool called
     <a href="http://linux.die.net/man/1/pdfjam"><code>pdfjam</code></a
     >. To install it on Ubuntu/Debian, open a terminal and run:
   </p>
@@ -15,8 +15,8 @@
 
   <p>
     This will generate a file called <code>output-file.pdf</code> which will be
-    the result of joining together the input files
-    <code>file1.pdf, file2.pdf, ..., fileN.pdf</code>.
+    the result of joining together the input files <code>file1.pdf</code>,
+    <code>file2.pdf</code>, ..., <code>fileN.pdf</code>.
   </p>
 
   <p>
