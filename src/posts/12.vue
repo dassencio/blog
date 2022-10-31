@@ -8,14 +8,14 @@
   </p>
 
   <BaseFigure
-    description="Regular pentagon with a charge $q$ placed on each of its
+    description="Regular pentagon with a charge $q$ placed at each of its
                  vertices. In the figure, $\theta = 2\pi / 5$. For a general
                  regular polygon with $N$ sides, $\theta = 2\pi / N$."
     :number="1"
   >
     <ResponsiveImage
       class="figure-1"
-      alt="Charges placed on vertices of a regular polygon"
+      alt="Charges placed at vertices of a regular polygon"
       :src="chargesOnRegularPolygon"
     />
   </BaseFigure>
@@ -29,7 +29,7 @@
 
   <p>
     To see what I mean by that, consider the electric field produced by the
-    charges at the point $O$ is as shown in <a href="#fig_2">figure 2a</a>.
+    charges at the point $O$ as shown in <a href="#fig_2">figure 2a</a>.
   </p>
 
   <BaseFigure
@@ -43,14 +43,14 @@
     <BaseSubfigure label="(a)">
       <ResponsiveImage
         class="figure-2a"
-        alt="Charges placed on vertices of a regular polygon"
+        alt="Charges placed at vertices of a regular polygon"
         :src="chargesOnRegularPolygonRotationA"
       />
     </BaseSubfigure>
     <BaseSubfigure label="(b)">
       <ResponsiveImage
         class="figure-2b"
-        alt="Charges placed on vertices of a regular polygon (rotated)"
+        alt="Charges placed at vertices of a regular polygon (rotated)"
         :src="chargesOnRegularPolygonRotationB"
       />
     </BaseSubfigure>
@@ -69,10 +69,10 @@
   <EquationBlock boxed> {\bf E} = {\bf 0} </EquationBlock>
 
   <p>
-    A reader who prefers things proved mathematically might be bothered with
-    this type of proof. As a matter of fact, some might not even consider it a
-    proof at all. However, arguments of this kind are ubiquitous in physics and
-    yield correct results with very little effort.
+    A reader who prefers things demonstrated mathematically might be skeptical
+    against this type of proof. As a matter of fact, some might not even
+    consider it a proof at all. However, arguments of this kind are ubiquitous
+    in physics and yield correct results with very little effort.
   </p>
 
   <p>
@@ -83,16 +83,21 @@
   </p>
 
   <EquationBlock>
-    {\bf x}_k = r(\cos\theta_k, \sin\theta_k) = r(\cos(2\pi k/N), \sin(2\pi
-    k/N))
+    {\bf x}_k = r(\cos\theta_k, \sin\theta_k) = r(\cos(\alpha + 2\pi k/N),
+    \sin(\alpha + 2\pi k/N))
   </EquationBlock>
 
   <p>
-    for $k = 1, 2, \ldots, N$. Since $e^{i\theta} = (\cos\theta, \sin\theta)$ (a
-    complex number is a point in $\mathbb{R}^2$), then we can write:
+    for $k = 1, 2, \ldots, N$, where $\alpha$ is an angle which defines the
+    orientation of the polygon with respect to a direction chosen as the $x$
+    axis. Since any point on a two-dimensional plane can be represented as a
+    complex number, and given that $e^{i\theta} = (\cos\theta, \sin\theta)$, we
+    can write:
   </p>
 
-  <EquationBlock> {\bf x}_k = r e^{i 2\pi k / N} </EquationBlock>
+  <EquationBlock>
+    {\bf x}_k = r e^{i (\alpha + 2\pi k / N)} = r e^{i \alpha} e^{i 2\pi k / N}
+  </EquationBlock>
 
   <p>
     This will allow us to compute ${\bf E}$ more easily. If ${\bf E}_k$ is the
@@ -101,15 +106,15 @@
 
   <EquationBlock>
     {\bf E}_k = \frac{kq}{\|{\bf x}_k\|^3}(-{\bf x}_k) = -\frac{kq}{r^3} r e^{i
-    2\pi k / N} = -\frac{kq}{r^2} e^{i 2\pi k / N}
+    \alpha} e^{i 2\pi k / N} = -\frac{kqe^{i \alpha}}{r^2} e^{i 2\pi k / N}
   </EquationBlock>
 
   <p>and therefore:</p>
 
   <EquationBlock>
-    {\bf E} = \sum_{k=1}^{N} {\bf E}_k = \sum_{k=1}^N \left( -\frac{kq}{r^2}
-    e^{i 2\pi k / N} \right) = -\frac{kq}{r^2} \sum_{k=1}^N (e^{i 2\pi / N})^k
-    \label{E_as_sum}
+    {\bf E} = \sum_{k=1}^{N} {\bf E}_k = \sum_{k=1}^N \left( -\frac{kqe^{i
+    \alpha}}{r^2} e^{i 2\pi k / N} \right) = -\frac{kqe^{i \alpha}}{r^2}
+    \sum_{k=1}^N (e^{i 2\pi / N})^k \label{E_as_sum}
   </EquationBlock>
 
   <p>But since for any complex number $z \neq 1$ we have that:</p>
@@ -124,9 +129,10 @@
   </p>
 
   <EquationBlock>
-    {\bf E} = -\frac{kq}{r^2} \left( \frac{e^{i 2\pi / N} - (e^{i 2\pi /
-    N})^{N+1}}{1 - e^{i 2\pi / N}} \right) = -\frac{kq}{r^2} e^{i 2\pi / N}
-    \left( \frac{1 - (e^{i 2\pi/N})^N}{1 - e^{i 2\pi / N}} \right) = {\bf 0}
+    {\bf E} = -\frac{kqe^{i \alpha}}{r^2} \left( \frac{e^{i 2\pi / N} - (e^{i
+    2\pi / N})^{N+1}}{1 - e^{i 2\pi / N}} \right) = -\frac{kqe^{i \alpha}}{r^2}
+    e^{i 2\pi / N} \left( \frac{1 - (e^{i 2\pi/N})^N}{1 - e^{i 2\pi / N}}
+    \right) = {\bf 0}
   </EquationBlock>
 
   <p>since:</p>
