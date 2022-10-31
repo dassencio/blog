@@ -84,7 +84,7 @@
 
   <p>
     The output should look similar to this (<code>wireshark</code>
-    must be on the output, the rest is irrelevant):
+    must appear in the output, the rest is irrelevant):
   </p>
 
   <CodeBlock
@@ -93,10 +93,10 @@
 
   <p>
     Now run <code>wireshark</code> as one of the users in the
-    <code>wireshark</code> group; you should be able to capture live traffic. If
-    you did all of the above as one of the users you added to the
-    <code>wireshark</code> group, you may need to log out and log back in for
-    your newly added permissions to take place.
+    <code>wireshark</code> group: you should be able to capture live traffic. If
+    you did all of the above while logged in as one of the users you added to
+    the <code>wireshark</code> group, you may need to log out and log back in
+    for your newly added permissions to become active.
   </p>
 
   <p>
