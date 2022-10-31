@@ -8,7 +8,7 @@ const posts: Post[] = [
     date: dateToString(2013, 11, 26),
     id: "12",
     labels: [PostLabel.Electromagnetism, PostLabel.Physics],
-    title: "Electric field at the center of a polygon: symmetry!",
+    title: "Electric field at the center of a regular polygon",
   },
   {
     compatibilityIndex: "ad242ecf67be43e63f86a43f0fa71426",
