@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "e48aa7b74bd7acb76c30de0a240108c2",
+    component: () => import("@/posts/13.vue"),
+    date: dateToString(2013, 11, 26),
+    id: "13",
+    labels: [PostLabel.Linux, PostLabel.Networking],
+    title: "Capturing packets with Wireshark as a normal user",
+  },
+  {
     compatibilityIndex: "1d16b3e5666a13fc6cfa572b64f47dd2",
     component: () => import("@/posts/12.vue"),
     date: dateToString(2013, 11, 26),
