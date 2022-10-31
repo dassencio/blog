@@ -42,6 +42,10 @@ watch(post, (post) => {
   font-family: "Noto Sans Mono Regular";
   src: url("@/assets/fonts/notosansmono-regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Noto Sans Mono SemiBold";
+  src: url("@/assets/fonts/notosansmono-semibold.ttf") format("truetype");
+}
 html {
   background-color: white;
   color: $view-text-color-normal;
@@ -87,6 +91,9 @@ i {
 }
 code {
   font-family: "Noto Sans Mono Regular";
+  b {
+    font-family: "Noto Sans Mono SemiBold";
+  }
 }
 </style>
 

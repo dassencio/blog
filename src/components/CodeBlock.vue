@@ -17,6 +17,9 @@
     overflow-x: auto;
     padding: $view-code-block-vertical-padding
       $view-code-block-horizontal-padding;
+    :deep(b) {
+      font-family: "Noto Sans Mono SemiBold";
+    }
   }
 }
 </style>
