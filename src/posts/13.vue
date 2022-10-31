@@ -48,14 +48,14 @@
   <CodeBlock>sudo chgrp wireshark /usr/bin/dumpcap</CodeBlock>
 
   <p>
-    Make sure only users in the <code>wireshark</code> group can execute
+    Next, make sure only users in the <code>wireshark</code> group can execute
     <code>dumpcap</code>:
   </p>
 
   <CodeBlock>sudo chmod 754 /usr/bin/dumpcap</CodeBlock>
 
   <p>
-    Now add the necessary capabilities to <code>dumpcap</code> as discussed
+    Finally, add the necessary capabilities to <code>dumpcap</code> as discussed
     above (even if you already ran this command before, run it again as
     <code>dumpcap</code> might have lost its given capabilities at this point):
   </p>
@@ -68,23 +68,23 @@
     To test if your permissions are correct, run
     <code>wireshark</code> as a regular user (I'm assuming you have not added
     this user to the <code>wireshark</code> group). If you cannot capture live
-    traffic, everything is fine. You should now add each user who should be
-    allowed to capture traffic to the <code>wireshark</code> group with the
+    traffic, everything is fine. At this point, you add can users who should be
+    allowed to capture live traffic to the <code>wireshark</code> group with the
     command below:
   </p>
 
   <CodeBlock>sudo usermod -a -G wireshark &lt;username&gt;</CodeBlock>
 
   <p>
-    To verify that the user now belongs to the <code>wireshark</code> group,
-    run:
+    To verify that a user was correctly added to the
+    <code>wireshark</code> group, run:
   </p>
 
   <CodeBlock>id &lt;username&gt;</CodeBlock>
 
   <p>
     The output should look similar to this (<code>wireshark</code>
-    must appear in the output, the rest is irrelevant):
+    must appear in the output; the rest is irrelevant):
   </p>
 
   <CodeBlock
@@ -100,10 +100,10 @@
   </p>
 
   <p>
-    <b>NOTE</b>: While in principle you could just run <code>wireshark</code> as
-    root instead of following the instructions above, <b>do not do this</b>!
-    Wireshark is a huge application, and running it as root unnecessarily risks
-    damaging your system.
+    <b>NOTE</b>: While in principle you could simply run
+    <code>wireshark</code> as root instead of following the instructions above,
+    <b>do not do this</b>! Wireshark is a huge application, and running it as
+    root unnecessarily risks damaging your system.
   </p>
 
   <p>
