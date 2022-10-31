@@ -8,9 +8,9 @@
   </p>
 
   <BaseFigure
-    description="Regular pentagon with a charge $q$ placed at each of its
-                 vertices. In the figure, $\theta = 2\pi / 5$. For a general
-                 regular polygon with $N$ sides, $\theta = 2\pi / N$."
+    description="Regular pentagon with charges placed at each of its vertices.
+                 In the figure, $\theta = 2\pi / 5$. For a regular  polygon with
+                 $N$ sides, $\theta = 2\pi / N$."
     :number="1"
   >
     <ResponsiveImage
