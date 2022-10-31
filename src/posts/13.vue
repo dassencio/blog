@@ -1,6 +1,6 @@
 <template>
   <p>
-    To capture packets on <a href="https://www.wireshark.org">Wireshark</a>
+    To capture packets with <a href="https://www.wireshark.org">Wireshark</a>
     without being root, open a terminal and run:
   </p>
 
@@ -31,10 +31,10 @@
   <CodeBlock>/usr/bin/dumpcap = cap_net_admin,cap_net_raw+eip</CodeBlock>
 
   <p>
-    If you feel that allowing all users to have this privilege is too
-    permissive, then you should create a group and only allow users from that
-    group to execute <code>dumpcap</code> (and therefore to capture live traffic
-    with Wireshark). On Ubuntu/Debian, you can create a group called
+    If you feel that granting this privilege to all users is too permissive,
+    then you should create a group and only allow users within that group to
+    execute <code>dumpcap</code> (and therefore to capture live traffic with
+    Wireshark). On Ubuntu/Debian, you can create a group called
     <code>wireshark</code> with the following command:
   </p>
 
