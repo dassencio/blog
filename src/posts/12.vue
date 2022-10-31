@@ -34,7 +34,7 @@
 
   <BaseFigure
     description="Rotating a pentagon by $\theta = 2\pi / 5$ around its center
-                 point in the anti-clockwise (or clockwise) direction produces
+                 point in the counterclockwise (or clockwise) direction produces
                  the same charge configuration (b) as we initially had in (a).
                  In general, this is true if one rotates a regular polygon with
                  $N$ sides by $\theta = 2\pi/N$ around its center point."
@@ -59,8 +59,8 @@
   <p>
     If we now rotate the polygon by $\theta = 2\pi/N$ clockwise or
     counterclockwise, we will obtain the exact same charge configuration as we
-    had before. In other words, the electric field ${\bf E}$ at the point $O$
-    must be the same before and after the rotation is applied. But if the whole
+    had before, implying that the electric field ${\bf E}$ at the point $O$ must
+    be the same before and after the rotation is applied. But if the whole
     polygon is rotated, ${\bf E}$ must also be rotated with it. We will have an
     absurd situation unless the magnitude of the electric field at $O$ is zero.
     Therefore:
