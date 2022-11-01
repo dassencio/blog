@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "771ffcf2efe6efe3e934d81cb6b8bbfb",
+    component: () => import("@/posts/14.vue"),
+    date: dateToString(2013, 11, 27),
+    id: "14",
+    labels: [PostLabel.Linux, PostLabel.Security, PostLabel.SSH],
+    title: "Improve your ssh experience with a config file",
+  },
+  {
     compatibilityIndex: "e48aa7b74bd7acb76c30de0a240108c2",
     component: () => import("@/posts/13.vue"),
     date: dateToString(2013, 11, 26),
