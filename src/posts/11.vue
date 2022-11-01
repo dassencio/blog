@@ -1,8 +1,8 @@
 <template>
   <p>
     On Linux, you can concatenate PDF files using a CLI tool called
-    <a href="http://linux.die.net/man/1/pdfjam"><code>pdfjam</code></a
-    >. To install it on Ubuntu/Debian, open a terminal and run:
+    <a href="http://linux.die.net/man/1/pdfjam">pdfjam</a>. To install it on
+    Ubuntu/Debian, open a terminal and run:
   </p>
 
   <CodeBlock>sudo apt-get install pdfjam</CodeBlock>
