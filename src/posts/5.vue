@@ -43,8 +43,8 @@
 
   <CodeBlock
     >git show &lt;commit-sha1&gt; --no-color -- path/to/old_filename | patch
-    path/to/new_filename
-  </CodeBlock>
+    path/to/new_filename</CodeBlock
+  >
 
   <p>
     This command works by passing all modifications done to

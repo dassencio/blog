@@ -10,8 +10,9 @@
   <p>You can now concatenate as many PDF files as you wish by running:</p>
 
   <CodeBlock
-    >pdfjam file1.pdf file2.pdf ... fileN.pdf --outfile output-file.pdf
-  </CodeBlock>
+    >pdfjam file1.pdf file2.pdf ... fileN.pdf --outfile
+    output-file.pdf</CodeBlock
+  >
 
   <p>
     This will generate a file called <code>output-file.pdf</code> which will be

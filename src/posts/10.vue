@@ -22,8 +22,8 @@
   </p>
 
   <CodeBlock
-    >echo "manual" | sudo tee /etc/init/network-manager.override
-  </CodeBlock>
+    >echo "manual" | sudo tee /etc/init/network-manager.override</CodeBlock
+  >
 
   <p>
     To have the Network Manager start on boot again, simply remove the file you
@@ -48,8 +48,8 @@
   </p>
 
   <CodeBlock
-    >sudo apt-get remove network-manager network-manager-gnome
-  </CodeBlock>
+    >sudo apt-get remove network-manager network-manager-gnome</CodeBlock
+  >
 
   <p>To stop a running instance of the Network Manager, run:</p>
 
