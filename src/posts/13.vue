@@ -5,7 +5,7 @@
   </p>
 
   <CodeBlock
-    >sudo setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap</CodeBlock
+    >sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap</CodeBlock
   >
 
   <p>
@@ -49,7 +49,7 @@
     Dumpcap:
   </p>
 
-  <CodeBlock>sudo chmod 754 /usr/bin/dumpcap</CodeBlock>
+  <CodeBlock>sudo chmod o-rx /usr/bin/dumpcap</CodeBlock>
 
   <p>
     Finally, add the necessary capabilities to Dumpcap as discussed above (even
@@ -58,7 +58,7 @@
   </p>
 
   <CodeBlock
-    >sudo setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap</CodeBlock
+    >sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap</CodeBlock
   >
 
   <p>
@@ -104,7 +104,7 @@
   </p>
 
   <p>
-    To read more about this topic, see the
+    To learn more about this topic, see the
     <a href="http://wiki.wireshark.org/CaptureSetup/CapturePrivileges"
       >Wireshark wiki</a
     >.
