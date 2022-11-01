@@ -30,8 +30,8 @@
   <CodeBlock>{{ configExample1.trim() }}</CodeBlock>
 
   <p>
-    For a which server listens on the default SSH port (22), the
-    <code>Port</code> directive can be omitted. With the configuration above, we
+    For a server which listens on the default SSH port (22), the
+    <code>Port</code> directive can be omitted. With the configuration above,
     it's possible to connect the server with a much shorter command:
   </p>
 
@@ -106,7 +106,7 @@
       <a href="https://en.wikipedia.org/wiki/SHA-2">SHA-2</a> hash function
       producing either 512- or 256-bit long digests.
     </span>
-    <b>Ley exchange algorithm:</b>
+    <b>Key exchange algorithm:</b>
     <span>
       <a
         href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
@@ -117,9 +117,9 @@
   </MultiModeGrid>
 
   <p>
-    Also, the file <code>~/.ssh/id_rsa</code> will be used as the private RSA
+    Also, the file <code>~/.ssh/id_rsa</code> will be used as your private RSA
     key. Whenever multiple choices are specified for a certain parameter (e.g.
-    <code>Ciphers</code> is set to a list containing both
+    <code>Ciphers</code> is given a list containing both
     <code>aes256-ctr</code> and <code>aes256-cbc</code>), ssh will always use
     the first one in the list which is supported by the server.
   </p>
@@ -152,16 +152,16 @@
   <CodeBlock>{{ configExample4.trim() }}</CodeBlock>
 
   <p>
-    In this case, if you connect to <code>myserver</code>, the parameters set
-    under the <code>myserver</code> section will take precedence as they are
-    defined earlier in the config file. In other words, the MAC used will be
+    In this case, if you connect to <code>myserver</code>, the parameters
+    specified for <code>myserver</code> will take precedence over everything
+    appearing later in the config file. In other words, the MAC used will be
     <code>hmac-sha1</code> (HMAC with
     <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a> as hash function)
     instead of <code>hmac-sha2-512</code>. Similarly, the block cipher used will
     be <code>aes128-cbc</code> (AES with CBC as mode of operation and 128-bit
-    long keys) instead of <code>aes256-ctr</code>, and so on. But whenever you
-    connect to <code>myotherserver</code>, the connection parameters adopted
-    will be the ones specified for the <code>*</code> host.
+    long keys) instead of <code>aes256-ctr</code>, and so on. On the other hand,
+    when you connect to <code>myotherserver</code>, all parameters specified
+    under <code>*</code> are adopted.
   </p>
 </template>
 
