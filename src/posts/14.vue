@@ -32,15 +32,16 @@
   <p>
     For a server which listens on the default SSH port (22), the
     <code>Port</code> directive can be omitted. With the configuration above,
-    it's possible to connect the server with a much shorter command:
+    it's possible to connect to the server with a much shorter command:
   </p>
 
   <CodeBlock>ssh myserver</CodeBlock>
 
   <p>
-    Much better than writing the long ssh command above, right? Also, the server
-    name we chose (<code>myserver</code>) will be autocompleted if you type part
-    of it and press the "Tab" key.
+    Much better than writing the long ssh command above, right? Also, depending
+    on the operating system and shell you're using, the chosen server name
+    (<code>myserver</code>) may be autocompleted if you type part of it and
+    press the "Tab" key.
   </p>
 
   <SectionTitle>Bonus: security options</SectionTitle>
@@ -63,8 +64,8 @@
   <CodeBlock>{{ configExample2.trim() }}</CodeBlock>
 
   <p>
-    When you connect to <code>myserver</code>, the connection will only be
-    established if the server supports the chosen:
+    When you attempt to connect to <code>myserver</code>, the connection will
+    only be established if the server supports the chosen:
   </p>
 
   <MultiModeGrid mode="list" itemized>
@@ -134,8 +135,8 @@
   <CodeBlock>man ssh_config</CodeBlock>
 
   <p>
-    In order to simplify your ssh config file, you can assign a given
-    configuration to many hosts at a time with the <code>*</code> symbol as
+    In order to simplify your ssh config file, you can define default
+    configuration parameters for every host with the <code>*</code> symbol as
     shown below:
   </p>
 
@@ -161,7 +162,7 @@
     be <code>aes128-cbc</code> (AES with CBC as mode of operation and 128-bit
     long keys) instead of <code>aes256-ctr</code>, and so on. On the other hand,
     when you connect to <code>myotherserver</code>, all parameters specified
-    under <code>*</code> are adopted.
+    under <code>*</code> will be adopted.
   </p>
 </template>
 
