@@ -89,8 +89,8 @@
 
   <p>
     for $k = 1, 2, \ldots, N$, where $\alpha$ is an angle which defines the
-    orientation of the polygon with respect to a direction chosen as the $x$
-    axis. Since any point on a two-dimensional plane can be represented as a
+    orientation of the polygon with respect to a direction chosen as the
+    $x$-axis. Since any point on a two-dimensional plane can be represented as a
     complex number, and given that $e^{i\theta} = (\cos\theta, \sin\theta)$, we
     can write:
   </p>

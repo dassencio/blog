@@ -4,7 +4,7 @@
     plane as shown in <a href="#fig_1">figure 1</a>. The circle is centered at
     the origin $O$ of the plane. The object travels with constant angular
     velocity $\omega$, meaning the angle $\theta(t)$ formed by its path with the
-    positive $x$ axis at time $t$ is given by:
+    positive $x$-axis at time $t$ is given by:
   </p>
 
   <EquationBlock> \theta(t) = \theta_0 + \omega t </EquationBlock>
