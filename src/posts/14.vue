@@ -169,53 +169,53 @@
 <script setup lang="ts">
 const configExample1 = `
 Host myserver
-    Hostname mydomain.com
-    User myusername
-    Port 10022
+  Hostname mydomain.com
+  User myusername
+  Port 10022
 `;
 
 const configExample2 = `
 Host myserver
-    Hostname mydomain.com
-    User myusername
-    Port 10022
-    Protocol 2
-    HostKeyAlgorithms ssh-rsa
-    Ciphers aes256-ctr, aes256-cbc
-    MACs hmac-sha2-512, hmac-sha2-256
-    KexAlgorithms diffie-hellman-group-exchange-sha256
-    IdentityFile ~/.ssh/id_rsa
+  Hostname mydomain.com
+  User myusername
+  Port 10022
+  Protocol 2
+  HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-ctr, aes256-cbc
+  MACs hmac-sha2-512, hmac-sha2-256
+  KexAlgorithms diffie-hellman-group-exchange-sha256
+  IdentityFile ~/.ssh/id_rsa
 `;
 
 const configExample3 = `
 Host *
-    Protocol 2
-    HostKeyAlgorithms ssh-rsa
-    Ciphers aes256-ctr, aes256-cbc
-    MACs hmac-sha2-512, hmac-sha2-256
-    KexAlgorithms diffie-hellman-group-exchange-sha256
-    IdentityFile ~/.ssh/id_rsa
+  Protocol 2
+  HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-ctr, aes256-cbc
+  MACs hmac-sha2-512, hmac-sha2-256
+  KexAlgorithms diffie-hellman-group-exchange-sha256
+  IdentityFile ~/.ssh/id_rsa
 `;
 
 const configExample4 = `
 Host myserver
-    Hostname mydomain.com
-    User myusername
-    Port 10022
-    Ciphers aes128-cbc
-    MACs hmac-sha1
-    KexAlgorithms diffie-hellman-group1-sha1
+  Hostname mydomain.com
+  User myusername
+  Port 10022
+  Ciphers aes128-cbc
+  MACs hmac-sha1
+  KexAlgorithms diffie-hellman-group1-sha1
 
 Host myotherserver
-    Hostname anotherdomain.com
-    User myusername
+  Hostname anotherdomain.com
+  User myusername
 
 Host *
-    Protocol 2
-    HostKeyAlgorithms ssh-rsa
-    Ciphers aes256-ctr
-    MACs hmac-sha2-512
-    KexAlgorithms diffie-hellman-group-exchange-sha256
-    IdentityFile ~/.ssh/id_rsa
+  Protocol 2
+  HostKeyAlgorithms ssh-rsa
+  Ciphers aes256-ctr
+  MACs hmac-sha2-512
+  KexAlgorithms diffie-hellman-group-exchange-sha256
+  IdentityFile ~/.ssh/id_rsa
 `;
 </script>
