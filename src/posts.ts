@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "1bb7826792e3d5f8d4af531e1fca6075",
+    component: () => import("@/posts/15.vue"),
+    date: dateToString(2013, 11, 29),
+    id: "15",
+    labels: [PostLabel.Mechanics, PostLabel.Physics],
+    title: "Can we travel to infinity in a finite amount of time?",
+  },
+  {
     compatibilityIndex: "771ffcf2efe6efe3e934d81cb6b8bbfb",
     component: () => import("@/posts/14.vue"),
     date: dateToString(2013, 11, 27),
