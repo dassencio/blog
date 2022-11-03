@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "0e9aedb78cc73a737ec28a344c2d396e",
+    component: () => import("@/posts/16.vue"),
+    date: dateToString(2013, 11, 30),
+    id: "16",
+    labels: [PostLabel.Linux, PostLabel.Shell],
+    title: "Resizing images via command line on Linux",
+  },
+  {
     compatibilityIndex: "1bb7826792e3d5f8d4af531e1fca6075",
     component: () => import("@/posts/15.vue"),
     date: dateToString(2013, 11, 29),
