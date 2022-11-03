@@ -52,8 +52,8 @@
   </EquationBlock>
 
   <p>
-    The integral of the term on the right-hand side can be computed by letting
-    $w \coloneqq T - t'$, with $dw = -dt'$:
+    The integral on the right-hand side can be computed by letting $w \coloneqq
+    T - t'$, with $dw = -dt'$:
   </p>
 
   <EquationBlock>
@@ -62,7 +62,7 @@
     T}^{w = T - t}
   </EquationBlock>
 
-  <p>Since the object is initially at rest ($\dot{x}(0) = 0$), we get:</p>
+  <p>Since the object is initially at rest, we get:</p>
 
   <EquationBlock>
     \dot{x}(t) = \frac{\alpha}{2m}\left[ \frac{1}{(T - t)^2} - \frac{1}{T^2}
@@ -86,7 +86,7 @@
 
   <p>
     Computing the second integral on the right-hand side is a trivial task since
-    the integrand $1/T^2$ is a constant. To integrate the first term on the
+    the integrand $1/T^2$ is a constant. To compute the first integral on the
     right-hand side, let $w \coloneqq T - t'$, with $dw = -dt'$. We then obtain:
   </p>
 
@@ -99,14 +99,12 @@
          - \frac{t}{T^2}\right] \\
       &= \frac{\alpha}{2m}\left[ \frac{1}{T - t} - \frac{1}{T} -
          \frac{t}{T^2}\right] \\
-      &= \frac{\alpha}{2m}\left[ \frac{1}{T - t} - \frac{(T + t)}{T^2}
-         \right] \label{pos_meq}
+      &= \frac{\alpha}{2m}\left[ \frac{T^2 - T(T- t) - t(T - t)}{T^2(T - t)} \right] \\
+      &= \frac{\alpha}{2m}\left[ \frac{T^2 - T^2 + Tt - tT + t^2}{T^2(T - t)} \right] \\
+      &= \frac{\alpha}{2mT^2} \frac{t^2}{(T - t)}  \label{pos}
   </EquationBlock>
 
-  <p>
-    The object is initially at $x = 0$, so $x(0) = 0$. A bit more algebraic work
-    on the right-hand side of equation \eqref{pos_meq} yields:
-  </p>
+  <p>The object is initially at $x = 0$, so equation \eqref{pos} yields:</p>
 
   <EquationBlock>
     x(t) = \frac{\alpha}{2mT^2} \frac{t^2}{(T - t)}
@@ -114,7 +112,7 @@
 
   <p>
     Since $\dot{x}(t) \gt 0$ for $0 \lt t \lt T$, $x(t)$ increases monotonically
-    during this time period. As $t \rightarrow T$, $x(t)$ diverges. In other
+    during this time interval. As $t \rightarrow T$, $x(t)$ diverges. In other
     words:
   </p>
 
@@ -123,7 +121,7 @@
   </EquationBlock>
 
   <p>
-    so the object reaches "infinity" in a finite amount of time (namely, in time
+    so the object reaches infinity in a finite amount of time (namely, in time
     $T$).
   </p>
 
