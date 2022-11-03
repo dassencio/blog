@@ -33,8 +33,8 @@
   <p>
     If you feel that granting this privilege to all users is too permissive,
     then you should create a group and only allow users within that group to
-    execute Dumpcap (and therefore to capture live traffic with Wireshark). On
-    Ubuntu/Debian, you can create a group called
+    execute Dumpcap (and therefore to capture live traffic with Wireshark). If
+    you're using Ubuntu/Debian, you can create a group called
     <code>wireshark</code> with the following command:
   </p>
 
