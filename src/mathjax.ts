@@ -1,6 +1,5 @@
 // Global MathJax configuration.
 const mathJaxConfig = {
-  loader: { load: ["[tex]/mathtools"] },
   startup: {
     pageReady: () => (readyToRender = true),
   },
@@ -10,7 +9,9 @@ const mathJaxConfig = {
   tex: {
     displayMath: [["$$", "$$"]],
     inlineMath: [["$", "$"]],
-    packages: { "[+]": ["mathtools"] },
+    macros: {
+      ColonEq: "\\mathrel{\\vcenter{:}}= ",
+    },
     tags: "all",
   },
   texReset: () => undefined,

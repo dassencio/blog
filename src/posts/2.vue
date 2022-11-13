@@ -128,10 +128,9 @@
   <EquationBlock> R^+_H \approx |H|\times P(+|D^c) = 14985 </EquationBlock>
 
   <p>
-    So $R^+_T \coloneqq R^+_H + R^+_S \approx 15982$ is the expected total
-    number of performed tests which will result positive. However, among the
-    subjects who tested positive, the fraction of those who actually have the
-    disease is:
+    So $R^+_T \ColonEq R^+_H + R^+_S \approx 15982$ is the expected total number
+    of performed tests which will result positive. However, among the subjects
+    who tested positive, the fraction of those who actually have the disease is:
   </p>
 
   <EquationBlock>

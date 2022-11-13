@@ -22,7 +22,7 @@
   </p>
 
   <EquationBlock>
-    e^{i\theta} \coloneqq \cos\theta + i\sin\theta \label{euler_eq}
+    e^{i\theta} \ColonEq \cos\theta + i\sin\theta \label{euler_eq}
   </EquationBlock>
 
   <p>
@@ -67,7 +67,7 @@
   </p>
 
   <EquationBlock>
-    e^z = e^{a + ib} \coloneqq e^a e^{ib} = e^a(\cos{b} + i\sin{b})
+    e^z = e^{a + ib} \ColonEq e^a e^{ib} = e^a(\cos{b} + i\sin{b})
   </EquationBlock>
 
   <p>
@@ -87,7 +87,7 @@
   </p>
 
   <EquationBlock>
-    \log{z} = \log(e^{\log|z| + i\theta}) \coloneqq \log|z| + i\theta
+    \log{z} = \log(e^{\log|z| + i\theta}) \ColonEq \log|z| + i\theta
     \label{complex_log}
   </EquationBlock>
 
@@ -125,7 +125,7 @@
     definition:
   </p>
 
-  <EquationBlock> z^w \coloneqq e^{w\log z} </EquationBlock>
+  <EquationBlock> z^w \ColonEq e^{w\log z} </EquationBlock>
 
   <p>
     which is motivated by the fact that for any pair of real numbers $x \gt 0$

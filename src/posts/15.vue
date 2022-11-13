@@ -52,8 +52,8 @@
   </EquationBlock>
 
   <p>
-    The integral on the right-hand side can be computed by letting $w \coloneqq
-    T - t'$, with $dw = -dt'$:
+    The integral on the right-hand side can be computed by letting $w \ColonEq T
+    - t'$, with $dw = -dt'$:
   </p>
 
   <EquationBlock>
@@ -87,7 +87,7 @@
   <p>
     Computing the second integral on the right-hand side is a trivial task since
     the integrand $1/T^2$ is a constant. To compute the first integral on the
-    right-hand side, let $w \coloneqq T - t'$, with $dw = -dt'$. We then obtain:
+    right-hand side, let $w \ColonEq T - t'$, with $dw = -dt'$. We then obtain:
   </p>
 
   <!-- prettier-ignore -->

@@ -57,9 +57,8 @@
   </p>
 
   <EquationBlock>
-    \sigma_{\textrm{IPv6}} \coloneqq
-    \frac{N_{\textrm{IPv6}}}{A_{\textrm{Earth}}} \approx 6.6 \times 10^{23}
-    \textrm{m}^{-2}
+    \sigma_{\textrm{IPv6}} \ColonEq \frac{N_{\textrm{IPv6}}}{A_{\textrm{Earth}}}
+    \approx 6.6 \times 10^{23} \textrm{m}^{-2}
   </EquationBlock>
 
   <p>
@@ -72,7 +71,7 @@
   </p>
 
   <EquationBlock>
-    A_{\textrm{IPv6}} \coloneqq \frac{1}{\sigma_{\textrm{IPv6}}} \approx 1.5
+    A_{\textrm{IPv6}} \ColonEq \frac{1}{\sigma_{\textrm{IPv6}}} \approx 1.5
     \times 10^{-24} \textrm{m}^2 = 1.5 \textrm{pm}^2
   </EquationBlock>
 

@@ -23,7 +23,7 @@
   </p>
 
   <EquationBlock>
-    P(A|B) \coloneqq \frac{P(A \cap B)}{P(B)} \Longrightarrow P(A \cap B) =
+    P(A|B) \ColonEq \frac{P(A \cap B)}{P(B)} \Longrightarrow P(A \cap B) =
     P(A|B)P(B)
   </EquationBlock>
 

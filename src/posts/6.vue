@@ -8,7 +8,7 @@
     $R_s$ of that body:
   </p>
 
-  <EquationBlock> R_s \coloneqq \frac{2GM}{c^2} </EquationBlock>
+  <EquationBlock> R_s \ColonEq \frac{2GM}{c^2} </EquationBlock>
 
   <p>
     then the body collapses into a
