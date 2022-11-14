@@ -31,8 +31,7 @@ let renderTimerId = 0;
 
 // Download and configure MathJax as soon as this module is first loaded.
 const script = document.createElement("script");
-script.src =
-  "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js";
+script.src = "/thirdparty/tex-svg-3.2.2.js";
 script.async = true;
 document.head.appendChild(script);
 
