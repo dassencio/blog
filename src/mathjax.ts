@@ -11,6 +11,7 @@ const mathJaxConfig = {
     inlineMath: [["$", "$"]],
     macros: {
       ColonEq: "\\mathrel{\\vcenter{:}}= ",
+      Vec: ["\\mathbf{#1}", 1],
     },
     tags: "all",
   },

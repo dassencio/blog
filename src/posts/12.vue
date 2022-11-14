@@ -3,7 +3,7 @@
     Consider a regular polygon with $N$ sides (and therefore $N$ vertices) such
     that the distance between its center $O$ and each of its vertices is $r$. An
     electric charge $q$ is placed at each vertex of the polygon as shown in
-    <a href="#fig_1">figure 1</a>. What is the electric field ${\bf E}$ produced
+    <a href="#fig_1">figure 1</a>. What is the electric field $\Vec{E}$ produced
     by these charges at the point $O$?
   </p>
 
@@ -21,7 +21,7 @@
   </BaseFigure>
 
   <p>
-    If your strategy for solving a problem of this kind is to compute ${\bf E}$
+    If your strategy for solving a problem of this kind is to compute $\Vec{E}$
     by hand, you may have missed an important fact: there is symmetry in the
     charge configuration. Symmetry is a very important ingredient in physics: it
     can turn many complicated-looking problems into easily solvable ones.
@@ -59,14 +59,14 @@
   <p>
     If we now rotate the polygon by $\theta = 2\pi/N$ clockwise or
     counterclockwise, we will obtain the exact same charge configuration as we
-    had before, implying that the electric field ${\bf E}$ at the point $O$ must
+    had before, implying that the electric field $\Vec{E}$ at the point $O$ must
     be the same before and after the rotation is applied. But if the whole
-    polygon is rotated, ${\bf E}$ must also be rotated with it. We will have an
+    polygon is rotated, $\Vec{E}$ must also be rotated with it. We will have an
     absurd situation unless the magnitude of the electric field at $O$ is zero.
     Therefore:
   </p>
 
-  <EquationBlock boxed> {\bf E} = {\bf 0} </EquationBlock>
+  <EquationBlock boxed> \Vec{E} = \Vec{0} </EquationBlock>
 
   <p>
     A reader who prefers things demonstrated mathematically might be skeptical
@@ -77,13 +77,13 @@
 
   <p>
     In any case, if you're one of those readers I just mentioned, let's compute
-    ${\bf E}$ by hand to bring peace back to your mind. Numbering each charge in
+    $\Vec{E}$ by hand to bring peace back to your mind. Numbering each charge in
     a counterclockwise manner as in <a href="#fig_1">figure 1</a>, the $k$-th
     charge would then be located at:
   </p>
 
   <EquationBlock>
-    {\bf x}_k = r(\cos\theta_k, \sin\theta_k) = r(\cos(\alpha + 2\pi k/N),
+    \Vec{x}_k = r(\cos\theta_k, \sin\theta_k) = r(\cos(\alpha + 2\pi k/N),
     \sin(\alpha + 2\pi k/N))
   </EquationBlock>
 
@@ -96,23 +96,23 @@
   </p>
 
   <EquationBlock>
-    {\bf x}_k = r e^{i (\alpha + 2\pi k / N)} = r e^{i \alpha} e^{i 2\pi k / N}
+    \Vec{x}_k = r e^{i (\alpha + 2\pi k / N)} = r e^{i \alpha} e^{i 2\pi k / N}
   </EquationBlock>
 
   <p>
-    This will allow us to compute ${\bf E}$ more easily. If ${\bf E}_k$ is the
+    This will allow us to compute $\Vec{E}$ more easily. If $\Vec{E}_k$ is the
     electric field produced by the $k$-th charge at the point $O$, then:
   </p>
 
   <EquationBlock>
-    {\bf E}_k = \frac{kq}{\|{\bf x}_k\|^3}(-{\bf x}_k) = -\frac{kq}{r^3} r e^{i
+    \Vec{E}_k = \frac{kq}{\|\Vec{x}_k\|^3}(-\Vec{x}_k) = -\frac{kq}{r^3} r e^{i
     \alpha} e^{i 2\pi k / N} = -\frac{kqe^{i \alpha}}{r^2} e^{i 2\pi k / N}
   </EquationBlock>
 
   <p>and therefore:</p>
 
   <EquationBlock>
-    {\bf E} = \sum_{k=1}^{N} {\bf E}_k = \sum_{k=1}^N \left( -\frac{kqe^{i
+    \Vec{E} = \sum_{k=1}^{N} \Vec{E}_k = \sum_{k=1}^N \left( -\frac{kqe^{i
     \alpha}}{r^2} e^{i 2\pi k / N} \right) = -\frac{kqe^{i \alpha}}{r^2}
     \sum_{k=1}^N (e^{i 2\pi / N})^k \label{E_as_sum}
   </EquationBlock>
@@ -129,10 +129,10 @@
   </p>
 
   <EquationBlock>
-    {\bf E} = -\frac{kqe^{i \alpha}}{r^2} \left( \frac{e^{i 2\pi / N} - (e^{i
+    \Vec{E} = -\frac{kqe^{i \alpha}}{r^2} \left( \frac{e^{i 2\pi / N} - (e^{i
     2\pi / N})^{N+1}}{1 - e^{i 2\pi / N}} \right) = -\frac{kqe^{i \alpha}}{r^2}
     e^{i 2\pi / N} \left( \frac{1 - (e^{i 2\pi/N})^N}{1 - e^{i 2\pi / N}}
-    \right) = {\bf 0}
+    \right) = \Vec{0}
   </EquationBlock>
 
   <p>since:</p>

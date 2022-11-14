@@ -57,26 +57,26 @@
   </EquationBlock>
 
   <p>
-    Here is where the interesting physics starts. Let ${\bf x}(t)$ be the
+    Here is where the interesting physics starts. Let $\Vec{x}(t)$ be the
     position vector connecting the origin $O$ to the object as in
     <a href="#fig_1">figure 1</a>:
   </p>
 
   <EquationBlock>
-    {\bf x}(t) = (x(t), y(t)) = r(\cos(\omega t), \sin(\omega t))
+    \Vec{x}(t) = (x(t), y(t)) = r(\cos(\omega t), \sin(\omega t))
   </EquationBlock>
 
   <p>
-    Then, with ${\bf v}(t) = (v_x(t), v_y(t))$ and ${\bf a}(t) = (a_x(t),
+    Then, with $\Vec{v}(t) = (v_x(t), v_y(t))$ and $\Vec{a}(t) = (a_x(t),
     a_y(t))$ being the object velocity and acceleration vectors respectively at
     time $t$, we obtain:
   </p>
 
   <!-- prettier-ignore -->
   <EquationBlock align numberLines>
-    {\bf v}(t) &= \omega r (-\sin(\omega t), \cos(\omega t)) \\
-    {\bf a}(t) &= -\omega^2 r (\cos(\omega t), \sin(\omega t)) = -\omega^2 {\bf
-    x}(t) \label{accel_vec}
+    \Vec{v}(t) &= \omega r (-\sin(\omega t), \cos(\omega t)) \\
+    \Vec{a}(t) &= -\omega^2 r (\cos(\omega t), \sin(\omega t)) = -\omega^2
+    \Vec{x}(t) \label{accel_vec}
   </EquationBlock>
 
   <p>
@@ -99,17 +99,17 @@
   </BaseFigure>
 
   <p>
-    Since ${\bf x}(t)$ always points away from the center $O$ of the circle,
-    equation \eqref{accel_vec} tells us that the acceleration ${\bf a}(t)$,
+    Since $\Vec{x}(t)$ always points away from the center $O$ of the circle,
+    equation \eqref{accel_vec} tells us that the acceleration $\Vec{a}(t)$,
     called <b>centripetal acceleration</b>, points always to the center of the
     circle. To gain more intuition about why this is so, notice first that the
-    velocity vector ${\bf v}(t)$ is orthogonal to the position vector ${\bf
-    x}(t)$ at all times:
+    velocity vector $\Vec{v}(t)$ is orthogonal to the position vector
+    $\Vec{x}(t)$ at all times:
   </p>
 
   <!-- prettier-ignore -->
   <EquationBlock align>
-    {\bf v}(t)\cdot{\bf x}(t)
+    \Vec{v}(t)\cdot\Vec{x}(t)
       &= v_x(t)x(t) + v_y(t)y(t) \\
       &= \omega r^2\left[-\sin(\omega t)\cos(\omega t) +
          \cos(\omega t)\sin(\omega t)\right] \\
@@ -131,7 +131,7 @@
   <!-- prettier-ignore -->
   <EquationBlock align>
     v(t)
-      &= \|{\bf v}(t)\| \\
+      &= \|\Vec{v}(t)\| \\
       &= \sqrt{v_x^2(t) + v_y^2(t)} \\
       &= \sqrt{\omega^2 r^2 \sin^2(\omega t) + \omega^2 r^2\cos^2(\omega t)} \\
       &= \omega r \sqrt{\sin^2(\omega t) + \cos^2(\omega t)} \\
@@ -139,46 +139,46 @@
   </EquationBlock>
 
   <p>
-    Because ${\bf a}(t)$ is parallel to ${\bf x}(t)$, the velocity ${\bf v}(t)$
-    and the acceleration ${\bf a}(t)$ are also always orthogonal to each other:
+    Because $\Vec{a}(t)$ is parallel to $\Vec{x}(t)$, the velocity $\Vec{v}(t)$
+    and the acceleration $\Vec{a}(t)$ are also always orthogonal to each other:
   </p>
 
   <EquationBlock>
-    {\bf v}(t) \cdot {\bf a}(t) = {\bf v}(t) \cdot \left(-\omega^2 {\bf
-    x}(t)\right) = -\omega^2 {\bf v}(t) \cdot {\bf x}(t) = 0
+    \Vec{v}(t) \cdot \Vec{a}(t) = \Vec{v}(t) \cdot \left(-\omega^2
+    \Vec{x}(t)\right) = -\omega^2 \Vec{v}(t) \cdot \Vec{x}(t) = 0
   </EquationBlock>
 
   <p>
-    The effect of the acceleration ${\bf a}(t)$ is therefore to continuously
-    change the direction of the velocity ${\bf v}(t)$ without changing its
+    The effect of the acceleration $\Vec{a}(t)$ is therefore to continuously
+    change the direction of the velocity $\Vec{v}(t)$ without changing its
     magnitude. To better understand this, let's compute how the magnitude of
-    ${\bf v}(t)$ changes over time for any arbitrary motion:
+    $\Vec{v}(t)$ changes over time for any arbitrary motion:
   </p>
 
   <!-- prettier-ignore -->
   <EquationBlock align>
-    \frac{d\|{\bf v}(t)\|}{dt}
+    \frac{d\|\Vec{v}(t)\|}{dt}
     &= \frac{d}{dt}\sqrt{v_x^2(t) + v_y^2(t)} \\
     &= \frac{2v_x(t)a_x(t) + 2v_y(t)a_y(t)}{2\sqrt{v_x^2(t) + v_y^2(t)}} \\
-    &= \frac{ {\bf v}(t)\cdot{\bf a}(t) }{\|{\bf v}(t)\|} \label{dv_dt}
+    &= \frac{ \Vec{v}(t)\cdot\Vec{a}(t) }{\|\Vec{v}(t)\|} \label{dv_dt}
   </EquationBlock>
 
   <p>
-    When ${\bf a}(t)$ is orthogonal to ${\bf v}(t)$, the magnitude of ${\bf
-    v}(t)$ remains constant despite the fact that its direction will change if
-    the acceleration is not zero. Since we made no assumptions on ${\bf v}(t)$
-    and ${\bf a}(t)$ when deriving equation \eqref{dv_dt}, it must be valid in
-    general.
+    When $\Vec{a}(t)$ is orthogonal to $\Vec{v}(t)$, the magnitude of
+    $\Vec{v}(t)$ remains constant despite the fact that its direction will
+    change if the acceleration is not zero. Since we made no assumptions on
+    $\Vec{v}(t)$ and $\Vec{a}(t)$ when deriving equation \eqref{dv_dt}, it must
+    be valid in general.
   </p>
 
   <p>
-    Given that the object always travels in a circle of radius $r$, then $\|{\bf
-    x}(t)\| = r$ for all $t$, so from equation \eqref{accel_vec}, the magnitude
-    $a(t)$ of the acceleration is also constant and given by:
+    Given that the object always travels in a circle of radius $r$, then
+    $\|\Vec{x}(t)\| = r$ for all $t$, so from equation \eqref{accel_vec}, the
+    magnitude $a(t)$ of the acceleration is also constant and given by:
   </p>
 
   <EquationBlock>
-    a(t) = \|{\bf a}(t)\| = \omega^2 \|{\bf x}(t)\| = \omega^2 r = \frac{v^2}{r}
+    a(t) = \|\Vec{a}(t)\| = \omega^2 \|\Vec{x}(t)\| = \omega^2 r = \frac{v^2}{r}
   </EquationBlock>
 
   <p>where equation \eqref{mag_v} was used.</p>

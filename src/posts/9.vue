@@ -39,35 +39,35 @@
   <EquationBlock> a = \omega^2 r = \frac{v^2}{r} </EquationBlock>
 
   <p>
-    where $v = \omega r$ is the magnitude of the velocity. With ${\bf x}(t) =
+    where $v = \omega r$ is the magnitude of the velocity. With $\Vec{x}(t) =
     (x(t), y(t))$ being the position vector of the object at time $t$ (see
-    <a href="#fig_1">figure 1</a>), the acceleration ${\bf a}(t)$ of the object
+    <a href="#fig_1">figure 1</a>), the acceleration $\Vec{a}(t)$ of the object
     satisfies:
   </p>
 
-  <EquationBlock> {\bf a}(t) = -\omega^2 {\bf x}(t) </EquationBlock>
+  <EquationBlock> \Vec{a}(t) = -\omega^2 \Vec{x}(t) </EquationBlock>
 
   <p>
     <a href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion"
       >Newton's second law of motion</a
     >
-    states that the acceleration ${\bf a}(t)$ of a body and the
-    <a href="https://en.wikipedia.org/wiki/Net_force">net force</a> ${\bf F}(t)$
-    acting on that body at time $t$ are related through:
+    states that the acceleration $\Vec{a}(t)$ of a body and the
+    <a href="https://en.wikipedia.org/wiki/Net_force">net force</a>
+    $\Vec{F}(t)$ acting on that body at time $t$ are related through:
   </p>
 
-  <EquationBlock> {\bf F}(t) = m{\bf a}(t) </EquationBlock>
+  <EquationBlock> \Vec{F}(t) = m\Vec{a}(t) </EquationBlock>
 
   <p>
     where $m$ is the mass of the body. Therefore, for uniform circular motion,
-    ${\bf F}(t)$ must also point to the center of the circle since it is
-    parallel to ${\bf a}(t)$. This net force is called the
+    $\Vec{F}(t)$ must also point to the center of the circle since it is
+    parallel to $\Vec{a}(t)$. This net force is called the
     <b>centripetal force</b>. It causes the object to always travel along the
-    circle. For completeness, the magnitude of ${\bf F}(t)$ is given by:
+    circle. For completeness, the magnitude of $\Vec{F}(t)$ is given by:
   </p>
 
   <EquationBlock>
-    F(t) = \|{\bf F}(t)\| = m\omega^2 r = \frac{mv^2}{r}
+    F(t) = \|\Vec{F}(t)\| = m\omega^2 r = \frac{mv^2}{r}
   </EquationBlock>
 
   <p>
@@ -84,9 +84,9 @@
                  clothes (shown in colors in the figure). Instead, the forces
                  which keep the clothes traveling along a circle point
                  to the center of the machine (these forces are labeled
-                 ${\bf N}_r$, ${\bf N}_g$ and ${\bf N}_b$ in the figure, with
-                 subscripts $r$, $g$ and $b$ standing for "red", "green" and
-                 "blue" respectively).'
+                 $\Vec{N}_r$, $\Vec{N}_g$ and $\Vec{N}_b$ in the
+                 figure, with subscripts $r$, $g$ and $b$ standing for "red",
+                 "green" and "blue" respectively).'
     :number="2"
   >
     <ResponsiveImage
@@ -114,9 +114,9 @@
 
   <!-- prettier-ignore -->
   <EquationBlock align numberLines>
-    N_r &= \|{\bf N}_r\| &&= m_r \omega^2 r \\
-    N_g &= \|{\bf N}_g\| &&= m_g \omega^2 r \\
-    N_b &= \|{\bf N}_b\| &&= m_b \omega^2 r
+    N_r &= \|\Vec{N}_r\| &&= m_r \omega^2 r \\
+    N_g &= \|\Vec{N}_g\| &&= m_g \omega^2 r \\
+    N_b &= \|\Vec{N}_b\| &&= m_b \omega^2 r
   </EquationBlock>
 
   <p>
@@ -137,7 +137,7 @@
     where is this force coming from? From the friction with the ground! The
     friction forces between the tires and the ground point to the left of the
     car, toward the center of the circle, and when summed, yield the centripetal
-    force ${\bf F}_{\textrm{cp}}$ ("cp" here stands for "centripetal") which
+    force $\Vec{F}_{\textrm{cp}}$ ("cp" here stands for "centripetal") which
     keeps the car on the arc. This is the reason why icy roads are very
     dangerous: the tires do not properly adhere to the ground and therefore the
     friction forces are not strong enough to act as the centripetal force the
@@ -146,10 +146,10 @@
 
   <BaseFigure
     description="Car traveling along a circular arc. Figure (a) shows the
-                 net force ${\bf F}_{\textrm{cp}}$ acting on the car (the
+                 net force $\Vec{F}_{\textrm{cp}}$ acting on the car (the
                  centripetal force). Figure (b) shows friction forces acting on
                  the tires of the car, the sum of which yield the centripetal
-                 force ${\bf F}_{\textrm{cp}}$."
+                 force $\Vec{F}_{\textrm{cp}}$."
     :number="3"
   >
     <BaseSubfigure label="(a)">
