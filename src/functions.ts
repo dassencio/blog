@@ -7,13 +7,6 @@
  * @returns Date in format "YYYY-MM-DD"
  */
 export function dateToString(year: number, month: number, day: number): string {
-  const date = new Date(Date.UTC(year, month - 1, day));
-  if (
-    date.getFullYear() !== year ||
-    date.getMonth() !== month - 1 ||
-    date.getDate() !== day
-  ) {
-    throw new Error(`Invalid date: ${year}-${month}-${day}`);
-  }
-  return date.toISOString().split("T")[0];
+  const padZero = (n: number) => (n < 10 ? `0${n}` : n);
+  return `${year}-${padZero(month)}-${padZero(day)}`;
 }
