@@ -10,7 +10,7 @@ const mathJaxConfig = {
     displayMath: [["$$", "$$"]],
     inlineMath: [["$", "$"]],
     macros: {
-      ColonEq: "\\mathrel{\\vcenter{:}}= ",
+      ColonEq: "\\mathrel{\\vcenter{:}}=",
       Vec: ["\\mathbf{#1}", 1],
     },
     tags: "all",
