@@ -5,8 +5,8 @@
   </p>
 
   <CodeBlock
-    >sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap</CodeBlock
-  >
+    code="sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap"
+  />
 
   <p>
     This will enable all users to capture live traffic going through any network
@@ -24,11 +24,11 @@
     running:
   </p>
 
-  <CodeBlock>getcap /usr/bin/dumpcap</CodeBlock>
+  <CodeBlock code="getcap /usr/bin/dumpcap" />
 
   <p>This is what you should see:</p>
 
-  <CodeBlock>/usr/bin/dumpcap = cap_net_admin,cap_net_raw+eip</CodeBlock>
+  <CodeBlock code="/usr/bin/dumpcap = cap_net_admin,cap_net_raw+eip" />
 
   <p>
     If you feel that granting this privilege to all users is too permissive,
@@ -38,18 +38,18 @@
     <code>wireshark</code> with the following command:
   </p>
 
-  <CodeBlock>sudo addgroup wireshark</CodeBlock>
+  <CodeBlock code="sudo addgroup wireshark" />
 
   <p>Now change the group of Dumpcap to <code>wireshark</code>:</p>
 
-  <CodeBlock>sudo chgrp wireshark /usr/bin/dumpcap</CodeBlock>
+  <CodeBlock code="sudo chgrp wireshark /usr/bin/dumpcap" />
 
   <p>
     Next, make sure only users in the <code>wireshark</code> group can execute
     Dumpcap:
   </p>
 
-  <CodeBlock>sudo chmod o-rx /usr/bin/dumpcap</CodeBlock>
+  <CodeBlock code="sudo chmod o-rx /usr/bin/dumpcap" />
 
   <p>
     Finally, add the necessary capabilities to Dumpcap as discussed above (even
@@ -58,8 +58,8 @@
   </p>
 
   <CodeBlock
-    >sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap</CodeBlock
-  >
+    code="sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap"
+  />
 
   <p>
     To check if your permissions are correct, start Wireshark as a regular user
@@ -69,14 +69,14 @@
     <code>wireshark</code> group with the command below:
   </p>
 
-  <CodeBlock>sudo usermod -a -G wireshark &lt;username&gt;</CodeBlock>
+  <CodeBlock code="sudo usermod -a -G wireshark <username>" />
 
   <p>
     To verify that a user was correctly added to the
     <code>wireshark</code> group, run:
   </p>
 
-  <CodeBlock>id &lt;username&gt;</CodeBlock>
+  <CodeBlock code="id <username>" />
 
   <p>
     The output should look similar to this (<code>wireshark</code>
@@ -84,9 +84,8 @@
   </p>
 
   <CodeBlock
-    >uid=1000(username) gid=1000(username) ...,
-    1001(<b>wireshark</b>)</CodeBlock
-  >
+    code="uid=1000(username) gid=1000(username) ..., 1001(**wireshark**)"
+  />
 
   <p>
     Now start Wireshark as one of the users in the

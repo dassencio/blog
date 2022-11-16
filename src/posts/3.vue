@@ -209,7 +209,7 @@
       <BaseButton @click="solve">Solve</BaseButton>
     </span>
   </ResponsiveForm>
-  <CodeBlock class="solver__output">{{ solverOutput }}</CodeBlock>
+  <CodeBlock class="solver__output" :code="solverOutput" />
 </template>
 
 <script setup lang="ts">

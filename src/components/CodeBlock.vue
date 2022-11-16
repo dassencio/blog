@@ -1,8 +1,40 @@
 <template>
   <div class="code">
-    <pre class="code__contents"><slot></slot></pre>
+    <pre class="code__contents" v-html="code"></pre>
   </div>
 </template>
+
+<script setup lang="ts">
+import { computed } from "vue";
+import _ from "lodash";
+import { escapeHtml, removeExcessIndentation } from "@/functions";
+
+const props = withDefaults(
+  defineProps<{
+    code: string;
+    highlightDelimiter: string;
+  }>(),
+  {
+    code: "",
+    highlightDelimiter: "**",
+  }
+);
+
+function highlightCode(code: string) {
+  if (props.highlightDelimiter) {
+    const delimiter = _.escapeRegExp(props.highlightDelimiter);
+    const highlightRegex = new RegExp(`${delimiter}(.+?)${delimiter}`, "g");
+    return code.replace(highlightRegex, "<span class='highlight'>$1</span>");
+  }
+  return code;
+}
+
+const code = computed(() =>
+  removeExcessIndentation(
+    highlightCode(escapeHtml(props.code.replace(/^\n+/, "").trimEnd()))
+  )
+);
+</script>
 
 <style scoped lang="scss">
 .code {
@@ -17,7 +49,7 @@
     overflow-x: auto;
     padding: $view-code-block-vertical-padding
       $view-code-block-horizontal-padding;
-    :deep(b) {
+    :deep(.highlight) {
       font-family: "Noto Sans Mono SemiBold";
     }
   }

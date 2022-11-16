@@ -8,11 +8,11 @@
 
   <p>To stop the Network Manager, open a terminal and run:</p>
 
-  <CodeBlock>sudo service network-manager stop</CodeBlock>
+  <CodeBlock code="sudo service network-manager stop" />
 
   <p>You can restart the Network Manager at any time by running:</p>
 
-  <CodeBlock>sudo service network-manager start</CodeBlock>
+  <CodeBlock code="sudo service network-manager start" />
 
   <p>
     To prevent the Network Manager from starting again on boot, create a file
@@ -22,15 +22,15 @@
   </p>
 
   <CodeBlock
-    >echo "manual" | sudo tee /etc/init/network-manager.override</CodeBlock
-  >
+    code='echo "manual" | sudo tee /etc/init/network-manager.override'
+  />
 
   <p>
     To have the Network Manager start on boot again, simply remove the file you
     generated:
   </p>
 
-  <CodeBlock>sudo rm /etc/init/network-manager.override</CodeBlock>
+  <CodeBlock code="sudo rm /etc/init/network-manager.override" />
 
   <p>
     This is the approach I recommend as it's easily reversible and keeps the
@@ -47,13 +47,11 @@
     Manager again, you can uninstall it by running:
   </p>
 
-  <CodeBlock
-    >sudo apt-get remove network-manager network-manager-gnome</CodeBlock
-  >
+  <CodeBlock code="sudo apt-get remove network-manager network-manager-gnome" />
 
   <p>To stop a running instance of the Network Manager, run:</p>
 
-  <CodeBlock>sudo service network-manager stop</CodeBlock>
+  <CodeBlock code="sudo service network-manager stop" />
 
   <p>
     <b>NOTE</b>: If you uninstall the Network Manager and stop it, you will

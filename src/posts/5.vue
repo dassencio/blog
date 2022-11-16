@@ -18,7 +18,7 @@
     option to a very large number with the following command:
   </p>
 
-  <CodeBlock>git config merge.renameLimit 99999999</CodeBlock>
+  <CodeBlock code="git config merge.renameLimit 99999999" />
 
   <p>
     This boosts Git's ability to recognize renamed files, which it does by
@@ -31,7 +31,7 @@
     to <code>merge.renameLimit</code> by running:
   </p>
 
-  <CodeBlock>git config --unset merge.renameLimit</CodeBlock>
+  <CodeBlock code="git config --unset merge.renameLimit" />
 
   <p>
     If this approach fails, or if you only have a few commits which account for
@@ -42,9 +42,8 @@
   </p>
 
   <CodeBlock
-    >git show &lt;commit-sha1&gt; --no-color -- path/to/old_filename | patch
-    path/to/new_filename</CodeBlock
-  >
+    code="git show <commit-sha1> --no-color -- path/to/old_filename | patch path/to/new_filename"
+  />
 
   <p>
     This command works by passing all modifications done to

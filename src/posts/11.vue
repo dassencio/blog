@@ -6,14 +6,13 @@
     following command:
   </p>
 
-  <CodeBlock>sudo apt-get install pdfjam</CodeBlock>
+  <CodeBlock code="sudo apt-get install pdfjam" />
 
   <p>You can now concatenate as many PDF files as you wish by running:</p>
 
   <CodeBlock
-    >pdfjam file1.pdf file2.pdf ... fileN.pdf --outfile
-    output-file.pdf</CodeBlock
-  >
+    code="pdfjam file1.pdf file2.pdf ... fileN.pdf --outfile output-file.pdf"
+  />
 
   <p>
     This will generate a file called <code>output-file.pdf</code> which will be

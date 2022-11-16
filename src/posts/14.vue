@@ -5,7 +5,7 @@
     quite annoying if you do it often by typing commands such as:
   </p>
 
-  <CodeBlock>ssh myusername@mydomain.com</CodeBlock>
+  <CodeBlock code="ssh myusername@mydomain.com" />
 
   <p>
     It's even more annoying if the server does not listen for incoming SSH
@@ -14,7 +14,7 @@
     command may look like this:
   </p>
 
-  <CodeBlock>ssh -p 10022 myusername@mydomain.com</CodeBlock>
+  <CodeBlock code="ssh -p 10022 myusername@mydomain.com" />
 
   <p>
     While you could in principle create a
@@ -27,7 +27,14 @@
     parameters for the server in the following format:
   </p>
 
-  <CodeBlock>{{ configExample1.trim() }}</CodeBlock>
+  <CodeBlock
+    code="
+    Host myserver
+      Hostname mydomain.com
+      User myusername
+      Port 10022
+    "
+  />
 
   <p>
     For a server which listens on the default SSH port (22), the
@@ -35,7 +42,7 @@
     it's possible to connect to the server with a much shorter command:
   </p>
 
-  <CodeBlock>ssh myserver</CodeBlock>
+  <CodeBlock code="ssh myserver" />
 
   <p>
     Much better than writing the long ssh command above, right? Also, depending
@@ -61,7 +68,20 @@
     for each server. Here is an example:
   </p>
 
-  <CodeBlock>{{ configExample2.trim() }}</CodeBlock>
+  <CodeBlock
+    code="
+    Host myserver
+      Hostname mydomain.com
+      User myusername
+      Port 10022
+      Protocol 2
+      HostKeyAlgorithms ssh-rsa
+      Ciphers aes256-ctr, aes256-cbc
+      MACs hmac-sha2-512, hmac-sha2-256
+      KexAlgorithms diffie-hellman-group-exchange-sha256
+      IdentityFile ~/.ssh/id_rsa
+    "
+  />
 
   <p>
     When you attempt to connect to <code>myserver</code>, the connection will
@@ -132,7 +152,7 @@
     algorithms, see the manual for <code>ssh_config</code>:
   </p>
 
-  <CodeBlock>man ssh_config</CodeBlock>
+  <CodeBlock code="man ssh_config" />
 
   <p>
     In order to simplify your ssh config file, you can define default
@@ -140,7 +160,17 @@
     shown below:
   </p>
 
-  <CodeBlock>{{ configExample3.trim() }}</CodeBlock>
+  <CodeBlock
+    code="
+    Host *
+      Protocol 2
+      HostKeyAlgorithms ssh-rsa
+      Ciphers aes256-ctr, aes256-cbc
+      MACs hmac-sha2-512, hmac-sha2-256
+      KexAlgorithms diffie-hellman-group-exchange-sha256
+      IdentityFile ~/.ssh/id_rsa
+    "
+  />
 
   <p>
     This will cause all your SSH connections to any server to use those
@@ -150,7 +180,29 @@
     example below:
   </p>
 
-  <CodeBlock>{{ configExample4.trim() }}</CodeBlock>
+  <CodeBlock
+    code="
+    Host myserver
+      Hostname mydomain.com
+      User myusername
+      Port 10022
+      Ciphers aes128-cbc
+      MACs hmac-sha1
+      KexAlgorithms diffie-hellman-group1-sha1
+
+    Host myotherserver
+      Hostname anotherdomain.com
+      User myusername
+
+    Host *
+      Protocol 2
+      HostKeyAlgorithms ssh-rsa
+      Ciphers aes256-ctr
+      MACs hmac-sha2-512
+      KexAlgorithms diffie-hellman-group-exchange-sha256
+      IdentityFile ~/.ssh/id_rsa
+    "
+  />
 
   <p>
     In this case, if you connect to <code>myserver</code>, the parameters
@@ -165,57 +217,3 @@
     under <code>*</code> will be adopted.
   </p>
 </template>
-
-<script setup lang="ts">
-const configExample1 = `
-Host myserver
-  Hostname mydomain.com
-  User myusername
-  Port 10022
-`;
-
-const configExample2 = `
-Host myserver
-  Hostname mydomain.com
-  User myusername
-  Port 10022
-  Protocol 2
-  HostKeyAlgorithms ssh-rsa
-  Ciphers aes256-ctr, aes256-cbc
-  MACs hmac-sha2-512, hmac-sha2-256
-  KexAlgorithms diffie-hellman-group-exchange-sha256
-  IdentityFile ~/.ssh/id_rsa
-`;
-
-const configExample3 = `
-Host *
-  Protocol 2
-  HostKeyAlgorithms ssh-rsa
-  Ciphers aes256-ctr, aes256-cbc
-  MACs hmac-sha2-512, hmac-sha2-256
-  KexAlgorithms diffie-hellman-group-exchange-sha256
-  IdentityFile ~/.ssh/id_rsa
-`;
-
-const configExample4 = `
-Host myserver
-  Hostname mydomain.com
-  User myusername
-  Port 10022
-  Ciphers aes128-cbc
-  MACs hmac-sha1
-  KexAlgorithms diffie-hellman-group1-sha1
-
-Host myotherserver
-  Hostname anotherdomain.com
-  User myusername
-
-Host *
-  Protocol 2
-  HostKeyAlgorithms ssh-rsa
-  Ciphers aes256-ctr
-  MACs hmac-sha2-512
-  KexAlgorithms diffie-hellman-group-exchange-sha256
-  IdentityFile ~/.ssh/id_rsa
-`;
-</script>

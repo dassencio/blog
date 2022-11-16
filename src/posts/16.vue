@@ -8,7 +8,7 @@
     running the following command:
   </p>
 
-  <CodeBlock>sudo apt-get install imagemagick</CodeBlock>
+  <CodeBlock code="sudo apt-get install imagemagick" />
 
   <p>
     Here is an example of how to resize a JPEG file to
@@ -16,9 +16,8 @@
   </p>
 
   <CodeBlock
-    >convert -resize 640x480 &lt;input-file.jpg&gt;
-    &lt;output-file.jpg&gt;</CodeBlock
-  >
+    code="convert -resize 640x480 <input-file.jpg> <output-file.jpg>"
+  />
 
   <p>
     The command above takes an image called
@@ -31,8 +30,5 @@
     shrink an image to 50% of its original size, run:
   </p>
 
-  <CodeBlock
-    >convert -resize 50% &lt;input-file.jpg&gt;
-    &lt;output-file.jpg&gt;</CodeBlock
-  >
+  <CodeBlock code="convert -resize 50% <input-file.jpg> <output-file.jpg>" />
 </template>
