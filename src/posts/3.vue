@@ -103,38 +103,47 @@
     fugitives which must still cross it:
   </p>
 
-  <MultiModeGrid mode="table" :columns="3">
+  <TableBlock :columns="3">
     <b>Crossed</b>
     <b>Must cross</b>
     <b>Possibilities</b>
+
     <span>$0$</span>
     <span class="highlight">$N$</span>
     <span>$N (N - 1) / 2$</span>
+
     <span class="highlight">$2$</span>
     <span>$N - 2$</span>
     <span>$2$</span>
+
     <span>$1$</span>
     <span class="highlight">$N - 1$</span>
     <span>$(N - 1)(N - 2) / 2$</span>
+
     <span>$\vdots$</span>
     <span>$\vdots$</span>
     <span>$\vdots$</span>
+
     <span class="highlight">$N - 2$</span>
     <span>$2$</span>
     <span>$N - 2$</span>
+
     <span>$N - 3$</span>
     <span class="highlight">$3$</span>
     <span>$3 \cdot 2 / 2 = 3$</span>
+
     <span class="highlight">$N - 1$</span>
     <span>$1$</span>
     <span>$N - 1$</span>
+
     <span>$N - 2$</span>
     <span class="highlight">$2$</span>
     <span>$2 \cdot 1 / 2 = 1$</span>
+
     <span class="highlight">$N$</span>
     <span>$0$</span>
     <span>$0$</span>
-  </MultiModeGrid>
+  </TableBlock>
 
   <p>
     The total number $P_N$ of ways the fugitives can cross the bridge is
@@ -161,24 +170,31 @@
 
   <p>The table below shows the values of $P_N$ for some values of $N$:</p>
 
-  <MultiModeGrid mode="table" :columns="2">
+  <TableBlock :columns="2">
     <div>$N$</div>
     <div>$P_N$</div>
+
     <div>$2$</div>
     <div>$1$</div>
+
     <div>$3$</div>
     <div>$6$</div>
+
     <div>$4$</div>
     <div>$108$</div>
+
     <div>$5$</div>
     <div>$4320$</div>
+
     <div>$6$</div>
     <div>$324000$</div>
+
     <div>$7$</div>
     <div>$40824000$</div>
+
     <div>$8$</div>
     <div>$8001504000$</div>
-  </MultiModeGrid>
+  </TableBlock>
 
   <p>
     The numbers above indicate that the computational work required to simulate

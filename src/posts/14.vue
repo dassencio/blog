@@ -88,7 +88,7 @@
     only be established if the server supports the chosen:
   </p>
 
-  <MultiModeGrid mode="list" itemized>
+  <MapBlock>
     <b>SSH protocol version:</b>
     <span>
       2 (always use this one; version 1 is
@@ -96,10 +96,12 @@
         >vulnerable</a
       >).
     </span>
+
     <b>Authentication algorithm:</b>
     <span>
       <a href="https://en.wikipedia.org/wiki/RSA_%28algorithm%29">RSA.</a>
     </span>
+
     <b>Cipher:</b>
     <span>
       <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard"
@@ -117,6 +119,7 @@
       >
       as mode of operation and 256-bit long keys.
     </span>
+
     <b>MAC:</b>
     <span>
       <a
@@ -127,6 +130,7 @@
       <a href="https://en.wikipedia.org/wiki/SHA-2">SHA-2</a> hash function
       producing either 512- or 256-bit long digests.
     </span>
+
     <b>Key exchange algorithm:</b>
     <span>
       <a
@@ -135,7 +139,7 @@
       >
       with flexible group size using SHA-2 with 256-bit long digests.
     </span>
-  </MultiModeGrid>
+  </MapBlock>
 
   <p>
     Also, the file <code>~/.ssh/id_rsa</code> will be used as your private RSA

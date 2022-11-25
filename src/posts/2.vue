@@ -23,16 +23,19 @@
     the quality of this test, the following events will be relevant:
   </p>
 
-  <MultiModeGrid mode="list" itemized>
+  <MapBlock>
     <span>$D$</span>
     <span>The subject has the disease.</span>
+
     <span>$D^c$</span>
     <span>The subject does not have the disease.</span>
+
     <span>$+$</span>
     <span>The laboratory test result for the subject is positive.</span>
+
     <span>$-$</span>
     <span>The laboratory test result for the subject is negative.</span>
-  </MultiModeGrid>
+  </MapBlock>
 
   <p>
     Notice that a test result can be positive for a subject who does not have
@@ -41,18 +44,19 @@
     following two conditional probabilities:
   </p>
 
-  <MultiModeGrid mode="list" itemized>
+  <MapBlock>
     <span>$P(+|D)$</span>
     <span>
       Probability that the test result for a subject who has the disease is
       positive.
     </span>
+
     <span>$P(-|D^c)$</span>
     <span>
       Probability that the test result for a subject who does not have the
       disease is negative.
     </span>
-  </MultiModeGrid>
+  </MapBlock>
 
   <p>
     These quantities are called the <b>sensitivity</b> and <b>specificity</b> of
