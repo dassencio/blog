@@ -1,22 +1,12 @@
 @use "sass:math";
 
-// Strips unit from input value (e.g. stripUnit(10px) --> 10).
-@function stripUnit($value) {
-  @return math.div($value, ($value * 0 + 1));
-}
-
-// Converts input values in px to rem (e.g. rem(32px) --> 2rem).
-@function rem($pxValue) {
-  @return math.div(stripUnit($pxValue), 16) * 1rem;
-}
+// Primary unit of length (by default, 1rem = 16px).
+$base-length: 1rem;
 
 // Computes the line height for a given font size.
 @function fontSizeToLineHeight($fontSize) {
   @return $fontSize + (0.5 * $base-length);
 }
-
-// Primary unit of length.
-$base-length: rem(16px);
 
 // General styling.
 $content-horizontal-padding: $base-length;
