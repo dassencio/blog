@@ -88,5 +88,8 @@ $view-title-font-size: 1.6 * $base-length;
  * below. Using margin instead of padding does not fix the problem since
  * adjacent elements in this category will still appear closer to each other
  * than adjacent text paragraphs.
+ *
+ * $view-vertical-correction-padding = 1/2 * ($view-paragraph-line-height -
+ *                                            $view-paragraph-font-size)
  */
 $view-vertical-correction-padding: 0.3 * $base-length;
