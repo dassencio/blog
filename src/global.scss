@@ -93,10 +93,10 @@ $view-text-color-normal: #2f2f2f;
 $view-title-color: #0000bb;
 $view-title-font-size: 1.6 * $base-length;
 /*
-  * Some elements (e.g. equations) need extra padding to account for paragraph
-  * line height, otherwise they appear too close to the paragraphs above and
-  * below. Using margin instead of padding does not fix the problem since
-  * adjacent elements in this category will still appear closer to each other
-  * than adjacent text paragraphs.
-  */
+ * Some elements (e.g. equations) need extra padding to account for paragraph
+ * line height, otherwise they appear too close to the paragraphs above and
+ * below. Using margin instead of padding does not fix the problem since
+ * adjacent elements in this category will still appear closer to each other
+ * than adjacent text paragraphs.
+ */
 $view-vertical-correction-padding: 0.3 * $base-length;
