@@ -80,7 +80,7 @@
   <CodeBlock code="qemu-img create debian.img 1000M" />
 
   <p>
-    If you wish, you can make the image bigger than 1000M. Just make sure you
+    If you wish, you can make the image bigger than 1000MB. Just make sure you
     don't create an image bigger than the size of your CF card.
   </p>
 
@@ -186,7 +186,7 @@
   </p>
 
   <p>
-    To start, boot into your Debian image (I reserved 1024MB of RAM for it, you
+    To start, boot into your Debian image (I reserved 1024MB of RAM for it; you
     can use less if you wish):
   </p>
 
@@ -235,10 +235,10 @@
   />
 
   <p>
-    This output shows that the installed Linux kernel has been compiled against
-    the i686 architecture. We have to fix this since this kernel will not work
-    on the Alix board. First, install the package which contains the kernel for
-    the i486 architecture:
+    This output shows that the installed Linux kernel has been built for the
+    i686 architecture. We have to fix this since this kernel will not work on
+    the Alix board. First, install the package which contains the kernel for the
+    i486 architecture:
   </p>
 
   <CodeBlock
@@ -250,12 +250,11 @@
 
   <p>
     <b>NOTE</b>: If you have problems connecting to the internet inside the VM,
-    try editing the file <code> /etc/resolv.conf</code> and setting the
+    try editing the file <code>/etc/resolv.conf</code> and setting the
     <code>nameserver</code> value to the same one you have in the
-    <code>/etc/resolv.conf</code>
-    of the computer you're working on (or, alternatively, to a free DNS provider
-    such as <code>1.1.1.1</code> or <code>9.9.9.9</code>). This might fix your
-    problem.
+    <code>/etc/resolv.conf</code> of the computer you're working on (or,
+    alternatively, set it to the IP address of a free DNS provider such as
+    <code>1.1.1.1</code> or <code>9.9.9.9</code>). This might fix your problem.
   </p>
 
   <p>
@@ -367,10 +366,9 @@
   <CodeBlock code="sudo dd if=debian.raw of=/dev/sdX status=progress" />
 
   <p>
-    where <code>/dev/sdX</code> is the device node of your CF card. The
-    <code>status=progress</code> flag on the command above is optional, but very
-    useful since it will show the progress of the data transfer (which may take
-    a while).
+    where <code>/dev/sdX</code> is the device node of your CF card. Above,
+    <code>status=progress</code> is optional, but very useful since it will show
+    the progress of the data transfer (which may take a while).
   </p>
 
   <p>
@@ -383,9 +381,9 @@
   <CodeBlock code="ssh root@<ip-of-your-board>" />
 
   <p>
-    If even after a few minutes you cannot ssh into the board, boot your Debian
-    image again using QEMU and make sure you correctly removed the kernel and
-    libc packages which were compiled against the i686 architecture (step 5). If
+    If even after a few minutes you still cannot ssh into the board, boot your
+    Debian image again using QEMU and make sure you correctly removed the kernel
+    and libc packages which were built for the i686 architecture (step 5). If
     everything is correct there, double-check your network configuration (step
     6). Should you find any mistakes, redo steps 7 and 8.
   </p>
@@ -397,11 +395,11 @@
   <p>
     For my private servers, I usually prefer storing all operating system and
     user files in a single partition occupying the entire disk to splitting them
-    over multiple partitions with dedicated purposes. In particular, I almost
-    always get rid of the
+    over multiple partitions with dedicated purposes. Also, I almost always
+    remove the
     <a href="https://en.wikipedia.org/wiki/Swap_partition">swap partition</a>.
-    If you wish to do this too, ssh into the board and edit the partition table
-    from the CF card with:
+    If you wish to do this as well, ssh into the board and edit the partition
+    table of the CF card with:
   </p>
 
   <CodeBlock code="fdisk /dev/sda" />
@@ -481,7 +479,7 @@
   <p>
     Now create a new primary partition filling up the entire disk. This
     partition must start at the same sector as <code>sda1</code>
-    did initially:
+    initially did:
   </p>
 
   <CodeBlock
@@ -584,7 +582,7 @@
 
   <CodeBlock code="df -h" />
 
-  <p>This is a typical output you should expect (for a 4GB CF card):</p>
+  <p>This is the kind of output you should expect (for a 4GB CF card):</p>
 
   <CodeBlock
     code="
