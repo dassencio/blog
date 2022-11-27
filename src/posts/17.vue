@@ -56,7 +56,7 @@
     code="wget http://cdimage.debian.org/debian-cd/7.2.0/i386/iso-cd/debian-7.2.0-i386-netinst.iso"
   />
 
-  <SectionTitle>2) Install qemu</SectionTitle>
+  <SectionTitle>2) Install QEMU</SectionTitle>
 
   <p>
     You will need
@@ -106,17 +106,17 @@
     <span>Use <code>debian.img</code> as a hard disk.</span>
 
     <code>-boot d</code>
-    <span>Boot the VM from the CD-ROM disk</span>
+    <span>Boot the VM from the CD-ROM disk.</span>
   </MapBlock>
 
   <p>
-    <b>NOTE</b>: if your mouse pointer gets captured by the VM window, press
+    <b>NOTE</b>: If your mouse pointer gets captured by the VM window, press
     "Ctrl + Alt" (left keys) to recover it.
   </p>
 
   <p>
     Now follow the steps below. Please keep in mind that these will likely
-    differ based on which version of Debian you're installing:
+    differ based on the version of Debian you're installing:
   </p>
 
   <ListBlock>
@@ -133,10 +133,10 @@
       Enter your domain name (e.g. "lan", or leave it blank if you wish).
     </ListItem>
     <ListItem>Set the root password.</ListItem>
-    <ListItem> You must now create a normal user.</ListItem>
+    <ListItem>You must now create a normal user.</ListItem>
     <ListItem>Choose a username for your user.</ListItem>
     <ListItem>Choose a password for your user.</ListItem>
-    <ListItem>Partitioning method: Guided use entire disk.</ListItem>
+    <ListItem>Partitioning method: Guided - use entire disk.</ListItem>
     <ListItem>
       Select disk to partition: SCSI1 (0,0,0) (sda) 1.0 GB ATA QEMU HARDDISK.
     </ListItem>
@@ -165,7 +165,7 @@
 
   <p>
     Abort the reboot by pressing "Ctrl+C" on the terminal window where you
-    started <code>qemu</code>.
+    started QEMU.
   </p>
 
   <SectionTitle>
@@ -179,8 +179,8 @@
     <a
       href="http://myonlineusb.wordpress.com/2011/06/08/what-is-the-difference-between-i386-i486-i586-i686-i786/"
       >i586</a
-    >. Most packages from Debian are installed against the i486 architecture and
-    will work just fine on an i586 processor, but there are two which might not
+    >. Most packages from Debian are built for the i486 architecture and will
+    work just fine on an i586 processor, but there are two which might not
     follow this rule: libc and the kernel. We need to take a closer look at
     these.
   </p>
@@ -193,7 +193,8 @@
   <CodeBlock code="qemu-system-i386 -hda debian.img -m 1024M" />
 
   <p>
-    Now log in as "root". To show which libc package(s) you have installed, run:
+    Now log in as <code>root</code>. To show which libc package(s) you have
+    installed, run:
   </p>
 
   <CodeBlock code="dpkg --list | grep libc[0-9]" />
@@ -248,7 +249,7 @@
   />
 
   <p>
-    <b>NOTE</b>: if you have problems connecting to the Internet inside the VM,
+    <b>NOTE</b>: If you have problems connecting to the internet inside the VM,
     try editing the file <code> /etc/resolv.conf</code> and setting the
     <code>nameserver</code> value to the same one you have in the
     <code>/etc/resolv.conf</code>
@@ -259,14 +260,14 @@
 
   <p>
     Reboot and select the i486 kernel on the GRUB screen. Now log in again as
-    "root" and remove all installed kernel packages for the i686 architecture.
-    To be clear, run:
+    <code>root</code> and remove all installed kernel packages for the i686
+    architecture. You can do that by running:
   </p>
 
   <CodeBlock code="dpkg --list | grep linux-image.*686" />
 
   <p>
-    and remove every installed kernel package which you see with the following
+    and removing every installed kernel package which you see with the following
     command:
   </p>
 
@@ -344,10 +345,10 @@
   <CodeBlock code="dmesg" />
 
   <p>
-    The output of <code>dmesg</code> will show you the
+    The output will show you the
     <a href="https://en.wikipedia.org/wiki/Device_file">device node</a> through
-    which the CF card is accessible. Here are the bottom lines I get when I run
-    it right after inserting a CF card:
+    which the CF card is accessible. Here are the bottom lines I get right after
+    inserting a CF card:
   </p>
 
   <CodeBlock
@@ -390,14 +391,14 @@
   </p>
 
   <SectionTitle>
-    9) OPTIONAL: resize the root partition to the whole disk
+    9) OPTIONAL: Resize the root partition to the whole disk
   </SectionTitle>
 
   <p>
     For my private servers, I usually prefer storing all operating system and
-    user files in a single root partition occupying the entire disk to splitting
-    them over multiple partitions with dedicated purposes. In particular, I
-    almost always get rid of the
+    user files in a single partition occupying the entire disk to splitting them
+    over multiple partitions with dedicated purposes. In particular, I almost
+    always get rid of the
     <a href="https://en.wikipedia.org/wiki/Swap_partition">swap partition</a>.
     If you wish to do this too, ssh into the board and edit the partition table
     from the CF card with:
@@ -428,9 +429,9 @@
   />
 
   <p>
-    Write down the number on the "Start" column for
-    <code>/dev/sda1</code> since this is the (root) partition we wish to extend.
-    This value tells us the sector at which the partition starts.
+    Write down the number in the <code>Start</code> column for
+    <code>/dev/sda1</code> since this is the partition we wish to extend. This
+    value tells us the sector at which the partition starts.
   </p>
 
   <p>
@@ -458,8 +459,8 @@
   />
 
   <p>
-    List all partition again (<code>p</code>). The result should look similar to
-    this (I omitted the first lines for brevity):
+    List all partitions again (<code>p</code>). The result should look similar
+    to this (I omitted the first lines for brevity):
   </p>
 
   <CodeBlock
@@ -511,11 +512,10 @@
 
   <p>
     You need to make the recreated partition
-    <code>sda1</code> bootable again (its "bootable" state is under the column
-    <code>Boot</code>; if you check the partition list you initially had, you
-    will see it was bootable since it had a "<code>*</code>" under the
-    <code>Boot</code>
-    column):
+    <code>sda1</code> bootable again (its "bootable" state is shown in the
+    <code>Boot</code> column; if you check the partition list you initially had,
+    you will see it was bootable since it had a "<code>*</code>" under
+    <code>Boot</code>):
   </p>
 
   <CodeBlock
@@ -540,8 +540,8 @@
   <p>
     Make sure the partition type of <code>sda1</code> (the value shown under
     <code>Id</code>) is the same as before. It should be, but if for some reason
-    it isn't, press "<code>t</code>", then "<code>1</code>" and finally enter
-    the same number as you initially had.
+    it isn't, press "<code>t</code>", then "<code>1</code>", then enter the same
+    <code>Id</code> number you previously had.
   </p>
 
   <p>
