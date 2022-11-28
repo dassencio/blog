@@ -22,7 +22,7 @@
     Fortunately, there is a slot on the board for a
     <a href="https://en.wikipedia.org/wiki/CompactFlash">Compact Flash</a> (CF)
     card which the tinyBIOS can boot from. The solution is then to build a Linux
-    image on a file, flash it directly to a CF card and insert it on the board.
+    image on a file, flash it directly to a CF card and insert it in the board.
     So let's get started!
   </p>
 
@@ -142,7 +142,7 @@
     </ListItem>
     <ListItem>Partitioning scheme: All files in one partition.</ListItem>
     <ListItem>Select "Finish partitioning and write changes to disk".</ListItem>
-    <ListItem>Write the changes to disks? Yes.</ListItem>
+    <ListItem>Write the changes to disk? Yes.</ListItem>
     <ListItem>
       The base system will now be installed (this will take a while).
     </ListItem>
@@ -329,7 +329,7 @@
   <SectionTitle>7) Convert the created disk image to raw format</SectionTitle>
 
   <p>
-    You now need to convert <code>debian.img</code> into a raw disk image. A raw
+    You now need to convert <code>debian.img</code> to a raw disk image. A raw
     disk image can be written (byte by byte) to an actual physical disk and can
     also be generated from a disk by copying its contents (again, byte by byte)
     to a file.
@@ -372,9 +372,9 @@
   </p>
 
   <p>
-    When this is done, your image will be ready to be used. Insert the CF card
-    on the board, connect an Ethernet cable to its network port which is right
-    next to the serial port and turn on the device. If everything goes well,
+    When this is done, your CF card will be ready to be used. Insert it in the
+    board, connect an Ethernet cable to the network port which is right next to
+    the board's serial port and turn the board on. If everything goes well,
     after some seconds you will be able to ssh into the board:
   </p>
 
@@ -408,7 +408,10 @@
 
   <CodeBlock code="Command (m for help): **p**" />
 
-  <p>The partition list should look like this:</p>
+  <p>
+    The partition table should look similar to this (most numbers below depend
+    on the storage capacity of the CF card; mine has 4GB):
+  </p>
 
   <CodeBlock
     code="
@@ -511,9 +514,9 @@
   <p>
     You need to make the recreated partition
     <code>sda1</code> bootable again (its "bootable" state is shown in the
-    <code>Boot</code> column; if you check the partition list you initially had,
-    you will see it was bootable since it had a "<code>*</code>" under
-    <code>Boot</code>):
+    <code>Boot</code> column; if you check the partition table you initially
+    had, you will see <code>sda1</code> was bootable since it had a
+    "<code>*</code>" under <code>Boot</code>):
   </p>
 
   <CodeBlock
@@ -524,8 +527,8 @@
   />
 
   <p>
-    List the partitions again (<code>p</code>); you can now see that
-    <code>sda1</code> is again bootable:
+    List the partitions again (<code>p</code>); <code>sda1</code> will now be
+    marked as bootable:
   </p>
 
   <CodeBlock
@@ -582,7 +585,7 @@
 
   <CodeBlock code="df -h" />
 
-  <p>This is the kind of output you should expect (for a 4GB CF card):</p>
+  <p>This is the kind of output you should expect:</p>
 
   <CodeBlock
     code="
