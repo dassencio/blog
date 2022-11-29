@@ -1,6 +1,8 @@
 import { createApp } from "vue";
 import "ress";
+import "highlight.js/styles/github-gist.css";
 import App from "@/App.vue";
+import VueHighlightJS from "vue3-highlightjs";
 import BaseButton from "@/components/BaseButton.vue";
 import BaseCheckbox from "@/components/BaseCheckbox.vue";
 import BaseFigure from "@/components/BaseFigure.vue";
@@ -35,5 +37,6 @@ app.component("SectionTitle", SectionTitle);
 app.component("TableBlock", TableBlock);
 
 app.use(router);
+app.use(VueHighlightJS);
 
 app.mount("#app");

@@ -1,7 +1,8 @@
 <template>
-  <div class="code">
-    <pre class="code__contents" v-html="code"></pre>
-  </div>
+  <pre
+    class="code"
+    v-highlightjs
+  ><code class="code__contents" :class="language" v-html="code"></code></pre>
 </template>
 
 <script setup lang="ts">
@@ -13,10 +14,12 @@ const props = withDefaults(
   defineProps<{
     code: string;
     highlightDelimiter: string;
+    language: string;
   }>(),
   {
     code: "",
     highlightDelimiter: "**",
+    language: "plaintext",
   }
 );
 
