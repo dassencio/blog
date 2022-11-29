@@ -7,7 +7,7 @@ const posts: Post[] = [
     component: () => import("@/posts/18.vue"),
     date: dateToString(2013, 12, 9),
     id: "18",
-    labels: [PostLabel.Linux],
+    labels: [PostLabel.Linux, PostLabel.Shell],
     title: "Extending partitions via command line",
   },
   {
@@ -15,7 +15,7 @@ const posts: Post[] = [
     component: () => import("@/posts/17.vue"),
     date: dateToString(2013, 12, 8),
     id: "17",
-    labels: [PostLabel.Linux],
+    labels: [PostLabel.Linux, PostLabel.Shell],
     title: "How to create a Debian image for an Alix board",
   },
   {
