@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "12e26437a18f045febf1c8a281abd05e",
+    component: () => import("@/posts/18.vue"),
+    date: dateToString(2013, 12, 9),
+    id: "18",
+    labels: [PostLabel.Linux],
+    title: "Extending partitions via command line",
+  },
+  {
     compatibilityIndex: "743e1168d330797a3dbdb1ce920383d6",
     component: () => import("@/posts/17.vue"),
     date: dateToString(2013, 12, 8),
