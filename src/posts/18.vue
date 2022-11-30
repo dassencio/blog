@@ -1,7 +1,7 @@
 <template>
   <p>
-    If you want to extend the size of one of your partitions via command line,
-    you should use
+    If you want to extend the size of one of your disk partitions via command
+    line, you should use
     <a href="http://linux.die.net/man/8/fdisk">fdisk</a>. Please notice that
     fdisk can only manipulate the
     <a href="https://en.wikipedia.org/wiki/Disk_partitioning"
@@ -24,15 +24,15 @@
   </p>
 
   <p>
-    For illustration purposes, I used a disk with 1000MB of space whose
+    For illustration purposes, I will use a disk with 1000MB of space whose
     <a href="https://en.wikipedia.org/wiki/Device_file">device node</a> is
     <code>/dev/sda</code>. To change the partition table of your disk, you will
-    need to replace all occurrences of <code>/dev/sda</code> with the device
-    node of your disk in the commands below. Please
+    need to replace all occurrences of <code>/dev/sda</code> in the commands
+    below with the actual device node of your disk. Please
     <b>backup your data</b> before doing anything shown here!
   </p>
 
-  <p>Open the partition table of your disk with fdisk:</p>
+  <p>To start, open the partition table of your disk with fdisk:</p>
 
   <CodeBlock code="sudo fdisk /dev/sda" />
 
@@ -58,17 +58,16 @@
   />
 
   <p>
-    There are two partitions on this disk. The <code>Start</code> and
+    There are two partitions in this disk. The <code>Start</code> and
     <code>End</code> columns show the
     <a href="https://en.wikipedia.org/wiki/Disk_sector">disk sectors</a> where
     these partitions start and end respectively. For instance, the first
     partition starts at sector 2048 and ends at sector 400000. Since each sector
-    is 512-bytes long (see the line starting with <code>Units</code>), this
-    means the first partition has 512 × (400000 - 2048) = 203751424 bytes
-    (approximately 200MB). All sectors numbered in the range 400001-1499999 are
-    unused since the second partition starts at sector 1500000, so we can extend
-    the first partition up to the 1499999-th sector. To do that, we must first
-    delete this partition:
+    is 512-bytes long (see the third line), this means the first partition has
+    512 × (400000 - 2048) = 203751424 bytes (approximately 200MB). All sectors
+    numbered in the range 400001-1499999 are unused since the second partition
+    starts at sector 1500000, so we can extend the first partition up to the
+    1499999-th sector. To do that, we must first delete this partition:
   </p>
 
   <CodeBlock
@@ -99,8 +98,8 @@
   <p>
     Now we can recreate the first partition with a bigger size. If there is data
     in that partition, be careful in this step as you must recreate the
-    partition starting on the same sector as it started before (2048 in my case)
-    or you might permanently lose stored data:
+    partition starting on the same sector as it did before (2048 in my case) or
+    you might permanently lose stored data:
   </p>
 
   <CodeBlock
