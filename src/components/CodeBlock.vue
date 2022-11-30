@@ -24,7 +24,7 @@ const props = withDefaults(
 );
 
 function highlightCode(code: string) {
-  if (props.highlightDelimiter) {
+  if (props.language === "plaintext" && props.highlightDelimiter) {
     const delimiter = _.escapeRegExp(props.highlightDelimiter);
     const highlightRegex = new RegExp(`${delimiter}(.+?)${delimiter}`, "g");
     return code.replace(highlightRegex, "<span class='highlight'>$1</span>");
