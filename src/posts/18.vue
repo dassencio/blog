@@ -98,7 +98,7 @@
   <p>
     Now we can recreate the first partition with a bigger size. If there is data
     in that partition, be careful in this step as you must recreate the
-    partition starting on the same sector as it did before (2048 in my case) or
+    partition starting at the same sector as it did before (2048 in my case) or
     you might permanently lose stored data:
   </p>
 
