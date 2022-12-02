@@ -465,7 +465,7 @@ function nextMove(state: SimulationState, solutionsFound: Solution[]) {
 
 <style scoped lang="scss">
 .highlight {
-  background-color: #87fd87;
+  color: #058f4f;
 }
 .solver {
   &__controls {
