@@ -1,17 +1,15 @@
 <template>
-  <p class="list">
+  <div class="list">
     <slot></slot>
-  </p>
+  </div>
 </template>
 
 <style scoped lang="scss">
 .list {
-  display: grid;
-  gap: $view-list-block-vertical-gap $view-list-block-horizontal-gap;
-  grid-template-columns: auto minmax(0, 1fr);
-  margin-left: $view-list-block-horizontal-gap;
-  :deep(> *) {
-    line-height: $view-paragraph-line-height;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: $view-list-block-vertical-gap;
+  margin: $view-paragraph-vertical-margin 0 $view-paragraph-vertical-margin
+    $view-list-block-horizontal-gap;
 }
 </style>

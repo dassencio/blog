@@ -1,17 +1,28 @@
 <template>
-  <span class="item"><span class="item__bullet"></span></span><slot></slot>
+  <div class="item">
+    <div class="item__bullet"><div class="item__bullet-icon"></div></div>
+    <slot></slot>
+  </div>
 </template>
 
 <style scoped lang="scss">
 .item {
-  align-items: center;
   display: flex;
-  height: $view-paragraph-line-height;
-  justify-self: center;
+  gap: $view-list-block-horizontal-gap;
+  line-height: $view-paragraph-line-height;
+  text-align: left;
+  @media (min-width: $desktop-width-mode) {
+    text-align: justify;
+  }
   &__bullet {
-    background-color: $view-text-color-normal;
-    height: $view-list-bullet-size;
-    width: $view-list-bullet-size;
+    display: flex;
+    height: $view-paragraph-line-height;
+    align-items: center;
+    &-icon {
+      background-color: $view-text-color-normal;
+      height: $view-list-bullet-size;
+      width: $view-list-bullet-size;
+    }
   }
 }
 </style>
