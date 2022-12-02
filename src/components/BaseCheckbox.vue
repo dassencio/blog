@@ -1,5 +1,5 @@
 <template>
-  <span
+  <div
     class="option"
     :class="optionClass"
     tabindex="0"
@@ -9,12 +9,12 @@
     @keyup.enter="onRelease"
     @keyup.space="onRelease"
   >
-    <span class="option__checkbox">
+    <div class="option__checkbox">
       <span class="option__cross-line-1"></span>
       <span class="option__cross-line-2"></span>
-    </span>
+    </div>
     <slot></slot>
-  </span>
+  </div>
 </template>
 
 <script setup lang="ts">
