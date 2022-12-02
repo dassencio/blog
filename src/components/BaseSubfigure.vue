@@ -1,8 +1,8 @@
 <template>
-  <span class="subfigure">
+  <div class="subfigure">
     <slot></slot>
-    <span class="subfigure__label">{{ label }}</span>
-  </span>
+    <div class="subfigure__label">{{ label }}</div>
+  </div>
 </template>
 
 <script setup lang="ts">
