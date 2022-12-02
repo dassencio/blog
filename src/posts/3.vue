@@ -220,10 +220,10 @@
   <ResponsiveForm class="solver">
     <InputField label="Fugitive times:" v-model.trim="fugitiveTimes" />
     <InputField label="Police time:" v-model.trim="policeTime" />
-    <span class="solver__controls">
+    <div class="solver__controls">
       <BaseCheckbox v-model="findAllSolutions">Find all solutions</BaseCheckbox>
       <BaseButton @click="solve">Solve</BaseButton>
-    </span>
+    </div>
   </ResponsiveForm>
   <CodeBlock class="solver__output" :code="solverOutput" />
 </template>
