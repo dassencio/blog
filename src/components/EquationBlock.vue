@@ -1,5 +1,5 @@
 <template>
-  <p class="equation">
+  <div class="equation">
     $$
     {{ boxed ? "\\boxed{" : "" }}
     {{ align ? "\\begin{alignat}{99}" : "" }}
@@ -7,7 +7,7 @@
     {{ align ? "\\end{alignat}" : "" }}
     {{ boxed ? "}" : "" }}
     $$
-  </p>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -33,7 +33,8 @@ const slotText = computed(() => {
 
 <style scoped lang="scss">
 .equation {
-  margin-left: $view-indentation-length;
+  margin: $view-paragraph-vertical-margin 0 $view-paragraph-vertical-margin
+    $view-indentation-length;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
