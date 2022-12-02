@@ -19,7 +19,6 @@ defineProps<{
 .figure {
   margin: $view-paragraph-vertical-margin 0;
   padding-top: $view-vertical-correction-padding;
-  text-align: center;
   &__caption {
     column-gap: $view-figure-caption-horizontal-gap;
     display: flex;
