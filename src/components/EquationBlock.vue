@@ -33,11 +33,11 @@ const slotText = computed(() => {
 
 <style scoped lang="scss">
 .equation {
-  padding: $view-vertical-correction-padding 0;
   margin-left: $view-indentation-length;
   max-width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
+  padding: $view-vertical-correction-padding 0;
   :deep(mjx-container[display="true"]) {
     margin: 0;
   }
