@@ -1,7 +1,7 @@
 <template>
-  <p class="map">
+  <div class="map">
     <slot></slot>
-  </p>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -9,9 +9,12 @@
   display: grid;
   gap: $view-map-block-vertical-gap $view-map-block-horizontal-gap;
   grid-template-columns: auto minmax(0, 1fr);
-  margin-left: $view-indentation-length;
-  :deep(> *) {
-    line-height: $view-paragraph-line-height;
+  line-height: $view-paragraph-line-height;
+  margin: $view-paragraph-vertical-margin 0 $view-paragraph-vertical-margin
+    $view-indentation-length;
+  text-align: left;
+  @media (min-width: $desktop-width-mode) {
+    text-align: justify;
   }
 }
 </style>
