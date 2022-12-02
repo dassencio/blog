@@ -13,8 +13,8 @@ import { escapeHtml, removeExcessIndentation } from "@/functions";
 const props = withDefaults(
   defineProps<{
     code: string;
-    highlightDelimiter: string;
-    language: string;
+    highlightDelimiter?: string;
+    language?: string;
   }>(),
   {
     code: "",
