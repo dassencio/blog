@@ -1,7 +1,7 @@
 // Global MathJax configuration.
 const mathJaxConfig = {
   startup: {
-    pageReady: () => (readyToRender = true),
+    pageReady: render,
   },
   svg: {
     displayAlign: "left",
@@ -27,9 +27,6 @@ declare global {
 
 window.MathJax = mathJaxConfig;
 
-let readyToRender = false;
-let renderTimerId = 0;
-
 // Download and configure MathJax as soon as this module is first loaded.
 const script = document.createElement("script");
 script.src = "/thirdparty/tex-svg-3.2.2.js";
@@ -37,19 +34,18 @@ script.async = true;
 document.head.appendChild(script);
 
 /**
- * Render all mathematics text in the page.
+ * Renders all mathematics text in the page.
+ *
+ * This function can be safely called multiple times, but it may not produce
+ * the expected results if new equations and/or labels are added inline to
+ * the page after the first render. Provided that doesn't happen, it will work
+ * as expected.
+ *
+ * See https://docs.mathjax.org/en/latest/web/typeset.html for more details.
  */
 function render() {
-  if (renderTimerId) {
-    clearTimeout(renderTimerId);
-  }
-  if (!readyToRender) {
-    // MathJax has not been loaded yet, so try again in 50ms.
-    renderTimerId = setTimeout(render, 50);
-  } else {
-    window.MathJax.texReset();
-    window.MathJax.typeset();
-  }
+  window.MathJax.texReset();
+  window.MathJax.typeset();
 }
 
 export default { render };
