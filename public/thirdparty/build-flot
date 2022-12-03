@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+version="0.8.3"
+
+flot_js="flot-${version}.js"
+
+rm -f "$flot_js"
+
+for src in jquery.flot.js jquery.flot.axislabels.js
+do
+  cat <(echo "// $src") "$src" <(echo) >> "${flot_js}"
+done

@@ -43,6 +43,8 @@ $view-figure-caption-horizontal-gap: 0.5 * $base-length;
 $view-figure-caption-horizontal-padding: 0.75 * $base-length;
 $view-figure-caption-vertical-margin: $base-length;
 $view-figure-contents-gap: $base-length;
+$view-flot-chart-legend-border: (0.0625 * $base-length) dashed #a8a8a8;
+$view-flot-chart-legend-label-space-around: 0.5 * $base-length;
 $view-form-element-border-active: (0.0625 * $base-length) solid #000000;
 $view-form-element-border-focus: (0.0625 * $base-length) solid #727272;
 $view-form-element-border-normal: (0.0625 * $base-length) solid #a8a8a8;

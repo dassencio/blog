@@ -13,6 +13,7 @@ module.exports = {
     ecmaVersion: "latest",
   },
   rules: {
+    "@typescript-eslint/ban-ts-comment": "off",
     "vue/multi-word-component-names": "off",
   },
 };
