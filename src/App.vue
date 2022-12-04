@@ -23,28 +23,28 @@ watch(post, (post) => {
 
 <style lang="scss">
 @font-face {
-  font-family: "Open Sans Regular";
-  src: url("/fonts/opensans-regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Open Sans Light";
-  src: url("/fonts/opensans-light.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Open Sans SemiBold";
-  src: url("/fonts/opensans-semibold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Open Sans Italic";
-  src: url("/fonts/opensans-italic.ttf") format("truetype");
-}
-@font-face {
   font-family: "Noto Sans Mono Regular";
   src: url("/fonts/notosansmono-regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Noto Sans Mono SemiBold";
   src: url("/fonts/notosansmono-semibold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Italic";
+  src: url("/fonts/opensans-italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Light";
+  src: url("/fonts/opensans-light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("/fonts/opensans-regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans SemiBold";
+  src: url("/fonts/opensans-semibold.ttf") format("truetype");
 }
 html {
   background-color: white;
