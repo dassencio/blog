@@ -3,6 +3,18 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "c59e4c7dd11d1d61bf902136ee9cafcb",
+    component: () => import("@/posts/19.vue"),
+    date: dateToString(2013, 12, 16),
+    id: "19",
+    labels: [
+      PostLabel.Mathematics,
+      PostLabel.Probability,
+      PostLabel.Statistics,
+    ],
+    title: "The birthday paradox",
+  },
+  {
     compatibilityIndex: "12e26437a18f045febf1c8a281abd05e",
     component: () => import("@/posts/18.vue"),
     date: dateToString(2013, 12, 9),
