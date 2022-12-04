@@ -51,7 +51,7 @@
     press the "Tab" key.
   </p>
 
-  <SectionTitle>Bonus: security options</SectionTitle>
+  <SectionTitle>Bonus: Security options</SectionTitle>
 
   <p>
     You can do many other things with an ssh config file. For instance, you can
