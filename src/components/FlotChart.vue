@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
 import _ from "lodash";
 import flot from "@/flot";
 
@@ -11,6 +11,10 @@ onMounted(() => {
   debouncedPlot();
   window.addEventListener("resize", debouncedPlot);
 });
+onUnmounted(() => {
+  window.removeEventListener("resize", debouncedPlot);
+});
+
 const props = defineProps<{
   data: object;
   options: object;
