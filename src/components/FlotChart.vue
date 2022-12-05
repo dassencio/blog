@@ -3,9 +3,14 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from "vue";
 import _ from "lodash";
 import flot from "@/flot";
 
+onMounted(() => {
+  debouncedPlot();
+  window.addEventListener("resize", debouncedPlot);
+});
 const props = defineProps<{
   data: object;
   options: object;
@@ -42,9 +47,6 @@ const plotId = `flotChart${_.uniqueId()}`;
 const debouncedPlot = _.debounce(() => {
   flot.plot(`#${plotId}`, props.data, options);
 }, 100);
-
-debouncedPlot();
-window.addEventListener("resize", debouncedPlot);
 </script>
 
 <style scoped lang="scss">
