@@ -30,8 +30,8 @@
       with $N$ distinct elements, and if the element selection events are
       <a href="https://en.wikipedia.org/wiki/Independence_(probability_theory)"
         >independent</a
-      >, what is the probability that the at least one element is selected two
-      or more times?
+      >, what is the probability that at least one element is selected two or
+      more times?
     </i>
   </p>
 
@@ -51,7 +51,7 @@
     Let's solve the problem in its general formulation (not necessarily thinking
     of birthdays). We first randomly select an element $E_1$ from a set which
     contains $N$ elements. The total number of possible $E_1$ values is $N$. We
-    then randomly select the second element $E_2$. The probability that this
+    then randomly select a second element $E_2$. The probability that this
     second element is distinct from the first one is:
   </p>
 
@@ -62,9 +62,8 @@
   <p>
     since there are $N-1$ elements which are distinct from $E_1$ (above, I wrote
     $E_2 \notin \{E_1\}$ instead of $E_2 \neq E_1$ for reasons which will become
-    clear below). We then randomly select the third element $E_3$. The
-    probability that this element is distinct from the first two selected
-    elements is:
+    clear below). We then randomly select a third element $E_3$. The probability
+    that this element is distinct from the first two selected elements is:
   </p>
 
   <EquationBlock>
@@ -99,7 +98,7 @@
     distinct from each other:
   </p>
 
-  <EquationBlock> P^*(n) = P^{(2)} \times \ldots \times P^{(n)} </EquationBlock>
+  <EquationBlock> P^*(n) = P^{(2)} \cdot P^{(3)} \ldots P^{(n)} </EquationBlock>
 
   <p>
     The probability $P(n)$ of at least two among the $n$ selected elements being
@@ -109,7 +108,7 @@
   <!-- prettier-ignore-->
   <EquationBlock align>
     P(n) &= 1 - P^*(n) \\
-         &= 1 - P^{(2)} \times \ldots \times P^{(n)} \\
+         &= 1 - P^{(2)} \cdot P^{(3)} \ldots P^{(n)} \\
          &= 1 - \left(\frac{N-1}{N}\right)\left(\frac{N-2}{N}\right) \ldots \left(\frac{N-(n-1)}{N}\right) \\
          &= 1 - \prod_{i=1}^{n-1}\left(\frac{N-i}{N}\right) \label{eq_deriv_pn}
   </EquationBlock>
@@ -140,23 +139,20 @@
     added to the final result as it makes the computation of $P(n)$ very easy to
     do on a computer. To clarify, computing $P(n)$ directly using the version
     involving factorials will not be a trivial task since $N!$ can be an immense
-    number (it will definitely be for $N = 365$) which most calculators/programs
-    will not be able to deal with due to the use of
-    <a href="https://en.wikipedia.org/wiki/Floating_point">
-      finite precision arithmetic</a
-    >. Roughly speaking, computers and calculators usually store numbers with a
-    fixed number of precision digits and are therefore incapable of handling
-    very large numbers. I will show later how one can use equation
-    \eqref{eq_deriv_pn} to compute $P(n)$ using
-    <a href="https://www.gnu.org/software/octave/">Octave</a>
-    (see the "bonus" section below).
+    number (it will definitely be for $N = 365$) which most computers will not
+    be able to deal with due to the use of
+    <a href="https://en.wikipedia.org/wiki/Floating_point"
+      >finite precision arithmetic</a
+    >. I will show later how one can use equation \eqref{eq_deriv_pn} to compute
+    $P(n)$ using <a href="https://www.gnu.org/software/octave/">Octave</a> (see
+    the "bonus" section below).
   </p>
 
   <p>
     Consider again the original problem: How many people do we need to select so
     that two or more of them will have the same birthday with probability larger
-    than or equal to $50\%$? Perhaps $365/2 \approx 182$? Or $150$? The answer
-    is, surprisingly, $23$:
+    than or equal to $50\%$? Perhaps $365/2 \approx 182$? Or $150$?
+    Surprisingly, the answer is $23$:
   </p>
 
   <EquationBlock>
@@ -188,8 +184,6 @@
   </p>
 
   <EquationBlock> P(57) \approx 0.9901 </EquationBlock>
-
-  <p></p>
 
   <SectionTitle>A lower bound estimate for $P(n)$</SectionTitle>
 
@@ -249,7 +243,7 @@
   <p>
     will yield a collision with probability larger than or equal to $p$. For $N
     = 365$ and $p = 0.5$, we get $n \approx 22.49$, so indeed for $n = 23$ we
-    will have collisions with at least $50\%$ probability.
+    will have a collision with at least $50\%$ probability.
   </p>
 
   <p>
@@ -276,7 +270,7 @@
     $\sqrt{N}$ is significantly smaller than $N$ itself.
   </p>
 
-  <SectionTitle>Bonus: Using octave to compute $P(n)$</SectionTitle>
+  <SectionTitle>Bonus: Using Octave to compute $P(n)$</SectionTitle>
 
   <p>
     On Ubuntu/Debian, you can install Octave by opening a terminal and running
@@ -292,19 +286,19 @@
 
   <CodeBlock language="octave" :code="octaveCode" />
 
-  <p>Now start Octave:</p>
+  <p>
+    Now start Octave in the same directory where <code>birthday.m</code> is
+    stored:
+  </p>
 
   <CodeBlock code="octave" />
 
-  <p>
-    and compute $P(n)$ as in the example below (here I am assuming $n = 23$ and
-    $N = 365$):
-  </p>
+  <p>and compute $P(n)$ as in the example below:</p>
 
   <CodeBlock
     language="octave"
     code="
-    octave:1> birthday(23, 365)
+    octave:1> birthday(365, 23)
     ans =  0.50730
     "
   />
@@ -350,9 +344,9 @@ const options = {
 };
 
 const octaveCode = `
-# n: Number of randomly selected elements
 # N: Size of set from which elements are selected
-function p = birthday(n, N)
+# n: Number of randomly selected elements
+function p = birthday(N, n)
   # We need to choose at least two elements.
   if n < 2
     p = 0;
