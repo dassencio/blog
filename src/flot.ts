@@ -23,7 +23,7 @@ function plot(target: string, data: object, options: object) {
   if (!readyToRender) {
     plotQueue.push({ data, options, target });
   } else {
-    document.fonts.ready.then(function () {
+    document.fonts.ready.then(() => {
       // @ts-ignore
       window.jQuery.plot(target, data, options);
       mathjax.render();
