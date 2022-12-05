@@ -7,6 +7,12 @@ declare global {
   }
 }
 
+type plotFunction = (target: string, data: object, options: object) => void;
+
+type JQueryFlot = typeof jQuery & {
+  plot: plotFunction;
+};
+
 window.jQuery = jQuery;
 
 let readyToRender = false;
@@ -24,8 +30,7 @@ function plot(target: string, data: object, options: object) {
     plotQueue.push({ data, options, target });
   } else {
     document.fonts.ready.then(() => {
-      // @ts-ignore
-      window.jQuery.plot(target, data, options);
+      (window.jQuery as JQueryFlot).plot(target, data, options);
       mathjax.render();
     });
   }
