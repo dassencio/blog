@@ -20,8 +20,6 @@ const options = _.merge(
       borderWidth: 1,
     },
     legend: {
-      backgroundColor: "white",
-      backgroundOpacity: 1,
       position: "nw",
       show: true,
     },
