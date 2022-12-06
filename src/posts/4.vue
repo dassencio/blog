@@ -7,7 +7,7 @@
   </p>
 
   <EquationBlock>
-    N_{\textrm{IPv6}} = 2^{128} \approx 3.4 \times 10^{38}
+    N_{\textrm{IPv6}} = 2^{128} \approx 3.4 \cdot 10^{38}
   </EquationBlock>
 
   <p>
@@ -29,7 +29,7 @@
     immense.
     <a href="https://en.wikipedia.org/wiki/IPv4">IPv4</a> addresses, on the
     other hand, are $32$ bits long, so the IPv4 address space contains only
-    $N_{\textrm{IPv4}} = 2^{32} \approx 4.3 \times 10^{9}$ (about $4.3$ billion)
+    $N_{\textrm{IPv4}} = 2^{32} \approx 4.3 \cdot 10^{9}$ (about $4.3$ billion)
     addresses. This small address space is one of the reasons behind the
     <a href="https://en.wikipedia.org/wiki/IPv4_address_exhaustion"
       >IPv4 address exhaustion</a
@@ -42,13 +42,13 @@
     <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
       >approximately a sphere</a
     >
-    with radius $R_{\textrm{Earth}} = 6.4 \times 10^6\textrm{m}$, its area is
+    with radius $R_{\textrm{Earth}} = 6.4 \cdot 10^6\textrm{m}$, its area is
     approximately given by:
   </p>
 
   <EquationBlock>
-    A_{\textrm{Earth}} = 4\pi R_{\textrm{Earth}}^2 \approx 4 \times 3.14 \times
-    (6.4 \times 10^6 \textrm{m})^2 \approx 5.1 \times 10^{14} \textrm{m}^2
+    A_{\textrm{Earth}} = 4\pi R_{\textrm{Earth}}^2 \approx 4 \cdot 3.14 \cdot
+    (6.4 \cdot 10^6 \textrm{m})^2 \approx 5.1 \cdot 10^{14} \textrm{m}^2
   </EquationBlock>
 
   <p>
@@ -58,7 +58,7 @@
 
   <EquationBlock>
     \sigma_{\textrm{IPv6}} \ColonEq \frac{N_{\textrm{IPv6}}}{A_{\textrm{Earth}}}
-    \approx 6.6 \times 10^{23} \textrm{m}^{-2}
+    \approx 6.6 \cdot 10^{23} \textrm{m}^{-2}
   </EquationBlock>
 
   <p>
@@ -66,13 +66,13 @@
     <a href="https://en.wikipedia.org/wiki/Avogadro_constant"
       >Avogadro constant</a
     >
-    ($N_A = 6.022 \times 10^{23}$). From this, we can compute how much area a
+    ($N_A = 6.022 \cdot 10^{23}$). From this, we can compute how much area a
     single IPv6 address would "occupy". This value is given by:
   </p>
 
   <EquationBlock>
     A_{\textrm{IPv6}} \ColonEq \frac{1}{\sigma_{\textrm{IPv6}}} \approx 1.5
-    \times 10^{-24} \textrm{m}^2 = 1.5 \textrm{pm}^2
+    \cdot 10^{-24} \textrm{m}^2 = 1.5 \textrm{pm}^2
   </EquationBlock>
 
   <p>
@@ -86,7 +86,7 @@
   </p>
 
   <EquationBlock>
-    A_{\textrm{He}} = \pi R_{\textrm{He}}^2 \approx 3.14 \times (31
+    A_{\textrm{He}} = \pi R_{\textrm{He}}^2 \approx 3.14 \cdot (31
     \textrm{pm})^2 \approx 3000\textrm{pm}^2 \approx 2000 A_{\textrm{IPv6}}
   </EquationBlock>
 

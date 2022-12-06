@@ -94,8 +94,8 @@
   <p>which yields, after plugging in the numbers mentioned above:</p>
 
   <EquationBlock>
-    P(D|+) = \displaystyle\frac{0.997\times 0.001}{0.997 \times 0.001 + 0.015
-    \times 0.999} = 0.062
+    P(D|+) = \displaystyle\frac{0.997\cdot 0.001}{0.997 \cdot 0.001 + 0.015
+    \cdot 0.999} = 0.062
   </EquationBlock>
 
   <p>
@@ -114,22 +114,22 @@
     as the number of subjects in each of these groups, we can expect that:
   </p>
 
-  <EquationBlock> |S| \approx N\times P(D) = 1000 </EquationBlock>
-  <EquationBlock> |H| \approx N\times P(D^c) = 999000 </EquationBlock>
+  <EquationBlock> |S| \approx N\cdot P(D) = 1000 </EquationBlock>
+  <EquationBlock> |H| \approx N\cdot P(D^c) = 999000 </EquationBlock>
 
   <p>
     The number $R^+_S$ of positive test results among the subjects in $S$ (true
     positives) will then satisfy:
   </p>
 
-  <EquationBlock> R^+_S \approx |S|\times P(+|D) = 997 </EquationBlock>
+  <EquationBlock> R^+_S \approx |S|\cdot P(+|D) = 997 </EquationBlock>
 
   <p>
     and the number $R^+_H$ of positive test results among the subjects in $H$
     (false positives) will satisfy:
   </p>
 
-  <EquationBlock> R^+_H \approx |H|\times P(+|D^c) = 14985 </EquationBlock>
+  <EquationBlock> R^+_H \approx |H|\cdot P(+|D^c) = 14985 </EquationBlock>
 
   <p>
     So $R^+_T \ColonEq R^+_H + R^+_S \approx 15982$ is the expected total number
