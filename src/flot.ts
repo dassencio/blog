@@ -9,9 +9,7 @@ declare global {
 
 type plotFunction = (target: string, data: object, options: object) => void;
 
-type JQueryFlot = typeof jQuery & {
-  plot: plotFunction;
-};
+type JQueryFlot = typeof jQuery & { plot: plotFunction };
 
 window.jQuery = jQuery;
 
