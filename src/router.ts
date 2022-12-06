@@ -28,7 +28,7 @@ const routes = [
         next();
       }
     },
-    component: PostList,
+    component: () => import("@/components/PostList.vue"),
     name: "post-list",
     path: "/",
   },
