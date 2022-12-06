@@ -234,9 +234,7 @@ import _ from "lodash";
 import "lodash.combinations";
 import mathjax from "@/mathjax";
 
-onMounted(() => {
-  mathjax.render();
-});
+onMounted(mathjax.render);
 
 const findAllSolutions = ref(false);
 const fugitiveTimes = ref("1, 2, 5, 10");

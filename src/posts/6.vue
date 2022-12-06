@@ -85,7 +85,5 @@
 import { onMounted } from "vue";
 import mathjax from "@/mathjax";
 
-onMounted(() => {
-  mathjax.render();
-});
+onMounted(mathjax.render);
 </script>
