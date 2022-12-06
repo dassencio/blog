@@ -13,8 +13,6 @@ type JQueryFlot = typeof jQuery & { plot: plotFunction };
 
 window.jQuery = jQuery;
 
-let readyToRender = false;
-
 interface PlotRequest {
   data: object;
   options: object;
@@ -24,7 +22,7 @@ interface PlotRequest {
 const plotQueue: PlotRequest[] = [];
 
 function plot(target: string, data: object, options: object) {
-  if (!readyToRender) {
+  if (!(window.jQuery as JQueryFlot).plot) {
     plotQueue.push({ data, options, target });
   } else {
     document.fonts.ready.then(() => {
@@ -40,7 +38,6 @@ script.async = true;
 document.head.appendChild(script);
 
 script.onload = () => {
-  readyToRender = true;
   plotQueue.forEach((request) =>
     plot(request.target, request.data, request.options)
   );
