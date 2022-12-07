@@ -4,7 +4,6 @@ import {
   type NavigationGuardNext,
   type RouteLocation,
 } from "vue-router";
-import PostList from "@/components/PostList.vue";
 import posts from "@/posts";
 
 const routes = [
