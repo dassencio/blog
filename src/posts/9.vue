@@ -177,7 +177,7 @@ import carTravelingAlongArc from "@/assets/images/car-traveling-along-arc.svg";
 import circularMotion from "@/assets/images/circular-motion.svg";
 import washingMachineForces from "@/assets/images/washing-machine-forces.svg";
 
-onMounted(mathjax.render);
+onMounted(() => mathjax.render());
 </script>
 
 <style scoped lang="scss">

@@ -149,7 +149,7 @@ import chargesOnRegularPolygon from "@/assets/images/charges-on-regular-polygon.
 import chargesOnRegularPolygonRotationA from "@/assets/images/charges-on-regular-polygon-rotation-a.svg";
 import chargesOnRegularPolygonRotationB from "@/assets/images/charges-on-regular-polygon-rotation-b.svg";
 
-onMounted(mathjax.render);
+onMounted(() => mathjax.render());
 </script>
 
 <style scoped lang="scss">

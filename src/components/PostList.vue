@@ -30,7 +30,7 @@ const matchingPosts = computed(() => {
     : posts;
 });
 
-onMounted(mathjax.render);
+onMounted(() => mathjax.render());
 </script>
 
 <style scoped lang="scss">

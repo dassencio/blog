@@ -200,7 +200,7 @@ import mathjax from "@/mathjax";
 import circularMotion from "@/assets/images/circular-motion.svg";
 import circularMotionAV from "@/assets/images/circular-motion-a-v.svg";
 
-onMounted(mathjax.render);
+onMounted(() => mathjax.render());
 </script>
 
 <style scoped lang="scss">
