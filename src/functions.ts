@@ -54,7 +54,8 @@ export function scrollToTarget() {
 }
 
 /**
- * Callback function to be called whenever a view (e.g. a blog post) is mounted.
+ * Callback function which must be triggered whenever a view (e.g. a blog post)
+ * is mounted.
  */
 export function onViewMounted() {
   mathjax.render();
