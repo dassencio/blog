@@ -62,3 +62,10 @@
     approach, prefer using option #1 above.
   </p>
 </template>
+
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { onViewMounted } from "@/functions";
+
+onMounted(() => onViewMounted());
+</script>

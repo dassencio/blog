@@ -1,3 +1,5 @@
+import mathjax from "@/mathjax";
+
 /**
  * Converts a date into its representation in the ISO 8601 format.
  *
@@ -40,4 +42,21 @@ export function removeExcessIndentation(text: string) {
       .map((line) => line.length - line.trimStart().length)
   );
   return lines.map((line) => line.slice(indentationLevel)).join("\n");
+}
+
+/**
+ * Scrolls to the page element associated with the current URL hash.
+ */
+export function scrollToTarget() {
+  const hash = window.location.hash || "#app";
+  const targetId = decodeURIComponent(hash.substring(1));
+  document.getElementById(targetId)?.scrollIntoView();
+}
+
+/**
+ * Callback function to be called whenever a view (e.g. a blog post) is mounted.
+ */
+export function onViewMounted() {
+  mathjax.render();
+  scrollToTarget();
 }

@@ -83,7 +83,7 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
-import mathjax from "@/mathjax";
+import { onViewMounted } from "@/functions";
 
-onMounted(() => mathjax.render());
+onMounted(() => onViewMounted());
 </script>

@@ -159,3 +159,10 @@
     The filesystem should now occupy the entire size of <code>/dev/sda1</code>.
   </p>
 </template>
+
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { onViewMounted } from "@/functions";
+
+onMounted(() => onViewMounted());
+</script>

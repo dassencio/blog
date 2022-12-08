@@ -232,9 +232,9 @@
 import { onMounted, ref } from "vue";
 import _ from "lodash";
 import "lodash.combinations";
-import mathjax from "@/mathjax";
+import { onViewMounted } from "@/functions";
 
-onMounted(() => mathjax.render());
+onMounted(() => onViewMounted());
 
 const findAllSolutions = ref(false);
 const fugitiveTimes = ref("1, 2, 5, 10");

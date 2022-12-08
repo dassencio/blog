@@ -598,3 +598,10 @@
 
   <p>Your server is now ready to be used. Have fun with it! :-)</p>
 </template>
+
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { onViewMounted } from "@/functions";
+
+onMounted(() => onViewMounted());
+</script>

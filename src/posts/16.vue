@@ -32,3 +32,10 @@
 
   <CodeBlock code="convert -resize 50% <input-file.jpg> <output-file.jpg>" />
 </template>
+
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { onViewMounted } from "@/functions";
+
+onMounted(() => onViewMounted());
+</script>

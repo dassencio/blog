@@ -144,12 +144,12 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
-import mathjax from "@/mathjax";
+import { onViewMounted } from "@/functions";
 import chargesOnRegularPolygon from "@/assets/images/charges-on-regular-polygon.svg";
 import chargesOnRegularPolygonRotationA from "@/assets/images/charges-on-regular-polygon-rotation-a.svg";
 import chargesOnRegularPolygonRotationB from "@/assets/images/charges-on-regular-polygon-rotation-b.svg";
 
-onMounted(() => mathjax.render());
+onMounted(() => onViewMounted());
 </script>
 
 <style scoped lang="scss">

@@ -33,3 +33,10 @@
     concatenating the intermediate files you generated into a final document.
   </p>
 </template>
+
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { onViewMounted } from "@/functions";
+
+onMounted(() => onViewMounted());
+</script>

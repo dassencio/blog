@@ -196,11 +196,11 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
-import mathjax from "@/mathjax";
+import { onViewMounted } from "@/functions";
 import circularMotion from "@/assets/images/circular-motion.svg";
 import circularMotionAV from "@/assets/images/circular-motion-a-v.svg";
 
-onMounted(() => mathjax.render());
+onMounted(() => onViewMounted());
 </script>
 
 <style scoped lang="scss">

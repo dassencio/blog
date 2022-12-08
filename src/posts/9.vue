@@ -171,13 +171,13 @@
 
 <script setup lang="ts">
 import { onMounted } from "vue";
-import mathjax from "@/mathjax";
+import { onViewMounted } from "@/functions";
 import carFrictionForces from "@/assets/images/car-back-friction-forces.svg";
 import carTravelingAlongArc from "@/assets/images/car-traveling-along-arc.svg";
 import circularMotion from "@/assets/images/circular-motion.svg";
 import washingMachineForces from "@/assets/images/washing-machine-forces.svg";
 
-onMounted(() => mathjax.render());
+onMounted(() => onViewMounted());
 </script>
 
 <style scoped lang="scss">
