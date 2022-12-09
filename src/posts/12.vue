@@ -7,7 +7,7 @@
     field $\Vec{E}$ produced by these charges at the point $O$?
   </p>
 
-  <BaseFigure
+  <FigureBlock
     :figureNumber="1"
     description="Regular pentagon with charges placed at each of its vertices.
                  In the figure, $\theta = 2\pi / 5$. For a regular  polygon with
@@ -18,7 +18,7 @@
       alt="Charges placed at vertices of a regular polygon"
       :src="chargesOnRegularPolygon"
     />
-  </BaseFigure>
+  </FigureBlock>
 
   <p>
     If your strategy for solving a problem of this kind is to compute $\Vec{E}$
@@ -33,7 +33,7 @@
     <FigureLink :figureNumber="2">figure 2a</FigureLink>.
   </p>
 
-  <BaseFigure
+  <FigureBlock
     :figureNumber="2"
     description="Rotating a pentagon by $\theta = 2\pi / 5$ around its center
                  point in the counterclockwise (or clockwise) direction produces
@@ -55,7 +55,7 @@
         :src="chargesOnRegularPolygonRotationB"
       />
     </BaseSubfigure>
-  </BaseFigure>
+  </FigureBlock>
 
   <p>
     If we now rotate the polygon by $\theta = 2\pi/N$ clockwise or

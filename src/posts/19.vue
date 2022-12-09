@@ -168,7 +168,7 @@
     $N = 365$.
   </p>
 
-  <BaseFigure
+  <FigureBlock
     :figureNumber="1"
     description="Birthday paradox: collision probability $P(n)$ versus number
                  $n$ of elements randomly selected from of a set
@@ -177,7 +177,7 @@
                  $P(n)$."
   >
     <FlotChart class="figure-1" :data="data" :options="options" />
-  </BaseFigure>
+  </FigureBlock>
 
   <p>
     Also interestingly, we can expect a collision with $99\%$ probability if we

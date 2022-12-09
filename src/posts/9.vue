@@ -17,7 +17,7 @@
     which cause the object to move along a circular path.
   </p>
 
-  <BaseFigure
+  <FigureBlock
     :figureNumber="1"
     description="An object traveling along a circle of radius $r$ with constant
                  angular velocity $\omega$."
@@ -27,7 +27,7 @@
       alt="Circular motion"
       :src="circularMotion"
     />
-  </BaseFigure>
+  </FigureBlock>
 
   <p>
     In the <RouterLink :to="{ name: '8' }">kinematic description</RouterLink>,
@@ -78,7 +78,7 @@
     "compressed against" the walls of the washing machine, right?
   </p>
 
-  <BaseFigure
+  <FigureBlock
     :figureNumber="2"
     description='Washing machine spinning with constant angular velocity
                  $\omega$. There is no centrifugal force acting on each set of
@@ -94,7 +94,7 @@
       alt="Spinning washing machine"
       :src="washingMachineForces"
     />
-  </BaseFigure>
+  </FigureBlock>
 
   <p>
     One could think: "Well, there is clearly some kind of centrifugal force
@@ -144,7 +144,7 @@
     centripetal force the car needs to remain on the road.
   </p>
 
-  <BaseFigure
+  <FigureBlock
     :figureNumber="3"
     description="Car traveling along a circular arc. Figure (a) shows the
                  net force $\Vec{F}_{\textrm{cp}}$ acting on the car (the
@@ -166,7 +166,7 @@
         :src="carFrictionForces"
       />
     </BaseSubfigure>
-  </BaseFigure>
+  </FigureBlock>
 </template>
 
 <script setup lang="ts">

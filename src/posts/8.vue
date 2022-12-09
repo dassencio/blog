@@ -15,7 +15,7 @@
     (r, 0)$ at $t = 0$.
   </p>
 
-  <BaseFigure
+  <FigureBlock
     :figureNumber="1"
     description="An object traveling along a circle of radius $r$ with constant
                  angular velocity $\omega$."
@@ -25,7 +25,7 @@
       alt="Circular motion"
       :src="circularMotion"
     />
-  </BaseFigure>
+  </FigureBlock>
 
   <p>The equations of motion of the object are given by:</p>
 
@@ -84,7 +84,7 @@
     velocities and accelerations at different positions along the circular path:
   </p>
 
-  <BaseFigure
+  <FigureBlock
     :figureNumber="2"
     description="Accelerations (blue) and velocities (red) at $\theta= 0,
                  \pi/2, \pi$ and $3\pi/2$. Notice how the acceleration always
@@ -96,7 +96,7 @@
       alt="Circular motion: a and v at different values of theta"
       :src="circularMotionAV"
     />
-  </BaseFigure>
+  </FigureBlock>
 
   <p>
     Since $\Vec{x}(t)$ always points away from the center $O$ of the circle,
