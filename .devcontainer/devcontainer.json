@@ -25,5 +25,5 @@
     "editor.formatOnType": true,
     "editor.rulers": [80]
   },
-  "postCreateCommand": "npm install"
+  "postCreateCommand": "npm install && node node_modules/puppeteer/install.js"
 }
