@@ -1,0 +1,160 @@
+#!/usr/bin/env node
+
+/**
+ * This script takes screenshots of the development and production versions of a
+ * given page and compares them pixel by pixel. If the pages differ, the script
+ * exits with a non-zero status code and outputs a diff image.
+ *
+ * Usage:
+ *
+ *  ./comparePages <target-path> <viewport-width>
+ *
+ * Example:
+ *
+ *  ./comparePages 17 800
+ */
+
+const childProcess = require("child_process");
+const colors = require("colors");
+const fs = require("fs");
+const pixelmatch = require("pixelmatch");
+const pngJs = require("pngjs");
+const puppeteer = require("puppeteer");
+const sharp = require("sharp");
+
+const devServerPort = 8080;
+const devServerRoot = `http://localhost:${devServerPort}`;
+const devServerStartTime = 2000;
+const prodServerRoot = "https://dassencio.org";
+
+colors.enable();
+
+function logError(error) {
+  console.error(error.red);
+  process.exit(1);
+}
+
+function logInfo(message) {
+  console.info(message);
+}
+
+function logSuccess(message) {
+  console.log(message.green);
+}
+
+async function startDevelopmentServer() {
+  const devServer = childProcess.spawn(
+    "npm",
+    ["run", "dev", "--", "--port", devServerPort],
+    { detached: true }
+  );
+  devServer.on("error", (error) => {
+    if (error) {
+      logError("Could not start development server.");
+    }
+  });
+  logInfo(`Started development server with PID ${devServer.pid}.`);
+
+  const stopDevelopmentServer = () => process.kill(-devServer.pid);
+
+  process.on("exit", stopDevelopmentServer);
+  process.on("SIGTERM", stopDevelopmentServer);
+  process.on("SIGINT", stopDevelopmentServer);
+
+  // Give the development server a bit of time to start.
+  await new Promise((resolve) => setTimeout(resolve, devServerStartTime));
+
+  return devServer;
+}
+
+async function captureScreenshot(url, viewportWidth) {
+  logInfo(`Capturing screenshot of '${url}'...`);
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  // The viewport height plays no role since a full-page screenshot is taken.
+  await page.setViewport({ width: viewportWidth, height: 1000 });
+  await page.goto(url, { waitUntil: "networkidle0" });
+  const screenshotBuffer = await page.screenshot({ fullPage: true });
+  await browser.close();
+  logInfo(`Capturing screenshot of '${url}'... DONE`);
+  return sharp(screenshotBuffer);
+}
+
+async function adjustImageDimensions(image, targetWidth, targetHeight) {
+  return image
+    .resize({
+      fit: "contain",
+      height: targetHeight,
+      position: "left top",
+      width: targetWidth,
+    })
+    .raw()
+    .toBuffer();
+}
+
+async function compareScreenshots(
+  devImage,
+  prodImage,
+  targetPath,
+  viewportWidth
+) {
+  const devMetadata = await devImage.metadata();
+  const prodMetadata = await prodImage.metadata();
+
+  const maxHeight = Math.max(devMetadata.height, prodMetadata.height);
+  const maxWidth = Math.max(devMetadata.width, prodMetadata.width);
+
+  const diffImage = new pngJs.PNG({
+    width: maxWidth,
+    height: maxHeight,
+  });
+
+  logInfo("Comparing page screenshots...");
+
+  const numDifferentPixels = pixelmatch(
+    await adjustImageDimensions(devImage, maxWidth, maxHeight),
+    await adjustImageDimensions(prodImage, maxWidth, maxHeight),
+    diffImage.data,
+    maxWidth,
+    maxHeight,
+    {
+      includeAA: true,
+      alpha: 0.2,
+      diffColor: [255, 0, 0],
+      threshold: 0,
+    }
+  );
+
+  const outputFileDiff = `diff-${targetPath}-${viewportWidth}.png`;
+
+  if (numDifferentPixels > 0) {
+    fs.writeFileSync(outputFileDiff, pngJs.PNG.sync.write(diffImage));
+    logError(`Pages screenshots differ. See '${outputFileDiff}'.`);
+  }
+
+  logSuccess("Page screenshots are identical.");
+}
+
+async function main(targetPath, viewportWidth) {
+  await startDevelopmentServer();
+
+  logInfo(`Selected viewport width: ${viewportWidth}.`);
+
+  const [devImage, prodImage] = await Promise.all([
+    captureScreenshot(`${devServerRoot}/${targetPath}`, viewportWidth),
+    captureScreenshot(`${prodServerRoot}/${targetPath}`, viewportWidth),
+  ]);
+
+  await compareScreenshots(devImage, prodImage, targetPath, viewportWidth);
+
+  process.exit();
+}
+
+if (process.argv.length < 4) {
+  logError("Usage: ./comparePages <target-path> <viewport-dimension>");
+}
+
+const targetPath = process.argv[2];
+const viewportWidth = parseInt(process.argv[3]);
+
+main(targetPath, viewportWidth);
