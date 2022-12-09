@@ -19,8 +19,8 @@
 
   <FigureBlock
     :figureNumber="1"
-    description="An object traveling along a circle of radius $r$ with constant
-                 angular velocity $\omega$."
+    caption="An object traveling along a circle of radius $r$ with constant
+             angular velocity $\omega$."
   >
     <ResponsiveImage
       class="figure-1"
@@ -80,14 +80,13 @@
 
   <FigureBlock
     :figureNumber="2"
-    description='Washing machine spinning with constant angular velocity
-                 $\omega$. There is no centrifugal force acting on each set of
-                 clothes (shown in colors in the figure). Instead, the forces
-                 which keep the clothes traveling along a circle point
-                 to the center of the machine (these forces are labeled
-                 $\Vec{N}_r$, $\Vec{N}_g$ and $\Vec{N}_b$ in the
-                 figure, with subscripts $r$, $g$ and $b$ standing for "red",
-                 "green" and "blue" respectively).'
+    caption='Washing machine spinning with constant angular velocity $\omega$.
+             There is no centrifugal force acting on each set of clothes (shown
+             in colors in the figure). Instead, the forces which keep the
+             clothes traveling along a circle point to the center of the machine
+             (these forces are labeled $\Vec{N}_r$, $\Vec{N}_g$ and $\Vec{N}_b$
+             in the figure, with subscripts $r$, $g$ and $b$ standing for "red", 
+             "green" and "blue" respectively).'
   >
     <ResponsiveImage
       class="figure-2"
@@ -146,11 +145,11 @@
 
   <FigureBlock
     :figureNumber="3"
-    description="Car traveling along a circular arc. Figure (a) shows the
-                 net force $\Vec{F}_{\textrm{cp}}$ acting on the car (the
-                 centripetal force). Figure (b) shows friction forces acting on
-                 the tires of the car, the sum of which yield the centripetal
-                 force $\Vec{F}_{\textrm{cp}}$."
+    caption="Car traveling along a circular arc. Figure (a) shows the net force
+             $\Vec{F}_{\textrm{cp}}$ acting on the car (the centripetal force).
+             Figure (b) shows friction forces acting on the tires of the car,
+             the sum of which yield the centripetal force
+             $\Vec{F}_{\textrm{cp}}$."
   >
     <BaseSubfigure label="(a)">
       <ResponsiveImage

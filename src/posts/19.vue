@@ -170,11 +170,10 @@
 
   <FigureBlock
     :figureNumber="1"
-    description="Birthday paradox: collision probability $P(n)$ versus number
-                 $n$ of elements randomly selected from of a set
-                 $Y = \{1,2,\ldots,365\}$ representing the days of the year.
-                 $Q(n) = 1 - e^{-n(n-1)/(2N)}$ is a lower bound estimate for
-                 $P(n)$."
+    caption="Birthday paradox: collision probability $P(n)$ versus number $n$ of
+             elements randomly selected from of a set $Y = \{1,2,\ldots,365\}$
+             representing the days of the year. $Q(n) = 1 - e^{-n(n-1)/(2N)}$ is
+             a lower bound estimate for $P(n)$."
   >
     <FlotChart class="figure-1" :data="data" :options="options" />
   </FigureBlock>

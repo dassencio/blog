@@ -17,8 +17,8 @@
 
   <FigureBlock
     :figureNumber="1"
-    description="An object traveling along a circle of radius $r$ with constant
-                 angular velocity $\omega$."
+    caption="An object traveling along a circle of radius $r$ with constant
+             angular velocity $\omega$."
   >
     <ResponsiveImage
       class="figure-1"
@@ -86,10 +86,10 @@
 
   <FigureBlock
     :figureNumber="2"
-    description="Accelerations (blue) and velocities (red) at $\theta= 0,
-                 \pi/2, \pi$ and $3\pi/2$. Notice how the acceleration always
-                 points to the center of the circle while the velocity is always
-                 tangential to it."
+    caption="Accelerations (blue) and velocities (red) at $\theta= 0, \pi/2,
+             \pi$ and $3\pi/2$. Notice how the acceleration always points to the
+             center of the circle while the velocity is always tangential to
+             it."
   >
     <ResponsiveImage
       class="figure-2"

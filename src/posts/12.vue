@@ -9,9 +9,9 @@
 
   <FigureBlock
     :figureNumber="1"
-    description="Regular pentagon with charges placed at each of its vertices.
-                 In the figure, $\theta = 2\pi / 5$. For a regular  polygon with
-                 $N$ sides, $\theta = 2\pi / N$."
+    caption="Regular pentagon with charges placed at each of its vertices. In
+             the figure, $\theta = 2\pi / 5$. For a regular  polygon with $N$
+             sides, $\theta = 2\pi / N$."
   >
     <ResponsiveImage
       class="figure-1"
@@ -35,11 +35,11 @@
 
   <FigureBlock
     :figureNumber="2"
-    description="Rotating a pentagon by $\theta = 2\pi / 5$ around its center
-                 point in the counterclockwise (or clockwise) direction produces
-                 the same charge configuration (b) as we initially had in (a).
-                 In general, this is true if one rotates a regular polygon with
-                 $N$ sides by $\theta = 2\pi/N$ around its center point."
+    caption="Rotating a pentagon by $\theta = 2\pi / 5$ around its center point
+             in the counterclockwise (or clockwise) direction produces the same
+             charge configuration (b) as we initially had in (a). In general,
+             this is true if one rotates a regular polygon with $N$ sides by
+             $\theta = 2\pi/N$ around its center point."
   >
     <BaseSubfigure label="(a)">
       <ResponsiveImage
