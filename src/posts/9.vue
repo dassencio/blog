@@ -2,8 +2,8 @@
   <p>
     Consider an object traveling along a circle of radius $r$ on the $(x,y)$
     plane with constant angular velocity $\omega$ as shown in
-    <a href="#fig_1">figure 1</a>. The circle is centered at the origin $O$ of
-    the plane.
+    <FigureLink :figureNumber="1">figure 1</FigureLink>. The circle is centered
+    at the origin $O$ of the plane.
   </p>
 
   <p>
@@ -18,9 +18,9 @@
   </p>
 
   <BaseFigure
+    :figureNumber="1"
     description="An object traveling along a circle of radius $r$ with constant
                  angular velocity $\omega$."
-    :number="1"
   >
     <ResponsiveImage
       class="figure-1"
@@ -41,8 +41,8 @@
   <p>
     where $v = \omega r$ is the magnitude of the velocity. With $\Vec{x}(t) =
     (x(t), y(t))$ being the position vector of the object at time $t$ (see
-    <a href="#fig_1">figure 1</a>), the acceleration $\Vec{a}(t)$ of the object
-    satisfies:
+    <FigureLink :figureNumber="1">figure 1</FigureLink>), the acceleration
+    $\Vec{a}(t)$ of the object satisfies:
   </p>
 
   <EquationBlock> \Vec{a}(t) = -\omega^2 \Vec{x}(t) </EquationBlock>
@@ -74,11 +74,12 @@
     Let's now consider a situation where the above applies. Imagine you're
     washing your clothes in your washing machine, and that its interior is a
     cylindrical body of radius $r$ spinning very fast as shown in
-    <a href="#fig_2">figure 2</a>. The clothes seem to be "compressed against"
-    the walls of the washing machine, right?
+    <FigureLink :figureNumber="2">figure 2</FigureLink>. The clothes seem to be
+    "compressed against" the walls of the washing machine, right?
   </p>
 
   <BaseFigure
+    :figureNumber="2"
     description='Washing machine spinning with constant angular velocity
                  $\omega$. There is no centrifugal force acting on each set of
                  clothes (shown in colors in the figure). Instead, the forces
@@ -87,7 +88,6 @@
                  $\Vec{N}_r$, $\Vec{N}_g$ and $\Vec{N}_b$ in the
                  figure, with subscripts $r$, $g$ and $b$ standing for "red",
                  "green" and "blue" respectively).'
-    :number="2"
   >
     <ResponsiveImage
       class="figure-2"
@@ -132,25 +132,25 @@
     Another interesting example is a car making a turn. Consider, for instance,
     a car traveling along a circular arc of radius $r$ with constant speed $v$
     as shown in
-    <a href="#fig_3">figure 3</a>. The net force acting on the car must point to
-    the center of the circle which contains the arc the car is traveling on. But
-    where is this force coming from? From the friction with the ground! The
-    friction forces between the tires and the ground point to the left of the
-    car, toward the center of the circle, and when summed, yield the centripetal
-    force $\Vec{F}_{\textrm{cp}}$ ("cp" here stands for "centripetal") which
-    keeps the car on the arc. This is the reason why icy roads are very
-    dangerous: the tires do not properly adhere to the ground and therefore the
-    friction forces are not strong enough to act as the centripetal force the
-    car needs to remain on the road.
+    <FigureLink :figureNumber="3">figure 3</FigureLink>. The net force acting on
+    the car must point to the center of the circle which contains the arc the
+    car is traveling on. But where is this force coming from? From the friction
+    with the ground! The friction forces between the tires and the ground point
+    to the left of the car, toward the center of the circle, and when summed,
+    yield the centripetal force $\Vec{F}_{\textrm{cp}}$ ("cp" here stands for
+    "centripetal") which keeps the car on the arc. This is the reason why icy
+    roads are very dangerous: the tires do not properly adhere to the ground and
+    therefore the friction forces are not strong enough to act as the
+    centripetal force the car needs to remain on the road.
   </p>
 
   <BaseFigure
+    :figureNumber="3"
     description="Car traveling along a circular arc. Figure (a) shows the
                  net force $\Vec{F}_{\textrm{cp}}$ acting on the car (the
                  centripetal force). Figure (b) shows friction forces acting on
                  the tires of the car, the sum of which yield the centripetal
                  force $\Vec{F}_{\textrm{cp}}$."
-    :number="3"
   >
     <BaseSubfigure label="(a)">
       <ResponsiveImage

@@ -1,10 +1,10 @@
 <template>
   <p>
     Consider an object traveling along a circle of radius $r$ on the $(x,y)$
-    plane as shown in <a href="#fig_1">figure 1</a>. The circle is centered at
-    the origin $O$ of the plane. The object travels with constant angular
-    velocity $\omega$, meaning the angle $\theta(t)$ formed by its path with the
-    positive $x$-axis at time $t$ is given by:
+    plane as shown in <FigureLink :figureNumber="1">figure 1</FigureLink>. The
+    circle is centered at the origin $O$ of the plane. The object travels with
+    constant angular velocity $\omega$, meaning the angle $\theta(t)$ formed by
+    its path with the positive $x$-axis at time $t$ is given by:
   </p>
 
   <EquationBlock> \theta(t) = \theta_0 + \omega t </EquationBlock>
@@ -16,9 +16,9 @@
   </p>
 
   <BaseFigure
+    :figureNumber="1"
     description="An object traveling along a circle of radius $r$ with constant
                  angular velocity $\omega$."
-    :number="1"
   >
     <ResponsiveImage
       class="figure-1"
@@ -59,7 +59,7 @@
   <p>
     Here is where the interesting physics starts. Let $\Vec{x}(t)$ be the
     position vector connecting the origin $O$ to the object as in
-    <a href="#fig_1">figure 1</a>:
+    <FigureLink :figureNumber="1">figure 1</FigureLink>:
   </p>
 
   <EquationBlock>
@@ -80,16 +80,16 @@
   </EquationBlock>
 
   <p>
-    <a href="#fig_2">Figure 2</a> visually depicts velocities and accelerations
-    at different positions along the circular path:
+    <FigureLink :figureNumber="2">Figure 2</FigureLink> visually depicts
+    velocities and accelerations at different positions along the circular path:
   </p>
 
   <BaseFigure
+    :figureNumber="2"
     description="Accelerations (blue) and velocities (red) at $\theta= 0,
                  \pi/2, \pi$ and $3\pi/2$. Notice how the acceleration always
                  points to the center of the circle while the velocity is always
                  tangential to it."
-    :number="2"
   >
     <ResponsiveImage
       class="figure-2"

@@ -3,15 +3,15 @@
     Consider a regular polygon with $N$ sides (and therefore $N$ vertices) such
     that the distance between its center $O$ and each of its vertices is $r$. An
     electric charge $q$ is placed at each vertex of the polygon as shown in
-    <a href="#fig_1">figure 1</a>. What is the electric field $\Vec{E}$ produced
-    by these charges at the point $O$?
+    <FigureLink :figureNumber="1">figure 1</FigureLink>. What is the electric
+    field $\Vec{E}$ produced by these charges at the point $O$?
   </p>
 
   <BaseFigure
+    :figureNumber="1"
     description="Regular pentagon with charges placed at each of its vertices.
                  In the figure, $\theta = 2\pi / 5$. For a regular  polygon with
                  $N$ sides, $\theta = 2\pi / N$."
-    :number="1"
   >
     <ResponsiveImage
       class="figure-1"
@@ -29,16 +29,17 @@
 
   <p>
     To see what I mean by that, consider the electric field produced by the
-    charges at the point $O$ as shown in <a href="#fig_2">figure 2a</a>.
+    charges at the point $O$ as shown in
+    <FigureLink :figureNumber="2">figure 2a</FigureLink>.
   </p>
 
   <BaseFigure
+    :figureNumber="2"
     description="Rotating a pentagon by $\theta = 2\pi / 5$ around its center
                  point in the counterclockwise (or clockwise) direction produces
                  the same charge configuration (b) as we initially had in (a).
                  In general, this is true if one rotates a regular polygon with
                  $N$ sides by $\theta = 2\pi/N$ around its center point."
-    :number="2"
   >
     <BaseSubfigure label="(a)">
       <ResponsiveImage
@@ -78,8 +79,9 @@
   <p>
     In any case, if you're one of those readers I just mentioned, let's compute
     $\Vec{E}$ by hand to bring peace back to your mind. Numbering each charge in
-    a counterclockwise manner as in <a href="#fig_1">figure 1</a>, the $k$-th
-    charge would then be located at:
+    a counterclockwise manner as in
+    <FigureLink :figureNumber="1">figure 1</FigureLink>, the $k$-th charge would
+    then be located at:
   </p>
 
   <EquationBlock>

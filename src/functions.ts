@@ -61,3 +61,17 @@ export function onViewMounted() {
   mathjax.render();
   scrollToTarget();
 }
+
+/**
+ * Converts a figure number into its associated HTML element ID.
+ */
+export function figureId(figureNumber: number) {
+  return `figure${figureNumber}`;
+}
+
+/**
+ * Converts a figure number into its associated HTML anchor link.
+ */
+export function figureLink(figureNumber: number) {
+  return `#${figureId(figureNumber)}`;
+}

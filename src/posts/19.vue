@@ -163,12 +163,13 @@
     In other words, with only $n = 23$ randomly selected people, we can already
     expect a birthday collision with more than $50\%$ probability! If the
     "paradox" in "birthday paradox" was not yet clear to you, it probably is
-    now. <a href="#fig_1">Figure 1</a> shows the probability $P(n)$ of a
-    birthday collision for different values of $n$ and $N = 365$.
+    now. <FigureLink :figureNumber="1">Figure 1</FigureLink> shows the
+    probability $P(n)$ of a birthday collision for different values of $n$ and
+    $N = 365$.
   </p>
 
   <BaseFigure
-    :number="1"
+    :figureNumber="1"
     description="Birthday paradox: collision probability $P(n)$ versus number
                  $n$ of elements randomly selected from of a set
                  $Y = \{1,2,\ldots,365\}$ representing the days of the year.
@@ -222,9 +223,10 @@
 
   <p>
     You can compare how close $Q(n)$ is to $P(n)$ on
-    <a href="#fig_1">figure 1</a>. For any given probability $p$, equation
-    \eqref{eq_approx_p} can be used to compute a value of $n$ for which we will
-    have a collision with probability larger than or equal to $p$:
+    <FigureLink :figureNumber="1">figure 1</FigureLink>. For any given
+    probability $p$, equation \eqref{eq_approx_p} can be used to compute a value
+    of $n$ for which we will have a collision with probability larger than or
+    equal to $p$:
   </p>
 
   <!-- prettier-ignore -->

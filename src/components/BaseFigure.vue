@@ -1,17 +1,19 @@
 <template>
-  <div class="figure" :id="`fig_${number}`">
+  <div class="figure" :id="figureId(figureNumber)">
     <div class="figure__contents"><slot></slot></div>
     <div class="figure__caption">
-      <b class="figure__number">Fig. {{ number }}:</b>
+      <b class="figure__number">Fig. {{ figureNumber }}:</b>
       <div class="figure__description">{{ description }}</div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { figureId } from "@/functions";
+
 defineProps<{
   description: string;
-  number: number;
+  figureNumber: number;
 }>();
 </script>
 
