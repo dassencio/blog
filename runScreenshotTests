@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+#
+# This script runs screenshot tests for all posts.
+#
+# Usage:
+#   ./runScreenshotTests [viewport_widths]
+#
+# If no viewport width is provided, the script will run tests for viewport
+# widths 1024 (large screen) and 320 (mobile phone).
+#
+
+set -e
+
+bold_green='\033[1;32m'
+default_color='\033[0m'
+
+if [ $# -eq 0 ]
+then
+    viewport_widths=(1024 375)
+else
+    viewport_widths=("$@")
+fi
+
+# Test for changes at the root page.
+for viewport_width in "${viewport_widths[@]}"; do
+    ./comparePages "" $viewport_width
+done 
+
+num_posts=$(ls src/posts/*.vue | wc -l)
+
+# Test for changes at each blog post.
+for target_path in $(seq 1 $num_posts)
+do
+    for viewport_width in "${viewport_widths[@]}"; do
+        ./comparePages $target_path $viewport_width
+    done 
+done
+
+echo -e "\n${bold_green}SUCCESS${default_color}: All tests passed!"
