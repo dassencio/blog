@@ -149,8 +149,8 @@
   </TableBlock>
 
   <p>
-    The total number $P_N$ of ways the fugitives can cross the bridge is
-    therefore:
+    The total number $P_N$ of ways the fugitives can cross the bridge is given
+    by:
   </p>
 
   <!-- prettier-ignore -->
