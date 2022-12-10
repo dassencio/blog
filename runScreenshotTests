@@ -14,44 +14,44 @@
 set -e
 
 bold_green() {
-    echo -e "\033[1;32m"${@}"\033[0m"
+  echo -e "\033[1;32m"${@}"\033[0m"
 }
 
 bold_red() {
-    echo -e "\033[1;31m"${@}"\033[0m"
+  echo -e "\033[1;31m"${@}"\033[0m"
 }
 
 magenta() {
-    echo -e "\033[0;35m"${@}"\033[0m"
+  echo -e "\033[0;35m"${@}"\033[0m"
 }
 
 gray() {
-    echo -e "\033[0;37m"${@}"\033[0m"
+  echo -e "\033[0;37m"${@}"\033[0m"
 }
 
 viewport_widths=(375 1024)
 
 if [ $# -eq 0 ]
 then
-    num_posts=$(ls src/posts/*.vue | wc -l)
-    target_paths=("" $(seq 1 $num_posts))
+  num_posts=$(ls src/posts/*.vue | wc -l)
+  target_paths=("" $(seq 1 $num_posts))
 else
-    target_paths=("$@")
+  target_paths=("$@")
 fi
 
 for target_path in "${target_paths[@]}"
 do
-    for viewport_width in "${viewport_widths[@]}"
-    do
-        test_details="Target path: $(magenta $target_path) | "
-        test_details+="Viewport width: $(magenta $viewport_width)"
-        echo -en "[$(gray ....)] ${test_details} "
-        ./comparePages $target_path $viewport_width || {
-            echo -e "\r[$(bold_red FAIL)] ${test_details}"
-            exit 1
-        }
-        echo -e "\r[$(bold_green PASS)] ${test_details}"
-    done 
+  for viewport_width in "${viewport_widths[@]}"
+  do
+    test_details="Target path: $(magenta $target_path) | "
+    test_details+="Viewport width: $(magenta $viewport_width)"
+    echo -en "[$(gray ....)] ${test_details} "
+    ./comparePages $target_path $viewport_width || {
+      echo -e "\r[$(bold_red FAIL)] ${test_details}"
+      exit 1
+    }
+    echo -e "\r[$(bold_green PASS)] ${test_details}"
+  done
 done
 
 echo -e "\n$(bold_green SUCCESS): All tests passed!"
