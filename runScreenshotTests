@@ -34,7 +34,7 @@ viewport_widths=(375 1024)
 if [ $# -eq 0 ]
 then
   num_posts=$(ls src/posts/*.vue | wc -l)
-  target_paths=("" $(seq 1 $num_posts))
+  target_paths=(/ /$(seq -s " /" 1 $num_posts))
 else
   target_paths=("$@")
 fi
