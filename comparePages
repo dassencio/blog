@@ -15,7 +15,6 @@
  */
 
 const childProcess = require("child_process");
-const colors = require("colors");
 const fs = require("fs");
 const pixelmatch = require("pixelmatch");
 const pngJs = require("pngjs");
@@ -27,10 +26,8 @@ const devServerRoot = `http://localhost:${devServerPort}`;
 const devServerStartTime = 2000;
 const prodServerRoot = "https://dassencio.org";
 
-colors.enable();
-
 function logError(error) {
-  console.error(error.red);
+  console.error(error);
   process.exit(1);
 }
 
@@ -38,10 +35,6 @@ function logInfo(message) {
   if (process.env.VERBOSE) {
     console.info(message);
   }
-}
-
-function logSuccess(message) {
-  console.log(message.green);
 }
 
 async function startDevelopmentServer() {
@@ -134,7 +127,7 @@ async function compareScreenshots(
     logError(`Pages screenshots differ. See '${outputFileDiff}'.`);
   }
 
-  logSuccess("Page screenshots are identical.");
+  logInfo("Page screenshots are identical.");
 }
 
 async function main(targetPath, viewportWidth) {
