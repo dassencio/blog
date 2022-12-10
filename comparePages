@@ -9,9 +9,14 @@
  *
  *  ./comparePages <target-path> <viewport-width>
  *
- * Example:
+ * Examples:
  *
- *  ./comparePages 17 800
+ *   ./comparePages /17 800
+ *
+ * The leading slash in the target path is optional, so the following is also
+ * valid:
+ *
+ *   ./comparePages 17 800
  */
 
 const childProcess = require("child_process");
@@ -120,7 +125,8 @@ async function compareScreenshots(
     }
   );
 
-  const outputFileDiff = `diff-${targetPath}-${viewportWidth}.png`;
+  const targetPathSafe = targetPath.replace(/\//, "_");
+  const outputFileDiff = `diff-${targetPathSafe}-${viewportWidth}.png`;
 
   logInfo(`Number of different pixels: ${numDifferentPixels}`);
 
@@ -150,7 +156,7 @@ if (process.argv.length < 4) {
   logError("Usage: ./comparePages <target-path> <viewport-dimension>");
 }
 
-const targetPath = process.argv[2];
+const targetPath = process.argv[2].replace(/^\//, "");
 const viewportWidth = parseInt(process.argv[3]);
 
 if (viewportWidth < 320) {
