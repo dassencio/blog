@@ -157,4 +157,8 @@ if (process.argv.length < 4) {
 const targetPath = process.argv[2];
 const viewportWidth = parseInt(process.argv[3]);
 
+if (viewportWidth < 320) {
+  logError("Viewport width must be at least 320.");
+}
+
 main(targetPath, viewportWidth);
