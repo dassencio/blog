@@ -35,12 +35,10 @@ do
     for viewport_width in "${viewport_widths[@]}"; do
         echo -e "Target path: ${magenta}$target_path${default_color}"
         echo -e "Viewport width: ${magenta}$viewport_width${default_color}"
-        ./comparePages $target_path $viewport_width
-        if [ $? -ne 0 ]
-        then
+        ./comparePages $target_path $viewport_width || {
             echo -e "${fail} Page screenshots are not identical."
             exit 1
-        fi
+        }
         echo -e "${pass} Page screenshots are identical."
     done 
 done
