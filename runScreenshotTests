@@ -13,13 +13,21 @@
 
 set -e
 
-bold_green='\033[1;32m'
-bold_red='\033[1;31m'
-default_color='\033[0m'
-magenta='\033[0;35m'
+bold_green() {
+    echo -e "\033[1;32m"${@}"\033[0m"
+}
 
-fail="[${bold_red}FAIL${default_color}]"
-pass="[${bold_green}PASS${default_color}]"
+bold_red() {
+    echo -e "\033[1;31m"${@}"\033[0m"
+}
+
+magenta() {
+    echo -e "\033[0;35m"${@}"\033[0m"
+}
+
+gray() {
+    echo -e "\033[0;37m"${@}"\033[0m"
+}
 
 viewport_widths=(375 1024)
 
@@ -33,15 +41,17 @@ fi
 
 for target_path in "${target_paths[@]}"
 do
-    for viewport_width in "${viewport_widths[@]}"; do
-        echo -e "Target path: ${magenta}$target_path${default_color}"
-        echo -e "Viewport width: ${magenta}$viewport_width${default_color}"
+    for viewport_width in "${viewport_widths[@]}"
+    do
+        test_details="Target path: $(magenta $target_path) | "
+        test_details+="Viewport width: $(magenta $viewport_width)"
+        echo -en "[$(gray ....)] ${test_details} "
         ./comparePages $target_path $viewport_width || {
-            echo -e "${fail} Page screenshots are not identical."
+            echo -e "\r[$(bold_red FAIL)] ${test_details}"
             exit 1
         }
-        echo -e "${pass} Page screenshots are identical."
+        echo -e "\r[$(bold_green PASS)] ${test_details}"
     done 
 done
 
-echo -e "\n${bold_green}SUCCESS${default_color}: All tests passed!"
+echo -e "\n$(bold_green SUCCESS): All tests passed!"
