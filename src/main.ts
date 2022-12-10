@@ -19,6 +19,7 @@ import ResponsiveForm from "@/components/ResponsiveForm.vue";
 import ResponsiveImage from "@/components/ResponsiveImage.vue";
 import SectionTitle from "@/components/SectionTitle.vue";
 import TableBlock from "@/components/TableBlock.vue";
+import TableLink from "@/components/TableLink.vue";
 import router from "@/router";
 
 const app = createApp(App);
@@ -39,6 +40,7 @@ app.component("ResponsiveForm", ResponsiveForm);
 app.component("ResponsiveImage", ResponsiveImage);
 app.component("SectionTitle", SectionTitle);
 app.component("TableBlock", TableBlock);
+app.component("TableLink", TableLink);
 
 app.use(router);
 app.use(VueHighlightJS);

@@ -75,3 +75,17 @@ export function figureId(figureNumber: number) {
 export function figureLink(figureNumber: number) {
   return `#${figureId(figureNumber)}`;
 }
+
+/**
+ * Converts a table number into its associated HTML element ID.
+ */
+export function tableId(tableNumber: number) {
+  return `table${tableNumber}`;
+}
+
+/**
+ * Converts a table number into its associated HTML anchor link.
+ */
+export function tableLink(tableNumber: number) {
+  return `#${tableId(tableNumber)}`;
+}

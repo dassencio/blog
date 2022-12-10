@@ -14,6 +14,7 @@ import ResponsiveForm from "@/components/ResponsiveForm.vue";
 import ResponsiveImage from "@/components/ResponsiveImage.vue";
 import SectionTitle from "@/components/SectionTitle.vue";
 import TableBlock from "@/components/TableBlock.vue";
+import TableLink from "@/components/TableLink.vue";
 
 declare module "@vue/runtime-core" {
   export interface GlobalComponents {
@@ -33,5 +34,6 @@ declare module "@vue/runtime-core" {
     ResponsiveImage: typeof ResponsiveImage;
     SectionTitle: typeof SectionTitle;
     TableBlock: typeof TableBlock;
+    TableLink: typeof TableLink;
   }
 }
