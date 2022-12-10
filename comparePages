@@ -138,8 +138,6 @@ async function compareScreenshots(
 async function main(targetPath, viewportWidth) {
   await startDevelopmentServer();
 
-  logInfo(`Selected viewport width: ${viewportWidth}.`);
-
   const [devImage, prodImage] = await Promise.all([
     captureScreenshot(`${devServerRoot}/${targetPath}`, viewportWidth),
     captureScreenshot(`${prodServerRoot}/${targetPath}`, viewportWidth),
