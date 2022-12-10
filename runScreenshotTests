@@ -4,10 +4,10 @@
 # This script runs screenshot tests for all posts.
 #
 # Usage:
-#   ./runScreenshotTests [viewport_widths]
+#   ./runScreenshotTests [target_paths]
 #
-# If no viewport width is provided, the script will run tests for viewport
-# widths 1024 (large screen) and 320 (mobile phone).
+# If no target path is provided, the script will run tests for all valid target
+# paths.
 #
 
 set -e
@@ -15,22 +15,17 @@ set -e
 bold_green='\033[1;32m'
 default_color='\033[0m'
 
+viewport_widths=(375 1024)
+
 if [ $# -eq 0 ]
 then
-    viewport_widths=(1024 375)
+    num_posts=$(ls src/posts/*.vue | wc -l)
+    target_paths=("" $(seq 1 $num_posts))
 else
-    viewport_widths=("$@")
+    target_paths=("$@")
 fi
 
-# Test for changes at the root page.
-for viewport_width in "${viewport_widths[@]}"; do
-    ./comparePages "" $viewport_width
-done 
-
-num_posts=$(ls src/posts/*.vue | wc -l)
-
-# Test for changes at each blog post.
-for target_path in $(seq 1 $num_posts)
+for target_path in "${target_paths[@]}"
 do
     for viewport_width in "${viewport_widths[@]}"; do
         ./comparePages $target_path $viewport_width
