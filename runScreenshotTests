@@ -13,7 +13,12 @@
 set -e
 
 bold_green='\033[1;32m'
+bold_red='\033[1;31m'
 default_color='\033[0m'
+magenta='\033[0;35m'
+
+fail="[${bold_red}FAIL${default_color}]"
+pass="[${bold_green}PASS${default_color}]"
 
 viewport_widths=(375 1024)
 
@@ -28,7 +33,15 @@ fi
 for target_path in "${target_paths[@]}"
 do
     for viewport_width in "${viewport_widths[@]}"; do
+        echo -e "Target path: ${magenta}$target_path${default_color}"
+        echo -e "Viewport width: ${magenta}$viewport_width${default_color}"
         ./comparePages $target_path $viewport_width
+        if [ $? -ne 0 ]
+        then
+            echo -e "${fail} Page screenshots are not identical."
+            exit 1
+        fi
+        echo -e "${pass} Page screenshots are identical."
     done 
 done
 
