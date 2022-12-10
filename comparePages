@@ -35,7 +35,9 @@ function logError(error) {
 }
 
 function logInfo(message) {
-  console.info(message);
+  if (process.env.VERBOSE) {
+    console.info(message);
+  }
 }
 
 function logSuccess(message) {
