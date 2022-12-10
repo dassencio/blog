@@ -33,9 +33,7 @@ defineProps<{
     overflow-x: auto;
     overflow-y: hidden;
     text-align: center;
-    :deep(> *) {
-      white-space: nowrap;
-    }
+    white-space: nowrap;
   }
 }
 </style>
