@@ -122,6 +122,8 @@ async function compareScreenshots(
 
   const outputFileDiff = `diff-${targetPath}-${viewportWidth}.png`;
 
+  logInfo(`Number of different pixels: ${numDifferentPixels}`);
+
   if (numDifferentPixels > 0) {
     fs.writeFileSync(outputFileDiff, pngJs.PNG.sync.write(diffImage));
     logError(`Pages screenshots differ. See '${outputFileDiff}'.`);
