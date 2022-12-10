@@ -1,8 +1,8 @@
 <template>
   <div class="figure" :id="figureId(figureNumber)">
     <div class="figure__contents"><slot></slot></div>
-    <CaptionBlock :caption="caption" :figureNumber="figureNumber" />
   </div>
+  <CaptionBlock :caption="caption" :figureNumber="figureNumber" />
 </template>
 
 <script setup lang="ts">
