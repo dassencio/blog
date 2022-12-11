@@ -70,14 +70,19 @@ async function startDevelopmentServer() {
 async function captureScreenshot(url, viewportWidth) {
   logInfo(`Capturing screenshot of '${url}'...`);
   const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-  // The viewport height plays no role since a full-page screenshot is taken.
-  await page.setViewport({ width: viewportWidth, height: 1000 });
-  await page.goto(url, { waitUntil: "networkidle0" });
-  const screenshotBuffer = await page.screenshot({ fullPage: true });
-  await browser.close();
-  logInfo(`Capturing screenshot of '${url}'... DONE`);
-  return sharp(screenshotBuffer);
+  try {
+    const page = await browser.newPage();
+    // The viewport height plays no role since a full-page screenshot is taken.
+    await page.setViewport({ width: viewportWidth, height: 1000 });
+    await page.goto(url, { waitUntil: "networkidle0" });
+    const screenshotBuffer = await page.screenshot({ fullPage: true });
+    logInfo(`Capturing screenshot of '${url}'... DONE`);
+    return sharp(screenshotBuffer);
+  } catch (error) {
+    logError(`Could not capture screenshot of '${url}'.`);
+  } finally {
+    await browser.close();
+  }
 }
 
 async function adjustImageDimensions(image, targetWidth, targetHeight) {
