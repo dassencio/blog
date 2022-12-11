@@ -31,7 +31,6 @@ defineProps<{
     display: inline-grid;
     gap: $view-table-block-vertical-gap $view-table-block-horizontal-gap;
     overflow-x: auto;
-    overflow-y: hidden;
     text-align: center;
     white-space: nowrap;
   }
