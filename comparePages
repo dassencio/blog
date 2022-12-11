@@ -125,8 +125,8 @@ async function compareScreenshots(
     }
   );
 
-  const targetPathSafe = targetPath.replace(/\//, "_");
-  const outputFileDiff = `diff-${targetPathSafe}-${viewportWidth}.png`;
+  const targetPathSafe = targetPath.substring(1).replace(/\//g, "-");
+  const outputFileDiff = `diff_${targetPathSafe}_${viewportWidth}.png`;
 
   logInfo(`Number of different pixels: ${numDifferentPixels}`);
 
@@ -143,8 +143,8 @@ async function main(targetPath, viewportWidth) {
   await startDevelopmentServer();
 
   const [devImage, prodImage] = await Promise.all([
-    captureScreenshot(`${devServerRoot}/${targetPath}`, viewportWidth),
-    captureScreenshot(`${prodServerRoot}/${targetPath}`, viewportWidth),
+    captureScreenshot(`${devServerRoot}${targetPath}`, viewportWidth),
+    captureScreenshot(`${prodServerRoot}${targetPath}`, viewportWidth),
   ]);
 
   await compareScreenshots(devImage, prodImage, targetPath, viewportWidth);
@@ -156,7 +156,7 @@ if (process.argv.length < 4) {
   logError("Usage: ./comparePages <target-path> <viewport-dimension>");
 }
 
-const targetPath = process.argv[2].replace(/^\//, "");
+const targetPath = `/${process.argv[2].replace(/^\//, "")}`;
 const viewportWidth = parseInt(process.argv[3]);
 
 if (viewportWidth < 320) {
