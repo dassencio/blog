@@ -132,7 +132,7 @@ async function compareScreenshots(
 
   if (numDifferentPixels > 0) {
     fs.writeFileSync(outputFileDiff, pngJs.PNG.sync.write(diffImage));
-    logInfo(`Pages screenshots differ. See '${outputFileDiff}'.`);
+    logInfo(`Page screenshots differ. See '${outputFileDiff}'.`);
     process.exit(1);
   }
 
