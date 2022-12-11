@@ -126,7 +126,7 @@ async function compareScreenshots(
   );
 
   const targetPathSafe = targetPath.substring(1).replace(/\//g, "-");
-  const outputFileDiff = `diff_${targetPathSafe}_${viewportWidth}.png`;
+  const outputFileDiff = `diff_${targetPathSafe}_${viewportWidth}_${numDifferentPixels}px.png`;
 
   logInfo(`Number of different pixels: ${numDifferentPixels}`);
 
