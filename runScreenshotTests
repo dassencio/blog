@@ -39,6 +39,8 @@ else
   target_paths=("$@")
 fi
 
+failed_tests=()
+
 for target_path in "${target_paths[@]}"
 do
   for viewport_width in "${viewport_widths[@]}"
@@ -46,12 +48,25 @@ do
     test_details="Target path: $(magenta $target_path) | "
     test_details+="Viewport width: $(magenta $viewport_width)"
     echo -en "[$(gray ....)] ${test_details} "
-    ./comparePages $target_path $viewport_width || {
+    ./comparePages $target_path $viewport_width && {
+      echo -e "\r[$(bold_green PASS)] ${test_details}"
+    } || {
       echo -e "\r[$(bold_red FAIL)] ${test_details}"
-      exit 1
-    }
-    echo -e "\r[$(bold_green PASS)] ${test_details}"
+      failed_tests+=("$test_details")
+    } 
   done
 done
 
-echo -e "\n$(bold_green SUCCESS): All tests passed!"
+num_failed_tests=${#failed_tests[@]}
+
+if [ $num_failed_tests -gt 0 ]
+then
+  echo -e "\nThe following ${num_failed_tests} tests have $(bold_red failed):\n"
+  for failed_test in "${failed_tests[@]}"
+  do
+    echo "  - ${failed_test}"
+  done
+  exit 1
+else
+  echo -e "\n$(bold_green SUCCESS): All tests passed!"
+fi
