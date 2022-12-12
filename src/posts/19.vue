@@ -19,7 +19,13 @@
       >discrete uniform distribution</a
     >
     in which every value has equal probability $1/N$, where $N$ is the number of
-    days in a year.
+    days in a year. This assumption is not true in practice (birthdays in
+    September are, for instance, more common than in January), but still
+    <a
+      href="https://towardsdatascience.com/how-popular-is-your-birthday-91ab133f7fc4"
+      >good enough</a
+    >
+    for this problem.
   </p>
 
   <p>
@@ -56,7 +62,7 @@
   </p>
 
   <EquationBlock>
-    P^{(2)} := P(E_2 \notin \{E_1\}) = \frac{N-1}{N}
+    P^{(2)} \ColonEq P(E_2 \notin \{E_1\}) = \frac{N-1}{N}
   </EquationBlock>
 
   <p>
@@ -67,7 +73,7 @@
   </p>
 
   <EquationBlock>
-    P^{(3)} := P(E_3 \notin \{E_1,E_2\}) = \frac{N-2}{N}
+    P^{(3)} \ColonEq P(E_3 \notin \{E_1,E_2\}) = \frac{N-2}{N}
   </EquationBlock>
 
   <p>
@@ -79,26 +85,22 @@
   </p>
 
   <EquationBlock>
-    P^{(n)} := P(E_n \notin \{E_1,E_2,\ldots,E_{n-1}\}) = \frac{N-(n-1)}{N}
+    P^{(n)} \ColonEq P(E_n \notin \{E_1,E_2,\ldots,E_{n-1}\}) =
+    \frac{N-(n-1)}{N}
   </EquationBlock>
 
   <p>
-    since after the first $(n-1)$ elements are selected, there are still $N -
-    (n-1)$ elements left which were not yet selected (assuming, as mentioned
-    above, that the $(n-1)$ elements previously selected are all distinct from
-    each other).
+    since after the first $(n-1)$ distinct elements are selected, there are
+    still $N - (n-1)$ elements left which were not yet selected.
   </p>
 
   <p>
-    Since element selection events are independent, the probability $P^*(n)$ of
-    selecting $n$ distinct elements is the multiplication of the probabilities
-    $P^{(i)}$ computed above for $i = 2, \ldots, n$. To emphasize this:
-    $P^{(i)}$ is the probability of selecting an $i$-th element which is
-    distinct from the $(i-1)$ previously selected elements assuming they are all
-    distinct from each other:
+    The probability $P^*(n)$ of selecting $n$ elements which are all distinct is
+    the multiplication of the probabilities $P^{(i)}$ computed above for $i = 2,
+    \ldots, n$:
   </p>
 
-  <EquationBlock> P^*(n) = P^{(2)} \cdot P^{(3)} \ldots P^{(n)} </EquationBlock>
+  <EquationBlock> P^*(n) = P^{(2)} P^{(3)} \ldots P^{(n)} </EquationBlock>
 
   <p>
     The probability $P(n)$ of at least two among the $n$ selected elements being
@@ -108,7 +110,7 @@
   <!-- prettier-ignore-->
   <EquationBlock align>
     P(n) &= 1 - P^*(n) \\
-         &= 1 - P^{(2)} \cdot P^{(3)} \ldots P^{(n)} \\
+         &= 1 - P^{(2)} P^{(3)} \ldots P^{(n)} \\
          &= 1 - \left(\frac{N-1}{N}\right)\left(\frac{N-2}{N}\right) \ldots \left(\frac{N-(n-1)}{N}\right) \\
          &= 1 - \prod_{i=1}^{n-1}\left(\frac{N-i}{N}\right) \label{eq_deriv_pn}
   </EquationBlock>
@@ -123,8 +125,7 @@
   <p>and given that:</p>
 
   <EquationBlock>
-    \prod_{i=0}^{n-1}(N-i) = N \cdot (N-1) \ldots (N - n + 1) = \frac{N!}{(N -
-    n)!}
+    \prod_{i=0}^{n-1}(N-i) = N (N-1) \ldots (N - n + 1) = \frac{N!}{(N - n)!}
   </EquationBlock>
 
   <p>we obtain:</p>
@@ -136,11 +137,11 @@
 
   <p>
     The intermediate result obtained in equation \eqref{eq_deriv_pn} has been
-    added to the final result as it makes the computation of $P(n)$ very easy to
-    do on a computer. To clarify, computing $P(n)$ directly using the version
-    involving factorials will not be a trivial task since $N!$ can be an immense
-    number (it will definitely be for $N = 365$) which most computers will not
-    be able to deal with due to the use of
+    added to equation \eqref{eq_pn} as it makes the computation of $P(n)$ very
+    easy to do on a computer. Computing $P(n)$ using the version involving
+    factorials would not be a trivial task since $N!$ can be an immense number
+    (it will definitely be for $N = 365$) which most computers are not able to
+    deal with due to the use of
     <a href="https://en.wikipedia.org/wiki/Floating_point"
       >finite precision arithmetic</a
     >. I will show later how one can use equation \eqref{eq_deriv_pn} to compute
@@ -203,7 +204,7 @@
     where above we used the fact that $1 - x \leq e^{-x}$ for all $x \geq 0$
     (for $x = 0$, both sides are equal to $1$; the derivative of $(1-x)$ is $-1$
     while the derivative of $e^{-x}$ is $-e^{-x} \geq -1$ for all $x \geq 0$, so
-    $(1-x)$ decreases faster than $e^{-x}$ for $x \geq 0$). Then:
+    $(1-x)$ decreases faster than $e^{-x}$ for $x \gt 0$). Then:
   </p>
 
   <EquationBlock>
@@ -221,7 +222,7 @@
   </EquationBlock>
 
   <p>
-    You can compare how close $Q(n)$ is to $P(n)$ on
+    You can compare how close $Q(n)$ is to $P(n)$ in
     <FigureLink :figureNumber="1">figure 1</FigureLink>. For any given
     probability $p$, equation \eqref{eq_approx_p} can be used to compute a value
     of $n$ for which we will have a collision with probability larger than or
@@ -268,7 +269,7 @@
     collision with more than $50\%$ probability when randomly selecting elements
     from a set of size $N$, we must merely select around $1.2\sqrt{N}$ elements.
     The paradox originates from the fact that for large values of $N$,
-    $\sqrt{N}$ is significantly smaller than $N$ itself.
+    $\sqrt{N}$ is significantly smaller than $N$.
   </p>
 
   <SectionTitle>Bonus: Using Octave to compute $P(n)$</SectionTitle>
