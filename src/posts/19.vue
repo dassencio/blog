@@ -224,52 +224,67 @@
   <p>
     You can compare how close $Q(n)$ is to $P(n)$ in
     <FigureLink :figureNumber="1">figure 1</FigureLink>. For any given
-    probability $p$, equation \eqref{eq_approx_p} can be used to compute a value
-    of $n$ for which we will have a collision with probability larger than or
-    equal to $p$:
+    probability $p$, equation \eqref{eq_approx_p} can be used to estimate the
+    smallest value of $n$ for which we will have a collision with probability
+    larger than or equal to $p$, i.e., $P(n) \geq p$. We can do that by solving
+    this same problem for $Q(n)$ instead of $P(n)$ since any value of $n$ such
+    that $Q(n) \geq p$ also satisfies $P(n) \geq p$:
   </p>
 
   <!-- prettier-ignore -->
   <EquationBlock align>
-    p = 1 - e^{-n(n-1)/(2N)} & \Longrightarrow \frac{-n(n-1)}{2N} = \log(1 - p) \\
-                             & \Longrightarrow \frac{n(n-1)}{2N} = \log\left(\frac{1}{1-p}\right) \\
-                             & \Longrightarrow n^2 \geq 2N\log\left(\frac{1}{1-p}\right)
+    Q(n) \geq p 
+      & \Longleftrightarrow 1 - e^{-n(n-1)/(2N)} \geq p \\
+      & \Longleftrightarrow e^{-n(n-1)/(2N)} \leq 1 - p \\
+      & \Longleftrightarrow \frac{-n(n-1)}{2N} \leq \log(1 - p) \\
+      & \Longleftrightarrow n(n-1) \geq 2N\log\left(\frac{1}{1-p}\right) \label{eq_n2}
   </EquationBlock>
+
+  <p>
+    Given that $n(n-1) \geq (n-1)^2$, any value of $n$ for which the following
+    is true:
+  </p>
+
+  <EquationBlock> (n-1)^2 \geq 2N\log\left(\frac{1}{1-p}\right) </EquationBlock>
+
+  <p>will also satisfy:</p>
+
+  <EquationBlock> n(n-1) \geq 2N\log\left(\frac{1}{1-p}\right) </EquationBlock>
 
   <p>Therefore:</p>
 
   <EquationBlock>
-    n \geq \sqrt{2N\log\left(\frac{1}{1-p}\right)} \label{eq_n}
+    (n-1)^2 \geq 2N\log\left(\frac{1}{1-p}\right) \Longrightarrow Q(n) \geq p
+  </EquationBlock>
+
+  <p>This implies that any value of $n$ such that:</p>
+
+  <EquationBlock>
+    n \geq \sqrt{2N\log\left(\frac{1}{1-p}\right)} + 1\label{eq_n}
   </EquationBlock>
 
   <p>
     will yield a collision with probability larger than or equal to $p$. For $N
-    = 365$ and $p = 0.5$, we get $n \approx 22.49$, so indeed for $n = 23$ we
-    will have a collision with at least $50\%$ probability.
+    = 365$ and $p = 0.5$, we get $n \geq 23.45$, which is a good approximation
+    of the correct result.
   </p>
 
   <p>
     The birthday paradox gets even stranger if we take $N = 10^6$ (one million)
-    and $p = 0.5$: for those parameters, $n \approx 1177.4$, so we will have a
-    collision with more than $50\%$ probability with as few as $1180$ elements!
-    In general, to produce a collision with $50\%$ probability for a given $N$,
-    we can select a number of elements given by:
+    and $p = 0.5$: for those parameters, we get $n \geq 1178.4$, so we will
+    already have a collision with at least $50\%$ probability with as few as
+    $1180$ elements! In general, to produce a collision with approximately
+    $50\%$ probability for a given $N$, we can select a number of elements given
+    by:
   </p>
 
-  <EquationBlock> n \geq 1.2\sqrt{N} \label{eq_n_approx} </EquationBlock>
+  <EquationBlock> n \approx 1.2\sqrt{N} \label{eq_n_approx} </EquationBlock>
 
   <p>
-    The equation above is obtained by setting $p = 0.5$ in equation \eqref{eq_n}
-    and rounding up the constant factor. For $N = 365$, equation
-    \eqref{eq_n_approx} yields $n \geq 22.92$ (no surprises here).
-  </p>
-
-  <p>
-    Equation \eqref{eq_n_approx} closes our discussion of the problem. To have a
-    collision with more than $50\%$ probability when randomly selecting elements
-    from a set of size $N$, we must merely select around $1.2\sqrt{N}$ elements.
-    The paradox originates from the fact that for large values of $N$,
-    $\sqrt{N}$ is significantly smaller than $N$.
+    The equation above is obtained by setting $p = 0.5$ in equation
+    \eqref{eq_n}, rounding up the constant factor and assuming that $\sqrt{N}
+    \gg 1$. For $N = 365$, equation \eqref{eq_n_approx} yields $n \approx 22.92$
+    (no surprises here).
   </p>
 
   <SectionTitle>Bonus: Using Octave to compute $P(n)$</SectionTitle>
