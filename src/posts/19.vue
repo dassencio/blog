@@ -171,9 +171,8 @@
 
   <FigureBlock
     :figureNumber="1"
-    caption="Collision probability $P(n)$ versus number $n$ of elements randomly
-             selected from of a set $Y = \{1,2,\ldots,365\}$ representing the
-             days of the year. $Q(n) = 1 - e^{-n(n-1)/(2N)}$ is a lower bound
+    caption="Birthday collision probability $P(n)$ versus number $n$ of randomly
+             selected people. $Q(n) = 1 - e^{-n(n-1)/(2N)}$ is a lower bound
              estimate of $P(n)$."
   >
     <FlotChart class="figure-1" :data="data" :options="options" />
@@ -186,10 +185,10 @@
 
   <EquationBlock> P(57) \approx 0.9901 </EquationBlock>
 
-  <SectionTitle>A lower bound estimate for $P(n)$</SectionTitle>
+  <SectionTitle>A lower bound estimate of $P(n)$</SectionTitle>
 
   <p>
-    We will now compute a simple lower bound estimate for $P(n)$ which is a
+    We will now compute a simple lower bound estimate of $P(n)$ which is a
     useful tool for better understanding the birthday paradox. From equation
     \eqref{eq_pn}, we get:
   </p>
