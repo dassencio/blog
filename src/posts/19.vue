@@ -50,7 +50,7 @@
     will not be considered in this post). Since we're assuming birthdays form a
     discrete uniform distribution, randomly selecting a person is equivalent to
     randomly selecting an element from $Y$. In what follows, the event of
-    selecting a given element more than once will be called a <b>collision</b>.
+    selecting the same element more than once will be called a <b>collision</b>.
   </p>
 
   <p>
@@ -137,11 +137,10 @@
 
   <p>
     The intermediate result obtained in equation \eqref{eq_deriv_pn} has been
-    added to equation \eqref{eq_pn} as it makes the computation of $P(n)$ very
-    easy to do on a computer. Computing $P(n)$ using the version involving
-    factorials would not be a trivial task since $N!$ can be an immense number
-    (it will definitely be for $N = 365$) which most computers are not able to
-    deal with due to the use of
+    kept in equation \eqref{eq_pn} as it makes the computation of $P(n)$ very
+    easy to do on a computer, which is not the case for the expression involving
+    factorials since $N!$, $N^n$ and $(N-n)!$ can be immensely large even for
+    small values of $N$ and therefore not representable in
     <a href="https://en.wikipedia.org/wiki/Floating_point"
       >finite precision arithmetic</a
     >. I will show later how one can use equation \eqref{eq_deriv_pn} to compute
