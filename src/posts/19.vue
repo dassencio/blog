@@ -149,10 +149,10 @@
   </p>
 
   <p>
-    Consider again the original problem: How many people do we need to select so
-    that two or more of them will have the same birthday with probability larger
-    than or equal to $50\%$? Perhaps $365/2 \approx 182$? Or $150$?
-    Surprisingly, the answer is $23$:
+    Using equation \eqref{eq_pn}, we can determine the smallest number of people
+    we need to select so that two or more of them will have the same birthday
+    with probability larger than or equal to $50\%$. Is it perhaps $365/2
+    \approx 182$? Or $150$? Surprisingly, the answer is $23$:
   </p>
 
   <EquationBlock>
