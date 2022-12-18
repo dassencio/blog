@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "eacd6eedf46c9dd596a5f12221ad15b8",
+    component: () => import("@/posts/20.vue"),
+    date: dateToString(2013, 12, 17),
+    id: "20",
+    labels: [PostLabel.Git, PostLabel.Programming],
+    title: "How hard is it to get a Git hash collision?",
+  },
+  {
     compatibilityIndex: "c59e4c7dd11d1d61bf902136ee9cafcb",
     component: () => import("@/posts/19.vue"),
     date: dateToString(2013, 12, 16),
