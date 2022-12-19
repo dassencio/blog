@@ -92,9 +92,9 @@
 
   <p>
     In a more realistic scenario, a large project might have $ 1000$ active
-    developers who commit $10$ commits per day. In those circumstances, it would
-    take approximately $4 \cdot 10^{17}$ years for a collision to happen with
-    $50\%$ probability. For comparison, the
+    developers who generate $10$ commits per day. In those circumstances, it
+    would take approximately $4 \cdot 10^{17}$ years for a collision to happen
+    with $50\%$ probability. For comparison, the
     <a href="https://en.wikipedia.org/wiki/Age_of_the_universe"
       >age of the universe</a
     >
