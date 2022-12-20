@@ -21,6 +21,7 @@ export enum PostLabel {
   SSH = "SSH",
   Statistics = "Statistics",
   Technology = "Technology",
+  USB = "USB",
 }
 
 export interface Post {

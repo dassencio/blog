@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "1363692dafeabeff8e3f975077f92dfe",
+    component: () => import("@/posts/21.vue"),
+    date: dateToString(2013, 12, 19),
+    id: "21",
+    labels: [PostLabel.Linux, PostLabel.USB],
+    title: "Interpreting the output of lsusb",
+  },
+  {
     compatibilityIndex: "eacd6eedf46c9dd596a5f12221ad15b8",
     component: () => import("@/posts/20.vue"),
     date: dateToString(2013, 12, 17),
