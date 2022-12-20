@@ -33,7 +33,7 @@
   <p>
     The output shows a list of USB
     <a href="https://en.wikipedia.org/wiki/Host_controller">host controllers</a>
-    (the lines starting with <code>Bus</code>) and their connected devices on a
+    (the lines starting with <code>:/</code>) and their connected devices on a
     tree structure. This tree describes the actual physical hierarchy of the USB
     devices, i.e., which device is connected to what. At the end of each line,
     the negotiated communication speed of each device is shown in Mbits/s. The
@@ -54,8 +54,8 @@
     >
       ECHI</a
     >
-    driver (<code>Driver=ehci_hcd/3p</code>). Indeed, USB 2.0 ports must be
-    managed by either an EHCI or an
+    driver (<code>Driver=ehci_hcd/3p</code>). USB 2.0 ports are always managed
+    by either an EHCI or an
     <a
       href="https://en.wikipedia.org/wiki/EXtensible_Host_Controller_Interface_%28xHCI%29"
       >xHCI</a
@@ -67,20 +67,26 @@
 
   <p>
     The device numbers are indices which are attributed to USB devices as they
-    are detected, so if you remove a device and reinsert it, it may come up
-    again with a different device number.
+    are detected, so if you disconnect and reconnect a USB device, it may be
+    assigned a different device number.
   </p>
 
   <p>
     Now let's focus on <code>Bus 02</code>. There is a
     <a href="https://en.wikipedia.org/wiki/USB_hub">USB hub</a>
-    connected to its <code>Port 1</code> (<code>Dev 2</code> means "device 2").
-    A second USB hub is attached to <code>Port 6</code> of the first USB hub
-    (device 4). There are several devices attached to this second hub. Although
-    both USB hubs are internal (they are physically inside my laptop), the first
-    hub is connected to the external USB ports (the ones I can directly access)
-    while all ports of the second hub are internal. Indeed, if I connect a USB
-    disk to one of my USB ports, the output of <code>lsusb -t</code> becomes:
+    connected to its <code>Port 1</code> which is assigned device number
+    <code>2</code> (<code>Dev 2</code>). A second USB hub is attached to
+    <code>Port 6</code> of the first USB hub and is assigned device number
+    <code>4</code> (<code>Dev 4</code>). There are several devices attached to
+    this second hub, at <code>Port 1</code>, <code>Port 2</code> and
+    <code>Port 3</code> with assigned device numbers <code>5</code>,
+    <code>6</code> and <code>7</code> respectively (device
+    <code>7</code> appears multiple times because it has multiple functions).
+    Although both USB hubs are internal (they are physically inside my laptop),
+    the first hub is connected to the external USB ports (the ones I can
+    directly access) while all ports of the second hub are internal. Indeed, if
+    I connect a USB disk to one of my USB ports, the output of
+    <code>lsusb -t</code> becomes:
   </p>
 
   <CodeBlock
@@ -106,7 +112,7 @@
     The highlighted line shows a new USB device (a storage device) directly
     connected to the first USB hub of <code>Bus 02</code> (I have tried every
     single USB port in my laptop: the USB disk is always detected in a port from
-    that hub). To find out more about the devices in the second hub, I ran:
+    that hub). To find out more about the devices in this second hub, I ran:
   </p>
 
   <CodeBlock code="lsusb" />
@@ -128,27 +134,32 @@
   />
 
   <p>
-    The highlighted devices are the ones which are connected to the second hub
-    of <code>Bus 02</code>. They are assigned device numbers 5, 6 and 7. Device
-    5 is my laptop's keyboard and device 6 is my touchpad. This makes sense
-    since the
-    <a href="https://en.wikipedia.org/wiki/USB#Device_classes">class</a> of
+    The highlighted devices are the ones we are interested in as they are
+    connected to <code>Bus 02</code> and have device numbers <code>5</code>,
+    <code>6</code> and <code>7</code>. Device <code>5</code> is my laptop's
+    keyboard and device <code>6</code> is my touchpad. This makes sense since
+    the <a href="https://en.wikipedia.org/wiki/USB#Device_classes">class</a> of
     these devices (shown in the output of <code>lsusb -t</code>) is
     <a href="https://en.wikipedia.org/wiki/USB_human_interface_device_class"
       >HID</a
     >
-    (Human Interface Device). Device 7 is my Bluetooth card. As I initially
-    suspected, all ports from the second hub are indeed internal.
+    (Human Interface Device). Device <code>7</code> is my Bluetooth card. This
+    confirms the fact that all ports from the second hub are internal since none
+    of these devices are connected through external USB ports.
   </p>
 
   <p>
-    Strings such as <code>ID 413c:8161</code> indicate that the vendor ID is
-    <code>413c</code> (Dell Computer Corp.) and the product ID is
-    <code>8161</code> (Integrated Keyboard). To clarify, each USB device
-    contains a vendor ID and a product ID (companies
-    <a href="http://www.usb.org/developers/vendor/">pay</a> to acquire vendor
-    IDs from the <a href="http://www.usb.org/about">USB Implementers Forum</a>).
-    A list of vendor IDs with their respective product IDs can be found
+    Strings such as <code>ID 413c:8161</code> indicate the vendor ID
+    (<code>413c</code>) and the product ID (<code>8161</code>) of each device.
+    In this example, vendor ID <code>413c</code> belongs to
+    <code>Dell Computer Corp.</code>, and product ID <code>8161</code> is
+    assigned to Dell's <code>Integrated Keyboard</code>. As you can see above,
+    vendor and product names are also displayed for each device. Companies which
+    manufacture USB devices need to
+    <a href="http://www.usb.org/developers/vendor/">purchase</a> vendor IDs from
+    the <a href="http://www.usb.org/about">USB Implementers Forum</a>, and can
+    assign product IDs to each of their individual products. A list of vendor
+    IDs with their respective product IDs can be found
     <a href="http://www.linux-usb.org/usb.ids">here</a>.
   </p>
 
@@ -159,7 +170,10 @@
 
   <CodeBlock code="lsusb -s <bus>:<device-number>" />
 
-  <p>For example, with <code>bus=2</code> and <code>device=5</code>:</p>
+  <p>
+    As an example, for the device at <code>Bus 02</code> with device number
+    <code>5</code>:
+  </p>
 
   <CodeBlock code="lsusb -s 2:5" />
 
