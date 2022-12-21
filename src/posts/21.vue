@@ -67,7 +67,7 @@
 
   <p>
     The device numbers are indices which are attributed to USB devices as they
-    are detected, so if you disconnect and reconnect a USB device, it may be
+    are detected, so if you disconnect and reconnect a USB device, it will be
     assigned a different device number.
   </p>
 
