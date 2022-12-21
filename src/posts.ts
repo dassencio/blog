@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "5e41315c9dedf9fd1d27776c1df18509",
+    component: () => import("@/posts/22.vue"),
+    date: dateToString(2013, 12, 23),
+    id: "22",
+    labels: [PostLabel.Linux, PostLabel.USB],
+    title: "How to disable all USB devices from a host controller",
+  },
+  {
     compatibilityIndex: "1363692dafeabeff8e3f975077f92dfe",
     component: () => import("@/posts/21.vue"),
     date: dateToString(2013, 12, 19),
