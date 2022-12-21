@@ -33,7 +33,7 @@
   <p>
     The output shows a list of USB
     <a href="https://en.wikipedia.org/wiki/Host_controller">host controllers</a>
-    (the lines starting with <code>:/</code>) and their connected devices on a
+    (the lines starting with <code>/:</code>) and their connected devices on a
     tree structure. This tree describes the actual physical hierarchy of the USB
     devices, i.e., which device is connected to what. At the end of each line,
     the negotiated communication speed of each device is shown in Mbits/s. The
@@ -83,9 +83,9 @@
     <code>6</code> and <code>7</code> respectively (device
     <code>7</code> appears multiple times because it has multiple functions).
     Although both USB hubs are internal (they are physically inside my laptop),
-    the first hub is connected to the external USB ports (the ones I can
-    directly access) while all ports of the second hub are internal. Indeed, if
-    I connect a USB disk to one of my USB ports, the output of
+    the first hub is connected to the external USB ports of my laptop (the ones
+    I can directly access) while all ports of the second hub are internal.
+    Indeed, if I connect a USB disk to one of my USB ports, the output of
     <code>lsusb -t</code> becomes:
   </p>
 
@@ -112,7 +112,7 @@
     The highlighted line shows a new USB device (a storage device) directly
     connected to the first USB hub of <code>Bus 02</code> (I have tried every
     single USB port in my laptop: the USB disk is always detected in a port from
-    that hub). To find out more about the devices in this second hub, I ran:
+    that hub). To find out more about the devices in the second hub, I ran:
   </p>
 
   <CodeBlock code="lsusb" />
@@ -164,7 +164,7 @@
   </p>
 
   <p>
-    If the output from <code>lsusb</code> is too long, you can restrict it to a
+    If the output of <code>lsusb</code> is too long, you can restrict it to a
     specific USB device by running:
   </p>
 
