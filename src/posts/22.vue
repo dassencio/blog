@@ -59,7 +59,7 @@
 
   <p>
     The second USB host controller (<code>Bus 02</code>) manages the external
-    USB ports of my laptop. Before running the command above, I could insert a
+    USB ports of my laptop. Before running the command above, I could connect a
     USB drive or an external optical mouse to one of the ports and see them
     appearing in the device tree of <code>Bus 02</code> as well as in the output
     of <a href="https://man7.org/linux/man-pages/man1/dmesg.1.html">dmesg</a>.
