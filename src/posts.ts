@@ -52,7 +52,7 @@ const posts: Post[] = [
     date: dateToString(2013, 12, 8),
     id: "17",
     labels: [PostLabel.Linux, PostLabel.Shell],
-    title: "How to create a Debian image for an Alix board",
+    title: "Creating a Debian image for an Alix board",
   },
   {
     compatibilityIndex: "0e9aedb78cc73a737ec28a344c2d396e",
@@ -100,7 +100,7 @@ const posts: Post[] = [
     date: dateToString(2013, 11, 24),
     id: "11",
     labels: [PostLabel.Linux, PostLabel.Shell],
-    title: "How to concatenate (join) PDF files on Linux",
+    title: "Concatenating (joining) PDF files on Linux",
   },
   {
     compatibilityIndex: "e15c85cda7ddf7bfc212109fa121a283",
@@ -148,7 +148,7 @@ const posts: Post[] = [
     date: dateToString(2013, 11, 9),
     id: "5",
     labels: [PostLabel.Git, PostLabel.Programming],
-    title: "How to backport changes to renamed files using Git",
+    title: "Backporting changes to renamed files using Git",
   },
   {
     compatibilityIndex: "8f1e844d7916305b8e0b5e85e4073d9b",
