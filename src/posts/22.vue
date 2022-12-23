@@ -1,10 +1,8 @@
 <template>
   <p>
-    To disable all USB devices which are controlled by a specific
-    <a href="https://en.wikipedia.org/wiki/USB">USB</a>
+    To disable the USB devices which are controlled by a certain USB
     <a href="https://en.wikipedia.org/wiki/Host_controller">host controller</a>,
-    you first need to find out which controller you want to act on (I'm assuming
-    there is a specific USB device which you want to disable). For that, open a
+    you first need to determine the bus number assigned to it. For that, open a
     terminal and run:
   </p>
 
@@ -34,8 +32,8 @@
     As I described in a
     <RouterLink :to="{ name: '21' }">previous post</RouterLink>, each line
     starting with <code>/:</code> corresponds to a USB host controller. All
-    devices which branch from a given controller are managed by it. To disable
-    them all, run:
+    devices appearing in the tree associated with a host controller are managed
+    by it. To disable them, run:
   </p>
 
   <CodeBlock code="echo '<bus>-1' | sudo tee /sys/bus/usb/drivers/usb/unbind" />
@@ -71,13 +69,13 @@
     functional.
   </p>
 
-  <p>To reenable all devices managed by a USB host controller, run:</p>
+  <p>To reenable the devices managed by a USB host controller, run:</p>
 
   <CodeBlock code="echo '<bus>-1' | sudo tee /sys/bus/usb/drivers/usb/bind" />
 
   <p>
     The output of <code>lsusb -t</code> should now show the original USB device
-    tree (however, the device numbers may change as they are merely indices
-    given to USB devices as they are detected).
+    tree, but the device numbers will be different since they are merely indices
+    assigned to USB devices as they are detected.
   </p>
 </template>
