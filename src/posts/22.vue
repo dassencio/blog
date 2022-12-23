@@ -60,12 +60,10 @@
   <p>
     The second USB host controller (<code>Bus 02</code>) manages the external
     USB ports of my laptop. Before running the command above, I could insert a
-    USB drive to one of the ports and see it being detected with
-    <a href="https://man7.org/linux/man-pages/man1/dmesg.1.html">dmesg</a>.
-    After running it, the USB drive was no longer detected after being inserted.
-    Also, my external optical mouse was turned off. Interestingly, however, my
-    laptop's keyboard (device <code>5</code> under <code>Bus 02</code>) kept on
-    working, so some devices might still stay functional.
+    USB drive or an external optical mouse to one of the ports and see them
+    appearing in the device tree of <code>Bus 02</code> as well as in the output
+    of <a href="https://man7.org/linux/man-pages/man1/dmesg.1.html">dmesg</a>.
+    After running the command, this no longer happened.
   </p>
 
   <p>To reenable the devices managed by a USB host controller, run:</p>
