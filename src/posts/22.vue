@@ -1,6 +1,6 @@
 <template>
   <p>
-    To disable the USB devices which are controlled by a certain USB
+    To disable the USB devices which are managed by a certain USB
     <a href="https://en.wikipedia.org/wiki/Host_controller">host controller</a>,
     you first need to determine the bus number assigned to it. For that, open a
     terminal and run:
@@ -31,9 +31,9 @@
   <p>
     As I described in a
     <RouterLink :to="{ name: '21' }">previous post</RouterLink>, each line
-    starting with <code>/:</code> corresponds to a USB host controller. All
-    devices appearing in the tree associated with a host controller are managed
-    by it. To disable them, run:
+    starting with <code>/:</code> corresponds to a USB host controller which
+    manages all devices appearing in the tree associated with it. To disable
+    them, run:
   </p>
 
   <CodeBlock code="echo '<bus>-1' | sudo tee /sys/bus/usb/drivers/usb/unbind" />
@@ -62,11 +62,10 @@
     USB ports of my laptop. Before running the command above, I could insert a
     USB drive to one of the ports and see it being detected with
     <a href="https://man7.org/linux/man-pages/man1/dmesg.1.html">dmesg</a>.
-    After running the command above, the USB drive was no longer detected after
-    being inserted. Also, my external optical mouse was turned off.
-    Interestingly, however, my laptop's keyboard (device <code>5</code> under
-    <code>Bus 02</code>) kept on working, so some devices might still stay
-    functional.
+    After running it, the USB drive was no longer detected after being inserted.
+    Also, my external optical mouse was turned off. Interestingly, however, my
+    laptop's keyboard (device <code>5</code> under <code>Bus 02</code>) kept on
+    working, so some devices might still stay functional.
   </p>
 
   <p>To reenable the devices managed by a USB host controller, run:</p>
