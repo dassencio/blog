@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #
-# This script runs screenshot tests to check if pages render identically at 
+# This script runs screenshot tests to check if pages render identically at
 # a local development server and the production server.
 #
 # Usage:
@@ -55,7 +55,7 @@ do
     } || {
       echo -e "\r[$(bold_red FAIL)] ${test_details}"
       failed_tests+=("$test_details")
-    } 
+    }
   done
 done
 
