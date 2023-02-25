@@ -81,7 +81,7 @@
              in colors in the figure). Instead, the forces which keep the
              clothes traveling along a circle point to the center of the machine
              (these forces are labeled $\Vec{N}_r$, $\Vec{N}_g$ and $\Vec{N}_b$
-             in the figure, with subscripts $r$, $g$ and $b$ standing for "red", 
+             in the figure, with subscripts $r$, $g$ and $b$ standing for "red",
              "green" and "blue" respectively).'
   >
     <ResponsiveImage
