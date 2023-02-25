@@ -14,7 +14,6 @@
              sides, $\theta = 2\pi / N$."
   >
     <ResponsiveImage
-      class="figure-1"
       alt="Charges placed at vertices of a regular polygon"
       :src="chargesOnRegularPolygon"
     />
@@ -155,12 +154,8 @@ onMounted(() => onViewMounted());
 </script>
 
 <style scoped lang="scss">
-.figure-1 {
-  height: 14 * $base-length;
-}
 .figure-2a,
 .figure-2b {
-  height: 14 * $base-length;
   padding: 0 (0.5 * $base-length);
 }
 </style>

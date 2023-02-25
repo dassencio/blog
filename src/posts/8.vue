@@ -20,11 +20,7 @@
     caption="An object traveling along a circle of radius $r$ with constant
              angular velocity $\omega$."
   >
-    <ResponsiveImage
-      class="figure-1"
-      alt="Circular motion"
-      :src="circularMotion"
-    />
+    <ResponsiveImage alt="Circular motion" :src="circularMotion" />
   </FigureBlock>
 
   <p>The equations of motion of the object are given by:</p>
@@ -92,7 +88,6 @@
              it."
   >
     <ResponsiveImage
-      class="figure-2"
       alt="Circular motion: a and v at different values of theta"
       :src="circularMotionAV"
     />
@@ -202,10 +197,3 @@ import circularMotionAV from "@/assets/images/circular-motion-a-v.svg";
 
 onMounted(() => onViewMounted());
 </script>
-
-<style scoped lang="scss">
-.figure-1,
-.figure-2 {
-  height: 18.75 * $base-length;
-}
-</style>

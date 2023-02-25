@@ -22,11 +22,7 @@
     caption="An object traveling along a circle of radius $r$ with constant
              angular velocity $\omega$."
   >
-    <ResponsiveImage
-      class="figure-1"
-      alt="Circular motion"
-      :src="circularMotion"
-    />
+    <ResponsiveImage alt="Circular motion" :src="circularMotion" />
   </FigureBlock>
 
   <p>
@@ -89,7 +85,6 @@
              "green" and "blue" respectively).'
   >
     <ResponsiveImage
-      class="figure-2"
       alt="Spinning washing machine"
       :src="washingMachineForces"
     />
@@ -180,18 +175,8 @@ onMounted(() => onViewMounted());
 </script>
 
 <style scoped lang="scss">
-.figure-1 {
-  height: 18.75 * $base-length;
-}
-.figure-2 {
-  height: 16 * $base-length;
-}
-.figure-3a {
-  height: 16 * $base-length;
-  padding: 0 $base-length;
-}
+.figure-3a,
 .figure-3b {
-  height: 11.25 * $base-length;
   padding: 0 $base-length;
 }
 </style>
