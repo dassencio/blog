@@ -5,6 +5,7 @@ export enum PostLabel {
   CompAnalysis = "Complex analysis",
   Compsci = "Computer science",
   Electromagnetism = "Electromagnetism",
+  FluidDynamics = "Fluid dynamics",
   Git = "Git",
   Gravitation = "Gravitation",
   IPv6 = "IPv6",
