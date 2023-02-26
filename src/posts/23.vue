@@ -3,36 +3,37 @@
     In this post, I will compute how much time a given amount of fluid (e.g.
     water) takes to go through a
     <a href="https://en.wikipedia.org/wiki/Funnel">funnel</a>. Certain
-    assumptions about the funnel will be made to make the problem tractable, but
-    while the obtained result will not be valid in general, it will still be a
-    good approximation in a broad range of scenarios.
+    assumptions about the funnel will be made to make the problem solvable
+    analytically, leading to results which will not be valid in general but
+    still accurate in a broad range of scenarios.
   </p>
 
   <p>
-    The funnel is shaped like an "upside down" cone whose tip has been cut (see
+    The funnel is shaped like an "upside down" cone whose tip has been cut off
+    (see
     <FigureLink :figureNumber="1">Figure 1</FigureLink>), plus a short neck with
-    a much smaller diameter than the funnel's mouth. The funnel is initially
+    a small diameter compared to the funnel's mouth. The funnel is initially
     completely filled with an incompressible fluid, and the flow is assumed to
     be <a href="https://en.wikipedia.org/wiki/Inviscid_flow">inviscid</a>, i.e.,
-    we will treat the fluid as having zero viscosity.
+    the fluid can be treated as having zero viscosity.
   </p>
 
   <FigureBlock
     :figureNumber="1"
     caption="A funnel with conical shape. The funnel has mouth radius $b$ and
-             neck radius $a$. The initial fluid height is $h_0$, which is the
-             height of the funnel itself. At time $t$, the height of the fluid
-             is $h(t)$ and the radius of the fluid's surface is $r(t)$."
+             neck radius $a \ll b$. The initial fluid height is $h_0$, which is
+             the height of the funnel itself. At time $t$, the height of the
+             fluid is $h(t)$ and the radius of the fluid's surface is $r(t)$."
   >
     <ResponsiveImage alt="Funnel" :src="fluidFunnel" />
   </FigureBlock>
 
   <p>
-    As the fluid flows through the funnel, its top surface will move down very
-    slowly. This will remain valid for as long as $h(t)$ is not too small, but
-    will no longer be true as $h(t) \rightarrow 0$. Nonetheless, since $h(t)$
-    becomes small only towards the end of the flow, we will assume its top
-    surface moves down slowly for the entire duration of the flow. This will
+    As the fluid starts flowing through the funnel, its top surface will move
+    down slowly. This will remain true for as long as $h(t)$ is not too small,
+    but will no longer be the case as $h(t) \rightarrow 0$. Nonetheless, since
+    $h(t)$ becomes small only towards the very end of the flow, it is safe to
+    assume it decreases slowly for the entire duration of the flow. This will
     make the problem solvable in the same way as is done for the "orifice in a
     large tank" problem, with the neck opening playing the role of the orifice.
   </p>
@@ -53,13 +54,13 @@
 
   <p>
     where $\rho$ is the density of the fluid, $v_A(t)$ is the fluid speed at
-    $A$, $p_A$ is the pressure at $A$ and $h_A(t)$ is the height of point $A$.
-    All quantities associated with $B$ are equivalently defined. Since both
-    points $A$ and $B$ are in direct contact with the surrounding air, $p_A =
-    p_B = p_0$, where $p_0$ is the atmospheric pressure. Also, setting $h_B(t) =
-    0$ gives us $h_A(t) = h(t)$. Finally, since we assume the surface of the
-    fluid moves down slowly, we can take $v_A(t) \approx 0$. Equation
-    \eqref{eq_bern} then becomes:
+    $A$, $p_A$ is the pressure at $A$ and $h_A(t)$ is the height of point $A$
+    (quantities associated with $B$ are equivalently defined). Since both points
+    $A$ and $B$ are in direct contact with the surrounding air, $p_A = p_B =
+    p_0$, where $p_0$ is the atmospheric pressure. Also, setting $h_B(t) = 0$
+    gives us $h_A(t) = h(t)$. Finally, since the surface of the fluid moves down
+    slowly, we can take $v_A(t) \approx 0$. Equation \eqref{eq_bern} then
+    becomes:
   </p>
 
   <EquationBlock>
@@ -86,8 +87,6 @@
     \frac{r(t)}{h(t)} = \frac{b}{h_0} \Longrightarrow r(t) = h(t)\frac{b}{h_0}
   </EquationBlock>
 
-  <p></p>
-
   <p>
     Using the same reasoning, we can treat the funnel as a cone and obtain the
     volume $V(t)$ of fluid it contains at time $t$ as follows:
@@ -99,12 +98,12 @@
   </EquationBlock>
 
   <p>
-    This approximation will be good as long as $r(t) \gg a$. As $h(t)
-    \rightarrow 0$, $r(t) \rightarrow a$ so this approximation becomes poor, but
-    by that time, there will only be a small amount of fluid remaining in the
+    This approximation will be accurate for as long as $r(t) \gg a$. As $h(t)
+    \rightarrow 0$, $r(t) \rightarrow a$ so the approximation becomes poor, but
+    by that time, there will be only a small amount of fluid remaining in the
     funnel, and that small amount will leave the funnel quickly enough to have
     little impact on the overall time taken by all the fluid to go through the
-    funnel.
+    funnel (which is the quantity we ultimately care about).
   </p>
 
   <p>
@@ -119,8 +118,7 @@
 
   <p>
     where $A = \pi a^2$ is the cross sectional area of the funnel's neck. Since
-    this flow rate is the rate at which the fluid leaves the funnel, we have
-    (below the notation $\dot{q}$ is used to represent $dq/dt$):
+    this flow rate is the rate at which the fluid leaves the funnel, we have:
   </p>
 
   <EquationBlock> \dot{V}(t) = -\Phi(t) \label{eq_v_phi} </EquationBlock>
@@ -133,7 +131,7 @@
   </EquationBlock>
 
   <p>
-    Inserting this on equation \eqref{eq_v_phi} and using equation
+    Inserting this into equation \eqref{eq_v_phi} and using equation
     \eqref{eq_flow_rate}, we get:
   </p>
 
@@ -141,7 +139,7 @@
     \pi\left(\frac{b}{h_0}\right)^2 h^2(t) \dot{h}(t) = -\pi a^2 \sqrt{2gh(t)}
   </EquationBlock>
 
-  <p>Cancelling common terms on both sides of the equation above yields:</p>
+  <p>Cancelling common terms on both sides of this equation yields:</p>
 
   <EquationBlock>
     \left(\frac{b}{h_0}\right)^2 h^{3/2}(t) \dot{h}(t) = -a^2 \sqrt{2g}
@@ -185,12 +183,12 @@
 
   <EquationBlock>
     h(t) = h_0\left[ 1 - \frac{5}{2} \left(\frac{a}{b}\right)^2
-    \sqrt{\frac{2g}{h_0}} t \right]^{2/5} \label{eq_h_vs_t}
+    \sqrt{\frac{2g}{h_0}} t \right]^{2/5} \label{eq_h}
   </EquationBlock>
 
   <p>
-    The time $T$ the entire fluid volume takes to go through the funnel is such
-    that $h(T) = 0$, which implies:
+    The time $T$ taken by the entire fluid volume to go through the funnel is
+    such that $h(T) = 0$, which implies:
   </p>
 
   <EquationBlock>
@@ -205,13 +203,11 @@
   </EquationBlock>
 
   <p>
-    Equation \eqref{eq_T} can be used to write equation \eqref{eq_h_vs_t} in a
+    Equation \eqref{eq_T} can be used to write equation \eqref{eq_h} in a
     simpler form:
   </p>
 
-  <EquationBlock>
-    h(t) = h_0\left( 1 - \frac{t}{T} \right)^{2/5}
-  </EquationBlock>
+  <EquationBlock> h(t) = h_0\left(1 - \frac{t}{T} \right)^{2/5} </EquationBlock>
 
   <p>
     <FigureLink :figureNumber="2">Figure 2</FigureLink> shows a graph of
