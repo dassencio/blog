@@ -1,21 +1,22 @@
 <template>
   <p>
-    In this post, I will compute how much time a given amount of fluid (e.g.
-    water) takes to go through a
-    <a href="https://en.wikipedia.org/wiki/Funnel">funnel</a>. Certain
-    assumptions about the funnel will be made to make the problem solvable
-    analytically, leading to results which will not be valid in general but
-    still accurate in a broad range of scenarios.
+    In this post, I will compute how much time a given amount of an
+    incompressible fluid (e.g. water) takes to go through a
+    <a href="https://en.wikipedia.org/wiki/Funnel">funnel</a>. The fluid
+    viscosity is assumed low enough to be negligible (i.e., the flow will be
+    treated as
+    <a href="https://en.wikipedia.org/wiki/Inviscid_flow">inviscid</a>), and
+    certain assumptions about the shape of the funnel will also be made to make
+    the problem solvable analytically, leading to results which will not be
+    valid in general but still accurate in a broad range of scenarios.
   </p>
 
   <p>
-    The funnel is shaped like an "upside down" cone whose tip has been cut off
-    (see
-    <FigureLink :figureNumber="1">Figure 1</FigureLink>), plus a short neck with
-    a small diameter compared to the funnel's mouth. The funnel is initially
-    completely filled with an incompressible fluid, and the flow is assumed to
-    be <a href="https://en.wikipedia.org/wiki/Inviscid_flow">inviscid</a>, i.e.,
-    the fluid can be treated as having zero viscosity.
+    The funnel will be assumed to have the shape of an "upside down" cone whose
+    tip has been cut off (see
+    <FigureLink :figureNumber="1">figure 1</FigureLink>), plus a short neck
+    whose diameter is small compared to the funnel's mouth. It is initially
+    completely filled with fluid.
   </p>
 
   <FigureBlock
@@ -23,7 +24,8 @@
     caption="A funnel with conical shape. The funnel has mouth radius $b$ and
              neck radius $a \ll b$. The initial fluid height is $h_0$, which is
              the height of the funnel itself. At time $t$, the height of the
-             fluid is $h(t)$ and the radius of the fluid's surface is $r(t)$."
+             fluid is $h(t)$ and the radius of the fluid's top surface is
+             $r(t)$."
   >
     <ResponsiveImage alt="Funnel" :src="fluidFunnel" />
   </FigureBlock>
@@ -31,11 +33,10 @@
   <p>
     As the fluid starts flowing through the funnel, its top surface will move
     down slowly. This will remain true for as long as $h(t)$ is not too small,
-    but will no longer be the case as $h(t) \rightarrow 0$. Nonetheless, since
-    $h(t)$ becomes small only towards the very end of the flow, it is safe to
-    assume it decreases slowly for the entire duration of the flow. This will
-    make the problem solvable in the same way as is done for the "orifice in a
-    large tank" problem, with the neck opening playing the role of the orifice.
+    but since $h(t)$ becomes small only towards the very end of the flow, we can
+    safely ignore the downward motion of the fluid's top surface throughout the
+    entire duration of the flow and solve the problem in the same way as is done
+    for an orifice in a large tank.
   </p>
 
   <p>
@@ -58,7 +59,7 @@
     (quantities associated with $B$ are equivalently defined). Since both points
     $A$ and $B$ are in direct contact with the surrounding air, $p_A = p_B =
     p_0$, where $p_0$ is the atmospheric pressure. Also, setting $h_B(t) = 0$
-    gives us $h_A(t) = h(t)$. Finally, since the surface of the fluid moves down
+    gives us $h_A(t) = h(t)$. Finally, since the fluid's top surface moves down
     slowly, we can take $v_A(t) \approx 0$. Equation \eqref{eq_bern} then
     becomes:
   </p>
@@ -79,7 +80,7 @@
   <p>
     Before we proceed, let's obtain a relation between $r(t)$ and $h(t)$. Since
     we assume $a$ to be small ($a \ll r(t)$ and $a \ll b$), the cross section of
-    the cone shown on <FigureLink :figureNumber="1">figure 1</FigureLink> can be
+    the cone shown in <FigureLink :figureNumber="1">figure 1</FigureLink> can be
     treated as a triangle:
   </p>
 
@@ -89,7 +90,7 @@
 
   <p>
     Using the same reasoning, we can treat the funnel as a cone and obtain the
-    volume $V(t)$ of fluid it contains at time $t$ as follows:
+    fluid volume $V(t)$ it holds at time $t$ as follows:
   </p>
 
   <EquationBlock>
@@ -98,12 +99,12 @@
   </EquationBlock>
 
   <p>
-    This approximation will be accurate for as long as $r(t) \gg a$. As $h(t)
-    \rightarrow 0$, $r(t) \rightarrow a$ so the approximation becomes poor, but
-    by that time, there will be only a small amount of fluid remaining in the
-    funnel, and that small amount will leave the funnel quickly enough to have
-    little impact on the overall time taken by all the fluid to go through the
-    funnel (which is the quantity we ultimately care about).
+    As $h(t) \rightarrow 0$, $r(t) \rightarrow a$ and equation \eqref{eq_volume}
+    will no longer be an accurate approximation of the actual fluid volume in
+    the funnel. The small amount of remaining fluid at that time will however
+    leave the funnel quickly enough to have little influence on the overall time
+    taken by the entire fluid volume to go through it, which is the quantity we
+    ultimately care about.
   </p>
 
   <p>
@@ -117,8 +118,9 @@
   </EquationBlock>
 
   <p>
-    where $A = \pi a^2$ is the cross sectional area of the funnel's neck. Since
-    this flow rate is the rate at which the fluid leaves the funnel, we have:
+    where $A = \pi a^2$ is the cross-sectional area of the funnel's neck. Since
+    this flow rate is the rate at which the fluid volume in the funnel
+    decreases, we have:
   </p>
 
   <EquationBlock> \dot{V}(t) = -\Phi(t) \label{eq_v_phi} </EquationBlock>
@@ -220,7 +222,7 @@
 
   <p>
     As the graph on <FigureLink :figureNumber="2">figure 2</FigureLink> shows,
-    the fluid's surface moves down slowly until about $t = 0.95T$, at which
+    the fluid's top surface moves down slowly until about $t = 0.95T$, at which
     point $h(t)$ starts decreasing quickly. From there on, some of our
     assumptions about the nature of the flow will no longer be accurate, but as
     mentioned above, this will not cause a substantial deviation from our
@@ -243,7 +245,7 @@ for (let n = 0; n <= N; ++n) {
   points.push([n * dx, Math.pow(1 - n * dx, 0.4)]);
 }
 
-const data = [{ label: "$h(t)/h_0$", data: points }];
+const data = [{ data: points }];
 
 const options = {
   legend: {
@@ -251,13 +253,13 @@ const options = {
   },
   xaxis: {
     axisLabel: "$t/T$",
-    max: 1.05,
+    max: 1.025,
     min: 0.0,
     ticks: 10,
   },
   yaxis: {
     axisLabel: "$h(t)/h_0$",
-    max: 1.1,
+    max: 1.05,
     min: 0.0,
     ticks: 4,
   },
