@@ -12,11 +12,11 @@
   </p>
 
   <p>
-    The funnel will be assumed to have the shape of an "upside down" cone whose
-    tip has been cut off (see
+    The funnel is assumed to have the shape of an "upside down" cone whose tip
+    has been cut off (see
     <FigureLink :figureNumber="1">figure 1</FigureLink>), plus a short neck
-    whose diameter is small compared to the funnel's mouth. It is initially
-    completely filled with fluid.
+    whose diameter is small compared to the funnel's mouth. The funnel is
+    initially completely filled with fluid.
   </p>
 
   <FigureBlock
@@ -32,11 +32,11 @@
 
   <p>
     As the fluid starts flowing through the funnel, its top surface will move
-    down slowly. This will remain true for as long as $h(t)$ is not too small,
-    but since $h(t)$ becomes small only towards the very end of the flow, we can
-    safely ignore the downward motion of the fluid's top surface throughout the
-    entire duration of the flow and solve the problem in the same way as is done
-    for an orifice in a large tank.
+    down slowly. This will remain true for as long as $h(t)$ is not small
+    compared to $h_0$, but since $h(t)$ becomes small only towards the very end
+    of the flow, we can safely ignore the downward motion of the fluid's top
+    surface throughout the entire duration of the flow and solve the problem in
+    the same way as is done for an orifice in a large tank.
   </p>
 
   <p>
@@ -222,8 +222,8 @@
 
   <p>
     As the graph on <FigureLink :figureNumber="2">figure 2</FigureLink> shows,
-    the fluid's top surface moves down slowly until about $t = 0.95T$, at which
-    point $h(t)$ starts decreasing quickly. From there on, some of our
+    the fluid's top surface moves down slowly until about $t \approx 0.95T$, at
+    which point $h(t)$ starts decreasing quickly. From there on, some of our
     assumptions about the nature of the flow will no longer be accurate, but as
     mentioned above, this will not cause a substantial deviation from our
     computed estimate of $T$.
