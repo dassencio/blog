@@ -73,15 +73,15 @@
   <EquationBlock> v_B(t) = \sqrt{2gh(t)} \label{eq_vB} </EquationBlock>
 
   <p>
-    so the fluid comes out of the funnel with speed $v_B(t) = v(t) =
+    so the fluid comes out of the funnel with speed $v(t) = v_B(t) =
     \sqrt{2gh(t)}$.
   </p>
 
   <p>
-    Before we proceed, let's obtain a relation between $r(t)$ and $h(t)$. Since
-    we assume $a$ to be small ($a \ll r(t)$ and $a \ll b$), the cross section of
-    the cone shown in <FigureLink :figureNumber="1">figure 1</FigureLink> can be
-    treated as a triangle:
+    Let's now obtain a relation between $r(t)$ and $h(t)$. Since we assume $a$
+    to be small ($a \ll r(t)$ and $a \ll b$), the cross section of the cone
+    shown in <FigureLink :figureNumber="1">figure 1</FigureLink> can be treated
+    as a triangle:
   </p>
 
   <EquationBlock>
@@ -104,7 +104,8 @@
     the funnel. The small amount of remaining fluid at that time will however
     leave the funnel quickly enough to have little influence on the overall time
     taken by the entire fluid volume to go through it, which is the quantity we
-    ultimately care about.
+    ultimately care about. In light of that, we will use equation
+    \eqref{eq_volume} to express the fluid volume at all times.
   </p>
 
   <p>
