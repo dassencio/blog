@@ -50,6 +50,8 @@ do
     test_details="Target path: $(magenta $target_path) | "
     test_details+="Viewport width: $(magenta $viewport_width)"
     echo -en "[$(gray ....)] ${test_details} "
+    PUPPETEER_EXECUTABLE_PATH=$(which chromium) \
+    PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     ./comparePages $target_path $viewport_width && {
       echo -e "\r[$(bold_green PASS)] ${test_details}"
     } || {
