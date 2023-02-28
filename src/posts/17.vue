@@ -120,47 +120,59 @@
   </p>
 
   <ListBlock>
-    <ListItem>Select "Install".</ListItem>
-    <ListItem>Select your language.</ListItem>
-    <ListItem>Select your country (for the time zone, locale etc.).</ListItem>
-    <ListItem>
+    <ListBlockItem>Select "Install".</ListBlockItem>
+    <ListBlockItem>Select your language.</ListBlockItem>
+    <ListBlockItem
+      >Select your country (for the time zone, locale etc.).</ListBlockItem
+    >
+    <ListBlockItem>
       If you're prompted for a locale, choose the one which matches your
       country.
-    </ListItem>
-    <ListItem>Choose the keymap of your keyboard.</ListItem>
-    <ListItem>Enter a hostname for your system (e.g. "alix-board").</ListItem>
-    <ListItem>
+    </ListBlockItem>
+    <ListBlockItem>Choose the keymap of your keyboard.</ListBlockItem>
+    <ListBlockItem
+      >Enter a hostname for your system (e.g. "alix-board").</ListBlockItem
+    >
+    <ListBlockItem>
       Enter your domain name (e.g. "lan", or leave it blank if you wish).
-    </ListItem>
-    <ListItem>Set the root password.</ListItem>
-    <ListItem>You must now create a normal user.</ListItem>
-    <ListItem>Choose a username for your user.</ListItem>
-    <ListItem>Choose a password for your user.</ListItem>
-    <ListItem>Partitioning method: Guided - use entire disk.</ListItem>
-    <ListItem>
+    </ListBlockItem>
+    <ListBlockItem>Set the root password.</ListBlockItem>
+    <ListBlockItem>You must now create a normal user.</ListBlockItem>
+    <ListBlockItem>Choose a username for your user.</ListBlockItem>
+    <ListBlockItem>Choose a password for your user.</ListBlockItem>
+    <ListBlockItem
+      >Partitioning method: Guided - use entire disk.</ListBlockItem
+    >
+    <ListBlockItem>
       Select disk to partition: SCSI1 (0,0,0) (sda) 1.0 GB ATA QEMU HARDDISK.
-    </ListItem>
-    <ListItem>Partitioning scheme: All files in one partition.</ListItem>
-    <ListItem>Select "Finish partitioning and write changes to disk".</ListItem>
-    <ListItem>Write the changes to disk? Yes.</ListItem>
-    <ListItem>
+    </ListBlockItem>
+    <ListBlockItem
+      >Partitioning scheme: All files in one partition.</ListBlockItem
+    >
+    <ListBlockItem
+      >Select "Finish partitioning and write changes to disk".</ListBlockItem
+    >
+    <ListBlockItem>Write the changes to disk? Yes.</ListBlockItem>
+    <ListBlockItem>
       The base system will now be installed (this will take a while).
-    </ListItem>
-    <ListItem>Select a country for a mirror (your country?).</ListItem>
-    <ListItem>Debian archive mirror: pick anyone you wish.</ListItem>
-    <ListItem>
+    </ListBlockItem>
+    <ListBlockItem
+      >Select a country for a mirror (your country?).</ListBlockItem
+    >
+    <ListBlockItem>Debian archive mirror: pick anyone you wish.</ListBlockItem>
+    <ListBlockItem>
       HTTP proxy: you probably don't need this (leave it blank).
-    </ListItem>
-    <ListItem>
+    </ListBlockItem>
+    <ListBlockItem>
       Participate in the package usage survey? This is up to you...
-    </ListItem>
-    <ListItem>
+    </ListBlockItem>
+    <ListBlockItem>
       Additional things to install: SSH server and standard system utilities.
-    </ListItem>
-    <ListItem>
+    </ListBlockItem>
+    <ListBlockItem>
       Install the GRUB boot loader to the master boot record? Yes.
-    </ListItem>
-    <ListItem>Now finish the installation.</ListItem>
+    </ListBlockItem>
+    <ListBlockItem>Now finish the installation.</ListBlockItem>
   </ListBlock>
 
   <p>

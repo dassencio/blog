@@ -8,7 +8,7 @@ import FigureLink from "@/components/FigureLink.vue";
 import FlotChart from "@/components/FlotChart.vue";
 import InputField from "@/components/InputField.vue";
 import ListBlock from "@/components/ListBlock.vue";
-import ListItem from "@/components/ListItem.vue";
+import ListBlockItem from "@/components/ListBlockItem.vue";
 import MapBlock from "@/components/MapBlock.vue";
 import ResponsiveForm from "@/components/ResponsiveForm.vue";
 import ResponsiveImage from "@/components/ResponsiveImage.vue";
@@ -28,7 +28,7 @@ declare module "@vue/runtime-core" {
     FlotChart: typeof FlotChart;
     InputField: typeof InputField;
     ListBlock: typeof ListBlock;
-    ListItem: typeof ListItem;
+    ListBlockItem: typeof ListBlockItem;
     MapBlock: typeof MapBlock;
     ResponsiveForm: typeof ResponsiveForm;
     ResponsiveImage: typeof ResponsiveImage;
