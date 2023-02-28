@@ -122,17 +122,17 @@
   <ListBlock>
     <ListBlockItem>Select "Install".</ListBlockItem>
     <ListBlockItem>Select your language.</ListBlockItem>
-    <ListBlockItem
-      >Select your country (for the time zone, locale etc.).</ListBlockItem
-    >
+    <ListBlockItem>
+      Select your country (for the time zone, locale etc.).
+    </ListBlockItem>
     <ListBlockItem>
       If you're prompted for a locale, choose the one which matches your
       country.
     </ListBlockItem>
     <ListBlockItem>Choose the keymap of your keyboard.</ListBlockItem>
-    <ListBlockItem
-      >Enter a hostname for your system (e.g. "alix-board").</ListBlockItem
-    >
+    <ListBlockItem>
+      Enter a hostname for your system (e.g. "alix-board").
+    </ListBlockItem>
     <ListBlockItem>
       Enter your domain name (e.g. "lan", or leave it blank if you wish).
     </ListBlockItem>
@@ -140,25 +140,25 @@
     <ListBlockItem>You must now create a normal user.</ListBlockItem>
     <ListBlockItem>Choose a username for your user.</ListBlockItem>
     <ListBlockItem>Choose a password for your user.</ListBlockItem>
-    <ListBlockItem
-      >Partitioning method: Guided - use entire disk.</ListBlockItem
-    >
+    <ListBlockItem>
+      Partitioning method: Guided - use entire disk.
+    </ListBlockItem>
     <ListBlockItem>
       Select disk to partition: SCSI1 (0,0,0) (sda) 1.0 GB ATA QEMU HARDDISK.
     </ListBlockItem>
-    <ListBlockItem
-      >Partitioning scheme: All files in one partition.</ListBlockItem
-    >
-    <ListBlockItem
-      >Select "Finish partitioning and write changes to disk".</ListBlockItem
-    >
+    <ListBlockItem>
+      Partitioning scheme: All files in one partition.
+    </ListBlockItem>
+    <ListBlockItem>
+      Select "Finish partitioning and write changes to disk".
+    </ListBlockItem>
     <ListBlockItem>Write the changes to disk? Yes.</ListBlockItem>
     <ListBlockItem>
       The base system will now be installed (this will take a while).
     </ListBlockItem>
-    <ListBlockItem
-      >Select a country for a mirror (your country?).</ListBlockItem
-    >
+    <ListBlockItem>
+      Select a country for a mirror (your country?).
+    </ListBlockItem>
     <ListBlockItem>Debian archive mirror: pick anyone you wish.</ListBlockItem>
     <ListBlockItem>
       HTTP proxy: you probably don't need this (leave it blank).
