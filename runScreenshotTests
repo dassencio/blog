@@ -31,7 +31,7 @@ gray() {
   echo -e "\033[0;37m"${@}"\033[0m"
 }
 
-viewport_widths=(375 1024)
+viewport_widths=(320 1024)
 
 if [ $# -eq 0 ]
 then
