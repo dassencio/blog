@@ -77,6 +77,20 @@ export function figureLink(figureNumber: number) {
 }
 
 /**
+ * Converts a reference number into its associated HTML element ID.
+ */
+export function referenceId(referenceNumber: number) {
+  return `ref${referenceNumber}`;
+}
+
+/**
+ * Converts a reference number into its associated HTML anchor link.
+ */
+export function referenceLink(referenceNumber: number) {
+  return `#${referenceId(referenceNumber)}`;
+}
+
+/**
  * Converts a table number into its associated HTML element ID.
  */
 export function tableId(tableNumber: number) {

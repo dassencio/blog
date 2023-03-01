@@ -1,9 +1,18 @@
 <template>
   <div class="item">
-    <div class="item__bullet"><div class="item__bullet-icon"></div></div>
-    <slot></slot>
+    <div v-if="bullet" v-html="bullet"></div>
+    <div v-else class="item__bullet"><div class="item__bullet-icon"></div></div>
+    <div>
+      <slot></slot>
+    </div>
   </div>
 </template>
+
+<script setup lang="ts">
+defineProps<{
+  bullet?: string;
+}>();
+</script>
 
 <style scoped lang="scss">
 .item {
