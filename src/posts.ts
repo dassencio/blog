@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "ec0bf1e2547df878846dd841b8d657b2",
+    component: () => import("@/posts/24.vue"),
+    date: dateToString(2013, 12, 30),
+    id: "24",
+    labels: [PostLabel.Physics, PostLabel.QuantumMechanics],
+    title: "Can the electron be found inside the nucleus?",
+  },
+  {
     compatibilityIndex: "62f54ab6114d473b6933ad5bf5a5fc88",
     component: () => import("@/posts/23.vue"),
     date: dateToString(2013, 12, 24),
