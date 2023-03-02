@@ -104,8 +104,6 @@
     \frac{1}{\sqrt{4\pi}}
   </EquationBlock>
 
-  <p></p>
-
   <p>
     These are the equations for $\psi_{n00}(r, \theta, \phi)$ for $n = 1, 2, 3$
     (see <ReferenceLink :referenceNumber="1" />, table 4.6):
@@ -145,8 +143,6 @@
     P_{300} &= \frac{4\pi r_0^3}{3} \frac{1}{27 \pi a_0^3} =
       \frac{4}{81}\left(\frac{r_0}{a_0}\right)^3 \approx 3.3 \cdot 10^{-16}
   </EquationBlock>
-
-  <p></p>
 
   <p>
     The probability of finding the electron inside the nucleus of a Hydrogen
