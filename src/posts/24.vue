@@ -1,6 +1,8 @@
 <template>
   <p>
-    A <a href="http://hfleming.com">professor</a> once asked us in class:
+    During my university studies, a
+    <a href="https://pt.wikipedia.org/wiki/Henrique_Fleming">professor</a>
+    asked us a very interesting question which will be the subject of this post:
     <i
       >What is the probability of finding the electron of a Hydrogen atom inside
       the atom's nucleus?</i
@@ -42,10 +44,9 @@
 
   <p>
     For any state for which the wave function $\psi(\Vec{x})$ is known, we can
-    use equation \eqref{eq_prob_approx1} and quickly obtain a very good
-    approximation for $P$. Consider, for instance, the eigenfunctions of the
-    Hydrogen atom. They are specified by three quantum numbers ($n$, $l$ and
-    $m$) and always have the form:
+    use equation \eqref{eq_prob_approx1} to obtain a very good approximation of
+    $P$. Consider, for instance, the eigenfunctions of the Hydrogen atom. They
+    are specified by three quantum numbers $(n, l, m)$ and always have the form:
   </p>
 
   <EquationBlock>
@@ -57,7 +58,7 @@
     <a href="https://en.wikipedia.org/wiki/Spherical_harmonic">
       normalized spherical harmonic</a
     >
-    of degree $l$ and order $m$. $R_{nl}(r)$ is a real-valued function of $r$
+    of degree $l$ and order $m$ and $R_{nl}(r)$ is a real-valued function of $r$
     which has the form (see
     <ReferenceLink :referenceNumber="1" />, equations 4.73 - 4.75):
   </p>
@@ -105,7 +106,7 @@
   </EquationBlock>
 
   <p>
-    These are the equations for $\psi_{n00}(r, \theta, \phi)$ for $n = 1, 2, 3$
+    The equations below give us $\psi_{n00}(r, \theta, \phi)$ for $n = 1, 2, 3$
     (see <ReferenceLink :referenceNumber="1" />, table 4.6):
   </p>
 
@@ -125,13 +126,13 @@
   <EquationBlock align>
     \psi_{100}(0,\theta,\phi) &= \frac{1}{\sqrt{\pi a_0^3}} \\
     \psi_{200}(0,\theta,\phi) &= \frac{1}{\sqrt{8\pi a_0^3}} \\
-    \psi_{300}(0,\theta,\phi) &= \frac{1}{\sqrt{27\pi a_0^3}} \label{eq_psi_0}
+    \psi_{300}(0,\theta,\phi) &= \frac{1}{\sqrt{27\pi a_0^3}}
   </EquationBlock>
 
   <p>
-    We can now use the values in equation \eqref{eq_psi_0} on equation
-    \eqref{eq_prob_r0} to obtain the probability of finding the electron inside
-    the nucleus for the eigenstates with $n = 1, 2, 3$ and $l = m = 0$:
+    These values can now be used in equation \eqref{eq_prob_r0} to obtain the
+    probability of finding the electron inside the nucleus for the eigenstates
+    with $n = 1, 2, 3$ and $l = m = 0$:
   </p>
 
   <!-- prettier-ignore -->
