@@ -29,7 +29,7 @@ window.MathJax = mathJaxConfig;
 
 // Download and configure MathJax as soon as this module is first loaded.
 const script = document.createElement("script");
-script.src = "/thirdparty/tex-svg-3.2.2.js";
+script.src = "/thirdparty/mathjax-3.2.2/es5/tex-svg.js";
 script.async = true;
 document.head.appendChild(script);
 
