@@ -32,9 +32,8 @@
       <a href="https://en.wikipedia.org/wiki/Enrico_Fermi">Fermi</a> would</i
     >". By that, he meant the problem can be easily solved using a very good
     <a href="https://en.wikipedia.org/wiki/Fermi_problem">approximation</a>:
-    assume that $|\psi(\Vec{x})|$ is constant over the extension of the nucleus,
-    which reduces the computation of the desired probability into a trivial
-    task:
+    assume that $|\psi(\Vec{x})|$ is constant over the extension of the nucleus.
+    This makes the computation of $P$ a much less daunting task:
   </p>
 
   <EquationBlock>
@@ -43,10 +42,10 @@
   </EquationBlock>
 
   <p>
-    For any state for which the wave function $\psi(\Vec{x})$ is known, we can
-    use equation \eqref{eq_prob_approx1} to obtain a very good approximation of
-    $P$. Consider, for instance, the eigenfunctions of the Hydrogen atom. They
-    are specified by three quantum numbers $(n, l, m)$ and always have the form:
+    For any state with a known wave function $\psi(\Vec{x})$, we can use
+    equation \eqref{eq_prob_approx1} to obtain a very good approximation of $P$.
+    Consider, for instance, the eigenfunctions of the Hydrogen atom. They are
+    specified by three quantum numbers $(n, l, m)$ and always have the form:
   </p>
 
   <EquationBlock>
@@ -76,12 +75,14 @@
   <p>
     is the
     <a href="https://en.wikipedia.org/wiki/Bohr_radius">Bohr radius</a> ($m$ is
-    the mass of the electron). Equation \eqref{eq_R} implies $R_{nl}(r) \propto
-    r^l$ so for every $l \gt 0$, $R_{nl}(0) = 0$. This means:
+    the mass of the electron). From equation \eqref{eq_R} and the definition of
+    $\rho$, we have that $R_{nl}(r) \propto r^l e^{-\rho} v(\rho)$ and therefore
+    $R_{nl}(0) = 0$ for all $l \gt 0$. Hence:
   </p>
 
   <EquationBlock>
-    \psi_{nlm}(0, \theta, \phi) = \psi(\Vec{0}) = 0
+    \psi_{nlm}(\Vec{0}) = \psi_{nlm}(0, \theta, \phi) =
+    R_{nl}(0)Y^m_l(\theta,\phi) = 0
   </EquationBlock>
 
   <p>
