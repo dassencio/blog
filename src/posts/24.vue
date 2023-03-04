@@ -30,9 +30,10 @@
     much better idea is to compute $P$ "<i
       >as
       <a href="https://en.wikipedia.org/wiki/Enrico_Fermi">Fermi</a> would</i
-    >". By that, he meant the problem can be easily solved using a very good
-    <a href="https://en.wikipedia.org/wiki/Fermi_problem">approximation</a>:
-    assume that $|\psi(\Vec{x})|$ is constant over the extension of the nucleus.
+    >". By that, he meant the problem can be solved much more easily by using a
+    suitable
+    <a href="https://en.wikipedia.org/wiki/Fermi_problem">approximation</a>,
+    namely that $|\psi(\Vec{x})|$ is constant over the extension of the nucleus.
     This makes the computation of $P$ a much less daunting task:
   </p>
 
@@ -86,19 +87,20 @@
   </EquationBlock>
 
   <p>
-    whenever $l \gt 0$. In other words, representing the value of $P$ for the
-    eigenstate specified by the quantum numbers $(n, l, m)$ as $P_{nlm}$, our
-    approximation gives us:
+    whenever $l \gt 0$. Denoting the value of $P$ for the eigenstate specified
+    by the quantum numbers $(n, l, m)$ as $P_{nlm}$, equation
+    \eqref{eq_prob_approx1} then gives us:
   </p>
 
   <EquationBlock> l \gt 0 \Longrightarrow P_{nlm} = 0 </EquationBlock>
 
   <p>
-    For the Hydrogen atom, the probability of finding the electron inside the
-    nucleus will therefore only be nonzero if $l = 0$. Since $m = 0$ is the only
-    allowed value of $m$ in this case (remember that $m$ can only take integer
-    values between $-l$ and $l$), the wave functions we need to consider will
-    have the form (see <ReferenceLink :referenceNumber="1" />, table 4.2):
+    For the eigenstates of the Hydrogen atom, the probability of finding the
+    electron inside the nucleus can therefore be nonzero only when $l = 0$.
+    Since $m = 0$ is the only allowed value of $m$ in this case (remember that
+    $m$ can only take integer values between $-l$ and $l$), the wave functions
+    we need to consider will have the form (see
+    <ReferenceLink :referenceNumber="1" />, table 4.2):
   </p>
 
   <EquationBlock>
