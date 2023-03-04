@@ -47,8 +47,12 @@ document.head.appendChild(script);
  * See https://docs.mathjax.org/en/latest/web/typeset.html for more details.
  */
 function render() {
-  window.MathJax.texReset();
-  window.MathJax.typeset();
+  if (document.readyState === "complete") {
+    window.MathJax.texReset();
+    window.MathJax.typeset();
+  } else {
+    document.onreadystatechange = () => render();
+  }
 }
 
 export default { render };
