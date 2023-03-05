@@ -5,6 +5,7 @@ import {
   type RouteLocation,
 } from "vue-router";
 import posts from "@/posts";
+import store from "@/store";
 
 const routes = [
   {
@@ -13,6 +14,7 @@ const routes = [
       _from: RouteLocation,
       next: NavigationGuardNext
     ) {
+      store.dispatch("reset");
       /*
        * In the previous architecture of this blog, posts were reachable
        * through query parameters (?index=<postIndex>). This is no longer the

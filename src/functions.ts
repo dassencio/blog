@@ -91,15 +91,8 @@ export function referenceLink(referenceNumber: number) {
 }
 
 /**
- * Converts a table number into its associated HTML element ID.
+ * Converts a table ID into its associated HTML element ID.
  */
-export function tableId(tableNumber: number) {
-  return `table${tableNumber}`;
-}
-
-/**
- * Converts a table number into its associated HTML anchor link.
- */
-export function tableLink(tableNumber: number) {
-  return `#${tableId(tableNumber)}`;
+export function tableIdToHtmlId(id: string) {
+  return `table-${id}`;
 }

@@ -24,6 +24,7 @@ import SectionTitle from "@/components/SectionTitle.vue";
 import TableBlock from "@/components/TableBlock.vue";
 import TableLink from "@/components/TableLink.vue";
 import router from "@/router";
+import store from "@/store";
 
 const app = createApp(App);
 
@@ -49,6 +50,7 @@ app.component("TableBlock", TableBlock);
 app.component("TableLink", TableLink);
 
 app.use(router);
+app.use(store);
 app.use(VueHighlightJS);
 
 app.mount("#app");

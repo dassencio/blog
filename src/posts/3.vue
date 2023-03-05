@@ -94,12 +94,12 @@
     When a fugitive must return with the flashlight, and if $M$ fugitives have
     already crossed the bridge, the number of possible choices is simply $M$. We
     will therefore have the scheme shown in
-    <TableLink :tableNumber="1">table 1</TableLink>.
+    <TableLink id="num-possibilities" />.
   </p>
 
   <TableBlock
+    id="num-possibilities"
     :columns="3"
-    :tableNumber="1"
     caption='Number of possibilities at each step, with $N \gt 2$ implicitly
              assumed just for illustration purposes. Green values indicate which
              group has the flashlight at each step. "Crossed" refers to the
@@ -173,22 +173,22 @@
 
   <p>
     As the numbers shown in
-    <TableLink :tableNumber="2">table 2</TableLink> indicate, the computational
-    work required to simulate all possibilities grows extremely fast as $N$
-    increases, which is to be expected from equation \eqref{num_possibilities}
-    since $N!$ grows much faster than both $2^{N - 1}$ and $N$. This imposes
-    practical limitations on the maximum number of fugitives we can handle when
-    trying to solve the problem using brute force, but these limitations can be
-    at least partially circumvented by ignoring bridge crossings which would
-    exceed the police time, thereby eliminating entire subtrees of possibilities
-    which would never lead to a solution. The total number of possibilities to
-    consider is also further reduced by not distinguishing between fugitives
-    which need the same amount of time to cross the bridge.
+    <TableLink id="PN-values" /> indicate, the computational work required to
+    simulate all possibilities grows extremely fast as $N$ increases, which is
+    to be expected from equation \eqref{num_possibilities} since $N!$ grows much
+    faster than both $2^{N - 1}$ and $N$. This imposes practical limitations on
+    the maximum number of fugitives we can handle when trying to solve the
+    problem using brute force, but these limitations can be at least partially
+    circumvented by ignoring bridge crossings which would exceed the police
+    time, thereby eliminating entire subtrees of possibilities which would never
+    lead to a solution. The total number of possibilities to consider is also
+    further reduced by not distinguishing between fugitives which need the same
+    amount of time to cross the bridge.
   </p>
 
   <TableBlock
+    id="PN-values"
     :columns="2"
-    :tableNumber="2"
     caption="Values of $P_N$ for some values of $N$."
   >
     <div>$N$</div>

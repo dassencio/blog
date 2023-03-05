@@ -1,11 +1,20 @@
 <template>
-  <a :href="tableLink(tableNumber)"><slot></slot></a>
+  <a :href="tableLink"
+    >{{ capitalized ? "Table" : "table" }} {{ tableNumber }}</a
+  >
 </template>
 
 <script setup lang="ts">
-import { tableLink } from "@/functions";
+import { computed } from "vue";
+import { useStore } from "vuex";
+import { tableIdToHtmlId } from "@/functions";
 
-defineProps<{
-  tableNumber: number;
+const props = defineProps<{
+  capitalized?: boolean;
+  id: string;
 }>();
+const store = useStore();
+
+const tableLink = computed(() => `#${tableIdToHtmlId(props.id)}`);
+const tableNumber = computed(() => store.getters.tableNumber(props.id));
 </script>

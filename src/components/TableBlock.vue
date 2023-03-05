@@ -1,5 +1,5 @@
 <template>
-  <div class="table" :id="tableId(tableNumber)">
+  <div class="table" :id="tableHtmlId">
     <div
       class="table__contents"
       :style="{ gridTemplateColumns: `repeat(${columns}, auto)` }"
@@ -11,14 +11,22 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
+import { useStore } from "vuex";
 import CaptionBlock from "@/components/CaptionBlock.vue";
-import { tableId } from "@/functions";
+import { tableIdToHtmlId } from "@/functions";
 
-defineProps<{
+const props = defineProps<{
   caption: string;
   columns: number;
-  tableNumber: number;
+  id: string;
 }>();
+const store = useStore();
+
+store.dispatch("registerTable", props.id);
+
+const tableHtmlId = computed(() => tableIdToHtmlId(props.id));
+const tableNumber = computed(() => store.getters.tableNumber(props.id));
 </script>
 
 <style scoped lang="scss">
