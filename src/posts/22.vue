@@ -76,3 +76,10 @@
     assigned to USB devices as they are detected.
   </p>
 </template>
+
+<script setup lang="ts">
+import { onMounted } from "vue";
+import { onViewMounted } from "@/functions";
+
+onMounted(() => onViewMounted());
+</script>
