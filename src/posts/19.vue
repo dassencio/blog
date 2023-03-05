@@ -163,13 +163,13 @@
     In other words, with only $n = 23$ randomly selected people, we can already
     expect a birthday collision with more than $50\%$ probability! If the
     "paradox" in "birthday paradox" was not yet clear to you, it probably is
-    now. <FigureLink :figureNumber="1">Figure 1</FigureLink> shows the
+    now. <FigureLink id="collision-probability" capitalized /> shows the
     probability $P(n)$ of a birthday collision for different values of $n$ and
     $N = 365$.
   </p>
 
   <FigureBlock
-    :figureNumber="1"
+    id="collision-probability"
     caption="Birthday collision probability $P(n)$ versus number $n$ of randomly
              selected people. $Q(n) = 1 - e^{-n(n-1)/(2N)}$ is a lower bound
              estimate of $P(n)$."
@@ -221,12 +221,12 @@
 
   <p>
     You can compare how close $Q(n)$ is to $P(n)$ in
-    <FigureLink :figureNumber="1">figure 1</FigureLink>. For any given
-    probability $p$, equation \eqref{eq_approx_p} can be used to estimate the
-    smallest value of $n$ for which we will have a collision with probability
-    larger than or equal to $p$, i.e., $P(n) \geq p$. We can do that by solving
-    this same problem for $Q(n)$ instead of $P(n)$ since any value of $n$ such
-    that $Q(n) \geq p$ also satisfies $P(n) \geq p$:
+    <FigureLink id="collision-probability" />. For any given probability $p$,
+    equation \eqref{eq_approx_p} can be used to estimate the smallest value of
+    $n$ for which we will have a collision with probability larger than or equal
+    to $p$, i.e., $P(n) \geq p$. We can do that by solving this same problem for
+    $Q(n)$ instead of $P(n)$ since any value of $n$ such that $Q(n) \geq p$ also
+    satisfies $P(n) \geq p$:
   </p>
 
   <!-- prettier-ignore -->

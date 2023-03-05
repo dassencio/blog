@@ -63,17 +63,10 @@ export function onViewMounted() {
 }
 
 /**
- * Converts a figure number into its associated HTML element ID.
+ * Converts a figure ID into its associated HTML element ID.
  */
-export function figureId(figureNumber: number) {
-  return `figure${figureNumber}`;
-}
-
-/**
- * Converts a figure number into its associated HTML anchor link.
- */
-export function figureLink(figureNumber: number) {
-  return `#${figureId(figureNumber)}`;
+export function figureIdToHtmlId(id: string) {
+  return `figure-${id}`;
 }
 
 /**

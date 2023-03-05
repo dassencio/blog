@@ -3,12 +3,12 @@
     Consider a regular polygon with $N$ sides (and therefore $N$ vertices) such
     that the distance between its center $O$ and each of its vertices is $r$. An
     electric charge $q$ is placed at each vertex of the polygon as shown in
-    <FigureLink :figureNumber="1">figure 1</FigureLink>. What is the electric
-    field $\Vec{E}$ produced by these charges at the point $O$?
+    <FigureLink id="charges" />. What is the electric field $\Vec{E}$ produced
+    by these charges at the point $O$?
   </p>
 
   <FigureBlock
-    :figureNumber="1"
+    id="charges"
     caption="Regular pentagon with charges placed at each of its vertices. In
              the figure, $\theta = 2\pi / 5$. For a regular  polygon with $N$
              sides, $\theta = 2\pi / N$."
@@ -29,11 +29,11 @@
   <p>
     To see what I mean by that, consider the electric field produced by the
     charges at the point $O$ as shown in
-    <FigureLink :figureNumber="2">figure 2a</FigureLink>.
+    <FigureLink id="charges-rotated" subfigureLabel="a" />.
   </p>
 
   <FigureBlock
-    :figureNumber="2"
+    id="charges-rotated"
     caption="Rotating a pentagon by $\theta = 2\pi / 5$ around its center point
              in the counterclockwise (or clockwise) direction produces the same
              charge configuration (b) as we initially had in (a). In general,
@@ -79,8 +79,7 @@
     In any case, if you're one of those readers I just mentioned, let's compute
     $\Vec{E}$ by hand to bring peace back to your mind. Numbering each charge in
     a counterclockwise manner as in
-    <FigureLink :figureNumber="1">figure 1</FigureLink>, the $k$-th charge would
-    then be located at:
+    <FigureLink id="charges" />, the $k$-th charge would then be located at:
   </p>
 
   <EquationBlock>

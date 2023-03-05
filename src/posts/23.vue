@@ -14,13 +14,13 @@
   <p>
     The funnel is assumed to have the shape of an "upside down" cone whose tip
     has been cut off (see
-    <FigureLink :figureNumber="1">figure 1</FigureLink>), plus a short neck
-    whose diameter is small compared to the funnel's mouth. The funnel is
-    initially completely filled with fluid.
+    <FigureLink id="funnel" />), plus a short neck whose diameter is small
+    compared to the funnel's mouth. The funnel is initially completely filled
+    with fluid.
   </p>
 
   <FigureBlock
-    :figureNumber="1"
+    id="funnel"
     caption="A funnel with conical shape. The funnel has mouth radius $b$ and
              neck radius $a \ll b$. The initial fluid height is $h_0$, which is
              the height of the funnel itself. At time $t$, the height of the
@@ -41,8 +41,8 @@
 
   <p>
     Consider points $A$ and $B$ in
-    <FigureLink :figureNumber="1">figure 1</FigureLink>, both of which are
-    assumed to be on the same flow streamline (the dashed line). Using
+    <FigureLink id="funnel" />, both of which are assumed to be on the same flow
+    streamline (the dashed line). Using
     <a href="https://en.wikipedia.org/wiki/Bernoulli%27s_principle"
       >Bernoulli's equation</a
     >, we can write:
@@ -80,8 +80,7 @@
   <p>
     Let's now obtain a relation between $r(t)$ and $h(t)$. Since we assume $a$
     to be small ($a \ll r(t)$ and $a \ll b$), the cross section of the cone
-    shown in <FigureLink :figureNumber="1">figure 1</FigureLink> can be treated
-    as a triangle:
+    shown in <FigureLink id="funnel" /> can be treated as a triangle:
   </p>
 
   <EquationBlock>
@@ -213,21 +212,21 @@
   <EquationBlock> h(t) = h_0\left(1 - \frac{t}{T} \right)^{2/5} </EquationBlock>
 
   <p>
-    <FigureLink :figureNumber="2">Figure 2</FigureLink> shows a graph of
-    $h(t)/h_0$ versus $t / T$.
+    <FigureLink id="fluid-height" capitalized /> shows a graph of $h(t)/h_0$
+    versus $t / T$.
   </p>
 
-  <FigureBlock :figureNumber="2" caption="Fluid height $h(t)/h_0$ vs. $t/T$.">
+  <FigureBlock id="fluid-height" caption="Fluid height $h(t)/h_0$ vs. $t/T$.">
     <FlotChart class="figure-2" :data="data" :options="options" />
   </FigureBlock>
 
   <p>
-    As the graph on <FigureLink :figureNumber="2">figure 2</FigureLink> shows,
-    the fluid's top surface moves down slowly until about $t \approx 0.95T$, at
-    which point $h(t)$ starts decreasing quickly. From there on, some of our
-    assumptions about the nature of the flow will no longer be accurate, but as
-    mentioned above, this will not cause a substantial deviation from our
-    computed estimate of $T$.
+    As the graph on <FigureLink id="fluid-height" /> shows, the fluid's top
+    surface moves down slowly until about $t \approx 0.95T$, at which point
+    $h(t)$ starts decreasing quickly. From there on, some of our assumptions
+    about the nature of the flow will no longer be accurate, but as mentioned
+    above, this will not cause a substantial deviation from our computed
+    estimate of $T$.
   </p>
 </template>
 
