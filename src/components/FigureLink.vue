@@ -18,7 +18,7 @@ const props = defineProps<{
 const store = useStore();
 
 const figureLink = computed(() => `#${figureIdToHtmlId(props.id)}`);
-const figureNumber = computed(() => store.getters.figureNumber(props.id));
+const figureNumber = computed(() => store.getters.figureNumber(props));
 const subfigureLabel = computed(() =>
   props.subfigureId
     ? store.getters.subfigureLabel({

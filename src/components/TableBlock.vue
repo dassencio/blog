@@ -23,10 +23,10 @@ const props = defineProps<{
 }>();
 const store = useStore();
 
-store.dispatch("registerTable", props.id);
+store.dispatch("registerTable", props);
 
 const tableHtmlId = computed(() => tableIdToHtmlId(props.id));
-const tableNumber = computed(() => store.getters.tableNumber(props.id));
+const tableNumber = computed(() => store.getters.tableNumber(props));
 </script>
 
 <style scoped lang="scss">

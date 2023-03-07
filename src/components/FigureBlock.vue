@@ -17,10 +17,10 @@ const props = defineProps<{
 }>();
 const store = useStore();
 
-store.dispatch("registerFigure", props.id);
+store.dispatch("registerFigure", props);
 
 const figureHtmlId = computed(() => figureIdToHtmlId(props.id));
-const figureNumber = computed(() => store.getters.figureNumber(props.id));
+const figureNumber = computed(() => store.getters.figureNumber(props));
 </script>
 
 <style scoped lang="scss">

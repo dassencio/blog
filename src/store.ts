@@ -4,80 +4,88 @@ interface ElementWithId {
   id: string;
 }
 
+type Figure = ElementWithId;
+type Table = ElementWithId;
+
 interface Subfigure extends ElementWithId {
   parentId: string;
 }
 
 interface State {
-  figureIds: string[];
+  figures: Figure[];
   subfigures: Subfigure[];
-  tableIds: string[];
+  tables: Table[];
+}
+
+function findElementIndex(elements: ElementWithId[], element: ElementWithId) {
+  return elements.findIndex((_element) => _element.id === element.id);
+}
+
+function findSubfigureIndex(subfigures: Subfigure[], subfigure: Subfigure) {
+  return findElementIndex(
+    subfigures.filter(
+      (_subfigure) => _subfigure.parentId === subfigure.parentId
+    ),
+    subfigure
+  );
 }
 
 const store = createStore<State>({
   state() {
     return {
-      figureIds: [],
+      figures: [],
       subfigures: [],
-      tableIds: [],
+      tables: [],
     };
   },
   getters: {
-    figureNumber: (state) => (id: string) => {
-      return state.figureIds.indexOf(id) + 1;
+    figureNumber: (state) => (figure: Figure) => {
+      return findElementIndex(state.figures, figure) + 1;
     },
     subfigureLabel: (state) => (subfigure: Subfigure) => {
-      const subfigureIndex = state.subfigures
-        .filter(({ parentId }) => parentId === subfigure.parentId)
-        .findIndex(({ id }) => id === subfigure.id);
+      const subfigureIndex = findSubfigureIndex(state.subfigures, subfigure);
       return subfigureIndex !== -1
         ? String.fromCharCode(97 + subfigureIndex)
         : "?";
     },
-    tableNumber: (state) => (id: string) => {
-      return state.tableIds.indexOf(id) + 1;
+    tableNumber: (state) => (table: Table) => {
+      return findElementIndex(state.tables, table) + 1;
     },
   },
   mutations: {
-    storeFigureId(state, id: string) {
-      if (state.figureIds.includes(id)) {
-        throw new Error(`Duplicate figure ID: ${id}`);
+    storeFigure(state, figure: Figure) {
+      if (findElementIndex(state.figures, figure) !== -1) {
+        throw new Error(`Duplicate figure ID: ${figure.id}`);
       }
-      state.figureIds.push(id);
+      state.figures.push(figure);
     },
     storeSubfigure(state, subfigure: Subfigure) {
-      if (
-        state.subfigures.some(
-          (registedSubfigure) =>
-            registedSubfigure.id === subfigure.id &&
-            registedSubfigure.parentId === subfigure.parentId
-        )
-      ) {
+      if (findSubfigureIndex(state.subfigures, subfigure) !== -1) {
         throw new Error(`Duplicate subfigure ID: ${subfigure.id}`);
       }
       state.subfigures.push(subfigure);
     },
-    storeTableId(state, id: string) {
-      if (state.tableIds.includes(id)) {
-        throw new Error(`Duplicate table ID: ${id}`);
+    storeTable(state, table: Table) {
+      if (findElementIndex(state.tables, table) !== -1) {
+        throw new Error(`Duplicate table ID: ${table.id}`);
       }
-      state.tableIds.push(id);
+      state.tables.push(table);
     },
     resetState(state) {
-      state.figureIds = [];
+      state.figures = [];
       state.subfigures = [];
-      state.tableIds = [];
+      state.tables = [];
     },
   },
   actions: {
-    registerFigure(context, id: string) {
-      context.commit("storeFigureId", id);
+    registerFigure(context, figure: Figure) {
+      context.commit("storeFigure", { ...figure });
     },
     registerSubfigure(context, subfigure: Subfigure) {
-      context.commit("storeSubfigure", subfigure);
+      context.commit("storeSubfigure", { ...subfigure });
     },
-    registerTable(context, id: string) {
-      context.commit("storeTableId", id);
+    registerTable(context, table: Table) {
+      context.commit("storeTable", { ...table });
     },
     reset(context) {
       context.commit("resetState");

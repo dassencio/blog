@@ -16,5 +16,5 @@ const props = defineProps<{
 const store = useStore();
 
 const tableLink = computed(() => `#${tableIdToHtmlId(props.id)}`);
-const tableNumber = computed(() => store.getters.tableNumber(props.id));
+const tableNumber = computed(() => store.getters.tableNumber(props));
 </script>
