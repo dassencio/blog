@@ -231,7 +231,7 @@
 
   <!-- prettier-ignore -->
   <EquationBlock align>
-    Q(n) \geq p 
+    Q(n) \geq p
       & \Longleftrightarrow 1 - e^{-n(n-1)/(2N)} \geq p \\
       & \Longleftrightarrow e^{-n(n-1)/(2N)} \leq 1 - p \\
       & \Longleftrightarrow \frac{-n(n-1)}{2N} \leq \log(1 - p) \\
