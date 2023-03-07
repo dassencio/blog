@@ -30,7 +30,7 @@ const figureNumber = computed(() => store.getters.figureNumber(props.id));
   &__contents {
     display: flex;
     flex-wrap: wrap;
-    gap: $view-figure-contents-gap;
+    gap: $view-figure-contents-vertical-gap $view-figure-contents-horizontal-gap;
     justify-content: center;
   }
 }

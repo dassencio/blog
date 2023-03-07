@@ -148,14 +148,12 @@
   >
     <BaseSubfigure label="(a)">
       <ResponsiveImage
-        class="figure-3a"
         alt="Car traveling along a circular arc"
         :src="carTravelingAlongArc"
       />
     </BaseSubfigure>
     <BaseSubfigure label="(b)">
       <ResponsiveImage
-        class="figure-3b"
         alt="Friction forces on car tires"
         :src="carFrictionForces"
       />
@@ -173,10 +171,3 @@ import washingMachineForces from "@/assets/images/washing-machine-forces.svg";
 
 onMounted(() => onViewMounted());
 </script>
-
-<style scoped lang="scss">
-.figure-3a,
-.figure-3b {
-  padding: 0 $base-length;
-}
-</style>

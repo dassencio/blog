@@ -42,14 +42,12 @@
   >
     <BaseSubfigure label="(a)">
       <ResponsiveImage
-        class="figure-2a"
         alt="Charges placed at vertices of a regular polygon"
         :src="chargesOnRegularPolygonRotationA"
       />
     </BaseSubfigure>
     <BaseSubfigure label="(b)">
       <ResponsiveImage
-        class="figure-2b"
         alt="Charges placed at vertices of a regular polygon (rotated)"
         :src="chargesOnRegularPolygonRotationB"
       />
@@ -151,10 +149,3 @@ import chargesOnRegularPolygonRotationB from "@/assets/images/charges-on-regular
 
 onMounted(() => onViewMounted());
 </script>
-
-<style scoped lang="scss">
-.figure-2a,
-.figure-2b {
-  padding: 0 (0.5 * $base-length);
-}
-</style>
