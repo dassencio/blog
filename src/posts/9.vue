@@ -146,13 +146,13 @@
              the sum of which yield the centripetal force
              $\Vec{F}_{\textrm{cp}}$."
   >
-    <BaseSubfigure label="(a)">
+    <BaseSubfigure id="top-view" parentId="car-on-circular-arc">
       <ResponsiveImage
         alt="Car traveling along a circular arc"
         :src="carTravelingAlongArc"
       />
     </BaseSubfigure>
-    <BaseSubfigure label="(b)">
+    <BaseSubfigure id="back-view" parentId="car-on-circular-arc">
       <ResponsiveImage
         alt="Friction forces on car tires"
         :src="carFrictionForces"

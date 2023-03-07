@@ -29,7 +29,7 @@
   <p>
     To see what I mean by that, consider the electric field produced by the
     charges at the point $O$ as shown in
-    <FigureLink id="charges-rotated" subfigureLabel="a" />.
+    <FigureLink id="charges-rotated" subfigureId="original" />.
   </p>
 
   <FigureBlock
@@ -40,13 +40,13 @@
              this is true if one rotates a regular polygon with $N$ sides by
              $\theta = 2\pi/N$ around its center point."
   >
-    <BaseSubfigure label="(a)">
+    <BaseSubfigure id="original" parentId="charges-rotated">
       <ResponsiveImage
         alt="Charges placed at vertices of a regular polygon"
         :src="chargesOnRegularPolygonRotationA"
       />
     </BaseSubfigure>
-    <BaseSubfigure label="(b)">
+    <BaseSubfigure id="rotated" parentId="charges-rotated">
       <ResponsiveImage
         alt="Charges placed at vertices of a regular polygon (rotated)"
         :src="chargesOnRegularPolygonRotationB"

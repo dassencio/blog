@@ -13,10 +13,18 @@ import { figureIdToHtmlId } from "@/functions";
 const props = defineProps<{
   capitalized?: boolean;
   id: string;
-  subfigureLabel?: string;
+  subfigureId?: string;
 }>();
 const store = useStore();
 
 const figureLink = computed(() => `#${figureIdToHtmlId(props.id)}`);
 const figureNumber = computed(() => store.getters.figureNumber(props.id));
+const subfigureLabel = computed(() =>
+  props.subfigureId
+    ? store.getters.subfigureLabel({
+        id: props.subfigureId,
+        parentId: props.id,
+      })
+    : ""
+);
 </script>
