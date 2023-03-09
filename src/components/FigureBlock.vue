@@ -6,21 +6,28 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, provide } from "vue";
 import { useStore } from "vuex";
+import _ from "lodash";
 import CaptionBlock from "@/components/CaptionBlock.vue";
 import { figureIdToHtmlId } from "@/functions";
 
 const props = defineProps<{
   caption: string;
-  id: string;
+  id?: string;
 }>();
 const store = useStore();
 
-store.dispatch("registerFigure", props);
+const figure = {
+  id: props.id || _.uniqueId("__figure__"),
+};
 
-const figureHtmlId = computed(() => figureIdToHtmlId(props.id));
-const figureNumber = computed(() => store.getters.figureNumber(props));
+store.dispatch("registerFigure", figure);
+
+provide("parentId", figure.id);
+
+const figureHtmlId = figureIdToHtmlId(figure.id);
+const figureNumber = computed(() => store.getters.figureNumber(figure));
 </script>
 
 <style scoped lang="scss">

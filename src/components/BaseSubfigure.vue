@@ -6,19 +6,24 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, inject } from "vue";
 import { useStore } from "vuex";
+import _ from "lodash";
 
+const parentId = inject("parentId");
 const props = defineProps<{
-  id: string;
-  parentId: string;
+  id?: string;
 }>();
-
 const store = useStore();
 
-store.dispatch("registerSubfigure", props);
+const subfigure = {
+  id: props.id || _.uniqueId("__subfigure__"),
+  parentId,
+};
 
-const subfigureLabel = computed(() => store.getters.subfigureLabel(props));
+store.dispatch("registerSubfigure", subfigure);
+
+const subfigureLabel = computed(() => store.getters.subfigureLabel(subfigure));
 </script>
 
 <style scoped lang="scss">

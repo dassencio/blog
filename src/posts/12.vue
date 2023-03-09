@@ -40,13 +40,13 @@
              this is true if one rotates a regular polygon with $N$ sides by
              $\theta = 2\pi/N$ around its center point."
   >
-    <BaseSubfigure id="original" parentId="charges-rotated">
+    <BaseSubfigure id="original">
       <ResponsiveImage
         alt="Charges placed at vertices of a regular polygon"
         :src="chargesOnRegularPolygonRotationA"
       />
     </BaseSubfigure>
-    <BaseSubfigure id="rotated" parentId="charges-rotated">
+    <BaseSubfigure>
       <ResponsiveImage
         alt="Charges placed at vertices of a regular polygon (rotated)"
         :src="chargesOnRegularPolygonRotationB"
