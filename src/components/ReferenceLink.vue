@@ -1,6 +1,5 @@
 <template>
-  [<a :href="referenceLink">{{ referenceNumber }}</a
-  >]
+  <a :href="referenceLink">[{{ referenceNumber }}]</a>
 </template>
 
 <script setup lang="ts">
