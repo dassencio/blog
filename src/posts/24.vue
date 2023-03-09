@@ -60,7 +60,7 @@
     >
     of degree $l$ and order $m$ and $R_{nl}(r)$ is a real-valued function of $r$
     which has the form (see
-    <ReferenceLink :referenceNumber="1" />, equations 4.73 - 4.75):
+    <ReferenceLink id="griffiths-quantum-mechanics" />, equations 4.73 - 4.75):
   </p>
 
   <EquationBlock>
@@ -100,7 +100,7 @@
     Since $m = 0$ is the only allowed value of $m$ in this case (remember that
     $m$ can only take integer values between $-l$ and $l$), the wave functions
     we need to consider will have the form (see
-    <ReferenceLink :referenceNumber="1" />, table 4.2):
+    <ReferenceLink id="griffiths-quantum-mechanics" />, table 4.2):
   </p>
 
   <EquationBlock>
@@ -110,7 +110,7 @@
 
   <p>
     The equations below give us $\psi_{n00}(r, \theta, \phi)$ for $n = 1, 2, 3$
-    (see <ReferenceLink :referenceNumber="1" />, table 4.6):
+    (see <ReferenceLink id="griffiths-quantum-mechanics" />, table 4.6):
   </p>
 
   <!-- prettier-ignore -->
@@ -156,7 +156,7 @@
 
   <ReferenceListBlock>
     <ReferenceListBlockItem
-      :referenceNumber="1"
+      id="griffiths-quantum-mechanics"
       :authors="['David J. Griffiths', ' Darrell F. Schroeter']"
       title="Introduction to Quantum Mechanics"
       url="https://doi.org/10.1017/9781316995433"

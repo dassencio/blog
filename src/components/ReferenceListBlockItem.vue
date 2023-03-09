@@ -1,8 +1,5 @@
 <template>
-  <ListBlockItem
-    :id="referenceId(referenceNumber)"
-    :bullet="`[${referenceNumber}]`"
-  >
+  <ListBlockItem :id="referenceHtmlId" :bullet="`[${referenceNumber}]`">
     <a :href="url"
       ><i>{{ title }}</i></a
     >{{ displayAuthors(authors || []) }}
@@ -10,7 +7,10 @@
 </template>
 
 <script setup lang="ts">
-import { referenceId } from "@/functions";
+import { computed } from "vue";
+import { useStore } from "vuex";
+import _ from "lodash";
+import { referenceIdToHtmlId } from "@/functions";
 
 function displayAuthors(authors: string[]): string {
   if (authors.length === 0) {
@@ -22,12 +22,24 @@ function displayAuthors(authors: string[]): string {
   return `, by ${authors.slice(0, -1).join(", ")} and ${authors.slice(-1)}`;
 }
 
-defineProps<{
+const props = defineProps<{
   authors?: string[];
-  referenceNumber: number;
+  id?: string;
   title: string;
   url: string;
 }>();
+const store = useStore();
+
+const reference = {
+  id: props.id || _.uniqueId("__reference__"),
+};
+
+store.dispatch("registerReference", reference);
+
+const referenceHtmlId = referenceIdToHtmlId(reference.id);
+const referenceNumber = computed(() =>
+  store.getters.referenceNumber(reference)
+);
 </script>
 
 <style scoped lang="scss">

@@ -5,6 +5,7 @@ interface ElementWithId {
 }
 
 type Figure = ElementWithId;
+type Reference = ElementWithId;
 type Table = ElementWithId;
 
 interface Subfigure extends ElementWithId {
@@ -14,6 +15,7 @@ interface Subfigure extends ElementWithId {
 interface State {
   figures: Figure[];
   subfigures: Subfigure[];
+  references: Reference[];
   tables: Table[];
 }
 
@@ -35,12 +37,16 @@ const store = createStore<State>({
     return {
       figures: [],
       subfigures: [],
+      references: [],
       tables: [],
     };
   },
   getters: {
     figureNumber: (state) => (figure: Figure) => {
       return findElementIndex(state.figures, figure) + 1;
+    },
+    referenceNumber: (state) => (reference: Reference) => {
+      return findElementIndex(state.references, reference) + 1;
     },
     subfigureLabel: (state) => (subfigure: Subfigure) => {
       const subfigureIndex = findSubfigureIndex(state.subfigures, subfigure);
@@ -59,6 +65,12 @@ const store = createStore<State>({
       }
       state.figures.push(figure);
     },
+    storeReference(state, reference: Reference) {
+      if (findElementIndex(state.references, reference) !== -1) {
+        throw new Error(`Duplicate reference ID: ${reference.id}`);
+      }
+      state.references.push(reference);
+    },
     storeSubfigure(state, subfigure: Subfigure) {
       if (findSubfigureIndex(state.subfigures, subfigure) !== -1) {
         throw new Error(`Duplicate subfigure ID: ${subfigure.id}`);
@@ -73,6 +85,7 @@ const store = createStore<State>({
     },
     resetState(state) {
       state.figures = [];
+      state.references = [];
       state.subfigures = [];
       state.tables = [];
     },
@@ -80,6 +93,9 @@ const store = createStore<State>({
   actions: {
     registerFigure(context, figure: Figure) {
       context.commit("storeFigure", { ...figure });
+    },
+    registerReference(context, reference: Reference) {
+      context.commit("storeReference", { ...reference });
     },
     registerSubfigure(context, subfigure: Subfigure) {
       context.commit("storeSubfigure", { ...subfigure });

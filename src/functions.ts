@@ -70,17 +70,10 @@ export function figureIdToHtmlId(id: string) {
 }
 
 /**
- * Converts a reference number into its associated HTML element ID.
+ * Converts a reference ID into its associated HTML element ID.
  */
-export function referenceId(referenceNumber: number) {
-  return `ref${referenceNumber}`;
-}
-
-/**
- * Converts a reference number into its associated HTML anchor link.
- */
-export function referenceLink(referenceNumber: number) {
-  return `#${referenceId(referenceNumber)}`;
+export function referenceIdToHtmlId(id: string) {
+  return `reference-${id}`;
 }
 
 /**
