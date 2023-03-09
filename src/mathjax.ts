@@ -3,6 +3,16 @@ const mathJaxConfig = {
   chtml: {
     displayAlign: "left",
   },
+  options: {
+    renderActions: {
+      assistiveMml: [],
+    },
+    menuOptions: {
+      settings: {
+        assistiveMml: true,
+      },
+    },
+  },
   startup: {
     pageReady: render,
   },
@@ -50,6 +60,8 @@ function render() {
   if (document.readyState === "complete") {
     window.MathJax.texReset();
     window.MathJax.typeset();
+    // @ts-expect-error (no type definition available for MathJax).
+    window.MathJax.startup.document.menu.menu.find("Accessibility").hide();
   } else {
     document.onreadystatechange = () => render();
   }
