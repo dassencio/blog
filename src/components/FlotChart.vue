@@ -46,7 +46,7 @@ const options = _.merge(
   props.options
 );
 
-const plotId = `flotChart${_.uniqueId()}`;
+const plotId = _.uniqueId("__flot-chart__");
 
 const debouncedPlot = _.debounce(() => {
   flot.plot(`#${plotId}`, props.data, options);
