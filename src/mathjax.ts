@@ -1,5 +1,6 @@
 // Global MathJax configuration.
-const mathJaxConfig = {
+// @ts-expect-error (no type definition available for MathJax).
+window.MathJax = {
   chtml: {
     displayAlign: "left",
   },
@@ -28,17 +29,7 @@ const mathJaxConfig = {
     },
     tags: "all",
   },
-  texReset: () => undefined,
-  typeset: () => undefined,
 };
-
-declare global {
-  interface Window {
-    MathJax: typeof mathJaxConfig;
-  }
-}
-
-window.MathJax = mathJaxConfig;
 
 // Download and configure MathJax as soon as this module is first loaded.
 const script = document.createElement("script");
@@ -58,7 +49,9 @@ document.head.appendChild(script);
  */
 function render() {
   if (document.readyState === "complete") {
+    // @ts-expect-error (no type definition available for MathJax).
     window.MathJax.texReset();
+    // @ts-expect-error (no type definition available for MathJax).
     window.MathJax.typeset();
     // @ts-expect-error (no type definition available for MathJax).
     window.MathJax.startup.document.menu.menu.find("Accessibility").hide();
