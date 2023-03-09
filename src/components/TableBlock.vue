@@ -13,20 +13,25 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useStore } from "vuex";
+import _ from "lodash";
 import CaptionBlock from "@/components/CaptionBlock.vue";
 import { tableIdToHtmlId } from "@/functions";
 
 const props = defineProps<{
   caption: string;
   columns: number;
-  id: string;
+  id?: string;
 }>();
 const store = useStore();
 
-store.dispatch("registerTable", props);
+const table = {
+  id: props.id || _.uniqueId("__table__"),
+};
 
-const tableHtmlId = computed(() => tableIdToHtmlId(props.id));
-const tableNumber = computed(() => store.getters.tableNumber(props));
+store.dispatch("registerTable", table);
+
+const tableHtmlId = tableIdToHtmlId(table.id);
+const tableNumber = computed(() => store.getters.tableNumber(table));
 </script>
 
 <style scoped lang="scss">
