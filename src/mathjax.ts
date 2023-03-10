@@ -13,7 +13,7 @@ window.MathJax = {
     },
     menuOptions: {
       settings: {
-        assistiveMml: true,
+        assistiveMml: false,
       },
     },
   },
