@@ -101,7 +101,7 @@
          \frac{t}{T^2}\right] \\
       &= \frac{\alpha}{2m}\left[ \frac{T^2 - T(T- t) - t(T - t)}{T^2(T - t)} \right] \\
       &= \frac{\alpha}{2m}\left[ \frac{T^2 - T^2 + Tt - tT + t^2}{T^2(T - t)} \right] \\
-      &= \frac{\alpha}{2mT^2} \frac{t^2}{(T - t)}  \label{position}
+      &= \frac{\alpha}{2mT^2} \frac{t^2}{(T - t)} \label{position}
   </EquationBlock>
 
   <p>
