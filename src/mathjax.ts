@@ -4,7 +4,9 @@ window.MathJax = {
   chtml: {
     displayAlign: "left",
   },
-  loader: { load: ["[tex]/tagformat"] },
+  loader: {
+    load: ["[tex]/tagformat"],
+  },
   options: {
     renderActions: {
       assistiveMml: [],
@@ -28,7 +30,9 @@ window.MathJax = {
       ColonEq: "\\mathrel{\\vcenter{:}}=",
       Vec: ["\\mathbf{#1}", 1],
     },
-    packages: { "[+]": ["tagformat"] },
+    packages: {
+      "[+]": ["tagformat"],
+    },
     tags: "all",
     tagformat: {
       id: (id: string) => `equation-${id.replace(/\s/g, "_")}`,
