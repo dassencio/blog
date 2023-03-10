@@ -112,7 +112,7 @@
     P(n) &= 1 - P^*(n) \\
          &= 1 - P^{(2)} P^{(3)} \ldots P^{(n)} \\
          &= 1 - \left(\frac{N-1}{N}\right)\left(\frac{N-2}{N}\right) \ldots \left(\frac{N-(n-1)}{N}\right) \\
-         &= 1 - \prod_{i=1}^{n-1}\left(\frac{N-i}{N}\right) \label{eq_deriv_pn}
+         &= 1 - \prod_{i=1}^{n-1}\left(\frac{N-i}{N}\right) \label{Pn-product-form}
   </EquationBlock>
 
   <p>But since:</p>
@@ -132,27 +132,29 @@
 
   <EquationBlock boxed>
     P(n) = 1 - \prod_{i=1}^{n-1}\left(\frac{N-i}{N}\right) = 1 - \frac{N!}{N^n(N
-    - n)!} \label{eq_pn}
+    - n)!} \label{Pn-factorial-form}
   </EquationBlock>
 
   <p>
-    The intermediate result obtained in equation \eqref{eq_deriv_pn} has been
-    kept in equation \eqref{eq_pn} as it makes the computation of $P(n)$ very
-    easy to do on a computer, which is not the case for the expression involving
-    factorials since $N!$, $N^n$ and $(N-n)!$ can be immensely large even for
-    small values of $N$ and therefore not representable in
+    The intermediate result obtained in equation \eqref{Pn-product-form} has
+    been kept in equation \eqref{Pn-factorial-form} as it makes the computation
+    of $P(n)$ very easy to do on a computer, which is not the case for the
+    expression involving factorials since $N!$, $N^n$ and $(N-n)!$ can be
+    immensely large even for small values of $N$ and therefore not representable
+    in
     <a href="https://en.wikipedia.org/wiki/Floating_point"
       >finite precision arithmetic</a
-    >. I will show later how one can use equation \eqref{eq_deriv_pn} to compute
-    $P(n)$ using <a href="https://www.gnu.org/software/octave/">Octave</a> (see
-    the "bonus" section below).
+    >. I will show later how one can use equation \eqref{Pn-product-form} to
+    compute $P(n)$ using
+    <a href="https://www.gnu.org/software/octave/">Octave</a> (see the "bonus"
+    section below).
   </p>
 
   <p>
-    Using equation \eqref{eq_pn}, we can determine the smallest number of people
-    we need to select so that two or more of them will have the same birthday
-    with probability larger than or equal to $50\%$. Is it perhaps $365/2
-    \approx 182$? Or $150$? Surprisingly, the answer is $23$:
+    Using equation \eqref{Pn-factorial-form}, we can determine the smallest
+    number of people we need to select so that two or more of them will have the
+    same birthday with probability larger than or equal to $50\%$. Is it perhaps
+    $365/2 \approx 182$? Or $150$? Surprisingly, the answer is $23$:
   </p>
 
   <EquationBlock>
@@ -193,7 +195,7 @@
   <p>
     We will now compute a simple lower bound estimate of $P(n)$ which is a
     useful tool for better understanding the birthday paradox. From equation
-    \eqref{eq_pn}, we get:
+    \eqref{Pn-factorial-form}, we get:
   </p>
 
   <EquationBlock>
@@ -220,16 +222,16 @@
   <p>we finally obtain:</p>
 
   <EquationBlock>
-    P(n) \geq Q(n) \ColonEq 1 - e^{-n(n-1)/(2N)} \label{eq_approx_p}
+    P(n) \geq Q(n) \ColonEq 1 - e^{-n(n-1)/(2N)} \label{Qn}
   </EquationBlock>
 
   <p>
     You can compare how close $Q(n)$ is to $P(n)$ in
     <FigureLink id="collision-probability" />. For any given probability $p$,
-    equation \eqref{eq_approx_p} can be used to estimate the smallest value of
-    $n$ for which we will have a collision with probability larger than or equal
-    to $p$, i.e., $P(n) \geq p$. We can do that by solving this same problem for
-    $Q(n)$ instead of $P(n)$ since any value of $n$ such that $Q(n) \geq p$ also
+    equation \eqref{Qn} can be used to estimate the smallest value of $n$ for
+    which we will have a collision with probability larger than or equal to $p$,
+    i.e., $P(n) \geq p$. We can do that by solving this same problem for $Q(n)$
+    instead of $P(n)$ since any value of $n$ such that $Q(n) \geq p$ also
     satisfies $P(n) \geq p$:
   </p>
 
@@ -239,7 +241,7 @@
       & \Longleftrightarrow 1 - e^{-n(n-1)/(2N)} \geq p \\
       & \Longleftrightarrow e^{-n(n-1)/(2N)} \leq 1 - p \\
       & \Longleftrightarrow \frac{-n(n-1)}{2N} \leq \log(1 - p) \\
-      & \Longleftrightarrow n(n-1) \geq 2N\log\left(\frac{1}{1-p}\right) \label{eq_n2}
+      & \Longleftrightarrow n(n-1) \geq 2N\log\left(\frac{1}{1-p}\right)
   </EquationBlock>
 
   <p>
@@ -262,7 +264,7 @@
   <p>This implies that any value of $n$ such that:</p>
 
   <EquationBlock>
-    n \geq \sqrt{2N\log\left(\frac{1}{1-p}\right)} + 1\label{eq_n}
+    n \geq \sqrt{2N\log\left(\frac{1}{1-p}\right)} + 1 \label{birthday-paradox}
   </EquationBlock>
 
   <p>
@@ -280,13 +282,15 @@
     by:
   </p>
 
-  <EquationBlock> n \approx 1.2\sqrt{N} \label{eq_n_approx} </EquationBlock>
+  <EquationBlock>
+    n \approx 1.2\sqrt{N} \label{birthday-paradox-0.5}
+  </EquationBlock>
 
   <p>
     The equation above is obtained by setting $p = 0.5$ in equation
-    \eqref{eq_n}, rounding up the constant factor and assuming that $\sqrt{N}
-    \gg 1$. For $N = 365$, equation \eqref{eq_n_approx} yields $n \approx 22.92$
-    (no surprises here).
+    \eqref{birthday-paradox}, rounding up the constant factor and assuming that
+    $\sqrt{N} \gg 1$. For $N = 365$, equation \eqref{birthday-paradox-0.5}
+    yields $n \approx 22.92$ (no surprises here).
   </p>
 
   <SectionTitle>Bonus: Using Octave to compute $P(n)$</SectionTitle>

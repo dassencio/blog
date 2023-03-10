@@ -31,11 +31,11 @@
   <EquationBlock align>
     P(A) &= P((A \cap B) \cup (A \cap B^c)) \\
          &= P(A \cap B) + P(A \cap B^c) \\
-         &= P(A|B)P(B) + P(A|B^c)P(B^c) \label{second_fact}
+         &= P(A|B)P(B) + P(A|B^c)P(B^c) \label{second-fact}
   </EquationBlock>
 
   <p>
-    where in equation \eqref{second_fact} the fact that $A \cap B$ and $A \cap
+    where in equation \eqref{second-fact} the fact that $A \cap B$ and $A \cap
     B^c$ are mutually exclusive events was used. Therefore, since $A \cap B = B
     \cap A$:
   </p>
@@ -44,13 +44,13 @@
   <EquationBlock align>
     P(B|A) &= \frac{P(B \cap A)}{P(A)} \\
            &= \frac{P(A|B)P(B)}{P(A)} \\
-           &= \frac{P(A|B)P(B)}{P(A|B)P(B) + P(A|B^c)P(B^c)}\label{proof}
+           &= \frac{P(A|B)P(B)}{P(A|B)P(B) + P(A|B^c)P(B^c)}\label{bayes-theorem}
   </EquationBlock>
 
   <p>
     as we wanted to prove. We can also prove a very interesting formula using
-    Bayes' theorem. From equation \eqref{proof} (used with both $B$ and $B^c$)
-    and equation \eqref{second_fact}, we have:
+    Bayes' theorem. From equation \eqref{bayes-theorem} (used with both $B$ and
+    $B^c$) and equation \eqref{second-fact}, we have:
   </p>
 
   <EquationBlock>

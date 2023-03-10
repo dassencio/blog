@@ -112,7 +112,7 @@
   <EquationBlock>
     \Vec{E} = \sum_{k=1}^{N} \Vec{E}_k = \sum_{k=1}^N \left( -\frac{kqe^{i
     \alpha}}{r^2} e^{i 2\pi k / N} \right) = -\frac{kqe^{i \alpha}}{r^2}
-    \sum_{k=1}^N (e^{i 2\pi / N})^k \label{E_as_sum}
+    \sum_{k=1}^N (e^{i 2\pi / N})^k \label{electric-field}
   </EquationBlock>
 
   <p>But since for any complex number $z \neq 1$ we have that:</p>
@@ -123,7 +123,8 @@
   </EquationBlock>
 
   <p>
-    then, from equation \eqref{E_as_sum} with $z = e^{i 2\pi/N}$, we obtain:
+    then, from equation \eqref{electric-field} with $z = e^{i 2\pi/N}$, we
+    obtain:
   </p>
 
   <EquationBlock>

@@ -27,15 +27,14 @@
 
   <!-- prettier-ignore -->
   <EquationBlock align numberLines>
-    x(t) &= r\cos\theta(t) &&= r\cos(\omega t) \label{eq_motion_x} \\
-    y(t) &= r\sin\theta(t) &&= r\sin(\omega t) \label{eq_motion_y}
+    x(t) &= r\cos\theta(t) &&= r\cos(\omega t) \label{position-x} \\
+    y(t) &= r\sin\theta(t) &&= r\sin(\omega t) \label{position-y}
   </EquationBlock>
 
   <p>
     The velocities and accelerations along the $x$ and $y$ directions can be
-    obtained directly from equations \eqref{eq_motion_x} and
-    \eqref{eq_motion_y}. Using the notation $\dot{q}$ to represent $dq/dt$, we
-    have that:
+    obtained directly from equations \eqref{position-x} and \eqref{position-y}.
+    Using the notation $\dot{q}$ to represent $dq/dt$, we have that:
   </p>
 
   <!-- prettier-ignore -->
@@ -72,7 +71,7 @@
   <EquationBlock align numberLines>
     \Vec{v}(t) &= \omega r (-\sin(\omega t), \cos(\omega t)) \\
     \Vec{a}(t) &= -\omega^2 r (\cos(\omega t), \sin(\omega t)) = -\omega^2
-    \Vec{x}(t) \label{accel_vec}
+    \Vec{x}(t) \label{acceleration}
   </EquationBlock>
 
   <p>
@@ -95,7 +94,7 @@
 
   <p>
     Since $\Vec{x}(t)$ always points away from the center $O$ of the circle,
-    equation \eqref{accel_vec} tells us that the acceleration $\Vec{a}(t)$,
+    equation \eqref{acceleration} tells us that the acceleration $\Vec{a}(t)$,
     called <b>centripetal acceleration</b>, points always to the center of the
     circle. To gain more intuition about why this is so, notice first that the
     velocity vector $\Vec{v}(t)$ is orthogonal to the position vector
@@ -130,7 +129,7 @@
       &= \sqrt{v_x^2(t) + v_y^2(t)} \\
       &= \sqrt{\omega^2 r^2 \sin^2(\omega t) + \omega^2 r^2\cos^2(\omega t)} \\
       &= \omega r \sqrt{\sin^2(\omega t) + \cos^2(\omega t)} \\
-      &= \omega r \label{mag_v}
+      &= \omega r \label{speed}
   </EquationBlock>
 
   <p>
@@ -155,20 +154,20 @@
     \frac{d\|\Vec{v}(t)\|}{dt}
     &= \frac{d}{dt}\sqrt{v_x^2(t) + v_y^2(t)} \\
     &= \frac{2v_x(t)a_x(t) + 2v_y(t)a_y(t)}{2\sqrt{v_x^2(t) + v_y^2(t)}} \\
-    &= \frac{ \Vec{v}(t)\cdot\Vec{a}(t) }{\|\Vec{v}(t)\|} \label{dv_dt}
+    &= \frac{ \Vec{v}(t)\cdot\Vec{a}(t) }{\|\Vec{v}(t)\|} \label{speed-derivative}
   </EquationBlock>
 
   <p>
     When $\Vec{a}(t)$ is orthogonal to $\Vec{v}(t)$, the magnitude of
     $\Vec{v}(t)$ remains constant despite the fact that its direction will
     change if the acceleration is not zero. Since we made no assumptions on
-    $\Vec{v}(t)$ and $\Vec{a}(t)$ when deriving equation \eqref{dv_dt}, it must
-    be valid in general.
+    $\Vec{v}(t)$ and $\Vec{a}(t)$ when deriving equation
+    \eqref{speed-derivative}, it must be valid in general.
   </p>
 
   <p>
     Given that the object always travels in a circle of radius $r$, then
-    $\|\Vec{x}(t)\| = r$ for all $t$, so from equation \eqref{accel_vec}, the
+    $\|\Vec{x}(t)\| = r$ for all $t$, so from equation \eqref{acceleration}, the
     magnitude $a(t)$ of the acceleration is also constant and given by:
   </p>
 
@@ -176,7 +175,7 @@
     a(t) = \|\Vec{a}(t)\| = \omega^2 \|\Vec{x}(t)\| = \omega^2 r = \frac{v^2}{r}
   </EquationBlock>
 
-  <p>where equation \eqref{mag_v} was used.</p>
+  <p>where equation \eqref{speed} was used.</p>
 
   <p>
     To sum up, whenever an object moves along a circular path with constant

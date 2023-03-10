@@ -19,8 +19,7 @@
   </p>
 
   <EquationBlock>
-    P = \int_{\|\Vec{x}\| \leq r_0} |\psi(\Vec{x})|^2 d\Vec{x}
-    \label{eq_prob_r0}
+    P = \int_{\|\Vec{x}\| \leq r_0} |\psi(\Vec{x})|^2 d\Vec{x} \label{P-exact}
   </EquationBlock>
 
   <p>
@@ -39,12 +38,12 @@
 
   <EquationBlock>
     P \approx |\psi(\Vec{0})|^2 \int_{\|\Vec{x}\| \leq r_0} d\Vec{x} =
-    \frac{4\pi r_0^3}{3}|\psi(\Vec{0})|^2 \label{eq_prob_approx1}
+    \frac{4\pi r_0^3}{3}|\psi(\Vec{0})|^2 \label{P-approximate}
   </EquationBlock>
 
   <p>
     For any state with a known wave function $\psi(\Vec{x})$, we can use
-    equation \eqref{eq_prob_approx1} to obtain a very good approximation of $P$.
+    equation \eqref{P-approximate} to obtain a very good approximation of $P$.
     Consider, for instance, the eigenfunctions of the Hydrogen atom. They are
     specified by three quantum numbers $(n, l, m)$ and always have the form:
   </p>
@@ -64,7 +63,8 @@
   </p>
 
   <EquationBlock>
-    R_{nl}(r) = \frac{1}{r}\rho^{l+1} e^{-\rho} v(\rho) \label{eq_R}
+    R_{nl}(r) = \frac{1}{r}\rho^{l+1} e^{-\rho} v(\rho)
+    \label{radial-wave-function}
   </EquationBlock>
 
   <p>where $\rho = r / (a_0 n)$, $v(\rho)$ is a polynomial function and</p>
@@ -76,9 +76,9 @@
   <p>
     is the
     <a href="https://en.wikipedia.org/wiki/Bohr_radius">Bohr radius</a> ($m$ is
-    the mass of the electron). From equation \eqref{eq_R} and the definition of
-    $\rho$, we have that $R_{nl}(r) \propto r^l e^{-\rho} v(\rho)$ and therefore
-    $R_{nl}(0) = 0$ for all $l \gt 0$. Hence:
+    the mass of the electron). From equation \eqref{radial-wave-function} and
+    the definition of $\rho$, we have that $R_{nl}(r) \propto r^l e^{-\rho}
+    v(\rho)$ and therefore $R_{nl}(0) = 0$ for all $l \gt 0$. Hence:
   </p>
 
   <EquationBlock>
@@ -89,7 +89,7 @@
   <p>
     whenever $l \gt 0$. Denoting the value of $P$ for the eigenstate specified
     by the quantum numbers $(n, l, m)$ as $P_{nlm}$, equation
-    \eqref{eq_prob_approx1} then gives us:
+    \eqref{P-approximate} then gives us:
   </p>
 
   <EquationBlock> l \gt 0 \Longrightarrow P_{nlm} = 0 </EquationBlock>
@@ -133,7 +133,7 @@
   </EquationBlock>
 
   <p>
-    These values can now be used in equation \eqref{eq_prob_r0} to obtain the
+    These values can now be used in equation \eqref{P-exact} to obtain the
     probability of finding the electron inside the nucleus for the eigenstates
     with $n = 1, 2, 3$ and $l = m = 0$:
   </p>

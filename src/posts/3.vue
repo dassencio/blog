@@ -168,14 +168,14 @@
   <p>and therefore:</p>
 
   <EquationBlock>
-    P_N = \frac{N!^3}{2^{N - 1} N^2} \label{num_possibilities}
+    P_N = \frac{N!^3}{2^{N - 1} N^2} \label{num-possibilities}
   </EquationBlock>
 
   <p>
     As the numbers shown in
     <TableLink id="PN-values" /> indicate, the computational work required to
     simulate all possibilities grows extremely fast as $N$ increases, which is
-    to be expected from equation \eqref{num_possibilities} since $N!$ grows much
+    to be expected from equation \eqref{num-possibilities} since $N!$ grows much
     faster than both $2^{N - 1}$ and $N$. This imposes practical limitations on
     the maximum number of fugitives we can handle when trying to solve the
     problem using brute force, but these limitations can be at least partially

@@ -69,14 +69,14 @@
 
   <EquationBlock>
     Y = \frac{1.5 \cdot 10^{24}}{C^T_{\textrm{year}}} \Longrightarrow Y \approx
-    \frac{4 \cdot 10^{21}}{D C_{\textrm{day}}} \label{eq_y}
+    \frac{4 \cdot 10^{21}}{D C_{\textrm{day}}} \label{years}
   </EquationBlock>
 
   <p>
     Consider now an extreme scenario where the entire human population consists
     of only developers (approximately $7$ billion in total), and that each
     person generates a new commit every second without interruptions (i.e., no
-    one ever sleeps or takes a break). Equation \eqref{eq_y} then yields:
+    one ever sleeps or takes a break). Equation \eqref{years} then yields:
   </p>
 
   <EquationBlock>

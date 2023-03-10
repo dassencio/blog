@@ -22,11 +22,11 @@
   </p>
 
   <EquationBlock>
-    e^{i\theta} \ColonEq \cos\theta + i\sin\theta \label{euler_eq}
+    e^{i\theta} \ColonEq \cos\theta + i\sin\theta \label{eulers-formula}
   </EquationBlock>
 
   <p>
-    Equation \eqref{euler_eq} is called
+    Equation \eqref{eulers-formula} is called
     <a href="https://en.wikipedia.org/wiki/Euler%27s_formula">Euler's formula</a
     >. If you're wondering what could motivate such a strange definition,
     consider the Taylor series for $e^x$, where $x$ is a real number:
@@ -34,12 +34,12 @@
 
   <EquationBlock>
     e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} +
-    \ldots = \sum_{n=0}^{\infty} \frac{x^n}{n!} \label{exp_real_def}
+    \ldots = \sum_{n=0}^{\infty} \frac{x^n}{n!} \label{exp-taylor-series}
   </EquationBlock>
 
   <p>
     What would happen if we lost our senses and decided to replace $x$ with
-    $i\theta$ in equation \eqref{exp_real_def}? Well, we would obtain:
+    $i\theta$ in equation \eqref{exp-taylor-series}? Well, we would obtain:
   </p>
 
   <!-- prettier-ignore -->
@@ -58,7 +58,8 @@
 
   <p>
     where above we used the Taylor series for both $\cos\theta$ and
-    $\sin\theta$. This is exactly what we have in equation \eqref{euler_eq}!
+    $\sin\theta$. This is exactly what we have in equation
+    \eqref{eulers-formula}!
   </p>
 
   <p>
@@ -79,7 +80,7 @@
 
   <EquationBlock>
     z = |z|(\cos\theta + i\sin\theta) = |z|e^{i\theta} = e^{\log|z|} e^{i\theta}
-    = e^{\log|z| + i\theta} \label{polar_form}
+    = e^{\log|z| + i\theta}
   </EquationBlock>
 
   <p>
@@ -88,7 +89,7 @@
 
   <EquationBlock>
     \log{z} = \log(e^{\log|z| + i\theta}) \ColonEq \log|z| + i\theta
-    \label{complex_log}
+    \label{complex-log}
   </EquationBlock>
 
   <p>
@@ -105,7 +106,7 @@
   </EquationBlock>
 
   <p>
-    As a next step, let's use equation \eqref{complex_log} to compute $\log i$.
+    As a next step, let's use equation \eqref{complex-log} to compute $\log i$.
     Since $|i| = 1$, we have that:
   </p>
 
@@ -116,7 +117,7 @@
   <p>Therefore:</p>
 
   <EquationBlock>
-    \log i = \log|i| + i\pi/2 = \log 1 + i\pi/2 = i\pi/2 \label{log_i}
+    \log i = \log|i| + i\pi/2 = \log 1 + i\pi/2 = i\pi/2 \label{log-i}
   </EquationBlock>
 
   <p>
@@ -142,7 +143,7 @@
   </EquationBlock>
 
   <p>
-    where equation \eqref{log_i} was used. Interestingly, $i^i$ is a real
+    where equation \eqref{log-i} was used. Interestingly, $i^i$ is a real
     number!
   </p>
 

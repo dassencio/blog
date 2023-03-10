@@ -50,7 +50,7 @@
 
   <EquationBlock>
     \frac{v_A^2(t)}{2} + \frac{p_A}{\rho} + gh_A(t) = \frac{v_B^2(t)}{2} +
-    \frac{p_B}{\rho} + gh_B(t) \label{eq_bern}
+    \frac{p_B}{\rho} + gh_B(t) \label{bernoulli}
   </EquationBlock>
 
   <p>
@@ -60,7 +60,7 @@
     $A$ and $B$ are in direct contact with the surrounding air, $p_A = p_B =
     p_0$, where $p_0$ is the atmospheric pressure. Also, setting $h_B(t) = 0$
     gives us $h_A(t) = h(t)$. Finally, since the fluid's top surface moves down
-    slowly, we can take $v_A(t) \approx 0$. Equation \eqref{eq_bern} then
+    slowly, we can take $v_A(t) \approx 0$. Equation \eqref{bernoulli} then
     becomes:
   </p>
 
@@ -70,7 +70,7 @@
 
   <p>and therefore:</p>
 
-  <EquationBlock> v_B(t) = \sqrt{2gh(t)} \label{eq_vB} </EquationBlock>
+  <EquationBlock> v_B(t) = \sqrt{2gh(t)} \label{flow-speed} </EquationBlock>
 
   <p>
     so the fluid comes out of the funnel with speed $v(t) = v_B(t) =
@@ -94,27 +94,26 @@
 
   <EquationBlock>
     V(t) = \frac{1}{3}\pi r^2(t) h(t) =
-    \frac{\pi}{3}\left(\frac{b}{h_0}\right)^2h^3(t) \label{eq_volume}
+    \frac{\pi}{3}\left(\frac{b}{h_0}\right)^2h^3(t) \label{volume}
   </EquationBlock>
 
   <p>
-    As $h(t) \rightarrow 0$, $r(t) \rightarrow a$ and equation \eqref{eq_volume}
+    As $h(t) \rightarrow 0$, $r(t) \rightarrow a$ and equation \eqref{volume}
     will no longer be an accurate approximation of the actual fluid volume in
     the funnel. The small amount of remaining fluid at that time will however
     leave the funnel quickly enough to have little influence on the overall time
     taken by the entire fluid volume to go through it, which is the quantity we
-    ultimately care about. In light of that, we will use equation
-    \eqref{eq_volume} to express the fluid volume at all times.
+    ultimately care about. In light of that, we will use equation \eqref{volume}
+    to express the fluid volume at all times.
   </p>
 
   <p>
-    From equation \eqref{eq_vB}, the volumetric rate at which the fluid flows
-    out of the funnel is equal to:
+    From equation \eqref{flow-speed}, the volumetric rate at which the fluid
+    flows out of the funnel is equal to:
   </p>
 
   <EquationBlock>
-    \Phi(t) = A v(t) = (\pi a^2) v(t) = \pi a^2 \sqrt{2gh(t)}
-    \label{eq_flow_rate}
+    \Phi(t) = A v(t) = (\pi a^2) v(t) = \pi a^2 \sqrt{2gh(t)} \label{flow-rate}
   </EquationBlock>
 
   <p>
@@ -123,9 +122,11 @@
     decreases, we have:
   </p>
 
-  <EquationBlock> \dot{V}(t) = -\Phi(t) \label{eq_v_phi} </EquationBlock>
+  <EquationBlock>
+    \dot{V}(t) = -\Phi(t) \label{volume-derivative}
+  </EquationBlock>
 
-  <p>But from equation \eqref{eq_volume}, we have that:</p>
+  <p>But from equation \eqref{volume}, we have that:</p>
 
   <EquationBlock>
     \dot{V}(t) = \frac{\pi}{3}\left(\frac{b}{h_0}\right)^2 3 h^2(t) \dot{h}(t) =
@@ -133,8 +134,8 @@
   </EquationBlock>
 
   <p>
-    Inserting this into equation \eqref{eq_v_phi} and using equation
-    \eqref{eq_flow_rate}, we get:
+    Inserting this into equation \eqref{volume-derivative} and using equation
+    \eqref{flow-rate}, we get:
   </p>
 
   <EquationBlock>
@@ -145,7 +146,7 @@
 
   <EquationBlock>
     \left(\frac{b}{h_0}\right)^2 h^{3/2}(t) \dot{h}(t) = -a^2 \sqrt{2g}
-    \label{eq_hr}
+    \label{fluid-height-derivative}
   </EquationBlock>
 
   <p>Since:</p>
@@ -154,7 +155,7 @@
     h^{3/2}(t) \dot{h}(t) = \frac{2}{5}\frac{d}{dt}h^{5/2}(t)
   </EquationBlock>
 
-  <p>then equation \eqref{eq_hr} can be rewritten as:</p>
+  <p>then equation \eqref{fluid-height-derivative} can be rewritten as:</p>
 
   <EquationBlock>
     \frac{d}{dt}h^{5/2}(t) = -\frac{5}{2} \left(\frac{h_0}{b}\right)^2 a^2
@@ -185,7 +186,7 @@
 
   <EquationBlock>
     h(t) = h_0\left[ 1 - \frac{5}{2} \left(\frac{a}{b}\right)^2
-    \sqrt{\frac{2g}{h_0}} t \right]^{2/5} \label{eq_h}
+    \sqrt{\frac{2g}{h_0}} t \right]^{2/5} \label{fluid-height}
   </EquationBlock>
 
   <p>
@@ -201,12 +202,12 @@
 
   <EquationBlock boxed>
     T = \frac{2}{5} \left(\frac{b}{a}\right)^2 \sqrt{\frac{h_0}{2g}}
-    \label{eq_T}
+    \label{flow-time}
   </EquationBlock>
 
   <p>
-    Equation \eqref{eq_T} can be used to write equation \eqref{eq_h} in a
-    simpler form:
+    Equation \eqref{flow-time} can be used to write equation
+    \eqref{fluid-height} in a simpler form:
   </p>
 
   <EquationBlock> h(t) = h_0\left(1 - \frac{t}{T} \right)^{2/5} </EquationBlock>

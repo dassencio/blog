@@ -66,7 +66,7 @@
 
   <EquationBlock>
     \dot{x}(t) = \frac{\alpha}{2m}\left[ \frac{1}{(T - t)^2} - \frac{1}{T^2}
-    \right] \label{vel}
+    \right] \label{velocity}
   </EquationBlock>
 
   <p>
@@ -76,7 +76,7 @@
     = T$.
   </p>
 
-  <p>Integrating equation \eqref{vel} with respect to time yields:</p>
+  <p>Integrating equation \eqref{velocity} with respect to time yields:</p>
 
   <EquationBlock>
     \int_{t' = 0}^{t' = t}\dot{x}(t')dt' = \frac{\alpha}{2m}\left[ \int_{t' =
@@ -101,10 +101,12 @@
          \frac{t}{T^2}\right] \\
       &= \frac{\alpha}{2m}\left[ \frac{T^2 - T(T- t) - t(T - t)}{T^2(T - t)} \right] \\
       &= \frac{\alpha}{2m}\left[ \frac{T^2 - T^2 + Tt - tT + t^2}{T^2(T - t)} \right] \\
-      &= \frac{\alpha}{2mT^2} \frac{t^2}{(T - t)}  \label{pos}
+      &= \frac{\alpha}{2mT^2} \frac{t^2}{(T - t)}  \label{position}
   </EquationBlock>
 
-  <p>The object is initially at $x = 0$, so equation \eqref{pos} yields:</p>
+  <p>
+    The object is initially at $x = 0$, so equation \eqref{position} yields:
+  </p>
 
   <EquationBlock>
     x(t) = \frac{\alpha}{2mT^2} \frac{t^2}{(T - t)}
