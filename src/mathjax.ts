@@ -35,7 +35,7 @@ window.MathJax = {
     },
     tags: "all",
     tagformat: {
-      id: (id: string) => `equation-${id.replace(/\s/g, "_")}`,
+      id: (id: string) => `equation-${id}`,
     },
   },
 };
