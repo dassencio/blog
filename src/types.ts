@@ -2,6 +2,7 @@ import type { RouteComponent } from "vue-router";
 
 export enum PostLabel {
   Algorithms = "Algorithms",
+  AppliedMathematics = "Applied mathematics",
   CompAnalysis = "Complex analysis",
   Compsci = "Computer science",
   Electromagnetism = "Electromagnetism",
@@ -18,6 +19,7 @@ export enum PostLabel {
   Probability = "Probability theory",
   Programming = "Programming",
   QuantumMechanics = "Quantum mechanics",
+  ScientificComputing = "Scientific computing",
   Security = "Security",
   Shell = "Shell",
   SSH = "SSH",
