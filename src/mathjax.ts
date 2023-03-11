@@ -29,6 +29,11 @@ window.MathJax = {
     macros: {
       ColonEq: "\\mathrel{\\vcenter{:}}=",
       Vec: ["\\mathbf{#1}", 1],
+      D: ["\\mathop{d#1}", 1], // Differential (with spaces around).
+      Di: ["d#1", 1], // Differential (inline, no spaces around).
+      DD: ["\\frac{d#1}{d#2}", 2], // Derivative (fraction).
+      DDi: ["d#1/d#2", 2], // Derivative (inline, flat fraction).
+      DDo: ["\\frac{d}{d#1}", 1], // Derivative as an operator (fraction).
     },
     packages: {
       "[+]": ["tagformat"],

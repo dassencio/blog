@@ -47,19 +47,19 @@
 
   <EquationBlock>
     \ddot{x}(t) = \frac{\alpha}{m}\frac{1}{(T - t)^3} \Longrightarrow \int_{t' =
-    0}^{t' = t} \ddot{x}(t')dt' = \int_{t' = 0}^{t' = t}
-    \frac{\alpha}{m}\frac{1}{(T - t')^3}dt'
+    0}^{t' = t} \ddot{x}(t')\D{t'} = \int_{t' = 0}^{t' = t}
+    \frac{\alpha}{m}\frac{1}{(T - t')^3}\D{t'}
   </EquationBlock>
 
   <p>
     The integral on the right-hand side can be computed by letting $w \ColonEq T
-    - t'$, with $dw = -dt'$:
+    - t'$, with $\Di{w} = -\Di{t'}$:
   </p>
 
   <EquationBlock>
     \dot{x}(t) - \dot{x}(0) = \frac{\alpha}{m}\int_{w = T}^{w = T - t}
-    \frac{(-1)}{w^3}dw = \frac{\alpha}{m}\left(\frac{1}{2w^2}\right) \bigg|_{w =
-    T}^{w = T - t}
+    \frac{(-1)}{w^3}\D{w} = \frac{\alpha}{m}\left(\frac{1}{2w^2}\right)
+    \bigg|_{w = T}^{w = T - t}
   </EquationBlock>
 
   <p>Since the object is initially at rest, we get:</p>
@@ -79,22 +79,23 @@
   <p>Integrating equation \eqref{velocity} with respect to time yields:</p>
 
   <EquationBlock>
-    \int_{t' = 0}^{t' = t}\dot{x}(t')dt' = \frac{\alpha}{2m}\left[ \int_{t' =
-    0}^{t' = t}\frac{1}{(T - t')^2}dt' -\int_{t' = 0}^{t' = t}\frac{1}{T^2}dt'
-    \right]
+    \int_{t' = 0}^{t' = t}\dot{x}(t')\D{t'} = \frac{\alpha}{2m}\left[ \int_{t' =
+    0}^{t' = t}\frac{1}{(T - t')^2}\D{t'} - \int_{t' = 0}^{t' =
+    t}\frac{1}{T^2}\D{t'} \right]
   </EquationBlock>
 
   <p>
     Computing the second integral on the right-hand side is a trivial task since
     the integrand $1/T^2$ is a constant. To compute the first integral on the
-    right-hand side, let $w \ColonEq T - t'$, with $dw = -dt'$. We then obtain:
+    right-hand side, let $w \ColonEq T - t'$, with $\Di{w} = -\Di{t'}$. We then
+    obtain:
   </p>
 
   <!-- prettier-ignore -->
   <EquationBlock align>
     x(t) - x(0)
       &= \frac{\alpha}{2m}\left[ \int_{w = T}^{w = T
-         - t}\frac{(-1)}{w^2}dw - \frac{t}{T^2} \right] \\
+         - t}\frac{(-1)}{w^2}\D{w} - \frac{t}{T^2} \right] \\
       &= \frac{\alpha}{2m}\left[ \left(\frac{1}{w}\right)\bigg|_{w = T}^{w = T - t}
          - \frac{t}{T^2}\right] \\
       &= \frac{\alpha}{2m}\left[ \frac{1}{T - t} - \frac{1}{T} -

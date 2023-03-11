@@ -19,7 +19,8 @@
   </p>
 
   <EquationBlock>
-    P = \int_{\|\Vec{x}\| \leq r_0} |\psi(\Vec{x})|^2 d\Vec{x} \label{P-exact}
+    P = \int_{\|\Vec{x}\| \leq r_0} |\psi(\Vec{x})|^2 \D{\Vec{x}}
+    \label{P-exact}
   </EquationBlock>
 
   <p>
@@ -37,7 +38,7 @@
   </p>
 
   <EquationBlock>
-    P \approx |\psi(\Vec{0})|^2 \int_{\|\Vec{x}\| \leq r_0} d\Vec{x} =
+    P \approx |\psi(\Vec{0})|^2 \int_{\|\Vec{x}\| \leq r_0} \D{\Vec{x}} =
     \frac{4\pi r_0^3}{3}|\psi(\Vec{0})|^2 \label{P-approximate}
   </EquationBlock>
 

@@ -34,7 +34,7 @@
   <p>
     The velocities and accelerations along the $x$ and $y$ directions can be
     obtained directly from equations \eqref{position-x} and \eqref{position-y}.
-    Using the notation $\dot{q}$ to represent $dq/dt$, we have that:
+    Using the notation $\dot{q}$ to represent $\DDi{q}{t}$, we have that:
   </p>
 
   <!-- prettier-ignore -->
@@ -151,8 +151,8 @@
 
   <!-- prettier-ignore -->
   <EquationBlock align>
-    \frac{d\|\Vec{v}(t)\|}{dt}
-    &= \frac{d}{dt}\sqrt{v_x^2(t) + v_y^2(t)} \\
+    \DD{\|\Vec{v}(t)\|}{t}
+    &= \DDo{t}\sqrt{v_x^2(t) + v_y^2(t)} \\
     &= \frac{2v_x(t)a_x(t) + 2v_y(t)a_y(t)}{2\sqrt{v_x^2(t) + v_y^2(t)}} \\
     &= \frac{ \Vec{v}(t)\cdot\Vec{a}(t) }{\|\Vec{v}(t)\|} \label{speed-derivative}
   </EquationBlock>

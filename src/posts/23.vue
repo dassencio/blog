@@ -152,22 +152,21 @@
   <p>Since:</p>
 
   <EquationBlock>
-    h^{3/2}(t) \dot{h}(t) = \frac{2}{5}\frac{d}{dt}h^{5/2}(t)
+    h^{3/2}(t) \dot{h}(t) = \frac{2}{5}\DDo{t}h^{5/2}(t)
   </EquationBlock>
 
   <p>then equation \eqref{fluid-height-derivative} can be rewritten as:</p>
 
   <EquationBlock>
-    \frac{d}{dt}h^{5/2}(t) = -\frac{5}{2} \left(\frac{h_0}{b}\right)^2 a^2
-    \sqrt{2g}
+    \DDo{t}h^{5/2}(t) = -\frac{5}{2} \left(\frac{h_0}{b}\right)^2 a^2 \sqrt{2g}
   </EquationBlock>
 
   <p>Integrating both sides with respect to time yields:</p>
 
   <!-- prettier-ignore -->
   <EquationBlock align>
-    \int_{t'=0}^{t'=t} \frac{d}{dt'}h^{5/2}(t')dt' &=
-      -\int_{t'=0}^{t'=t} \frac{5}{2} \left(\frac{h_0}{b}\right)^2 a^2 \sqrt{2g} dt' \\
+    \int_{t'=0}^{t'=t} \DDo{t'}h^{5/2}(t')\D{t'} &=
+      -\int_{t'=0}^{t'=t} \frac{5}{2} \left(\frac{h_0}{b}\right)^2 a^2 \sqrt{2g}\D{t'} \\
     h^{5/2}(t)\bigg|_{t'=0}^{t'=t} &=
       -\frac{5}{2} \left(\frac{h_0}{b}\right)^2 a^2 \sqrt{2g} t \\
     h^{5/2}(t) - h_0^{5/2} &=
