@@ -34,6 +34,7 @@ window.MathJax = {
       DD: ["\\frac{d#1}{d#2}", 2], // Derivative (fraction).
       DDi: ["d#1/d#2", 2], // Derivative (inline, flat fraction).
       DDo: ["\\frac{d}{d#1}", 1], // Derivative as an operator (fraction).
+      SumSub: ["\\mathop{\\sum_{#1}}_{#2}", 2], // Sum with two subscripts.
     },
     packages: {
       "[+]": ["tagformat"],
