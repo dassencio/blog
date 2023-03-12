@@ -2,7 +2,7 @@
   <p>
     Frequently, in scientific computing, one needs to integrate polynomials over
     <a href="https://en.wikipedia.org/wiki/Polygonal_chain">polygonal curves</a>
-    (also known as "polygonal chains", "polygonal paths", "polylines" and other
+    (also known as "polygonal chains", "polygonal paths", "polylines" or other
     similar names). In this post, I will derive a general formula for such
     integrals in two dimensions.
   </p>
@@ -10,7 +10,7 @@
   <p>Let $p_d(x,y)$ be a two-dimensional polynomial of degree $d$:</p>
 
   <EquationBlock>
-    p_d(x,y) = \SumSub{m,n=0}{m + n \leq d} c_{mn} x^m y^n
+    p_d(x,y) = \SumSub{m,n=0}{m + n \leq d}^d c_{mn} x^m y^n
   </EquationBlock>
 
   <p>
@@ -22,7 +22,7 @@
   <EquationBlock> \int_{S} p_d(x,y) \D{l} </EquationBlock>
 
   <p>
-    The curve $S$ is a connected series of $n$ line segments $S_i$, for $i =
+    The curve $S$ is a connected series of $n$ line segments $S_i$ for $i =
     1,2,\ldots,n$. Let $L_i$ be the length of $S_i$ and $(x_i, y_i)$ and
     $(x_{i+1}, y_{i+1}) = (x_i + \Delta{x_i}, y_i + \Delta{y_i})$ be the
     coordinates of its end nodes (see
@@ -77,9 +77,9 @@
       &= \sum_{i=1}^{n} \int_0^1 p_d(\tilde{x}_i(s), \tilde{y}_i(s))
          \left\|\Vec{r}_i'(s)\right\| \D{s} \\
       &= \sum_{i=1}^{n} \int_0^1 p_d(x_i + s\Delta{x_i}, y_i + s\Delta{y_i}) L_i \D{s} \\
-      &= \sum_{i=1}^{n} L_i \int_0^1 \SumSub{m,n=0}{m + n \leq d}
+      &= \sum_{i=1}^{n} L_i \int_0^1 \SumSub{m,n=0}{m + n \leq d}^d
          c_{mn} (x_i + s\Delta{x_i})^m (y_i + s\Delta{y_i})^n \D{s} \\
-      &= \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d} L_i c_{mn}
+      &= \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d}^d L_i c_{mn}
          \int_0^1 (x_i + s\Delta{x_i})^m (y_i + s\Delta{y_i})^n \D{s}
       \label{integral-expansion}
   </EquationBlock>
@@ -128,9 +128,9 @@
   <!-- prettier-ignore -->
   <EquationBlock align>
     \int_{S} p_d(x,y) \D{l}
-      &= \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d} L_i c_{mn} \sum_{k=0}^{m}
+      &= \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d}^d L_i c_{mn} \sum_{k=0}^{m}
          \sum_{p=0}^{n} \frac{\alpha_{mnkpi}}{k+p+1} \\
-      &= \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d} \sum_{k=0}^{m}
+      &= \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d}^d \sum_{k=0}^{m}
          \sum_{p=0}^{n} L_i c_{mn} \frac{\alpha_{mnkpi}}{k+p+1} \\
   </EquationBlock>
 
@@ -140,7 +140,7 @@
   </p>
 
   <EquationBlock boxed>
-    \int_{S} p_d(x,y) \D{l} = \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d}^{d}
+    \int_{S} p_d(x,y) \D{l} = \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d}^d
     \sum_{k=0}^{m} \sum_{p=0}^{n} L_i c_{mn} \binom{m}{k} \binom{n}{p}
     \frac{x_i^{m-k} \Delta{x_i}^k y_i^{n-p} \Delta{y_i}^p}{k+p+1}
     \label{integral-polygonal-curve}
@@ -149,11 +149,12 @@
   <p></p>
 
   <p>
-    Unfortunately, equation \eqref{integral-polygonal-curve} is not very
-    efficient for numerical computations (although it can be used as a last
-    resort). Whenever possible, it's better to compute the desired integral
-    explicitly and hard-code the obtained formula for better performance. As an
-    example, for polynomials of degree $d = 2$:
+    Even though equation \eqref{integral-polygonal-curve} is a general, analytic
+    solution to the problem, implementing it numerically in this form will
+    result in a method which is suboptimal in terms of performance (although it
+    can be used as a last resort). A more efficient method is obtained by
+    calculating all coefficients in advance and then hard-coding the obtained
+    formula. To illustrate what I mean, consider a polynomial of degree $d = 2$:
   </p>
 
   <EquationBlock>
@@ -161,8 +162,9 @@
   </EquationBlock>
 
   <p>
-    we can use equation \eqref{integral-polygonal-curve} to obtain a formula
-    which is easy to hard-code:
+    Pre-computing the coefficients in equation \eqref{integral-polygonal-curve}
+    for $p_2(x,y)$ yields a formula which is easier to implement numerically and
+    also computationally more efficient:
   </p>
 
   <!-- prettier-ignore -->
