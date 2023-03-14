@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "7d8105088d8f0a68627c750621d2199f",
+    component: () => import("@/posts/26.vue"),
+    date: dateToString(2014, 1, 6),
+    id: "26",
+    labels: [PostLabel.Linux, PostLabel.Networking],
+    title: "Changing a network interface's MAC address",
+  },
+  {
     compatibilityIndex: "c6d2b27efe4c87b1cc24686bf8793c0f",
     component: () => import("@/posts/25.vue"),
     date: dateToString(2014, 1, 1),
