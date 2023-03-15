@@ -110,25 +110,26 @@
     In order to better understand how MAC spoofing works, I ran the following
     experiment: I changed the MAC address of my laptop to the MAC address of my
     mobile phone and then connected my laptop to my wireless router (my phone
-    was already connected). This caused my phone's internet connection to stopp
+    was already connected). This caused my phone's internet connection to stop
     working, and it only started working again after I disconnected my laptop
-    from the wireless router and reconnected my phone. This is a form of
+    from the wireless router and reconnected my phone. By spoofing my laptop's
+    MAC address, I have therefore produced a
     <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack"
-      >denial-of-service </a
-    >attack, and if I kept on reconnecting my laptop to the router, my phone
+      >denial-of-service</a
+    >
+    attack, and if I kept on reconnecting my laptop to the router, my phone
     would be permanently deprived of internet access.
   </p>
 
   <p>
-    In the attack I simulated, the denial-of-service happens because there are
-    encryption parameters which must be in sync between a connected device and
-    the wireless
+    In this situation, a denial-of-service happened because there are encryption
+    parameters which must be in sync between a connected device and a wireless
     <a href="https://en.wikipedia.org/wiki/Wireless_access_point"
       >access point</a
     >
-    (WAP). By connecting my laptop to the WAP using the same MAC address as my
-    phone, I have effectively made my phone and the WAP become out of sync with
-    respect to these parameters and therefore unable to communicate.
+    (WAP). Connecting my laptop to the WAP using the same MAC address as my
+    phone made my phone and the WAP become out of sync with respect to these
+    parameters and therefore unable to communicate.
   </p>
 
   <SectionTitle>Bonus: The Coca Cola Company</SectionTitle>
