@@ -5,7 +5,7 @@
     network interface on Linux. In this post, I will show how this can be done
     using a very intuitive CLI tool called
     <a href="http://manpages.ubuntu.com/manpages/lucid/man1/macchanger.1.html"
-      ><code>macchanger</code></a
+      >macchanger</a
     >. If you're using Ubuntu/Debian, you can install it by opening a terminal
     and running:
   </p>
