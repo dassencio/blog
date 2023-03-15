@@ -37,12 +37,12 @@
 
   <p>
     where <code>&lt;new-mac-address&gt;</code> must have the format
-    <code>XX:XX:XX:XX:XX:XX</code>, with each "<code>X</code>" being a
-    hexadecimal digit (e.g. <code>a1:b2:c3:d4:e5:f6</code>). The output of the
-    command above will display three MAC addresses: the permanent one (fixed by
-    the vendor), the current one (before being modified) and the new one you set
-    it to. As an example, this is what I got after setting the MAC address of my
-    <code>eth0</code> interface to <code>aa:bb:cc:dd:ee:ff</code>:
+    <code>XX:XX:XX:XX:XX:XX</code>, with each <code>X</code> being a hexadecimal
+    digit (e.g. <code>a1:b2:c3:d4:e5:f6</code>). The output of the command above
+    will display three MAC addresses: the permanent one (fixed by the vendor),
+    the current one (before being modified) and the new one being assigned to
+    the interface. As an example, this is what I got after setting the MAC
+    address of my <code>eth0</code> interface to <code>aa:bb:cc:dd:ee:ff</code>:
   </p>
 
   <CodeBlock
@@ -60,11 +60,12 @@
   <SectionTitle>A deeper dive into the topic</SectionTitle>
 
   <p>
-    A MAC address is a 6 octets (48 bits) long identifier which is assigned to a
-    device when it is manufactured. It is (usually) a globally unique value. The
-    first 3 octets (24 bits) identify the organization which has manufactured
-    the device (e.g. Intel Corporation, Cisco Systems, Netgear Inc. etc.; this
-    organization is commonly the device vendor) and correspond to an
+    A MAC address is a 48-bit long identifier which is assigned to a device when
+    it is manufactured. This identifier is (usually) globally unique and
+    commonly expressed as a string of six octets. The first three octets (24
+    bits) identify the organization which has manufactured the device (e.g.
+    Intel Corporation, Cisco Systems, Netgear Inc. etc.; this organization is
+    commonly the device vendor) and correspond to an
     <a href="https://en.wikipedia.org/wiki/Organizationally_Unique_Identifier">
       Organizationally Unique Identifier</a
     >
@@ -97,13 +98,12 @@
 
   <CodeBlock code="sudo macchanger -r <interface>" />
 
-  <SectionTitle>MAC spoofing</SectionTitle>
+  <SectionTitle>MAC spoofing: an experiment</SectionTitle>
 
   <p>
     If you set the MAC address of your interface to the MAC address of some
-    other device in your network, you will be
-    <span class="italic">de facto</span>
-    impersonating it. This is a form of attack called
+    other device in your network, you will be <i>de facto</i> impersonating it.
+    This is a form of attack called
     <a href="https://en.wikipedia.org/wiki/MAC_spoofing">MAC spoofing</a>. As a
     simple test, I have changed the MAC address of my laptop to the MAC address
     of my mobile phone and then connected to my wireless router (the phone was
@@ -132,8 +132,8 @@
   <SectionTitle>Bonus: The Coca Cola Company</SectionTitle>
 
   <p>
-    I was surprised to find out that The Coca Cola Company has its own OUI. To
-    see it, run:
+    While writing this post, I was surprised to find out that The Coca Cola
+    Company has its own OUI. To see it, run:
   </p>
 
   <CodeBlock code="sudo macchanger -l | grep Coca" />
