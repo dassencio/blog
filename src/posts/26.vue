@@ -122,10 +122,10 @@
   </p>
 
   <p>
-    In this situation, a denial-of-service happened because there are encryption
-    parameters which must be in sync between a connected device and a wireless
+    In this situation, a denial of service happened because there are encryption
+    parameters which must be in sync between a connected device and a
     <a href="https://en.wikipedia.org/wiki/Wireless_access_point"
-      >access point</a
+      >wireless access point</a
     >
     (WAP). Connecting my laptop to the WAP using the same MAC address as my
     phone made my phone and the WAP become out of sync with respect to these
