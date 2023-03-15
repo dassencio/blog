@@ -37,8 +37,8 @@
     where <code>&lt;new-mac-address&gt;</code> must have the format
     <code>XX:XX:XX:XX:XX:XX</code>, with each <code>X</code> representing a
     hexadecimal digit (e.g. <code>a1:b2:c3:d4:e5:f6</code>). The output of the
-    command above will display three MAC addresses: the permanent one (fixed by
-    the vendor), the current one (before being modified) and the new one being
+    command above will display three MAC addresses: the (permanent) one set by
+    the vendor, the current one (before being modified) and the new one being
     assigned to the interface. As an example, this is what I get when setting
     the MAC address of my <code>eth0</code> interface to
     <code>aa:bb:cc:dd:ee:ff</code>:
