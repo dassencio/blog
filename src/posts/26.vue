@@ -1,15 +1,13 @@
 <template>
   <p>
-    There is more than one way to change the
+    There are multiple ways to change the
     <a href="https://en.wikipedia.org/wiki/MAC_address">MAC address</a> of a
-    network interface on Linux. One possibility is to use the
-    <a href="http://linux.die.net/man/8/ip"><code>ip</code></a>
-    command, but in this post, I will show how this can be done using the
+    network interface on Linux. In this post, I will show how this can be done
+    using a very intuitive CLI tool called
     <a href="http://manpages.ubuntu.com/manpages/lucid/man1/macchanger.1.html"
       ><code>macchanger</code></a
-    >
-    command as it is a more intuitive tool for this task. If you're using
-    Ubuntu/Debian, you can install it by opening a terminal and running:
+    >. If you're using Ubuntu/Debian, you can install it by opening a terminal
+    and running:
   </p>
 
   <CodeBlock code="sudo apt-get install macchanger" />
@@ -37,12 +35,13 @@
 
   <p>
     where <code>&lt;new-mac-address&gt;</code> must have the format
-    <code>XX:XX:XX:XX:XX:XX</code>, with each <code>X</code> being a hexadecimal
-    digit (e.g. <code>a1:b2:c3:d4:e5:f6</code>). The output of the command above
-    will display three MAC addresses: the permanent one (fixed by the vendor),
-    the current one (before being modified) and the new one being assigned to
-    the interface. As an example, this is what I got after setting the MAC
-    address of my <code>eth0</code> interface to <code>aa:bb:cc:dd:ee:ff</code>:
+    <code>XX:XX:XX:XX:XX:XX</code>, with each <code>X</code> representing a
+    hexadecimal digit (e.g. <code>a1:b2:c3:d4:e5:f6</code>). The output of the
+    command above will display three MAC addresses: the permanent one (fixed by
+    the vendor), the current one (before being modified) and the new one being
+    assigned to the interface. As an example, this is what I get when setting
+    the MAC address of my <code>eth0</code> interface to
+    <code>aa:bb:cc:dd:ee:ff</code>:
   </p>
 
   <CodeBlock
@@ -61,11 +60,11 @@
 
   <p>
     A MAC address is a 48-bit long identifier which is assigned to a device when
-    it is manufactured. This identifier is (usually) globally unique and
-    commonly expressed as a string of six octets. The first three octets (24
-    bits) identify the organization which has manufactured the device (e.g.
-    Intel Corporation, Cisco Systems, Netgear Inc. etc.; this organization is
-    commonly the device vendor) and correspond to an
+    it is manufactured. This identifier is usually globally unique and commonly
+    expressed as a string of six octets. The first three octets (24 bits)
+    identify the organization which has manufactured the device (e.g. Intel
+    Corporation, Cisco Systems, Netgear Inc. etc.; this organization is
+    typically the device vendor) and correspond to an
     <a href="https://en.wikipedia.org/wiki/Organizationally_Unique_Identifier">
       Organizationally Unique Identifier</a
     >
@@ -104,17 +103,20 @@
     If you set the MAC address of your interface to the MAC address of some
     other device in your network, you will be <i>de facto</i> impersonating it.
     This is a form of attack called
-    <a href="https://en.wikipedia.org/wiki/MAC_spoofing">MAC spoofing</a>. As a
-    simple test, I have changed the MAC address of my laptop to the MAC address
-    of my mobile phone and then connected to my wireless router (the phone was
-    already connected). Unsurprisingly, the my phone's internet connection
-    stopped working and only started working again after I disconnected my
-    laptop from the wireless router and reconnected the phone. This is a
-    classical case of a
+    <a href="https://en.wikipedia.org/wiki/MAC_spoofing">MAC spoofing</a>.
+  </p>
+
+  <p>
+    In order to better understand how MAC spoofing works, I ran the following
+    experiment: I changed the MAC address of my laptop to the MAC address of my
+    mobile phone and then connected my laptop to my wireless router (my phone
+    was already connected). This caused my phone's internet connection to stopp
+    working, and it only started working again after I disconnected my laptop
+    from the wireless router and reconnected my phone. This is a form of
     <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack"
       >denial-of-service </a
-    >attack (if I kept on reconnecting my laptop to the router, my phone would
-    be permanently deprived of internet access).
+    >attack, and if I kept on reconnecting my laptop to the router, my phone
+    would be permanently deprived of internet access.
   </p>
 
   <p>
