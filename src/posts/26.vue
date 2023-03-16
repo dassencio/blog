@@ -52,6 +52,13 @@
     "
   />
 
+  <p>
+    In order to be able to use the interface again under its new MAC address,
+    you must bring it back up:
+  </p>
+
+  <CodeBlock code="sudo ifconfig <interface> up" />
+
   <p>To restore the interface's MAC address to its original value, run:</p>
 
   <CodeBlock code="sudo macchanger -p <interface>" />
@@ -117,8 +124,8 @@
     <a href="https://en.wikipedia.org/wiki/Denial-of-service_attack"
       >denial-of-service</a
     >
-    attack, and if I kept on reconnecting my laptop to the router, my phone
-    would be permanently deprived of internet access.
+    attack against my phone, and if I kept on reconnecting my laptop to the
+    router, my phone would be permanently deprived of internet access.
   </p>
 
   <p>
