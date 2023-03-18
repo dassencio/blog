@@ -77,7 +77,7 @@
     >
     (OUI). Vendors must purchase OUI's from the
     <a href="https://en.wikipedia.org/wiki/IEEE_registration_authority"
-      >IEEE registration authority</a
+      >IEEE Registration Authority</a
     >. You can see a list of OUIs and the organizations they belong to with the
     following command:
   </p>
@@ -85,20 +85,20 @@
   <CodeBlock code="sudo macchanger -l" />
 
   <p>
-    To assign a random MAC address to your interface while keeping the OUI
+    To assign a random MAC address to an interface while keeping its OUI
     unchanged (in other words, a MAC address from the same vendor), run:
   </p>
 
   <CodeBlock code="sudo macchanger -e <interface>" />
 
   <p>
-    To assign a random MAC address from any known vendor to your interface, run:
+    To assign a random MAC address from any known vendor to an interface, run:
   </p>
 
   <CodeBlock code="sudo macchanger -a <interface>" />
 
   <p>
-    Finally, to assign a completely random MAC address to your interface (this
+    Finally, to assign a completely random MAC address to an interface (this
     will very likely generate a MAC address with an invalid OUI), run:
   </p>
 
@@ -107,8 +107,8 @@
   <SectionTitle>MAC spoofing: an experiment</SectionTitle>
 
   <p>
-    If you set the MAC address of your interface to the MAC address of some
-    other device in your network, you will be <i>de facto</i> impersonating it.
+    If you set the MAC address of an interface to the MAC address of some other
+    device in the same network, you will be <i>de facto</i> impersonating it.
     This is a form of attack called
     <a href="https://en.wikipedia.org/wiki/MAC_spoofing">MAC spoofing</a>.
   </p>
