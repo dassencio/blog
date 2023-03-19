@@ -2,22 +2,22 @@
   <p>
     Linux contains a nifty CLI tool called
     <a href="http://linux.die.net/man/1/pv">pv</a> which monitors the progress
-    of data transfers through pipes. This post contains some examples of how to
-    use it.
+    of data transfers through pipes. This post shows a few interesting
+    applications of pv.
   </p>
 
   <p>
-    Before jumping to examples, we need a bit of theory to understand how pv
-    works. Simply put, pv takes input from a pipe and outputs that input to its
-    standard output stream while showing the data transfer progress on its
-    standard error stream. To clarify, if you run:
+    Before going through examples, though, we need a first bit of theory to
+    understand how pv works. In a nutshell, pv takes input from a pipe and
+    outputs that input to its standard output stream while showing the data
+    transfer progress on its standard error stream. To clarify, if you run:
   </p>
 
   <CodeBlock code="cat input.txt | pv > output.txt" />
 
   <p>
     the contents of <code>input.txt</code> will be sent to pv, which will then
-    output this data to its standard output stream ( <code>output.txt</code>).
+    output this data to its standard output stream (<code>output.txt</code>).
     The screen output will show the data transfer progress through pv's standard
     error stream (the terminal):
   </p>
@@ -33,14 +33,13 @@
     the current data transfer rate through the pipe and, if possible to
     determine, the progress of the transfer (the <code>&lt;=&gt;</code> marker
     moves to the right as the file is transferred to indicate the current
-    progress and will bounce right and left if the progress cannot be
+    progress; it will bounce right and left if the progress cannot be
     determined). OK, now it's fun time!
   </p>
 
-  <SectionTitle
-    >1) Measure the maximum sequential reading speed of a hard
-    disk</SectionTitle
-  >
+  <SectionTitle>
+    1) Measure the maximum sequential reading speed of a hard disk
+  </SectionTitle>
 
   <p>
     If the
@@ -64,9 +63,9 @@
     you're using another Linux distribution.
   </p>
 
-  <SectionTitle
-    >2) Measure how fast data can be transferred through a pipe</SectionTitle
-  >
+  <SectionTitle>
+    2) Measure how fast data can be transferred through a pipe
+  </SectionTitle>
 
   <p>
     On Linux, the file
