@@ -4,9 +4,9 @@ import { PostLabel, type Post } from "@/types";
 const posts: Post[] = [
   {
     compatibilityIndex: "0ef89c5007d8811268b3ecfda26af22a",
-    component: () => import("@/posts/28.vue"),
+    component: () => import("@/posts/29.vue"),
     date: dateToString(2014, 2, 7),
-    id: "28",
+    id: "29",
     labels: [PostLabel.Linux, PostLabel.Shell],
     title: "Monitoring data transfers through pipes",
   },
