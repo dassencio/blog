@@ -7,19 +7,17 @@
   </p>
 
   <p>
-    In this first version, the library contains the necessary basic data
-    structures such as dense and sparse vectors/matrices, linear system solvers,
+    In this first version, the library contains essential data structures such
+    as dense and sparse vectors/matrices as well as linear system solvers,
     linear least squares solvers and matrix factorization algorithms.
   </p>
 
   <p>
-    FreeAML has an official webpage:
-    <a href="http://freeaml.org">freeAML.org</a>. It contains lots of examples
-    describing most of the tools available in the library and also an
-    installation guide.
+    Examples describing most of the tools available in the library and also an
+    installation guide are available
+    <a href="https://github.com/dassencio/freeaml#available-tools">here</a>.
+    Enjoy! ;-)
   </p>
-
-  <p>I hope this helps someone out there. Have fun! ;-)</p>
 </template>
 
 <script setup lang="ts">
