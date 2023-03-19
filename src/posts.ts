@@ -11,6 +11,14 @@ const posts: Post[] = [
     title: "Monitoring data transfers through pipes",
   },
   {
+    compatibilityIndex: "89e39302a98c02d56378f7d895633a3c",
+    component: () => import("@/posts/28.vue"),
+    date: dateToString(2014, 1, 4),
+    id: "28",
+    labels: [PostLabel.RaspberryPi, PostLabel.Technology],
+    title: "How much power does a Raspberry Pi Model B consume?",
+  },
+  {
     compatibilityIndex: "4920812dedb0e1d15f6f8ff2b1f4daa1",
     component: () => import("@/posts/27.vue"),
     date: dateToString(2014, 2, 5),
