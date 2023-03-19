@@ -7,7 +7,7 @@
   </p>
 
   <p>
-    Before going through examples, though, we need a first bit of theory to
+    Before going through examples, though, we first need a bit of theory to
     understand how pv works. In a nutshell, pv takes input from a pipe and
     outputs that input to its standard output stream while showing the data
     transfer progress on its standard error stream. To clarify, if you run:
@@ -176,9 +176,9 @@
   </p>
 
   <p>
-    <b>NOTE</b>: Readers who would like to learn more about this topic should
-    take a look at the man page of <code>/dev/random</code> with the following
-    command:
+    Readers who would like to learn more about this topic should take a look at
+    the man page of <code>/dev/random</code>. It can be opened with the
+    following command:
   </p>
 
   <CodeBlock code="man 4 /dev/random" />
