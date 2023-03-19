@@ -161,8 +161,7 @@
     erratically also causes the entropy generation to oscillate between 8B/s and
     16B/s. To generate entropy without having to act like a maniac, I ran the
     following command to recursively list all system files and directories,
-    thereby generating lots of hard disk activity which is used by the kernel to
-    gather entropy:
+    thereby generating lots of hard disk activity:
   </p>
 
   <CodeBlock code="ls -R /" />
