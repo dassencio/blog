@@ -16,10 +16,11 @@
   <CodeBlock code="cat input.txt | pv > output.txt" />
 
   <p>
-    the contents of <code>input.txt</code> will be sent to pv, which will then
-    output this data to its standard output stream (<code>output.txt</code>).
-    The screen output will show the data transfer progress since, in this case,
-    the terminal is the standard error stream:
+    the contents of <code>input.txt</code> will be piped to pv, which will write
+    them to <code>output.txt</code> (the standard output stream) as they are
+    read from the pipe. During the process, pv displays the data transfer
+    progress on the screen since the terminal is the (default) standard error
+    stream. This is what it looks like:
   </p>
 
   <CodeBlock
