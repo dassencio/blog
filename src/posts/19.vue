@@ -296,8 +296,8 @@
   <SectionTitle>Bonus: Using Octave to compute $P(n)$</SectionTitle>
 
   <p>
-    On Ubuntu/Debian, you can install Octave by opening a terminal and running
-    the following command:
+    If you're using Ubuntu/Debian, you can install Octave by opening a terminal
+    and running the following command:
   </p>
 
   <CodeBlock code="sudo apt-get install octave" />
