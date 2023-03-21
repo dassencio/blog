@@ -28,9 +28,9 @@ window.MathJax = {
     inlineMath: [["$", "$"]],
     macros: {
       // General math.
-      ColonEq: "\\mathrel{\\vcenter{:}}=",
+      ColonEq: "\\mathrel{\\vcenter{:}}=", // Equal by definition sign.
       SumSub: ["\\mathop{\\sum_{#1}}_{#2}", 2], // Sum with two subscripts.
-      Vec: ["\\mathbf{#1}", 1],
+      Vec: ["\\mathbf{#1}", 1], // Vector notation.
 
       // Differential operators.
       D: ["\\mathop{d#1}", 1], // Differential (with spaces around).
