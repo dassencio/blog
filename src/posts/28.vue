@@ -27,10 +27,18 @@
              $V = 4.96\Volt$ respectively."
   >
     <BaseSubfigure>
-      <ResponsiveImage alt="Current" :src="raspberryPiCurrent" />
+      <ResponsiveImage
+        alt="Current"
+        :link="rpiCurrentLarge"
+        :src="rpiCurrentSmall"
+      />
     </BaseSubfigure>
     <BaseSubfigure>
-      <ResponsiveImage alt="Voltage" :src="raspberryPiVoltage" />
+      <ResponsiveImage
+        alt="Voltage"
+        :link="rpiVoltageLarge"
+        :src="rpiVoltageSmall"
+      />
     </BaseSubfigure>
   </FigureBlock>
 
@@ -67,8 +75,10 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { onViewMounted } from "@/functions";
-import raspberryPiCurrent from "@/assets/images/raspberry-pi-current.jpg";
-import raspberryPiVoltage from "@/assets/images/raspberry-pi-voltage.jpg";
+import rpiCurrentLarge from "@/assets/images/rpi-model-B-current-large.jpg";
+import rpiCurrentSmall from "@/assets/images/rpi-model-B-current-small.jpg";
+import rpiVoltageLarge from "@/assets/images/rpi-model-B-voltage-large.jpg";
+import rpiVoltageSmall from "@/assets/images/rpi-model-B-voltage-small.jpg";
 
 onMounted(() => onViewMounted());
 </script>
