@@ -23,8 +23,8 @@
   <FigureBlock
     id="raspberry-pi-measurements"
     caption="Measured current (a) and voltage (b) used by a Raspberry Pi Model
-             B. The values shown are $I = 0.36\textrm{A}$ and
-             $V = 4.96\textrm{V}$ respectively."
+             B. The values shown are $I = 0.36\Ampere$ and
+             $V = 4.96\Volt$ respectively."
   >
     <BaseSubfigure>
       <ResponsiveImage alt="Current" :src="raspberryPiCurrent" />
@@ -42,27 +42,25 @@
   <EquationBlock> P = VI </EquationBlock>
 
   <p>
-    Using the values from the Raspberry Pi website ($V = 5\textrm{V}$ and $I =
-    700\textrm{mA} = 0.7\textrm{A}$), we get:
+    Using the values from the Raspberry Pi website ($V = 5\Volt$ and $I =
+    700\Milliampere = 0.7\Ampere$), we get:
   </p>
 
-  <EquationBlock>
-    P = 5\textrm{V} \cdot 0.7\textrm{A} = 3.5\textrm{W}
-  </EquationBlock>
+  <EquationBlock> P = 5\Volt \cdot 0.7\Ampere = 3.5\Watt </EquationBlock>
 
   <p>
     The highest current and voltage values I observed were $I_{\max} =
-    0.43\textrm{A}$ and $V_{\max} = 4.96\textrm{V}$ respectively, meaning the
-    maximum amount of power consumed by my Raspberry Pi was:
+    0.43\Ampere$ and $V_{\max} = 4.96\Volt$ respectively, meaning the maximum
+    amount of power consumed by my Raspberry Pi was:
   </p>
 
   <EquationBlock>
-    P_{\max} = V_{\max} I_{\max} \approx 2.13\textrm{W}
+    P_{\max} = V_{\max} I_{\max} \approx 2.13\Watt
   </EquationBlock>
 
   <p>
-    which is significantly lower than $3.5\textrm{W}$. Under normal load, my
-    Raspberry Pi consumed between $1.8\textrm{W}$ and $2.0\textrm{W}$.
+    which is significantly lower than $3.5\Watt$. Under normal load, my
+    Raspberry Pi consumed between $1.8\Watt$ and $2.0\Watt$.
   </p>
 </template>
 

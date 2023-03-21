@@ -27,14 +27,25 @@ window.MathJax = {
     displayMath: [["$$", "$$"]],
     inlineMath: [["$", "$"]],
     macros: {
+      // General math.
       ColonEq: "\\mathrel{\\vcenter{:}}=",
+      SumSub: ["\\mathop{\\sum_{#1}}_{#2}", 2], // Sum with two subscripts.
       Vec: ["\\mathbf{#1}", 1],
+
+      // Differential operators.
       D: ["\\mathop{d#1}", 1], // Differential (with spaces around).
       Di: ["d#1", 1], // Differential (inline, no spaces around).
       DD: ["\\frac{d#1}{d#2}", 2], // Derivative (fraction).
       DDi: ["d#1/d#2", 2], // Derivative (inline, flat fraction).
       DDo: ["\\frac{d}{d#1}", 1], // Derivative as an operator (fraction).
-      SumSub: ["\\mathop{\\sum_{#1}}_{#2}", 2], // Sum with two subscripts.
+
+      // Measurement units.
+      Ampere: "\\mathrm{A}",
+      Meter: "\\mathrm{m}",
+      Milliampere: "\\mathrm{mA}",
+      Picometer: "\\mathrm{pm}",
+      Volt: "\\mathrm{V}",
+      Watt: "\\mathrm{W}",
     },
     packages: {
       "[+]": ["tagformat"],

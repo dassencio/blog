@@ -12,10 +12,10 @@
   <p>
     The
     <a href="https://en.wikipedia.org/wiki/Charge_radius">radius of a proton</a>
-    (the nucleus of a Hydrogen atom) is $r_0 \approx 10^{-15}\textrm{m}$. The
-    answer to the question will be hard to find if one tries to compute it
-    analytically by integrating the probability density function
-    $|\psi(\Vec{x})|^2$ over the volume of the proton:
+    (the nucleus of a Hydrogen atom) is $r_0 \approx 10^{-15}\Meter$. The answer
+    to the question will be hard to find if one tries to compute it analytically
+    by integrating the probability density function $|\psi(\Vec{x})|^2$ over the
+    volume of the proton:
   </p>
 
   <EquationBlock>
@@ -71,7 +71,7 @@
   <p>where $\rho = r / (a_0 n)$, $v(\rho)$ is a polynomial function and</p>
 
   <EquationBlock>
-    a_0 = \frac{4\pi \epsilon_0 \hbar^2}{me^2} = 0.529 \cdot 10^{-10}\textrm{m}
+    a_0 = \frac{4\pi \epsilon_0 \hbar^2}{me^2} = 0.529 \cdot 10^{-10}\Meter
   </EquationBlock>
 
   <p>

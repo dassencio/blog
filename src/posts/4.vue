@@ -42,13 +42,13 @@
     <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
       >approximately a sphere</a
     >
-    with radius $R_{\textrm{Earth}} = 6.4 \cdot 10^6\textrm{m}$, its area is
+    with radius $R_{\textrm{Earth}} = 6.4 \cdot 10^6\Meter$, its area is
     approximately given by:
   </p>
 
   <EquationBlock>
     A_{\textrm{Earth}} = 4\pi R_{\textrm{Earth}}^2 \approx 4 \cdot 3.14 \cdot
-    (6.4 \cdot 10^6 \textrm{m})^2 \approx 5.1 \cdot 10^{14} \textrm{m}^2
+    (6.4 \cdot 10^6 \Meter)^2 \approx 5.1 \cdot 10^{14} \Meter^2
   </EquationBlock>
 
   <p>
@@ -58,7 +58,7 @@
 
   <EquationBlock>
     \sigma_{\textrm{IPv6}} \ColonEq \frac{N_{\textrm{IPv6}}}{A_{\textrm{Earth}}}
-    \approx 6.6 \cdot 10^{23} \textrm{m}^{-2}
+    \approx 6.6 \cdot 10^{23} \Meter^{-2}
   </EquationBlock>
 
   <p>
@@ -72,11 +72,11 @@
 
   <EquationBlock>
     A_{\textrm{IPv6}} \ColonEq \frac{1}{\sigma_{\textrm{IPv6}}} \approx 1.5
-    \cdot 10^{-24} \textrm{m}^2 = 1.5 \textrm{pm}^2
+    \cdot 10^{-24} \Meter^2 = 1.5 \Picometer^2
   </EquationBlock>
 
   <p>
-    since $1\textrm{pm} = 10^{-12}\textrm{m}$ ($\textrm{pm}$ stands for
+    since $1\Picometer = 10^{-12}\Meter$ ($\Picometer$ stands for
     <a href="https://en.wikipedia.org/wiki/Picometre">picometer</a>). Given that
     a Helium atom, which is the
     <a
@@ -86,8 +86,8 @@
   </p>
 
   <EquationBlock>
-    A_{\textrm{He}} = \pi R_{\textrm{He}}^2 \approx 3.14 \cdot (31
-    \textrm{pm})^2 \approx 3000\textrm{pm}^2 \approx 2000 A_{\textrm{IPv6}}
+    A_{\textrm{He}} = \pi R_{\textrm{He}}^2 \approx 3.14 \cdot (31 \Picometer)^2
+    \approx 3000\Picometer^2 \approx 2000 A_{\textrm{IPv6}}
   </EquationBlock>
 
   <p>
