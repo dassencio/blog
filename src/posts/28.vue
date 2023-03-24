@@ -9,15 +9,16 @@
   </p>
 
   <p>
-    The Raspberry Pi website claims that the Model B uses
+    The
     <a
       href="https://web.archive.org/web/20140330040115/http://www.raspberrypi.org/faqs#powerReqs"
+      >Raspberry Pi website</a
     >
-      between 700-1000mA</a
-    >
-    (depending on the connected peripherals) and needs 5V to operate. My current
-    measurements were however significantly lower than the claimed values, even
-    when the Raspberry Pi was under heavy load (e.g. during boot time).
+    claims that the Model B needs $5\Volt$ to operate and draws a current
+    between $700\Milliampere$ and $1000\Milliampere$ (depending on the connected
+    peripherals). My voltage measurements were always very close to $5V$, but my
+    current measurements fell below the advertised range even when the Raspberry
+    Pi was under heavy load (e.g. during boot time).
   </p>
 
   <FigureBlock
