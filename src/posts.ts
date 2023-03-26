@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "82209f7b8bc7c143f4419238ef16c129",
+    component: () => import("@/posts/30.vue"),
+    date: dateToString(2014, 2, 9),
+    id: "30",
+    labels: [PostLabel.LinearAlgebra, PostLabel.Mathematics],
+    title: "Compressing matrices using SVD factorization",
+  },
+  {
     compatibilityIndex: "0ef89c5007d8811268b3ecfda26af22a",
     component: () => import("@/posts/29.vue"),
     date: dateToString(2014, 2, 7),
