@@ -6,8 +6,8 @@
     <a href="https://en.wikipedia.org/wiki/Lossy_compression"
       >lossy compression</a
     >
-    of the song, ideally retaining enough information to make the compressed
-    song sound as close as possible to the original.
+    of the song, ideally retaining enough information to generate a faithful
+    reproduction of the original song.
   </p>
 
   <p>
@@ -21,8 +21,7 @@
     <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">
       singular value decomposition</a
     >
-    (SVD). This post will not present techniques for computing SVDs, but merely
-    discuss it in the context of matrix compression.
+    (SVD), as I will explain in this post.
   </p>
 
   <p>
@@ -46,8 +45,8 @@
   <CodeBlock code="sudo apt-get install octave" />
 
   <p>
-    Now start Octave. I have generated an example matrix which is shown below
-    (in what follows, all user input is highlighted):
+    Now start Octave. In what follows, I will use the following matrix $A$ as an
+    example:
   </p>
 
   <CodeBlock
@@ -65,10 +64,10 @@
   />
 
   <p>
-    You can generate this matrix locally in Octave by typing '<code>A=[</code>'
+    You can generate this matrix locally in Octave by typing "<code>A=[</code>"
     (without the quotes), then copying and pasting the values from $A$ above,
     then ending the matrix definition with another square bracket
-    '<code>]</code>'.
+    "<code>]</code>".
   </p>
 
   <p>Octave provides a method for computing the SVD of $A$:</p>
@@ -78,44 +77,43 @@
     octave:2> **[U, Sigma, V] = svd(A)**
     U =
 
-      -0.418967  -0.449082   0.754882   0.062414  -0.211638   0.065260
-      -0.386832  -0.456685  -0.393449   0.517538   0.420908  -0.204913
-      -0.369990   0.429218   0.277696  -0.322484   0.605310  -0.362449
-      -0.455375  -0.257776  -0.427049  -0.676528  -0.289362  -0.048923
-      -0.469840   0.546519  -0.099679   0.407065  -0.521257  -0.182266
-      -0.331389   0.201011  -0.076997   0.029526   0.237081   0.887000
+      -0.418968  -0.449078   0.754908   0.062295  -0.214765   0.053890
+      -0.386832  -0.456683  -0.393433   0.517682   0.431095  -0.182140
+      -0.369989   0.429224   0.277599  -0.322350   0.623764  -0.329882
+      -0.455376  -0.257780  -0.427104  -0.676512  -0.286282  -0.064336
+      -0.469840   0.546519  -0.099622   0.407044  -0.510912  -0.209588
+      -0.331388   0.201005  -0.076946   0.029369   0.189640   0.898350
 
     Sigma =
 
     Diagonal Matrix
 
-      **4.6780e+00**            0            0            0            0            0
-               0   **8.9303e-01**            0            0            0            0
-               0            0   **4.5869e-02**            0            0            0
-               0            0            0   **7.2919e-03**            0            0
-               0            0            0            0   **1.5466e-16**            0
-               0            0            0            0            0   **4.5360e-17**
+       4.6780e+00            0            0            0            0            0
+                0   8.9303e-01            0            0            0            0
+                0            0   4.5870e-02            0            0            0
+                0            0            0   7.2871e-03            0            0
+                0            0            0            0   3.1559e-06            0
+                0            0            0            0            0   7.6681e-07
 
     V =
 
-      -0.418967  -0.449082   0.726833   0.183844  -0.240614   0.053029
-      -0.386832  -0.456685  -0.363745  -0.694211  -0.126874  -0.107069
-      -0.369990   0.429218  -0.101603  -0.070784  -0.356422   0.732468
-      -0.455375  -0.257776  -0.373669   0.487768   0.559525   0.188602
-      -0.469840   0.546519   0.309430  -0.289389   0.439192  -0.328915
-      -0.331389   0.201011  -0.306111   0.396987  -0.541307  -0.552684
+      -0.418967  -0.449081   0.726848   0.183781   0.025224   0.245097
+      -0.386832  -0.456683  -0.363839  -0.694098  -0.121153   0.113896
+      -0.369989   0.429218  -0.101563  -0.071040   0.686946   0.437748
+      -0.455376  -0.257776  -0.373570   0.487618   0.251537  -0.534404
+      -0.469840   0.546520   0.309389  -0.289355  -0.276771  -0.473832
+      -0.331390   0.201009  -0.306141   0.397377  -0.610670   0.474582
   "
   />
 
   <p>
-    As the output above shows, the singular values of $A$ (the highlighted
-    diagonal entries of $\Sigma$) are placed in decreasing order along the
-    diagonal of $\Sigma$. Compared to the first two singular values
-    ($\Sigma_{11}$ and $\Sigma_{22}$), the other four ($\Sigma_{33}$,
-    $\Sigma_{44}$, $\Sigma_{55}$ and $\Sigma_{66}$) are relatively small. Being
-    so small, and since $A = U\Sigma V^T$, the effect of discarding them should
-    still imply $A \approx U\Sigma V^T$ for this modified $\Sigma$. Let's do
-    exactly that and see what happens:
+    As the output above shows, the singular values of $A$ (the diagonal entries
+    of $\Sigma$) are placed in decreasing order along the diagonal of $\Sigma$.
+    Compared to the first two singular values ($\Sigma_{11}$ and $\Sigma_{22}$),
+    the other four ($\Sigma_{33}$, $\Sigma_{44}$, $\Sigma_{55}$ and
+    $\Sigma_{66}$) are relatively small. Being so small, and since $A = U\Sigma
+    V^T$, the effect of discarding them should still imply $A \approx U\Sigma
+    V^T$ for this modified $\Sigma$. Let's do exactly that and see what happens:
   </p>
 
   <CodeBlock
@@ -125,12 +123,12 @@
 
     Diagonal Matrix
 
-      **4.67800**         0         0         0         0         0
-            0   **0.89303**         0         0         0         0
-            0         0   **0.00000**         0         0         0
-            0         0         0   **0.00000**         0         0
-            0         0         0         0   **0.00000**         0
-            0         0         0         0         0   **0.00000**
+       4.6780        0        0        0        0        0
+            0   0.8930        0        0        0        0
+            0        0        0        0        0        0
+            0        0        0        0        0        0
+            0        0        0        0        0        0
+            0        0        0        0        0        0
     "
   />
 
@@ -149,30 +147,30 @@
     octave:4> **U = U(1:6, 1:2)**
     U =
 
-      -0.41897  -0.44908
-      -0.38683  -0.45668
-      -0.36999   0.42922
-      -0.45538  -0.25778
-      -0.46984   0.54652
-      -0.33139   0.20101
+      -0.4190  -0.4491
+      -0.3868  -0.4567
+      -0.3700   0.4292
+      -0.4554  -0.2578
+      -0.4698   0.5465
+      -0.3314   0.2010
 
     octave:5> **V = V(1:6, 1:2)**
     V =
 
-      -0.41897  -0.44908
-      -0.38683  -0.45669
-      -0.36999   0.42922
-      -0.45537  -0.25778
-      -0.46984   0.54652
-      -0.33139   0.20101
+      -0.4190  -0.4491
+      -0.3868  -0.4567
+      -0.3700   0.4292
+      -0.4554  -0.2578
+      -0.4698   0.5465
+      -0.3314   0.2010
 
     octave:6> **Sigma = Sigma(1:2, 1:2)**
     Sigma =
 
     Diagonal Matrix
 
-      4.67800         0
-            0   0.89303
+       4.6780        0
+            0   0.8930
     "
   />
 
@@ -183,20 +181,20 @@
     octave:7> **A_tilde = U * Sigma * V'**
     A_tilde =
 
-      1.00125   0.94131   0.55302   0.99588   0.70167   0.56888
-      0.94131   0.88626   0.49448   0.92918   0.62733   0.51770
-      0.55302   0.49448   0.80491   0.68936   1.02269   0.65062
-      0.99588   0.92918   0.68936   1.02940   0.87507   0.65967
-      0.70168   0.62733   1.02269   0.87507   1.29940   0.82647
-      0.56888   0.51770   0.65062   0.65967   0.82647   0.54982
+       1.0012   0.9413   0.5530   0.9959   0.7017   0.5689
+       0.9413   0.8863   0.4945   0.9292   0.6273   0.5177
+       0.5530   0.4945   0.8049   0.6894   1.0227   0.6506
+       0.9959   0.9292   0.6894   1.0294   0.8751   0.6597
+       0.7017   0.6273   1.0227   0.8751   1.2994   0.8265
+       0.5689   0.5177   0.6506   0.6597   0.8265   0.5498
     "
   />
 
   <p>
     The elements of $\tilde{A}$ are very close to the ones from the original
     matrix $A$. Let's compute the relative error for each entry of $\tilde{A}$
-    (below the '<code>./</code>' operation computes the division of each entry
-    of $(A - \tilde{A})$ by each corresponding entry of $A$):
+    (below, the <code>./</code> operation computes the division of each entry of
+    $(A - \tilde{A})$ by each corresponding entry of $A$):
   </p>
 
   <CodeBlock
@@ -204,12 +202,12 @@
     octave:8> **(A - A_tilde) ./ A**
     ans =
 
-       2.4599e-02  -1.3907e-02  -6.4608e-03  -1.2934e-02   1.4859e-02  -1.8656e-02
-      -1.3375e-02   4.4309e-03   3.1586e-03   9.1550e-03  -1.0756e-02   1.3384e-02
-       1.5708e-02  -6.1061e-03  -1.4028e-03  -8.6418e-03   4.4995e-03  -7.4838e-03
-      -1.5442e-02   1.1226e-02   3.3826e-03   4.7511e-03  -5.3225e-03   6.0837e-03
-      -3.9746e-03  -6.3450e-04   2.4899e-04   3.5946e-03  -1.7525e-03   3.1091e-03
-      -4.4631e-03   2.1875e-03   5.2814e-04   2.1558e-03  -1.3991e-03   2.1170e-03
+       2.4600e-02  -1.3910e-02  -6.4600e-03  -1.2932e-02   1.4857e-02  -1.8658e-02
+      -1.3375e-02   4.4343e-03   3.1565e-03   9.1512e-03  -1.0755e-02   1.3384e-02
+       1.5705e-02  -6.1096e-03  -1.3998e-03  -8.6349e-03   4.4961e-03  -7.4838e-03
+      -1.5443e-02   1.1227e-02   3.3820e-03   4.7515e-03  -5.3244e-03   6.0858e-03
+      -3.9725e-03  -6.3166e-04   2.4656e-04   3.5904e-03  -1.7512e-03   3.1102e-03
+      -4.4599e-03   2.1888e-03   5.2841e-04   2.1520e-03  -1.3987e-03   2.1154e-03
     "
   />
 
