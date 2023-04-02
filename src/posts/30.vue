@@ -6,8 +6,8 @@
     <a href="https://en.wikipedia.org/wiki/Lossy_compression"
       >lossy compression</a
     >
-    of the song, ideally retaining enough information to generate a faithful
-    reproduction of the original song.
+    of the song, ideally retaining enough information so that the resulting file
+    sounds as close as possible to the original.
   </p>
 
   <p>
@@ -207,15 +207,15 @@
 
   <CodeBlock
     code="
-    octave:8> **(A - A_tilde) ./ A**
+    octave:8> **abs((A - A_tilde) ./ A)**
     ans =
 
-       2.460e-02  -1.391e-02  -6.460e-03  -1.293e-02   1.486e-02  -1.866e-02
-      -1.337e-02   4.434e-03   3.156e-03   9.151e-03  -1.076e-02   1.338e-02
-       1.570e-02  -6.110e-03  -1.400e-03  -8.635e-03   4.496e-03  -7.484e-03
-      -1.544e-02   1.123e-02   3.382e-03   4.752e-03  -5.324e-03   6.086e-03
-      -3.973e-03  -6.317e-04   2.466e-04   3.590e-03  -1.751e-03   3.110e-03
-      -4.460e-03   2.189e-03   5.284e-04   2.152e-03  -1.399e-03   2.115e-03
+       2.460e-02   1.391e-02   6.460e-03   1.293e-02   1.486e-02   1.866e-02
+       1.337e-02   4.434e-03   3.156e-03   9.151e-03   1.076e-02   1.338e-02
+       1.570e-02   6.110e-03   1.400e-03   8.635e-03   4.496e-03   7.484e-03
+       1.544e-02   1.123e-02   3.382e-03   4.752e-03   5.324e-03   6.086e-03
+       3.973e-03   6.317e-04   2.466e-04   3.590e-03   1.751e-03   3.110e-03
+       4.460e-03   2.189e-03   5.284e-04   2.152e-03   1.399e-03   2.115e-03
     "
   />
 
