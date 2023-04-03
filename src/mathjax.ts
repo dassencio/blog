@@ -56,6 +56,8 @@ window.MathJax = {
       Watt: "\\,\\mathrm{W}",
       Year: "\\,\\mathrm{yr}",
 
+      // Division of units (e.g. m/s).
+      Per: "/\\!",
     },
     packages: {
       "[+]": ["tagformat"],
