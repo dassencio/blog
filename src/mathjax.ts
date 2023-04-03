@@ -42,11 +42,20 @@ window.MathJax = {
 
       // Measurement units.
       Ampere: "\\,\\mathrm{A}",
+      Day: "\\,\\mathrm{d}",
+      Gram: "\\,\\mathrm{g}",
+      Joule: "\\,\\mathrm{J}",
+      Kilocalorie: "\\,\\mathrm{kcal}",
+      Kilogram: "\\,\\mathrm{kg}",
+      Kilojoule: "\\,\\mathrm{kJ}",
       Meter: "\\,\\mathrm{m}",
       Milliampere: "\\,\\mathrm{mA}",
       Picometer: "\\,\\mathrm{pm}",
+      Second: "\\,\\mathrm{s}",
       Volt: "\\,\\mathrm{V}",
       Watt: "\\,\\mathrm{W}",
+      Year: "\\,\\mathrm{yr}",
+
     },
     packages: {
       "[+]": ["tagformat"],
