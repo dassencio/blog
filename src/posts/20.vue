@@ -81,7 +81,7 @@
 
   <EquationBlock>
     Y \approx \frac{4 \cdot 10^{21}}{(7 \cdot 10^9)(86400)} \approx 6.6 \cdot
-    10^6 \textrm{years}
+    10^6
   </EquationBlock>
 
   <p>
