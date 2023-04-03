@@ -41,12 +41,12 @@ window.MathJax = {
       DDo: ["\\frac{d}{d#1}", 1], // Derivative as an operator (fraction).
 
       // Measurement units.
-      Ampere: "\\mathrm{A}",
-      Meter: "\\mathrm{m}",
-      Milliampere: "\\mathrm{mA}",
-      Picometer: "\\mathrm{pm}",
-      Volt: "\\mathrm{V}",
-      Watt: "\\mathrm{W}",
+      Ampere: "\\,\\mathrm{A}",
+      Meter: "\\,\\mathrm{m}",
+      Milliampere: "\\,\\mathrm{mA}",
+      Picometer: "\\,\\mathrm{pm}",
+      Volt: "\\,\\mathrm{V}",
+      Watt: "\\,\\mathrm{W}",
     },
     packages: {
       "[+]": ["tagformat"],
