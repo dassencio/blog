@@ -16,9 +16,9 @@
     >
     claims that the Model B needs $5\Volt$ to operate and draws a current
     between $700\Milliampere$ and $1000\Milliampere$ (depending on the connected
-    peripherals). My voltage measurements were always very close to $5V$, but my
-    current measurements fell below the advertised range even when the Raspberry
-    Pi was under heavy load (e.g. during boot time).
+    peripherals). My voltage measurements were always very close to $5\Volt$,
+    but my current measurements fell below the advertised range even when the
+    Raspberry Pi was under heavy load (e.g. during boot time).
   </p>
 
   <FigureBlock
