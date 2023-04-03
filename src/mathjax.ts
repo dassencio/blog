@@ -29,6 +29,7 @@ window.MathJax = {
     macros: {
       // General math.
       ColonEq: "\\mathrel{\\vcenter{:}}=", // Equal by definition sign.
+      Size: "\\mathrm{size}", // Size operator.
       SumSub: ["\\mathop{\\sum_{#1}}_{#2}", 2], // Sum with two subscripts.
       Vec: ["\\mathbf{#1}", 1], // Vector notation.
 

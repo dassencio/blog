@@ -142,12 +142,12 @@
 
   <p>
     Discarding $\Sigma_{33}$ means the third column of $U$ and the third row of
-    $V^T$ (the third column of $V$) have no effect on $U\Sigma V^T$ since they
-    contain the only entries of $U$ and $V$ respectively which are multiplied by
-    $\Sigma_{33}$. We can then discard these entries and also discard the third
-    row and the third column of $\Sigma$ altogether. Similarly, we can discard
-    the fourth, fifth and sixth columns of $U$ and $V$ and also the fourth,
-    fifth and sixth rows and columns of $\Sigma$:
+    $V^T$ (i.e., the third column of $V$) have no effect on $U\Sigma V^T$ since
+    they contain the only entries of $U$ and $V$ respectively which are
+    multiplied by $\Sigma_{33}$. We can then discard these entries and also
+    discard the third row and the third column of $\Sigma$ altogether.
+    Similarly, we can discard the fourth, fifth and sixth columns of $U$ and $V$
+    and also the fourth, fifth and sixth rows and columns of $\Sigma$:
   </p>
 
   <CodeBlock
@@ -201,7 +201,7 @@
   <p>
     The elements of $\tilde{A}$ are very close to the ones from the original
     matrix $A$. Let's compute the relative error for each entry of $\tilde{A}$
-    (below, the <code>./</code> operation computes the division of each entry of
+    (below, the <code>./</code> operator computes the division of each entry of
     $(A - \tilde{A})$ by each corresponding entry of $A$):
   </p>
 
@@ -222,23 +222,22 @@
   <p>
     As the numbers above show, the relative errors are small, so indeed
     $\tilde{A} \approx A$. Storing $A$ requires storing $N_{A} = 36$ elements,
-    and while $\tilde{A}$ itself has the same number of elements, it is more
-    efficient to store $U$, $\Sigma$ and $V$ after removing their elements in
-    the way described above. This yields:
+    and while $\tilde{A}$ has the same number of elements as $A$, it is more
+    efficient to store $U$, $\Sigma$ and $V$ (with rows and columns removed in
+    the way described above) than $\tilde{A}$ itself. This yields:
   </p>
 
   <EquationBlock>
-    N_{\tilde{A}} = \textrm{size}(U) + \textrm{size}(V) + \textrm{size}(\Sigma)
-    = 12 + 12 + 2 = 26
+    N_{\tilde{A}} = \Size(U) + \Size(V) + \Size(\Sigma) = 12 + 12 + 2 = 26
   </EquationBlock>
 
   <p>
     so we can rebuild $\tilde{A}$ from only $N_{\tilde{A}} = 26$ stored elements
-    instead of $N_A = 36$ elements. The reason why $\textrm{size}(\Sigma)= 2$ is
-    because $\Sigma$ is a diagonal matrix, so its off-diagonal elements do not
-    need to be stored since we know they are zero. In this particular example,
-    $28\%$ less storage space is required to store $\tilde{A}$ than $A$. For
-    bigger matrices, even better compression ratios can be achieved.
+    instead of $N_A = 36$ elements. The reason why $\Size(\Sigma)= 2$ is because
+    $\Sigma$ is a diagonal matrix, so its off-diagonal elements do not need to
+    be stored since we know they are zero. In this particular example, $28\%$
+    less storage space is required to store $\tilde{A}$ than $A$. For bigger
+    matrices, even better compression ratios can be achieved.
   </p>
 
   <p>
