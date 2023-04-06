@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "3b71b2622e02f1f11d72d524764fae03",
+    component: () => import("@/posts/31.vue"),
+    date: dateToString(2014, 2, 11),
+    id: "31",
+    labels: [PostLabel.Physics, PostLabel.Relativity],
+    title: "Energy at your fingertips: $E = mc^2$",
+  },
+  {
     compatibilityIndex: "82209f7b8bc7c143f4419238ef16c129",
     component: () => import("@/posts/30.vue"),
     date: dateToString(2014, 2, 9),
