@@ -56,7 +56,7 @@
       id="dietary-guidelines-for-americans"
       :authors="[
         'U.S. Department of Agriculture',
-        'U.S. Department of Health and Human Services ',
+        'U.S. Department of Health and Human Services',
       ]"
       title="Dietary Guidelines for Americans"
       url="https://health.gov/sites/default/files/2020-01/DietaryGuidelines2010.pdf"
