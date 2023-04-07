@@ -34,7 +34,7 @@
     between $20$ and $50$ years of age is approximately $2500 \Kilocalorie
     \approx 10500 \Kilojoule$ (see
     <ReferenceLink id="dietary-guidelines-for-americans" />, page 78). Younger
-    or older males are recommended to consume less than that amount per day (on
+    and older males are recommended to consume less than that amount per day (on
     average). This means one can expect the energy consumption of a male body
     over its entire lifespan (assume it to be $100$ years to make sure we're not
     underestimating the actual value) to be around:
