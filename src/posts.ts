@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "6c183e1fe7b7c7ab478ef70de01215eb",
+    component: () => import("@/posts/32.vue"),
+    date: dateToString(2014, 2, 15),
+    id: "32",
+    labels: [PostLabel.Linux, PostLabel.Shell],
+    title: "Listing all files with a set of possible extensions",
+  },
+  {
     compatibilityIndex: "3b71b2622e02f1f11d72d524764fae03",
     component: () => import("@/posts/31.vue"),
     date: dateToString(2014, 2, 11),
