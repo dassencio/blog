@@ -1,15 +1,14 @@
 <template>
   <p>
-    Suppose you wish to generate a list containing all songs in a directory
-    (including its subdirectories), and that the songs are stored in the MP3,
-    FLAC and Ogg Vorbis formats. How can you generate this song list using the
-    command line?
+    Suppose you wish to generate a list of all songs in a directory (including
+    its subdirectories), and that the songs are stored in the MP3, FLAC and Ogg
+    Vorbis formats. How can this song list be obtained via CLI?
   </p>
 
   <p>
-    One way to achieve this is by using the
+    One possible way is by using the
     <a href="http://man7.org/linux/man-pages/man1/find.1.html">find</a>
-    tool through the following command:
+    tool with the following command:
   </p>
 
   <CodeBlock
@@ -19,33 +18,22 @@
   />
 
   <p>
-    where <code>dir</code> is the name of the directory where the file search
-    will be performed. If the target directory for the file search is the
-    current working directory, <code>dir</code> can be replaced by the dot
-    character (or omitted entirely):
-  </p>
-
-  <CodeBlock
-    code='
-    find . -type f -iname "*.mp3" -o -iname "*.flac" -o -iname *.ogg
-    '
-  />
-
-  <p>
-    Now let's go over each part of the original command to understand what it
-    does:
+    where <code>dir</code> is the path to the directory where the file search
+    will be performed (either an absolute path or a relative path with respect
+    to the current working directory). Let's go over each part of this command
+    to understand what it does:
   </p>
 
   <MapBlock>
     <code>-type f</code>
     <span>
-      Matches only regular files. Directories and other file types such as
+      Match only regular files. Directories and other file types such as
       sockets, pipes, devices etc. are ignored.
     </span>
 
     <code>-iname &lt;pattern&gt;</code>
     <span>
-      Ignores case distinctions when searching for files whose names match the
+      Ignore case distinctions when searching for files whose names match the
       given pattern, i.e., uppercase is not distinguished from lowercase.
     </span>
 
@@ -68,23 +56,23 @@
   />
 
   <p>
-    This will recursively list all files in the current working directory and
-    use this file list (with one filename per line) as input to grep, which will
-    then output only the lines matching one of the specified patterns. As for
-    the flags:
+    This will recursively list all files in <code>dir</code> and use this file
+    list (with one filename per line) as input to grep, which will then output
+    only the lines matching at least one of the specified patterns. As for the
+    grep parameters:
   </p>
 
   <MapBlock>
     <code>-e &lt;pattern&gt;</code>
     <span>
-      Matches the given pattern (a regular expression). As shown above, you can
-      specify multiple patterns to be matched by grep.
+      Specify a pattern to be matched by grep. As shown above, grep can match
+      multiple patterns.
     </span>
 
     <code>-i</code>
     <span>
-      Ignores case distinctions when searching for strings which match the given
-      pattern, i.e., uppercase is not distinguished from lowercase.
+      Ignore case distinctions when searching for strings which match any of the
+      given patterns, i.e., uppercase is not distinguished from lowercase.
     </span>
   </MapBlock>
 
@@ -102,7 +90,7 @@
 
   <CodeBlock
     code='
-    grep -i -e "\.mp3$" -e "\.flac$" -e "\.ogg$" &lt;(find -type f)
+    grep -i -e "\.mp3$" -e "\.flac$" -e "\.ogg$" <(find -type f)
     '
   />
 
@@ -128,13 +116,13 @@
     <code>&lt;(command)</code> directs the parent shell to also generate a
     temporary
     <a href="http://www.linuxjournal.com/article/2156?page=0,1">named pipe</a>
-    to receive the output of <code>command</code> and then replace
+    to receive the output of <code>command</code> and to replace
     <code>&lt;(command)</code>
-    with the name of that pipe. You can see what the name of these temporary
-    named pipes look like by running:
+    with the name of that pipe. You can see what the name of a temporary named
+    pipe looks like by running:
   </p>
 
-  <CodeBlock code="echo &lt;(ls)" />
+  <CodeBlock code="echo <(ls)" />
 
   <p>The output will be similar to this:</p>
 
