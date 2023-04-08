@@ -222,7 +222,7 @@
 
   <p>
     In my case, both <code>libc6</code> and <code>libc6-i686</code> are
-    installed since their corresponding lines start with "<code>ii</code>". The
+    installed since their corresponding lines start with <code>ii</code>. The
     i686 version is, as the package description says, optimized for the i686
     architecture and therefore undesirable for us, so you should remove it
     (replace <code>libc6</code> with your libc version):
@@ -528,7 +528,7 @@
     <code>sda1</code> bootable again (its "bootable" state is shown in the
     <code>Boot</code> column; if you check the partition table you initially
     had, you will see <code>sda1</code> was bootable since it had a
-    "<code>*</code>" under <code>Boot</code>):
+    <code>*</code> under <code>Boot</code>):
   </p>
 
   <CodeBlock
