@@ -123,7 +123,7 @@
     <ListBlockItem>Select "Install".</ListBlockItem>
     <ListBlockItem>Select your language.</ListBlockItem>
     <ListBlockItem>
-      Select your country (for the time zone, locale etc.).
+      Select your country (for the time zone, locale, etc.).
     </ListBlockItem>
     <ListBlockItem>
       If you're prompted for a locale, choose the one which matches your

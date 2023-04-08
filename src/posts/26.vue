@@ -70,7 +70,7 @@
     it is manufactured. This identifier is usually globally unique and commonly
     expressed as a string of six octets. The first three octets (24 bits)
     identify the organization which has manufactured the device (e.g. Intel
-    Corporation, Cisco Systems, Netgear Inc. etc.; this organization is
+    Corporation, Cisco Systems, Netgear Inc., etc.; this organization is
     typically the device vendor) and correspond to an
     <a href="https://en.wikipedia.org/wiki/Organizationally_Unique_Identifier">
       Organizationally Unique Identifier</a

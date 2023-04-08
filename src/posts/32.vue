@@ -28,7 +28,7 @@
     <code>-type f</code>
     <span>
       Match only regular files. Directories and other file types such as
-      sockets, pipes, devices etc. are ignored.
+      sockets, pipes, devices, etc., are ignored.
     </span>
 
     <code>-iname &lt;pattern&gt;</code>

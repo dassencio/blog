@@ -130,8 +130,8 @@
 
   <p>
     Linux has an entropy pool which stores collected environmental noise from
-    several devices (e.g. the hard disk, the keyboard etc.). The kernel keeps an
-    estimate of the number of bits of gathered noise in this entropy pool.
+    several devices (e.g. the hard disk, the keyboard, etc.). The kernel keeps
+    an estimate of the number of bits of gathered noise in this entropy pool.
   </p>
 
   <p>
