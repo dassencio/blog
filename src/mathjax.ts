@@ -29,6 +29,7 @@ window.MathJax = {
     macros: {
       // General math.
       ColonEq: "\\mathrel{\\vcenter{:}}=", // Equal by definition sign.
+      Matrix: ["\\begin{pmatrix}#1\\end{pmatrix}", 1], // Matrix environment.
       Size: "\\mathrm{size}", // Size operator.
       SumSub: ["\\mathop{\\sum_{#1}}_{#2}", 2], // Sum with two subscripts.
       Vec: ["\\mathbf{#1}", 1], // Vector notation.
@@ -39,6 +40,7 @@ window.MathJax = {
       DD: ["\\frac{d#1}{d#2}", 2], // Derivative (fraction).
       DDi: ["d#1/d#2", 2], // Derivative (inline, flat fraction).
       DDo: ["\\frac{d}{d#1}", 1], // Derivative as an operator (fraction).
+      PP: ["\\frac{\\partial#1}{\\partial#2}", 2], // Partial derivative (fraction).
 
       // Measurement units.
       Ampere: "\\,\\mathrm{A}",

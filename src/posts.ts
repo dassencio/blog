@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "1500c66ae7ab27bb0106467c68feebc6",
+    component: () => import("@/posts/33.vue"),
+    date: dateToString(2014, 2, 28),
+    id: "33",
+    labels: [PostLabel.Mechanics, PostLabel.Physics],
+    title: "The double pendulum: Lagrangian formulation",
+  },
+  {
     compatibilityIndex: "6c183e1fe7b7c7ab478ef70de01215eb",
     component: () => import("@/posts/32.vue"),
     date: dateToString(2014, 2, 15),
