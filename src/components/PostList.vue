@@ -15,10 +15,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from "vue";
+import { computed, onMounted, onUpdated } from "vue";
 import { useRoute } from "vue-router";
 import PostListItem from "@/components/PostListItem.vue";
-import mathjax from "@/mathjax";
+import { onViewMounted, onViewUpdated } from "@/functions";
 import posts from "@/posts";
 import type { PostLabel } from "@/types";
 
@@ -30,7 +30,8 @@ const matchingPosts = computed(() => {
     : posts;
 });
 
-onMounted(() => mathjax.render());
+onMounted(() => onViewMounted());
+onUpdated(() => onViewUpdated());
 </script>
 
 <style scoped lang="scss">

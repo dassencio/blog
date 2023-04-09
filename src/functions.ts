@@ -63,6 +63,13 @@ export function onViewMounted() {
 }
 
 /**
+ * Callback function which must be triggered whenever a view is updated.
+ */
+export function onViewUpdated() {
+  mathjax.render();
+}
+
+/**
  * Converts a figure ID into its associated HTML element ID.
  */
 export function figureIdToHtmlId(id: string) {
