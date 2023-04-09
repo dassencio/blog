@@ -221,7 +221,7 @@
   </FigureBlock>
 
   <p>
-    As the graph on <FigureLink id="fluid-height" /> shows, the fluid's top
+    As the graph in <FigureLink id="fluid-height" /> shows, the fluid's top
     surface moves down slowly until about $t \approx 0.95T$, at which point
     $h(t)$ starts decreasing quickly. From there on, some of our assumptions
     about the nature of the flow will no longer be accurate, but as mentioned
