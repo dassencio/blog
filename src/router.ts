@@ -34,6 +34,9 @@ const routes = [
     path: "/",
   },
   ...posts.map((post) => ({
+    beforeEnter() {
+      store.dispatch("reset");
+    },
     component: post.component,
     name: post.id,
     path: `/${post.id}`,
