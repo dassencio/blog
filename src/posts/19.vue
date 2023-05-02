@@ -319,7 +319,6 @@
   <p>and compute $P(n)$ as in the example below:</p>
 
   <CodeBlock
-    language="octave"
     code="
     octave:1> birthday(365, 23)
     ans = 0.5073
