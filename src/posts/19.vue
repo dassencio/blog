@@ -307,7 +307,7 @@
     (or <a :href="octaveFile" download="birthday.m">download it</a> directly):
   </p>
 
-  <CodeBlock language="octave" :code="octaveCode" />
+  <CodeBlock language="matlab" :code="octaveCode" />
 
   <p>
     Now start Octave in the same directory where <code>birthday.m</code> is
