@@ -365,10 +365,10 @@ const options = {
 };
 
 const octaveCode = `
-# N: Size of set from which elements are selected
-# n: Number of randomly selected elements
+% N: Size of set from which elements are selected
+% n: Number of randomly selected elements
 function p = birthday(N, n)
-  # We need to choose at least two elements.
+  % We need to choose at least two elements.
   if n < 2
     p = 0;
   else
