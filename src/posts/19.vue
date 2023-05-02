@@ -322,7 +322,7 @@
     language="octave"
     code="
     octave:1> birthday(365, 23)
-    ans =  0.50730
+    ans = 0.5073
     "
   />
 </template>
