@@ -47,6 +47,7 @@ window.MathJax = {
       Day: "\\,\\mathrm{d}",
       Gram: "\\,\\mathrm{g}",
       Joule: "\\,\\mathrm{J}",
+      Kilobyte: "\\,\\mathrm{kB}",
       Kilocalorie: "\\,\\mathrm{kcal}",
       Kilogram: "\\,\\mathrm{kg}",
       Kilojoule: "\\,\\mathrm{kJ}",
