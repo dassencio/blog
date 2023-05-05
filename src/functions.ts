@@ -77,6 +77,27 @@ export function figureIdToHtmlId(id: string) {
 }
 
 /**
+ * Generates an HTML anchor element for a figure.
+ *
+ * @param id - Figure ID
+ * @param number - Figure number
+ * @param subfigureLabel - Subfigure label (e.g. "a")
+ * @param capitalized - Whether the first text character should be capitalized
+ *
+ * @returns HTML anchor element as a string
+ */
+export function figureLink(
+  id: string,
+  number: number,
+  subfigureLabel = "",
+  capitalized = false
+) {
+  return `<a href="#${figureIdToHtmlId(id)}">${
+    capitalized ? "Figure" : "figure"
+  } ${number}${subfigureLabel}</a>`;
+}
+
+/**
  * Converts a reference ID into its associated HTML element ID.
  */
 export function referenceIdToHtmlId(id: string) {
