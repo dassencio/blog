@@ -1,7 +1,7 @@
 <template>
   <div class="caption">
     <b class="caption__key">{{ captionKey }}:</b>
-    <div class="caption__text">{{ caption }}</div>
+    <div class="caption__text" v-html="caption"></div>
   </div>
 </template>
 
