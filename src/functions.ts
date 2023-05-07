@@ -17,7 +17,7 @@ export function dateToString(year: number, month: number, day: number): string {
  * Escapes special HTML characters in a string.
  *
  * @param text - Input string
- * @returns Input string with special HTML characters escaped.
+ * @returns Input string with special HTML characters escaped
  */
 export function escapeHtml(text: string) {
   return text
@@ -32,7 +32,7 @@ export function escapeHtml(text: string) {
  * Removes excess indentation from a string.
  *
  * @param text - Input string
- * @returns Input string with smallest indentation level set to zero spaces.
+ * @returns Input string with smallest indentation level set to zero spaces
  */
 export function removeExcessIndentation(text: string) {
   const lines = text.split("\n");
