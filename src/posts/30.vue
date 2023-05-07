@@ -16,7 +16,7 @@
     computing, to name a few. Specifically, given a matrix $A$, it is possible
     to generate another matrix $\tilde{A} \approx A$ such that $\tilde{A}$ can
     be stored using less disk (or memory) space than $A$ itself. This
-    representation can be obtained through a powerful tool in linear algebra
+    representation can be obtained by using a powerful tool in linear algebra
     called
     <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">
       singular value decomposition</a
