@@ -289,7 +289,7 @@
   <SectionTitle>Compressing the original color image</SectionTitle>
 
   <p>
-    We will now use the technique described above on the original color image.
+    We will now use the method described above on the original color image.
     Remember that for a fixed $n$, $I_{ijn}$ is a $400 \times 400$ matrix which
     contains the intensity of color $n$ at each pixel in the image, meaning we
     can compress $I_{ij1}$, $I_{ij2}$ and $I_{ij3}$ separately. The following
@@ -299,7 +299,7 @@
   <CodeBlock
     language="matlab"
     code="
-    N = 50
+    N = 50;
 
     [U1c, Sigma1c, V1c] = compress_matrix(I(:, :, 1), N);
     [U2c, Sigma2c, V2c] = compress_matrix(I(:, :, 2), N);
