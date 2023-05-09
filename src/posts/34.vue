@@ -8,15 +8,17 @@
     >
     (SVD). The trick is to discard information (singular values) from the
     original matrix to generate an "approximate" version of it. This post
-    describes how that technique can be used to also compress images. The method
-    is shown for educational purposes only and is not adequate for professional
-    image compression.
+    investigates whether that technique can also be used to compress images. The
+    idea is to discard information (singular values) from the original matrix to
+    generate an approximate version of it. It should be noted that the method
+    shown here is for educational purposes only and is not suitable for
+    professional image compression.
   </p>
 
   <p>
-    I will use <a href="https://www.gnu.org/software/octave/">Octave</a>
-    to illustrate the method. If you're using Ubuntu/Debian, you can install it
-    by opening a terminal and running the following command (notice that the
+    I will use <a href="https://www.gnu.org/software/octave/">Octave</a> to
+    illustrate the method. If you're using Ubuntu/Debian, you can install it by
+    opening a terminal and running the following command (notice that the
     <code>octave-image</code> package must also be installed):
   </p>
 
@@ -37,15 +39,14 @@
   </FigureBlock>
 
   <p>
-    The command above will read the file
-    <code>dog-color.png</code> (shown in <FigureLink id="dog-color" />) and
-    store it as a three-dimensional array $I$. The value $I_{ijn}$ is a one-byte
-    integer (i.e., a value in the integer range $[0, 255]$) representing the
-    amount of color $n$ on pixel $(i, j)$, where $n = 1, 2, 3$ for the colors
-    red, green and blue respectively, and $(i, j)$ represents the position of a
-    pixel in the image, with $i$ and $j$ both equal to $1$ at the top-left
-    corner of the image and increasing along the vertical and horizontal
-    directions respectively. For the sample image in
+    The command above will read the file <code>dog-color.png</code> (shown in
+    <FigureLink id="dog-color" />) and store it as a three-dimensional array
+    $I$. The value $I_{ijn}$ is a one-byte integer (i.e., a value in the integer
+    range $[0, 255]$) representing the amount of color $n$ on pixel $(i, j)$,
+    where $n = 1, 2, 3$ for the colors red, green, and blue respectively, and
+    $(i, j)$ represents the position of a pixel in the image, with $i$ and $j$
+    both equal to $1$ at the top-left corner of the image and increasing along
+    the vertical and horizontal directions respectively. For the sample image in
     <FigureLink id="dog-color" />, $i$ and $j$ are positive integers in the
     range $[1, 400]$, meaning $I_{ijn}$ is a $400 \times 400$ matrix when the
     value of $n$ is fixed.
@@ -54,7 +55,7 @@
   <p>
     Before doing image compression using $I$, let's first work on a simpler
     example: the grayscale version of the image in
-    <FigureLink id="dog-color" />. Octave has a built-in function which converts
+    <FigureLink id="dog-color" />. Octave has a built-in function that converts
     color images to grayscale:
   </p>
 
@@ -64,8 +65,8 @@
     This makes things easier since $J$ is simply a $400 \times 400$ matrix
     containing the grayscale intensity of each pixel in the original image.
     Entries from $J$ are values in the range $[0, 255]$ with $0$ representing
-    black, $255$ representing white and values in between representing different
-    shades of gray. To visualize $J$ in Octave, run:
+    black, $255$ representing white, and values in between representing
+    different shades of gray. To visualize $J$ in Octave, run:
   </p>
 
   <CodeBlock language="matlab" code="imshow(J)" />
@@ -163,9 +164,8 @@
   <p>
     <FigureLink id="dog-grayscale-compression" capitalized /> shows the
     resulting images represented by $J_c$ for several values of $N$ (click
-    <a :href="dogGrayscaleCompressionMovie">here</a>
-    to see an animation showing all images obtained for values of $N$ ranging
-    from $50$ to $1$):
+    <a :href="dogGrayscaleCompressionMovie">here</a> to see an animation showing
+    all images obtained for values of $N$ ranging from $50$ to $1$):
   </p>
 
   <FigureBlock
@@ -317,9 +317,8 @@
   <p>
     <FigureLink id="dog-color-compression" capitalized /> shows the resulting
     images represented by $I_c$ for several values of $N$ (click
-    <a :href="dogColorCompressionMovie">here</a>
-    to see an animation showing all images obtained for values of $N$ ranging
-    from $50$ to $1$):
+    <a :href="dogColorCompressionMovie">here</a> to see an animation showing all
+    images obtained for values of $N$ ranging from $50$ to $1$):
   </p>
 
   <FigureBlock
