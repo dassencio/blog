@@ -379,12 +379,7 @@
     image and check its size for a fixed value of $N$:
   </p>
 
-  <CodeBlock
-    language="matlab"
-    code='
-    imwrite(Ic, "dog-color-compressed.png")
-    '
-  />
+  <CodeBlock language="matlab" code='imwrite(Ic, "dog-color-compressed.png")' />
 
   <p>
     <TableLink id="image-sizes-color" capitalized /> shows the size of the
