@@ -276,11 +276,11 @@
   </TableBlock>
 
   <p>
-    As <TableLink id="image-sizes-grayscale" /> shows, the PNG images become
-    smaller as we discard more and more singular values, but only very slowly as
-    $N$ is decreased. Even for $N = 5$ (see
+    As we can see from the numbers above, the PNG images become smaller as we
+    discard more singular values. However, the reduction in size occurs very
+    slowly as $N$ is decreased. Even for $N = 5$ (see
     <FigureLink id="dog-grayscale-compression" subfigure-id="N5" />), the
-    resulting image is only $46\%$ smaller than the original despite looking
+    resulting image is only $46\%$ smaller than the original, despite looking
     very blurred.
   </p>
 
@@ -418,11 +418,10 @@
   </TableBlock>
 
   <p>
-    Similarly to what we observed for the grayscale images, the generated PNG
-    images become smaller as we discard more and more singular values from
-    $I_{ij1}$, $I_{ij2}$ and $I_{ij3}$, but only very slowly as $N$ is
-    decreased. Even for $N = 5$, the resulting image is only $45\%$ smaller than
-    the original one.
+    As we can see from the numbers above, the PNG images become smaller as we
+    discard more singular values from $I_{ij1}$, $I_{ij2}$ and $I_{ij3}$, but
+    again only slowly as $N$ is decreased. Even for $N = 5$, the resulting image
+    is only $45\%$ smaller than the original one.
   </p>
 
   <p>
