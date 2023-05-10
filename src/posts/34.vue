@@ -246,7 +246,7 @@
   <TableBlock
     id="image-sizes-grayscale"
     :columns="2"
-    caption="Sizes of generated PNG images for different values
+    caption="Size of generated PNG images for different values
              of $N$. Notice that $N = 400$ corresponds to the original image
              since all singular values are kept during the compression process."
   >
@@ -371,7 +371,7 @@
 
   <p>
     Similarly to what we did earlier, we can compare the sizes of PNG images
-    represented by $I_c$ for multiple values of $N$ with the size of the
+    generated from $I_c$ for multiple values of $N$ with the size of the
     original PNG image (<FigureLink id="dog-color" />). Since the latter is
     already locally stored as a file, all we need to do is store $I_c$ as a PNG
     image and check its size for a fixed value of $N$:
@@ -388,7 +388,7 @@
   <TableBlock
     id="image-sizes-color"
     :columns="2"
-    caption="Sizes of generated PNG images for different values
+    caption="Size of generated PNG images for different values
              of $N$, with $N = 400$ corresponding to the original image
              since all singular values are kept during the compression process."
   >
@@ -421,8 +421,8 @@
     Similarly to what we observed for the grayscale images, the generated PNG
     images become smaller as we discard more and more singular values from
     $I_{ij1}$, $I_{ij2}$ and $I_{ij3}$, but only very slowly as $N$ is
-    decreased. Even for $N = 5$, the resulting image is again only $46\%$
-    smaller than the original one.
+    decreased. Even for $N = 5$, the resulting image is only $45\%$ smaller than
+    the original one.
   </p>
 
   <p>
