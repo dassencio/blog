@@ -8,11 +8,9 @@
     >
     (SVD). The trick is to discard information (singular values) from the
     original matrix to generate an "approximate" version of it. This post
-    investigates whether that technique can also be used to compress images. The
-    idea is to discard information (singular values) from the original matrix to
-    generate an approximate version of it. It should be noted that the method
-    shown here is for educational purposes only and is not suitable for
-    professional image compression.
+    investigates whether that technique can also be used to compress images. It
+    should be noted that the method shown here is for educational purposes only
+    and is not suitable for professional image compression.
   </p>
 
   <p>
