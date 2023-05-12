@@ -1,8 +1,8 @@
 <template>
   <p>
-    Suppose you wish to generate a list of all songs in a directory (including
-    its subdirectories), and that the songs are stored in the MP3, FLAC, and Ogg
-    Vorbis formats. How can this song list be obtained via CLI?
+    Suppose you want to generate a list of all songs in a directory (including
+    its subdirectories), and that the songs are stored in MP3, FLAC, and Ogg
+    Vorbis formats. How can you obtain this song list via CLI?
   </p>
 
   <p>
@@ -18,35 +18,38 @@
   />
 
   <p>
-    where <code>dir</code> is the path to the directory where the file search
-    will be performed (either an absolute path or a relative path with respect
-    to the current working directory). Let's go over each part of this command
-    to understand what it does:
+    where <code>dir</code> represents the path to the directory where the file
+    search will be conducted. This can be either an absolute path or a relative
+    path with respect to the current working directory. Let's analyze each part
+    of this command to understand its purpose:
   </p>
 
   <MapBlock>
     <code>-type f</code>
     <span>
-      Match only regular files. Directories and other file types such as
-      sockets, pipes, devices, etc., are ignored.
+      Specifies that only regular files should be matched. Directories and other
+      file types, such as sockets, pipes, devices, etc., are ignored.
     </span>
 
     <code>-iname &lt;pattern&gt;</code>
     <span>
-      Ignore case distinctions when searching for files whose names match the
-      given pattern, i.e., uppercase is not distinguished from lowercase.
+      Sets the filename pattern to be matched and instructs the command to
+      ignore case distinctions, i.e., to not distinguish between uppercase and
+      lowercase.
     </span>
 
     <code>... -o ...</code>
-    <span><code>OR</code> operator for matching multiple patterns.</span>
+    <span>
+      <code>OR</code> operator, used for matching multiple patterns.
+    </span>
   </MapBlock>
 
   <SectionTitle>Alternative #1</SectionTitle>
 
   <p>
-    It's also possible to use
-    <a href="https://linux.die.net/man/1/grep">grep</a> to do the pattern
-    matching work:
+    An alternative approach involves using the
+    <a href="https://linux.die.net/man/1/grep">grep</a> tool for pattern
+    matching:
   </p>
 
   <CodeBlock
@@ -54,45 +57,46 @@
   />
 
   <p>
-    This will recursively list all files in <code>dir</code> and use this file
-    list (with one filename per line) as input to grep, which will then output
-    only the lines matching at least one of the specified patterns. As for the
-    grep parameters:
+    This command recursively lists all files in <code>dir</code> and pipes this
+    list (with one filename per line) to grep. Grep then outputs only the lines
+    that match at least one of the specified patterns. Let's dissect each part
+    of the command:
   </p>
 
   <MapBlock>
     <code>-e &lt;pattern&gt;</code>
     <span>
-      Specify a pattern to be matched by grep. As shown above, grep can match
+      Specifies a pattern for grep to match. As indicated above, grep can match
       multiple patterns.
     </span>
 
     <code>-i</code>
     <span>
-      Ignore case distinctions when searching for strings which match any of the
-      given patterns, i.e., uppercase is not distinguished from lowercase.
+      Directs grep to ignore case distinctions when searching for strings that
+      match any of the given patterns, i.e., uppercase is not distinguished from
+      lowercase.
     </span>
   </MapBlock>
 
   <p>
-    Regular expressions such as <code>\.mp3$</code> match the string
-    "<code>.mp3</code>" at the end of a line, and similar for
-    <code>\.flac$</code> and <code>\.ogg$</code>. The <code>$</code> symbol
-    matches the end of a line, and <code>\.</code> matches a literal dot
-    character.
+    The regular expressions <code>\.mp3$</code>, <code>\.flac$</code>, and
+    <code>\.ogg$</code> are used to match the strings "<code>.mp3</code>",
+    "<code>.flac</code>", and "<code>.ogg</code>", respectively, at the end of a
+    line. In these expressions, the <code>$</code> symbol specifies the end of a
+    line, while <code>\.</code> is used to match a literal dot character.
   </p>
 
   <SectionTitle>Alternative #2</SectionTitle>
 
-  <p>Another command which achieves the exact same result is:</p>
+  <p>Another command that achieves the exact same result is:</p>
 
   <CodeBlock
     code='grep -i -e "\.mp3$" -e "\.flac$" -e "\.ogg$" <(find -type f)'
   />
 
   <p>
-    To understand how it works, notice first that grep can take a file as input,
-    so:
+    To understand how this works, note first that grep can take a file as input.
+    For instance:
   </p>
 
   <CodeBlock code='grep "string" file.txt' />
@@ -101,7 +105,7 @@
     will output all lines in <code>file.txt</code> containing
     <code>string</code>. In the solution presented here, a temporary file
     containing the output of the <code>find</code> command is automatically
-    created and the name of this file is passed as an argument to the
+    created, and the name of this file is passed as an argument to the
     <code>grep</code> command.
   </p>
 
