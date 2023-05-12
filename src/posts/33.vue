@@ -3,7 +3,7 @@
     Consider the double pendulum shown in <FigureLink id="double-pendulum" />. A
     double pendulum is a system consisting of a standard pendulum directly
     attached to another one. Each pendulum consists of a bob connected to a
-    massless rigid rod which is only allowed to move along a vertical plane. The
+    massless rigid rod that is only allowed to move along a vertical plane. The
     pivot of the first pendulum is fixed to a point $O$, and all motion is
     frictionless.
   </p>
@@ -16,8 +16,8 @@
     In our discussion, the fixed point $O$ will be taken as the origin of a
     Cartesian coordinate system with the $x$ axis pointing along the horizontal
     direction and the $y$ axis pointing vertically upwards. Let $\theta_1$ and
-    $\theta_2$ be the angles which the first and second rods make with the
-    vertical direction respectively. As can be seen in
+    $\theta_2$ be the angles that the first and second rods make with the
+    vertical direction, respectively. As can be seen in
     <FigureLink id="double-pendulum" />, the positions of the bobs are given by:
   </p>
 
@@ -49,7 +49,7 @@
       >Lagrangian</a
     >
     of a double pendulum is given by $L = T - V$, where $T$ and $V$ are the
-    kinetic and potential energies of the system respectively. The kinetic
+    kinetic and potential energies of the system, respectively. The kinetic
     energy $T$ is given by:
   </p>
 
@@ -155,7 +155,7 @@
   <p>
     Equations \eqref{euler-lagrange-1} and \eqref{euler-lagrange-2} form a
     system of coupled second-order nonlinear differential equations. Dividing
-    them by $(m_1 + m_2)l_1$ and $l_2$ respectively, and moving all terms which
+    them by $(m_1 + m_2)l_1$ and $l_2$ respectively, and moving all terms that
     do not involve $\ddot{\theta}_1$ and $\ddot{\theta}_2$ to the right-hand
     side gives us:
   </p>
