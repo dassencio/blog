@@ -154,10 +154,10 @@
 
   <p>
     Equations \eqref{euler-lagrange-1} and \eqref{euler-lagrange-2} form a
-    system of coupled second-order nonlinear differential equations. Dividing
+    system of coupled second-order nonlinear differential equations. By dividing
     them by $(m_1 + m_2)l_1$ and $l_2$ respectively, and moving all terms that
     do not involve $\ddot{\theta}_1$ and $\ddot{\theta}_2$ to the right-hand
-    side gives us:
+    side, we obtain:
   </p>
 
   <!-- prettier-ignore -->
@@ -197,7 +197,7 @@
   </EquationBlock>
 
   <p>
-    Interestingly, $f_1$ does not depend on $\dot{\theta}_1$ and $f_2$ does not
+    Interestingly, $f_1$ does not depend on $\dot{\theta}_1$, and $f_2$ does not
     depend on $\dot{\theta}_2$. Equations \eqref{euler-lagrange-1-short} and
     \eqref{euler-lagrange-2-short} can be combined into a single equation:
   </p>
