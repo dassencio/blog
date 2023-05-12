@@ -1,7 +1,7 @@
 <template>
   <p>
     Suppose you wish to generate a list of all songs in a directory (including
-    its subdirectories), and that the songs are stored in the MP3, FLAC and Ogg
+    its subdirectories), and that the songs are stored in the MP3, FLAC, and Ogg
     Vorbis formats. How can this song list be obtained via CLI?
   </p>
 
@@ -106,7 +106,7 @@
   </p>
 
   <p>
-    In more detail, whenever a command is surrounded by parentheses, it's
+    In more detail, whenever a command is surrounded by parentheses, it is
     executed in a subshell, i.e., the active (parent) shell clones itself and
     runs the command within this cloned (child) shell. The syntax
     <code>&lt;(command)</code> directs the parent shell to also generate a
