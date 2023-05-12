@@ -7,8 +7,8 @@
 
   <p>
     One possible way is by using the
-    <a href="http://man7.org/linux/man-pages/man1/find.1.html">find</a>
-    tool with the following command:
+    <a href="http://man7.org/linux/man-pages/man1/find.1.html">find</a> tool
+    with the following command:
   </p>
 
   <CodeBlock
@@ -50,9 +50,7 @@
   </p>
 
   <CodeBlock
-    code='
-    find <dir> -type f | grep -i -e "\.mp3$" -e "\.flac$" -e "\.ogg$"
-    '
+    code='find <dir> -type f | grep -i -e "\.mp3$" -e "\.flac$" -e "\.ogg$"'
   />
 
   <p>
@@ -89,9 +87,7 @@
   <p>Another command which achieves the exact same result is:</p>
 
   <CodeBlock
-    code='
-    grep -i -e "\.mp3$" -e "\.flac$" -e "\.ogg$" <(find -type f)
-    '
+    code='grep -i -e "\.mp3$" -e "\.flac$" -e "\.ogg$" <(find -type f)'
   />
 
   <p>
@@ -117,9 +113,8 @@
     temporary
     <a href="http://www.linuxjournal.com/article/2156?page=0,1">named pipe</a>
     to receive the output of <code>command</code> and to replace
-    <code>&lt;(command)</code>
-    with the name of that pipe. You can see what the name of a temporary named
-    pipe looks like by running:
+    <code>&lt;(command)</code> with the name of that pipe. You can see what the
+    name of a temporary named pipe looks like by running:
   </p>
 
   <CodeBlock code="echo <(ls)" />
