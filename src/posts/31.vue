@@ -4,40 +4,40 @@
     <a href="https://en.wikipedia.org/wiki/Theory_of_relativity"
       >theory of relativity</a
     >
-    says that a body at rest with mass $m$ contains an amount of energy (called
-    its "rest energy") given by:
+    states that a body at rest with mass $m$ contains an amount of energy
+    (referred to as its "rest energy"), which is given by:
   </p>
 
   <EquationBlock> E=mc^2 </EquationBlock>
 
   <p>
     where $c \approx 3 \cdot 10^8 \Meter\Per\Second$ is the speed of light.
-    Assuming that the tip of a human finger contains approximately $1\Gram$ of
-    mass, the energy content of a fingertip is then:
+    Assuming that the tip of a human finger contains approximately $1 \Gram$ of
+    mass, the energy content of a fingertip can be calculated as follows:
   </p>
 
   <EquationBlock>
-    E \approx (10^{-3}\Kilogram) \cdot (3\cdot 10^8 \Meter\Per\Second)^2 = 9
+    E \approx (10^{-3} \Kilogram) \cdot (3\cdot 10^8 \Meter\Per\Second)^2 = 9
     \cdot 10^{13} \Joule
   </EquationBlock>
 
   <p>
-    This is a very large amount of energy. So large, indeed, that if your body
-    would be able to convert mass into energy, you would be able to live your
-    entire life off the mass of your fingertip!
+    This value represents a large amount of energy. So large, in fact, that if
+    your body were capable of converting mass into energy, you could potentially
+    live your entire life off the mass of your fingertip!
   </p>
 
   <p>
-    To convince the skeptical reader that this is indeed the case, let's
-    estimate the amount of energy consumed by a human body over the course of
-    its lifetime. The recommended daily energy consumption for adult males
-    between $20$ and $50$ years of age is approximately $2500 \Kilocalorie
-    \approx 10500 \Kilojoule$ (see
+    To validate this argument for the skeptical reader, let's estimate the
+    amount of energy consumed by a human body over the course of its lifetime.
+    The recommended daily energy intake for adult males between $20$ and $50$
+    years of age is approximately $2500 \Kilocalorie \approx 10500 \Kilojoule$
+    (see
     <ReferenceLink id="dietary-guidelines-for-americans" />, page 78). Younger
-    and older males are recommended to consume less than that amount per day (on
-    average). This means one can expect the energy consumption of a male body
-    over its entire lifespan (assume it to be $100$ years to make sure we're not
-    underestimating the actual value) to be around:
+    and older males are recommended to consume less energy per day (on average).
+    Therefore, one can expect the energy consumption of a male body over its
+    entire lifespan (assuming it to be $100$ years to avoid underestimation) to
+    be approximately:
   </p>
 
   <EquationBlock>
@@ -46,8 +46,8 @@
   </EquationBlock>
 
   <p>
-    The energy content of a fingertip is therefore more than a hundred times
-    larger than the amount of energy consumed by a person during their entire
+    Thus, the energy content of a fingertip is more than a hundred times greater
+    than the amount of energy consumed by a person throughout their entire
     lifetime!
   </p>
 
