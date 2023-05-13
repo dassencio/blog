@@ -97,10 +97,10 @@
   </EquationBlock>
 
   <p>
-    is a relation containing four columns ($\textrm{Name}$, $\textrm{Age}$,
-    $\textrm{Name2}$, $\textrm{Age2}$), with each of its tuples satisfying
+    is a relation containing four columns $(\textrm{Name}$, $\textrm{Age}$,
+    $\textrm{Name2}$, $\textrm{Age2})$, with each of its tuples satisfying
     $\textrm{Age} \lt \textrm{Age2}$. Applying $\Pi_{\textrm{Age}}$ to this
-    relation results in another relation with a single column ($\textrm{Age}$)
+    relation results in another relation with a single column $(\textrm{Age})$
     containing all original age values from $P$ that are smaller than some other
     age value in $P$. Therefore, the relation
   </p>
