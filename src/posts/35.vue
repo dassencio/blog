@@ -54,7 +54,7 @@
       </a>
       of $R$ and $S$: Compute all combinations of tuples from $R$ and $S$ that
       satisfy the condition $\theta$ ($R \bowtie_{\theta} S = \sigma_{\theta}(R
-      \cdot S)$, where $R \cdot S$ is the Cartesian product of $R$ and $S$).
+      \times S)$, where $R \times S$ is the Cartesian product of $R$ and $S$).
     </span>
   </MapBlock>
 
@@ -82,8 +82,9 @@
   </p>
 
   <EquationBlock>
-    \max_{P}(\textrm{Age}) := \Pi_{\textrm{Age}} P - \Pi_{\textrm{Age}}\left[ P
-    \underset{\textrm{Age} \lt \textrm{Age2}}{\bowtie}
+    \max_{P}(\textrm{Age}) \ColonEq \Pi_{\textrm{Age}} P -
+    \Pi_{\textrm{Age}}\left[ P \underset{\textrm{Age} \lt
+    \textrm{Age2}}{\bowtie}
     \left(\rho_{\textrm{Name2/Name}}\rho_{\textrm{Age2/Age}} P\right)\right]
   </EquationBlock>
 
@@ -104,8 +105,8 @@
     $\textrm{Name2}$, $\textrm{Age2}$), with each of its tuples satisfying
     $\textrm{Age} \lt \textrm{Age2}$. Applying $\Pi_{\textrm{Age}}$ to this
     relation results in another relation with a single column ($\textrm{Age}$)
-    containing all original age values from $P$ that are
-    <b>smaller</b> than some other age value in $P$. Therefore, the relation
+    containing all original age values from $P$ that are smaller than some other
+    age value in $P$. Therefore, the relation
   </p>
 
   <EquationBlock>
@@ -115,9 +116,9 @@
   </EquationBlock>
 
   <p>
-    contains all ages <b>except</b> the largest one, so removing these values
-    from $\Pi_{\textrm{Age}} P$ yields a relation with only a single age value:
-    the largest one.
+    contains all ages except the largest one, so removing these values from
+    $\Pi_{\textrm{Age}} P$ yields a relation with only a single age value: the
+    largest one.
   </p>
 </template>
 
