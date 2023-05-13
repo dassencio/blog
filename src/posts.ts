@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "85b94ecb875ce2f318beabfa7f0150a7",
+    component: () => import("@/posts/35.vue"),
+    date: dateToString(2014, 3, 17),
+    id: "35",
+    labels: [PostLabel.Compsci, PostLabel.RelationalAlgebra],
+    title: "Obtaining the largest value in relational algebra",
+  },
+  {
     compatibilityIndex: "8bfc2bade698bb0c82690aedf17c7875",
     component: () => import("@/posts/34.vue"),
     date: dateToString(2014, 3, 7),
