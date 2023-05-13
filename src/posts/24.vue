@@ -55,8 +55,8 @@
 
   <p>
     where $Y^m_l(\theta,\phi)$ is the
-    <a href="https://en.wikipedia.org/wiki/Spherical_harmonic">
-      normalized spherical harmonic</a
+    <a href="https://en.wikipedia.org/wiki/Spherical_harmonic"
+      >normalized spherical harmonic</a
     >
     of degree $l$ and order $m$ and $R_{nl}(r)$ is a real-valued function of $r$
     which has the form (see

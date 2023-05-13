@@ -1,9 +1,9 @@
 <template>
   <p>
     Using the basic operations of
-    <a href="https://en.wikipedia.org/wiki/Relational_algebra">
-      relational algebra
-    </a>
+    <a href="https://en.wikipedia.org/wiki/Relational_algebra"
+      >relational algebra</a
+    >
     (RA), we can obtain the largest value assigned to a given attribute of a
     relation. This post will show how this can be done.
   </p>
@@ -16,11 +16,9 @@
   <MapBlock>
     <span>$\sigma_{\theta}(R)$</span>
     <span>
-      <a
-        href="https://en.wikipedia.org/wiki/Selection_%28relational_algebra%29"
+      <a href="https://en.wikipedia.org/wiki/Selection_%28relational_algebra%29"
+        >Select tuples</a
       >
-        Select tuples
-      </a>
       (rows) from $R$ that satisfy the condition $\theta$, where $\theta$
       consists of comparisons of attributes from $R$ using the following binary
       operators: $\lt$, $\leq$, $=$, $\geq$, and $\gt$.
@@ -30,18 +28,17 @@
     <span>
       <a
         href="https://en.wikipedia.org/wiki/Projection_%28relational_algebra%29"
+        >Extract attributes</a
       >
-        Extract attributes
-      </a>
       (columns) $a_1,\ldots,a_n$ from $R$. Duplicate tuples are discarded, so
       each tuple in the resulting relation is unique.
     </span>
 
     <span>$\rho_{a/b}(R)$</span>
     <span>
-      <a href="https://en.wikipedia.org/wiki/Rename_%28relational_algebra%29">
-        Rename
-      </a>
+      <a href="https://en.wikipedia.org/wiki/Rename_%28relational_algebra%29"
+        >Rename</a
+      >
       attribute $b$ in $R$ to $a$.
     </span>
 
@@ -49,9 +46,8 @@
     <span>
       <a
         href="https://en.wikipedia.org/wiki/Relational_algebra#.CE.B8-join_and_equijoin"
+        >$\theta$-join</a
       >
-        $\theta$-join
-      </a>
       of $R$ and $S$: Compute all combinations of tuples from $R$ and $S$ that
       satisfy the condition $\theta$ ($R \bowtie_{\theta} S = \sigma_{\theta}(R
       \times S)$, where $R \times S$ is the Cartesian product of $R$ and $S$).

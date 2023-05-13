@@ -3,8 +3,8 @@
     In a <RouterLink :to="{ name: '30' }">previous post</RouterLink>, I
     described how matrices can be compressed using a tool in linear algebra
     known as
-    <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">
-      singular value decomposition</a
+    <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition"
+      >singular value decomposition</a
     >
     (SVD). The trick is to discard information (singular values) from the
     original matrix to generate an "approximate" version of it. This post

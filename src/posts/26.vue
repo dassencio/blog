@@ -72,8 +72,8 @@
     identify the organization which has manufactured the device (e.g. Intel
     Corporation, Cisco Systems, Netgear Inc., etc.; this organization is
     typically the device vendor) and correspond to an
-    <a href="https://en.wikipedia.org/wiki/Organizationally_Unique_Identifier">
-      Organizationally Unique Identifier</a
+    <a href="https://en.wikipedia.org/wiki/Organizationally_Unique_Identifier"
+      >Organizationally Unique Identifier</a
     >
     (OUI). Vendors must purchase OUI's from the
     <a href="https://en.wikipedia.org/wiki/IEEE_registration_authority"

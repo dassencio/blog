@@ -18,8 +18,8 @@
     be stored using less disk (or memory) space than $A$ itself. This
     representation can be obtained by using a powerful tool in linear algebra
     called
-    <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition">
-      singular value decomposition</a
+    <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition"
+      >singular value decomposition</a
     >
     (SVD), as I will explain in this post.
   </p>

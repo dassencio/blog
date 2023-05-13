@@ -18,8 +18,7 @@
     is lower than $100$ trillion ($10^{14}$), and the
     <a
       href="https://en.wikipedia.org/wiki/Observable_universe#Extrapolation_from_number_of_stars"
-    >
-      number of stars in the observable universe</a
+      >number of stars in the observable universe</a
     >
     seems to be in the range $10^{22} - 10^{24}$.
   </p>

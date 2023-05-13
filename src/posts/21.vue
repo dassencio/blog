@@ -51,8 +51,7 @@
     controllers are managed by an
     <a
       href="https://en.wikipedia.org/wiki/Host_controller_interface_%28USB%2C_Firewire%29"
-    >
-      EHCI</a
+      >EHCI</a
     >
     driver (<code>Driver=ehci_hcd/3p</code>). USB 2.0 ports are always managed
     by either an EHCI or an
