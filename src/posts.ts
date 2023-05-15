@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "f8cf6364586db30c14e1742f378bbc1c",
+    component: () => import("@/posts/36.vue"),
+    date: dateToString(2014, 3, 27),
+    id: "36",
+    labels: [PostLabel.AppliedMathematics, PostLabel.ScientificComputing],
+    title: "Integrating polynomials over polygonal domains in 2D",
+  },
+  {
     compatibilityIndex: "85b94ecb875ce2f318beabfa7f0150a7",
     component: () => import("@/posts/35.vue"),
     date: dateToString(2014, 3, 17),
