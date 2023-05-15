@@ -26,8 +26,9 @@
   <p>
     The curve $S$ consists of a connected series of $n$ line segments $S_i$,
     with $i = 1, 2, \ldots, n$. Let $L_i$ be the length of $S_i$ and let $(x_i,
-    y_i)$ and $(x_i + \Delta{x_i}, y_i + \Delta{y_i})$ represent the coordinates
-    of its end nodes (see <FigureLink id="polygonal-domain" />).
+    y_i)$ and $(x_{i+1}, y_{i+1}) = (x_i + \Delta{x_i}, y_i + \Delta{y_i})$
+    represent the coordinates of its end nodes (see
+    <FigureLink id="polygonal-domain" /> for an example with $n = 6$).
   </p>
 
   <FigureBlock
@@ -51,7 +52,7 @@
 
   <EquationBlock>
     p_d(x,y) = \DDo{x} \left( \SumSub{m,n=0}{m + n \leq d}^d c_{mn}
-    \frac{x^{m+1}}{m+1}y^n \right) = \nabla\cdot\binom{q_{d+1}(x,y)}{0}
+    \frac{x^{m+1}}{m+1}y^n \right) = \nabla\cdot(q_{d+1}(x,y), 0)
     \label{p-divergent-form}
   </EquationBlock>
 
@@ -70,8 +71,8 @@
   <!-- prettier-ignore -->
   <EquationBlock align>
     \int_{\Omega} p_d(x,y) \D{x}\D{y}
-      &= \int_{\Omega} \nabla\cdot\binom{q_{d+1}(x,y)}{0} \D{x}\D{y} \\
-      &= \int_{S} \binom{q_{d+1}(x,y)}{0} \cdot \Vec{n}(x,y) \D{l} \\
+      &= \int_{\Omega} \nabla\cdot(q_{d+1}(x,y), 0) \D{x}\D{y} \\
+      &= \int_{S} (q_{d+1}(x,y), 0) \cdot \Vec{n}(x,y) \D{l} \\
       &= \int_{S} q_{d+1}(x,y) n^1(x,y) \D{l} \\
       &= \sum_{i=1}^{n} \int_{S_i} q_{d+1}(x,y)n^1(x,y) \D{l} \label{integral-q-n1}
   </EquationBlock>
@@ -90,9 +91,9 @@
   </EquationBlock>
 
   <p>
-    An expression for $\Vec{n}i$ can be obtained by rotating the vector
-    $(\Delta{x_i}, \Delta{y_i}) = (x_{i+1}, y_{i+1}) - (x_i, y_i)$ by $\pi/2$ in
-    the clockwise direction and normalizing the resulting vector:
+    An expression for $\Vec{n}_i$ can be obtained by rotating the vector
+    $(\Delta{x_i}, \Delta{y_i})$ by $\pi/2$ in the clockwise direction and
+    normalizing the resulting vector:
   </p>
 
   <EquationBlock>
@@ -157,7 +158,7 @@
   </p>
 
   <EquationBlock>
-    y = y_i + s\Delta{y_i} \Longrightarrow \D{y} = \Delta{y_i}\D{s}
+    y = y_i + s\Delta{y_i} \Longrightarrow \Di{y} = \Delta{y_i} \D{s}
     \label{y-in-terms-of-s}
   </EquationBlock>
 
@@ -217,17 +218,11 @@
   </p>
 
   <EquationBlock boxed>
-    \int_{\Omega} p_d(x,y) \D{x}\D{y} = \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq
-    d}^{d} \sum_{p=0}^{m+1} \beta_{mnip}\frac{\left(y_{i+1}^{m+2-p+n} -
-    y_i^{m+2-p+n}\right)}{m+2-p+n} \label{integral-polygonal-domain}
+    \int_{\Omega} p_d(x,y) \D{x}\D{y} = \SumSub{i=1}{\Delta{y_i} \neq 0}^{n}
+    \SumSub{m,n=0}{m + n \leq d}^{d} \sum_{p=0}^{m+1}
+    \beta_{mnip}\frac{\left(y_{i+1}^{m+2-p+n} - y_i^{m+2-p+n}\right)}{m+2-p+n}
+    \label{integral-polygonal-domain}
   </EquationBlock>
-
-  <p>
-    In the equation above, the terms corresponding to segments with $\Delta{y_i}
-    = 0$ vanish automatically since for those terms $y_{i+1} = y_i$. This allows
-    us to remove the restriction $\Delta{y_i} \neq 0$ from the sum over
-    segments.
-  </p>
 
   <p>
     Despite equation \eqref{integral-polygonal-domain} providing a general,
@@ -255,16 +250,16 @@
       &+ &&\; c_{10} \bigg( \frac{\Delta{x_i}^2}{6} + \frac{\Delta{x_i} x_i}{2}
               + \frac{x_i^2}{2} \bigg) \\
       &+ &&\;  c_{01} \bigg( \frac{\Delta{x_i}\Delta{y_i}}{3}
-               + \frac{\Delta{x_i} y_i + \Delta{y_i} x_i}{2} + x_iy_i \bigg) \\
+               + \frac{\Delta{x_i} y_i + \Delta{y_i} x_i}{2} + x_i y_i \bigg) \\
       &+ &&\; c_{20}\bigg( \frac{\Delta{x_i}^3}{12} + \frac{x_i\Delta{x_i}^2}{3}
-              + \frac{x_i^2\Delta{x_i}}{2} + \frac{x_i^3}{3} \bigg) \\
+              + \frac{x_i^2 \Delta{x_i}}{2} + \frac{x_i^3}{3} \bigg) \\
       &+ &&\; c_{11}\bigg( \frac{\Delta{x_i}^2\Delta{y_i}}{8}
               + \frac{\Delta{x_i}\Delta{y_i} x_i}{3} + \frac{x_i^2 \Delta{y_i}}{4} \\
       &  &&\; \quad \quad + \frac{\Delta{x_i}^2 y_i}{6}
               + \frac{\Delta{x_i} x_i y_i}{2} + \frac{x_i^2 y_i}{2} \bigg) \\
       &+ &&\; c_{02} \bigg(\frac{\Delta{x_i}\Delta{y_i}^2}{4}
               + \frac{2\Delta{x_i}\Delta{y_i} y_i}{3} + \frac{\Delta{x_i} y_i^2}{2} \\
-      &  &&\; \quad \quad {\frac{\Delta x^2}{2}} + \frac{x_i\Delta{y_i}^2}{3}
+      &  &&\; \quad \quad + \frac{x_i\Delta{y_i}^2}{3}
               + \Delta{y_i} y_i x_i + x_i y_i^2 \bigg)
     \Bigg]
   </EquationBlock>
