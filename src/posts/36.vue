@@ -5,8 +5,8 @@
     <a href="https://en.wikipedia.org/wiki/Polygonal_chain">polygonal curves</a>
     in two dimensions. This post extends the previous one by outlining how to
     integrate polynomials over
-    <a href="https://en.wikipedia.org/wiki/Polygon">polygonal domains</a> (with
-    boundaries that do not self-intersect).
+    <a href="https://en.wikipedia.org/wiki/Polygon">polygonal domains</a> with
+    boundaries that do not self-intersect.
   </p>
 
   <p>Let $p_d(x,y)$ be a polynomial of degree $d$:</p>
@@ -78,11 +78,11 @@
   </EquationBlock>
 
   <p>
-    where $\Vec{n}(x,y)$ is the outward unit normal to the surface $S$ (keep in
-    mind that $S$ is positively oriented) and $n^1(x,y)$ is its $x$ component.
-    Over the extension of each segment, the normal $\Vec{n}(x,y)$ remains
-    constant. Denoting the normal along the segment $S_i$ as $\Vec{n}_i$, we can
-    then rewrite equation \eqref{integral-q-n1} as:
+    where $\Vec{n}(x,y)$ is the outward unit normal to the surface $S$ and
+    $n^1(x,y)$ is its $x$ component. Over the extension of each segment, the
+    normal $\Vec{n}(x,y)$ remains constant. Denoting the normal along the
+    segment $S_i$ as $\Vec{n}_i$, we can then rewrite equation
+    \eqref{integral-q-n1} as:
   </p>
 
   <EquationBlock>
@@ -91,9 +91,9 @@
   </EquationBlock>
 
   <p>
-    An expression for $\Vec{n}_i$ can be obtained by rotating the vector
-    $(\Delta{x_i}, \Delta{y_i})$ by $\pi/2$ in the clockwise direction and
-    normalizing the resulting vector:
+    Since $S$ is positively oriented, an expression for $\Vec{n}_i$ can be
+    obtained by rotating the vector $(\Delta{x_i}, \Delta{y_i})$ by $\pi/2$ in
+    the clockwise direction and normalizing the resulting vector:
   </p>
 
   <EquationBlock>
@@ -108,7 +108,7 @@
     using the method described in the
     <RouterLink :to="{ name: '25' }">previous post</RouterLink>, we will opt for
     another approach that yields a simpler expression for the area integral we
-    wish to compute.
+    want to compute.
   </p>
 
   <p>
@@ -185,7 +185,7 @@
          \int_{y_i}^{y_{i+1}} q_{d+1}(x_i + m_i (y - y_i), y) \D{y} \\
       &= \SumSub{i=1}{\Delta{y_i} \neq 0}^{n} \int_{y_i}^{y_{i+1}}
          q_{d+1}(x_i - m_i y_i + m_i y, y) \D{y} \\
-      &= \SumSub{i=1}{\Delta{y_i} \neq 0}^{n} \SumSub{m,n=0}{m + n \leq d}
+      &= \SumSub{i=1}{\Delta{y_i} \neq 0}^{n} \SumSub{m,n=0}{m + n \leq d}^d
          c_{mn} \int_{y_i}^{y_{i+1}} \frac{(x_i - m_i y_i + m_i y)^{m+1}}{m+1}
          y^n \D{y} \label{integral-y}
   </EquationBlock>
