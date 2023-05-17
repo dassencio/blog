@@ -190,7 +190,7 @@
          y^n \D{y} \label{integral-y}
   </EquationBlock>
 
-  <p>where equations \eqref{n_i} and \eqref{definition-q} were used. Since:</p>
+  <p>where equations \eqref{definition-q} and \eqref{n_i} were used. Since:</p>
 
   <EquationBlock>
     (x_i - m_i y_i + m_i y)^{m+1} = \sum_{p=0}^{m+1} \binom{m+1}{p} (x_i - m_i
@@ -208,7 +208,8 @@
   <p>where:</p>
 
   <EquationBlock>
-    \beta_{mnip} = c_{mn} \binom{m+1}{p} \frac{(x_i - m_i y_i)^p}{m+1}
+    \beta_{mnip} = \frac{c_{mn}}{m+1} \binom{m+1}{p} \left(x_i -
+    \frac{\Delta{x_i}}{\Delta{y_i}} y_i\right)^p
     \left(\frac{\Delta{x_i}}{\Delta{y_i}}\right)^{m+1-p}
   </EquationBlock>
 
