@@ -66,10 +66,12 @@
     <span>Specifies the allowed cipher(s).</span>
 
     <code>-o KexAlgorithms=&lt;methods&gt;</code>
-    <span>Specifies the allowed key exchange algorithm(s).</span>
+    <span>Specifies the allowed KEX (key exchange) algorithm(s).</span>
 
     <code>-o HostKeyAlgorithms=&lt;algorithms&gt;</code>
-    <span>Specifies the allowed authentication algorithm(s).</span>
+    <span
+      >Specifies the allowed authentication (key signature) algorithm(s).</span
+    >
   </MapBlock>
 
   <p>
