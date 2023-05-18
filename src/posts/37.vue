@@ -11,10 +11,10 @@
 
   <p>
     However, there are situations where you might not want to add all settings
-    for a given server to your SSH configuration file. A typical case is when
-    you anticipate connecting to the server only once, but have chosen a set of
-    default cryptographic algorithms that the target server does not support. In
-    this case, you might encounter errors like these:
+    for a given server to your SSH configuration file, e.g. when you anticipate
+    connecting to the server only once. In that case, if your SSH configuration
+    file specifies a set of default cryptographic algorithms that the target
+    server does not support, you might encounter errors like these:
   </p>
 
   <CodeBlock
