@@ -63,7 +63,7 @@
     <code>-c &lt;ciphers&gt;</code>
     <span>Specifies the allowed cipher(s).</span>
 
-    <code>-o KexAlgorithms=&lt;methods&gt;</code>
+    <code>-o KexAlgorithms=&lt;algorithms&gt;</code>
     <span>Specifies the allowed KEX (key exchange) algorithm(s).</span>
 
     <code>-o HostKeyAlgorithms=&lt;algorithms&gt;</code>
@@ -116,7 +116,7 @@
 
   <p>
     To see a list of ciphers, MACs, key exchange, and authentication algorithms
-    supported by your SSH installation, refer to the
+    supported by your SSH client, refer to the
     <code>ssh_config</code> manual:
   </p>
 
