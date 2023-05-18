@@ -32,15 +32,14 @@
   <p>
     Each of the errors above indicates that the server does not support any
     combination of the necessary cryptographic algorithms (ciphers, MACs, etc.)
-    that you allow your SSH client to use. This situation might for instance
-    arise when you try to connect to servers that are not actively maintained.
+    that you allow your SSH client to use.
   </p>
 
   <p>
-    Luckily, the solution is straightforward: simply choose the cryptographic
-    algorithms manually to connect using algorithms that the server supports.
-    Although the example below specifies multiple parameters, you only need to
-    specify those related to the error message you received:
+    In such a situation, you can manually override the cryptographic algorithms
+    your SSH client is allowed to use when connecting to the server. By
+    selecting algorithms that are supported by the server, your connection will
+    succeed. To do so, you can use the following command:
   </p>
 
   <CodeBlock
@@ -53,9 +52,11 @@
   />
 
   <p>
-    Below is a list of the main security parameters that can be specified. You
-    can specify several possible algorithms for a given parameter by separating
-    them with commas, e.g., <code>-c aes128-cbc,aes128-ctr</code>:
+    Although the command specifies multiple parameters, you only need to specify
+    those related to the error message you received. Additionally, you can
+    specify several possible algorithms for a given parameter by separating them
+    with commas, e.g., <code>-c aes128-cbc,aes128-ctr</code>. Below is an
+    explanation of the purpose of each parameter:
   </p>
 
   <MapBlock>
