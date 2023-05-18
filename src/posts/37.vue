@@ -32,14 +32,11 @@
   <p>
     Each of the errors above indicates that the server does not support any
     combination of the necessary cryptographic algorithms (ciphers, MACs, etc.)
-    that you allow your SSH client to use.
-  </p>
-
-  <p>
-    In such a situation, you can manually override the cryptographic algorithms
-    your SSH client is allowed to use when connecting to the server. By
-    selecting algorithms that are supported by the server, your connection will
-    succeed. To do so, you can use the following command:
+    that you allow your SSH client to use when connecting to it. In such a
+    situation, you can manually override the set of allowed cryptographic
+    algorithms with a set of algorithms that are supported by the server in
+    order to make the connection succeed. To do so, you can use the following
+    command:
   </p>
 
   <CodeBlock
