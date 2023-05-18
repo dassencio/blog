@@ -5,8 +5,8 @@
     specifying the
     <a href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a> connection
     parameters (hostname, port, MACs, ciphers, key exchange algorithms, etc.)
-    for different servers through aliases. Connecting via SSH in this manner is
-    much more efficient as it significantly reduces typing.
+    for different servers. Connecting via SSH in this manner is much more
+    efficient as it significantly reduces typing.
   </p>
 
   <p>
