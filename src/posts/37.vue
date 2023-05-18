@@ -32,8 +32,8 @@
   <p>
     Each of the errors above indicates that the server does not support any
     combination of the necessary cryptographic algorithms (ciphers, MACs, etc.)
-    that you allow your SSH client to use. This situation might often arise when
-    you try to connect to servers that are not actively maintained.
+    that you allow your SSH client to use. This situation might for instance
+    arise when you try to connect to servers that are not actively maintained.
   </p>
 
   <p>
