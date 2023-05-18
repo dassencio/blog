@@ -38,7 +38,7 @@
 
   <p>
     Luckily, the solution is straightforward: simply choose the cryptographic
-    algorithms manually to connect using methods that the server supports.
+    algorithms manually to connect using algorithms that the server supports.
     Although the example below specifies multiple parameters, you only need to
     specify those related to the error message you received:
   </p>
@@ -53,27 +53,28 @@
   />
 
   <p>
-    Here is a list of the main security parameters that can be specified. You
+    Below is a list of the main security parameters that can be specified. You
     can specify several possible algorithms for a given parameter by separating
     them with commas, e.g., <code>-c aes128-cbc,aes128-ctr</code>:
   </p>
 
   <MapBlock>
     <code>-m &lt;MACs&gt;</code>
-    <span>specifies the allowed MAC(s)</span>
+    <span>Specifies the allowed MAC(s).</span>
 
     <code>-c &lt;ciphers&gt;</code>
-    <span>specifies the allowed cipher(s)</span>
+    <span>Specifies the allowed cipher(s).</span>
 
     <code>-o KexAlgorithms=&lt;methods&gt;</code>
-    <span>specifies the allowed key exchange algorithm(s)</span>
+    <span>Specifies the allowed key exchange algorithm(s).</span>
 
     <code>-o HostKeyAlgorithms=&lt;algorithms&gt;</code>
-    <span>specifies the allowed authentication algorithm(s)</span>
+    <span>Specifies the allowed authentication algorithm(s).</span>
   </MapBlock>
 
   <p>
-    To visualize the parameter negotiation, run the command above with the
+    To visualize the client-to-server connection parameter negotiation, run the
+    command above with the
     <code>-vv</code> option. Look for a set of messages similar to the ones
     shown below:
   </p>
@@ -105,9 +106,9 @@
   <p>
     The first set of lines in the debug message indicates the algorithms that
     your client is permitted to use, while the second set reveals the algorithms
-    supported by the server. If the server doesn't support any of the algorithms
-    in your chosen set, you will encounter an error similar to those mentioned
-    above. In such scenarios, the
+    supported by the server. If the server doesn't support any possible
+    combination of algorithms in your chosen set, you will encounter an error
+    similar to those mentioned above. In such scenarios, the
     <code>-vv</code> option can be a valuable tool to determine what the server
     actually supports. However, keep in mind that choosing less secure
     algorithms can compromise the security of your connection!
