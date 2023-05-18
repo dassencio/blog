@@ -1,20 +1,20 @@
 <template>
   <p>
-    I once wrote about how one can create a
+    I previously wrote about how one can create a
     <RouterLink :to="{ name: '14' }">configuration file</RouterLink> for
     specifying the
     <a href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a> connection
     parameters (hostname, port, MACs, ciphers, key exchange algorithms, etc.)
     for different servers through aliases. Connecting via SSH in this manner is
-    much more efficient as there is much less typing involved.
+    much more efficient as it significantly reduces typing.
   </p>
 
   <p>
     However, there are situations where you might not want to add all settings
     for a given server to your SSH configuration file. A typical case is when
-    you know you will connect to the server only once, but have chosen a set of
-    default cryptographic algorithms which the target server does not support.
-    In this case, you might encounter errors like these:
+    you anticipate connecting to the server only once, but have chosen a set of
+    default cryptographic algorithms that the target server does not support. In
+    this case, you might encounter errors like these:
   </p>
 
   <CodeBlock
@@ -32,8 +32,8 @@
   <p>
     Each of the errors above indicates that the server does not support any
     combination of the necessary cryptographic algorithms (ciphers, MACs, etc.)
-    that you allow the SSH client to to use. This situation might often arise
-    when you try to connect to servers that are not actively maintained.
+    that you allow your SSH client to use. This situation might often arise when
+    you try to connect to servers that are not actively maintained.
   </p>
 
   <p>
@@ -103,18 +103,19 @@
   />
 
   <p>
-    The first set of lines shows the algorithms you allow, while the second
-    shows the algorithms supported by the server. If you don't choose a set of
-    algorithms that the server fully supports, you will get an error similar to
-    the ones shown above. When in trouble, use the
-    <code>-vv</code> option to figure out what the server actually supports.
-    However, keep in mind that the less secure the algorithms you use, the less
-    secure your connection will be!
+    The first set of lines in the debug message indicates the algorithms that
+    your client is permitted to use, while the second set reveals the algorithms
+    supported by the server. If the server doesn't support any of the algorithms
+    in your chosen set, you will encounter an error similar to those mentioned
+    above. In such scenarios, the
+    <code>-vv</code> option can be a valuable tool to determine what the server
+    actually supports. However, keep in mind that choosing less secure
+    algorithms can compromise the security of your connection!
   </p>
 
   <p>
-    You can find a list of ciphers, MACs, key exchange, and authentication
-    algorithms supported by your SSH installation in the
+    To see a list of ciphers, MACs, key exchange, and authentication algorithms
+    supported by your SSH installation, refer to the
     <code>ssh_config</code> manual:
   </p>
 
