@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "871bde72c7f83a2229625a5f94fee744",
+    component: () => import("@/posts/38.vue"),
+    date: dateToString(2014, 3, 31),
+    id: "38",
+    labels: [PostLabel.Linux, PostLabel.Shell],
+    title: "Executing commands for a specific amount of time",
+  },
+  {
     compatibilityIndex: "688f3a536f63c43566c94f0818d9ecf3",
     component: () => import("@/posts/37.vue"),
     date: dateToString(2014, 3, 29),
