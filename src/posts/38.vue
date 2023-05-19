@@ -1,7 +1,7 @@
 <template>
   <p>
-    On Linux, you can run a command for a specific amount of time using a CLI
-    tool called
+    On Linux, you can limit the amount of time a command is allowed to run using
+    a CLI tool called
     <a href="http://man7.org/linux/man-pages/man1/timeout.1.html">timeout</a>:
   </p>
 
