@@ -8,7 +8,7 @@ const posts: Post[] = [
     date: dateToString(2014, 3, 31),
     id: "38",
     labels: [PostLabel.Linux, PostLabel.Shell],
-    title: "Executing commands for a specific amount of time",
+    title: "Limiting command execution time on Linux",
   },
   {
     compatibilityIndex: "688f3a536f63c43566c94f0818d9ecf3",
