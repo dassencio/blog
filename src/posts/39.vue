@@ -66,15 +66,16 @@
   </p>
 
   <p>
-    The hash function results are followed by data for ciphers, public key
-    algorithms, and finally, key exchange algorithms. The most convenient way to
-    visualize this data is through the tables that appear at the end. For
-    instance, the speeds of the hash functions and ciphers (measured in bytes
-    processed per second) are displayed in the following table. Here, only the
-    first lines are shown, results for
+    Following the hash function measurements, similar data is provided for
+    ciphers, public key algorithms, and finally, key exchange algorithms. The
+    most convenient way to visualize this data is through the tables that appear
+    at the end. For instance, the speeds of the hash function, measured in bytes
+    processed per second, are depicted in the example table below. Please note
+    that this is a truncated view with only the first few lines shown. Results
+    for
     <a href="https://en.wikipedia.org/wiki/MD2_%28cryptography%29">MD2</a> and
-    <a href="https://en.wikipedia.org/wiki/MDC-2">MDC-2</a> are not included
-    because they are not enabled on my system:
+    <a href="https://en.wikipedia.org/wiki/MDC-2">MDC-2</a> are omitted as they
+    are not enabled on my system:
   </p>
 
   <CodeBlock
