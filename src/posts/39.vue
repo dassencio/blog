@@ -33,10 +33,10 @@
   <CodeBlock code="openssl speed" />
 
   <p>
-    The output may be extensive and could take a few minutes to generate. Below
-    are the initial lines of output that I received (demonstrating the
-    performance of some cryptographic hash functions; observe that different
-    input sizes are used for each hash function):
+    The output can be quite extensive and might take a few minutes to generate.
+    Here are the initial lines of output on my laptop, demonstrating the
+    performance of some cryptographic hash functions. Note the different input
+    sizes used for each hash function:
   </p>
 
   <CodeBlock
@@ -60,22 +60,22 @@
   />
 
   <p>
-    As one might expect, the number of iterations that each hash function can
-    process a given input in a fixed amount of time decreases as the input size
-    increases.
+    In line with what one might expect, as the size of the input increases, the
+    number of iterations each hash function can process within a fixed amount of
+    time decreases.
   </p>
 
   <p>
     Following the hash function measurements, similar data is provided for
     ciphers, public key algorithms, and finally, key exchange algorithms. The
     most convenient way to visualize this data is through the tables that appear
-    at the end. For instance, the speeds of the hash function, measured in bytes
-    processed per second, are depicted in the example table below. Please note
-    that this is a truncated view with only the first few lines shown. Results
-    for
+    at the end. For instance, the speeds of the hash functions enabled on my
+    laptop, measured in bytes processed per second, are displayed in the table
+    below. Please note that this is a truncated view with only the first few
+    lines shown. Results for
     <a href="https://en.wikipedia.org/wiki/MD2_%28cryptography%29">MD2</a> and
-    <a href="https://en.wikipedia.org/wiki/MDC-2">MDC-2</a> are omitted as they
-    are not enabled on my system:
+    <a href="https://en.wikipedia.org/wiki/MDC-2">MDC-2</a> are omitted because
+    they are not enabled on my system:
   </p>
 
   <CodeBlock
