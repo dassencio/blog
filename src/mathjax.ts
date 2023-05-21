@@ -30,6 +30,7 @@ window.MathJax = {
       // General math.
       ColonEq: "\\mathrel{\\vcenter{:}}=", // Equal by definition sign.
       Matrix: ["\\begin{pmatrix}#1\\end{pmatrix}", 1], // Matrix environment.
+      Real: "\\mathbb{R}", // Real numbers.
       Size: "\\mathrm{size}", // Size operator.
       SumSub: ["\\mathop{\\sum_{#1}}_{#2}", 2], // Sum with two subscripts.
       Vec: ["\\mathbf{#1}", 1], // Vector notation.

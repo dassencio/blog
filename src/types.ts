@@ -4,6 +4,7 @@ export enum PostLabel {
   Algorithms = "Algorithms",
   AppliedMathematics = "Applied mathematics",
   CompAnalysis = "Complex analysis",
+  ComputationalGeometry = "Computational geometry",
   ComputerScience = "Computer science",
   Cpp = "C/C++",
   DSP = "Digital signal processing",
