@@ -34,7 +34,7 @@
   </EquationBlock>
 
   <p>
-    where $d(\cdot,\cdot)$ denotes the
+    where $d(\cdot, \cdot)$ denotes the
     <a href="https://en.wikipedia.org/wiki/Euclidean_distance"
       >Euclidean distance</a
     >
@@ -43,7 +43,7 @@
   </p>
 
   <EquationBlock>
-    \left. \DD{(\Vec{X}, \Vec{R}(\lambda))}{\lambda} \right|_{\lambda =
+    \left. \DDo{\lambda} d(\Vec{X}, \Vec{R}(\lambda)) \right|_{\lambda =
     \lambda_\Vec{S}} = 0
   </EquationBlock>
 
@@ -55,7 +55,7 @@
   <EquationBlock>
     \left. \DDo{\lambda}\sqrt{(\Vec{R}(\lambda) - \Vec{X})^2} \right|_{\lambda =
     \lambda_\Vec{S}} = \frac{2 (\Vec{R}(\lambda_\Vec{S}) -
-    \Vec{X})\cdot\Vec{R}'(\lambda_\Vec{S})} {2\sqrt{(\Vec{R}(\lambda_\Vec{S}) -
+    \Vec{X})\cdot\Vec{R}'(\lambda_\Vec{S})}{2\sqrt{(\Vec{R}(\lambda_\Vec{S}) -
     \Vec{X})^2}} = 0
   </EquationBlock>
 
@@ -68,12 +68,12 @@
 
   <EquationBlock> \Vec{R}'(\lambda) = \Vec{Q} - \Vec{P} </EquationBlock>
 
-  <p>Which leads us to:</p>
+  <p>which leads us to:</p>
 
   <EquationBlock>
-    \left. \DD{(\Vec{X}, \Vec{R}(\lambda))}{\lambda} \right|_{\lambda =
+    \left. \DDo{\lambda} d(\Vec{X}, \Vec{R}(\lambda)) \right|_{\lambda =
     \lambda_\Vec{S}} = \frac{(\Vec{R}(\lambda_\Vec{S}) - \Vec{X}) \cdot (\Vec{Q}
-    - \Vec{P})}{d\left(\Vec{X}, \Vec{R}(\lambda_\Vec{S}) \right)} = 0
+    - \Vec{P})}{d(\Vec{X}, \Vec{R}(\lambda_\Vec{S}))} = 0
     \label{lambda-closest-point-equation}
   </EquationBlock>
 
