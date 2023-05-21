@@ -13,8 +13,8 @@
   </p>
 
   <p>
-    To aid developers in selecting the most appropriate cryptographic algorithms
-    for their applications,
+    To aid developers and system administrators in selecting the most
+    appropriate cryptographic algorithms for their applications,
     <a href="https://www.openssl.org">OpenSSL</a> provides a performance
     analysis tool. This tool assesses the efficiency of its implemented
     <a href="https://en.wikipedia.org/wiki/Cipher">ciphers</a>,
