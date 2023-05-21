@@ -39,7 +39,7 @@ const posts: Post[] = [
     component: () => import("@/posts/35.vue"),
     date: dateToString(2014, 3, 17),
     id: "35",
-    labels: [PostLabel.Compsci, PostLabel.RelationalAlgebra],
+    labels: [PostLabel.ComputerScience, PostLabel.RelationalAlgebra],
     title: "Obtaining the largest value in relational algebra",
   },
   {
@@ -307,7 +307,11 @@ const posts: Post[] = [
     component: () => import("@/posts/3.vue"),
     date: dateToString(2013, 10, 27),
     id: "3",
-    labels: [PostLabel.Algorithms, PostLabel.Compsci, PostLabel.Mathematics],
+    labels: [
+      PostLabel.Algorithms,
+      PostLabel.ComputerScience,
+      PostLabel.Mathematics,
+    ],
     title: "Escaping from the police: a brute-force solver",
   },
   {
