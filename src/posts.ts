@@ -220,7 +220,7 @@ const posts: Post[] = [
     date: dateToString(2013, 11, 27),
     id: "14",
     labels: [PostLabel.Linux, PostLabel.Security, PostLabel.SSH],
-    title: "Improve your ssh experience with a config file",
+    title: "Improve your SSH experience with a config file",
   },
   {
     compatibilityIndex: "e48aa7b74bd7acb76c30de0a240108c2",
