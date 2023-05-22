@@ -1,9 +1,9 @@
 <template>
   <p>
     Let $r$ be a line passing through two distinct points $\Vec{P}$ and
-    $\Vec{Q}$ (see <FigureLink id="closest-point-line-point" />). Our goal is to
-    compute the point $\Vec{S}$ on the line $r$ that is closest to the point
-    $\Vec{X}$.
+    $\Vec{Q}$, as depicted in <FigureLink id="closest-point-line-point" />, and
+    let $\Vec{X}$ be a point in space. Our goal is to determine the point
+    $\Vec{S}$ on line $r$ that is closest to $\Vec{X}$.
   </p>
 
   <FigureBlock
