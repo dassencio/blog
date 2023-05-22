@@ -8,7 +8,7 @@ const posts: Post[] = [
     date: dateToString(2014, 4, 11),
     id: "40",
     labels: [PostLabel.ComputationalGeometry, PostLabel.ComputerScience],
-    title: "Computing the closest point on a line to a point",
+    title: "Closest point on a line to a point",
   },
   {
     compatibilityIndex: "0e18f5485ff4de58d94e494e3649c6eb",
