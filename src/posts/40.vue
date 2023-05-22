@@ -78,9 +78,8 @@
   </EquationBlock>
 
   <p>
-    Thus, by plugging in $\lambda = \lambda_\Vec{S}$ from equation
-    \eqref{line-parameterization} into equation
-    \eqref{lambda-closest-point-equation}, we obtain:
+    Therefore, the numerator on the right-hand side of equation
+    \eqref{lambda-closest-point-equation} must be zero:
   </p>
 
   <EquationBlock>
