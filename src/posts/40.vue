@@ -56,7 +56,7 @@
     \left. \DDo{\lambda}\sqrt{(\Vec{R}(\lambda) - \Vec{X})^2} \right|_{\lambda =
     \lambda_\Vec{S}} = \frac{2 (\Vec{R}(\lambda_\Vec{S}) -
     \Vec{X})\cdot\Vec{R}'(\lambda_\Vec{S})}{2\sqrt{(\Vec{R}(\lambda_\Vec{S}) -
-    \Vec{X})^2}} = 0
+    \Vec{X})^2}} = 0 \label{lambda-closest-point-equation}
   </EquationBlock>
 
   <p>
@@ -68,26 +68,18 @@
 
   <EquationBlock> \Vec{R}'(\lambda) = \Vec{Q} - \Vec{P} </EquationBlock>
 
-  <p>which leads us to:</p>
-
-  <EquationBlock>
-    \left. \DDo{\lambda} d(\Vec{X}, \Vec{R}(\lambda)) \right|_{\lambda =
-    \lambda_\Vec{S}} = \frac{(\Vec{R}(\lambda_\Vec{S}) - \Vec{X}) \cdot (\Vec{Q}
-    - \Vec{P})}{d(\Vec{X}, \Vec{R}(\lambda_\Vec{S}))} = 0
-    \label{lambda-closest-point-equation}
-  </EquationBlock>
-
   <p>
-    Therefore, the numerator on the right-hand side of equation
-    \eqref{lambda-closest-point-equation} must be zero:
+    Substituting this into equation \eqref{lambda-closest-point-equation}
+    yields:
   </p>
 
   <EquationBlock>
+    (\Vec{R}(\lambda_\Vec{S}) - \Vec{X}) \cdot \Vec{R}'(\lambda_\Vec{S}) =
     (\Vec{P} + \lambda_\Vec{S} (\Vec{Q} - \Vec{P}) - \Vec{X}) \cdot (\Vec{Q} -
     \Vec{P}) = 0
   </EquationBlock>
 
-  <p>This implies:</p>
+  <p>Therefore:</p>
 
   <EquationBlock boxed>
     \lambda_\Vec{S} = \frac{(\Vec{X} - \Vec{P}) \cdot (\Vec{Q} -
