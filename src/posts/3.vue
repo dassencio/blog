@@ -37,11 +37,11 @@
     for this problem and discuss it here.
   </p>
 
-  <p>
-    <b>NOTE</b>: Readers who just wish to play with the brute-force solver
-    should go directly to the bottom of this post. If you are interested in the
-    discussion of the problem, read on!
-  </p>
+  <NoteBlock>
+    Readers who just wish to play with the brute-force solver should go directly
+    to the bottom of this post. If you are interested in the discussion of the
+    problem, read on!
+  </NoteBlock>
 
   <p>
     Let's start by considering the simplest possible scenarios. The case $N = 1$

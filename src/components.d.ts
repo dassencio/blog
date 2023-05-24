@@ -10,6 +10,7 @@ import InputField from "@/components/InputField.vue";
 import ListBlock from "@/components/ListBlock.vue";
 import ListBlockItem from "@/components/ListBlockItem.vue";
 import MapBlock from "@/components/MapBlock.vue";
+import NoteBlock from "@/components/NoteBlock.vue";
 import ReferenceLink from "@/components/ReferenceLink.vue";
 import ReferenceListBlock from "@/components/ReferenceListBlock.vue";
 import ReferenceListBlockItem from "@/components/ReferenceListBlockItem.vue";
@@ -33,6 +34,7 @@ declare module "@vue/runtime-core" {
     ListBlock: typeof ListBlock;
     ListBlockItem: typeof ListBlockItem;
     MapBlock: typeof MapBlock;
+    NoteBlock: typeof NoteBlock;
     ReferenceLink: typeof ReferenceLink;
     ReferenceListBlock: typeof ReferenceListBlock;
     ReferenceListBlockItem: typeof ReferenceListBlockItem;

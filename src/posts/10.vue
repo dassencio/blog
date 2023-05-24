@@ -53,14 +53,14 @@
 
   <CodeBlock code="sudo service network-manager stop" />
 
-  <p>
-    <b>NOTE</b>: If you uninstall the Network Manager and stop it, you will
-    immediately lose internet access. Make sure you do this only if you know how
-    to configure your network interfaces and connect to the internet via command
-    line (without internet access, you will not be able to reinstall the Network
+  <NoteBlock>
+    If you uninstall the Network Manager and stop it, you will immediately lose
+    internet access. Make sure you do this only if you know how to configure
+    your network interfaces and connect to the internet via command line
+    (without internet access, you will not be able to reinstall the Network
     Manager with <code>apt-get</code>). If in doubt about whether this is a safe
     approach, prefer using option #1 above.
-  </p>
+  </NoteBlock>
 </template>
 
 <script setup lang="ts">

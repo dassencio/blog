@@ -109,10 +109,10 @@
     <span>Boot the VM from the CD-ROM disk.</span>
   </MapBlock>
 
-  <p>
-    <b>NOTE</b>: If your mouse pointer gets captured by the VM window, press
-    "Ctrl + Alt" (left keys) to recover it.
-  </p>
+  <NoteBlock>
+    If your mouse pointer gets captured by the VM window, press "Ctrl + Alt"
+    (left keys) to recover it.
+  </NoteBlock>
 
   <p>
     Now follow the steps below. Please keep in mind that these will likely
@@ -260,14 +260,14 @@
     "
   />
 
-  <p>
-    <b>NOTE</b>: If you have problems connecting to the internet inside the VM,
-    try editing the file <code>/etc/resolv.conf</code> and setting the
+  <NoteBlock>
+    If you have problems connecting to the internet inside the VM, try editing
+    the file <code>/etc/resolv.conf</code> and setting the
     <code>nameserver</code> value to the same one you have in the
     <code>/etc/resolv.conf</code> of the computer you're working on (or,
     alternatively, set it to the IP address of a free DNS provider such as
     <code>1.1.1.1</code> or <code>9.9.9.9</code>). This might fix your problem.
-  </p>
+  </NoteBlock>
 
   <p>
     Reboot and select the i486 kernel on the GRUB screen. Now log in again as

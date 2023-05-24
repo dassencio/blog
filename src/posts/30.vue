@@ -70,13 +70,13 @@
     "<code>]</code>".
   </p>
 
-  <p>
-    <b>NOTE</b>: The numbers shown below may differ slightly from the ones you
-    will obtain in Octave. This is because I changed Octave's output precision
-    to four decimal places to make the output more readable. If you wish to do
-    the same, enter "<code>output_precision(4)</code>" in Octave before running
-    the commands below.
-  </p>
+  <NoteBlock>
+    The numbers shown below may differ slightly from the ones you will obtain in
+    Octave. This is because I changed Octave's output precision to four decimal
+    places to make the output more readable. If you wish to do the same, enter
+    "<code>output_precision(4)</code>" in Octave before running the commands
+    below.
+  </NoteBlock>
 
   <p>Octave provides a method for computing the SVD of $A$:</p>
 

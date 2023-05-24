@@ -95,12 +95,12 @@
     for your newly added permissions to become active.
   </p>
 
-  <p>
-    <b>NOTE</b>: While in principle you could simply run Wireshark as root
-    instead of following the instructions above, <b>do not do this</b>!
-    Wireshark is a huge application, and running it as root unnecessarily risks
-    damaging your system.
-  </p>
+  <NoteBlock>
+    While in principle you could simply run Wireshark as root instead of
+    following the instructions above, <b>do not do this</b>! Wireshark is a huge
+    application, and running it as root unnecessarily risks damaging your
+    system.
+  </NoteBlock>
 
   <p>
     To learn more about this topic, see the

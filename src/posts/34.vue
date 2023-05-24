@@ -102,9 +102,9 @@
     "
   />
 
-  <p>
-    <b>NOTE</b>: The entries in $J$ are one-byte integers, but the entries in
-    $U_c$, $\Sigma_c$, and $V_c$ are
+  <NoteBlock>
+    The entries in $J$ are one-byte integers, but the entries in $U_c$,
+    $\Sigma_c$, and $V_c$ are
     <a
       href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format"
       >double-precision numbers</a
@@ -115,7 +115,7 @@
     they don't occupy the same amount of space each. For the purposes of this
     post, however, this will not be an issue since our goal is to compress
     images, not matrices.
-  </p>
+  </NoteBlock>
 
   <p>
     Let's proceed to compress $J$ by retaining only its $N = 50$ largest
