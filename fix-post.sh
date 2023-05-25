@@ -18,6 +18,19 @@ fi
 # Fix titles.
 gsed -i 's/<h3>\([^<]*\)<\/h3>/<SectionTitle>\1<\/SectionTitle>/g' "$post_file"
 
+# Fix bold text.
+awk '
+BEGIN {
+    RS="<span class=(\"bold\"|'\''bold'\'')>|</span>"; ORS="";
+}
+NR%2==0 {
+    print "<b>" $0 "</b>";
+}
+NR%2!=0 {
+    print $0;
+}
+' "$post_file" > "__tmpfile__" && mv "__tmpfile__" "$post_file"
+
 # Fix italic text.
 awk '
 BEGIN {
