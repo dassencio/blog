@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "ec3d5dfdfc0b6a0d147a656f0af332bd",
+    component: () => import("@/posts/41.vue"),
+    date: dateToString(2014, 4, 13),
+    id: "41",
+    labels: [PostLabel.ComputationalGeometry, PostLabel.ComputerScience],
+    title: "Closest point on a segment to a point",
+  },
+  {
     compatibilityIndex: "cec5e38d29aae1b00e0d488b0088e952",
     component: () => import("@/posts/40.vue"),
     date: dateToString(2014, 4, 11),
