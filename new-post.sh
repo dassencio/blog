@@ -11,11 +11,10 @@ if [ -z "$post_id" ]; then
 fi
 
 if [ -f "$post_file" ]; then
-    echo "File $post_file already exists."
+    echo "File '$post_file' already exists."
     exit 1
 fi
 
-# Create a file "$post_file"
 cat > "$post_file" <<EOF
 <template>
 </template>
