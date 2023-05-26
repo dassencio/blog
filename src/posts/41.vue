@@ -90,7 +90,7 @@
   </FigureBlock>
 
   <p>
-    In summary, here is an algorithm for determining the point $\Vec{S}$ on a
+    In summary, here is an algorithm for computing the point $\Vec{S}$ on a
     segment $\Vec{PQ}$ that is closest to a point $\Vec{X}$ (this method also
     applies if $\Vec{X}$ lies on $\Vec{PQ}$):
   </p>
