@@ -3,11 +3,22 @@
     In a <RouterLink :to="{ name: '40' }">previous post</RouterLink>, I
     described how to compute the point $\Vec{S}$ on a line $r$ that is closest
     to a given point $\Vec{X}$. I assumed the line $r$ passed through two
-    distinct points $\Vec{P}$ and $\Vec{Q}$ (see to
+    distinct points $\Vec{P}$ and $\Vec{Q}$ (see
     <FigureLink id="closest-point-line-point" />). In this post, I will apply
     that technique to determine the closest point on a segment $\Vec{PQ}$ to a
     point $\Vec{X}$.
   </p>
+
+  <FigureBlock
+    id="closest-point-line-point"
+    caption="$\Vec{S}$ is the point on the line $r$ that is closest to
+             $\Vec{X}$."
+  >
+    <ResponsiveImage
+      alt="Closest point on line to point"
+      :src="closestPointLinePoint"
+    />
+  </FigureBlock>
 
   <p>
     Before we examine the segment case, let's revisit the problem involving a
@@ -28,17 +39,6 @@
     \label{lambda-closest-point-line}
   </EquationBlock>
 
-  <FigureBlock
-    id="closest-point-line-point"
-    caption="$\Vec{S}$ is the point on the line $r$ that is closest to
-             $\Vec{X}$."
-  >
-    <ResponsiveImage
-      alt="Closest point on line to point"
-      :src="closestPointLinePoint"
-    />
-  </FigureBlock>
-
   <p>
     To solve the problem with a segment instead of a line, we need to consider
     three cases: $\lambda_\Vec{S} \leq 0$, $0 \lt \lambda_\Vec{S} \lt 1$, and
@@ -53,24 +53,24 @@
 
   <p>
     where $\Vec{v} = \Vec{Q} - \Vec{P}$ is the vector that connects $\Vec{P}$ to
-    $\Vec{Q}$, with direction from $\Vec{P}$ to $\Vec{Q}$ (as shown in
-    <FigureLink id="closest-point-line-point" />). Therefore, since $\Vec{S}$ is
-    equal to the sum of $\Vec{P}$ and $\lambda_\Vec{S} \Vec{v}$, it will be in
-    between $\Vec{P}$ and $\Vec{Q}$ if $0 \lt \lambda_\Vec{S} \lt 1$. If
-    $\lambda_\Vec{S} \geq 1$, $\Vec{S}$ will be either at or "after" $\Vec{Q}$
-    (indeed, for $\lambda_\Vec{S} = 1$, $\Vec{S} = \Vec{P} + (\Vec{Q} - \Vec{P})
-    = \Vec{Q}$). When $\lambda_\Vec{S} \leq 0$, $\Vec{S}$ will be either
-    "before" or directly at $\Vec{P}$ since $\lambda_\Vec{S}\Vec{v}$ will point
-    away from $\Vec{Q}$ or be the zero vector (if $\lambda_\Vec{S} = 0$).
+    $\Vec{Q}$, as shown in <FigureLink id="closest-point-line-point" />.
+    Therefore, since $\Vec{S}$ is equal to the sum of $\Vec{P}$ and
+    $\lambda_\Vec{S} \Vec{v}$, it will lie between $\Vec{P}$ and $\Vec{Q}$ if $0
+    \lt \lambda_\Vec{S} \lt 1$. If $\lambda_\Vec{S} \geq 1$, $\Vec{S}$ will be
+    either directly on or "after" $\Vec{Q}$ (in fact, for $\lambda_\Vec{S} = 1$,
+    $\Vec{S} = \Vec{P} + (\Vec{Q} - \Vec{P}) = \Vec{Q}$). When $\lambda_\Vec{S}
+    \leq 0$, $\Vec{S}$ will be either "before" or directly on $\Vec{P}$ since
+    $\lambda_\Vec{S}\Vec{v}$ will point away from $\Vec{Q}$ or be the zero
+    vector (if $\lambda_\Vec{S} = 0$).
   </p>
 
   <p>
     Since our goal is to determine the point $\Vec{S}$ on the segment $\Vec{PQ}$
-    that is closest to $\Vec{X}$, we must ensure that the point $\Vec{S}$ does
-    not lie outside of $\Vec{PQ}$. This implies that if $\Vec{S}$ would be
-    "before" $\Vec{P}$ on line $r$, then the closest point on $\Vec{PQ}$ to
-    $\Vec{X}$ is $\Vec{P}$. Similarly, if $\Vec{S}$ would lie "after" $\Vec{Q}$,
-    then the closest point on $\Vec{PQ}$ to $\Vec{X}$ is $\Vec{Q}$.
+    that is closest to $\Vec{X}$, we must ensure that $\Vec{S}$ does not lie
+    outside of $\Vec{PQ}$. This implies that if $\Vec{S}$ would be "before"
+    $\Vec{P}$ on line $r$, then the closest point on $\Vec{PQ}$ to $\Vec{X}$ is
+    $\Vec{P}$. Similarly, if $\Vec{S}$ would lie "after" $\Vec{Q}$, then the
+    closest point on $\Vec{PQ}$ to $\Vec{X}$ is $\Vec{Q}$.
     <FigureLink id="closest-point-line-segment" capitalized /> illustrates these
     cases.
   </p>
