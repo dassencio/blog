@@ -56,21 +56,21 @@
     $\Vec{Q}$, as shown in <FigureLink id="closest-point-line-point" />.
     Therefore, since $\Vec{S}$ is equal to the sum of $\Vec{P}$ and
     $\lambda_\Vec{S} \Vec{v}$, it will lie between $\Vec{P}$ and $\Vec{Q}$ if $0
-    \lt \lambda_\Vec{S} \lt 1$. If $\lambda_\Vec{S} \geq 1$, $\Vec{S}$ will be
-    either directly on or "after" $\Vec{Q}$ (in fact, for $\lambda_\Vec{S} = 1$,
-    $\Vec{S} = \Vec{P} + (\Vec{Q} - \Vec{P}) = \Vec{Q}$). When $\lambda_\Vec{S}
-    \leq 0$, $\Vec{S}$ will be either "before" or directly on $\Vec{P}$ since
-    $\lambda_\Vec{S}\Vec{v}$ will point away from $\Vec{Q}$ or be the zero
-    vector (if $\lambda_\Vec{S} = 0$).
+    \lt \lambda_\Vec{S} \lt 1$. If $\lambda_\Vec{S} \geq 1$, $\Vec{S}$ will lie
+    either directly at or "after" $\Vec{Q}$ (note that when $\lambda_\Vec{S} =
+    1$, $\Vec{S} = \Vec{P} + (\Vec{Q} - \Vec{P}) = \Vec{Q}$). When
+    $\lambda_\Vec{S} \leq 0$, $\Vec{S}$ will lie either "before" or directly at
+    $\Vec{P}$ since $\lambda_\Vec{S}\Vec{v}$ will point away from $\Vec{Q}$ or
+    be the zero vector (if $\lambda_\Vec{S} = 0$).
   </p>
 
   <p>
     Since our goal is to determine the point $\Vec{S}$ on the segment $\Vec{PQ}$
     that is closest to $\Vec{X}$, we must ensure that $\Vec{S}$ does not lie
-    outside of $\Vec{PQ}$. This implies that if $\Vec{S}$ would be "before"
-    $\Vec{P}$ on line $r$, then the closest point on $\Vec{PQ}$ to $\Vec{X}$ is
+    outside of $\Vec{PQ}$. This implies that if $\Vec{S}$ would lie "before"
+    $\Vec{P}$ on line $r$, then the closest point to $\Vec{X}$ on $\Vec{PQ}$ is
     $\Vec{P}$. Similarly, if $\Vec{S}$ would lie "after" $\Vec{Q}$, then the
-    closest point on $\Vec{PQ}$ to $\Vec{X}$ is $\Vec{Q}$.
+    closest point to $\Vec{X}$ on $\Vec{PQ}$ is $\Vec{Q}$.
     <FigureLink id="closest-point-line-segment" capitalized /> illustrates these
     cases.
   </p>
