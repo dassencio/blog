@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "154ad17dc1b473b59bb57dcaaebed050",
+    component: () => import("@/posts/42.vue"),
+    date: dateToString(2014, 4, 16),
+    id: "42",
+    labels: [PostLabel.Linux, PostLabel.Peripherals],
+    title: "Using a Brother DCP-7055 on Linux",
+  },
+  {
     compatibilityIndex: "ec3d5dfdfc0b6a0d147a656f0af332bd",
     component: () => import("@/posts/41.vue"),
     date: dateToString(2014, 4, 13),
