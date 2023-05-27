@@ -58,8 +58,8 @@
       <code>lsblk</code>
       interprets it as a small partition containing the first
       <a href="https://en.wikipedia.org/wiki/Extended_partition">EBR</a> of this
-      extended partition, <code>fdisk</code> would provide a more explicit
-      display of this extended partition.
+      extended partition, <code>fdisk</code> would provide a more detailed
+      representation.
     </span>
 
     <code>sda2</code>
