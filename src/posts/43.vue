@@ -69,10 +69,10 @@
     <span>Encrypted swap partition.</span>
 
     <code>sda4</code>
-    <span
-      >Partition that holds the operating system files and is mounted at
-      <code>/</code>.</span
-    >
+    <span>
+      Partition that holds the operating system files and is mounted at
+      <code>/</code>.
+    </span>
 
     <code>sda5</code>
     <span>Currently not in use.</span>
