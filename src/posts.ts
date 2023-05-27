@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "ffdadfc79cd5e667a65d2e325e14fee3",
+    component: () => import("@/posts/43.vue"),
+    date: dateToString(2014, 4, 27),
+    id: "43",
+    labels: [PostLabel.Linux, PostLabel.Shell],
+    title: "Listing partitions and mounting points on Linux",
+  },
+  {
     compatibilityIndex: "154ad17dc1b473b59bb57dcaaebed050",
     component: () => import("@/posts/42.vue"),
     date: dateToString(2014, 4, 16),
