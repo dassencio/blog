@@ -24,6 +24,13 @@ const gridLineColor = "#e0e0e0";
 
 const options = _.merge(
   {
+    /*
+     * Default colors:
+     *
+     * 0: United Nations Blue
+     * 1: Baby Blue Eyes
+     */
+    colors: ["#5b92e5", "#a1caf1"],
     grid: {
       backgroundColor: "white",
       borderWidth: 1,
