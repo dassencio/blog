@@ -248,9 +248,6 @@ for (let n = 0; n <= N; ++n) {
 const data = [{ data: points }];
 
 const options = {
-  legend: {
-    position: "ne",
-  },
   xaxis: {
     axisLabel: "$t/T$",
     max: 1.025,
