@@ -86,9 +86,7 @@
     crossed the bridge, the number of possible pairs for crossing it is:
   </p>
 
-  <EquationBlock>
-    \left(\matrix{N \newline 2}\right) = \frac{N (N - 1)}{2}
-  </EquationBlock>
+  <EquationBlock> \Matrix{N \newline 2} = \frac{N (N - 1)}{2} </EquationBlock>
 
   <p>
     When a fugitive must return with the flashlight, and if $M$ fugitives have
