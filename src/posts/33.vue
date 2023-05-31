@@ -203,9 +203,10 @@
   </p>
 
   <EquationBlock>
-    A \Matrix{ \ddot{\theta}_1 \\ \ddot{\theta}_2 } = \Matrix{ 1 & \alpha_1 \\
-    \alpha_2 & 1 } \Matrix{ \ddot{\theta}_1 \\ \ddot{\theta}_2 } = \Matrix{ f_1
-    \\ f_2 } \label{euler-lagrange-matrix-form}
+    A \MatrixTwoOne{\ddot{\theta}_1}{\ddot{\theta}_2} =
+    \MatrixTwoTwo{1}{\alpha_1}{\alpha_2}{1}
+    \MatrixTwoOne{\ddot{\theta}_1}{\ddot{\theta}_2} = \MatrixTwoOne{f_1}{f_2}
+    \label{euler-lagrange-matrix-form}
   </EquationBlock>
 
   <p>
@@ -217,8 +218,8 @@
   </p>
 
   <EquationBlock>
-    A^{-1} = \frac{1}{\det(A)} \Matrix{ 1 & -\alpha_1 \\ -\alpha_2 & 1 } =
-    \frac{1}{1 - \alpha_1\alpha_2} \Matrix{ 1 & -\alpha_1 \\ -\alpha_2 & 1 }
+    A^{-1} = \frac{1}{\det(A)} \MatrixTwoTwo{1}{-\alpha_1}{-\alpha_2}{1} =
+    \frac{1}{1 - \alpha_1\alpha_2} \MatrixTwoTwo{1}{-\alpha_1}{-\alpha_2}{1}
     \label{inverse-A}
   </EquationBlock>
 
@@ -236,9 +237,9 @@
   </p>
 
   <EquationBlock>
-    \Matrix{ \ddot{\theta}_1 \\ \ddot{\theta}_2 } = A^{-1} \Matrix{ f_1 \\ f_2 }
-    = \frac{1}{1 - \alpha_1\alpha_2} \Matrix{ f_1 - \alpha_1 f_2 \\ -\alpha_2
-    f_1 + f_2 }
+    \MatrixTwoOne{\ddot{\theta}_1}{\ddot{\theta}_2} = A^{-1}
+    \MatrixTwoOne{f_1}{f_2} = \frac{1}{1 - \alpha_1\alpha_2} \MatrixTwoOne{f_1 -
+    \alpha_1 f_2}{-\alpha_2 f_1 + f_2 }
   </EquationBlock>
 
   <p>
@@ -249,9 +250,10 @@
   </p>
 
   <EquationBlock>
-    \DDo{t} \Matrix{ \theta_1 \\ \theta_2 \\ \omega_1 \\ \omega_2 } = \Matrix{
-    \omega_1 \\ \omega_2 \\ g_1(\theta_1,\theta_2,\omega_1,\omega_2) \\
-    g_2(\theta_1,\theta_2,\omega_1,\omega_2) } \label{euler-lagrange-system}
+    \DDo{t} \MatrixFourOne{ \theta_1}{\theta_2}{\omega_1}{\omega_2 } =
+    \MatrixFourOne{
+    \omega_1}{\omega_2}{g_1(\theta_1,\theta_2,\omega_1,\omega_2)}{g_2(\theta_1,\theta_2,\omega_1,\omega_2)}
+    \label{euler-lagrange-system}
   </EquationBlock>
 
   <p>where:</p>
