@@ -303,8 +303,8 @@
     the previously mentioned Python script. In the experiment, I computed $F_n$
     for $n = 2^i$, where $i = 20, 21, \ldots, 30$ (these represent notably large
     values of $n$). As depicted in
-    <FigureLink id="computation-time" capitalized />, the computational time for
-    evaluating $F_n$ shows a linear growth with respect to $n$.
+    <FigureLink id="computation-time" />, the computational time for evaluating
+    $F_n$ shows a linear growth with respect to $n$.
   </p>
 
   <FigureBlock
