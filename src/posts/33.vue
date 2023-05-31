@@ -250,9 +250,8 @@
   </p>
 
   <EquationBlock>
-    \DDo{t} \MatrixFourOne{ \theta_1}{\theta_2}{\omega_1}{\omega_2 } =
-    \MatrixFourOne{
-    \omega_1}{\omega_2}{g_1(\theta_1,\theta_2,\omega_1,\omega_2)}{g_2(\theta_1,\theta_2,\omega_1,\omega_2)}
+    \DDo{t} \MatrixFourOne{\theta_1}{\theta_2}{\omega_1}{\omega_2} =
+    \MatrixFourOne{\omega_1}{\omega_2}{g_1(\theta_1,\theta_2,\omega_1,\omega_2)}{g_2(\theta_1,\theta_2,\omega_1,\omega_2)}
     \label{euler-lagrange-system}
   </EquationBlock>
 
