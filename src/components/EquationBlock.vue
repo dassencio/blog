@@ -21,7 +21,7 @@ const props = defineProps<{
 
 /**
  * Fixes newlines in an equation. All occurrences of \\ which are not inside
- * \Matrix{...} are replaced with \\\\[6px].
+ * \Matrix{...} are replaced with \\[6px].
  *
  * @param equation Equation text.
  * @returns Equation text with newlines fixed.
