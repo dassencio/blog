@@ -29,6 +29,7 @@ window.MathJax = {
     macros: {
       // General math.
       ColonEq: "\\mathrel{\\vcenter{:}}=", // Equal by definition sign.
+      Digits: "\\mathrm{digits}", // Digits operator.
       Matrix: ["\\begin{pmatrix}#1\\end{pmatrix}", 1], // Matrix environment.
       MatrixFourOne: ["\\Matrix{#1 \\\\ #2 \\\\ #3 \\\\ #4}", 4], // 4x1 matrix.
       MatrixTwoOne: ["\\Matrix{#1 \\\\ #2}", 2], // 2x1 matrix.

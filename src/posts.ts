@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "c772250d88e35665d3a793882a7b70e5",
+    component: () => import("@/posts/44.vue"),
+    date: dateToString(2014, 5, 1),
+    id: "44",
+    labels: [PostLabel.Mathematics, PostLabel.RealAnalysis],
+    title: "The Fibonacci sequence and the golden ratio",
+  },
+  {
     compatibilityIndex: "ffdadfc79cd5e667a65d2e325e14fee3",
     component: () => import("@/posts/43.vue"),
     date: dateToString(2014, 4, 27),
