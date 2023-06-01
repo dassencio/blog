@@ -12,8 +12,8 @@
   </EquationBlock>
 
   <p>
-    where the last line applies for $n \gt 1$, meaning $F_2 = F_1 + F_0 = 2$,
-    $F_3 = F_2 + F_1 = 3$ and so forth.
+    where the last line applies for $n \gt 1$, meaning $F_2 = F_1 + F_0 = 1$,
+    $F_3 = F_2 + F_1 = 2$, and so forth.
   </p>
 
   <SectionTitle>Computing $F_n$ non-recursively</SectionTitle>
@@ -48,7 +48,7 @@
 
   <EquationBlock> M = \MatrixTwoTwo{1}{1}{1}{0} </EquationBlock>
 
-  <p>We have that:</p>
+  <p>We then have that:</p>
 
   <EquationBlock>
     \MatrixTwoOne{F_{n+1}}{F_n} = M \MatrixTwoOne{F_{n}}{F_{n-1}} = M^2
@@ -138,7 +138,7 @@
 
   <p>
     Equation \eqref{M-eigenvectors} enables us to diagonalize $M$. By defining
-    $P = (\Vec{w}_+, \Vec{w}_-)$ as the $2 \times 2$ matrix, with columns
+    $P = (\Vec{w}_+, \Vec{w}_-)$ as the $2 \times 2$ matrix with columns
     corresponding to $\Vec{w}_+$ and $\Vec{w}_-$, we find that:
   </p>
 
@@ -218,7 +218,7 @@
     As the Fibonacci sequence $F_{n+1} = F_{n} + F_{n-1}$ is such that $F_{n+1}
     \geq F_{n} + 1$ for all $n \geq 2$, the sequence $F_n$ diverges when $n
     \rightarrow \infty$. Interestingly, the following sequence (starting at $n =
-    1$ since $F_0 = 0):
+    1$ since $F_0 = 0$):
   </p>
 
   <EquationBlock> a_n = \frac{F_{n+1}}{F_n} </EquationBlock>
@@ -273,37 +273,39 @@
   </p>
 
   <p>
-    However, it's crucial to note that the time complexity of the
-    above-mentioned method is not $O(\log_2 n)$! Although exponentiation by
-    squaring carries a logarithmic time complexity, the implementation of
-    arbitrary precision changes the overall algorithm's time complexity to
-    $O(n)$. This is because $\Digits(F_n)$, the number of digits in $F_n$, is
-    proportional to $n$ for large values of $n$, and arithmetic operations with
-    arbitrary precision are
-    <a
-      href="https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic#Implementation_issues"
-      >$O(n)$ or worse</a
-    >, given that $n$ represents the typical length of the numbers involved. For
-    example, consider the addition of two large numbers with $n$ digits: the
-    time complexity of that operation is $O(n)$. This is due to the linear
-    growth of $\Digits(F_n)$ with $n$, which can be observed from the fact that
-    for large values of $n$, $F_n$ approximates $\lambda_+^n / \sqrt{5}$ since
-    $|\lambda_+| \gt |\lambda_-|$. Therefore, for large $n$:
+    It's important to clarify that the time complexity of the method discussed
+    above isn't $O(\log_2 n)$. Even though the exponentiation by squaring
+    technique bears a logarithmic time complexity, when we introduce arbitrary
+    precision, it changes the time complexity of the entire algorithm to $O(n)$.
+    This is because the quantity $\Digits(F_n)$, which represents the number of
+    digits in $F_n$, is proportional to $n$ for large values of $n$. We can
+    demonstrate this with the following equation:
   </p>
 
   <EquationBlock>
-    \Digits(F_n) \approx \log_{10}(F_n) \approx \log_{10}(\lambda_+^n) -
-    \log_{10}(\sqrt{5}) \approx n\log_{10}(\lambda_+) \propto n
+    \Digits(F_n) \approx \log_{10}(F_n) \approx
+    \log_{10}\left(\frac{\lambda_+^n}{\sqrt{5}}\right) \approx
+    n\log_{10}(\lambda_+) \propto n
   </EquationBlock>
 
   <p>
-    To further illustrate the time complexity associated with computing $F_n$
-    using exponentiation by squaring and arbitrary precision arithmetic, I ran
-    the previously mentioned Python script. In the experiment, I computed $F_n$
-    for $n = 2^i$, where $i = 20, 21, \ldots, 30$ (these represent notably large
-    values of $n$). As depicted in
-    <FigureLink id="computation-time" />, the computation time for evaluating
-    $F_n$ shows a linear growth with respect to $n$.
+    To further explain this, consider that an algorithm can't produce a result
+    with $n$ digits in less than $O(n)$ time. Furthermore, the time complexity
+    of arithmetic operations involving arbitrary precision is typically
+    <a
+      href="https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic#Implementation_issues"
+      >$O(n)$ or worse</a
+    >. As a result, it's not feasible to compute $F_n$ in less than $O(n)$ time.
+    Even the operation of adding two large numbers with $n$ digits has a time
+    complexity of $O(n)$.
+  </p>
+
+  <p>
+    To see this in action, I ran the Python script mentioned earlier. In this
+    experiment, I computed $F_n$ for values of $n = 2^i$, where $i$ ranges from
+    20 to 30 (these represent notably large values of $n$). As you can see in
+    <FigureLink id="computation-time" />, the time required to compute $F_n$
+    exhibits a linear relationship with $n$.
   </p>
 
   <FigureBlock
