@@ -45,7 +45,7 @@
 
   <p>
     With measured values for the current $I$ and the voltage $V$, one can
-    compute the power consumption $P$ of a device using the following formula:
+    calculate the power consumption $P$ of a device using the following formula:
   </p>
 
   <EquationBlock> P = VI </EquationBlock>
