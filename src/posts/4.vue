@@ -36,7 +36,7 @@
   </p>
 
   <p>
-    Let's compute the number of unique IPv6 addresses that could be assigned to
+    Let's estimate the number of unique IPv6 addresses that could be assigned to
     each square meter of the Earth's surface. Since the Earth is
     <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
       >approximately a sphere</a
@@ -65,8 +65,8 @@
     <a href="https://en.wikipedia.org/wiki/Avogadro_constant"
       >Avogadro constant</a
     >
-    ($N_A = 6.022 \cdot 10^{23}$). From this, we can compute how much area a
-    single IPv6 address would "occupy". This value is given by:
+    ($N_A = 6.022 \cdot 10^{23}$). From this, we can find how much area a single
+    IPv6 address would "occupy". This value is given by:
   </p>
 
   <EquationBlock>
