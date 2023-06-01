@@ -16,11 +16,11 @@
     $F_3 = F_2 + F_1 = 3$ and so forth.
   </p>
 
-  <SectionTitle>Calculating $F_n$ non-recursively</SectionTitle>
+  <SectionTitle>Computing $F_n$ non-recursively</SectionTitle>
 
   <p>
     Since the sequence is defined recursively, it's not immediately obvious how
-    to calculate the $n$-th element without using recursion. Nevertheless, it's
+    to compute the $n$-th element without using recursion. Nevertheless, it's
     possible if we examine the elements of the Fibonacci sequence in pairs:
   </p>
 
@@ -63,12 +63,12 @@
   </EquationBlock>
 
   <p>
-    Calculating $M^n$ can be efficiently achieved by first
+    Computing $M^n$ can be efficiently achieved by first
     <a href="https://en.wikipedia.org/wiki/Diagonalizable_matrix"
       >diagonalizing</a
     >
     it. As $M$ is symmetric, it is therefore diagonalizable. Let's begin by
-    calculating its eigenvalues:
+    finding its eigenvalues:
   </p>
 
   <EquationBlock>
@@ -94,8 +94,7 @@
   </p>
 
   <p>
-    Let's proceed to calculate the eigenvectors of $M$ associated with these
-    eigenvalues:
+    Let's proceed to find eigenvectors of $M$ associated with these eigenvalues:
   </p>
 
   <EquationBlock>
@@ -116,7 +115,7 @@
 
   <p>
     Given that we can select $\beta_+$ and $\beta_-$ arbitrarily, we will choose
-    $\beta_+ = \beta_- = 1$ to calculate two eigenvectors $\Vec{w}_+$ and
+    $\beta_+ = \beta_- = 1$ to obtain two eigenvectors $\Vec{w}_+$ and
     $\Vec{w}_-$ of $M$ associated with $\lambda_+$ and $\lambda_-$ respectively.
     Adopting these values for $\beta_{\pm}$ and referring to equation
     \eqref{alpha-beta-pm}, we obtain:
@@ -178,7 +177,7 @@
 
   <p>
     Equation \eqref{M-diagonalization} provides the diagonalization of $M$. This
-    equation is particularly valuable as it simplifies the calculation of $M^n$:
+    equation is particularly valuable as it simplifies the computation of $M^n$:
   </p>
 
   <EquationBlock>
@@ -303,7 +302,7 @@
     the previously mentioned Python script. In the experiment, I computed $F_n$
     for $n = 2^i$, where $i = 20, 21, \ldots, 30$ (these represent notably large
     values of $n$). As depicted in
-    <FigureLink id="computation-time" />, the computational time for evaluating
+    <FigureLink id="computation-time" />, the computation time for evaluating
     $F_n$ shows a linear growth with respect to $n$.
   </p>
 
