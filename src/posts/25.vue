@@ -153,7 +153,7 @@
     solution to the problem, implementing it numerically in this form will
     result in a method which is suboptimal in terms of performance (although it
     can be used as a last resort). A more efficient method is obtained by
-    calculating all coefficients in advance and then hard-coding the obtained
+    computing all coefficients in advance and then hard-coding the obtained
     formula. To illustrate what I mean, consider a polynomial of degree $d = 2$:
   </p>
 
