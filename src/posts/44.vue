@@ -29,7 +29,7 @@
   </EquationBlock>
 
   <p>
-    The second equation may seem trivial, but it helps us interpret equation
+    The second line may seem trivial, but it helps us interpret equation
     \eqref{fibonacci-pairs} using matrices, as demonstrated below:
   </p>
 
@@ -151,15 +151,15 @@
     (\Vec{w}_+, \Vec{w}_-) \MatrixTwoTwo{\lambda_+}{0}{0}{\lambda_-} = PD
   </EquationBlock>
 
+  <p>where:</p>
+
+  <EquationBlock> D = \MatrixTwoTwo{\lambda_+}{0}{0}{\lambda_-} </EquationBlock>
+
   <p>This implies:</p>
 
   <EquationBlock> M = PDP^{-1} \label{M-diagonalization} </EquationBlock>
 
   <p>where:</p>
-
-  <EquationBlock> D = \MatrixTwoTwo{\lambda_+}{0}{0}{\lambda_-} </EquationBlock>
-
-  <p>and:</p>
 
   <EquationBlock>
     P^{-1} = \frac{1}{\lambda_+ - \lambda_-}
@@ -289,9 +289,11 @@
   </EquationBlock>
 
   <p>
-    To further explain this, consider that an algorithm can't produce a result
-    with $n$ digits in less than $O(n)$ time. Furthermore, the time complexity
-    of arithmetic operations involving arbitrary precision is typically
+    where above we used the fact that $\lambda_-^n \rightarrow 0$ as $n
+    \rightarrow \infty$. To further explain this, consider that an algorithm
+    cannot produce a result with $n$ digits in less than $O(n)$ time.
+    Furthermore, the time complexity of arithmetic operations involving
+    arbitrary precision is typically
     <a
       href="https://en.wikipedia.org/wiki/Arbitrary-precision_arithmetic#Implementation_issues"
       >$O(n)$ or worse</a
@@ -303,7 +305,7 @@
   <p>
     To see this in action, I ran the Python script mentioned earlier. In this
     experiment, I computed $F_n$ for values of $n = 2^i$, where $i$ ranges from
-    20 to 30 (these represent notably large values of $n$). As you can see in
+    20 to 30 (these represent notably large values of $n$). As can be seen in
     <FigureLink id="computation-time" />, the time required to compute $F_n$
     exhibits a linear relationship with $n$.
   </p>
