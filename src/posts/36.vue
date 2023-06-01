@@ -229,7 +229,7 @@
     Despite equation \eqref{integral-polygonal-domain} providing a general,
     analytic solution to the problem, implementing it numerically in this form
     can result in suboptimal performance. A more efficient method can be
-    obtained by calculating all coefficients in advance and then hard-coding the
+    obtained by computing all coefficients in advance and then hard-coding the
     obtained formula. To illustrate this, consider a polynomial of degree $d =
     2$:
   </p>
