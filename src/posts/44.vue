@@ -279,13 +279,12 @@
     precision, it changes the time complexity of the entire algorithm to $O(n)$.
     This is because the quantity $\Digits(F_n)$, which represents the number of
     digits in $F_n$, is proportional to $n$ for large values of $n$. We can
-    demonstrate this with the following equation:
+    demonstrate this by using equation \eqref{Fn}:
   </p>
 
   <EquationBlock>
-    \Digits(F_n) \approx \log_{10}(F_n) \approx
-    \log_{10}\left(\frac{\lambda_+^n}{\sqrt{5}}\right) \approx
-    n\log_{10}(\lambda_+) \propto n
+    \Digits(F_n) \approx \log_{10} F_n = \log_{10}\left(\frac{\lambda_+^n -
+    \lambda_-^n}{\sqrt{5}}\right) \approx n\log_{10} \lambda_+ \propto n
   </EquationBlock>
 
   <p>
