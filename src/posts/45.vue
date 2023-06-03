@@ -80,8 +80,8 @@
 
   <p>
     One way to measure the "distance" between two words is through the
-    <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">
-      Levenshtein distance</a
+    <a href="https://en.wikipedia.org/wiki/Levenshtein_distance"
+      >Levenshtein distance</a
     >, which is a type of
     <a href="https://en.wikipedia.org/wiki/Edit_distance">edit distance</a>. The
     Levenshtein distance between two words is equal to the smallest number of
@@ -116,14 +116,13 @@
   <EquationBlock numberLines>
     \Lev_{r,s}(i,j) =
     \begin{cases}
-      \max(i,j) & \text{if } \min(i,j) = 0, \\
-      \min \left\{
-        \begin{aligned}
-        &\Lev_{r,s}(i-1,j) + 1, \\
-        &\Lev_{r,s}(i,j-1) + 1, \\
-        &\Lev_{r,s}(i-1,j-1) + 1_{(r_i \neq s_j)}
-        \end{aligned}
-        \right.
+      \max(i,j) & \text{if}\, \min(i,j) = 0, \\
+      \min
+        \begin{cases}
+        \Lev_{r,s}(i-1,j) + 1, \\
+        \Lev_{r,s}(i,j-1) + 1, \\
+        \Lev_{r,s}(i-1,j-1) + 1_{(r_i \neq s_j)}
+        \end{cases}
       & \text{otherwise}.
     \end{cases}
     \label{levenshtein}
@@ -183,12 +182,11 @@
   <FigureBlock
     id="similar-words-land"
     caption='A set of words similar to the German word "Land". The inner circle
-            contains all words within a distance of $d=0$ from "Land" (i.e.,
-            "Land" itself). The middle and outer layers contain words with
-            distances of $d=1$ and $d=2$ from "Land", respectively (note the
-            word lists are not exhaustive).'
+             contains all words within a distance of $d=0$ from "Land" (i.e.,
+             "Land" itself). The middle and outer layers contain words with
+             distances of $d=1$ and $d=2$ from "Land", respectively.'
   >
-    <ResponsiveImage alt="Similar words" :src="similarWords" />
+    <ResponsiveImage alt='Similar words to "Land"' :src="similarWords" />
   </FigureBlock>
 
   <p>
@@ -218,18 +216,17 @@
     language. These lists were obtained from the
     <a href="http://www.wortschatz.uni-leipzig.de/html/wliste.html"
       >University of Leipzig, Germany</a
-    >. The results were very interesting. Since the University of Leipzig also
-    provides similar word lists for Dutch and French, I computed the WPLs for
-    these languages as well. All results are summarized in
-    <TableLink id="results-all-languages" />.
+    >. Since the University of Leipzig also provides similar word lists for
+    Dutch and French, I computed the WPLs for these languages as well. All
+    results are summarized in <TableLink id="results-all-languages" />.
   </p>
 
   <TableBlock
     id="results-all-languages"
     :columns="3"
-    caption="WPL values for several languages and different values of $d$ and $L$.
-             Note how the values for Dutch are similar to those for German, with
-             both being significantly higher than the values for English."
+    caption="WPL values for several languages and different values of $d$ and
+             $L$. Note how the values for Dutch are similar to those for German,
+             with both being significantly higher than the values for English."
   >
     <b>Language</b>
     <span>$\textrm{WPL}(L=5, d=2)$</span>
@@ -253,15 +250,15 @@
   </TableBlock>
 
   <p>
-    As shown in <TableLink id="results-all-languages" capitalized />, when
-    considering only words with at least five characters ($L = 5$) and pairs of
-    words with a maximum distance equal to two ($d = 2$), a German word has
-    approximately twice as many "close words" to it as an English word, given
-    we're considering only the $1000$ most commonly used words of these
-    languages. If we raise the bar and consider words with at least six
-    characters ($L = 6$) and pairs of words with a maximum distance of three ($d
-    = 3$), the difference becomes even more significant: a German word now has
-    about three times as many "close words" as an English word.
+    As shown in <TableLink id="results-all-languages" />, when considering only
+    words with at least five characters ($L = 5$) and pairs of words with a
+    maximum distance equal to two ($d = 2$), a German word has approximately
+    twice as many "close words" to it as an English word, given we're
+    considering only the $1000$ most commonly used words of these languages. If
+    we raise the bar and consider words with at least six characters ($L = 6$)
+    and pairs of words with a maximum distance of three ($d = 3$), the
+    difference becomes even more significant: a German word now has about three
+    times as many "close words" as an English word.
   </p>
 
   <p>
@@ -276,7 +273,7 @@
   <FigureBlock
     id="en-de-L5-d2"
     caption='Percentage of analyzed words versus number of "neighbor words"
-             for $L = 5$ and $d = 2$. As the graph shows, English words
+             for $L = 5$ and $d = 2$. As the histogram shows, English words
              tend to have fewer neighbor words than German words, resulting in a
              smaller WPL value.'
   >
