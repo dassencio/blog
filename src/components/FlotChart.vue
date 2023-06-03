@@ -29,8 +29,9 @@ const options = _.merge(
      *
      * 0: United Nations Blue
      * 1: Baby Blue Eyes
+     * 2: Brink Pink (approximately)
      */
-    colors: ["#5b92e5", "#a1caf1"],
+    colors: ["#5b92e5", "#a1caf1", "#ff6696"],
     grid: {
       backgroundColor: "white",
       borderWidth: 1,

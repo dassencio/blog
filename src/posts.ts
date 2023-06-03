@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "9636c4a74afcc3924fdd2f03f83492c6",
+    component: () => import("@/posts/45.vue"),
+    date: dateToString(2014, 5, 12),
+    id: "45",
+    labels: [PostLabel.ComputerScience, PostLabel.NaturalLanguageProcessing],
+    title: "Is German harder than English?",
+  },
+  {
     compatibilityIndex: "c772250d88e35665d3a793882a7b70e5",
     component: () => import("@/posts/44.vue"),
     date: dateToString(2014, 5, 1),
