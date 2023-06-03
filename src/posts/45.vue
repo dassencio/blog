@@ -264,8 +264,8 @@
   <p>
     To further illustrate the difference between English and German, histograms
     showing the percentages of analyzed words containing different numbers of
-    "neighbor words" (that is, words at a distance $d$ from the given word) are
-    shown in <FigureLink id="en-de-L5-d2" /> and
+    "neighbor words" (that is, words within distance $d$ from the given word)
+    are shown in <FigureLink id="en-de-L5-d2" /> and
     <FigureLink id="en-de-L6-d3" /> for the pairs of values $(L,d) = (5,2)$ and
     $(L,d) = (6,3)$, respectively.
   </p>
