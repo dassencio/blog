@@ -301,8 +301,7 @@
 
 <script setup lang="ts">
 import { computed, onMounted } from "vue";
-import { onViewMounted } from "@/functions";
-import { figureLink } from "@/functions";
+import { figureLink, onViewMounted } from "@/functions";
 import store from "@/store";
 import similarWords from "@/assets/images/similar-words.svg";
 
