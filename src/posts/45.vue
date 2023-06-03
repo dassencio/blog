@@ -481,7 +481,7 @@ const optionsEnDeL6d3 = {
  * @param offset Offset to be added to the x values (to improve readability).
  */
 function convertToPercentage(data: number[][], offset = 0) {
-  return data.map((entry) => [entry[0] + offset, entry[1] * 100]);
+  return data.map((point) => [point[0] + offset, point[1] * 100]);
 }
 
 const dataEnDeL5d2 = [
