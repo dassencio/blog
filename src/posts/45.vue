@@ -6,7 +6,7 @@
   </p>
 
   <p>
-    Personally, in addition to the intricate
+    In addition to the intricate
     <a href="https://en.wikipedia.org/wiki/Declension">declension</a> forms,
     verbal conjugations, plural forms, and gender assignments, one of the most
     challenging aspects of the German language is the existence of numerous
@@ -173,7 +173,7 @@
   <p>
     At this point, a natural question arises: If one randomly selects a word
     from a dictionary for a specific language, what is the average number of
-    words from that dictionary that will be within a distance of $d$ (hereafter,
+    words from that dictionary that will be within a distance $d$ (hereafter,
     "distance" will refer to the "Levenshtein distance") from the chosen word?
     To better understand this question, refer to
     <FigureLink id="similar-words-land" />.
@@ -182,9 +182,9 @@
   <FigureBlock
     id="similar-words-land"
     caption='A set of words similar to the German word "Land". The inner circle
-             contains all words within a distance of $d=0$ from "Land" (i.e.,
-             "Land" itself). The middle and outer layers contain words with
-             distances of $d=1$ and $d=2$ from "Land", respectively.'
+             contains all words at a distance $d=0$ from "Land" (i.e.,
+             only "Land" itself). The middle and outer layers contain words
+             at distances $d=1$ and $d=2$ from "Land", respectively.'
   >
     <ResponsiveImage alt='Similar words to "Land"' :src="similarWords" />
   </FigureBlock>
@@ -206,15 +206,15 @@
     are considered is due to the fact that shorter words will be within a
     distance $d$ of each other even for small values of $d$. However, this
     doesn't necessarily mean they are "close" to each other. For instance,
-    consider the words "ape" and "bee": they are at a distance of $d=2$ from
-    each other but their spellings are arguably not very similar.
+    consider the words "ape" and "bee": they are at a distance $d=2$ from each
+    other but their spellings are arguably not very similar.
   </p>
 
   <p>
     To compare the English and German languages, I computed their WPLs using
     word lists that contain the $1000$ most commonly used words from each
     language. These lists were obtained from the
-    <a href="http://www.wortschatz.uni-leipzig.de/html/wliste.html"
+    <a href="https://www.wortschatz.uni-leipzig.de/en"
       >University of Leipzig, Germany</a
     >. Since the University of Leipzig also provides similar word lists for
     Dutch and French, I computed the WPLs for these languages as well. All
@@ -264,10 +264,10 @@
   <p>
     To further illustrate the difference between English and German, histograms
     showing the percentages of analyzed words containing different numbers of
-    "neighbor words" (that is, words within a distance $d$ from the given word)
-    are shown in <FigureLink id="en-de-L5-d2" /> and
-    <FigureLink id="en-de-L6-d3" />
-    for the pairs of values $(L,d) = (5,2)$ and $(L,d) = (6,3)$, respectively.
+    "neighbor words" (that is, words at a distance $d$ from the given word) are
+    shown in <FigureLink id="en-de-L5-d2" /> and
+    <FigureLink id="en-de-L6-d3" /> for the pairs of values $(L,d) = (5,2)$ and
+    $(L,d) = (6,3)$, respectively.
   </p>
 
   <FigureBlock
