@@ -166,12 +166,12 @@
     $\Lev_{r,s}(m,n)$ much more efficiently, such as the
     <a href="https://en.wikipedia.org/wiki/Wagner%E2%80%93Fischer_algorithm"
       >Wagner–Fischer algorithm</a
-    >. However, a thorough discussion of such algorithms is outside the scope of
+    >. A thorough discussion of such algorithms is however outside the scope of
     this post.
   </p>
 
   <p>
-    At this point, a natural question arises: If one randomly selects a word
+    At this point, an intriguing question arises: If one randomly selects a word
     from a dictionary for a specific language, what is the average number of
     words from that dictionary that will be within a distance $d$ (hereafter,
     "distance" will refer to the "Levenshtein distance") from the chosen word?
@@ -192,20 +192,20 @@
   <p>
     To answer this question, I wrote a
     <a href="https://github.com/dassencio/langcmp">Python script</a> that takes
-    a dictionary file, computes the Levenshtein distances between all words with
-    at least $L$ characters, and then calculates the average number of words
-    within distance $d$ from a randomly selected word from that dictionary with
-    at least $L$ characters (i.e., the average number of "neighbor words"). I
-    have termed this average the "word proximity level" (WPL) of the language.
-    The higher the WPL for a language (technically, for the input dictionary),
-    the "closer" the words of the language are in terms of spelling.
+    a dictionary file as input, computes the Levenshtein distances between all
+    words with at least $L$ characters, and then calculates the average number
+    of words within distance $d$ from a randomly selected word from that
+    dictionary with at least $L$ characters. I have termed this average the
+    "word proximity level" (WPL) of the language. The higher the WPL for a
+    language (technically, for the input dictionary), the closer the words of
+    the language are in terms of spelling.
   </p>
 
   <p>
     The reason only words with at least $L$ characters (for example, $L = 5$)
     are considered is due to the fact that shorter words will be within a
     distance $d$ of each other even for small values of $d$. However, this
-    doesn't necessarily mean they are "close" to each other. For instance,
+    doesn't necessarily mean they are close to each other. For instance,
     consider the words "ape" and "bee": they are at a distance $d=2$ from each
     other but their spellings are arguably not very similar.
   </p>
@@ -253,12 +253,12 @@
     As shown in <TableLink id="results-all-languages" />, when considering only
     words with at least five characters ($L = 5$) and pairs of words with a
     maximum distance equal to two ($d = 2$), a German word has approximately
-    twice as many "close words" to it as an English word, given we're
+    twice as many similar words to it as an English word, given we're
     considering only the $1000$ most commonly used words of these languages. If
     we raise the bar and consider words with at least six characters ($L = 6$)
     and pairs of words with a maximum distance of three ($d = 3$), the
     difference becomes even more significant: a German word now has about three
-    times as many "close words" as an English word.
+    times as many similar words as an English word.
   </p>
 
   <p>
@@ -272,10 +272,10 @@
 
   <FigureBlock
     id="en-de-L5-d2"
-    caption='Percentage of analyzed words versus number of "neighbor words"
+    caption="Percentage of analyzed words versus number of neighbor words
              for $L = 5$ and $d = 2$. As the histogram shows, English words
              tend to have fewer neighbor words than German words, resulting in a
-             smaller WPL value.'
+             smaller WPL value."
   >
     <FlotChart
       class="neighbor-words-histogram"
@@ -286,10 +286,9 @@
 
   <FigureBlock
     id="en-de-L6-d3"
-    :caption="`Percentage of analyzed words versus number of &quot;neighbor
-               words&quot; for $L = 6$ and $d = 3$. Note how the tail of the
-               distribution for German words becomes more pronounced than in
-               ${enDeL5d2Link}.`"
+    :caption="`Percentage of analyzed words versus number of neighbor words for
+               $L = 6$ and $d = 3$. Note how the tail of the distribution for
+               German words becomes more pronounced than in ${enDeL5d2Link}.`"
   >
     <FlotChart
       class="neighbor-words-histogram"
