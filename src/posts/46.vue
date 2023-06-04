@@ -179,7 +179,7 @@
   <p>
     We can finally use equation \eqref{hamiltonian} in equations
     \eqref{hamilton-equations-theta-i} and \eqref{hamilton-equations-p-theta-i}
-    to derive the Hamiltonian equations of motion for the double pendulum:
+    to derive the Hamilton's equations of motion for the double pendulum:
   </p>
 
   <!-- prettier-ignore -->
@@ -222,7 +222,7 @@
     as equations \eqref{dot-theta-1-p-theta-1} and
     \eqref{dot-theta-2-p-theta-2}. Thus, in the process of determining the
     Hamiltonian in terms of the canonical momenta $p_{\theta_i}$ and the angles
-    $\theta_i$, we have already obtained two of the Hamiltonian equations.
+    $\theta_i$, we have already obtained two of the Hamilton's equations.
   </p>
 
   <p>
