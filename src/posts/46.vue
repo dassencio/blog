@@ -222,7 +222,7 @@
     as equations \eqref{dot-theta-1-p-theta-1} and
     \eqref{dot-theta-2-p-theta-2}. Thus, in the process of determining the
     Hamiltonian in terms of the canonical momenta $p_{\theta_i}$ and the angles
-    $\theta_i$, we have already obtained two of the Hamilton's equations.
+    $\theta_i$, we unintentionally obtained two of Hamilton's equations.
   </p>
 
   <p>
