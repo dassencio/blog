@@ -95,7 +95,7 @@
 
   <p>
     where $B$ is a $2 \times 2$ matrix with entries that are functions of
-    $\theta_1$ and $\theta_2$ $\theta_2$:
+    $\theta_1$ and $\theta_2$:
   </p>
 
   <EquationBlock>
@@ -177,9 +177,9 @@
   </EquationBlock>
 
   <p>
-    We can finally use equation \eqref{hamiltonian} in equation
-    \eqref{hamilton-equations} to derive the Hamiltonian equations of motion for
-    the double pendulum:
+    We can finally use equation \eqref{hamiltonian} in equations
+    \eqref{hamilton-equations-theta-i} and \eqref{hamilton-equations-p-theta-i}
+    to derive the Hamiltonian equations of motion for the double pendulum:
   </p>
 
   <!-- prettier-ignore -->
