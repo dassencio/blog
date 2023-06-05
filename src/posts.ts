@@ -8,7 +8,7 @@ const posts: Post[] = [
     date: dateToString(2014, 5, 17),
     id: "46",
     labels: [PostLabel.Mechanics, PostLabel.Physics],
-    title: "The double pendulum: Hamiltonian formulation",
+    title: "Double pendulum: Hamiltonian formulation",
   },
   {
     compatibilityIndex: "9636c4a74afcc3924fdd2f03f83492c6",
