@@ -3,6 +3,18 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "6c1cfa313064329046317358d2aa22c0",
+    component: () => import("@/posts/47.vue"),
+    date: dateToString(2014, 5, 21),
+    id: "47",
+    labels: [
+      PostLabel.Mathematics,
+      PostLabel.Probability,
+      PostLabel.Statistics,
+    ],
+    title: "How many coin flips are needed until you get a head?",
+  },
+  {
     compatibilityIndex: "e5ac36fcb129ce95a61f8e8ce0572dbf",
     component: () => import("@/posts/46.vue"),
     date: dateToString(2014, 5, 17),
