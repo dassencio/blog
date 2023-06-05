@@ -37,8 +37,8 @@
     It is closely related to the
     <a href="https://en.wikipedia.org/wiki/Geometric_series">geometric series</a
     >. In fact, consider the sequence $g_k$, which is obtained by taking the
-    first $k$ terms of the geometric series as its $k$-th element. For any real
-    value $x \neq 1$, we have that:
+    first $k + 1$ terms of the geometric series as its $k$-th element. For any
+    real value $x \neq 1$, we have that:
   </p>
 
   <EquationBlock>
