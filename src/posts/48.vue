@@ -4,7 +4,7 @@
     <a href="https://en.wikipedia.org/wiki/Library_%28computing%29"
       >libraries</a
     >
-    to provide necessary functionalities. Although it is theoretically possible,
+    to provide necessary functionalities. Although theoretically possible,
     writing programs without using functions from external libraries would lead
     to a significant increase in the volume of source code, even for the
     simplest programs. Additionally, such programs would be much harder to
@@ -21,8 +21,8 @@
       >dynamically</a
     >. When a library is statically linked to a program, its binary contents are
     incorporated into the program during compilation. In other words, the
-    library becomes part of the binary version of the program. This linking
-    process is performed by a program known as a "<a
+    library becomes part of the binary version of the program (the
+    "executable"). This linking process is performed by a program known as a "<a
       href="https://en.wikipedia.org/wiki/Linker_%28computing%29"
       >linker</a
     >". On Linux, this program is typically
@@ -34,14 +34,13 @@
     This post focuses on the scenario where a library is dynamically linked to a
     program. In this case, the contents of the linked library do not become part
     of the program. Instead, when the program is compiled, a table containing
-    the necessary symbols (e.g., function names) required for its execution is
-    created and stored in the compiled version of the program (the
-    "executable"). This table is known as the "dynamic symbol table" of the
-    program. When the program is executed, a
+    the necessary symbols (e.g., function names) required for execution is
+    created and stored in the compiled version of the program. This table is
+    known as the program's "dynamic symbol table". During program execution, a
     <a href="https://en.wikipedia.org/wiki/Dynamic_linker">dynamic linker</a> is
-    invoked to link the program to the dynamic (or "shared") libraries that
-    contain the definitions of these symbols. On Linux, the dynamic linker that
-    performs this task is
+    invoked to link the program with the dynamic (or "shared") libraries that
+    contain the definitions of the symbols listed in its dynamic symbol table.
+    On Linux, the dynamic linker responsible for this task is
     <a href="http://man7.org/linux/man-pages/man8/ld.so.8.html"
       ><code>ld-linux.so</code></a
     >. When a program is executed, <code>ld-linux.so</code> is first loaded into
@@ -49,9 +48,9 @@
     <a href="https://en.wikipedia.org/wiki/Virtual_address_space"
       >address space</a
     >
-    of the process and then loads all the dynamic libraries needed to run the
-    program (I won't detail this process, but curious readers can find ample
-    information on how this happens
+    of the process and then loads all the necessary dynamic libraries (I won't
+    delve into the details of this process, but curious readers can find ample
+    information on how it happens
     <a
       href="https://web.archive.org/web/20140502182531/https://www.iecc.com/linker/linker10.html"
       >here</a
@@ -60,8 +59,8 @@
   </p>
 
   <p>
-    During the compilation of a program, the path to the dynamic linker (the
-    "interpreter") that the program needs to run is added to a special
+    During the compilation of a program, the path to the dynamic linker that the
+    program needs to run is added to a special
     <a
       href="http://refspecs.linuxfoundation.org/LSB_1.1.0/gLSB/specialsections.html"
       >section</a
@@ -112,10 +111,10 @@
   </p>
 
   <p>
-    Now that we understand how dynamic libraries are loaded, the next natural
-    question to ask is: what are the symbols that a program requires from
-    dynamically linked libraries in order to run? This question can be answered
-    in various ways. One common method is by using the
+    Now that we understand how dynamic libraries are loaded, the next question
+    that arises is: how can we determine the symbols that a program requires
+    from dynamically linked libraries in order to run? There are several ways to
+    obtain that information, and one common approach is to use the
     <a href="http://linux.die.net/man/1/objdump"><code>objdump</code></a>
     command:
   </p>
@@ -152,7 +151,7 @@
       href="http://refspecs.linuxbase.org/LSB_3.1.1/LSB-Core-generic/LSB-Core-generic/baselib---libc-start-main-.html"
       ><code>__libc_start_main</code></a
     >, both of which are required for the program to run. And even if you
-    comment out the "Hello, world!" line, the program will still require a
+    comment out the <code>printf</code> line, the program will still require a
     definition of <code>__libc_start_main</code> from glibc.
   </p>
 
@@ -194,7 +193,7 @@
     <code>ld-linux-x86-64.so.2</code> (the dynamic linker) to be loaded.
   </p>
 
-  <SectionTitle>Discovering library locations</SectionTitle>
+  <SectionTitle>Determining library locations</SectionTitle>
 
   <p>
     So far, we know that <code>ld-linux.so</code> is responsible for loading the
@@ -246,18 +245,17 @@
   <CodeBlock
     code="
     libX11.so.6 (libc6,x86-64) => /usr/lib/x86_64-linux-gnu/libX11.so.6
-    libX11.so (libc6,x86-64) => /usr/lib/x86_64-linux-gnu/libX11.so
+    **libX11.so (libc6,x86-64) => /usr/lib/x86_64-linux-gnu/libX11.so**
     libX11-xcb.so.1 (libc6,x86-64) => /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1
     libX11-xcb.so (libc6,x86-64) => /usr/lib/x86_64-linux-gnu/libX11-xcb.so
     "
   />
 
   <p>
-    In simple terms, the output above indicates, for example, that the symbols
-    required from <code>libX11.so</code> can be located in the dynamic library
-    <code>/usr/lib/x86_64-linux-gnu/libX11.so</code>. Since this file might be a
-    symbolic link to the actual shared object file (i.e., the dynamic library),
-    we can determine its actual location with the
+    The highlighted line indicates that the symbols required from
+    <code>libX11.so</code> can be found in the dynamic library
+    <code>/usr/lib/x86_64-linux-gnu/libX11.so</code>. If this file is a symbolic
+    link to the dynamic library, you can determine its actual location using the
     <a href="http://linux.die.net/man/2/readlink"><code>readlink</code></a>
     command:
   </p>
