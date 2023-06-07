@@ -253,36 +253,35 @@
 
   <p>
     The highlighted line indicates that the symbols required from
-    <code>libX11.so</code> can be found in the dynamic library
-    <code>/usr/lib/x86_64-linux-gnu/libX11.so</code>. If this file is a symbolic
-    link to the dynamic library, you can determine its actual location using the
+    <code>libX11.so</code> can be found in
+    <code>/usr/lib/x86_64-linux-gnu/libX11.so</code>. This file is likely a
+    symbolic link to the dynamic library whose name indicates the version number
+    we're seeking. You can determine the location of that file using the
     <a href="http://linux.die.net/man/2/readlink"><code>readlink</code></a>
     command:
   </p>
 
   <CodeBlock code="readlink -f /usr/lib/x86_64-linux-gnu/libX11.so" />
 
+  <p>On my system, the output gives us the desired version number:</p>
+
+  <CodeBlock code="/usr/lib/x86_64-linux-gnu/libX11.so.**6.3.0**" />
+
   <p>
-    In my system, both <code>libX11.so</code> and <code>libX11.so.6</code> are
-    symbolic links to the same file:
+    Symbolic links like the one just seen are also created by
+    <code>ldconfig</code>. If you prefer to only create the symbolic links and
+    not the cache, execute <code>ldconfig</code> with the
+    <code>-N</code> option. To create only the cache without the symbolic links,
+    use the <code>-X</code> option.
   </p>
 
-  <CodeBlock code="/usr/lib/x86_64-linux-gnu/libX11.so.6.3.0" />
-
   <p>
-    These symbolic links are also created by <code>ldconfig</code>. If you
-    prefer to only create the symbolic links and not the cache, execute
-    <code>ldconfig</code> with the <code>-N</code> option. To solely create the
-    cache without the symbolic links, use the <code>-X</code> option.
-  </p>
-
-  <p>
-    As a final note on <code>ldconfig</code>, it's worth noting that on
-    Ubuntu/Debian systems, whenever you install a dynamic library using
-    <code>apt-get</code>, <code>ldconfig</code> is automatically executed at the
-    end to update the dynamic library cache. You can verify this by installing a
-    library that is not already installed on your system and then checking that
-    it appears in the output of <code>ldconfig -p</code>.
+    Finally, it's worth noting that on Ubuntu/Debian systems,
+    <code>ldconfig</code> is automatically executed after installing a dynamic
+    library using <code>apt-get</code>. This ensures that the dynamic library
+    cache is always up-to-date. You can verify this by installing a library that
+    is not already present on your system and checking the output of
+    <code>ldconfig -p</code>.
   </p>
 
   <SectionTitle>Observing <code>ld-linux.so</code> in action</SectionTitle>
