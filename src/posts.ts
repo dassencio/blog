@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "79a3928625303f53593f2112ebd8ac86",
+    component: () => import("@/posts/49.vue"),
+    date: dateToString(2014, 6, 25),
+    id: "49",
+    labels: [PostLabel.Cpp, PostLabel.Programming],
+    title: "Storing DNA data efficiently in C/C++",
+  },
+  {
     compatibilityIndex: "a500ab0fa6037fc2dc20224e7505b82f",
     component: () => import("@/posts/48.vue"),
     date: dateToString(2014, 6, 15),
