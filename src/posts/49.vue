@@ -195,7 +195,7 @@ public:
       }
     }
 
-    dna_str[m_len] = '\0';
+    dna_str[m_len] = '\\0';
     return dna_str;
   }
 
