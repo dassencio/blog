@@ -89,7 +89,7 @@
   </p>
 
   <MapBlock>
-    <b>SSH protocol version:</b>
+    <span><b>SSH protocol version</b>:</span>
     <span>
       2 (always use this one; version 1 is
       <a href="https://en.wikipedia.org/wiki/Secure_Shell#Vulnerabilities"
@@ -97,12 +97,12 @@
       >).
     </span>
 
-    <b>Authentication algorithm:</b>
+    <span><b>Authentication algorithm</b>:</span>
     <span>
       <a href="https://en.wikipedia.org/wiki/RSA_%28algorithm%29">RSA.</a>
     </span>
 
-    <b>Cipher:</b>
+    <span><b>Cipher</b>:</span>
     <span>
       <a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard"
         >AES</a
@@ -120,7 +120,7 @@
       as mode of operation and 256-bit long keys.
     </span>
 
-    <b>MAC:</b>
+    <span><b>MAC</b>:</span>
     <span>
       <a
         href="https://en.wikipedia.org/wiki/Hash-based_message_authentication_code"
@@ -131,7 +131,7 @@
       producing either 512- or 256-bit long digests.
     </span>
 
-    <b>Key exchange algorithm:</b>
+    <span><b>Key exchange algorithm</b>:</span>
     <span>
       <a
         href="https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange"
