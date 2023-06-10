@@ -110,19 +110,19 @@ class DnaBitset {
 public:
   /**
    * @brief Constructs a compressed representation of a DNA sequence.
-   * @param dna_str String holding a DNA sequence (e.g. "ATGCACG").
+   * @param dna_str String holding a DNA sequence (e.g., "ATGCACG").
    * @param dna_len The length of the DNA sequence.
    */
   DnaBitset(const char* dna_str, const size_t dna_len) {
     m_len = dna_len;
 
-    // Number of bytes necessary to store dna_str as a bitset.
+    // Number of bytes necessary to store dna_str in a bitset.
     size_t dna_bytes = (dna_len / 4) + (dna_len % 4 != 0);
 
     m_data = new uint8_t[dna_bytes];
     std::memset(m_data, 0, dna_bytes);
 
-    // For each base of the DNA sequence...
+    // For each base in the DNA sequence...
     for (size_t i = 0; i < dna_len; ++i) {
       uint8_t shift = 6 - 2 * (i % 4);
 
@@ -160,7 +160,7 @@ public:
   char* to_string() const {
     char* dna_str = new char[m_len + 1];
 
-    // For each base of the DNA sequence...
+    // For each base in the DNA sequence...
     for (size_t i = 0; i < m_len; ++i) {
       uint8_t shift = 6 - 2 * (i % 4);
       uint8_t mask = BASE_MASK << shift;
