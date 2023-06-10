@@ -218,7 +218,7 @@
   </FigureBlock>
 
   <p>
-    It is worth asking at this point: If we store the image represented by $J_c$
+    It is worth asking at this point: if we store the image represented by $J_c$
     as a file in PNG format, will it be smaller in size than a file similarly
     generated from $J$? The answer is not a clear "yes" since, despite being a
     lossless format, PNG has its own compression mechanism which is not the same

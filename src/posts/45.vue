@@ -171,7 +171,7 @@
   </p>
 
   <p>
-    At this point, an intriguing question arises: If one randomly selects a word
+    At this point, an intriguing question arises: if one randomly selects a word
     from a dictionary for a specific language, what is the average number of
     words from that dictionary that will be within a distance $d$ (hereafter,
     "distance" will refer to the "Levenshtein distance") from the chosen word?

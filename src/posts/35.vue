@@ -48,7 +48,7 @@
         href="https://en.wikipedia.org/wiki/Relational_algebra#.CE.B8-join_and_equijoin"
         >$\theta$-join</a
       >
-      of $R$ and $S$: Compute all combinations of tuples from $R$ and $S$ that
+      of $R$ and $S$: compute all combinations of tuples from $R$ and $S$ that
       satisfy the condition $\theta$ ($R \bowtie_{\theta} S = \sigma_{\theta}(R
       \times S)$, where $R \times S$ is the Cartesian product of $R$ and $S$).
     </span>
