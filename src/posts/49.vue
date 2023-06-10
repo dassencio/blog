@@ -2,10 +2,10 @@
   <p>
     Suppose you have a
     <a href="https://en.wikipedia.org/wiki/DNA">DNA</a> sequence (e.g.,
-    ATCGATTGAC...) that you want to store efficiently. Assuming the sequence is
-    uniformly random, in the sense that the $i$-th base can be any of A, C, G,
-    or T with equal probabilities, what is the most efficient way to store this
-    sequence?
+    ATCGATTGAC...) that you want to store in a C/C++ program. Assuming the
+    sequence is uniformly random, in the sense that the $i$-th base can be any
+    of A, C, G, or T with equal probabilities, what is the most efficient way to
+    store it?
   </p>
 
   <p>
