@@ -27,7 +27,7 @@
     <a href="https://en.wikipedia.org/wiki/Entropy_%28information_theory%29"
       >entropy</a
     >. This means we can assign a unique pair of bits to each base, as shown in
-    the table below:
+    <TableLink id="binary-codes" />.
   </p>
 
   <TableBlock
