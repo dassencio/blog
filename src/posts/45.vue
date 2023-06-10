@@ -193,12 +193,12 @@
     To answer this question, I wrote a
     <a href="https://github.com/dassencio/langcmp">Python script</a> that takes
     a dictionary file as input, computes the Levenshtein distances between all
-    words with at least $L$ characters, and then calculates the average number
-    of words within distance $d$ from a randomly selected word from that
-    dictionary with at least $L$ characters. I have termed this average the
-    "word proximity level" (WPL) of the language. The higher the WPL for a
-    language (technically, for the input dictionary), the closer the words of
-    the language are in terms of spelling.
+    words with at least $L$ characters, and then computes the average number of
+    words within distance $d$ from a randomly selected word from that dictionary
+    with at least $L$ characters. I have termed this average the "word proximity
+    level" (WPL) of the language. The higher the WPL for a language
+    (technically, for the input dictionary), the closer the words of the
+    language are in terms of spelling.
   </p>
 
   <p>
