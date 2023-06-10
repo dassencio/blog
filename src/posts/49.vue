@@ -13,11 +13,11 @@
     <a href="https://en.wikipedia.org/wiki/Character_%28computing%29#char"
       ><code>char</code></a
     >
-    array is not a good idea because each character can have only four possible
+    array is not efficient because each character can have only four possible
     values: <code>'A'</code>, <code>'C'</code>, <code>'G'</code>, or
-    <code>'T'</code>. Since an 8-bit <code>char</code> can store 256 different
-    values, using <code>char</code>s to store DNA bases is wasteful. We can do
-    better.
+    <code>'T'</code>. Since an 8-bit <code>char</code> can represent 256
+    different values, using one <code>char</code> to store each DNA base is
+    wasteful. We can do better.
   </p>
 
   <p>
