@@ -52,17 +52,17 @@
   </TableBlock>
 
   <p>
-    In light of this fact, the most efficient way to store a DNA sequence is to
-    store not just one, but four bases per 8-bit <code>char</code> (or,
-    equivalently, per one-byte unsigned integer: <code>uint8_t</code>).
+    In light of this, the most efficient way to store a DNA sequence is to store
+    not just one, but four bases in an 8-bit <code>char</code> (or,
+    equivalently, in a one-byte unsigned integer <code>uint8_t</code>).
     <FigureLink id="dna-compression" capitalized /> shows how this can be
     accomplished.
   </p>
 
   <FigureBlock
     id="dna-compression"
-    caption="Instead of storing one DNA base per <code>char</code>, a much
-             more efficient method is to store four bases in each 8-bit block of
+    caption="Instead of storing one DNA base per <code>char</code>, a more
+             efficient method is to store four bases in each 8-bit block of
              memory."
   >
     <ResponsiveImage alt="DNA compression" :src="dnaCompression" />
