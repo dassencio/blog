@@ -70,17 +70,17 @@
 
   <p>
     Below is an example of a C++ class that stores a DNA sequence by converting
-    it from a string to a bit array. It was written using as few
+    it from a string to a bit array. This example uses a minimal number of
     <a href="https://en.wikipedia.org/wiki/Standard_Template_Library">STL</a>
-    members as possible to demonstrate how the solution can be implemented in C
-    (C++ developers could use
+    members to demonstrate how the solution can be implemented in C. C++
+    developers could alternatively use
     <a href="http://www.cplusplus.com/reference/string/string/"
       ><code>std::string</code></a
     >
     instead of <code>char*</code>, and store the DNA data using
     <a href="http://www.cplusplus.com/reference/bitset/bitset/"
       ><code>std::bitset</code></a
-    >). Since most of the details are straightforward, I will leave the task of
+    >. Since most of the details are straightforward, I will leave the task of
     understanding the code to the reader. A fully compilable example can be
     found <a href="https://github.com/dassencio/dna-compression">here</a>.
   </p>
