@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "485cc3a040fb3474092a617ba17bb473",
+    component: () => import("@/posts/50.vue"),
+    date: dateToString(2014, 6, 29),
+    id: "50",
+    labels: [PostLabel.Algorithms, PostLabel.ComputerScience],
+    title: "Binary search: a simple but tricky algorithm",
+  },
+  {
     compatibilityIndex: "79a3928625303f53593f2112ebd8ac86",
     component: () => import("@/posts/49.vue"),
     date: dateToString(2014, 6, 25),
