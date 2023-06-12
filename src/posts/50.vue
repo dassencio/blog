@@ -12,10 +12,10 @@
   </p>
 
   <p>
-    There are numerous ways to implement the binary search algorithm. The term
-    "tricky" in the post title highlights how easily one can devise an
-    implementation that seems correct, but harbors subtle bugs. For instance,
-    try to identify the issue in the Python implementation below:
+    There are numerous ways to implement the binary search algorithm. Despite
+    its simplicity, however, it is surprisingly easy to come up with an
+    implementation that appears to be correct but harbors subtle bugs. For
+    instance, try to identify the issue in the Python implementation below:
   </p>
 
   <CodeBlock
@@ -47,7 +47,7 @@
   />
 
   <p>
-    To identify the error in this implementation, consider what would happen if
+    To identify the error in this implementation, consider what happens when
     <code>u</code> is equal to <code>[0, 1]</code> and <code>x</code> is
     <code>0</code>. Initially, <code>left</code> is set to <code>0</code> and
     <code>right</code> is set to <code>1</code>. Inside the
