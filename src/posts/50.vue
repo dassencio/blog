@@ -105,12 +105,12 @@
   />
 
   <p>
-    The implementation above is conceptually better in the sense that each
-    subarray is strictly smaller than the original one, which makes it clear
-    that the method will converge if there are no other issues. Unfortunately,
-    the changes made do not fix the original problem: given
+    This implementation is conceptually better in the sense that each subarray
+    is strictly smaller than the original one, which makes it clear that the
+    method will converge if there are no other issues. Unfortunately, the
+    changes made do not fix the original problem: given
     <code>u = [0, 1]</code> and <code>x = 0</code>, the program will still enter
-    an infinite loop in the <code>while</code> loop. However, allowing
+    the same infinite loop as before. However, allowing
     <code>u[middle]</code> to be part of the left subarray but not of the right
     subarray resolves our problem:
   </p>
