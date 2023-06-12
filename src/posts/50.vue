@@ -12,12 +12,10 @@
   </p>
 
   <p>
-    There are many ways to implement the binary search algorithm. This post will
-    focus on the implementation details, and it is assumed that the reader is
-    already familiar with the algorithm. The word "tricky" in the post title
-    refers to the fact that it is very easy to write an implementation of the
-    algorithm that appears to be correct but contains bugs. For example, try to
-    figure out what is wrong with the implementation below (written in Python):
+    There are numerous ways to implement the binary search algorithm. The term
+    "tricky" in the post title highlights how easily one can devise an
+    implementation that seems correct, but harbors subtle bugs. For instance,
+    try to identify the issue in the Python implementation below:
   </p>
 
   <CodeBlock
