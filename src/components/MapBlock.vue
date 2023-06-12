@@ -12,6 +12,8 @@
   line-height: $view-paragraph-line-height;
   margin: $view-paragraph-vertical-margin 0 $view-paragraph-vertical-margin
     $view-indentation-length;
+  max-width: 100%;
+  overflow-x: auto;
   text-align: left;
   @media (min-width: $desktop-width-mode) {
     text-align: justify;
