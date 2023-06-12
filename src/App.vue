@@ -91,6 +91,9 @@ i {
 }
 code {
   font-family: "Noto Sans Mono Regular";
+  &:not(.hljs) {
+    white-space: nowrap;
+  }
   b {
     font-family: "Noto Sans Mono SemiBold";
   }
