@@ -48,11 +48,13 @@
 
   <p>
     To identify the error in this implementation, consider what would happen if
-    <code>u = [0, 1]</code> and <code>x = 0</code>. Initially,
-    <code>left = 0</code> and <code>right = 1</code>. Inside the
+    <code>u</code> is equal to <code>[0, 1]</code> and <code>x</code> is
+    <code>0</code>. Initially, <code>left</code> is set to <code>0</code> and
+    <code>right</code> is set to <code>1</code>. Inside the
     <code>while</code> loop, <code>middle</code> is set to <code>0</code> since
-    <code>(right - left) // 2 = 0</code> (the <code>//</code> operator computes
-    integer division, which is necessary because regular division is
+    <code>(right - left) // 2</code> is <code>0</code> (the
+    <code>//</code> operator computes integer division, which is necessary
+    because regular division is
     <a href="http://legacy.python.org/dev/peps/pep-0238/"
       >converted to a floating-point</a
     >
@@ -61,7 +63,7 @@
     <code>left = middle</code> sets <code>left</code> to <code>0</code>. Since
     neither <code>left</code> nor <code>right</code> have changed, the loop will
     restart and be executed indefinitely (or at least until you get tired of
-    waiting and stop the process).
+    waiting and manually stop the program execution).
   </p>
 
   <p>
