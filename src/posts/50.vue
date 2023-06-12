@@ -21,7 +21,7 @@
   <CodeBlock
     language="python"
     code="
-    # A wrong and conceptually flawed implementation of binary search.
+    # A conceptually flawed implementation of binary search.
     def binary_search(u, x):
       if len(u) == 0:
         return None
@@ -90,7 +90,7 @@
   <CodeBlock
     language="python"
     code="
-    # A conceptually better, but still incorrect, implementation of binary search.
+    # A conceptually improved, yet still flawed, implementation of binary search.
     def binary_search(u, x):
       ...
       while left != right:
