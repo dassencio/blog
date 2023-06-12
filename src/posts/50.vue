@@ -56,9 +56,9 @@
     <code>//</code> operator computes integer division, which is necessary
     because regular division is
     <a href="http://legacy.python.org/dev/peps/pep-0238/"
-      >converted to a floating-point</a
+      >converted to a floating-point value</a
     >
-    value in newer versions of Python). After that, the condition
+    in newer versions of Python). After that, the condition
     <code>u[middle] &lt;= x</code> is satisfied and
     <code>left = middle</code> sets <code>left</code> to <code>0</code>. Since
     neither <code>left</code> nor <code>right</code> have changed, the loop will
@@ -110,11 +110,11 @@
     This implementation is conceptually better in the sense that each subarray
     is strictly smaller than the original one, which makes it clear that the
     method will converge if there are no other issues. Unfortunately, the
-    changes made do not fix the original problem: given
-    <code>u = [0, 1]</code> and <code>x = 0</code>, the program will still enter
-    the same infinite loop as before. However, allowing
-    <code>u[middle]</code> to be part of the left subarray but not of the right
-    subarray resolves our problem:
+    changes made do not fix the original problem: when
+    <code>u</code> is equal to <code>[0, 1]</code> and <code>x</code> is
+    <code>0</code>, the program will still enter the same infinite loop as
+    before. However, allowing <code>u[middle]</code> to be part of the left
+    subarray but not of the right subarray resolves our problem:
   </p>
 
   <CodeBlock
