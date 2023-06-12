@@ -144,7 +144,7 @@
   />
 
   <p>
-    The implementation above is correct and will always find the desired value
+    This implementation is correct and will always find the desired value
     <code>x</code> if it is in the array <code>u</code>. In each iteration, the
     value of either <code>left</code> or <code>right</code> must change, as the
     <code>if</code> statement increases <code>left</code> by at least
@@ -158,21 +158,20 @@
 
   <SectionTitle>Computing the <code>middle</code> index</SectionTitle>
 
-  <p>The <code>middle</code> index can be computed as shown below:</p>
+  <p>The <code>middle</code> index can be computed in the following manner:</p>
 
   <CodeBlock language="python" code="middle = (left + right) // 2" />
 
   <p>
-    However, computing the integer arithmetic in this way is prone to bugs that
-    can be very difficult to identify. In Python, this is not an issue since
-    integers are promoted to arbitrary precision
+    However, this approach is prone to bugs that can be challenging to pinpoint.
+    In Python, summing <code>left</code> and <code>right</code> is safe even for
+    large integer values, as Python promotes integers to arbitrary precision
     <a
       href="https://docs.python.org/2/library/stdtypes.html#numeric-types-int-float-long-complex"
       >by default</a
-    >, but in other languages, such as C and C++, the sum of two integers can
-    overflow and yield a result that is completely different from what you might
-    expect. This overflow can be safely avoided by computing the
-    <code>middle</code> as shown below:
+    >. In contrast, in languages like C and C++, the sum of two integers can
+    cause an overflow, resulting in an unexpected value. To avoid this overflow,
+    compute the <code>middle</code> index as follows:
   </p>
 
   <CodeBlock language="python" code="middle = left + (right - left) // 2" />
