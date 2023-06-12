@@ -139,7 +139,7 @@
 
   <p>
     The output above highlights an intriguing fact: even to print a simple
-    string "<code>Hello, world!</code>", a dynamic library is required.
+    string such as "<code>Hello, world!</code>", a dynamic library is required.
     Specifically, the
     <a href="https://www.gnu.org/software/libc/libc.html">GNU C Library</a>
     (glibc) is needed because it contains the definitions of the functions
