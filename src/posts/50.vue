@@ -68,16 +68,15 @@
 
   <p>
     Before working on a fix for the implementation above, it's important to note
-    that it has a suboptimal design decision, which, as will be shown below, is
-    closely related to the infinite loop just described. The implementation
-    above "divides" the currently considered portion of the array
-    <code>u</code> into two overlapping subarrays: a "left subarray" containing
-    the elements with indices in the closed interval
-    <code>[left, middle]</code> and a "right subarray" containing the elements
-    with indices in <code>[middle, right]</code>. In other words,
-    <code>u[middle]</code> is a part of both intervals. Inside the
-    <code>while</code> loop, the program decides whether to continue iterating
-    over the left or the right subarray.
+    that it suffers from a poor design choice. The implementation divides the
+    currently considered portion of the array <code>u</code> into two
+    overlapping subarrays. The first is the "left subarray", which contains the
+    elements with indices in the closed interval <code>[left, middle]</code>.
+    The second is the "right subarray", containing the elements with indices in
+    <code>[middle, right]</code>. This makes <code>u[middle]</code> a part of
+    both subarrays. Within the <code>while</code> loop, the program makes a
+    decision on whether to continue iterating over the left or the right
+    subarray.
   </p>
 
   <p>
