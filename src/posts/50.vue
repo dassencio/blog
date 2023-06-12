@@ -2,13 +2,13 @@
   <p>
     The
     <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm"
-      >binary search</a
+      >binary search algorithm</a
     >
-    algorithm is a very famous and conceptually simple method for determining
-    whether a given value is stored in a sorted array. If the value is found,
-    its position is returned; otherwise, a "not found" notification is returned.
-    The running time of the algorithm is $O(\log_2 n)$, where $n$ is the length
-    of the array.
+    is a commonly known and conceptually simple method for determining whether a
+    given value is stored in a sorted array. If the value is found, its position
+    is returned; otherwise, a "not found" notification is returned. The running
+    time of the algorithm is $O(\log_2 n)$, where $n$ is the length of the
+    array.
   </p>
 
   <p>
@@ -185,15 +185,15 @@
     <code>x</code> that occurs more than once in <code>u</code>. In this
     scenario, if <code>left</code> is ever modified in the
     <code>while</code> loop, it will always satisfy
-    <code>u[left - 1] &lt; x</code>. This property will hold until the condition
-    <code>left == right</code> is met, at which point <code>left</code> must
-    either be the index of the first occurrence of <code>x</code> in
-    <code>u</code> or the index of a value different from <code>x</code> (in
-    which case <code>x</code> is not in <code>u</code>). If <code>left</code> is
-    not changed throughout the loop, it remains at <code>0</code>, indicating
-    that the searched value <code>x</code> is either at the first position in
-    <code>u</code> or not in <code>u</code> at all (in the latter case,
-    <code>x</code> must be smaller than <code>u[0]</code>).
+    <code>u[left - 1] &lt; x</code> before being modified. This property will
+    hold until the condition <code>left == right</code> is met, at which point
+    <code>left</code> must either be the index of the first occurrence of
+    <code>x</code> in <code>u</code> or the index of a value different from
+    <code>x</code> (in which case <code>x</code> is not in <code>u</code>). If
+    <code>left</code> is not changed throughout the loop, it remains at
+    <code>0</code>, indicating that the searched value <code>x</code> is either
+    at the first position in <code>u</code> or not in <code>u</code> at all (in
+    the latter case, <code>x</code> must be smaller than <code>u[0]</code>).
   </p>
 </template>
 
