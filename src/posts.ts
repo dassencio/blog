@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "4515794de9f941c632d593384ca39dea",
+    component: () => import("@/posts/51.vue"),
+    date: dateToString(2014, 9, 7),
+    id: "51",
+    labels: [PostLabel.Linux, PostLabel.Shell],
+    title: "Setting the CPU affinity of a process on Linux",
+  },
+  {
     compatibilityIndex: "485cc3a040fb3474092a617ba17bb473",
     component: () => import("@/posts/50.vue"),
     date: dateToString(2014, 6, 29),
