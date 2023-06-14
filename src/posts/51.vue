@@ -125,18 +125,18 @@
 
   <p>
     For convenience, bitmasks can also be used instead of lists when specifying
-    CPU affinities. By omitting the <code>-c</code> option and using hexadecimal
-    notation, with the least significant bit representing the first logical
-    core, you can achieve this. Note that this will also display outputs as
-    bitmasks. Here is an example:
+    CPU affinities. For that, omit the
+    <code>-c</code> option and express the bitmask in hexadecimal notation, with
+    the least significant bit representing the first logical core. Note that
+    this will also display outputs as bitmasks. Here is an example:
   </p>
 
   <CodeBlock code="taskset -a -p 0x6 <pid>" />
 
   <p>
-    This sets the CPU affinity of all threads of a process whose PID is
-    <code>&lt;pid&gt;</code> to <code>1,2</code> (<code>0x6</code> is
-    <code>110</code> in binary representation).
+    This sets the CPU affinity of all threads of the process to
+    <code>1,2</code> (<code>0x6</code> is <code>110</code> in binary
+    representation).
   </p>
 
   <SectionTitle>Linux kernel threads</SectionTitle>
