@@ -61,6 +61,7 @@ window.MathJax = {
       Meter: "\\,\\mathrm{m}",
       Milliampere: "\\,\\mathrm{mA}",
       Picometer: "\\,\\mathrm{pm}",
+      PicometerSlim: "\\mathrm{pm}",
       Second: "\\,\\mathrm{s}",
       Volt: "\\,\\mathrm{V}",
       Watt: "\\,\\mathrm{W}",

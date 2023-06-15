@@ -2,8 +2,8 @@
   <p>
     The
     <a href="https://en.wikipedia.org/wiki/IPv6">Internet Protocol version 6</a>
-    (IPv6) has a very large address space. In fact, since an IPv6 address is
-    $128$ bits long, the number of possible IPv6 addresses is:
+    (IPv6) has an extremely large address space. In fact, since an IPv6 address
+    is $128$ bits long, the number of possible IPv6 addresses is:
   </p>
 
   <EquationBlock>
@@ -13,23 +13,22 @@
   <p>
     For comparison, the
     <a href="https://en.wikipedia.org/wiki/Cell_%28biology%29"
-      >number of cells in a human body</a
+      >number of cells in the human body</a
     >
-    is lower than $100$ trillion ($10^{14}$), and the
+    is fewer than $100$ trillion ($10^{14}$), and the
     <a
       href="https://en.wikipedia.org/wiki/Observable_universe#Extrapolation_from_number_of_stars"
       >number of stars in the observable universe</a
     >
-    seems to be in the range $10^{22} - 10^{24}$.
+    is estimated to be in the range of $10^{22}$ to $10^{24}$.
   </p>
 
   <p>
-    In other words, the number of possible IPv6 addresses is unimaginably
-    immense.
+    In other words, the number of possible IPv6 addresses is unimaginably vast.
     <a href="https://en.wikipedia.org/wiki/IPv4">IPv4</a> addresses, on the
-    other hand, are $32$ bits long, so the IPv4 address space contains only
+    other hand, are $32$ bits long, and the IPv4 address space contains only
     $N_{\textrm{IPv4}} = 2^{32} \approx 4.3 \cdot 10^{9}$ (about $4.3$ billion)
-    addresses. This small address space is one of the reasons behind the
+    addresses. This limited address space is one of the reasons behind
     <a href="https://en.wikipedia.org/wiki/IPv4_address_exhaustion"
       >IPv4 address exhaustion</a
     >.
@@ -41,7 +40,7 @@
     <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html"
       >approximately a sphere</a
     >
-    with radius $R_{\textrm{Earth}} = 6.4 \cdot 10^6\Meter$, its area is
+    with radius $R_{\textrm{Earth}} = 6.4 \cdot 10^6 \Meter$, its area is
     approximately given by:
   </p>
 
@@ -65,28 +64,27 @@
     <a href="https://en.wikipedia.org/wiki/Avogadro_constant"
       >Avogadro constant</a
     >
-    ($N_A = 6.022 \cdot 10^{23}$). From this, we can find how much area a single
-    IPv6 address would "occupy". This value is given by:
+    ($N_A = 6.022 \cdot 10^{23}$). From this, we can deduce the area that a
+    single IPv6 address would "occupy". This value is given by:
   </p>
-
   <EquationBlock>
-    A_{\textrm{IPv6}} \ColonEq \frac{1}{\sigma_{\textrm{IPv6}}} \approx 1.5
-    \cdot 10^{-24} \Meter^2 = 1.5 \Picometer^2
+    A_{\textrm{IPv6}} = \frac{1}{\sigma_{\textrm{IPv6}}} \approx 1.5 \cdot
+    10^{-24} \Meter^2 = 1.5 \Picometer^2
   </EquationBlock>
 
   <p>
-    since $1\Picometer = 10^{-12}\Meter$ ($\Picometer$ stands for
+    since $1 \Picometer = 10^{-12} \Meter$ ($\PicometerSlim$ stands for
     <a href="https://en.wikipedia.org/wiki/Picometre">picometer</a>). Given that
-    a Helium atom, which is the
+    a Helium atom, which is one of the
     <a
       href="https://en.wikipedia.org/wiki/Atomic_radius#Calculated_atomic_radius"
-      >smallest atom</a
+      >smallest atoms</a
     >, has a maximum cross-sectional area of approximately:
   </p>
 
   <EquationBlock>
     A_{\textrm{He}} = \pi R_{\textrm{He}}^2 \approx 3.14 \cdot (31 \Picometer)^2
-    \approx 3000\Picometer^2 \approx 2000 A_{\textrm{IPv6}}
+    \approx 3000 \Picometer^2 \approx 2000 A_{\textrm{IPv6}}
   </EquationBlock>
 
   <p>
@@ -95,8 +93,8 @@
   </p>
 
   <p>
-    To finalize, it must be said that although huge, the IPv6 address space
-    might still be small enough to
+    In conclusion, it's important to note that although the IPv6 address space
+    is vast, it might still be small enough to
     <a href="http://xkcd.com/865/">save our planet</a> one day.
   </p>
 </template>
