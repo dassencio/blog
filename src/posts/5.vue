@@ -1,9 +1,9 @@
 <template>
   <p>
     If you're working on a project and need to backport changes from one branch
-    to another, you might get errors if the files modified in the original
-    branch have been renamed in the target branch (this can happen regardless of
-    whether you're trying to merge or cherry-pick your changes). Git might not
+    to another, you might encounter errors if the files modified in the original
+    branch have been renamed in the target branch. This can happen regardless of
+    whether you're trying to merge or cherry-pick your changes. Git might not
     automatically apply the changes to the equivalent (renamed) files.
   </p>
 
@@ -22,21 +22,21 @@
 
   <p>
     This boosts Git's ability to recognize renamed files, which it does by
-    default in a very limited fashion as the process can consume lots of memory
-    and become very slow due to excessive paging.
+    default in a very limited fashion because the process can consume lots of
+    memory and become very slow due to excessive paging.
   </p>
 
   <p>
-    After you're done with the backporting, you can revert the modification done
-    to <code>merge.renameLimit</code> by running:
+    After you're done with the backporting, you can revert the modification to
+    <code>merge.renameLimit</code> by running:
   </p>
 
   <CodeBlock code="git config --unset merge.renameLimit" />
 
   <p>
-    If this approach fails, or if you only have a few commits which account for
-    all the changes you need to backport, you can also try patching each file
-    individually in the target branch. On Linux, you can do that by executing
+    If this approach fails, or if you have only a few commits that account for
+    all the changes you need to backport, you can try patching each file
+    individually in the target branch. On Linux, you can do this by executing
     the following command for each commit you need to backport (and each
     modified file):
   </p>
@@ -46,18 +46,18 @@
   />
 
   <p>
-    This command works by passing all modifications done to
-    <code>old_filename</code> as input to the <code>patch</code> command to have
-    them applied to <code>new_filename</code>. You can omit the
+    This command works by passing all modifications made to
+    <code>old_filename</code> as input to the <code>patch</code> command, which
+    then applies them to <code>new_filename</code>. You can omit the
     <code>--no-color</code> flag if you have not configured Git to use colors in
     its output.
   </p>
 
   <p>
-    This second approach may not be feasible for projects which have lots of
-    equivalent files with different names across two (or more) branches, but for
-    backporting small changes, it can save lots of development time if
-    increasing the rename detection limit does not get the job done.
+    This second approach may not be feasible for projects with many equivalent
+    files having different names across two or more branches, but for
+    backporting small changes, it can save a significant amount of development
+    time if increasing the rename detection limit doesn't get the job done.
   </p>
 </template>
 
