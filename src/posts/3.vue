@@ -12,19 +12,19 @@
 
   <p>
     <i>
-      After a pair of fugitives crosses the bridge, one of those who already
-      crossed must return with the flashlight so that a new pair of fugitives
-      can go too (this new pair can include the fugitive who just brought back
-      the flashlight). This process is repeated until everyone has crossed the
-      bridge.
+      After a pair of fugitives crosses the bridge, one of the fugitives who has
+      already crossed must return with the flashlight so that a new pair of
+      fugitives can cross (this new pair can include the fugitive who just
+      brought back the flashlight). This process is repeated until everyone has
+      crossed the bridge.
     </i>
   </p>
 
   <p>
     <i>
-      If the police is $T_P$ minutes behind the fugitives, and assuming they can
-      no longer safely escape unless all of them have crossed the bridge by the
-      time the police gets to it, can they make it? If yes, how?
+      If the police are $T_P$ minutes behind the fugitives, and assuming they
+      can no longer safely escape unless all of them have crossed the bridge by
+      the time the police get to it, can they make it? If yes, how?
     </i>
   </p>
 
@@ -38,25 +38,25 @@
   </p>
 
   <NoteBlock>
-    Readers who just wish to play with the brute-force solver should go directly
-    to the bottom of this post. If you are interested in the discussion of the
-    problem, read on!
+    Readers who only want to experiment with the brute-force solver should
+    proceed directly to the bottom of this post. If you're interested in the
+    discussion of the problem, please continue reading!
   </NoteBlock>
 
   <p>
-    Let's start by considering the simplest possible scenarios. The case $N = 1$
-    is technically excluded as the statement of the problem requires that a
-    fugitive pair exists for the initial bridge crossing, but even without that
-    requirement, this scenario is uninteresting as it's obvious that the
-    fugitive would manage to flee only if $T_1 \leq T_P$. If $N = 2$, the two
-    fugitives will make it as long as $\max\{T_1, T_2\} \le T_P$, meaning if the
-    slower fugitive needs longer than $T_P$ to cross the bridge, the police will
-    arrive before they can safely flee. In light of these facts, we will assume
-    $N \ge 2$ from here on.
+    Let's start by considering the simplest possible scenarios. The case when $N
+    = 1$ is technically excluded, as the statement of the problem requires that
+    a pair of fugitives exist for the initial bridge crossing. However, even
+    without that requirement, this scenario is trivial because it's evident that
+    the lone fugitive would manage to escape only if $T_1 \leq T_P$. When $N =
+    2$, the two fugitives will succeed in escaping as long as $\max\{T_1, T_2\}
+    \le T_P$. This means if the slower fugitive takes longer than $T_P$ to cross
+    the bridge, the police will arrive before they can safely escape. In light
+    of this, we will assume $N \ge 2$ for the rest of the discussion.
   </p>
 
   <p>
-    Now let's compute the number of steps $S_N$ which must happen until all $N$
+    Now, let's compute the number of steps $S_N$ that must occur until all $N$
     fugitives have crossed the bridge. A step can be either a pair of fugitives
     crossing the bridge or one fugitive returning. We will prove that:
   </p>
@@ -64,13 +64,13 @@
   <EquationBlock> S_N = 2N - 3 </EquationBlock>
 
   <p>
-    We begin by noticing that for $N = 2$, we have only one step (the two
-    fugitives cross the bridge), so the equation above applies since $S_2 = 1$.
-    Now assume the equation is valid for $N - 1$ fugitives and consider the case
-    where we have $N$ fugitives. After the first two cross and one returns with
-    the flashlight (in other words, after two steps), we have $N - 1$ fugitives
-    left to cross the bridge. From there on, there are $S_{N - 1}$ steps left
-    until all fugitives have crossed. Hence:
+    We can begin by observing that for $N = 2$, there is only one step (both
+    fugitives cross the bridge), so the equation above holds since $S_2 = 1$.
+    Now, let's assume that the equation is valid for $N - 1$ fugitives and
+    consider the case where we have $N$ fugitives. After the first two cross and
+    one returns with the flashlight (in other words, after two steps), we have
+    $N - 1$ fugitives left to cross the bridge. From that point onwards, there
+    are $S_{N - 1}$ steps remaining until all the fugitives have crossed. Hence:
   </p>
 
   <EquationBlock>
@@ -81,8 +81,8 @@
 
   <p>
     Finally, let's compute the total number of ways the fugitives can cross the
-    bridge without taking into account the possibility of being caught by the
-    police in the process. First, notice that if $N$ fugitives have not yet
+    bridge, without considering the possibility of being caught by the police
+    during the process. First, observe that if $N$ fugitives have not yet
     crossed the bridge, the number of possible pairs for crossing it is:
   </p>
 
@@ -90,20 +90,20 @@
 
   <p>
     When a fugitive must return with the flashlight, and if $M$ fugitives have
-    already crossed the bridge, the number of possible choices is simply $M$. We
-    will therefore have the scheme shown in
+    already crossed the bridge, the number of possible choices is simply $M$.
+    Therefore, we will have the scheme as shown in
     <TableLink id="num-possibilities" />.
   </p>
 
   <TableBlock
     id="num-possibilities"
     :columns="3"
-    caption='Number of possibilities at each step, with $N \gt 2$ implicitly
-             assumed just for illustration purposes. Green values indicate which
+    caption='Number of possibilities at each step. $N \gt 2$ is implicitly
+             assumed for illustration purposes. Green values indicate which
              group has the flashlight at each step. "Crossed" refers to the
-             number of fugitives which have already crossed the bridge while
-             "must cross" refers to the number of fugitives which must still
-             cross it.'
+             number of fugitives that have already crossed the bridge, while
+             "must cross" refers to the number of fugitives that still need to
+             cross.'
   >
     <b>Crossed</b>
     <b>Must cross</b>
@@ -170,18 +170,17 @@
   </EquationBlock>
 
   <p>
-    As the numbers shown in
-    <TableLink id="PN-values" /> indicate, the computational work required to
-    simulate all possibilities grows extremely fast as $N$ increases, which is
-    to be expected from equation \eqref{num-possibilities} since $N!$ grows much
-    faster than both $2^{N - 1}$ and $N$. This imposes practical limitations on
-    the maximum number of fugitives we can handle when trying to solve the
-    problem using brute force, but these limitations can be at least partially
-    circumvented by ignoring bridge crossings which would exceed the police
-    time, thereby eliminating entire subtrees of possibilities which would never
-    lead to a solution. The total number of possibilities to consider is also
-    further reduced by not distinguishing between fugitives which need the same
-    amount of time to cross the bridge.
+    As shown in <TableLink id="PN-values" />, the computational workload
+    required to simulate all possibilities escalates rapidly as $N$ increases.
+    This is expected from equation \eqref{num-possibilities}, since $N!$ grows
+    significantly faster than both $2^{N - 1}$ and $N$. This places practical
+    constraints on the maximum number of fugitives that can be managed when
+    attempting to solve the problem using brute force. However, these
+    limitations can be partly mitigated by disregarding bridge crossings that
+    would surpass the police's arrival time, thus eliminating entire subtrees of
+    possibilities that would not lead to a solution. Additionally, the total
+    number of possibilities considered is further reduced by not differentiating
+    between fugitives that require the same amount of time to cross the bridge.
   </p>
 
   <TableBlock
@@ -215,7 +214,7 @@
   </TableBlock>
 
   <p>
-    It's now time to play with the brute-force solver! In the text fields below,
+    It's time to play with the brute-force solver now! In the text fields below,
     enter the time needed by each fugitive to cross the bridge and the time the
     police will take to reach it. The values already entered are the ones I was
     given in my job interview.
