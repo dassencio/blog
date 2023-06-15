@@ -424,7 +424,7 @@ const posts: Post[] = [
       PostLabel.Probability,
       PostLabel.Statistics,
     ],
-    title: "Bayes' theorem: a strange example",
+    title: "Bayes' theorem: an intriguing example",
   },
   {
     compatibilityIndex: "bcb216aa523d43833789bc008e394275",
