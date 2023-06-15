@@ -2,17 +2,17 @@
   <p>
     Suppose you want to buy some candy at a store. You search your pockets and
     find that you have, in your local currency, an amount of money equal to
-    $i^i$ ($i$ here is really the complex number $i$). You choose your candy and
-    check its price: it costs $0.10$. Do you have enough money to buy it?
+    $i^i$ (here, $i$ is the complex number $i$). You choose your candy and check
+    its price: it costs $0.10$. Do you have enough money to buy it?
   </p>
 
   <p>
-    If $i^i$ looks absurd to you, you might be surprised by the fact that there
-    is such a thing as
+    If $i^i$ looks absurd to you, you might be surprised to learn that there is
+    such a thing as
     <a href="http://mathworld.wolfram.com/ComplexExponentiation.html"
       >complex exponentiation</a
-    >, and that it's an extremely important tool with countless applications in
-    mathematics, in the natural sciences and in engineering.
+    >, and it's an extremely important tool with countless applications in
+    mathematics, the natural sciences, and engineering.
   </p>
 
   <p>
@@ -38,8 +38,8 @@
   </EquationBlock>
 
   <p>
-    What would happen if we lost our senses and decided to replace $x$ with
-    $i\theta$ in equation \eqref{exp-taylor-series}? Well, we would obtain:
+    What would happen if we threw caution to the wind and decided to replace $x$
+    with $i\theta$ in equation \eqref{exp-taylor-series}? Well, we would obtain:
   </p>
 
   <!-- prettier-ignore -->
@@ -63,8 +63,9 @@
   </p>
 
   <p>
-    In general, since any complex number $z$ is such that $z = a + ib$ with both
-    $a$ and $b$ being real numbers, then we can compute $e^{a + ib}$ through:
+    In general, since any complex number $z$ can be expressed as $z = a + ib$,
+    where both $a$ and $b$ are real numbers, we can compute $e^{a + ib}$ as
+    follows:
   </p>
 
   <EquationBlock>
@@ -72,10 +73,10 @@
   </EquationBlock>
 
   <p>
-    Now we can define the logarithm of a complex number. Since every nonzero
+    Now, we can define the logarithm of a complex number. Since every nonzero
     complex number $z$ can be uniquely written in the form $z = |z|(\cos\theta +
-    i\sin\theta)$ for some $\theta$ such that $0 \leq \theta \lt 2\pi$, then we
-    can write:
+    i\sin\theta)$ for some $\theta$ such that $0 \leq \theta \lt 2\pi$, we can
+    write:
   </p>
 
   <EquationBlock>
@@ -94,9 +95,9 @@
 
   <p>
     The value of $\log{z}$ is uniquely defined provided that we enforce $0 \leq
-    \theta \lt 2\pi$. This restriction is important since on $z = |z|(\cos\theta
-    + i\sin\theta)$, there are infinitely many possible values of $\theta$
-    because for any integer $n$:
+    \theta \lt 2\pi$. This restriction is important because in $z =
+    |z|(\cos\theta + i\sin\theta)$, there are infinitely many possible values of
+    $\theta$ since, for any integer $n$:
   </p>
 
   <!-- prettier-ignore -->
@@ -107,7 +108,7 @@
 
   <p>
     As a next step, let's use equation \eqref{complex-log} to compute $\log i$.
-    Since $|i| = 1$, we have that:
+    Since $|i| = 1$, we have:
   </p>
 
   <EquationBlock>
@@ -121,20 +122,20 @@
   </EquationBlock>
 
   <p>
-    The last ingredient we need is how to compute $z^w$ for two complex numbers
-    $z$ and $w$ with $z \neq 0$. This can be done according to the following
-    definition:
+    The last ingredient we need is to understand how to compute $z^w$ for two
+    complex numbers $z$ and $w$, with $z \neq 0$. This can be done using the
+    following definition:
   </p>
 
   <EquationBlock> z^w \ColonEq e^{w\log z} </EquationBlock>
 
   <p>
-    which is motivated by the fact that for any pair of real numbers $x \gt 0$
+    This is motivated by the fact that for any pair of real numbers $x \gt 0$
     and $y$, we have $x^y = e^{\log x^y} = e^{y\log x}$.
   </p>
 
   <p>
-    If you have endured all of this, you're probably eager to know what the
+    If you have followed along this far, you're probably eager to know what the
     value of $i^i$ is. Let's go ahead and compute it:
   </p>
 
@@ -143,7 +144,7 @@
   </EquationBlock>
 
   <p>
-    where equation \eqref{log-i} was used. Interestingly, $i^i$ is a real
+    Here, equation \eqref{log-i} was used. Interestingly, $i^i$ is a real
     number!
   </p>
 
