@@ -344,7 +344,7 @@ const posts: Post[] = [
     date: dateToString(2013, 11, 24),
     id: "11",
     labels: [PostLabel.Linux, PostLabel.Shell],
-    title: "Concatenating (joining) PDF files on Linux",
+    title: "Merging PDF files on Linux",
   },
   {
     compatibilityIndex: "e15c85cda7ddf7bfc212109fa121a283",
