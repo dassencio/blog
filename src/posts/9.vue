@@ -1,25 +1,25 @@
 <template>
   <p>
-    Consider an object traveling along a circle of radius $r$ on the $(x,y)$
-    plane with constant angular velocity $\omega$ as shown in
-    <FigureLink id="circular-motion" />. The circle is centered at the origin
-    $O$ of the plane.
+    Consider an object traveling along a circle in the $(x,y)$ plane with radius
+    $r$, as shown in <FigureLink id="circular-motion" />. The circle is centered
+    at the origin $O$ of the plane, and the object is moving with a constant
+    angular velocity $\omega$.
   </p>
 
   <p>
     In a <RouterLink :to="{ name: '8' }">previous post</RouterLink>, this
     problem was studied from a purely
     <a href="https://en.wikipedia.org/wiki/Kinematics">kinematic</a>
-    perspective. In other words, the cause of the motion was ignored. Here, we
-    will go over this same problem from a purely
+    perspective. In other words, the cause of the motion was ignored. In this
+    post, we will examine the same problem from a purely
     <a href="https://en.wikipedia.org/wiki/Mechanics">mechanical</a>
-    perspective, meaning the main goal will be to better understand the forces
-    which cause the object to move along a circular path.
+    perspective, meaning that the main goal will be to better understand the
+    forces that cause the object to move along a circular path.
   </p>
 
   <FigureBlock
     id="circular-motion"
-    caption="An object traveling along a circle of radius $r$ with constant
+    caption="An object traveling along a circle with radius $r$ at a constant
              angular velocity $\omega$."
   >
     <ResponsiveImage alt="Circular motion" :src="circularMotion" />
@@ -27,18 +27,17 @@
 
   <p>
     In the <RouterLink :to="{ name: '8' }">kinematic description</RouterLink>,
-    we saw that when an object travels along a circle of radius $r$ with
-    constant angular velocity $\omega$, the acceleration points always to the
-    center of the circle. The magnitude $a$ of this acceleration is given by:
+    we discovered that the acceleration $\Vec{a}(t)$ of the object always points
+    toward the center of the circle. The magnitude $a$ of this acceleration is
+    given by:
   </p>
 
   <EquationBlock> a = \omega^2 r = \frac{v^2}{r} </EquationBlock>
 
   <p>
-    where $v = \omega r$ is the magnitude of the velocity. With $\Vec{x}(t) =
-    (x(t), y(t))$ being the position vector of the object at time $t$ (see
-    <FigureLink id="circular-motion" />), the acceleration $\Vec{a}(t)$ of the
-    object satisfies:
+    where $v = \omega r$ represents the magnitude of the velocity. With
+    $\Vec{x}(t) = (x(t), y(t))$ being the position vector of the object at time
+    $t$ (see <FigureLink id="circular-motion" />), we have:
   </p>
 
   <EquationBlock> \Vec{a}(t) = -\omega^2 \Vec{x}(t) </EquationBlock>
@@ -55,11 +54,12 @@
   <EquationBlock> \Vec{F}(t) = m\Vec{a}(t) </EquationBlock>
 
   <p>
-    where $m$ is the mass of the body. Therefore, for uniform circular motion,
-    $\Vec{F}(t)$ must also point to the center of the circle since it is
-    parallel to $\Vec{a}(t)$. This net force is called the
-    <b>centripetal force</b>. It causes the object to always travel along the
-    circle. For completeness, the magnitude of $\Vec{F}(t)$ is given by:
+    where $m$ is the mass of the body. Therefore, in uniform circular motion,
+    $\Vec{F}(t)$ must also point toward the center of the circle, as it's
+    parallel to $\Vec{a}(t)$. This net force is referred to as the
+    <b>centripetal force</b>. It's responsible for causing the object to
+    continuously travel along the circle. For completeness, the magnitude of
+    $\Vec{F}(t)$ is given by:
   </p>
 
   <EquationBlock>
@@ -67,22 +67,24 @@
   </EquationBlock>
 
   <p>
-    Let's now consider a situation where the above applies. Imagine you're
-    washing your clothes in your washing machine, and that its interior is a
-    cylindrical body of radius $r$ spinning very fast as shown in
-    <FigureLink id="washing-machine" />. The clothes seem to be "compressed
-    against" the walls of the washing machine, right?
+    Let's now consider a situation to which the above concept applies. Imagine
+    you're washing your clothes in your washing machine, and the interior of the
+    machine is a cylindrical body with radius $r$, spinning at a high speed as
+    shown in
+    <FigureLink id="washing-machine" />. You may notice that the clothes appear
+    to be "pressed against" the walls of the washing machine, right?
   </p>
 
   <FigureBlock
     id="washing-machine"
-    caption='Washing machine spinning with constant angular velocity $\omega$.
-             There is no centrifugal force acting on each set of clothes (shown
-             in colors in the figure). Instead, the forces which keep the
-             clothes traveling along a circle point to the center of the machine
-             (these forces are labeled $\Vec{N}_r$, $\Vec{N}_g$ and $\Vec{N}_b$
-             in the figure, with subscripts $r$, $g$ and $b$ standing for "red",
-             "green" and "blue" respectively).'
+    caption='A washing machine spinning with a constant angular velocity
+             $\omega$. There is no centrifugal force acting on each set of
+             clothes (shown in different colors in the figure). Instead, the
+             forces keeping the clothes traveling along a circular path point
+             toward the center of the machine (these forces are labeled
+             $\Vec{N}_r$, $\Vec{N}_g$, and $\Vec{N}_b$ in the figure, with
+             subscripts $r$, $g$, and $b$ standing for "red", "green",
+             and "blue", respectively).'
   >
     <ResponsiveImage
       alt="Spinning washing machine"
@@ -91,19 +93,20 @@
   </FigureBlock>
 
   <p>
-    One could think: "Well, there is clearly some kind of centrifugal force
+    One might think, "Well, there is clearly some kind of centrifugal force
     pushing the clothes against the walls of the cylindrical body". However,
-    based on what we learned above, this is incorrect. In fact, the force acting
-    on each set of clothes must point to the center of the machine. But then,
-    what is producing this force? It may sound odd, but the answer is: the walls
-    of the washing machine. They provide a contact force, called the
+    based on what we have learned above, this is not the case. In reality, the
+    force acting on each set of clothes must point toward the center of the
+    machine. So, what is generating this force? It may sound counterintuitive,
+    but the answer is: the walls of the washing machine. They provide a contact
+    force, known as the
     <a href="https://en.wikipedia.org/wiki/Normal_force">normal force</a>, which
-    is always orthogonal to the contact surface. It is this contact force which
-    acts as the centripetal force for each set of clothes. Gravity and friction
-    with the walls are also present, but washing machines typically rotate so
-    fast that these forces are negligible. If $m_r$, $m_g$ and $m_b$ are the
-    masses of the red, green and blue sets of clothes respectively, then the
-    normal forces acting on them are:
+    is always perpendicular to the contact surface. This contact force acts as
+    the centripetal force for each set of clothes. Gravity and friction with the
+    walls are also present, but washing machines typically rotate so rapidly
+    that these forces are negligible. If $m_r$, $m_g$, and $m_b$ are the masses
+    of the red, green, and blue sets of clothes, respectively, then the normal
+    forces acting on them are:
   </p>
 
   <!-- prettier-ignore -->
@@ -115,35 +118,36 @@
 
   <p>
     This type of contact force is what prevents you from falling through your
-    chair or from sinking into the ground toward the center of the Earth due the
-    gravitational force which constantly pulls you down. Microscopically, this
-    force is the result of the repulsive electromagnetic forces which prevent
-    atoms from overlapping. In our example, the normal forces prevent the
-    clothes from going through the machine walls.
+    chair or from sinking into the ground toward the center of the Earth due to
+    the gravitational force that constantly pulls you downward. Microscopically,
+    this force is the result of the repulsive electromagnetic forces that
+    prevent atoms from overlapping. In our example, the normal forces prevent
+    the clothes from passing through the walls of the machine.
   </p>
 
   <p>
-    Another interesting example is a car making a turn. Consider, for instance,
-    a car traveling along a circular arc of radius $r$ with constant speed $v$
-    as shown in
+    Another interesting example involves a car making a turn. Consider, for
+    instance, a car traveling along a circular arc with radius $r$ at a constant
+    speed $v$, as shown in
     <FigureLink id="car-on-circular-arc" />. The net force acting on the car
-    must point to the center of the circle which contains the arc the car is
-    traveling on. But where is this force coming from? From the friction with
-    the ground! The friction forces between the tires and the ground point to
-    the left of the car, toward the center of the circle, and when summed, yield
-    the centripetal force $\Vec{F}_{\textrm{cp}}$ ("cp" here stands for
-    "centripetal") which keeps the car on the arc. This is the reason why icy
-    roads are very dangerous: the tires do not properly adhere to the ground and
-    therefore the friction forces are not strong enough to act as the
-    centripetal force the car needs to remain on the road.
+    must point toward the center of the circle that contains the arc on which
+    the car is traveling. But where does this force come from? It comes from the
+    friction between the tires and the ground! The frictional forces between the
+    tires and the ground are directed to the left of the car, toward the center
+    of the circle, and when summed, they yield the centripetal force
+    $\Vec{F}_{\textrm{cp}}$ (where "cp" stands for "centripetal") that keeps the
+    car on the arc. This is why icy roads are very dangerous: the tires do not
+    adhere properly to the ground, and therefore the frictional forces are not
+    strong enough to provide the centripetal force needed for the car to stay on
+    the road.
   </p>
 
   <FigureBlock
     id="car-on-circular-arc"
-    caption="Car traveling along a circular arc. Figure (a) shows the net force
+    caption="A car traveling along a circular arc. Figure (a) shows the net force
              $\Vec{F}_{\textrm{cp}}$ acting on the car (the centripetal force).
-             Figure (b) shows friction forces acting on the tires of the car,
-             the sum of which yield the centripetal force
+             Figure (b) shows the frictional forces acting on the tires of the
+             car, the sum of which yields the centripetal force
              $\Vec{F}_{\textrm{cp}}$."
   >
     <BaseSubfigure>
@@ -154,7 +158,7 @@
     </BaseSubfigure>
     <BaseSubfigure>
       <ResponsiveImage
-        alt="Friction forces on car tires"
+        alt="Frictional forces on car tires"
         :src="carFrictionForces"
       />
     </BaseSubfigure>
