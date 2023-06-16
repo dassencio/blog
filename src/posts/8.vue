@@ -1,29 +1,29 @@
 <template>
   <p>
-    Consider an object traveling along a circle of radius $r$ on the $(x,y)$
-    plane as shown in <FigureLink id="circular-motion" />. The circle is
-    centered at the origin $O$ of the plane. The object travels with constant
-    angular velocity $\omega$, meaning the angle $\theta(t)$ formed by its path
-    with the positive $x$-axis at time $t$ is given by:
+    Consider an object traveling along a circle with radius $r$ in the $(x,y)$
+    plane, as shown in <FigureLink id="circular-motion" />. The circle is
+    centered at the origin $O$ of the plane. The object travels with a constant
+    angular velocity $\omega$, which means the angle $\theta(t)$, formed by its
+    path with the positive $x$-axis at time $t$, is given by:
   </p>
 
   <EquationBlock> \theta(t) = \theta_0 + \omega t </EquationBlock>
 
   <p>
-    where $\theta_0$ is the value of $\theta(t)$ at $t = 0$. We will assume here
+    where $\theta_0$ is the value of $\theta(t)$ when $t = 0$. We will assume
     that $\theta_0 = 0$. In other words, the object is at position $(x_0, y_0) =
-    (r, 0)$ at $t = 0$.
+    (r, 0)$ when $t = 0$.
   </p>
 
   <FigureBlock
     id="circular-motion"
-    caption="An object traveling along a circle of radius $r$ with constant
+    caption="An object traveling along a circle with radius $r$ at a constant
              angular velocity $\omega$."
   >
     <ResponsiveImage alt="Circular motion" :src="circularMotion" />
   </FigureBlock>
 
-  <p>The equations of motion of the object are given by:</p>
+  <p>The equations of motion for the object are given by:</p>
 
   <!-- prettier-ignore -->
   <EquationBlock align numberLines>
@@ -32,9 +32,9 @@
   </EquationBlock>
 
   <p>
-    The velocities and accelerations along the $x$ and $y$ directions can be
+    The velocities and accelerations in the $x$ and $y$ directions can be
     obtained directly from equations \eqref{position-x} and \eqref{position-y}.
-    Using the notation $\dot{q}$ to represent $\DDi{q}{t}$, we have that:
+    Using the notation $\dot{q}$ to represent $\DDi{q}{t}$, we have:
   </p>
 
   <!-- prettier-ignore -->
@@ -52,8 +52,8 @@
   </EquationBlock>
 
   <p>
-    Here is where the interesting physics starts. Let $\Vec{x}(t)$ be the
-    position vector connecting the origin $O$ to the object as in
+    This is where the interesting physics begins. Let $\Vec{x}(t)$ be the
+    position vector connecting the origin $O$ to the object, as depicted in
     <FigureLink id="circular-motion" />:
   </p>
 
@@ -62,9 +62,9 @@
   </EquationBlock>
 
   <p>
-    Then, with $\Vec{v}(t) = (v_x(t), v_y(t))$ and $\Vec{a}(t) = (a_x(t),
-    a_y(t))$ being the object velocity and acceleration vectors respectively at
-    time $t$, we obtain:
+    Now, let $\Vec{v}(t) = (v_x(t), v_y(t))$ and $\Vec{a}(t) = (a_x(t), a_y(t))$
+    represent the object's velocity and acceleration vectors, respectively, at
+    time $t$. We obtain:
   </p>
 
   <!-- prettier-ignore -->
@@ -75,16 +75,16 @@
   </EquationBlock>
 
   <p>
-    <FigureLink id="circular-motion-a-v" capitalized /> visually depicts
-    velocities and accelerations at different positions along the circular path:
+    <FigureLink id="circular-motion-a-v" capitalized /> visually depicts the
+    velocities and accelerations at various positions along the circular path:
   </p>
 
   <FigureBlock
     id="circular-motion-a-v"
     caption="Accelerations (blue) and velocities (red) at $\theta= 0, \pi/2,
-             \pi$ and $3\pi/2$. Notice how the acceleration always points to the
-             center of the circle while the velocity is always tangential to
-             it."
+             \pi$, and $3\pi/2$. Observe how the acceleration consistently
+             points toward the center of the circle, while the velocity remains
+             tangential to it."
   >
     <ResponsiveImage
       alt="Circular motion: a and v at different values of theta"
@@ -94,11 +94,11 @@
 
   <p>
     Since $\Vec{x}(t)$ always points away from the center $O$ of the circle,
-    equation \eqref{acceleration} tells us that the acceleration $\Vec{a}(t)$,
-    called <b>centripetal acceleration</b>, points always to the center of the
-    circle. To gain more intuition about why this is so, notice first that the
-    velocity vector $\Vec{v}(t)$ is orthogonal to the position vector
-    $\Vec{x}(t)$ at all times:
+    equation \eqref{acceleration} indicates that the acceleration $\Vec{a}(t)$,
+    known as <b>centripetal acceleration</b>, consistently points toward the
+    center of the circle. To build a better understanding of why this is the
+    case, observe that the velocity vector $\Vec{v}(t)$ is orthogonal to the
+    position vector $\Vec{x}(t)$ at all times:
   </p>
 
   <!-- prettier-ignore -->
@@ -111,15 +111,15 @@
   </EquationBlock>
 
   <p>
-    The velocity of the object is therefore always tangential to the circle. As
-    a matter of fact, this is true even when the angular velocity
-    $\dot{\theta}(t)$ changes over time, and I recommend the unconvinced reader
-    to verify this by themselves as an exercise.
+    This means that the velocity of the object is always tangential to the
+    circle. Interestingly, this remains true even if the angular velocity
+    $\dot{\theta}(t)$ varies over time. For those skeptical, I encourage you to
+    verify this independently as an exercise.
   </p>
 
   <p>
-    The magnitude $v(t)$ of the velocity is always constant since the angular
-    velocity $\omega$ is itself constant. In fact:
+    The magnitude $v(t)$ of the velocity remains constant, as the angular
+    velocity $\omega$ is also constant. More specifically:
   </p>
 
   <!-- prettier-ignore -->
@@ -133,8 +133,9 @@
   </EquationBlock>
 
   <p>
-    Because $\Vec{a}(t)$ is parallel to $\Vec{x}(t)$, the velocity $\Vec{v}(t)$
-    and the acceleration $\Vec{a}(t)$ are also always orthogonal to each other:
+    Given that $\Vec{a}(t)$ is parallel to $\Vec{x}(t)$, it follows that the
+    velocity vector $\Vec{v}(t)$ and the acceleration vector $\Vec{a}(t)$ are
+    always orthogonal to each other:
   </p>
 
   <EquationBlock>
@@ -143,10 +144,10 @@
   </EquationBlock>
 
   <p>
-    The effect of the acceleration $\Vec{a}(t)$ is therefore to continuously
-    change the direction of the velocity $\Vec{v}(t)$ without changing its
-    magnitude. To better understand this, let's compute how the magnitude of
-    $\Vec{v}(t)$ changes over time for any arbitrary motion:
+    The effect of the acceleration $\Vec{a}(t)$ is thus to continuously change
+    the direction of the velocity $\Vec{v}(t)$ without altering its magnitude.
+    To delve deeper into this, let's determine how the magnitude of $\Vec{v}(t)$
+    evolves over time for any arbitrary motion:
   </p>
 
   <!-- prettier-ignore -->
@@ -159,16 +160,17 @@
 
   <p>
     When $\Vec{a}(t)$ is orthogonal to $\Vec{v}(t)$, the magnitude of
-    $\Vec{v}(t)$ remains constant despite the fact that its direction will
-    change if the acceleration is not zero. Since we made no assumptions on
-    $\Vec{v}(t)$ and $\Vec{a}(t)$ when deriving equation
-    \eqref{speed-derivative}, it must be valid in general.
+    $\Vec{v}(t)$ remains constant, but its direction will change if the
+    acceleration is nonzero. Since no specific assumptions were made regarding
+    $\Vec{v}(t)$ and $\Vec{a}(t)$ in the derivation of equation
+    \eqref{speed-derivative}, this conclusion is generally valid.
   </p>
 
   <p>
-    Given that the object always travels in a circle of radius $r$, then
-    $\|\Vec{x}(t)\| = r$ for all $t$, so from equation \eqref{acceleration}, the
-    magnitude $a(t)$ of the acceleration is also constant and given by:
+    Considering that the object is consistently moving in a circle with radius
+    $r$, and $\|\Vec{x}(t)\| = r$ for all $t$, equation \eqref{acceleration}
+    shows that the magnitude $a(t)$ of the acceleration is also constant and can
+    be expressed as:
   </p>
 
   <EquationBlock>
@@ -178,12 +180,12 @@
   <p>where equation \eqref{speed} was used.</p>
 
   <p>
-    To sum up, whenever an object moves along a circular path with constant
-    angular velocity, its acceleration points always to the center of the circle
-    while its velocity is always tangential to it. Notice that we have not
-    discussed what causes the motion of the object; we simply assumed it moves
-    along a circle without caring about why (in other words, we treated the
-    object motion as a
+    In summary, when an object traverses a circular path with constant angular
+    velocity, its acceleration consistently points toward the center of the
+    circle, and its velocity is invariably tangential to the path. It's
+    important to note that we have not investigated the causes of the object's
+    motion; we merely assumed it moves in a circular pattern without delving
+    into the reasons (in other words, we approached the object's motion as a
     <a href="https://en.wikipedia.org/wiki/Kinematics">kinematics</a> problem).
   </p>
 </template>
