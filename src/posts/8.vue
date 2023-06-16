@@ -95,10 +95,10 @@
   <p>
     Since $\Vec{x}(t)$ always points away from the center $O$ of the circle,
     equation \eqref{acceleration} indicates that the acceleration $\Vec{a}(t)$,
-    known as <b>centripetal acceleration</b>, consistently points toward the
-    center of the circle. To build a better understanding of why this is the
-    case, observe that the velocity vector $\Vec{v}(t)$ is orthogonal to the
-    position vector $\Vec{x}(t)$ at all times:
+    known as <b>centripetal acceleration</b>, always points toward the center of
+    the circle. To build a better understanding of why this is the case, observe
+    that the velocity vector $\Vec{v}(t)$ is orthogonal to the position vector
+    $\Vec{x}(t)$ at all times:
   </p>
 
   <!-- prettier-ignore -->
@@ -167,10 +167,10 @@
   </p>
 
   <p>
-    Considering that the object is consistently moving in a circle with radius
-    $r$, and $\|\Vec{x}(t)\| = r$ for all $t$, equation \eqref{acceleration}
-    shows that the magnitude $a(t)$ of the acceleration is also constant and can
-    be expressed as:
+    Considering that the object is always moving in a circle with radius $r$,
+    and $\|\Vec{x}(t)\| = r$ for all $t$, equation \eqref{acceleration} shows
+    that the magnitude $a(t)$ of the acceleration is also constant and can be
+    expressed as:
   </p>
 
   <EquationBlock>
@@ -181,11 +181,11 @@
 
   <p>
     In summary, when an object traverses a circular path with constant angular
-    velocity, its acceleration consistently points toward the center of the
-    circle, and its velocity is invariably tangential to the path. It's
-    important to note that we have not investigated the causes of the object's
-    motion; we merely assumed it moves in a circular pattern without delving
-    into the reasons (in other words, we approached the object's motion as a
+    velocity, its acceleration always points toward the center of the circle,
+    and its velocity is invariably tangential to the path. It's important to
+    note that we have not investigated the causes of the object's motion; we
+    merely assumed it moves in a circular pattern without delving into the
+    reasons (in other words, we approached the object's motion as a
     <a href="https://en.wikipedia.org/wiki/Kinematics">kinematics</a> problem).
   </p>
 </template>
