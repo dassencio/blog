@@ -1,16 +1,16 @@
 <template>
   <p>
-    Consider a regular polygon with $N$ sides (and therefore $N$ vertices) such
-    that the distance between its center $O$ and each of its vertices is $r$. An
-    electric charge $q$ is placed at each vertex of the polygon as shown in
+    Consider a regular polygon with $N$ sides (and therefore $N$ vertices),
+    where the distance between its center $O$ and each of its vertices is $r$.
+    An electric charge $q$ is placed at each vertex of the polygon, as shown in
     <FigureLink id="charges" />. What is the electric field $\Vec{E}$ produced
     by these charges at the point $O$?
   </p>
 
   <FigureBlock
     id="charges"
-    caption="Regular pentagon with charges placed at each of its vertices. In
-             the figure, $\theta = 2\pi / 5$. For a regular  polygon with $N$
+    caption="A regular pentagon with charges placed at each of its vertices. In
+             the figure, $\theta = 2\pi / 5$. For a regular polygon with $N$
              sides, $\theta = 2\pi / N$."
   >
     <ResponsiveImage
@@ -20,24 +20,25 @@
   </FigureBlock>
 
   <p>
-    If your strategy for solving a problem of this kind is to compute $\Vec{E}$
-    by hand, you may have missed an important fact: there is symmetry in the
-    charge configuration. Symmetry is a very important ingredient in physics: it
-    can turn many complicated-looking problems into easily solvable ones.
+    If your strategy for solving a problem of this kind involves computing
+    $\Vec{E}$ by hand, you might have overlooked an important fact: there is
+    symmetry in the charge configuration. Symmetry is a crucial element in
+    physics as it can transform many complicated-looking problems into more
+    easily solvable ones.
   </p>
 
   <p>
-    To see what I mean by that, consider the electric field produced by the
-    charges at the point $O$ as shown in
+    To understand the relevance of symmetry in this particular problem, consider
+    the electric field produced by the charges at the point $O$, as depicted in
     <FigureLink id="charges-rotated" subfigureId="original" />.
   </p>
 
   <FigureBlock
     id="charges-rotated"
     caption="Rotating a pentagon by $\theta = 2\pi / 5$ around its center point
-             in the counterclockwise (or clockwise) direction produces the same
-             charge configuration (b) as we initially had in (a). In general,
-             this is true if one rotates a regular polygon with $N$ sides by
+             in the counterclockwise (or clockwise) direction yields the same
+             charge configuration (b) as initially present in (a). Generally,
+             this holds true when rotating a regular polygon with $N$ sides by
              $\theta = 2\pi/N$ around its center point."
   >
     <BaseSubfigure id="original">
@@ -56,28 +57,28 @@
 
   <p>
     If we now rotate the polygon by $\theta = 2\pi/N$ clockwise or
-    counterclockwise, we will obtain the exact same charge configuration as we
-    had before, implying that the electric field $\Vec{E}$ at the point $O$ must
-    be the same before and after the rotation is applied. But if the whole
-    polygon is rotated, $\Vec{E}$ must also be rotated with it. We will have an
-    absurd situation unless the magnitude of the electric field at $O$ is zero.
+    counterclockwise, we obtain the exact same charge configuration as before.
+    This implies that the electric field $\Vec{E}$ at point $O$ must be the same
+    as before the rotation is applied. However, if the entire polygon is
+    rotated, $\Vec{E}$ must also rotate accordingly. This would lead to an
+    inconsistency unless the magnitude of the electric field at $O$ is zero.
     Therefore:
   </p>
 
   <EquationBlock boxed> \Vec{E} = \Vec{0} </EquationBlock>
 
   <p>
-    A reader who prefers things demonstrated mathematically might be skeptical
-    against this type of proof. As a matter of fact, some might not even
-    consider it a proof at all. However, arguments of this kind are ubiquitous
-    in physics and yield correct results with very little effort.
+    A reader who prefers mathematical demonstrations might be skeptical of this
+    type of reasoning. In fact, some might not consider it a proof at all.
+    However, arguments of this nature are ubiquitous in physics and often yield
+    correct results with minimal effort.
   </p>
 
   <p>
-    In any case, if you're one of those readers I just mentioned, let's compute
-    $\Vec{E}$ by hand to bring peace back to your mind. Numbering each charge in
-    a counterclockwise manner as in
-    <FigureLink id="charges" />, the $k$-th charge would then be located at:
+    In any case, if you're among the skeptical readers, let's compute $\Vec{E}$
+    algebraically to put your mind at ease. By numbering each charge in a
+    counterclockwise manner as shown in <FigureLink id="charges" />, the
+    position of the $k$-th charge is given by:
   </p>
 
   <EquationBlock>
@@ -86,11 +87,11 @@
   </EquationBlock>
 
   <p>
-    for $k = 1, 2, \ldots, N$, where $\alpha$ is an angle which defines the
+    for $k = 1, 2, \ldots, N$, where $\alpha$ is an angle that defines the
     orientation of the polygon with respect to a direction chosen as the
     $x$-axis. Since any point on a two-dimensional plane can be represented as a
     complex number, and given that $e^{i\theta} = (\cos\theta, \sin\theta)$, we
-    can write:
+    have:
   </p>
 
   <EquationBlock>
@@ -98,8 +99,8 @@
   </EquationBlock>
 
   <p>
-    This will allow us to compute $\Vec{E}$ more easily. If $\Vec{E}_k$ is the
-    electric field produced by the $k$-th charge at the point $O$, then:
+    If $\Vec{E}_k$ represents the electric field produced by the $k$-th charge
+    at point $O$, then:
   </p>
 
   <EquationBlock>
@@ -114,8 +115,7 @@
     \alpha}}{r^2} e^{i 2\pi k / N} \right) = -\frac{kqe^{i \alpha}}{r^2}
     \sum_{k=1}^N (e^{i 2\pi / N})^k \label{electric-field}
   </EquationBlock>
-
-  <p>But since for any complex number $z \neq 1$ we have that:</p>
+  <p>However, for any complex number $z \neq 1$, we have:</p>
 
   <EquationBlock>
     \sum_{k=0}^N z^k = \frac{1 - z^{N+1}}{1 - z} \Longrightarrow \sum_{k=1}^N
@@ -123,8 +123,8 @@
   </EquationBlock>
 
   <p>
-    then, from equation \eqref{electric-field} with $z = e^{i 2\pi/N}$, we
-    obtain:
+    Substituting this into equation \eqref{electric-field} with $z = e^{i
+    2\pi/N}$, we obtain:
   </p>
 
   <EquationBlock>
@@ -134,7 +134,7 @@
     \right) = \Vec{0}
   </EquationBlock>
 
-  <p>since:</p>
+  <p>where above, we used the fact that:</p>
 
   <EquationBlock>
     (e^{i 2\pi / N})^N = e^{i 2\pi} = (\cos 2\pi, \sin 2\pi) = 1
