@@ -352,7 +352,7 @@ const posts: Post[] = [
     date: dateToString(2013, 11, 24),
     id: "10",
     labels: [PostLabel.Linux, PostLabel.Networking],
-    title: "Disabling the Network Manager",
+    title: "Disabling the NetworkManager",
   },
   {
     compatibilityIndex: "d4492209add19ed9842b79411f21657d",
