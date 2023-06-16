@@ -19,43 +19,13 @@ fi
 gsed -i 's/<h3>\([^<]*\)<\/h3>/<SectionTitle>\1<\/SectionTitle>/g' "$post_file"
 
 # Fix bold text.
-awk '
-BEGIN {
-    RS="<span class=(\"bold\"|'\''bold'\'')>|</span>"; ORS="";
-}
-NR%2==0 {
-    print "<b>" $0 "</b>";
-}
-NR%2!=0 {
-    print $0;
-}
-' "$post_file" > "__tmpfile__" && mv "__tmpfile__" "$post_file"
+gsed -i -E 's/<span class=("bold"|'"'"'bold'"'"')>([^<]*)<\/span>/<b>\2<\/b>/g' "$post_file"
 
 # Fix italic text.
-awk '
-BEGIN {
-    RS="<span class=(\"italic\"|'\''italic'\'')>|</span>"; ORS="";
-}
-NR%2==0 {
-    print "<i>" $0 "</i>";
-}
-NR%2!=0 {
-    print $0;
-}
-' "$post_file" > "__tmpfile__" && mv "__tmpfile__" "$post_file"
+gsed -i -E 's/<span class=("italic"|'"'"'italic'"'"')>([^<]*)<\/span>/<i>\2<\/i>/g' "$post_file"
 
 # Fix monospace text.
-awk '
-BEGIN {
-    RS="<span class=(\"msnw\"|'\''msnw'\'')>|</span>"; ORS="";
-}
-NR%2==0 {
-    print "<code>" $0 "</code>";
-}
-NR%2!=0 {
-    print $0;
-}
-' "$post_file" > "__tmpfile__" && mv "__tmpfile__" "$post_file"
+gsed -i -E 's/<span class=("msnw"|'"'"'msnw'"'"')>([^<]*)<\/span>/<code>\2<\/code>/g' "$post_file"
 
 # Fix equations.
 awk '
