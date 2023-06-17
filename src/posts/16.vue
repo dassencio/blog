@@ -1,8 +1,8 @@
 <template>
   <p>
-    To resize images on Linux via command line, you can use a tool called
-    <a href="http://linux.die.net/man/1/convert">convert</a> which is part of
-    the
+    To resize images on Linux via the command line, you can use a tool called
+    <a href="http://linux.die.net/man/1/convert"><code>convert</code></a
+    >, which is part of the
     <a href="http://linux.die.net/man/1/imagemagick">ImageMagick</a> package. If
     you're using Ubuntu/Debian, you can install it by opening a terminal and
     running the following command:
@@ -21,8 +21,8 @@
 
   <p>
     The command above takes an image called
-    <code>input-file.jpg</code>, resizes it to <code>640x480</code> pixels and
-    outputs the result to <code>output-file.jpg</code>.
+    <code>input-file.jpg</code>, resizes it to <code>640x480</code> pixels, and
+    outputs the result as <code>output-file.jpg</code>.
   </p>
 
   <p>

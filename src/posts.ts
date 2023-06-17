@@ -304,7 +304,7 @@ const posts: Post[] = [
     date: dateToString(2013, 11, 30),
     id: "16",
     labels: [PostLabel.Linux, PostLabel.Shell],
-    title: "Resizing images via command line on Linux",
+    title: "Resizing images via the command line on Linux",
   },
   {
     compatibilityIndex: "1bb7826792e3d5f8d4af531e1fca6075",
