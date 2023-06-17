@@ -1,7 +1,7 @@
 <template>
   <p>
     To capture packets with <a href="https://www.wireshark.org">Wireshark</a>
-    without being root, open a terminal and run:
+    without needing to be root, open a terminal and run the following command:
   </p>
 
   <CodeBlock
@@ -9,19 +9,19 @@
   />
 
   <p>
-    This will enable all users to capture live traffic going through any network
-    interface. If this is what you wish, you're done: just start Wireshark and
-    have fun!
+    This command enables all users to capture live traffic going through any
+    network interface. If this meets your requirements, you're all set: simply
+    launch Wireshark and enjoy it!
   </p>
 
   <p>
-    For the curious reader, the command above changes the
+    For the curious readers, the command above modifies the
     <a href="http://man7.org/linux/man-pages/man7/capabilities.7.html"
       >capabilities</a
     >
-    of <a href="http://linux.die.net/man/1/dumpcap">Dumpcap</a>, a tool which
-    Wireshark uses to capture packets. You can verify that the command worked by
-    running:
+    of <a href="http://linux.die.net/man/1/dumpcap">Dumpcap</a>, which is a tool
+    that Wireshark uses to capture packets. You can verify that the command was
+    successful by running:
   </p>
 
   <CodeBlock code="getcap /usr/bin/dumpcap" />
@@ -31,30 +31,31 @@
   <CodeBlock code="/usr/bin/dumpcap = cap_net_admin,cap_net_raw+eip" />
 
   <p>
-    If you feel that granting this privilege to all users is too permissive,
-    then you should create a group and only allow users within that group to
-    execute Dumpcap (and therefore to capture live traffic with Wireshark). If
+    If you feel that granting this privilege to all users is too permissive, you
+    might want to create a group and only allow users within that group to
+    execute Dumpcap (and therefore capture live traffic with Wireshark). If
     you're using Ubuntu/Debian, you can create a group called
-    <code>wireshark</code> with the following command:
+    <code>wireshark</code> using the following command:
   </p>
 
   <CodeBlock code="sudo addgroup wireshark" />
 
-  <p>Now change the group of Dumpcap to <code>wireshark</code>:</p>
+  <p>Now, change the group of Dumpcap to <code>wireshark</code>:</p>
 
   <CodeBlock code="sudo chgrp wireshark /usr/bin/dumpcap" />
 
   <p>
-    Next, make sure only users in the <code>wireshark</code> group can execute
+    Next, ensure that only users in the <code>wireshark</code> group can execute
     Dumpcap:
   </p>
 
   <CodeBlock code="sudo chmod o-rx /usr/bin/dumpcap" />
 
   <p>
-    Finally, add the necessary capabilities to Dumpcap as discussed above (even
-    if you already ran this command before, run it again as Dumpcap might have
-    lost its given capabilities at this point):
+    Finally, add the necessary capabilities to Dumpcap as discussed earlier.
+    Even if you have already run this command before, it's important to do it
+    again since Dumpcap might have lost the capabilities that were previously
+    assigned to it:
   </p>
 
   <CodeBlock
@@ -62,25 +63,25 @@
   />
 
   <p>
-    To check if your permissions are correct, start Wireshark as a regular user
-    (I'm assuming you haven't added this user to the
-    <code>wireshark</code> group yet). If you cannot capture live traffic,
-    everything is fine. At this point, you can add users to the
+    To check if the Dumpcap permissions are set correctly, start Wireshark as a
+    regular user (I'm assuming you haven't added this user to the
+    <code>wireshark</code> group yet). If you're unable to capture live traffic,
+    the permissions are correct. At this point, you can add users to the
     <code>wireshark</code> group with the command below:
   </p>
 
   <CodeBlock code="sudo usermod -a -G wireshark <username>" />
 
   <p>
-    To verify that a user was correctly added to the
-    <code>wireshark</code> group, run:
+    To verify that a user has been correctly added to the
+    <code>wireshark</code> group, run the following command:
   </p>
 
   <CodeBlock code="id <username>" />
 
   <p>
-    The output should look similar to this (<code>wireshark</code>
-    must appear in the output; the rest is irrelevant):
+    Ensure that <code>wireshark</code> appears in the output; the rest is
+    irrelevant:
   </p>
 
   <CodeBlock
@@ -88,22 +89,22 @@
   />
 
   <p>
-    Now start Wireshark as one of the users in the
-    <code>wireshark</code> group: you should be able to capture live traffic. If
-    you did all of the above while logged in as one of the users you added to
-    the <code>wireshark</code> group, you may need to log out and log back in
-    for your newly added permissions to become active.
+    Now, start Wireshark as a user in the <code>wireshark</code> group. You
+    should be able to capture live traffic. If you completed all the steps above
+    while logged in as a user you added to the <code>wireshark</code> group,
+    logging out and back in may be necessary for the new permissions to take
+    effect.
   </p>
 
   <NoteBlock>
-    While in principle you could simply run Wireshark as root instead of
-    following the instructions above, <b>do not do this</b>! Wireshark is a huge
-    application, and running it as root unnecessarily risks damaging your
-    system.
+    While, in principle, you could simply run Wireshark as root instead of
+    following the instructions above, it is highly advised not to do this.
+    Wireshark is a large application, and running it as root could unnecessarily
+    risk damaging your system.
   </NoteBlock>
 
   <p>
-    To learn more about this topic, see the
+    To learn more about this topic, please visit the
     <a href="http://wiki.wireshark.org/CaptureSetup/CapturePrivileges"
       >Wireshark wiki</a
     >.
