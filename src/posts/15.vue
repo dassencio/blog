@@ -1,6 +1,6 @@
 <template>
   <p>
-    If you're a physicist or at least know a bit about the
+    If you're a physicist, or at least know a bit about the
     <a href="https://en.wikipedia.org/wiki/Theory_of_relativity"
       >theory of relativity</a
     >, your answer to this question might be a confident "no". Sure, if nothing
@@ -13,7 +13,7 @@
   </p>
 
   <p>
-    Let's prove this with an example. Imagine an object at $x = 0$ which is at
+    Let's prove this with an example. Imagine an object at $x = 0$ that is at
     rest at $t = 0$. Between $t = 0$ and some $t = T \gt 0$, a force $F(t)$
     pointing along the positive $x$-axis is applied to the object. This force is
     given by:
@@ -23,7 +23,7 @@
 
   <p>
     for some constant $\alpha \gt 0$. For $0 \leq t \lt T$, the value of $F(t)$
-    is positive and finite. Its value increases as $t \rightarrow T$ (here and
+    is positive and finite. Its value increases as $t \rightarrow T$ (here, and
     in what follows, $t \rightarrow T$ means $t$ approaches $T$ from the left
     side, so $t \lt T$) and diverges at $t = T$.
   </p>
@@ -131,7 +131,7 @@
   <p>
     Although theoretically possible, one would have to come up with a way to
     produce such a force on an object. But that task, dear reader, I will leave
-    as an exercise to you! ;-)
+    as an exercise for you! ;-)
   </p>
 </template>
 
