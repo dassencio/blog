@@ -1,28 +1,29 @@
 <template>
   <p>
-    I have recently acquired an
+    I recently acquired an
     <a href="http://www.pcengines.ch/alix.htm">Alix board</a> (model
     <a href="http://pcengines.ch/alix2c3.htm">alix2c3</a>) from PC Engines and
     decided to install <a href="http://www.debian.org/">Debian</a>
-    on it to use it as a server. This post is a step-by-step tutorial which
-    describes how this can be done. I have made the assumption that you're using
-    Ubuntu/Debian; if not, you might have to adapt some of the commands below to
-    have them work in your distribution.
+    to use the board as a server. This post is a step-by-step tutorial that
+    describes the setup work. I assume that you're using Ubuntu/Debian; if not,
+    you might have to adapt some of the commands below to have them work in your
+    distribution.
   </p>
 
   <p>
     Unfortunately, this task is not as easy as creating a Debian live USB stick,
     then booting and installing from it. The limitation comes from the fact that
-    Alix boards are equipped with a very simple firmware (called
-    <a href="http://www.pcengines.ch/tinybios.htm">tinyBIOS</a>) which does not
-    support booting from a USB drive.
+    Alix boards are equipped with a very simple firmware (<a
+      href="http://www.pcengines.ch/tinybios.htm"
+      >tinyBIOS</a
+    >) which does not support booting from a USB drive.
   </p>
 
   <p>
     Fortunately, there is a slot on the board for a
     <a href="https://en.wikipedia.org/wiki/CompactFlash">Compact Flash</a> (CF)
-    card which the tinyBIOS can boot from. The solution is then to build a Linux
-    image on a file, flash it directly to a CF card and insert it in the board.
+    card which tinyBIOS can boot from. The solution is then to build a Linux
+    image on a file, flash it directly to a CF card, and insert it in the board.
     So let's get started!
   </p>
 
@@ -44,12 +45,12 @@
     "network install" CD image directly from the
     <a href="http://www.debian.org/CD/netinst/">Debian website</a> for an i386
     architecture. This CD image contains just the minimal amount of software you
-    will need to start the installation; all necessary packages which do not
-    come with it will be downloaded over the Internet.
+    will need to start the installation; all necessary packages that do not come
+    with it will be downloaded over the internet.
   </p>
 
   <p>
-    To download a network install image directly (e.g. for Debian 7.2.0), run:
+    To download a network install image directly (e.g., for Debian 7.2.0), run:
   </p>
 
   <CodeBlock
@@ -60,10 +61,9 @@
 
   <p>
     You will need
-    <a href="http://wiki.qemu.org/Main_Page">QEMU</a>
-    as a machine emulator. We'll use it to create a disk image file (a file
-    which can be used as a virtual hard disk) and install Debian on it. To
-    install QEMU, run:
+    <a href="http://wiki.qemu.org/Main_Page">QEMU</a> as a machine emulator. We
+    will use it to create a disk image file (a file that can be used as a
+    virtual hard disk) and install Debian on it. To install QEMU, run:
   </p>
 
   <CodeBlock code="sudo apt-get install qemu" />
@@ -71,17 +71,17 @@
   <SectionTitle>3) Create a disk image</SectionTitle>
 
   <p>
-    You must first create a 1000MB disk image on a file. The file can be smaller
-    than 1000MB (800MB should already be fine), but the installer failed during
-    the partitioning step when I used 800MB so I increased the image size to
-    make things work smoothly:
+    You must first create a 1000 MB disk image in a file. The file can be
+    smaller than 1000 MB (800 MB should already be fine), but the installer
+    failed during the partitioning step when I used 800 MB so I increased the
+    image size to make things work smoothly:
   </p>
 
   <CodeBlock code="qemu-img create debian.img 1000M" />
 
   <p>
-    If you wish, you can make the image bigger than 1000MB. Just make sure you
-    don't create an image bigger than the size of your CF card.
+    You can make the image larger than 1000 MB if you want, as long as your
+    image does not exceed the size of your CF card.
   </p>
 
   <SectionTitle>4) Install Debian on the disk image</SectionTitle>
@@ -89,34 +89,34 @@
   <p>Start a virtual machine (VM) with QEMU:</p>
 
   <CodeBlock
-    code="qemu-system-i386 -cdrom <debian-netinst.iso> -hda debian.img -boot d"
+    code="qemu-system-i386 -cdrom debian-netinst.iso -hda debian.img -boot d"
   />
 
   <p>
-    with <code>&lt;debian-netinst.iso&gt;</code> replaced by the network install
-    CD image you downloaded. This is what each part of the command above
-    instructs QEMU to do:
+    with <code>debian-netinst.iso</code> replaced by the network install CD
+    image you downloaded. This is what each part of the command above instructs
+    QEMU to do:
   </p>
 
   <MapBlock>
     <code>-cdrom debian-netinst.iso</code>
-    <span>Use <code>debian-netinst.iso</code> as a CD-ROM disk.</span>
+    <span>Use <code>debian-netinst.iso</code> as a CD-ROM disk image.</span>
 
     <code>-hda debian.img</code>
-    <span>Use <code>debian.img</code> as a hard disk.</span>
+    <span>Use <code>debian.img</code> as a hard disk image.</span>
 
     <code>-boot d</code>
-    <span>Boot the VM from the CD-ROM disk.</span>
+    <span>Boot the VM from the CD-ROM disk image.</span>
   </MapBlock>
 
   <NoteBlock>
-    If your mouse pointer gets captured by the VM window, press "Ctrl + Alt"
-    (left keys) to recover it.
+    If your mouse pointer gets captured by the VM window, press
+    <code>Ctrl + Alt</code> (left keys) to release it.
   </NoteBlock>
 
   <p>
-    Now follow the steps below. Please keep in mind that these will likely
-    differ based on the version of Debian you're installing:
+    Now follow the steps below. Keep in mind that these will likely differ based
+    on the version of Debian you're installing:
   </p>
 
   <ListBlock>
@@ -136,30 +136,30 @@
     <ListBlockItem>
       Enter your domain name (e.g. "lan", or leave it blank if you wish).
     </ListBlockItem>
-    <ListBlockItem>Set the root password.</ListBlockItem>
+    <ListBlockItem>Set the root user password.</ListBlockItem>
     <ListBlockItem>You must now create a normal user.</ListBlockItem>
     <ListBlockItem>Choose a username for your user.</ListBlockItem>
     <ListBlockItem>Choose a password for your user.</ListBlockItem>
     <ListBlockItem>
-      Partitioning method: Guided - use entire disk.
+      Partitioning method: "Guided - use entire disk".
     </ListBlockItem>
     <ListBlockItem>
-      Select disk to partition: SCSI1 (0,0,0) (sda) 1.0 GB ATA QEMU HARDDISK.
+      Select disk to partition: "SCSI1 (0,0,0) (sda) 1.0 GB ATA QEMU HARDDISK".
     </ListBlockItem>
     <ListBlockItem>
-      Partitioning scheme: All files in one partition.
+      Partitioning scheme: "All files in one partition".
     </ListBlockItem>
     <ListBlockItem>
       Select "Finish partitioning and write changes to disk".
     </ListBlockItem>
-    <ListBlockItem>Write the changes to disk? Yes.</ListBlockItem>
+    <ListBlockItem>Write the changes to disk? "Yes".</ListBlockItem>
     <ListBlockItem>
       The base system will now be installed (this will take a while).
     </ListBlockItem>
     <ListBlockItem>
       Select a country for a mirror (your country?).
     </ListBlockItem>
-    <ListBlockItem>Debian archive mirror: pick anyone you wish.</ListBlockItem>
+    <ListBlockItem>Debian archive mirror: pick any one you wish.</ListBlockItem>
     <ListBlockItem>
       HTTP proxy: you probably don't need this (leave it blank).
     </ListBlockItem>
@@ -167,17 +167,18 @@
       Participate in the package usage survey? This is up to you...
     </ListBlockItem>
     <ListBlockItem>
-      Additional things to install: SSH server and standard system utilities.
+      Additional things to install: "SSH server" and "Standard system
+      utilities".
     </ListBlockItem>
     <ListBlockItem>
-      Install the GRUB boot loader to the master boot record? Yes.
+      Install the GRUB boot loader to the master boot record? "Yes".
     </ListBlockItem>
     <ListBlockItem>Now finish the installation.</ListBlockItem>
   </ListBlock>
 
   <p>
-    Abort the reboot by pressing "Ctrl+C" on the terminal window where you
-    started QEMU.
+    Abort the reboot by pressing <code>Ctrl + C</code> in the terminal window
+    where you started QEMU.
   </p>
 
   <SectionTitle>
@@ -186,27 +187,28 @@
 
   <p>
     The Alix board has a 32-bit processor (in my case, the processor is an
-    <a href="https://en.wikipedia.org/wiki/Geode_(processor)">LX800</a>) whose
-    architecture is
+    <a href="https://en.wikipedia.org/wiki/Geode_(processor)">LX800</a>), which
+    belongs to the
     <a
       href="http://myonlineusb.wordpress.com/2011/06/08/what-is-the-difference-between-i386-i486-i586-i686-i786/"
-      >i586</a
+      >i586 architecture</a
     >. Most packages from Debian are built for the i486 architecture and will
-    work just fine on an i586 processor, but there are two which might not
-    follow this rule: libc and the kernel. We need to take a closer look at
-    these.
+    work just fine on an i586 processor. However, there are two that might not
+    follow this rule:
+    <a href="https://en.wikipedia.org/wiki/C_standard_library">libc</a> and the
+    kernel. We need to take a closer look at these.
   </p>
 
   <p>
-    To start, boot into your Debian image (I reserved 1024MB of RAM for it; you
-    can use less if you wish):
+    To begin, boot into your Debian image (I allocated 1024 MB of RAM for it;
+    you can use less if you want):
   </p>
 
   <CodeBlock code="qemu-system-i386 -hda debian.img -m 1024M" />
 
   <p>
-    Now log in as <code>root</code>. To show which libc package(s) you have
-    installed, run:
+    Now, log in as root. To display which libc package(s) you have installed,
+    run:
   </p>
 
   <CodeBlock code="dpkg --list | grep libc[0-9]" />
@@ -222,22 +224,23 @@
 
   <p>
     In my case, both <code>libc6</code> and <code>libc6-i686</code> are
-    installed since their corresponding lines start with <code>ii</code>. The
-    i686 version is, as the package description says, optimized for the i686
-    architecture and therefore undesirable for us, so you should remove it
-    (replace <code>libc6</code> with your libc version):
+    installed, as indicated by their corresponding lines starting with
+    <code>ii</code>. The i686 version is, as the package description indicates,
+    optimized for the i686 architecture and therefore not suitable for our use
+    case. You can remove it by running (replace <code>libc6</code> with your
+    libc version if it's different):
   </p>
 
   <CodeBlock code="apt-get remove libc6-i686" />
 
   <p>
-    Now let's take a look at the kernel. To find out which installed version(s)
-    you have, run:
+    Now let's examine the kernel. To check which kernel versions are installed,
+    run:
   </p>
 
   <CodeBlock code="dpkg --list | grep linux-image" />
 
-  <p>This is the kind of output you should expect:</p>
+  <p>The output should be similar to this:</p>
 
   <CodeBlock
     code="
@@ -247,10 +250,10 @@
   />
 
   <p>
-    This output shows that the installed Linux kernel has been built for the
-    i686 architecture. We have to fix this since this kernel will not work on
-    the Alix board. First, install the package which contains the kernel for the
-    i486 architecture:
+    This indicates that the installed Linux kernel is built for the i686
+    architecture and therefore not compatible with the Alix board. To fix this
+    issue, first install the package that contains the kernel for the i486
+    architecture:
   </p>
 
   <CodeBlock
@@ -261,38 +264,40 @@
   />
 
   <NoteBlock>
-    If you have problems connecting to the internet inside the VM, try editing
-    the file <code>/etc/resolv.conf</code> and setting the
-    <code>nameserver</code> value to the same one you have in the
-    <code>/etc/resolv.conf</code> of the computer you're working on (or,
-    alternatively, set it to the IP address of a free DNS provider such as
-    <code>1.1.1.1</code> or <code>9.9.9.9</code>). This might fix your problem.
+    If you encounter issues connecting to the internet within the VM, consider
+    editing the file <code>/etc/resolv.conf</code> and setting the
+    <code>nameserver</code> value to match the one in the
+    <code>/etc/resolv.conf</code> on your host computer. Alternatively, set it
+    to the IP address of a public DNS provider such as <code>1.1.1.1</code> or
+    <code>9.9.9.9</code>. This may resolve the connectivity issue.
   </NoteBlock>
 
   <p>
-    Reboot and select the i486 kernel on the GRUB screen. Now log in again as
-    <code>root</code> and remove all installed kernel packages for the i686
-    architecture. You can do that by running:
+    After installing the appropriate kernel, reboot the system and select the
+    i486 kernel from the GRUB screen. Once the system has booted, log in as root
+    and remove any installed kernel packages for the i686 architecture. To do
+    this, first run:
   </p>
 
   <CodeBlock code="dpkg --list | grep linux-image.*686" />
 
   <p>
-    and removing every installed kernel package which you see with the following
-    command:
+    This will list the installed kernel packages for the i686 architecture. You
+    can remove each one by using the following command:
   </p>
 
   <CodeBlock code="apt-get purge linux-image-<version>" />
 
   <SectionTitle>6) Set a static IP address for your board</SectionTitle>
 
-  <p>Open the file<code>/etc/network/interfaces</code>:</p>
+  <p>Open the network interfaces configuration file by running:</p>
 
   <CodeBlock code="nano /etc/network/interfaces" />
 
   <p>
-    and add the following to it (remove or comment out whatever is already there
-    for <code>eth0</code>):
+    You need to configure the <code>eth0</code> interface for a static IP
+    address. Add the following lines to the file, and comment out or remove any
+    existing configuration for <code>eth0</code>:
   </p>
 
   <CodeBlock
@@ -306,18 +311,20 @@
   />
 
   <p>
-    Above, <code>192.168.1.1</code> is the IP address of my router,
-    <code>255.255.255.0</code> is the network mask of my local network and
-    <code>192.168.1.254</code> is the desired static IP address for my board.
-    Change these numbers according to your network settings.
+    In the example above, <code>192.168.1.1</code> is the IP address of the
+    router, <code>255.255.255.0</code> is the subnet mask of the local network,
+    and <code>192.168.1.254</code> is the static IP address to be assigned to
+    the board. Modify these values according to your network configuration.
   </p>
 
   <p>
-    This is what my <code>/etc/network/interfaces</code> looks like (notice that
-    I commented out the default configuration for <code>eth0</code>):
+    Here is what the entire <code>/etc/network/interfaces</code> file might look
+    like in the end (note that the default configuration for
+    <code>eth0</code> is commented out):
   </p>
 
   <CodeBlock
+    language="bash"
     code="
     # This file describes the network interfaces available on your system
     # and how to activate them. For more information, see interfaces(5).
@@ -330,6 +337,7 @@
     #allow-hotplug eth0
     #iface eth0 inet dhcp
 
+    # Static IP configuration for eth0
     auto eth0
     iface eth0 inet static
     address 192.168.1.254
@@ -341,25 +349,27 @@
   <SectionTitle>7) Convert the created disk image to raw format</SectionTitle>
 
   <p>
-    You now need to convert <code>debian.img</code> to a raw disk image. A raw
-    disk image can be written (byte by byte) to an actual physical disk and can
-    also be generated from a disk by copying its contents (again, byte by byte)
-    to a file.
+    After setting up Debian within the QEMU virtual machine, you will need to
+    convert the disk image (<code>debian.img</code>) to raw format. The raw
+    format allows the image to be written byte-by-byte to a physical disk, which
+    is necessary for use with the Alix board.
   </p>
 
   <CodeBlock code="qemu-img convert debian.img -O raw debian.raw" />
 
   <SectionTitle>8) Flash the raw image to the CF card</SectionTitle>
 
-  <p>Insert a CF card into the card reader of your computer and run:</p>
+  <p>
+    Insert a CF card into your computer's card reader. To identify the
+    <a href="https://en.wikipedia.org/wiki/Device_file">device node</a> assigned
+    to the CF card, use the <code>dmesg</code> command:
+  </p>
 
   <CodeBlock code="dmesg" />
 
   <p>
-    The output will show you the
-    <a href="https://en.wikipedia.org/wiki/Device_file">device node</a> through
-    which the CF card is accessible. Here are the bottom lines I get right after
-    inserting a CF card:
+    Look for lines similar to the ones below. In this example, the device node
+    is <code>/dev/sdc</code>:
   </p>
 
   <CodeBlock
@@ -371,58 +381,65 @@
   />
 
   <p>
-    This means the device node for the CF card on my setup is
-    <code>/dev/sdc</code>. To flash the raw image to the card, run:
+    Once you have identified the device node for your CF card, use the
+    <code>dd</code> command to write the raw image to the card. Replace
+    <code>/dev/sdX</code> with the correct device node for your CF card in the
+    command below:
   </p>
 
   <CodeBlock code="sudo dd if=debian.raw of=/dev/sdX status=progress" />
 
   <p>
-    where <code>/dev/sdX</code> is the device node of your CF card. Above,
-    <code>status=progress</code> is optional, but very useful since it will show
-    the progress of the data transfer (which may take a while).
+    The <code>status=progress</code> option is not mandatory but is useful for
+    monitoring the progress of the data transfer. This process can take some
+    minutes to complete.
   </p>
 
   <p>
-    When this is done, your CF card will be ready to be used. Insert it in the
-    board, connect an Ethernet cable to the network port which is right next to
-    the board's serial port and turn the board on. If everything goes well,
-    after some seconds you will be able to ssh into the board:
+    After the <code>dd</code> command finishes, your CF card is ready to be
+    inserted into the Alix board. Connect the board to your network with an
+    Ethernet cable plugged into the network port next to the board's serial
+    port, and power on the board. If everything has been configured correctly,
+    you should be able to SSH into the board after a few moments using the
+    command below, with <code>&lt;ip-of-your-board&gt;</code> being the static
+    IP address you assigned to the board earlier:
   </p>
 
   <CodeBlock code="ssh root@<ip-of-your-board>" />
 
   <p>
-    If even after a few minutes you still cannot ssh into the board, boot your
-    Debian image again using QEMU and make sure you correctly removed the kernel
-    and libc packages which were built for the i686 architecture (step 5). If
-    everything is correct there, double-check your network configuration (step
-    6). Should you find any mistakes, redo steps 7 and 8.
+    If you're unable to SSH into the board even after waiting for a few minutes,
+    you should boot your Debian image again using QEMU to verify that the kernel
+    and libc packages built for the i686 architecture were properly removed as
+    per step 5. Also, ensure that the network configuration was correctly set up
+    in step 6. If you find any errors, you will need to redo steps 7 and 8.
   </p>
 
   <SectionTitle>
-    9) OPTIONAL: Resize the root partition to the whole disk
+    9) OPTIONAL: Resize the root partition to use the entire disk
   </SectionTitle>
 
   <p>
-    For my private servers, I usually prefer storing all operating system and
-    user files in a single partition occupying the entire disk to splitting them
-    over multiple partitions with dedicated purposes. Also, I almost always
-    remove the
+    If you prefer to have a single partition occupying the entire disk for both
+    operating system and user files, you may want to resize the root partition
+    and remove the
     <a href="https://en.wikipedia.org/wiki/Swap_partition">swap partition</a>.
-    If you wish to do this as well, ssh into the board and edit the partition
-    table of the CF card with:
+    To do this, SSH into the board and edit the partition table of the CF card
+    by using the <code>fdisk</code> command:
   </p>
 
   <CodeBlock code="fdisk /dev/sda" />
 
-  <p>List all partitions:</p>
+  <p>
+    Once inside <code>fdisk</code>, list all partitions by entering the
+    <code>p</code> command:
+  </p>
 
   <CodeBlock code="Command (m for help): **p**" />
 
   <p>
-    The partition table should look similar to this (most numbers below depend
-    on the storage capacity of the CF card; mine has 4GB):
+    The partition table should look similar to the example below. The exact
+    numbers will vary depending on the storage capacity of your CF card.
   </p>
 
   <CodeBlock
@@ -443,13 +460,13 @@
 
   <p>
     Write down the number in the <code>Start</code> column for
-    <code>/dev/sda1</code> since this is the partition we wish to extend. This
-    value tells us the sector at which the partition starts.
+    <code>/dev/sda1</code>, as this value indicates the sector where the
+    partition to be extended starts.
   </p>
 
   <p>
-    Remove the swap partition (in my case, partition number 5 since the swap
-    device node is <code>/dev/sda5</code>):
+    Next, remove the swap partition, which is number 5 in this example, as
+    indicated by the device node <code>/dev/sda5</code> above:
   </p>
 
   <CodeBlock
@@ -460,8 +477,8 @@
   />
 
   <p>
-    Remove the extended partition (in my case, partition number 2 since its
-    device node is <code>/dev/sda2</code>):
+    Next, remove the extended partition, which is number 2 in this example, as
+    indicated by the device node <code>/dev/sda2</code> above:
   </p>
 
   <CodeBlock
@@ -472,8 +489,8 @@
   />
 
   <p>
-    List all partitions again (<code>p</code>). The result should look similar
-    to this (I omitted the first lines for brevity):
+    Now, list all the partitions again by entering <code>p</code>. The output
+    should look similar to this (first few lines omitted for brevity):
   </p>
 
   <CodeBlock
@@ -485,16 +502,16 @@
 
   <p>
     To resize the root partition (<code>sda1</code>), you must first delete it
-    by entering "<code>d</code>". Fdisk will automatically delete
-    <code>sda1</code> as it is the single partition left:
+    by entering <code>d</code>. <code>fdisk</code> will automatically delete
+    <code>sda1</code> since it's the only partition left on the disk:
   </p>
 
   <CodeBlock code="Command (m for help): **d**" />
 
   <p>
-    Now create a new primary partition filling up the entire disk. This
-    partition must start at the same sector as <code>sda1</code>
-    initially did:
+    Next, create a new primary partition that will utilize the entire disk. Make
+    sure this partition starts at the same sector that
+    <code>sda1</code> originally started at:
   </p>
 
   <CodeBlock
@@ -512,8 +529,8 @@
   />
 
   <p>
-    If you list the partitions again (<code>p</code>), you should get the
-    following:
+    If you list the partitions again by entering <code>p</code>, the output
+    should resemble the following:
   </p>
 
   <CodeBlock
@@ -524,11 +541,10 @@
   />
 
   <p>
-    You need to make the recreated partition
-    <code>sda1</code> bootable again (its "bootable" state is shown in the
-    <code>Boot</code> column; if you check the partition table you initially
-    had, you will see <code>sda1</code> was bootable since it had a
-    <code>*</code> under <code>Boot</code>):
+    The recreated partition <code>sda1</code> needs to be set as bootable again.
+    As you can see in the initial partition table, <code>sda1</code> was marked
+    bootable (indicated by an asterisk under the <code>Boot</code> column).
+    Let's set the new partition as bootable:
   </p>
 
   <CodeBlock
@@ -539,8 +555,8 @@
   />
 
   <p>
-    List the partitions again (<code>p</code>); <code>sda1</code> will now be
-    marked as bootable:
+    If you list the partitions one more time using <code>p</code>, you will see
+    that <code>sda1</code> is now marked as bootable:
   </p>
 
   <CodeBlock
@@ -553,13 +569,14 @@
   <p>
     Make sure the partition type of <code>sda1</code> (the value shown under
     <code>Id</code>) is the same as before. It should be, but if for some reason
-    it isn't, press "<code>t</code>", then "<code>1</code>", then enter the same
+    it isn't, press <code>t</code>, then <code>1</code>, then enter the same
     <code>Id</code> number you previously had.
   </p>
 
   <p>
-    Finally, save the changes to the partition table and exit fdisk. You can
-    safely ignore the "Device or resource busy" error:
+    Finally, save the changes to the partition table and exit
+    <code>fdisk</code>. You can safely ignore the "Device or resource busy"
+    error:
   </p>
 
   <CodeBlock
@@ -576,13 +593,13 @@
     "
   />
 
-  <p>Now reboot the board:</p>
+  <p>Now reboot the system:</p>
 
   <CodeBlock code="reboot" />
 
   <p>
-    Once the board has rebooted, run the following command to resize the
-    filesystem of the root partition to the full partition size:
+    Once it has rebooted, run the following command to resize the filesystem of
+    the root partition to the full partition size:
   </p>
 
   <CodeBlock code="resize2fs /dev/sda1" />
