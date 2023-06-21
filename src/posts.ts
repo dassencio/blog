@@ -288,7 +288,7 @@ const posts: Post[] = [
     date: dateToString(2013, 12, 9),
     id: "18",
     labels: [PostLabel.Linux, PostLabel.Shell],
-    title: "Extending disk partitions via command line",
+    title: "Extending disk partitions via the command line on Linux",
   },
   {
     compatibilityIndex: "743e1168d330797a3dbdb1ce920383d6",
