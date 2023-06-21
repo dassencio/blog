@@ -38,8 +38,8 @@
   </MapBlock>
 
   <p>
-    Notice that a test result can be positive for a subject who does not have
-    the disease (false positive), and also negative for a subject who has the
+    Note that a test result can be positive for a subject who does not have the
+    disease (false positive), and also negative for a subject who has the
     disease (false negative). This fact motivates the definition of the
     following two conditional probabilities:
   </p>
