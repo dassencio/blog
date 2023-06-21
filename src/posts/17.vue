@@ -598,7 +598,7 @@
   <CodeBlock code="reboot" />
 
   <p>
-    Once it has rebooted, run the following command to resize the filesystem of
+    Once it has rebooted, run the following command to resize the file system of
     the root partition to the full partition size:
   </p>
 
