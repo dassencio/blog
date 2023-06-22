@@ -7,29 +7,27 @@
   </p>
 
   <p>
-    This problem is commonly known as the
-    <a href="https://en.wikipedia.org/wiki/Birthday_problem"
-      >birthday paradox</a
-    >
-    (the reason behind "paradox" will become clear as we solve the problem). The
-    solution is relatively simple if we assume that the probability that a
-    randomly selected person was born on a certain day of the year is the same
-    for every day of the year, i.e., that birthdays form a
+    This question is popularly known as the
+    <a href="https://en.wikipedia.org/wiki/Birthday_problem">birthday problem</a
+    >. The term "paradox" is often used in association with this problem because
+    the results can be counterintuitive. The essence of the problem is
+    relatively simple under the assumption that the probability of a randomly
+    selected person having a birthday on a particular day of the year is uniform
+    for all days; in other words, birthdays follow a
     <a href="https://en.wikipedia.org/wiki/Discrete_uniform_distribution"
       >discrete uniform distribution</a
-    >
-    in which every value has equal probability $1/N$, where $N$ is the number of
-    days in a year. This assumption is not true in practice (birthdays in
-    September are, for instance, more common than in January), but still
+    >, where each day has an equal probability $1/N$, with $N$ being the number
+    of days in a year. While this assumption doesn't hold true in reality (for
+    example, certain months may have more birthdays than others), it serves as a
     <a
       href="https://towardsdatascience.com/how-popular-is-your-birthday-91ab133f7fc4"
-      >good enough</a
+      >reasonable approximation</a
     >
-    for this problem.
+    for the purposes of this problem.
   </p>
 
   <p>
-    More generally, one could ask:
+    More generally, one might ask:
     <i>
       If $n$ elements are randomly selected from a
       <a href="https://en.wikipedia.org/wiki/Set_%28mathematics%29">set</a> $S$
@@ -43,22 +41,23 @@
 
   <p>
     In the original question, a birthday is an element in the set $Y = \{1, 2,
-    \ldots, 365\}$ which represents all days of the year, assuming a year
-    contains $365$ days (<a href="https://en.wikipedia.org/wiki/Leap_year"
+    \ldots, 365\}$, which represents all the days of the year, assuming that a
+    year contains $365$ days (<a href="https://en.wikipedia.org/wiki/Leap_year"
       >leap years</a
     >
-    will not be considered in this post). Since we're assuming birthdays form a
+    are not considered in this post). Since we're assuming birthdays form a
     discrete uniform distribution, randomly selecting a person is equivalent to
     randomly selecting an element from $Y$. In what follows, the event of
-    selecting the same element more than once will be called a <b>collision</b>.
+    selecting the same element more than once will be referred to as a
+    <b>collision</b>.
   </p>
 
   <p>
-    Let's solve the problem in its general formulation (not necessarily thinking
-    of birthdays). We first randomly select an element $E_1$ from a set which
-    contains $N$ elements. The total number of possible $E_1$ values is $N$. We
-    then randomly select a second element $E_2$. The probability that this
-    second element is distinct from the first one is:
+    Let's solve the problem in its general form (not just in the context of
+    birthdays). We first randomly select an element $E_1$ from a set containing
+    $N$ elements. The total number of possible values for $E_1$ is $N$. We then
+    randomly select a second element, $E_2$. The probability that this second
+    element is distinct from the first one is:
   </p>
 
   <EquationBlock>
@@ -66,10 +65,11 @@
   </EquationBlock>
 
   <p>
-    since there are $N-1$ elements which are distinct from $E_1$ (above, I wrote
-    $E_2 \notin \{E_1\}$ instead of $E_2 \neq E_1$ for reasons which will become
-    clear below). We then randomly select a third element $E_3$. The probability
-    that this element is distinct from the first two selected elements is:
+    This is because there are $N-1$ elements that are distinct from $E_1$
+    (above, I wrote $E_2 \notin \{E_1\}$ instead of $E_2 \neq E_1$ for reasons
+    that will become clear soon). We then randomly select a third element $E_3$.
+    The probability that this element is distinct from the first two selected
+    elements is:
   </p>
 
   <EquationBlock>
@@ -77,11 +77,11 @@
   </EquationBlock>
 
   <p>
-    since there are $N-2$ elements distinct from both $E_1$ and $E_2$ if $E_1
-    \neq E_2$. We keep on repeating this process until we select the $n$-th
-    element. Assuming the $(n-1)$ previously selected elements are all distinct
-    from each other, the probability that the $n$-th element is distinct from
-    these $(n-1)$ elements is:
+    This is because there are $N-2$ elements distinct from both $E_1$ and $E_2$
+    if $E_1 \neq E_2$. We continue repeating this process until we select the
+    $n$-th element. Assuming the $(n-1)$ previously selected elements are all
+    distinct from each other, the probability that the $n$-th element is
+    distinct from these $(n-1)$ elements is:
   </p>
 
   <EquationBlock>
@@ -90,20 +90,20 @@
   </EquationBlock>
 
   <p>
-    since after the first $(n-1)$ distinct elements are selected, there are
-    still $N - (n-1)$ elements left which were not yet selected.
+    This is because after the first $(n-1)$ distinct elements are selected,
+    there are still $N - (n-1)$ elements left that have not been selected.
   </p>
 
   <p>
-    The probability $P^*(n)$ of selecting $n$ elements which are all distinct is
-    the multiplication of the probabilities $P^{(i)}$ computed above for $i = 2,
+    The probability $P^*(n)$ of selecting $n$ elements that are all distinct is
+    the product of the probabilities $P^{(i)}$ computed above for $i = 2,
     \ldots, n$:
   </p>
 
   <EquationBlock> P^*(n) = P^{(2)} P^{(3)} \ldots P^{(n)} </EquationBlock>
 
   <p>
-    The probability $P(n)$ of at least two among the $n$ selected elements being
+    The probability $P(n)$ that at least two among the $n$ selected elements are
     equal is therefore:
   </p>
 
@@ -184,7 +184,7 @@
   </FigureBlock>
 
   <p>
-    Also interestingly, we can expect a collision with $99\%$ probability if we
+    Interestingly, we can expect a collision with $99\%$ probability if we
     select as few as $n = 57$ people:
   </p>
 
@@ -193,7 +193,7 @@
   <SectionTitle>A lower bound estimate of $P(n)$</SectionTitle>
 
   <p>
-    We will now compute a simple lower bound estimate of $P(n)$ which is a
+    We will now compute a simple lower bound estimate of $P(n)$, which is a
     useful tool for better understanding the birthday paradox. From equation
     \eqref{Pn-factorial-form}, we get:
   </p>
@@ -230,8 +230,8 @@
     <FigureLink id="collision-probability" />. For any given probability $p$,
     equation \eqref{Qn} can be used to estimate the smallest value of $n$ for
     which we will have a collision with probability larger than or equal to $p$,
-    i.e., $P(n) \geq p$. We can do that by solving this same problem for $Q(n)$
-    instead of $P(n)$ since any value of $n$ such that $Q(n) \geq p$ also
+    i.e., $P(n) \geq p$. We can do that by solving this inequality for $Q(n)$
+    instead of $P(n)$, since any value of $n$ that satisfies $Q(n) \geq p$ also
     satisfies $P(n) \geq p$:
   </p>
 
@@ -246,7 +246,7 @@
 
   <p>
     Given that $n(n-1) \geq (n-1)^2$, any value of $n$ for which the following
-    is true:
+    inequality holds:
   </p>
 
   <EquationBlock> (n-1)^2 \geq 2N\log\left(\frac{1}{1-p}\right) </EquationBlock>
@@ -274,12 +274,12 @@
   </p>
 
   <p>
-    The birthday paradox gets even stranger if we take $N = 10^6$ (one million)
-    and $p = 0.5$: for those parameters, we get $n \geq 1178.4$, so we will
-    already have a collision with at least $50\%$ probability with as few as
-    $1180$ elements! In general, to produce a collision with approximately
-    $50\%$ probability for a given $N$, we can select a number of elements given
-    by:
+    The birthday paradox becomes even more astonishing when considering larger
+    values of $N$. For instance, if $N = 10^6$ (one million) and $p = 0.5$, the
+    required number of elements to achieve a collision with at least $50\%$
+    probability is approximately $1180$. In general, to produce a collision with
+    approximately $50\%$ probability for a given $N$, the number of elements can
+    be estimated as:
   </p>
 
   <EquationBlock>
@@ -287,13 +287,14 @@
   </EquationBlock>
 
   <p>
-    The equation above is obtained by setting $p = 0.5$ in equation
-    \eqref{birthday-paradox}, rounding up the constant factor and assuming that
-    $\sqrt{N} \gg 1$. For $N = 365$, equation \eqref{birthday-paradox-0.5}
-    yields $n \approx 22.92$ (no surprises here).
+    The approximation above is derived by setting $p = 0.5$ in equation
+    \eqref{birthday-paradox}, and rounding the constant factor for simplicity,
+    assuming that $\sqrt{N}$ is much greater than $1$. For $N = 365$, equation
+    \eqref{birthday-paradox-0.5} yields $n \approx 22.92$ (which is consistent
+    with our earlier result).
   </p>
 
-  <SectionTitle>Bonus: Using Octave to compute $P(n)$</SectionTitle>
+  <SectionTitle>Bonus: Computing $P(n)$ using Octave</SectionTitle>
 
   <p>
     If you're using Ubuntu/Debian, you can install Octave by opening a terminal
@@ -303,24 +304,28 @@
   <CodeBlock code="sudo apt-get install octave" />
 
   <p>
-    Now create a file called <code>birthday.m</code> with the following contents
-    (or <a :href="octaveFile" download="birthday.m">download it</a> directly):
+    Now, create a file named <code>birthday.m</code> with the contents below.
+    Alternatively, you can
+    <a :href="octaveFile" download="birthday.m">download the file</a> directly.
   </p>
 
   <CodeBlock language="matlab" :code="octaveCode" />
 
   <p>
-    Now start Octave in the same directory where <code>birthday.m</code> is
-    stored:
+    Next, launch Octave in the directory where <code>birthday.m</code> is
+    located by entering:
   </p>
 
   <CodeBlock code="octave" />
 
-  <p>and compute $P(n)$ as in the example below:</p>
+  <p>
+    You can now compute $P(n)$ by using the function defined in
+    <code>birthday.m</code> as shown in the example below:
+  </p>
 
   <CodeBlock
     code="
-    octave:1> birthday(365, 23)
+    octave:1> **birthday(365, 23)**
     ans = 0.5073
     "
   />
