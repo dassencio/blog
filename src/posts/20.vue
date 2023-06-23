@@ -1,6 +1,6 @@
 <template>
   <p>
-    Every time a commit is added to a Git repository, a hash string which
+    Every time a commit is added to a Git repository, a hash string that
     identifies this commit is generated. This hash is computed with the
     <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a> algorithm and is 160
     bits (20 bytes) long. Expressed in hexadecimal notation, such hashes are
@@ -8,19 +8,16 @@
   </p>
 
   <p>
-    Since each commit must have a unique hash, a question which naturally arises
-    is:
-    <i>
-      How likely is it that the hash generated for a future commit will be the
-      same as the hash of some past commit?
-    </i>
+    Since each commit must have a unique hash, a question that naturally arises
+    is: how likely is it that the hash generated for a future commit will be the
+    same as the hash of some past commit?
   </p>
 
   <p>
     This question is closely related to the
-    <a href="https://en.wikipedia.org/wiki/Birthday_problem">birthday paradox</a
+    <a href="https://en.wikipedia.org/wiki/Birthday_problem">birthday problem</a
     >. In a <RouterLink :to="{ name: '19' }">previous post</RouterLink>, I have
-    analyzed the birthday paradox in detail and showed that when we randomly
+    analyzed the birthday problem in detail and showed that when we randomly
     select elements from a
     <a href="https://en.wikipedia.org/wiki/Set_%28mathematics%29">set</a>
     containing $N$ distinct elements $n$ times, the probability of obtaining the
@@ -91,7 +88,7 @@
   </p>
 
   <p>
-    In a more realistic scenario, a large project might have $ 1000$ active
+    In a more realistic scenario, a large project might have $1000$ active
     developers who generate $10$ commits per day. In those circumstances, it
     would take approximately $4 \cdot 10^{17}$ years for a collision to happen
     with $50\%$ probability. For comparison, the
