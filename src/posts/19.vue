@@ -194,7 +194,7 @@
 
   <p>
     We will now compute a simple lower bound estimate of $P(n)$, which is a
-    useful tool for better understanding the birthday paradox. From equation
+    useful tool for better understanding the birthday problem. From equation
     \eqref{Pn-factorial-form}, we get:
   </p>
 
