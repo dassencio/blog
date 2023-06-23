@@ -3,14 +3,14 @@
     On Linux, you can list all
     <a href="https://en.wikipedia.org/wiki/USB">USB</a> devices connected to a
     host (a computer) using a CLI tool called
-    <a href="http://linux.die.net/man/8/lsusb">lsusb</a>. In this post, I will
-    show how to interpret the information contained in its output. To start,
-    open a terminal and run:
+    <a href="http://linux.die.net/man/8/lsusb"><code>lsusb</code></a
+    >. In this post, I will show how to interpret the information contained in
+    its output. To start, open a terminal and run:
   </p>
 
   <CodeBlock code="lsusb -t" />
 
-  <p>This is the output I get in my laptop:</p>
+  <p>This is the output I get on my laptop:</p>
 
   <CodeBlock
     code="
@@ -33,17 +33,17 @@
   <p>
     The output shows a list of USB
     <a href="https://en.wikipedia.org/wiki/Host_controller">host controllers</a>
-    (the lines starting with <code>/:</code>) and their connected devices on a
+    (the lines starting with <code>/:</code>) and their connected devices in a
     tree structure. This tree describes the actual physical hierarchy of the USB
-    devices, i.e., which device is connected to what. At the end of each line,
-    the negotiated communication speed of each device is shown in Mbits/s. The
-    12Mbit/s mode (<code>12M</code>) is called "Full Speed" and is used for
-    communicating with keyboards, mice, joysticks and similar devices. The
-    480Mbit/s mode (<code>480M</code>) is called "Hi-Speed" and is used for
-    communicating with storage devices, webcams and other devices for which more
-    bandwidth is required. All my ports are USB 2.0; for
+    devices, i.e., how the devices are connected. At the end of each line, the
+    negotiated communication speed of each device is shown in Mbits/s. The 12
+    Mbit/s mode (<code>12M</code>) is called "Full Speed" and is used for
+    communicating with keyboards, mice, joysticks, and similar devices. The 480
+    Mbit/s mode (<code>480M</code>) is called "Hi-Speed" and is used for
+    communicating with storage devices, webcams, and other devices for which
+    more bandwidth is required. All my ports are USB 2.0; for
     <a href="https://en.wikipedia.org/wiki/USB_3.0">USB 3.0</a>, there is also a
-    communication mode which supports 5000Mbit/s (5Gbit/s).
+    communication mode that supports 5000 Mbit/s (5 Gbit/s).
   </p>
 
   <p>
@@ -59,31 +59,32 @@
       href="https://en.wikipedia.org/wiki/EXtensible_Host_Controller_Interface_%28xHCI%29"
       >xHCI</a
     >
-    driver. Each host controller contains a hub directly attached to it called a
+    driver. Each host controller contains a hub that is directly attached to it,
+    called a
     <a href="http://sdpha2.ucsd.edu/Lab_Equip_Manuals/usb_20.pdf">root hub</a>
-    (notice the string <code>Class=root_hub</code> in their lines).
+    (note the string <code>Class=root_hub</code> in their lines).
   </p>
 
   <p>
-    The device numbers are indices which are attributed to USB devices as they
-    are detected, so if you disconnect and reconnect a USB device, it will be
+    The device numbers are indices that are attributed to USB devices as they
+    are detected. If you disconnect and reconnect a USB device, it will be
     assigned a different device number.
   </p>
 
   <p>
-    Now let's focus on <code>Bus 02</code>. There is a
+    Now, let's focus on <code>Bus 02</code>. There is a
     <a href="https://en.wikipedia.org/wiki/USB_hub">USB hub</a>
-    connected to its <code>Port 1</code> which is assigned device number
+    connected to its <code>Port 1</code>, which is assigned device number
     <code>2</code> (<code>Dev 2</code>). A second USB hub is attached to
     <code>Port 6</code> of the first USB hub and is assigned device number
     <code>4</code> (<code>Dev 4</code>). There are several devices attached to
-    this second hub, at <code>Port 1</code>, <code>Port 2</code> and
-    <code>Port 3</code> with assigned device numbers <code>5</code>,
-    <code>6</code> and <code>7</code> respectively (device
+    this second hub, at <code>Port 1</code>, <code>Port 2</code>, and
+    <code>Port 3</code>, with assigned device numbers <code>5</code>,
+    <code>6</code>, and <code>7</code>, respectively (device
     <code>7</code> appears multiple times because it has multiple functions).
     Although both USB hubs are internal (they are physically inside my laptop),
     the first hub is connected to the external USB ports of my laptop (the ones
-    I can directly access) while all ports of the second hub are internal.
+    I can directly access), while all ports of the second hub are internal.
     Indeed, if I connect a USB disk to one of my USB ports, the output of
     <code>lsusb -t</code> becomes:
   </p>
@@ -108,10 +109,10 @@
   />
 
   <p>
-    The highlighted line shows a new USB device (a storage device) directly
-    connected to the first USB hub of <code>Bus 02</code> (I have tried every
-    single USB port in my laptop: the USB disk is always detected in a port from
-    that hub). To find out more about the devices in the second hub, I ran:
+    The highlighted line shows a new USB storage device directly connected to
+    the first USB hub of <code>Bus 02</code>. I have tried every single USB port
+    on my laptop, and the USB disk is always detected in a port from that hub.
+    To find out more about the devices in the second hub, I ran:
   </p>
 
   <CodeBlock code="lsusb" />
@@ -134,9 +135,9 @@
 
   <p>
     The highlighted devices are the ones we are interested in as they are
-    connected to <code>Bus 02</code> and have device numbers <code>5</code>,
-    <code>6</code> and <code>7</code>. Device <code>5</code> is my laptop's
-    keyboard and device <code>6</code> is my touchpad. This makes sense since
+    connected to <code>Bus 02</code>, and have device numbers <code>5</code>,
+    <code>6</code>, and <code>7</code>. Device <code>5</code> is my laptop's
+    keyboard, and device <code>6</code> is my touchpad. This makes sense since
     the <a href="https://en.wikipedia.org/wiki/USB#Device_classes">class</a> of
     these devices (shown in the output of <code>lsusb -t</code>) is
     <a href="https://en.wikipedia.org/wiki/USB_human_interface_device_class"
@@ -150,33 +151,33 @@
   <p>
     Strings such as <code>ID 413c:8161</code> indicate the vendor ID
     (<code>413c</code>) and the product ID (<code>8161</code>) of each device.
-    In this example, vendor ID <code>413c</code> belongs to
+    In this example, the vendor ID <code>413c</code> belongs to
     <code>Dell Computer Corp.</code>, and product ID <code>8161</code> is
-    assigned to Dell's <code>Integrated Keyboard</code>. As you can see above,
-    vendor and product names are also displayed for each device. Companies which
-    manufacture USB devices need to
+    assigned to Dell's <code>Integrated Keyboard</code>. Vendor and product
+    names are also displayed by <code>lsusb</code> for each device. Companies
+    that manufacture USB devices need to
     <a href="http://www.usb.org/developers/vendor/">purchase</a> vendor IDs from
-    the <a href="http://www.usb.org/about">USB Implementers Forum</a>, and can
+    the <a href="http://www.usb.org/about">USB Implementers Forum</a> and can
     assign product IDs to each of their individual products. A list of vendor
     IDs with their respective product IDs can be found
     <a href="http://www.linux-usb.org/usb.ids">here</a>.
   </p>
 
   <p>
-    If the output of <code>lsusb</code> is too long, you can restrict it to a
-    specific USB device by running:
+    In case the output of <code>lsusb</code> is too extensive, it's possible to
+    narrow it down to a specific USB device by using the following command:
   </p>
 
   <CodeBlock code="lsusb -s <bus>:<device-number>" />
 
   <p>
-    As an example, for the device at <code>Bus 02</code> with device number
-    <code>5</code>:
+    For example, to focus on the device at <code>Bus 02</code> with device
+    number <code>5</code>, you can use:
   </p>
 
   <CodeBlock code="lsusb -s 2:5" />
 
-  <p>I get the following:</p>
+  <p>This command produces the following output:</p>
 
   <CodeBlock
     code="
@@ -184,19 +185,21 @@
     "
   />
 
-  <SectionTitle>Bonus: <code>usb-devices</code></SectionTitle>
+  <SectionTitle>Bonus: Using <code>usb-devices</code></SectionTitle>
 
   <p>
-    If lsusb does not give you the information you want for a given device, try
-    running:
+    If <code>lsusb</code> doesn't provide the information you're looking for,
+    there is another command, <code>usb-devices</code>, that can be used for a
+    more detailed analysis of USB devices. It's simple to use as it doesn't
+    require any parameters:
   </p>
 
   <CodeBlock code="usb-devices" />
 
   <p>
-    This will show you a comprehensive and very detailed list of your USB
-    devices. With the bus and device numbers, you can go through the list and
-    see if it provides more information about the device you're interested in.
+    The output will present a comprehensive and highly detailed list of USB
+    devices connected to your system. You can use the bus and device numbers to
+    locate the specific device you're interested in and gather more information.
   </p>
 </template>
 
