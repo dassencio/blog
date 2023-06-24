@@ -1,20 +1,20 @@
 <template>
   <p>
-    I have recently released the first official version of a project I have
-    worked on during the last few months. It's called
+    I recently released the first official version of a project I have been
+    working on for the last few months. It's called
     <a href="https://github.com/dassencio/freeaml">freeAML</a>: an easy-to-use,
-    free and open-source applied mathematics library written in C++.
+    free, and open-source applied mathematics library written in C++.
   </p>
 
   <p>
     In this first version, the library contains essential data structures such
     as dense and sparse vectors/matrices as well as linear system solvers,
-    linear least squares solvers and matrix factorization algorithms.
+    linear least squares solvers, and matrix factorization algorithms.
   </p>
 
   <p>
-    Examples describing most of the tools available in the library and also an
-    installation guide are available
+    Examples describing most of the tools available in the library, as well as
+    an installation guide, are available
     <a href="https://github.com/dassencio/freeaml#available-tools">here</a>.
     Enjoy! ;-)
   </p>
