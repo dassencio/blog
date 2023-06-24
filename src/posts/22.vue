@@ -1,14 +1,14 @@
 <template>
   <p>
-    To disable the USB devices which are managed by a certain USB
+    To disable USB devices that are managed by a certain USB
     <a href="https://en.wikipedia.org/wiki/Host_controller">host controller</a>,
-    you first need to determine the bus number assigned to it. For that, open a
-    terminal and run:
+    you first need to determine the bus number assigned to it. To do this, open
+    a terminal and run:
   </p>
 
   <CodeBlock code="lsusb -t" />
 
-  <p>This is the output I get on my laptop:</p>
+  <p>Here is the output I get on my laptop:</p>
 
   <CodeBlock
     code="
@@ -31,7 +31,7 @@
   <p>
     As I described in a
     <RouterLink :to="{ name: '21' }">previous post</RouterLink>, each line
-    starting with <code>/:</code> corresponds to a USB host controller which
+    starting with <code>/:</code> corresponds to a USB host controller that
     manages all devices appearing in the tree associated with it. To disable
     them, run:
   </p>
@@ -43,7 +43,7 @@
   <CodeBlock code="echo '2-1' | sudo tee /sys/bus/usb/drivers/usb/unbind" />
 
   <p>
-    This is the output of <code>lsusb -t</code> which I get after running the
+    This is the output of <code>lsusb -t</code> that I get after running the
     command above:
   </p>
 
@@ -59,14 +59,14 @@
 
   <p>
     The second USB host controller (<code>Bus 02</code>) manages the external
-    USB ports of my laptop. Before running the command above, I could connect a
+    USB ports on my laptop. Before running the command above, I could connect a
     USB drive or an external optical mouse to one of the ports and see them
-    appearing in the device tree of <code>Bus 02</code> as well as in the output
+    appear in the device tree of <code>Bus 02</code>, as well as in the output
     of <a href="https://man7.org/linux/man-pages/man1/dmesg.1.html">dmesg</a>.
-    After running the command, this no longer happened.
+    After running the command, this no longer happens.
   </p>
 
-  <p>To reenable the devices managed by a USB host controller, run:</p>
+  <p>To re-enable the devices managed by a USB host controller, run:</p>
 
   <CodeBlock code="echo '<bus>-1' | sudo tee /sys/bus/usb/drivers/usb/bind" />
 
