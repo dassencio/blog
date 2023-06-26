@@ -220,7 +220,7 @@ const posts: Post[] = [
     date: dateToString(2014, 1, 6),
     id: "26",
     labels: [PostLabel.Linux, PostLabel.Networking],
-    title: "Changing a network interface's MAC address",
+    title: "Changing a network interface's MAC address on Linux",
   },
   {
     compatibilityIndex: "c6d2b27efe4c87b1cc24686bf8793c0f",

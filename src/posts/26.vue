@@ -5,7 +5,7 @@
     network interface on Linux. In this post, I will show how this can be done
     using a very intuitive CLI tool called
     <a href="http://manpages.ubuntu.com/manpages/lucid/man1/macchanger.1.html"
-      >macchanger</a
+      ><code>macchanger</code></a
     >. If you're using Ubuntu/Debian, you can install it by opening a terminal
     and running:
   </p>
@@ -20,7 +20,7 @@
   <CodeBlock code="sudo ifconfig <interface> down" />
 
   <p>
-    For instance, if the interface whose MAC address you wish to change is
+    For instance, if the interface whose MAC address you want to change is
     <code>eth0</code>, run:
   </p>
 
@@ -53,8 +53,8 @@
   />
 
   <p>
-    In order to be able to use the interface again under its new MAC address,
-    you must bring it back up:
+    To use the interface again with its new MAC address, you must bring it back
+    up:
   </p>
 
   <CodeBlock code="sudo ifconfig <interface> up" />
@@ -66,16 +66,16 @@
   <SectionTitle>A deeper dive into the topic</SectionTitle>
 
   <p>
-    A MAC address is a 48-bit long identifier which is assigned to a device when
-    it is manufactured. This identifier is usually globally unique and commonly
+    A MAC address is a 48-bit long identifier that is assigned to a device when
+    it's manufactured. This identifier is usually globally unique and commonly
     expressed as a string of six octets. The first three octets (24 bits)
-    identify the organization which has manufactured the device (e.g. Intel
+    identify the organization that has manufactured the device (e.g. Intel
     Corporation, Cisco Systems, Netgear Inc., etc.; this organization is
     typically the device vendor) and correspond to an
     <a href="https://en.wikipedia.org/wiki/Organizationally_Unique_Identifier"
       >Organizationally Unique Identifier</a
     >
-    (OUI). Vendors must purchase OUI's from the
+    (OUI). Vendors must purchase OUIs from the
     <a href="https://en.wikipedia.org/wiki/IEEE_registration_authority"
       >IEEE Registration Authority</a
     >. You can see a list of OUIs and the organizations they belong to with the
@@ -108,13 +108,13 @@
 
   <p>
     If you set the MAC address of an interface to the MAC address of some other
-    device in the same network, you will be <i>de facto</i> impersonating it.
+    device on the same network, you will be <i>de facto</i> impersonating it.
     This is a form of attack called
     <a href="https://en.wikipedia.org/wiki/MAC_spoofing">MAC spoofing</a>.
   </p>
 
   <p>
-    In order to better understand how MAC spoofing works, I ran the following
+    To better understand how MAC spoofing works, I conducted the following
     experiment: I changed the MAC address of my laptop to the MAC address of my
     mobile phone and then connected my laptop to my wireless router (my phone
     was already connected). This caused my phone's internet connection to stop
@@ -130,7 +130,7 @@
 
   <p>
     In this situation, a denial of service happened because there are encryption
-    parameters which must be in sync between a connected device and a
+    parameters that must be in sync between a connected device and a
     <a href="https://en.wikipedia.org/wiki/Wireless_access_point"
       >wireless access point</a
     >
