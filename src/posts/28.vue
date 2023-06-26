@@ -1,9 +1,8 @@
 <template>
   <p>
-    I recently purchased a USB device which can measure current and voltage
-    (i.e., it functions both as a voltmeter as well as an ammeter) and decided
-    to use it to determine how much power my Raspberry Pi Model B typically
-    consumes.
+    I recently purchased a USB device that can measure both current and voltage
+    (i.e., it functions as a voltmeter as well as an ammeter) and decided to use
+    it to determine how much power my Raspberry Pi Model B typically consumes.
     <FigureLink id="raspberry-pi-measurements" capitalized /> shows what it
     looks like.
   </p>
@@ -14,18 +13,18 @@
       href="https://web.archive.org/web/20140330040115/http://www.raspberrypi.org/faqs#powerReqs"
       >Raspberry Pi website</a
     >
-    claims that the Model B needs $5\Volt$ to operate and draws a current
-    between $700\Milliampere$ and $1000\Milliampere$ (depending on the connected
-    peripherals). My voltage measurements were always very close to $5\Volt$,
-    but my current measurements fell below the advertised range even when the
-    Raspberry Pi was under heavy load (e.g. during boot time).
+    claims that the Model B requires $5\Volt$ to operate and draws a current
+    between $700\Milliampere$ and $1000\Milliampere$ (depending on the
+    peripherals connected). My voltage measurements were consistently close to
+    $5\Volt$, but my current measurements were below the advertised range, even
+    when the Raspberry Pi was under heavy load (e.g., during boot time).
   </p>
 
   <FigureBlock
     id="raspberry-pi-measurements"
     caption="Measured current (a) and voltage (b) used by a Raspberry Pi Model
              B. The values shown are $I = 0.36\Ampere$ and
-             $V = 4.96\Volt$ respectively."
+             $V = 4.96\Volt$, respectively."
   >
     <BaseSubfigure>
       <ResponsiveImage
@@ -59,7 +58,7 @@
 
   <p>
     The highest current and voltage values I observed were $I_{\max} =
-    0.43\Ampere$ and $V_{\max} = 4.96\Volt$ respectively, meaning the maximum
+    0.43\Ampere$ and $V_{\max} = 4.96\Volt$, respectively, meaning the maximum
     amount of power consumed by my Raspberry Pi was:
   </p>
 
