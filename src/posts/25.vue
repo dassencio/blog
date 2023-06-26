@@ -1,10 +1,10 @@
 <template>
   <p>
-    Frequently, in scientific computing, one needs to integrate polynomials over
+    In the world of scientific computing, integrating polynomials over
     <a href="https://en.wikipedia.org/wiki/Polygonal_chain">polygonal curves</a>
-    (also known as "polygonal chains", "polygonal paths", "polylines" or other
-    similar names). In this post, I will derive a general formula for such
-    integrals in two dimensions.
+    (also referred to as "polygonal chains", "polygonal paths", or "polylines")
+    is a common and important operation. In this post, I will derive a general
+    formula for computing such integrals in two dimensions.
   </p>
 
   <p>Let $p_d(x,y)$ be a two-dimensional polynomial of degree $d$:</p>
@@ -14,7 +14,7 @@
   </EquationBlock>
 
   <p>
-    and let $S$ be a two-dimensional polygonal curve. We wish to compute the
+    and let $S$ be a two-dimensional polygonal curve. Our goal is to compute the
     <a href="https://en.wikipedia.org/wiki/Line_integral">line integral</a>
     of $p_d(x,y)$ over $S$:
   </p>
@@ -22,25 +22,11 @@
   <EquationBlock> \int_{S} p_d(x,y) \D{l} </EquationBlock>
 
   <p>
-    The curve $S$ is a connected series of $n$ line segments $S_i$ for $i =
-    1,2,\ldots,n$. Let $L_i$ be the length of $S_i$ and $(x_i, y_i)$ and
-    $(x_{i+1}, y_{i+1}) = (x_i + \Delta{x_i}, y_i + \Delta{y_i})$ be the
-    coordinates of its end nodes (see
-    <FigureLink id="polygonal-curve" /> for an example with $n = 3$). We can
-    parameterize $S_i$ as follows:
-  </p>
-
-  <EquationBlock>
-    \Vec{r}_i(s) = \left(\tilde{x}_i(s), \tilde{y}_i(s)\right) = (x_i +
-    s\Delta{x_i}, y_i + s\Delta{y_i}) \label{Si-parameterization}
-  </EquationBlock>
-
-  <p>
-    where $s \in [0,1]$. To convince yourself that $\Vec{r}_i(s)$ is a valid
-    parameterization of $S_i$, notice that $\Vec{r}_i(0) = (x_i, y_i)$ and that
-    $\Vec{r}_i(1) = (x_{i+1}, y_{i+1})$, so as $s$ varies from $0$ to $1$,
-    $\Vec{r}_i(s)$ travels through all points on the segment connecting $(x_i,
-    y_i)$ to $(x_{i+1}, y_{i+1})$.
+    The curve $S$ consists of a connected series of $n$ line segments $S_i$,
+    with $i = 1, 2, \ldots, n$. Let $L_i$ be the length of $S_i$ and let $(x_i,
+    y_i)$ and $(x_{i+1}, y_{i+1}) = (x_i + \Delta{x_i}, y_i + \Delta{y_i})$
+    represent the coordinates of its end nodes (see
+    <FigureLink id="polygonal-curve" /> for an example with $n = 3$).
   </p>
 
   <FigureBlock
@@ -49,6 +35,21 @@
   >
     <ResponsiveImage alt="Polygonal curve" :src="polygonalCurve" />
   </FigureBlock>
+
+  <p>We can parameterize each segment $S_i$ as shown below:</p>
+
+  <EquationBlock>
+    \Vec{r}_i(s) = \left(\tilde{x}_i(s), \tilde{y}_i(s)\right) = (x_i +
+    s\Delta{x_i}, y_i + s\Delta{y_i}) \label{Si-parameterization}
+  </EquationBlock>
+
+  <p>
+    where $s \in [0,1]$. To convince yourself that $\Vec{r}_i(s)$ is a valid
+    parameterization of $S_i$, note that $\Vec{r}_i(0) = (x_i, y_i)$ and that
+    $\Vec{r}_i(1) = (x_{i+1}, y_{i+1})$, so as $s$ varies from $0$ to $1$,
+    $\Vec{r}_i(s)$ travels through all points on the segment connecting $(x_i,
+    y_i)$ to $(x_{i+1}, y_{i+1})$.
+  </p>
 
   <p>
     Let $\Vec{r}_i'(s)$ be the derivative of $\Vec{r}_i(s)$ with respect to $s$.
@@ -92,7 +93,7 @@
     (y_i + s\Delta{y_i})^n &= \sum_{p=0}^{n} \binom{n}{p} y_i^{n-p} s^p \Delta{y_i}^p
   </EquationBlock>
 
-  <p>we have that:</p>
+  <p>we have:</p>
 
   <!-- prettier-ignore -->
   <EquationBlock align>
@@ -104,7 +105,7 @@
       &= \sum_{k=0}^{m} \sum_{p=0}^{n} \alpha_{mnkpi} s^{k+p}
   </EquationBlock>
 
-  <p>where</p>
+  <p>where:</p>
 
   <EquationBlock>
     \alpha_{mnkpi} = \binom{m}{k} \binom{n}{p} x_i^{m-k} \Delta{x_i}^k y_i^{n-p}
@@ -146,15 +147,13 @@
     \label{integral-polygonal-curve}
   </EquationBlock>
 
-  <p></p>
-
   <p>
-    Even though equation \eqref{integral-polygonal-curve} is a general, analytic
-    solution to the problem, implementing it numerically in this form will
-    result in a method which is suboptimal in terms of performance (although it
-    can be used as a last resort). A more efficient method is obtained by
-    computing all coefficients in advance and then hard-coding the obtained
-    formula. To illustrate what I mean, consider a polynomial of degree $d = 2$:
+    Despite equation \eqref{integral-polygonal-curve} providing a general,
+    analytic solution to the problem, implementing it numerically in this form
+    can result in suboptimal performance. A more efficient method can be
+    obtained by computing all coefficients in advance and then hard-coding the
+    obtained formula. To illustrate this, consider a polynomial of degree $d =
+    2$:
   </p>
 
   <EquationBlock>
@@ -162,9 +161,9 @@
   </EquationBlock>
 
   <p>
-    Pre-computing the coefficients in equation \eqref{integral-polygonal-curve}
-    for $p_2(x,y)$ yields a formula which is easier to implement numerically and
-    also computationally more efficient:
+    By pre-computing the coefficients in equation
+    \eqref{integral-polygonal-curve} for $p_2(x,y)$, we can derive a formula
+    that is easier to implement numerically and more computationally efficient:
   </p>
 
   <!-- prettier-ignore -->
