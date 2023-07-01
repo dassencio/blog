@@ -192,7 +192,7 @@ const posts: Post[] = [
     date: dateToString(2014, 2, 7),
     id: "29",
     labels: [PostLabel.Linux, PostLabel.Shell],
-    title: "Monitoring data transfers through pipes",
+    title: "Monitoring data transfers through pipes on Linux",
   },
   {
     compatibilityIndex: "89e39302a98c02d56378f7d895633a3c",
