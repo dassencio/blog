@@ -1,7 +1,7 @@
 <template>
   <p>
     Whenever you rip a song from a CD to a format such as MP3 or Ogg Vorbis,
-    audio data from the original song is discarded to make it smaller. In
+    audio data from the original song is discarded to make the file smaller. In
     technical terms, you're performing a
     <a href="https://en.wikipedia.org/wiki/Lossy_compression"
       >lossy compression</a
@@ -12,12 +12,11 @@
 
   <p>
     Matrices can also be compressed in this sense, with many applications in
-    fields such as digital signal processing, machine learning and scientific
-    computing, to name a few. Specifically, given a matrix $A$, it is possible
-    to generate another matrix $\tilde{A} \approx A$ such that $\tilde{A}$ can
-    be stored using less disk (or memory) space than $A$ itself. This
-    representation can be obtained by using a powerful tool in linear algebra
-    called
+    fields such as digital signal processing, machine learning, and scientific
+    computing, to name a few. Specifically, given a matrix $A$, it's possible to
+    generate another matrix $\tilde{A} \approx A$ such that $\tilde{A}$ can be
+    stored using less disk or memory space than $A$ itself. This representation
+    can be obtained by using a powerful tool in linear algebra called
     <a href="https://en.wikipedia.org/wiki/Singular_value_decomposition"
       >singular value decomposition</a
     >
@@ -27,10 +26,10 @@
   <p>
     The SVD of an $m \times n$ real matrix $A$ is the factorization $A = U
     \Sigma V^T$, where $U$ is an $m \times m$ real orthogonal matrix, $\Sigma$
-    is an $m \times n$ diagonal matrix with real nonnegative values along its
+    is an $m \times n$ diagonal matrix with real non-negative values along its
     diagonal (called the
     <a href="https://en.wikipedia.org/wiki/Singular_value">singular values</a>
-    of $A$) and $V$ is an $n \times n$ real orthogonal matrix. Every matrix has
+    of $A$), and $V$ is an $n \times n$ real orthogonal matrix. Every matrix has
     an SVD (for a proof of this fact, see
     <ReferenceLink id="applied-numerical-linear-algebra" />, theorem 3.2).
   </p>
@@ -45,7 +44,7 @@
   <CodeBlock code="sudo apt-get install octave" />
 
   <p>
-    Now start Octave. In what follows, I will use the following matrix $A$ as an
+    Now, start Octave. In what follows, I will use the matrix $A$ below as an
     example:
   </p>
 
@@ -66,7 +65,7 @@
   <p>
     You can generate this matrix locally in Octave by typing "<code>A=[</code>"
     (without the quotes), then copying and pasting the values from $A$ above,
-    then ending the matrix definition with another square bracket
+    and finally ending the matrix definition with another square bracket
     "<code>]</code>".
   </p>
 
@@ -118,9 +117,9 @@
     As the output above shows, the singular values of $A$ (the diagonal entries
     of $\Sigma$) are placed in decreasing order along the diagonal of $\Sigma$.
     Compared to the first two singular values ($\Sigma_{11}$ and $\Sigma_{22}$),
-    the other four ($\Sigma_{33}$, $\Sigma_{44}$, $\Sigma_{55}$ and
-    $\Sigma_{66}$) are relatively small. Being so small, and since $A = U\Sigma
-    V^T$, the effect of discarding them should still imply $A \approx U\Sigma
+    the other four ($\Sigma_{33}$, $\Sigma_{44}$, $\Sigma_{55}$, and
+    $\Sigma_{66}$) are relatively small. Because they are so small, and since $A
+    = U\Sigma V^T$, discarding them should still result in $A \approx U\Sigma
     V^T$ for this modified $\Sigma$. Let's do exactly that and see what happens:
   </p>
 
@@ -143,7 +142,7 @@
   <p>
     Discarding $\Sigma_{33}$ means the third column of $U$ and the third row of
     $V^T$ (i.e., the third column of $V$) have no effect on $U\Sigma V^T$ since
-    they contain the only entries of $U$ and $V$ respectively which are
+    they contain the only entries of $U$ and $V$ respectively that are
     multiplied by $\Sigma_{33}$. We can then discard these entries and also
     discard the third row and the third column of $\Sigma$ altogether.
     Similarly, we can discard the fourth, fifth and sixth columns of $U$ and $V$
@@ -182,7 +181,7 @@
     "
   />
 
-  <p>Now let's compute $U\Sigma V^T$:</p>
+  <p>Now, let's compute $U\Sigma V^T$:</p>
 
   <CodeBlock
     code="
@@ -199,10 +198,10 @@
   />
 
   <p>
-    The elements of $\tilde{A}$ are very close to the ones from the original
-    matrix $A$. Let's compute the relative error for each entry of $\tilde{A}$
-    (below, the <code>./</code> operator computes the division of each entry of
-    $(A - \tilde{A})$ by each corresponding entry of $A$):
+    The entries of $\tilde{A}$ are very close to those of the original matrix
+    $A$. Let's compute the relative error for each entry of $\tilde{A}$. Below,
+    the <code>./</code> operator computes the division of each entry of $(A -
+    \tilde{A})$ by the corresponding entry of $A$:
   </p>
 
   <CodeBlock
@@ -220,11 +219,12 @@
   />
 
   <p>
-    As the numbers above show, the relative errors are small, so indeed
-    $\tilde{A} \approx A$. Storing $A$ requires storing $N_{A} = 36$ elements,
-    and while $\tilde{A}$ has the same number of elements as $A$, it is more
-    efficient to store $U$, $\Sigma$ and $V$ (with rows and columns removed in
-    the way described above) than $\tilde{A}$ itself. This yields:
+    As the numbers above indicate, the relative errors are small, so $\tilde{A}$
+    is a good approximation of $A$. Storing $A$ requires space for $N_{A} = 36$
+    elements. Although $\tilde{A}$ contains the same number of entries as $A$,
+    it's more efficient to store $U$, $\Sigma$, and $V$ (after removing the
+    respective rows and columns as described above) rather than storing
+    $\tilde{A}$ itself. This yields:
   </p>
 
   <EquationBlock>
@@ -232,18 +232,20 @@
   </EquationBlock>
 
   <p>
-    so we can rebuild $\tilde{A}$ from only $N_{\tilde{A}} = 26$ stored elements
-    instead of $N_A = 36$ elements. The reason why $\Size(\Sigma)= 2$ is because
-    $\Sigma$ is a diagonal matrix, so its off-diagonal elements do not need to
-    be stored since we know they are zero. In this particular example, $28\%$
-    less storage space is required to store $\tilde{A}$ than $A$. For bigger
-    matrices, even better compression ratios can be achieved.
+    Therefore, we can reconstruct $\tilde{A}$ using only $N_{\tilde{A}} = 26$
+    stored elements, as opposed to the $N_A = 36$ elements required to store
+    $A$. The reason why $\Size(\Sigma) = 2$ is because $\Sigma$ is a diagonal
+    matrix, so its off-diagonal entries do not need to be stored since we know
+    they are zero. In this particular example, approximately $28\%$ less storage
+    space is required to store the preserved entries of $U$, $\Sigma$, and $V$
+    compared to $A$. For larger matrices, even better compression ratios can be
+    achieved.
   </p>
 
   <p>
     It's possible to use the technique above to compress images while still
-    preserving most of their visual properties. If you want to know how, please
-    visit this blog again in the future :-)
+    preserving most of their visual properties. If you're interested in learning
+    how, please check back on this blog in the future :-)
   </p>
 
   <ReferenceListBlock>
