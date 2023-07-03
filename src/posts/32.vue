@@ -7,8 +7,10 @@
 
   <p>
     One possible way is by using the
-    <a href="http://man7.org/linux/man-pages/man1/find.1.html">find</a> tool
-    with the following command:
+    <a href="http://man7.org/linux/man-pages/man1/find.1.html"
+      ><code>find</code></a
+    >
+    tool with the following command:
   </p>
 
   <CodeBlock
@@ -18,10 +20,10 @@
   />
 
   <p>
-    where <code>dir</code> represents the path to the directory where the file
-    search will be conducted. This can be either an absolute path or a relative
-    path with respect to the current working directory. Let's analyze each part
-    of this command to understand its purpose:
+    where <code>&lt;dir&gt;</code> represents the path to the directory where
+    the file search will be conducted. This can be either an absolute path or a
+    relative path with respect to the current working directory. Let's analyze
+    each part of this command to understand its purpose:
   </p>
 
   <MapBlock>
@@ -48,8 +50,8 @@
 
   <p>
     An alternative approach involves using the
-    <a href="https://linux.die.net/man/1/grep">grep</a> tool for pattern
-    matching:
+    <a href="https://linux.die.net/man/1/grep"><code>grep</code></a> tool for
+    pattern matching:
   </p>
 
   <CodeBlock
@@ -57,24 +59,24 @@
   />
 
   <p>
-    This command recursively lists all files in <code>dir</code> and pipes this
-    list (with one filename per line) to grep. Grep then outputs only the lines
-    that match at least one of the specified patterns. Let's dissect each part
-    of the command:
+    This command recursively lists all files in <code>&lt;dir&gt;</code> and
+    pipes this list (with one filename per line) to <code>grep</code>. The
+    latter then outputs only the lines that match at least one of the specified
+    patterns. Let's dissect each part of the command:
   </p>
 
   <MapBlock>
     <code>-e &lt;pattern&gt;</code>
     <span>
-      Specifies a pattern for grep to match. As indicated above, grep can match
-      multiple patterns.
+      Specifies a pattern for <code>grep</code> to match. As indicated above,
+      <code>grep</code> can match multiple patterns.
     </span>
 
     <code>-i</code>
     <span>
-      Directs grep to ignore case distinctions when searching for strings that
-      match any of the given patterns, i.e., uppercase is not distinguished from
-      lowercase.
+      Directs <code>grep</code> to ignore case distinctions when searching for
+      strings that match any of the given patterns, i.e., uppercase is not
+      distinguished from lowercase.
     </span>
   </MapBlock>
 
@@ -95,8 +97,8 @@
   />
 
   <p>
-    To understand how this works, note first that grep can take a file as input.
-    For instance:
+    To understand how this works, note first that <code>grep</code> can take a
+    file as input. For instance:
   </p>
 
   <CodeBlock code='grep "string" file.txt' />
