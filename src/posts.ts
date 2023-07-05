@@ -168,7 +168,7 @@ const posts: Post[] = [
     date: dateToString(2014, 2, 15),
     id: "32",
     labels: [PostLabel.Linux, PostLabel.Shell],
-    title: "Listing all files with a set of possible extensions",
+    title: "Listing all files with a set of possible extensions on Linux",
   },
   {
     compatibilityIndex: "3b71b2622e02f1f11d72d524764fae03",
