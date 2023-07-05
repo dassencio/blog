@@ -70,11 +70,10 @@
     To better understand the relevance of a test's sensitivity and specificity,
     suppose that our laboratory test has $P(+|D) = 0.997$ and $P(-|D^c) =
     0.985$. With such a test, the result for a subject who has the disease will
-    be positive with a probability of $99.7\%$, while the test result for a
-    subject who does not have the disease will be negative with a probability of
-    $98.5\%$. Additionally, let's assume that $P(D) = 0.001$, i.e., the
-    probability that a subject chosen randomly from the population has the
-    disease is $0.1\%$.
+    be positive with probability $99.7\%$, while the test result for a subject
+    who does not have the disease will be negative with probability $98.5\%$.
+    Additionally, let's assume that $P(D) = 0.001$, i.e., the probability that a
+    subject chosen randomly from the population has the disease is $0.1\%$.
   </p>
 
   <p>
