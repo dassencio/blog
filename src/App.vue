@@ -17,7 +17,8 @@ const route = useRoute();
 const post = computed(() => posts.find((post) => post.id === route.name));
 
 watch(post, (post) => {
-  document.title = (post ? `${post.title} - ` : "") + "Diego Assencio";
+  document.title =
+    (post ? `${post.title.replace(/<[^>]+>/g, "")} - ` : "") + "Diego Assencio";
 });
 </script>
 

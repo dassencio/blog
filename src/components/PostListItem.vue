@@ -1,8 +1,8 @@
 <template>
   <li class="post">
-    <RouterLink class="post__title" :to="{ name: post.id }">{{
-      post.title
-    }}</RouterLink>
+    <RouterLink class="post__title" :to="{ name: post.id }"
+      ><span v-html="post.title"></span
+    ></RouterLink>
     <PostDetails class="post__details" :post="post" />
   </li>
 </template>

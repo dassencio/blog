@@ -260,7 +260,7 @@ const posts: Post[] = [
     date: dateToString(2013, 12, 19),
     id: "21",
     labels: [PostLabel.Linux, PostLabel.USB],
-    title: "Interpreting the output of lsusb",
+    title: "Interpreting the output of <code>lsusb</code>",
   },
   {
     compatibilityIndex: "eacd6eedf46c9dd596a5f12221ad15b8",

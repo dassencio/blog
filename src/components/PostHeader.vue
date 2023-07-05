@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <h1 class="header__title">{{ post.title }}</h1>
+    <h1 class="header__title" v-html="post.title"></h1>
     <div class="header__separator"></div>
     <PostDetails :post="post" />
   </header>
