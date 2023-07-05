@@ -252,7 +252,7 @@ const posts: Post[] = [
     date: dateToString(2013, 12, 23),
     id: "22",
     labels: [PostLabel.Linux, PostLabel.USB],
-    title: "Disabling USB devices from a host controller",
+    title: "Disabling USB devices from a host controller on Linux",
   },
   {
     compatibilityIndex: "1363692dafeabeff8e3f975077f92dfe",
