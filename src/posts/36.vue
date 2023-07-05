@@ -47,7 +47,7 @@
     To compute $\int_{\Omega} p_d(x,y) \D{x}\D{y}$, we can employ the
     <a href=" https://en.wikipedia.org/wiki/Divergence_theorem"
       >divergence theorem</a
-    >. First, notice that:
+    >. First, note that:
   </p>
 
   <EquationBlock>
@@ -112,8 +112,8 @@
   </p>
 
   <p>
-    To start, notice that segments with $\Delta{y_i} = 0$ (horizontal segments)
-    do not contribute to the sum in equation \eqref{integral-q} since for these
+    To start, note that segments with $\Delta{y_i} = 0$ (horizontal segments) do
+    not contribute to the sum in equation \eqref{integral-q} since for these
     segments $n^1_i = 0$. In other words, we only need to consider the segments
     $S_i$ where $\Delta{y_i} \neq 0$.
   </p>

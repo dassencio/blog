@@ -223,7 +223,7 @@
     \label{inverse-A}
   </EquationBlock>
 
-  <p>Before we continue, notice that $A$ is always invertible since:</p>
+  <p>Before we continue, note that $A$ is always invertible since:</p>
 
   <EquationBlock>
     \det(A) = 1 - \alpha_1\alpha_2 = 1 - \left(\frac{m_2}{m_1 +

@@ -88,7 +88,7 @@
     In other words, we first obtain a relation $\Pi_{\textrm{Age}} P$ that
     contains a single column with all ages, and then subtract from it the set of
     all ages which are smaller than some other age. To clarify the second part,
-    notice that:
+    note that:
   </p>
 
   <EquationBlock>
