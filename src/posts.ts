@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "6980262e219b201507d0f932e4829567",
+    component: () => import("@/posts/52.vue"),
+    date: dateToString(2014, 9, 9),
+    id: "52",
+    labels: [PostLabel.Cpp, PostLabel.Programming],
+    title: "Adding elements to <code>std::deque</code>: a nasty surprise",
+  },
+  {
     compatibilityIndex: "4515794de9f941c632d593384ca39dea",
     component: () => import("@/posts/51.vue"),
     date: dateToString(2014, 9, 7),
