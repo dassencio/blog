@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "49ca2901b398d175b4356b14cc015532",
+    component: () => import("@/posts/53.vue"),
+    date: dateToString(2014, 9, 18),
+    id: "53",
+    labels: [PostLabel.Linux, PostLabel.Shell],
+    title: "Redirecting output from <code>stderr</code> to <code>stdout</code>",
+  },
+  {
     compatibilityIndex: "6980262e219b201507d0f932e4829567",
     component: () => import("@/posts/52.vue"),
     date: dateToString(2014, 9, 9),
