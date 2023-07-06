@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "bc04395b103021d338b4e30a061bfc74",
+    component: () => import("@/posts/54.vue"),
+    date: dateToString(2014, 9, 19),
+    id: "54",
+    labels: [PostLabel.Electromagnetism, PostLabel.Physics],
+    title: "A proof of Earnshaw's theorem",
+  },
+  {
     compatibilityIndex: "49ca2901b398d175b4356b14cc015532",
     component: () => import("@/posts/53.vue"),
     date: dateToString(2014, 9, 18),
