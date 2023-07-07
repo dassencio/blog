@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "614d73283d49e939ebfb648cfb86819d",
+    component: () => import("@/posts/55.vue"),
+    date: dateToString(2014, 10, 11),
+    id: "55",
+    labels: [PostLabel.Linux, PostLabel.Shell],
+    title: "Getting CPU architecture information with <code>lscpu</code>",
+  },
+  {
     compatibilityIndex: "bc04395b103021d338b4e30a061bfc74",
     component: () => import("@/posts/54.vue"),
     date: dateToString(2014, 9, 19),
