@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "51416695075e0ba12a5bb95029450fdb",
+    component: () => import("@/posts/56.vue"),
+    date: dateToString(2014, 10, 17),
+    id: "56",
+    labels: [PostLabel.Mechanics, PostLabel.Physics],
+    title: "Non-inertial frames of reference",
+  },
+  {
     compatibilityIndex: "614d73283d49e939ebfb648cfb86819d",
     component: () => import("@/posts/55.vue"),
     date: dateToString(2014, 10, 11),
