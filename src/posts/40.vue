@@ -63,7 +63,7 @@
     where it was assumed that $\Vec{X}$ does not fall on the line $r$ (otherwise
     the denominator would vanish; however, the result derived at the end will
     remain valid even if $\Vec{X}$ falls on $r$). From equation
-    \eqref{line-parameterization}, we have that:
+    \eqref{line-parameterization}, we have:
   </p>
 
   <EquationBlock> \Vec{R}'(\lambda) = \Vec{Q} - \Vec{P} </EquationBlock>
