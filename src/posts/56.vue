@@ -302,14 +302,15 @@
   <FigureBlock
     id="coriolis-force"
     caption="The Coriolis force. The velocity of the particle in the frame $S'$
-             is $\Vec{v}_{S'} = \Vec{v}^{\parallel}_{S'} + \Vec{v}_{S'}^{\perp}$,
-             where $\Vec{v}^{\parallel}_{S'}$ and $\Vec{v}^{\perp}_{S'}$ are the
-             components of $\Vec{v}_{S'}$ that are parallel and orthogonal to
-             $\Vecg{\omega}$, respectively. As $\Vecg{\omega} \times
-             \Vec{v}^{\parallel}_{S'} = \Vec{0}$, the Coriolis force equates to
-             $-2m \Vecg{\omega} \times \Vec{v}^{\perp}_{S'}$, which always
-             points to the right of $\Vec{v}_{S'}$ when observed from a
-             perspective where $\Vecg{\omega}$ points toward the observer."
+             is $\Vec{v}_{S'} = \Vec{v}^{\small{\parallel}}_{S'} +
+             \Vec{v}_{S'}^{\perp}$, where $\Vec{v}^{\small{\parallel}}_{S'}$
+             and $\Vec{v}^{\perp}_{S'}$ are the components of $\Vec{v}_{S'}$
+             that are parallel and orthogonal to $\Vecg{\omega}$, respectively.
+             As $\Vecg{\omega} \times \Vec{v}^{\small{\parallel}}_{S'} =
+             \Vec{0}$, the Coriolis force equates to $-2m \Vecg{\omega} \times
+             \Vec{v}^{\perp}_{S'}$, which always points to the right of
+             $\Vec{v}_{S'}$ when observed from a perspective where
+             $\Vecg{\omega}$ points toward the observer."
   >
     <ResponsiveImage alt="Coriolis force" :src="coriolisForce" />
   </FigureBlock>
