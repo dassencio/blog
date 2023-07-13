@@ -15,7 +15,7 @@
   <p>
     In our discussion, the fixed point $O$ will be taken as the origin of a
     Cartesian coordinate system with the $x$ axis pointing along the horizontal
-    direction and the $y$ axis pointing vertically upwards. Let $\theta_1$ and
+    direction and the $y$ axis pointing vertically upward. Let $\theta_1$ and
     $\theta_2$ be the angles that the first and second rods make with the
     vertical direction, respectively. As can be seen in
     <FigureLink id="double-pendulum" />, the positions of the bobs are given by:

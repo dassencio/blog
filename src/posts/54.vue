@@ -38,7 +38,7 @@
     </ListBlockItem>
     <ListBlockItem bullet="2.">
       For a small displacement $\delta\Vec{z}$ of $q$ around $\Vec{z}$, $q
-      \Vec{E}(\Vec{z} + \delta\Vec{z})$ must point towards $\Vec{z}$.
+      \Vec{E}(\Vec{z} + \delta\Vec{z})$ must point toward $\Vec{z}$.
     </ListBlockItem>
   </ListBlock>
 
@@ -47,7 +47,7 @@
     <a href="https://en.wikipedia.org/wiki/Restoring_force">restoring</a>,
     meaning if we move $q$ a little bit away from $\Vec{z}$, this force will
     tend to bring $q$ back to $\Vec{z}$. Since we're assuming $q \gt 0$,
-    $\Vec{E}(\Vec{z} + \delta\Vec{z})$ itself must then point towards $\Vec{z}$
+    $\Vec{E}(\Vec{z} + \delta\Vec{z})$ itself must then point toward $\Vec{z}$
     for the electric force on $q$ to be restoring.
   </p>
 
@@ -58,7 +58,7 @@
     >
     $S$ shaped like a sphere of radius $r$ and centered at $\Vec{z}$ (as shown
     in <FigureLink id="charges-gaussian-surface" />). If $\Vec{E}(\Vec{x})$
-    points towards $q$ (i.e., inwards) for any point $\Vec{x}$ on the surface of
+    points toward $q$ (i.e., inward) for any point $\Vec{x}$ on the surface of
     this sphere, we have:
   </p>
 

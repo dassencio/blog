@@ -20,7 +20,7 @@
     $t$ (see <FigureLink id="non-inertial-frame" />). Our goal is to examine the
     motion of a particle of mass $m$ in both $S$ and $S'$ and determine the
     relationships between the positions, velocities, and accelerations measured
-    in each of these frames. Afterwards, we will study the so-called
+    in each of these frames. Afterward, we will study the so-called
     <a href="https://en.wikipedia.org/wiki/Fictitious_force"
       >fictitious forces</a
     >

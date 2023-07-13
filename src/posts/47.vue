@@ -85,7 +85,7 @@
     The solution to the problem is elegantly simple: the average number of times
     we need to flip the coin until we get a head is $1 / p$. If $p = 1$, every
     coin flip results in a head, so $E_{p=1}[n] = 1$. As $p$ approaches $0$, the
-    coin becomes increasingly biased towards tails, and, unsurprisingly, the
+    coin becomes increasingly biased toward tails, and, unsurprisingly, the
     average number of flips required to get a head increases, diverging as $p
     \rightarrow 0$. For a fair coin, where $p = 1/2$, we find that:
   </p>

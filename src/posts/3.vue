@@ -69,7 +69,7 @@
     Now, let's assume that the equation is valid for $N - 1$ fugitives and
     consider the case where we have $N$ fugitives. After the first two cross and
     one returns with the flashlight (in other words, after two steps), we have
-    $N - 1$ fugitives left to cross the bridge. From that point onwards, there
+    $N - 1$ fugitives left to cross the bridge. From that point onward, there
     are $S_{N - 1}$ steps remaining until all the fugitives have crossed. Hence:
   </p>
 
