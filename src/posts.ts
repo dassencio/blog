@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "e83a797bcee562e2f1a4faa9293316ab",
+    component: () => import("@/posts/57.vue"),
+    date: dateToString(2014, 11, 13),
+    id: "57",
+    labels: [PostLabel.Algorithms, PostLabel.ComputerScience],
+    title: "Detecting cycles on undirected graphs",
+  },
+  {
     compatibilityIndex: "51416695075e0ba12a5bb95029450fdb",
     component: () => import("@/posts/56.vue"),
     date: dateToString(2014, 10, 17),
