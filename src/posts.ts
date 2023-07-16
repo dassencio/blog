@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "50ed9dcd9009dd70c3a2f8822271e4c7",
+    component: () => import("@/posts/59.vue"),
+    date: dateToString(2014, 12, 23),
+    id: "59",
+    labels: [PostLabel.Programming, PostLabel.Python],
+    title: "Generating bitmask permutations in Python",
+  },
+  {
     compatibilityIndex: "8a4390f653cdd7dca0e05db14bd8f760",
     component: () => import("@/posts/58.vue"),
     date: dateToString(2014, 11, 26),

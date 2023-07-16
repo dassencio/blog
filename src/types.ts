@@ -24,6 +24,7 @@ export enum PostLabel {
   Physics = "Physics",
   Probability = "Probability theory",
   Programming = "Programming",
+  Python = "Python",
   QuantumMechanics = "Quantum mechanics",
   RaspberryPi = "Raspberry Pi",
   RealAnalysis = "Real analysis",
