@@ -43,8 +43,8 @@
 
   <p>
     They are much less daunting, aren't they? Dividing or multiplying by $2$ is
-    much easier than by $1.8$, and subtracting or adding $30$ is much simpler
-    than it is with $32$.
+    much easier than by $1.8$, and subtracting or adding $30$ is simpler than it
+    is with $32$.
   </p>
 
   <p>
