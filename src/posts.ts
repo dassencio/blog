@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "8a4390f653cdd7dca0e05db14bd8f760",
+    component: () => import("@/posts/58.vue"),
+    date: dateToString(2014, 11, 26),
+    id: "58",
+    labels: [PostLabel.Physics, PostLabel.Thermodynamics],
+    title: "Converting between Fahrenheit and Celsius the easy way",
+  },
+  {
     compatibilityIndex: "e83a797bcee562e2f1a4faa9293316ab",
     component: () => import("@/posts/57.vue"),
     date: dateToString(2014, 11, 13),

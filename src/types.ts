@@ -35,6 +35,7 @@ export enum PostLabel {
   SSH = "SSH",
   Statistics = "Statistics",
   Technology = "Technology",
+  Thermodynamics = "Thermodynamics",
   USB = "USB",
 }
 

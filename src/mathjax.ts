@@ -51,7 +51,11 @@ window.MathJax = {
 
       // Measurement units.
       Ampere: "\\,\\mathrm{A}",
+      Celsius: "\\,\\mathrm{^{\\circ}C}",
+      CelsiusSlim: "\\mathrm{^{\\circ}C}",
       Day: "\\,\\mathrm{d}",
+      Fahrenheit: "\\,\\mathrm{^{\\circ}F}",
+      FahrenheitSlim: "\\mathrm{^{\\circ}F}",
       Gram: "\\,\\mathrm{g}",
       Joule: "\\,\\mathrm{J}",
       Kilobyte: "\\,\\mathrm{kB}",
