@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "d71346b8737ee449bb09496784c9b344",
+    component: () => import("@/posts/60.vue"),
+    date: dateToString(2014, 12, 30),
+    id: "60",
+    labels: [PostLabel.Linux, PostLabel.Networking],
+    title: "Obtaining and interpreting routing tables on Linux",
+  },
+  {
     compatibilityIndex: "50ed9dcd9009dd70c3a2f8822271e4c7",
     component: () => import("@/posts/59.vue"),
     date: dateToString(2014, 12, 23),
