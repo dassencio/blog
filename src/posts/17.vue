@@ -224,8 +224,8 @@
 
   <p>
     In my case, both <code>libc6</code> and <code>libc6-i686</code> are
-    installed, as indicated by their corresponding lines starting with
-    <code>ii</code>. The i686 version is, as the package description indicates,
+    installed, as can be seen by their corresponding lines starting with
+    <code>ii</code>. The i686 version is, as the package description states,
     optimized for the i686 architecture and therefore not suitable for our use
     case. You can remove it by running (replace <code>libc6</code> with your
     libc version if it's different):
@@ -250,7 +250,7 @@
   />
 
   <p>
-    This indicates that the installed Linux kernel is built for the i686
+    This shows that the installed Linux kernel is built for the i686
     architecture and therefore not compatible with the Alix board. To fix this
     issue, first install the package that contains the kernel for the i486
     architecture:
@@ -460,13 +460,13 @@
 
   <p>
     Write down the number in the <code>Start</code> column for
-    <code>/dev/sda1</code>, as this value indicates the sector where the
+    <code>/dev/sda1</code>, as this value specifies the sector where the
     partition to be extended starts.
   </p>
 
   <p>
-    Next, remove the swap partition, which is number 5 in this example, as
-    indicated by the device node <code>/dev/sda5</code> above:
+    Next, remove the swap partition, which is number 5 in this example, as shown
+    by the device node <code>/dev/sda5</code> above:
   </p>
 
   <CodeBlock
@@ -478,7 +478,7 @@
 
   <p>
     Next, remove the extended partition, which is number 2 in this example, as
-    indicated by the device node <code>/dev/sda2</code> above:
+    shown by the device node <code>/dev/sda2</code> above:
   </p>
 
   <CodeBlock
