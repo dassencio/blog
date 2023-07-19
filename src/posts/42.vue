@@ -43,7 +43,7 @@
   />
 
   <p>
-    The highlighted segments indicate the USB bus number and the device number
+    The highlighted segments specify the USB bus number and the device number
     assigned to your DCP-7055 (<code>ID 04f9:0248</code> identifies "Brother" as
     the manufacturer and "DCP-7055 scanner/printer" as the device). You can find
     the name of the group with permission to use the scanner by running:
