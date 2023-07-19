@@ -149,7 +149,7 @@
   </p>
 
   <p>
-    Strings such as <code>ID 413c:8161</code> indicate the vendor ID
+    Strings such as <code>ID 413c:8161</code> encode the vendor ID
     (<code>413c</code>) and the product ID (<code>8161</code>) of each device.
     In this example, the vendor ID <code>413c</code> belongs to
     <code>Dell Computer Corp.</code>, and product ID <code>8161</code> is
