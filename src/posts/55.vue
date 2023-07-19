@@ -126,7 +126,7 @@
   />
 
   <p>
-    As the comment at the top indicates, each line corresponds to a CPU,
+    As the comment at the top points out, each line corresponds to a CPU,
     starting with CPU <code>0</code>. The values in each line represent the
     following (see also <FigureLink id="cache-hierarchy" />):
   </p>
