@@ -126,9 +126,9 @@
   />
 
   <p>
-    As the comment at the top indicates, each line corresponds to a CPU,
-    starting with CPU <code>0</code>. The values in each line represent the
-    following (see also <FigureLink id="cache-hierarchy" />):
+    As the comment at the top implies, each line corresponds to a CPU, starting
+    with CPU <code>0</code>. The values in each line represent the following
+    (see also <FigureLink id="cache-hierarchy" />):
   </p>
 
   <MapBlock>
