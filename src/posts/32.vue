@@ -68,7 +68,7 @@
   <MapBlock>
     <code>-e &lt;pattern&gt;</code>
     <span>
-      Specifies a pattern for <code>grep</code> to match. As indicated above,
+      Specifies a pattern for <code>grep</code> to match. As shown above,
       <code>grep</code> can match multiple patterns.
     </span>
 
