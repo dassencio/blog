@@ -117,7 +117,7 @@
     To better understand how MAC spoofing works, I conducted the following
     experiment: I changed the MAC address of my laptop to the MAC address of my
     mobile phone and then connected my laptop to my wireless router (my phone
-    was already connected). This caused my phone's internet connection to stop
+    was already connected). This caused my phone's Internet connection to stop
     working, and it only started working again after I disconnected my laptop
     from the wireless router and reconnected my phone. By spoofing my laptop's
     MAC address, I have therefore produced a
@@ -125,7 +125,7 @@
       >denial-of-service</a
     >
     attack against my phone, and if I kept on reconnecting my laptop to the
-    router, my phone would be permanently deprived of internet access.
+    router, my phone would be permanently deprived of Internet access.
   </p>
 
   <p>

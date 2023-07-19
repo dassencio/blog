@@ -46,7 +46,7 @@
     <a href="http://www.debian.org/CD/netinst/">Debian website</a> for an i386
     architecture. This CD image contains just the minimal amount of software you
     will need to start the installation; all necessary packages that do not come
-    with it will be downloaded over the internet.
+    with it will be downloaded over the Internet.
   </p>
 
   <p>
@@ -264,7 +264,7 @@
   />
 
   <NoteBlock>
-    If you encounter issues connecting to the internet within the VM, consider
+    If you encounter issues connecting to the Internet within the VM, consider
     editing the file <code>/etc/resolv.conf</code> and setting the
     <code>nameserver</code> value to match the one in the
     <code>/etc/resolv.conf</code> on your host computer. Alternatively, set it

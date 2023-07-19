@@ -70,7 +70,7 @@
     consider that as you move around your house or apartment, you might already
     experience a difference of a few $\FahrenheitSlim$. Some rooms will be
     warmer than others, and you might not even notice the difference.
-    Additionally, the temperatures reported on the internet, TV, radio, etc.,
+    Additionally, the temperatures reported on the Internet, TV, radio, etc.,
     are simply values measured at some location near you, but not necessarily
     accurate for your exact location. Finally, note that the deviations
     discussed above occur at the extremes of the given temperature range: "very

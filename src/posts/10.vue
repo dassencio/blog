@@ -36,8 +36,8 @@
   <p>
     I recommend this approach as it's easily reversible and keeps the
     NetworkManager installed but inactive. If you run into trouble while trying
-    to connect to the internet, you can still manually start the NetworkManager
-    to re-establish an internet connection and then search for a solution to the
+    to connect to the Internet, you can still manually start the NetworkManager
+    to re-establish an Internet connection and then search for a solution to the
     problem you encountered.
   </p>
 
@@ -56,9 +56,9 @@
 
   <NoteBlock>
     If you uninstall the NetworkManager and stop it, you will immediately lose
-    internet access. Make sure you do this only if you know how to configure
-    your network interfaces and connect to the internet via command line
-    (without internet access, you will not be able to reinstall the
+    Internet access. Make sure you do this only if you know how to configure
+    your network interfaces and connect to the Internet via command line
+    (without Internet access, you will not be able to reinstall the
     NetworkManager with <code>apt-get</code>). If in doubt about whether this is
     a safe approach, consider using option #1 above.
   </NoteBlock>
