@@ -66,7 +66,7 @@
     $\textrm{layer}(x)$ for a vertex $x$, provides an ordered grouping of
     vertices by their distance from the starting vertex. Initially, $v$ is
     assigned a layer of $0$ while all other vertices are assigned a layer of
-    $-1$ to indicate that they haven't been explored yet. As the BFS progresses
+    $-1$ to signify that they haven't been explored yet. As the BFS progresses
     layer by layer, our goal is to ascertain whether it's possible to reach a
     vertex in the graph from $v$ via two distinct paths. We can leverage the
     layer information of the vertices to achieve this. Should a cycle exist
