@@ -252,10 +252,10 @@
   />
 
   <p>
-    The highlighted line indicates that the symbols required from
+    The highlighted line states that the symbols required from
     <code>libX11.so</code> can be found in
     <code>/usr/lib/x86_64-linux-gnu/libX11.so</code>. This file is likely a
-    symbolic link to the dynamic library whose name indicates the version number
+    symbolic link to the dynamic library whose name specifies the version number
     we're seeking. You can determine the location of that file using the
     <a href="http://linux.die.net/man/2/readlink"><code>readlink</code></a>
     command:
