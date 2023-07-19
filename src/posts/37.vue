@@ -30,7 +30,7 @@
   <CodeBlock code="no hostkey alg" />
 
   <p>
-    Each of the errors above indicates that the server does not support any
+    Each of the errors above states that the server does not support any
     combination of the necessary cryptographic algorithms (ciphers, MACs, etc.)
     that you allow your SSH client to use when connecting to it. In such a
     situation, you can manually override the set of allowed cryptographic
@@ -104,8 +104,8 @@
   />
 
   <p>
-    The first set of lines in the debug message indicates the algorithms that
-    your client is permitted to use, while the second set reveals the algorithms
+    The first set of lines in the debug message display the algorithms that your
+    client is permitted to use, while the second set reveals the algorithms
     supported by the server. If the server doesn't support any possible
     combination of algorithms in your chosen set, you will encounter an error
     similar to those mentioned above. In such scenarios, the
