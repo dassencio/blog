@@ -21,7 +21,7 @@
   </EquationBlock>
 
   <p>
-    where $\|\Vec{x}\| \leq r_0$ indicates that the integral should be computed
+    where $\|\Vec{x}\| \leq r_0$ expresses that the integral should be computed
     over a sphere of radius $r_0$ centered at the origin, where the center of
     the proton is assumed to be located. However, my professor offered an
     ingenious alternative. He suggested it would be more practical to compute
