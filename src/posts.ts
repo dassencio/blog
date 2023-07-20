@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "26abaf6aa4fd450564a038d599bb7f5c",
+    component: () => import("@/posts/61.vue"),
+    date: dateToString(2015, 1, 19),
+    id: "61",
+    labels: [PostLabel.Linux],
+    title: "Fixing <code>bmake</code> compilation errors on Linux",
+  },
+  {
     compatibilityIndex: "d71346b8737ee449bb09496784c9b344",
     component: () => import("@/posts/60.vue"),
     date: dateToString(2014, 12, 30),
