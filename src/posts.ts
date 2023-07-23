@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "86c137b502561d44b8be02f06d80ee16",
+    component: () => import("@/posts/63.vue"),
+    date: dateToString(2015, 4, 9),
+    id: "63",
+    labels: [PostLabel.Programming, PostLabel.R],
+    title: "Pausing R scripts with a generic pause function",
+  },
+  {
     compatibilityIndex: "36c4c02124a10282d8a0f92277a43ec4",
     component: () => import("@/posts/62.vue"),
     date: dateToString(2015, 4, 5),
