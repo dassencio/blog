@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "36c4c02124a10282d8a0f92277a43ec4",
+    component: () => import("@/posts/62.vue"),
+    date: dateToString(2015, 4, 5),
+    id: "62",
+    labels: [PostLabel.Algorithms, PostLabel.ComputerScience],
+    title: "Lossless data compression with Huffman coding",
+  },
+  {
     compatibilityIndex: "26abaf6aa4fd450564a038d599bb7f5c",
     component: () => import("@/posts/61.vue"),
     date: dateToString(2015, 1, 19),
