@@ -1,5 +1,9 @@
 <template>
+  <div v-if="paragraphMode" class="code">
+    <div class="code__contents"><slot></slot></div>
+  </div>
   <pre
+    v-else
     class="code"
     v-highlightjs
   ><code class="code__contents" :class="language" v-html="code"></code></pre>
@@ -15,11 +19,13 @@ const props = withDefaults(
     code: string;
     highlightDelimiter?: string;
     language?: string;
+    paragraphMode?: boolean;
   }>(),
   {
     code: "",
     highlightDelimiter: "**",
     language: "plaintext",
+    paragraphMode: false,
   }
 );
 
