@@ -10,10 +10,10 @@
   </p>
 
   <p>
-    The easiest way to solve this problem is by using a non-inertial frame of
-    reference that rotates with the bucket. The vertical axis $z'$ of this
-    rotating frame is chosen to be the axis of rotation of the bucket, as shown
-    in <FigureLink id="rotating-bucket" />. At the point where the fluid is
+    One way to solve this problem is by using a non-inertial frame of reference
+    that rotates with the bucket. The vertical axis $z'$ of this rotating frame
+    is chosen to be the axis of rotation of the bucket, as shown in
+    <FigureLink id="rotating-bucket" />. At the point where the fluid is
     rotating with the bucket at angular frequency $\omega$, the fluid appears to
     be at rest in this rotating frame.
   </p>
