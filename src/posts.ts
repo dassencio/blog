@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "d01265d3700dd27dd99a4e6ee3ac67eb",
+    component: () => import("@/posts/65.vue"),
+    date: dateToString(2015, 4, 25),
+    id: "65",
+    labels: [PostLabel.RaspberryPi, PostLabel.Technology],
+    title: "Resolving <code>iptables</code> errors on a Raspberry Pi",
+  },
+  {
     compatibilityIndex: "195438f696c2c11e15340392ea2bf1cc",
     component: () => import("@/posts/64.vue"),
     date: dateToString(2015, 4, 22),
