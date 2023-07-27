@@ -71,9 +71,9 @@
   <p>
     The term $\Vec{F}_S$ is the sum of the only two forces experienced in the
     non-rotating frame $S$: the gravitational force and the force exerted on the
-    fluid element by the surrounding fluid. Up to this point, we have not
-    explicitly assumed that the fluid element is at the surface, so the equation
-    below applies to any fluid element:
+    fluid element by the surrounding fluid. Until now, we haven't made any
+    assumptions about the location of the fluid element. As such, the following
+    equation applies to any fluid element:
   </p>
 
   <EquationBlock>
