@@ -36,7 +36,7 @@
     <RouterLink :to="{ name: '56' }">previous post</RouterLink>, the following
     equation relates the force $\Vec{F}_S$ experienced by a fluid element of
     mass $m$ in $S$, and the effective force $\Vec{F}^{\textrm{eff}}_{S'}$
-    experienced by this same fluid element in $S'$ (terms which trivially vanish
+    experienced by this same fluid element in $S'$ (terms that trivially vanish
     were omitted below):
   </p>
 
@@ -133,7 +133,7 @@
     distance between this point and the $z$ axis, due to the cylindrical
     symmetry of $\Vec{g}^{\textrm{eff}}$. Indeed, along any radial line that
     passes through the $z$ axis, $\DDi{h}{\rho}$ is the tangent to the curve
-    $h(\rho)$ at a point that is a distance $\rho$ away from the $z$ axis:
+    $h(\rho)$ at a point that is at a distance $\rho$ from the $z$ axis:
   </p>
 
   <EquationBlock>
