@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "df0bdbd936cfac191141770bf91a6b6e",
+    component: () => import("@/posts/66.vue"),
+    date: dateToString(2015, 7, 19),
+    id: "66",
+    labels: [PostLabel.AppliedMathematics, PostLabel.ScientificComputing],
+    title: "Denoising data without using fitting functions",
+  },
+  {
     compatibilityIndex: "d01265d3700dd27dd99a4e6ee3ac67eb",
     component: () => import("@/posts/65.vue"),
     date: dateToString(2015, 4, 25),
