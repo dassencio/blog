@@ -220,11 +220,11 @@
   </p>
 
   <ListBlock>
-    <ListBlockItem bullet="1">
+    <ListBlockItem bullet="1.">
       Compute $\Vec{b}$ and $A$ according to equations \eqref{b} and \eqref{A},
       respectively.
     </ListBlockItem>
-    <ListBlockItem bullet="2">
+    <ListBlockItem bullet="2.">
       Solve the linear system given in equation \eqref{normal-equations}; its
       solution $\Vec{\tilde{x}}$ is the denoised version of the sequence
       $\Vec{x}$.
@@ -317,31 +317,31 @@
     The results are now intriguing. Why is there so much oscillation in the
     denoised sequence? To answer this question, let's first consider the
     original matrix $D_{n-1}$. If $D_{n-1} \Vec{z} = \Vec{0}$ for some
-    $n$-dimensional vector $\Vec{z}$, then by the definition of $D_{n-1}$ we
+    $n$-dimensional vector $\Vec{z}$, then, by the definition of $D_{n-1}$, we
     must have $z_2 - z_1 = 0$, $z_3 - z_2 = 0$, $\ldots$, $z_n - z_{n-1} = 0$,
-    so $z_1 = z_2 = \ldots = z_n$. Therefore, the only vector in the
+    so $z_1 = z_2 = \ldots = z_n$. Therefore, the only vectors in the
     <a href="https://en.wikipedia.org/wiki/Kernel_%28linear_algebra%29"
       >null space</a
     >
-    of $D_{n-1}$ is the constant vector (as it should be for a well-behaved
-    derivative operator). $D^c_{n-2}$, on the other hand, has a significant
-    flaw: $D^c_{n-2} \Vec{z} = \Vec{0}$ only implies that $z_1 = z_3$, $z_2 =
-    z_4$, $z_3 = z_5$, $z_4 = z_6$, and so on. As long as all the odd and even
-    elements of $\Vec{z}$ are set to two distinct constants $c_{\textrm{odd}}$
-    and $c_{\textrm{even}}$, the resulting vector will be in the null space of
-    $D^c_{n-2}$. This implies that highly oscillatory vectors such as $\Vec{z} =
-    (1, -1, 1, -1, \ldots)$ are in the null space of $D^c_{n-2}$ and thus incur
-    no error on the second term of equation \eqref{cost-function-2}. This is why
-    the resulting "denoised sequence" is afflicted by a distinctly visible
-    oscillatory noise that is actually observable even for large values of
-    $\mu$.
+    of $D_{n-1}$ are those representing constant sequences (as it should be for
+    a well-behaved derivative operator). $D^c_{n-2}$, on the other hand, has a
+    significant flaw: $D^c_{n-2} \Vec{z} = \Vec{0}$ only implies that $z_1 =
+    z_3$, $z_2 = z_4$, $z_3 = z_5$, $z_4 = z_6$, and so on. As long as all the
+    "odd" and "even" elements of $\Vec{z}$ are set to two independent constants
+    $c_{\textrm{odd}}$ and $c_{\textrm{even}}$, respectively, the resulting
+    vector will be in the null space of $D^c_{n-2}$. This implies that highly
+    oscillatory vectors such as $\Vec{z} = (1, -1, 1, -1, \ldots)$ are in the
+    null space of $D^c_{n-2}$ and thus incur no error on the second term of
+    equation \eqref{cost-function-2}. This is why the resulting denoised
+    sequence is afflicted by a distinctly visible oscillatory noise that is
+    observable even for large values of $\mu$.
   </p>
 
   <p>
     Rather than attempting to create a smooth sequence by restricting the values
-    that the first derivative of the denoised sequence can assume, we can
-    instead constrain the values of its second derivative. By using the
-    second-order accurate
+    that the first derivative of the denoised sequence can take, we can instead
+    constrain the values of its second derivative. By using the second-order
+    accurate
     <a
       href="https://en.wikipedia.org/wiki/Finite_difference#Higher-order_differences"
       >central difference</a
