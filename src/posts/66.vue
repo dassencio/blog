@@ -59,7 +59,7 @@
   <p>
     Now, let's shift our attention to the second criterion. Noisy data often
     features significant differences between adjacent values; in other words,
-    $x_i$ and $x_{i+1}$ can vary considerably. In contrast, smooth data
+    $x_i$ and $x_{i+1}$ can differ considerably. In contrast, smooth data
     satisfies $x_i \approx x_{i+1}$. Ideally, our generated denoised sequence
     $\tilde{x}_i$ should minimize the following quantity:
   </p>
@@ -264,15 +264,13 @@
     As previously discussed, $D_{n-1} \Vec{\tilde{x}}$ represents a derivative
     computed at each point $\tilde{x}_i$ for $i = 2, 3, \ldots, n$. In
     particular, it represents a first-order accurate
-    <a
-      href="https://en.wikipedia.org/wiki/Finite_difference#Forward.2C_backward.2C_and_central_differences"
+    <a href="https://en.wikipedia.org/wiki/Finite_difference#Basic_types"
       >backward difference</a
     >
     approximation to these derivatives. However, there are alternative formulas
     that could be used for this purpose. For instance, if we employ the
     second-order accurate
-    <a
-      href="https://en.wikipedia.org/wiki/Finite_difference#Forward.2C_backward.2C_and_central_differences"
+    <a href="https://en.wikipedia.org/wiki/Finite_difference#Basic_types"
       >central difference</a
     >
     formula, we derive the following cost function:
