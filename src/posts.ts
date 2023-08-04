@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "9659cade0e5077813008c3f34f416c36",
+    component: () => import("@/posts/67.vue"),
+    date: dateToString(2015, 7, 24),
+    id: "67",
+    labels: [PostLabel.Linux, PostLabel.Networking],
+    title: "Extracting a host's network traffic from a pcap file",
+  },
+  {
     compatibilityIndex: "df0bdbd936cfac191141770bf91a6b6e",
     component: () => import("@/posts/66.vue"),
     date: dateToString(2015, 7, 19),
