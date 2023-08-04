@@ -26,16 +26,17 @@
   </p>
 
   <p>
-    As a side note, <code>tcpdump</code> will automatically determine a mapping
+    As a side note, <code>tcpdump</code> will automatically build a mapping
     between IP addresses and
-    <a href="https://en.wikipedia.org/wiki/MAC_address">MAC addresses</a>, so
-    non-IP traffic associated with the given host (e.g.,
+    <a href="https://en.wikipedia.org/wiki/MAC_address">MAC addresses</a> from
+    the packets in the pcap file, so non-IP traffic associated with the given
+    host (e.g.,
     <a href="https://en.wikipedia.org/wiki/Address_Resolution_Protocol">ARP</a>
     and other
     <a href="https://en.wikipedia.org/wiki/OSI_model">layer 2</a> protocols) may
-    be extracted as well, since <code>tcpdump</code> will be able to determine
-    that those packets were sent or received by that host. You can extract only
-    IPv4 traffic for the host with the following command:
+    be extracted as well, since <code>tcpdump</code> will assume that those
+    packets were sent or received by that host. To only extract IPv4 traffic for
+    the host, use the following command:
   </p>
 
   <CodeBlock
