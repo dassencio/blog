@@ -1,6 +1,6 @@
 <template>
   <p>
-    Consider a set of $n$ values $x_i$, where $i = 1, 2, \ldots, n$. The
+    Consider a sequence of $n$ values $x_i$, where $i = 1, 2, \ldots, n$. The
     <a href="https://en.wikipedia.org/wiki/Arithmetic_mean">arithmetic mean</a>
     $\mu_n$ of these values is defined as follows:
   </p>
@@ -14,12 +14,13 @@
     computing the sum of all values $x_i$ presents a problem: it can lead to
     cascading rounding errors due to the inherent limitations of
     <a href="https://en.wikipedia.org/wiki/Floating_point"
-      >floating point arithmetic</a
+      >floating-point arithmetic</a
     >. Specifically, when aggregating the values $x_i$, the partial sum may
-    become excessively large, in which case adding the next value $x_i$ may be
-    akin to adding a small number to a large one. Given the finite precision
-    involved in these additions, the accuracy of each computed partial sum may
-    progressively decline, compromising the accuracy of the computed mean value.
+    become excessively large, in which case adding the next value $x_i$ can be
+    equivalent to adding a small number to a large one. Given the finite
+    precision involved in these additions, the accuracy of each computed partial
+    sum may progressively decline, compromising the accuracy of the computed
+    mean value.
   </p>
 
   <p>
@@ -49,32 +50,32 @@
 
   <p>
     Equation \eqref{mean-recursive} provides a recursive formula for computing
-    $\mu_n$ using the values of $\mu_{n-1}$ and $x_n$. This method requires
-    computing $\mu_{n-1}$ before $\mu_n$, which implies the need for computing
-    $\mu_{n-2}$ before determining $\mu_{n-1}$, and so on. Therefore, to compute
-    $\mu_n$, we must first compute $\mu_1, \mu_2, \ldots, \mu_{n-1}$. Although
-    this method involves more arithmetic operations than directly using
-    \eqref{mean}, making it computationally more expensive, its
+    $\mu_n$ using the values of $\mu_{n-1}$ and $x_n$. It requires knowing
+    $\mu_{n-1}$ to compute $\mu_n$, which in turn implies $\mu_{n-2}$ must be
+    computed prior to $\mu_{n-1}$, and so on. Therefore, to compute $\mu_n$, we
+    must first sequentially compute $\mu_1, \mu_2, \ldots, \mu_{n-1}$. While
+    this approach involves more arithmetic operations than directly using
+    \eqref{mean}, resulting in higher computational cost, its
     <a href="https://en.wikipedia.org/wiki/Time_complexity">time complexity</a>
     remains $O(n)$.
   </p>
 
   <p>
     So, why is the recursive formula \eqref{mean-recursive} preferred over the
-    sum formula \eqref{mean}? The answer lies in its ability to better avoid
+    sum formula \eqref{mean}? The answer lies in its ability to better prevent
     arithmetic operations with large and small numbers. One potential drawback
-    is that the factor $1/n$ can cause the second term to become significantly
+    is that the factor $1/n$ can cause the second term to be significantly
     smaller than the first if $n$ is very large. However, in practice, this
-    issue is less significant than the accuracy problems discussed earlier.
+    issue is less of a concern than the accuracy problems discussed earlier.
   </p>
 
   <p>
     To illustrate the practical difference between equations \eqref{mean} and
     \eqref{mean-recursive}, suppose we roll a six-faced dice $n$ times and
-    compute the mean value of the face that lands upwards (the dice does not
-    have to be fair). Let's say each face $k = 1, 2, \ldots, 6$ lands upward
-    $n_k$ times. For this particular scenario, the exact mean value
-    $\mu^{\small{(e)}}_n$ of the top face is given by:
+    compute the mean value of the face that lands upward (the dice does not have
+    to be fair). Let's say each face $k = 1, 2, \ldots, 6$ lands upward $n_k$
+    times. The exact mean value $\mu^{\small{(e)}}_n$ of the top face is then
+    given by:
   </p>
 
   <EquationBlock>
@@ -85,13 +86,14 @@
 
   <p>
     where $x_i$ represents the result of the $i$-th roll. Let's denote the mean
-    values computed using equations \eqref{mean} and \eqref{mean-recursive} as
-    $\mu^{\small{(s)}}_n$ and $\mu^{\small{(r)}}_n$ (where $s$ and $r$ stand for
-    "sum" and "recursive", respectively). We can assess the accuracy of each
-    technique by comparing these computed values with the exact value
-    $\mu^{\small{(e)}}_n$. <TableLink id="mean-values" capitalized /> presents
-    numerical results obtained for different sets of values $(n_1, n_2, \ldots,
-    n_6)$. These results were obtained using
+    values computed numerically using equations \eqref{mean} and
+    \eqref{mean-recursive} as $\mu^{\small{(s)}}_n$ and $\mu^{\small{(r)}}_n$,
+    where $s$ and $r$ stand for "sum" and "recursive", respectively. We can
+    assess the accuracy of each technique by comparing these computed values
+    with the exact value $\mu^{\small{(e)}}_n$.
+    <TableLink id="mean-values" capitalized /> presents numerical results
+    obtained for various combinations of values for each of the variables $(n_1,
+    n_2, \ldots, n_6)$. These results were obtained using
     <a
       href="https://en.wikipedia.org/wiki/Single-precision_floating-point_format"
       >single-precision</a
@@ -161,13 +163,13 @@
   <p>
     As a concluding remark, it should be noted that the recursive formula does
     not always yield more accurate results than the sum formula. Typically, when
-    rounding errors inherent to floating-point arithmetic are not a significant
-    factor, the sum formula is likely to provide greater accuracy. This is
-    because the recursive formula involves more arithmetic operations, such as
-    multiplication and division, which are more susceptible to rounding errors
-    than addition and subtraction. However, the recursive formula is generally
-    more resilient against rounding errors, making it a more reliable technique
-    for computing the mean of arbitrary sequences of values.
+    the computations are not heavily affected by rounding errors, the sum
+    formula is likely to yield greater accuracy. This is because the recursive
+    formula involves more arithmetic operations, including multiplications and
+    divisions, both of which are more susceptible to rounding errors than
+    additions and subtractions. However, the recursive formula is generally more
+    resilient against rounding errors, making it a more reliable technique for
+    computing the mean of arbitrary sequences of values.
   </p>
 </template>
 
@@ -184,7 +186,7 @@ import numpy
 # Dice face values.
 face_values = [1, 2, 3, 4, 5, 6]
 
-# Number of times each dice face falls upwards.
+# Number of times each dice face lands upward.
 n_face = [4000000, 2000000, 1000000, 4000000, 2000000, 5000000]
 
 # Create a shuffled sequence of dice rolls.
