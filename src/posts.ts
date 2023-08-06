@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "c34d06f4f4de2375658ed41f70177d59",
+    component: () => import("@/posts/68.vue"),
+    date: dateToString(2015, 7, 26),
+    id: "68",
+    labels: [PostLabel.AppliedMathematics, PostLabel.ScientificComputing],
+    title: "Numerically stable computation of arithmetic means",
+  },
+  {
     compatibilityIndex: "9659cade0e5077813008c3f34f416c36",
     component: () => import("@/posts/67.vue"),
     date: dateToString(2015, 7, 24),
