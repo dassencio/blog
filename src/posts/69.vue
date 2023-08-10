@@ -76,7 +76,8 @@
     <code>Compare</code> is a comparison class provided by the user to specify
     an
     <a href="https://en.wikipedia.org/wiki/Total_order">order relation</a> for
-    the elements within the priority queue. <code>Compare</code> defaults to
+    the elements within the priority queue. If <code>Container</code> is
+    <code>std::vector&lt;T&gt;</code>, <code>Compare</code> defaults to
     <a href="http://www.cplusplus.com/reference/functional/less/"
       ><code>std::less&lt;T&gt;</code></a
     >, a class that contains the following member function:
@@ -312,9 +313,7 @@
 
   <CodeBlock code="1 2 3 4" />
 
-  <SectionTitle
-    >Bonus: Examining the runtime complexity of heap construction</SectionTitle
-  >
+  <SectionTitle>Bonus: Runtime complexity of heap construction</SectionTitle>
 
   <p>
     When the elements to be inserted into the heap are known in advance, it's
