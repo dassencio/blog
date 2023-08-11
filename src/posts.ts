@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "f985010e0a51a5bb6348ec8a2f48d055",
+    component: () => import("@/posts/70.vue"),
+    date: dateToString(2015, 9, 7),
+    id: "70",
+    labels: [PostLabel.Cpp, PostLabel.Programming],
+    title: "Working with max- and min-heaps in C++, part II",
+  },
+  {
     compatibilityIndex: "d59df235a67e8efaec11682d86ac28e9",
     component: () => import("@/posts/69.vue"),
     date: dateToString(2015, 8, 30),
