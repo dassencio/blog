@@ -319,7 +319,7 @@
     When the elements to be inserted into the heap are known in advance, it's
     more efficient to build the heap directly from these elements rather than
     inserting them one at a time. For example, if $n$ elements are inserted
-    one-by-one as we did above, the runtime complexity would be $O(n\log(n))$.
+    one-by-one as we did above, the runtime complexity would be $O(n\log_2(n))$.
     However, if all elements are known beforehand and stored, for instance, in a
     vector, we can construct the heap in $O(n)$ time using the
     <a
