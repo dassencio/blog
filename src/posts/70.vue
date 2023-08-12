@@ -244,10 +244,10 @@
   <SectionTitle>Bonus: Runtime complexity of heap construction</SectionTitle>
 
   <p>
-    As we mentioned in <RouterLink :to="{ name: '69' }">part 1</RouterLink>, a
-    heap can be constructed in time $O(n)$ instead of $O(n\log(n))$ if we first
-    store its elements in an array and then rearrange the array elements using
-    the
+    As discussed in <RouterLink :to="{ name: '69' }">part 1</RouterLink>, a heap
+    with $n$ elements can be constructed in time $O(n)$ instead of
+    $O(n\log_2(n))$ if we first store its elements in an array and then
+    rearrange the array elements using the
     <a
       href="https://www.cs.princeton.edu/~wayne/kleinberg-tardos/pdf/DemoHeapify.pdf"
       >heapify</a
@@ -274,8 +274,8 @@
         // Print the value of the element at the root of the heap.
         std::cout << Q.front() << " ";
 
-        // Swap the root with the rightmost array element and then "bubble
-        // down" the element placed at the root.
+        // Swap the root and the rightmost array element, then "bubble down"
+        // the element placed at the root to restore the heap property.
         std::pop_heap(Q.begin(), Q.end());
 
         // Remove the last array element (previously the root).
