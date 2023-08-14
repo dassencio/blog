@@ -92,12 +92,12 @@
     output_file = open('myfile.bin', 'wb')
 
     var_int = 42
-    var_string = 'Hello, world!'
+    var_str = 'Hello, world!'
     var_list = ['dog', 'cat', 'lizard']
-    var_dict = { 'name': 'Bob', 'job': 'Astronaut' }
+    var_dict = {'name': 'Bob', 'job': 'Astronaut'}
 
     pickle.dump(var_int, output_file)
-    pickle.dump(var_string, output_file)
+    pickle.dump(var_str, output_file)
     pickle.dump(var_list, output_file)
     pickle.dump(var_dict, output_file)
 
@@ -114,8 +114,8 @@
     that <code>pickle</code> uses has evolved over time. I recommend always
     using Python 3.x with <code>pickle</code> to sidestep potential
     compatibility issues. For those curious, here are the contents of
-    <code>myfile.bin</code> when using <code>hexdump</code>, assuming the script
-    above runs on Python 3.4.0:
+    <code>myfile.bin</code> obtained using <code>hexdump</code>, assuming the
+    script above runs on Python 3.4.0:
   </p>
 
   <CodeBlock
@@ -145,12 +145,12 @@
     input_file = open('myfile.bin', 'rb')
 
     var_int = pickle.load(input_file)
-    var_string = pickle.load(input_file)
+    var_str = pickle.load(input_file)
     var_list = pickle.load(input_file)
     var_dict = pickle.load(input_file)
 
     print('var_int = %s' % var_int)
-    print('var_string = %s' % var_string)
+    print('var_str = %s' % var_str)
     print('var_list = %s' % var_list)
     print('var_dict = %s' % var_dict)
 
@@ -166,9 +166,9 @@
   <CodeBlock
     code="
     var_int = 42
-    var_string = 'Hello, world!'
+    var_str = Hello, world!
     var_list = ['dog', 'cat', 'lizard']
-    var_dict = {'job': 'Astronaut', 'name': 'Bob'}
+    var_dict = {'name': 'Bob', 'job': 'Astronaut'}
     "
   />
 
@@ -197,7 +197,7 @@
     pickle.dump(42, sys.stdout.buffer)
     pickle.dump('Hello, world!', sys.stdout.buffer)
     pickle.dump(['dog', 'cat', 'lizard'], sys.stdout.buffer)
-    pickle.dump({ 'name': 'Bob', 'job': 'Astronaut' }, sys.stdout.buffer)
+    pickle.dump({'name': 'Bob', 'job': 'Astronaut'}, sys.stdout.buffer)
 
     # Flush the stdout buffer.
     sys.stdout.flush()
@@ -206,20 +206,20 @@
 
   <p>
     The code just shown works with Python 3.x but not Python 2.x (everything
-    else presented here works with both versions of Python). This is the version
-    of the code above that works with Python 2.x:
+    else presented so far in this post works with both versions of Python). This
+    is the version of the code above that works with Python 2.x:
   </p>
 
   <CodeBlock
     language="python"
     code="
-    import sys
     import pickle
+    import sys
 
     pickle.dump(42, sys.stdout)
     pickle.dump('Hello, world!', sys.stdout)
     pickle.dump(['dog', 'cat', 'lizard'], sys.stdout)
-    pickle.dump({ 'name': 'Bob', 'job': 'Astronaut' }, sys.stdout)
+    pickle.dump({'name': 'Bob', 'job': 'Astronaut'}, sys.stdout)
 
     # Flush the stdout buffer.
     sys.stdout.flush()
