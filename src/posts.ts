@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "99d3134bb98fdcc9a7c2bd6071db737d",
+    component: () => import("@/posts/71.vue"),
+    date: dateToString(2015, 9, 18),
+    id: "71",
+    labels: [PostLabel.Programming, PostLabel.Python],
+    title: "Writing to binary files in Python",
+  },
+  {
     compatibilityIndex: "f985010e0a51a5bb6348ec8a2f48d055",
     component: () => import("@/posts/70.vue"),
     date: dateToString(2015, 9, 7),
