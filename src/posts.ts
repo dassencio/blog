@@ -435,7 +435,7 @@ const posts: Post[] = [
     component: () => import("@/posts/22.vue"),
     date: dateToString(2013, 12, 23),
     id: "22",
-    labels: [PostLabel.Linux, PostLabel.USB],
+    labels: [PostLabel.Linux, PostLabel.Peripherals, PostLabel.USB],
     title: "Disabling USB devices from a host controller on Linux",
   },
   {
@@ -443,7 +443,7 @@ const posts: Post[] = [
     component: () => import("@/posts/21.vue"),
     date: dateToString(2013, 12, 19),
     id: "21",
-    labels: [PostLabel.Linux, PostLabel.USB],
+    labels: [PostLabel.Linux, PostLabel.Peripherals, PostLabel.USB],
     title: "Interpreting the output of <code>lsusb</code>",
   },
   {
