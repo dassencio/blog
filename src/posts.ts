@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "be83d9c57ef2d0c138c880ce222471eb",
+    component: () => import("@/posts/73.vue"),
+    date: dateToString(2015, 10, 14),
+    id: "73",
+    labels: [PostLabel.Mechanics, PostLabel.Physics],
+    title: "Elastic forces on a rubber band",
+  },
+  {
     compatibilityIndex: "bd2985d293fcd5959b3b4f4f36d3965a",
     component: () => import("@/posts/72.vue"),
     date: dateToString(2015, 10, 5),

@@ -48,6 +48,7 @@ window.MathJax = {
       DDi: ["d#1/d#2", 2], // Derivative (inline, flat fraction).
       DDo: ["\\frac{d}{d#1}", 1], // Derivative as an operator (fraction).
       PP: ["\\frac{\\partial #1}{\\partial #2}", 2], // Partial derivative (fraction).
+      PPo: ["\\frac{\\partial}{\\partial #1}", 1], // Partial derivative as an operator (fraction).
 
       // Measurement units.
       Ampere: "\\,\\mathrm{A}",
