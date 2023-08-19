@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "0aaa86531535669388d4aa67b44e1f26",
+    component: () => import("@/posts/74.vue"),
+    date: dateToString(2015, 10, 15),
+    id: "74",
+    labels: [PostLabel.Linux, PostLabel.Shell],
+    title: "Adjusting PulseAudio volume via the command line",
+  },
+  {
     compatibilityIndex: "be83d9c57ef2d0c138c880ce222471eb",
     component: () => import("@/posts/73.vue"),
     date: dateToString(2015, 10, 14),
