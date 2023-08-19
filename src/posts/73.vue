@@ -223,8 +223,8 @@
     To conclude, it's worth noting that our analysis did not make use of the
     assumption that the elastic band is a closed loop. As such, the results
     derived above are applicable to elastic fibers in general. Elastic fibers
-    are pivotal in many numerical simulations, particularly those involving
-    fluid-structure interactions. As an example, the
+    are very important in certain types of numerical simulations, particularly
+    those involving fluid-structure interactions. As an example, the
     <a href="https://en.wikipedia.org/wiki/Immersed_boundary_method"
       >immersed boundary method</a
     >, which was developed by
