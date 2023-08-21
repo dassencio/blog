@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "2e182d595da3f4f04b8526111476e64d",
+    component: () => import("@/posts/76.vue"),
+    date: dateToString(2015, 11, 12),
+    id: "76",
+    labels: [PostLabel.Linux, PostLabel.Shell],
+    title: "Negating globbing patterns in Bash",
+  },
+  {
     compatibilityIndex: "649b7a71b35fc7ad41e03b6d0e825f07",
     component: () => import("@/posts/75.vue"),
     date: dateToString(2015, 11, 9),
