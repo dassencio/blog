@@ -161,7 +161,7 @@
 
   <p>
     As we previously discussed, domain numbers are typically omitted since they
-    usually default to zero. However, if you'd like to force
+    usually default to zero. However, if you would like to force
     <code>lspci</code> to display these domain numbers, use the
     <code>-D</code> flag:
   </p>
@@ -358,7 +358,7 @@
   <CodeBlock code="lspci -vmm" />
 
   <p>
-    The results are straightforward to interpret. Here is how it appears for the
+    The output is straightforward to interpret. Here is how it appears for the
     first three devices on my laptop:
   </p>
 
