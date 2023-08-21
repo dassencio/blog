@@ -3,8 +3,9 @@
     On Linux, you can list and inspect all PCI devices connected to a host (a
     computer) using a CLI tool called
     <a href="http://linux.die.net/man/8/lspci"><code>lspci</code></a
-    >. This tool is typically included in the <code>pciutils</code> package,
-    which is pre-installed on most Linux distributions.
+    >. This tool is typically included in the
+    <a href="https://github.com/pciutils/pciutils"><code>pciutils</code></a>
+    package, which is pre-installed on most Linux distributions.
   </p>
 
   <p>
