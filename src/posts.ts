@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "63f2ce1a5c3bb291485c0ef5fb8223f2",
+    component: () => import("@/posts/77.vue"),
+    date: dateToString(2015, 11, 14),
+    id: "77",
+    labels: [PostLabel.Calculus, PostLabel.Mathematics],
+    title: "An interpretation of the Lagrange multiplier method",
+  },
+  {
     compatibilityIndex: "2e182d595da3f4f04b8526111476e64d",
     component: () => import("@/posts/76.vue"),
     date: dateToString(2015, 11, 12),
