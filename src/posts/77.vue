@@ -94,7 +94,7 @@
   </p>
 
   <p>
-    This naturally raises a question: how do we mathematically ascertain what
+    This naturally raises a question: how do we mathematically express what
     "perpendicular to the feasible surface" means? The key is in the constraints
     in equation \eqref{constraints}. For each function $g_k(\Vec{x})$, the
     condition $g_k(\Vec{x}) = 0$ defines a
@@ -119,7 +119,7 @@
     Therefore, $\nabla g_k(\Vec{x}) \cdot \delta\Vec{x} = 0$ since $g_k(\Vec{x})
     = 0$. This means that for every point $\Vec{x}$ on the zero level set of
     $g_k(\Vec{x})$, the gradient $\nabla g_k(\Vec{x})$ is locally perpendicular
-    to the level surface set at $\Vec{x}$.
+    to this surface at $\Vec{x}$.
   </p>
 
   <p>
@@ -129,17 +129,17 @@
     we consider an infinitesimal displacement $\delta\Vec{x}$ that is parallel
     to this plane, the point $\Vec{x} + \delta\Vec{x}$ continues to be on the
     zero level set of $g_k(\Vec{x})$. Now, when $\Vec{x}$ is part of the
-    feasible surface, it simultaneously exists on the zero level set of all the
+    feasible surface, it simultaneously exists on the zero level sets of all the
     functions $g_k(\Vec{x})$, meaning there are $m$ planes, each passing through
     $\Vec{x}$ and perpendicular to the zero level sets of their respective
     $g_k(\Vec{x})$ for $k = 1, 2, \ldots, m$. The intersection of these $m$
-    planes defines an $(n-m)$-dimensional surface that is tangent to the
-    feasible surface at $\Vec{x}$. This is corroborated by observing that any
+    planes defines an $(n-m)$-dimensional plane that is tangent to the feasible
+    surface at $\Vec{x}$. This is corroborated by observing that any
     infinitesimal displacement $\delta\Vec{x}$ from $\Vec{x}$ within the
     intersection of the $m$ planes keeps $\Vec{x} + \delta\Vec{x}$ on the zero
     level set of every function $g_k(\Vec{x})$. Therefore, $\Vec{x} +
     \delta\Vec{x}$ is situated on the feasible surface, meaning the
-    $(n-m)$-dimensional surface defined by the intersection of the $m$ planes at
+    $(n-m)$-dimensional plane defined by the intersection of the $m$ planes at
     $\Vec{x}$ is indeed tangent to the feasible surface.
   </p>
 
@@ -161,8 +161,8 @@
     $\Vec{x} + \delta\Vec{x}$ remains on each of the $m$ planes that pass
     through $\Vec{x}$ and are perpendicular to $\nabla g_k(\Vec{x})$ for $k = 1,
     2, \ldots, m$, then $\delta\Vec{x}$ is orthogonal to any linear combination
-    of these gradient vectors. Thus, for any set of coefficients $(\lambda_1,
-    \ldots, \lambda_m)$, the following holds:
+    of these gradient vectors. Thus, for any set of coefficients $\Vecg{\lambda}
+    = (\lambda_1, \ldots, \lambda_m)$, the following holds:
   </p>
 
   <EquationBlock>
@@ -250,17 +250,16 @@
 
   <p>
     To recap, the Lagrange multiplier method identifies all points $(\Vec{x},
-    \Vecg{\lambda})$, with $\Vecg{\lambda} = (\lambda_1, \ldots, \lambda_m)$,
-    for which the constraints \eqref{constraints} are met and for which
-    \eqref{nabla-f} is also valid. By examining the characteristics of each of
-    these points, we can then determine which ones correspond to local maxima,
-    minima, or simply saddle points. However, a detailed exploration of this
-    task goes beyond the scope of this post and is left to the reader's
-    discretion. It's worth noting that if our primary goal is identifying the
-    global maximum/minimum of $f(\Vec{x})$ over the feasible surface, we simply
-    need to compute $f(\Vec{x})$ for each point $\Vec{x}$ derived using the
-    Lagrange multiplier method and retain only the one associated with the
-    largest/smallest value of $f(\Vec{x})$.
+    \Vecg{\lambda})$ for which the constraints \eqref{constraints} are met and
+    for which equation \eqref{nabla-f} is also valid. By examining the
+    characteristics of each of these points, we can then determine which ones
+    correspond to local maxima, minima, or simply saddle points. However, a
+    detailed exploration of this task goes beyond the scope of this post and is
+    left to the reader's discretion. It's worth noting that if our primary goal
+    is to identify the global maxima/minima of $f(\Vec{x})$ over the feasible
+    surface, we simply need to compute $f(\Vec{x})$ for each point $\Vec{x}$
+    derived using the Lagrange multiplier method and retain only those
+    associated with the largest/smallest value of $f(\Vec{x})$.
   </p>
 
   <ReferenceListBlock>
