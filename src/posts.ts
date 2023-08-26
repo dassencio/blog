@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "6890b8c50169ef45b74db135063c227c",
+    component: () => import("@/posts/78.vue"),
+    date: dateToString(2015, 11, 19),
+    id: "78",
+    labels: [PostLabel.Cpp, PostLabel.Programming],
+    title: "Generating random numbers in C++",
+  },
+  {
     compatibilityIndex: "63f2ce1a5c3bb291485c0ef5fb8223f2",
     component: () => import("@/posts/77.vue"),
     date: dateToString(2015, 11, 14),
