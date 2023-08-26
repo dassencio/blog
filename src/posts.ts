@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "058320cdb129ffb4075ae2c1db3de0d4",
+    component: () => import("@/posts/79.vue"),
+    date: dateToString(2015, 11, 23),
+    id: "79",
+    labels: [PostLabel.Cpp, PostLabel.Linux, PostLabel.Programming],
+    title: "Obtaining C/C++ integer sizes and ranges on Linux",
+  },
+  {
     compatibilityIndex: "6890b8c50169ef45b74db135063c227c",
     component: () => import("@/posts/78.vue"),
     date: dateToString(2015, 11, 19),
