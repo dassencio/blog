@@ -11,6 +11,7 @@ export enum PostLabel {
   DSP = "Digital signal processing",
   Electromagnetism = "Electromagnetism",
   FluidDynamics = "Fluid dynamics",
+  Geolocation = "Geolocation",
   Git = "Git",
   Gravitation = "Gravitation",
   IPv6 = "IPv6",

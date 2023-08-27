@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "b961027fbfa5495824696f987e26f50a",
+    component: () => import("@/posts/80.vue"),
+    date: dateToString(2015, 11, 27),
+    id: "80",
+    labels: [PostLabel.Geolocation, PostLabel.Technology],
+    title: "Easy-geoip: an easy-to-use IP geolocation server",
+  },
+  {
     compatibilityIndex: "058320cdb129ffb4075ae2c1db3de0d4",
     component: () => import("@/posts/79.vue"),
     date: dateToString(2015, 11, 23),
