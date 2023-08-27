@@ -110,3 +110,18 @@ export function referenceIdToHtmlId(id: string) {
 export function tableIdToHtmlId(id: string) {
   return `table-${id}`;
 }
+
+/**
+ * Generates an HTML anchor element for a table.
+ *
+ * @param id - Table ID
+ * @param number - Table number
+ * @param capitalized - Whether the first text character should be capitalized
+ *
+ * @returns HTML anchor element as a string
+ */
+export function tableLink(id: string, number: number, capitalized = false) {
+  return `<a href="#${tableIdToHtmlId(id)}">${
+    capitalized ? "Table" : "table"
+  } ${number}</a>`;
+}

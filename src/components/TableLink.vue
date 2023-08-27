@@ -1,13 +1,11 @@
 <template>
-  <a :href="tableLink"
-    >{{ capitalized ? "Table" : "table" }} {{ tableNumber }}</a
-  >
+  <span v-html="tableLink(id, tableNumber, capitalized)"></span>
 </template>
 
 <script setup lang="ts">
 import { computed } from "vue";
 import { useStore } from "vuex";
-import { tableIdToHtmlId } from "@/functions";
+import { tableLink } from "@/functions";
 
 const props = defineProps<{
   capitalized?: boolean;
@@ -15,6 +13,5 @@ const props = defineProps<{
 }>();
 const store = useStore();
 
-const tableLink = computed(() => `#${tableIdToHtmlId(props.id)}`);
 const tableNumber = computed(() => store.getters.tableNumber(props));
 </script>
