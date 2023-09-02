@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "c51c5ab87e0ee7e7a5cbfafb04f2ba4b",
+    component: () => import("@/posts/81.vue"),
+    date: dateToString(2015, 12, 1),
+    id: "81",
+    labels: [PostLabel.AutomataTheory, PostLabel.ComputerScience],
+    title: "The set of languages over $\\{0,1\\}$ is not countable",
+  },
+  {
     compatibilityIndex: "b961027fbfa5495824696f987e26f50a",
     component: () => import("@/posts/80.vue"),
     date: dateToString(2015, 11, 27),
