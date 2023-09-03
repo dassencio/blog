@@ -33,11 +33,11 @@
     its leftmost digit being $1$, meaning each natural number finds its
     representation in $W'$. Conversely, every string in $W'$ represents a
     natural number. This relationship allows us to set up a
-    <a href="https://en.wikipedia.org/wiki/Injective_function">one-to-one</a>
+    <a href="https://en.wikipedia.org/wiki/Bijection">one-to-one</a>
     correspondence between $W'$ and $\mathbb{N}$. And since every string in $W'$
     is associated with a string in $W$ (achieved by simply removing the leading
     $1$), there is a one-to-one mapping between $W$ and $W'$, and by extension,
-    between $W$ and $\mathbb{N}$. Consequently, $W'$ is countable, which means
+    between $W$ and $\mathbb{N}$. Consequently, $W$ is countable, which means
     the strings in $W$ can be ordered in a sequence: $W = \{s_1, s_2, s_3,
     \ldots\}$, with $s_j$ being the $j$-th string over $\{0,1\}$.
   </p>
