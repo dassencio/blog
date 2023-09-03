@@ -176,14 +176,14 @@
   </p>
 
   <p>
-    $L_{\textrm{diag}}$ is a language with a special property: it differs from
-    every language $L_i$ in $\mathcal{L}_{\{0,1\}}$. Indeed, for every $L_i$ in
+    $L_{\textrm{diag}}$ is a set with a special property: it differs from every
+    language $L_i$ in $\mathcal{L}_{\{0,1\}}$. Indeed, for every $L_i$ in
     $\mathcal{L}_{\{0,1\}}$, if $L_i$ contains $s_i$, $L_{\textrm{diag}}$ does
     not. Conversely, if $L_i$ does not contain $s_i$, $L_{\textrm{diag}}$ does.
     This implies $L_{\textrm{diag}}$ is not equal to $L_i$ for any $L_i$ in
     $\mathcal{L}_{\{0,1\}}$, which means $L_{\textrm{diag}}$ is not in
     $\mathcal{L}_{\{0,1\}}$. However, since $L_{\textrm{diag}}$ is a set of
-    strings from $W$, it is a language over $\{0,1\}$ and therefore should be in
+    strings from $W$, it is a language over $\{0,1\}$ and therefore must be in
     $\mathcal{L}_{\{0,1\}}$. This contradiction proves that
     $\mathcal{L}_{\{0,1\}}$ cannot be countable.
   </p>
