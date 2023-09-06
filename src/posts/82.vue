@@ -197,7 +197,7 @@
     As illustrated in the program above, an expression like
     <code>'#'</code> represents the integer value of the ASCII code associated
     with that symbol. Given that the code for <code>'#'</code> is
-    <code>35</code>, the two assignment statements in the program are
+    <code>35</code>, the two first assignment statements in the program are
     equivalent. This is because expressions such as <code>'#'</code> are
     replaced by their corresponding integer values during compilation. Hence, a
     <code>char</code> type isn't intrinsically more "character-like" than any
