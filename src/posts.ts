@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "85e407d6c771ba2bc5f02b17714241e2",
+    component: () => import("@/posts/83.vue"),
+    date: dateToString(2015, 12, 27),
+    id: "83",
+    labels: [PostLabel.Programming, PostLabel.Python],
+    title: "Checking if an IP belongs to a subnetwork in Python",
+  },
+  {
     compatibilityIndex: "b875a967eebd37d4071d87d990397d43",
     component: () => import("@/posts/82.vue"),
     date: dateToString(2015, 12, 14),
