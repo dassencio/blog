@@ -22,8 +22,8 @@
     The central idea presented here is simple: IP addresses are essentially
     integers. Specifically, IPv4 addresses are represented by 32-bit integers,
     while IPv6 addresses use 128-bit integers. Given that a subnetwork spans a
-    consecutive range of IP addresses, we can identify its range by pinpointing
-    the integer values of its start and end addresses. A specified IP address is
+    contiguous range of IP addresses, we can identify its range by pinpointing
+    the integer values of its start and end addresses. A given IP address is
     part of the subnetwork if and only if its integer representation lies within
     this range.
   </p>
@@ -56,8 +56,8 @@
     >
     method to transform an IP address into its binary string representation (a
     32-bit/4-byte string for IPv4 and a 128-bit/16-byte string for IPv6). For
-    instance, the IP address "<code>192.168.1.0</code>" gets converted to
-    "<code>\xc0\xa8\x01\x00</code>". Here, the bytes correspond to the numbers
+    instance, the IP address <code>'192.168.1.0'</code> gets converted to
+    <code>'\xc0\xa8\x01\x00'</code>. Here, the bytes correspond to the numbers
     <code>192</code> (<code>0xc0</code>), <code>168</code> (<code>0xa8</code>),
     <code>1</code> (<code>0x01</code>), and <code>0</code> (<code>0x00</code>)
     in hexadecimal notation. Subsequently, this binary string (denoted as
@@ -65,8 +65,8 @@
     using
     <a href="https://docs.python.org/2/library/binascii.html#binascii.hexlify"
       ><code>binascii.hexlify</code></a
-    >. For instance, "<code>\xc0\xa8\x01\x00</code>" is transformed into the
-    ASCII string "<code>c0a80100</code>". It's worth noting that the resulting
+    >. For instance, <code>'\xc0\xa8\x01\x00'</code> is transformed into the
+    ASCII string <code>'c0a80100'</code>. It's worth noting that the resulting
     string is twice the length of the original; this is because each byte in the
     original string requires two characters for hexadecimal representation. This
     string is then fed into the
@@ -104,8 +104,8 @@ def ip_in_subnetwork(ip_address, subnetwork):
   subnetwork (specified in CIDR notation); otherwise, returns
   False. Both arguments should be strings.
 
-  Supports both IPv4 (e.g., "192.168.1.1" and "192.168.1.0/24")
-  and IPv6 (e.g., "2a02:a448:ddb0::" and "2a02:a448:ddb0::/44")
+  Supports both IPv4 (e.g., '192.168.1.1' and '192.168.1.0/24')
+  and IPv6 (e.g., '2a02:a448:ddb0::' and '2a02:a448:ddb0::/44')
   addresses and subnetworks.
   """
 
@@ -113,7 +113,7 @@ def ip_in_subnetwork(ip_address, subnetwork):
   (ip_lower, ip_upper, version_2) = subnetwork_to_ip_range(subnetwork)
 
   if version_1 != version_2:
-    raise ValueError("Incompatible IP versions")
+    raise ValueError('Incompatible IP versions')
 
   return (ip_lower <= ip_integer <= ip_upper)
 
@@ -125,8 +125,8 @@ def ip_to_integer(ip_address):
   Returns a tuple (ip_integer, version), where version
   indicates the IP version (either 4 or 6).
 
-  Supports both IPv4 (e.g., "192.168.1.1") and IPv6 (e.g.,
-  "2a02:a448:ddb0::") addresses.
+  Supports both IPv4 (e.g., '192.168.1.1') and IPv6 (e.g.,
+  '2a02:a448:ddb0::') addresses.
   """
 
   # Try parsing the IP address first as IPv4, then as IPv6.
@@ -138,7 +138,7 @@ def ip_to_integer(ip_address):
     except:
       pass
 
-  raise ValueError("invalid IP address")
+  raise ValueError('Invalid IP address')
 
 def subnetwork_to_ip_range(subnetwork):
   """
@@ -150,8 +150,8 @@ def subnetwork_to_ip_range(subnetwork):
     upper IP addresses, respectively.
   - version indicates the subnetwork IP version (either 4 or 6).
 
-  Accepts both IPv4 (e.g., "192.168.1.0/24") and IPv6 (e.g.,
-  "2a02:a448:ddb0::/44") subnetworks.
+  Accepts both IPv4 (e.g., '192.168.1.0/24') and IPv6 (e.g.,
+  '2a02:a448:ddb0::/44') subnetworks.
   """
 
   try:
@@ -177,6 +177,6 @@ def subnetwork_to_ip_range(subnetwork):
   except:
     pass
 
-  raise ValueError("Invalid subnetwork")
+  raise ValueError('Invalid subnetwork')
 `;
 </script>
