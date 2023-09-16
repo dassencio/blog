@@ -23,13 +23,13 @@
 
   <p>
     To underscore the significance of posing these questions, let's consider a
-    scenario where the array values represent the ages of website users. Suppose
-    your objective is to determine the
+    scenario where the array values represent the ages of a website's users.
+    Suppose your objective is to determine the
     <a href="https://en.wikipedia.org/wiki/Median">median</a> user age. One
     approach is to sort the array first. In this case, the median would be the
     middle element if the array length is odd, or the average of the two central
     elements if the length is even. While the sorting can certainly be executed
-    using well-established algorithms with a runtime complexity of $O(n \log
+    using well-established algorithms with a runtime complexity of $O(n \log_2
     n)$, those algorithms don't take advantage of a key fact: no human is known
     to have lived for
     <a href="https://en.wikipedia.org/wiki/Oldest_people">more than 125 years</a
@@ -89,7 +89,7 @@
     occurrences of each age value, we can reorder them sequentially in the
     original <code>ages</code> array, effectively sorting it in place. Once
     sorted, computing the median becomes straightforward. This offers a
-    substantial advantage over algorithms that run in $O(n\log n)$ time.
+    substantial advantage over algorithms that run in $O(n \log_2 n)$ time.
   </p>
 
   <p>

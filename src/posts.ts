@@ -8,7 +8,7 @@ const posts: Post[] = [
     date: dateToString(2016, 1, 1),
     id: "84",
     labels: [PostLabel.Programming],
-    title: "Sorting in less than $O(n \\log n)$ time",
+    title: "Sorting in less than $O(n \\log_2 n)$ time",
   },
   {
     compatibilityIndex: "85e407d6c771ba2bc5f02b17714241e2",
