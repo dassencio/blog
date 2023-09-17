@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "a2386030d8d82e457a8c7dc124d00564",
+    component: () => import("@/posts/85.vue"),
+    date: dateToString(2016, 1, 15),
+    id: "85",
+    labels: [PostLabel.LinearAlgebra, PostLabel.Mathematics],
+    title: "Surface normals and linear transformations",
+  },
+  {
     compatibilityIndex: "2720885db684284ab33d1ba3b65cab1b",
     component: () => import("@/posts/84.vue"),
     date: dateToString(2016, 1, 1),
