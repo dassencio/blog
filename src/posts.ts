@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "442426c276274d96d1297cf9e19a1db4",
+    component: () => import("@/posts/86.vue"),
+    date: dateToString(2016, 1, 23),
+    id: "86",
+    labels: [PostLabel.Cpp, PostLabel.Programming],
+    title: "Shifting calendar times using <code>struct tm</code> in C/C++",
+  },
+  {
     compatibilityIndex: "a2386030d8d82e457a8c7dc124d00564",
     component: () => import("@/posts/85.vue"),
     date: dateToString(2016, 1, 15),
