@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "3a276b23223addae28b13d7c6ac4344e",
+    component: () => import("@/posts/87.vue"),
+    date: dateToString(2016, 8, 14),
+    id: "87",
+    labels: [PostLabel.Cpp, PostLabel.Programming],
+    title: "C++ solutions: Cracking the Coding Interview, 4th ed.",
+  },
+  {
     compatibilityIndex: "442426c276274d96d1297cf9e19a1db4",
     component: () => import("@/posts/86.vue"),
     date: dateToString(2016, 1, 23),
