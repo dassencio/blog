@@ -14,11 +14,10 @@
   <p>
     Programmers dealing with time values often encounter the following problem:
     when a fixed amount of time is added to a given calendar time, what is the
-    resulting calendar time? For instance, if we have an instance of
-    <code>struct tm</code> representing the calendar time "<code
-      >Fri Jan 22 12:35:20 2016</code
-    >", what will the resulting calendar time be if we add, for example, 15 days
-    and 12 hours to it?
+    resulting calendar time? For instance, given a
+    <code>struct tm</code> representing "<code>Fri Jan 22 12:35:20 2016</code>",
+    what will the resulting calendar time be if we add, say, 15 days and 12
+    hours to it?
   </p>
 
   <p>
