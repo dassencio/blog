@@ -86,7 +86,7 @@
     (-\delta\Vec{x}) \lt 0$. Using equation \eqref{f-x-plus-dx} and replacing
     $\delta\Vec{x}$ with $(-\delta\Vec{x})$, we infer that $f(\Vec{x} -
     \delta\Vec{x}) \lt f(\Vec{x})$. In essence, $f$ would increase if we move
-    towards $\Vec{x} + \delta\Vec{x}$ but decrease if we move to $\Vec{x} -
+    toward $\Vec{x} + \delta\Vec{x}$ but decrease if we move to $\Vec{x} -
     \delta\Vec{x}$, indicating that $f(\Vec{x})$ cannot be a local extremum. The
     argument is analogous when $\nabla f(\Vec{x}) \cdot \delta\Vec{x} \lt 0$. In
     summary, $\nabla f(\Vec{x})$ is locally perpendicular to the feasible

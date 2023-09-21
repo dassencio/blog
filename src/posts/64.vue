@@ -51,8 +51,8 @@
     fluid element as measured in $S'$ respectively, $\Vecg{\omega} = \omega
     \hat{\Vec{z}}$ is the angular velocity of the bucket as measured in $S$,
     $\rho$ is the distance between the fluid element and the $z$ (or $z'$) axis,
-    and $\hat{\Vecg{\rho}}$ is the unit vector that points radially outwards
-    from the $z$ axis (see <FigureLink id="rotating-bucket-forces" />).
+    and $\hat{\Vecg{\rho}}$ is the unit vector that points radially outward from
+    the $z$ axis (see <FigureLink id="rotating-bucket-forces" />).
   </p>
 
   <FigureBlock
