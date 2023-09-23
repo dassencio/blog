@@ -115,8 +115,8 @@
     acceleration acting on the fluid element, with $\Vec{F}_{\textrm{fluid}}$
     being the force that keeps the fluid element stationary in the rotating
     frame. To understand why this is so, consider a scenario with no rotation,
-    i.e., $\Vecg{\omega} = \Vec{0}$. In this case, the frames $S$ and $S'$
-    coincide, and the fluid is stationary in both frames. According to equation
+    i.e., $\omega = 0$. In this case, the frames $S$ and $S'$ coincide, and the
+    fluid is stationary in both frames. According to equation
     \eqref{acceleration}, $\Vec{F}_{\textrm{fluid}} = -m \Vec{g}$, meaning that
     $\Vec{F}_{\textrm{fluid}}$ perfectly counterbalances the gravitational force
     acting on the fluid element, preventing it from sinking. As the fluid
