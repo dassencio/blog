@@ -64,6 +64,7 @@ window.MathJax = {
       Kilocalorie: "\\,\\mathrm{kcal}",
       Kilogram: "\\,\\mathrm{kg}",
       Kilojoule: "\\,\\mathrm{kJ}",
+      Kilometer: "\\,\\mathrm{km}",
       Meter: "\\,\\mathrm{m}",
       Milliampere: "\\,\\mathrm{mA}",
       Picometer: "\\,\\mathrm{pm}",

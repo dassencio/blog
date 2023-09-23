@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "f9a58faf18bdbd019f06a0f09c123d60",
+    component: () => import("@/posts/89.vue"),
+    date: dateToString(2016, 9, 16),
+    id: "89",
+    labels: [PostLabel.Mechanics, PostLabel.Physics],
+    title: "Earth's rotation and the surface of the ocean",
+  },
+  {
     compatibilityIndex: "b2c5a655b21561be1f23a9ee2021b0a4",
     component: () => import("@/posts/88.vue"),
     date: dateToString(2016, 9, 2),
