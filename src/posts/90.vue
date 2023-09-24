@@ -76,14 +76,14 @@
     <a href="https://en.wikipedia.org/wiki/Lexicographical_order"
       >lexicographically</a
     >, much like how words are ordered in a dictionary. Given a sequence in this
-    "permutation dictionary", <code>std::next_permutation</code> can determine
-    the next permutation in lexicographical order. If a subsequent permutation
-    exists in the "permutation dictionary," it returns <code>true</code> and
+    permutation dictionary, <code>std::next_permutation</code> can determine the
+    next permutation in lexicographical order. If a subsequent permutation
+    exists in the permutation dictionary, it returns <code>true</code> and
     permutes the sequence in place to yield this next permutation. However, if
-    the sequence has already achieved its "largest" permutation in
-    lexicographical terms (with elements sorted in descending order),
+    the sequence has already achieved its largest permutation in lexicographical
+    terms (with elements sorted in descending order),
     <code>std::next_permutation</code> returns <code>false</code> and rearranges
-    the sequence into its "smallest" lexicographical permutation, sorting the
+    the sequence into its smallest lexicographical permutation, sorting the
     elements in ascending order.
   </p>
 
@@ -154,8 +154,8 @@
     This preliminary sorting step is crucial; omitting it would mean we wouldn't
     capture all possible permutations of <code>v</code>. This is due to the
     behavior of <code>std::next_permutation</code>: the initial sequence must be
-    the "smallest one" lexicographically, meaning it should be sorted in
-    ascending order.
+    the smallest one lexicographically, meaning it should be sorted in ascending
+    order.
   </p>
 
   <p>
@@ -170,7 +170,7 @@
     >
     to modify the order of objects in the sequence to yield the next
     permutation. If swapping is resource-intensive for the type you're dealing
-    with, consider assigning indices ($0, 1, \ldots, n - 1$) or pointers to the
+    with, consider assigning indices $(0, 1, \ldots, n - 1)$ or pointers to the
     objects and computing permutations of these indices or pointers. This way,
     you can represent the desired permutations of the original sequence via
     permutations of these indices or pointers, rather than directly manipulating
