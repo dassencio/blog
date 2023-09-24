@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "9855aa01a29468b71375991f55324fe2",
+    component: () => import("@/posts/90.vue"),
+    date: dateToString(2016, 9, 19),
+    id: "90",
+    labels: [PostLabel.Cpp, PostLabel.Programming],
+    title: "Computing permutations of sequences in C++",
+  },
+  {
     compatibilityIndex: "f9a58faf18bdbd019f06a0f09c123d60",
     component: () => import("@/posts/89.vue"),
     date: dateToString(2016, 9, 16),
