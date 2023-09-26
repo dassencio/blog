@@ -223,7 +223,7 @@
   <p>
     When $\Vec{\hat n}$ and $\Vec{x}$ are parallel, we have $\Vec{x} =
     \Vec{x}_{\parallel}$, and $\Vec{\hat n} \times \Vec{x} = \Vec{0}$. Hence,
-    combining equations \eqref{x-prime-x} and \eqref{x-parallel} results in
+    combining equations \eqref{x-parallel} and \eqref{x-prime-x} results in
     $\Vec{x}' = \Vec{x}$, which is as expected. Additionally, our derivation did
     not specifically rely on the assumption that $\theta \gt 0$, making it
     applicable for any value of $\theta$. Furthermore, observe that by
