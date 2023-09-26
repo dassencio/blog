@@ -30,13 +30,20 @@ window.MathJax = {
       // General math.
       ColonEq: "\\mathrel{\\vcenter{:}}=", // Equal by definition sign.
       Digits: "\\mathrm{digits}", // Digits operator.
+      IdentityMatrixThree: "\\MatrixThreeThree{1}{0}{0}{0}{1}{0}{0}{0}{1}", // 3x3 identity matrix.
       Lev: "\\mathrm{lev}", // Levenshtein distance operator.
       Matrix: ["\\begin{pmatrix}#1\\end{pmatrix}", 1], // Matrix environment.
+      MatrixThreeOne: ["\\Matrix{#1 \\\\ #2 \\\\ #3}", 3], // 3x1 matrix.
       MatrixFourOne: ["\\Matrix{#1 \\\\ #2 \\\\ #3 \\\\ #4}", 4], // 4x1 matrix.
       MatrixTwoOne: ["\\Matrix{#1 \\\\ #2}", 2], // 2x1 matrix.
       MatrixTwoTwo: ["\\Matrix{#1 & #2 \\\\ #3 & #4}", 4], // 2x2 matrix.
+      MatrixThreeThree: [
+        "\\Matrix{#1 & #2 & #3 \\\\ #4 & #5 & #6 \\\\ #7 & #8 & #9}",
+        9,
+      ], // 3x3 matrix.
       Real: "\\mathbb{R}", // Real numbers.
       Size: "\\mathrm{size}", // Size operator.
+      Split: ["\\begin{split}#1\\end{split}", 1], // Split environment.
       SumSub: ["\\mathop{\\sum_{#1}}_{#2}", 2], // Sum with two subscripts.
       Vec: ["\\mathbf{#1}", 1], // Vector notation for Latin symbols.
       Vecg: ["\\pmb{#1}", 1], // Vector notation for Greek symbols.

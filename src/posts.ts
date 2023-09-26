@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "b155574a293a5cbfdd0fbe82a9b8bf28",
+    component: () => import("@/posts/91.vue"),
+    date: dateToString(2016, 9, 23),
+    id: "91",
+    labels: [PostLabel.LinearAlgebra, PostLabel.Mathematics],
+    title: "An easy derivation of 3D rotation matrices",
+  },
+  {
     compatibilityIndex: "9855aa01a29468b71375991f55324fe2",
     component: () => import("@/posts/90.vue"),
     date: dateToString(2016, 9, 19),
