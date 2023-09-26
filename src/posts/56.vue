@@ -179,9 +179,9 @@
   <EquationBlock align>
     \left(\DD{\Vec{v}_S}{t}\right)_S = \left(\DD{\dot{\Vec{R}}}{t}\right)_S +
       \left(\DD{\Vec{v}_{S'}}{t}\right)_{S'}
-    &+& \Vecg{\omega} \times \Vec{v}_{S'} + \left(\DD{\Vecg{\omega}}{t}\right)_S
+    &+ \Vecg{\omega} \times \Vec{v}_{S'} + \left(\DD{\Vecg{\omega}}{t}\right)_S
         \times \Vec{x}' \\
-    &+& \Vecg{\omega} \times \left[\left(\DD{\Vec{x}'}{t}\right)_{S'} +
+    &+ \Vecg{\omega} \times \left[\left(\DD{\Vec{x}'}{t}\right)_{S'} +
         \Vecg{\omega} \times \Vec{x}'\right]
         \label{ddt-v-S-ddt-v-S-prime-2}
   </EquationBlock>
