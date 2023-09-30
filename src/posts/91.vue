@@ -85,9 +85,9 @@
     Thus, we have:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="x-prime-parallel">
     \Vec{x}_{\parallel}' = \Vec{x}_{\parallel} = (\Vec{\hat n} \cdot \Vec{x})
-    \Vec{\hat n} \label{x-prime-parallel}
+    \Vec{\hat n}
   </EquationBlock>
 
   <p>
@@ -101,9 +101,9 @@
     compatible with this corner case as well:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="q">
     \Vec{\hat q} = \frac{\Vec{\hat n} \times \Vec{x}}{\|\Vec{\hat n} \times
-    \Vec{x}\|} \label{q}
+    \Vec{x}\|}
   </EquationBlock>
 
   <p>
@@ -117,10 +117,10 @@
     \sin\theta$, which is parallel to $\Vec{\hat q}$, is generated. Thus:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="x-prime-perp">
     \Vec{x}_{\perp}' = \cos\theta \, \Vec{x}_{\perp} + \|\Vec{x}_{\perp}\|
     \sin\theta \, \Vec{\hat q} = \cos\theta \, \Vec{x}_{\perp} + \sin\theta \,
-    (\Vec{\hat n} \times \Vec{x}) \label{x-prime-perp}
+    (\Vec{\hat n} \times \Vec{x})
   </EquationBlock>
 
   <p>
@@ -163,10 +163,9 @@
     $\Vec{x}'$:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock boxed label="x-prime-x">
     \Vec{x}' = \cos\theta \, \Vec{x} + (1 - \cos\theta) (\Vec{\hat n} \cdot
     \Vec{x}) \Vec{\hat n} + \sin\theta \, (\Vec{\hat n} \times \Vec{x})
-    \label{x-prime-x}
   </EquationBlock>
 
   <p>

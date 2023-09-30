@@ -17,9 +17,8 @@
 
   <p>The average number of coin flips needed until a head appears is then:</p>
 
-  <EquationBlock>
+  <EquationBlock label="E-p">
     E_p[n] = \sum_{n=1}^\infty n P(n) = \sum_{n=1}^\infty n q^{n-1} p
-    \label{E-p}
   </EquationBlock>
 
   <p>
@@ -28,8 +27,8 @@
     following sequence:
   </p>
 
-  <EquationBlock>
-    e_k = \sum_{n=1}^k n q^{n-1} p = p \sum_{n=1}^k n q^{n-1} \label{e-k}
+  <EquationBlock label="e-k">
+    e_k = \sum_{n=1}^k n q^{n-1} p = p \sum_{n=1}^k n q^{n-1}
   </EquationBlock>
 
   <p>
@@ -47,9 +46,9 @@
 
   <p>Taking the derivative of $g_k$ with respect to $x$ yields:</p>
 
-  <EquationBlock>
+  <EquationBlock label="g-k-derivative">
     \DD{g_k}{x} = \sum_{n=1}^k n x^{n-1} = -\frac{(k+1) x^k}{1 - x} + \frac{1 -
-    x^{k+1}}{(1 - x)^2} \label{g-k-derivative}
+    x^{k+1}}{(1 - x)^2}
   </EquationBlock>
 
   <p>
@@ -66,9 +65,9 @@
     to $x$ evaluated at $x = q$:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="e-k-2">
     e_k = p \left(-\frac{(k + 1) q^k}{p} + \frac{1 - q^{k+1}}{p^2}\right) =
-    -(k+1) q^k + \frac{1 - q^{k+1}}{p} \label{e-k-2}
+    -(k+1) q^k + \frac{1 - q^{k+1}}{p}
   </EquationBlock>
 
   <p>

@@ -83,8 +83,8 @@
 
   <p>By setting both $x$ and $y$ to 1, we obtain:</p>
 
-  <EquationBlock>
-    (1 + 1)^n = 2^n = \sum_{k=0}^n \binom{n}{k} \label{binomial-theorem}
+  <EquationBlock label="binomial-theorem">
+    (1 + 1)^n = 2^n = \sum_{k=0}^n \binom{n}{k}
   </EquationBlock>
 
   <p>

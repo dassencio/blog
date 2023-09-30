@@ -33,10 +33,9 @@
     \eqref{fibonacci-pairs} using matrices, as demonstrated below:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="fibonacci-pairs-matrix">
     \MatrixTwoOne{F_{n+1}}{F_n} = \MatrixTwoOne{F_{n} + F_{n-1}}{F_{n}} =
     \MatrixTwoTwo{1}{1}{1}{0} \MatrixTwoOne{F_{n}}{F_{n-1}}
-    \label{fibonacci-pairs-matrix}
   </EquationBlock>
 
   <p>
@@ -57,9 +56,8 @@
 
   <p>Given that $F_0 = 0$ and $F_1 = 1$, we obtain:</p>
 
-  <EquationBlock>
+  <EquationBlock label="fibonacci-pairs-M-power-n">
     \MatrixTwoOne{F_{n+1}}{F_n} = M^n \MatrixTwoOne{1}{0}
-    \label{fibonacci-pairs-M-power-n}
   </EquationBlock>
 
   <p>
@@ -71,10 +69,9 @@
     finding its eigenvalues:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="M-eigenvalues-equation">
     \det(M - \lambda I) = 0 \Longrightarrow \det\MatrixTwoTwo{1 -
     \lambda}{1}{1}{-\lambda} = \lambda^2 - \lambda - 1 = 0
-    \label{M-eigenvalues-equation}
   </EquationBlock>
 
   <p>
@@ -82,8 +79,8 @@
     of $M$:
   </p>
 
-  <EquationBlock>
-    \lambda_{\pm} = \frac{1 \pm \sqrt{5}}{2} \label{M-eigenvalues}
+  <EquationBlock label="M-eigenvalues">
+    \lambda_{\pm} = \frac{1 \pm \sqrt{5}}{2}
   </EquationBlock>
 
   <p>
@@ -97,11 +94,10 @@
     Let's proceed to find eigenvectors of $M$ associated with these eigenvalues:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="M-eigenvectors-equation">
     \MatrixTwoTwo{1}{1}{1}{0} \MatrixTwoOne{\alpha_{\pm}}{\beta_{\pm}} =
     \MatrixTwoOne{\alpha_{\pm} + \beta_{\pm}}{\alpha_{\pm}} =
     \lambda_{\pm}\MatrixTwoOne{\alpha_{\pm}}{\beta_{\pm}}
-    \label{M-eigenvectors-equation}
   </EquationBlock>
 
   <p>
@@ -109,8 +105,8 @@
     $M$ satisfy:
   </p>
 
-  <EquationBlock>
-    \alpha_{\pm} = \lambda_{\pm}\beta_{\pm} \label{alpha-beta-pm}
+  <EquationBlock label="alpha-beta-pm">
+    \alpha_{\pm} = \lambda_{\pm}\beta_{\pm}
   </EquationBlock>
 
   <p>
@@ -121,8 +117,8 @@
     \eqref{alpha-beta-pm}, we obtain:
   </p>
 
-  <EquationBlock>
-    \Vec{w}_{\pm} = \MatrixTwoOne{\lambda_{\pm}}{1} \label{M-eigenvectors}
+  <EquationBlock label="M-eigenvectors">
+    \Vec{w}_{\pm} = \MatrixTwoOne{\lambda_{\pm}}{1}
   </EquationBlock>
 
   <p>
@@ -157,7 +153,7 @@
 
   <p>This implies:</p>
 
-  <EquationBlock> M = PDP^{-1} \label{M-diagonalization} </EquationBlock>
+  <EquationBlock label="M-diagonalization"> M = PDP^{-1} </EquationBlock>
 
   <p>where:</p>
 
@@ -180,14 +176,14 @@
     equation is particularly valuable as it simplifies the computation of $M^n$:
   </p>
 
-  <EquationBlock>
-    M^n = (PDP^{-1})^n = PD^nP^{-1} \label{M-power-n}
+  <EquationBlock label="M-power-n">
+    M^n = (PDP^{-1})^n = PD^nP^{-1}
   </EquationBlock>
 
   <p>where:</p>
 
-  <EquationBlock>
-    D^n = \MatrixTwoTwo{\lambda_+^n}{0}{0}{\lambda_-^n} \label{D-power-n}
+  <EquationBlock label="D-power-n">
+    D^n = \MatrixTwoTwo{\lambda_+^n}{0}{0}{\lambda_-^n}
   </EquationBlock>
 
   <p>
@@ -195,11 +191,10 @@
     \eqref{fibonacci-pairs-M-power-n}, we obtain:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="fibonacci-pair-analytic-solution">
     \MatrixTwoOne{F_{n+1}}{F_n} = PD^nP^{-1} \MatrixTwoOne{1}{0} =
     \frac{1}{\lambda_+ - \lambda_-} \MatrixTwoOne{\lambda_+^{n+1} -
     \lambda_-^{n+1}}{\lambda_+^{n} - \lambda_-^{n}}
-    \label{fibonacci-pair-analytic-solution}
   </EquationBlock>
 
   <p>
@@ -207,9 +202,9 @@
     \eqref{M-eigenvalues}, we arrive at the final expression for $F_n$:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock boxed label="Fn">
     F_n = \frac{1}{\sqrt{5}}\left[\left(\frac{1 + \sqrt{5}}{2}\right)^n -
-    \left(\frac{1 - \sqrt{5}}{2}\right)^n\right] \label{Fn}
+    \left(\frac{1 - \sqrt{5}}{2}\right)^n\right]
   </EquationBlock>
 
   <SectionTitle>The golden ratio</SectionTitle>

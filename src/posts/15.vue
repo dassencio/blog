@@ -64,9 +64,9 @@
 
   <p>Since the object is initially at rest, we get:</p>
 
-  <EquationBlock>
+  <EquationBlock label="velocity">
     \dot{x}(t) = \frac{\alpha}{2m}\left[ \frac{1}{(T - t)^2} - \frac{1}{T^2}
-    \right] \label{velocity}
+    \right]
   </EquationBlock>
 
   <p>

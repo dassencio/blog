@@ -113,7 +113,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock numberLines>
+  <EquationBlock numberLines label=levenshtein>
     \Lev_{r,s}(i,j) =
     \begin{cases}
       \max(i,j) & \text{if}\, \min(i,j) = 0, \\
@@ -125,7 +125,6 @@
         \end{cases}
       & \text{otherwise}.
     \end{cases}
-    \label{levenshtein}
   </EquationBlock>
 
   <p>

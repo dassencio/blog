@@ -38,9 +38,9 @@
 
   <p>We can parameterize each segment $S_i$ as shown below:</p>
 
-  <EquationBlock>
+  <EquationBlock label="Si-parameterization">
     \Vec{r}_i(s) = \left(\tilde{x}_i(s), \tilde{y}_i(s)\right) = (x_i +
-    s\Delta{x_i}, y_i + s\Delta{y_i}) \label{Si-parameterization}
+    s\Delta{x_i}, y_i + s\Delta{y_i})
   </EquationBlock>
 
   <p>
@@ -57,12 +57,11 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock>
+  <EquationBlock label="Si-parameterization-derivative">
     \left\|\Vec{r}_i'(s)\right\|
       = \left\|\left(\tilde{x}_i'(s), \tilde{y}_i'(s)\right)\right\|
       = \left\|(\Delta{x_i}, \Delta{y_i})\right\|
       = \sqrt{\Delta{x_i}^2 + \Delta{y_i}^2} = L_i
-        \label{Si-parameterization-derivative}
   </EquationBlock>
 
   <p>
@@ -107,9 +106,9 @@
 
   <p>where:</p>
 
-  <EquationBlock>
+  <EquationBlock label="alpha">
     \alpha_{mnkpi} = \binom{m}{k} \binom{n}{p} x_i^{m-k} \Delta{x_i}^k y_i^{n-p}
-    \Delta{y_i}^p \label{alpha}
+    \Delta{y_i}^p
   </EquationBlock>
 
   <p>Therefore:</p>
@@ -140,11 +139,10 @@
     finally obtain:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock boxed label="integral-polygonal-curve">
     \int_{S} p_d(x,y) \D{l} = \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d}^d
     \sum_{k=0}^{m} \sum_{p=0}^{n} L_i c_{mn} \binom{m}{k} \binom{n}{p}
     \frac{x_i^{m-k} \Delta{x_i}^k y_i^{n-p} \Delta{y_i}^p}{k+p+1}
-    \label{integral-polygonal-curve}
   </EquationBlock>
 
   <p>

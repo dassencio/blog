@@ -64,9 +64,9 @@
     with $50\%$ probability is given by:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="years">
     Y = \frac{1.5 \cdot 10^{24}}{C^T_{\textrm{year}}} \Longrightarrow Y \approx
-    \frac{4 \cdot 10^{21}}{D C_{\textrm{day}}} \label{years}
+    \frac{4 \cdot 10^{21}}{D C_{\textrm{day}}}
   </EquationBlock>
 
   <p>

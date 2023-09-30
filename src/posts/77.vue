@@ -9,7 +9,7 @@
     x_n$ that satisfy $m$ constraint equations:
   </p>
 
-  <EquationBlock> g_k(x_1, \ldots, x_n) = 0 \label{constraints} </EquationBlock>
+  <EquationBlock label="constraints"> g_k(x_1, \ldots, x_n) = 0 </EquationBlock>
 
   <p>
     where $k = 1, 2, \ldots, m$. Each constraint equation defines an
@@ -69,9 +69,9 @@
     tangent to the feasible surface. We have:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="f-x-plus-dx">
     f(\Vec{x} + \delta\Vec{x}) = f(\Vec{x}) + \nabla f(\Vec{x}) \cdot
-    \delta\Vec{x} \label{f-x-plus-dx}
+    \delta\Vec{x}
   </EquationBlock>
 
   <p>
@@ -197,9 +197,8 @@
     surface, it follows that:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="nabla-f">
     \nabla f(\Vec{x}) = \sum_{k=1}^m \lambda_k \nabla g_k(\Vec{x})
-    \label{nabla-f}
   </EquationBlock>
 
   <p>

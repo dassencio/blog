@@ -19,9 +19,9 @@
 
   <p>We can parameterize $r$ as follows:</p>
 
-  <EquationBlock>
+  <EquationBlock label="line-parameterization">
     r \ColonEq \left\{ \Vec{R}(\lambda) = \Vec{P} + \lambda (\Vec{Q} - \Vec{P}),
-    \; \forall \lambda \in \Real \right\} \label{line-parameterization}
+    \; \forall \lambda \in \Real \right\}
   </EquationBlock>
 
   <p>
@@ -52,11 +52,11 @@
     equation above yields:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="lambda-closest-point-equation">
     \left. \DDo{\lambda}\sqrt{(\Vec{R}(\lambda) - \Vec{X})^2} \right|_{\lambda =
     \lambda_\Vec{S}} = \frac{2 (\Vec{R}(\lambda_\Vec{S}) -
     \Vec{X})\cdot\Vec{R}'(\lambda_\Vec{S})}{2\sqrt{(\Vec{R}(\lambda_\Vec{S}) -
-    \Vec{X})^2}} = 0 \label{lambda-closest-point-equation}
+    \Vec{X})^2}} = 0
   </EquationBlock>
 
   <p>
@@ -81,10 +81,9 @@
 
   <p>Therefore:</p>
 
-  <EquationBlock boxed>
+  <EquationBlock boxed label="lambda-closest-point">
     \lambda_\Vec{S} = \frac{(\Vec{X} - \Vec{P}) \cdot (\Vec{Q} -
     \Vec{P})}{(\Vec{Q} - \Vec{P}) \cdot (\Vec{Q} - \Vec{P})}
-    \label{lambda-closest-point}
   </EquationBlock>
 
   <p>We can now directly obtain the point $\Vec{S}$ on the line $r$:</p>

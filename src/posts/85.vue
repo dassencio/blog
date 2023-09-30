@@ -31,8 +31,8 @@
     have the following form (assuming $a \gt 0$):
   </p>
 
-  <EquationBlock>
-    M = \MatrixTwoTwo{1}{a}{0}{1} \label{shear-matrix}
+  <EquationBlock label="shear-matrix">
+    M = \MatrixTwoTwo{1}{a}{0}{1}
   </EquationBlock>
 
   <p>A point $\Vec{x}$ in $S$ is mapped to $\Vec{x}' = M \Vec{x}$:</p>
@@ -118,9 +118,8 @@
     other. By the same token, the transformed vectors satisfy:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="dot-product-t-prime-n-prime">
     \Vec{t}' \cdot \Vec{n}' = (M \Vec{t})^T \Vec{n}' = 0
-    \label{dot-product-t-prime-n-prime}
   </EquationBlock>
 
   <p>

@@ -57,9 +57,8 @@
     of the system is given by:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="hamiltonian-definition">
     H = \sum_{i=1}^2 \dot{\theta}_i p_{\theta_i} - L
-    \label{hamiltonian-definition}
   </EquationBlock>
 
   <p>
@@ -88,9 +87,9 @@
     shown below:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="p-matrix-form">
     \MatrixTwoOne{p_{\theta_1}}{p_{\theta_2}} = B
-    \MatrixTwoOne{\dot{\theta}_1}{\dot{\theta}_2} \label{p-matrix-form}
+    \MatrixTwoOne{\dot{\theta}_1}{\dot{\theta}_2}
   </EquationBlock>
 
   <p>
@@ -109,9 +108,9 @@
     and the angles $\theta_i$:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="dot-theta-matrix-form">
     \MatrixTwoOne{\dot{\theta}_1}{\dot{\theta}_2} = B^{-1}
-    \MatrixTwoOne{p_{\theta_1}}{p_{\theta_2}} \label{dot-theta-matrix-form}
+    \MatrixTwoOne{p_{\theta_1}}{p_{\theta_2}}
   </EquationBlock>
 
   <p>
@@ -135,10 +134,10 @@
     directly:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="inverse-B">
     B^{-1} = \frac{1}{\det(B)} \MatrixTwoTwo{m_2 l_2^2}{-m_2 l_1 l_2
     \cos(\theta_1 - \theta_2)}{-m_2 l_1 l_2 \cos(\theta_1 - \theta_2)}{(m_1 +
-    m_2) l_1^2} \label{inverse-B}
+    m_2) l_1^2}
   </EquationBlock>
 
   <p>

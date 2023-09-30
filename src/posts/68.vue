@@ -5,8 +5,8 @@
     $\mu_n$ of these values is defined as follows:
   </p>
 
-  <EquationBlock>
-    \mu_n = \frac{1}{n} \sum_{i=1}^n x_i \label{mean}
+  <EquationBlock label="mean">
+    \mu_n = \frac{1}{n} \sum_{i=1}^n x_i
   </EquationBlock>
 
   <p>
@@ -44,8 +44,8 @@
 
   <p>Therefore, we have:</p>
 
-  <EquationBlock boxed>
-    \mu_n = \mu_{n-1} + \frac{1}{n} (x_n - \mu_{n-1}) \label{mean-recursive}
+  <EquationBlock boxed label="mean-recursive">
+    \mu_n = \mu_{n-1} + \frac{1}{n} (x_n - \mu_{n-1})
   </EquationBlock>
 
   <p>
@@ -78,10 +78,10 @@
     given by:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="dice-mean">
     \mu^{\small{(e)}}_n = \frac{1}{n} \sum_{i=1}^n x_i = \frac{1}{\sum_{k=1}^6
     n_k} \sum_{k=1}^6 k n_k = \frac{n_1 + 2 n_2 + 3 n_3 + 4 n_4 + 5 n_5 + 6
-    n_6}{n_1 + n_2 + n_3 + n_4 + n_5 + n_6} \label{dice-mean}
+    n_6}{n_1 + n_2 + n_3 + n_4 + n_5 + n_6}
   </EquationBlock>
 
   <p>

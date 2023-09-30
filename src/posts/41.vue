@@ -26,17 +26,15 @@
     following equation:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="closest-point-line">
     \Vec{S} = \Vec{P} + \lambda_\Vec{S} (\Vec{Q} - \Vec{P})
-    \label{closest-point-line}
   </EquationBlock>
 
   <p>where:</p>
 
-  <EquationBlock>
+  <EquationBlock label="lambda-closest-point-line">
     \lambda_\Vec{S} = \frac{(\Vec{X} - \Vec{P}) \cdot (\Vec{Q} -
     \Vec{P})}{(\Vec{Q} - \Vec{P}) \cdot (\Vec{Q} - \Vec{P})}
-    \label{lambda-closest-point-line}
   </EquationBlock>
 
   <p>

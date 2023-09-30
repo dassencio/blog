@@ -16,8 +16,8 @@
     express the equation above are:
   </p>
 
-  <EquationBlock>
-    \FahrenheitSlim = 1.8 \cdot \CelsiusSlim + 32 \label{C-to-F-exact}
+  <EquationBlock label="C-to-F-exact">
+    \FahrenheitSlim = 1.8 \cdot \CelsiusSlim + 32
   </EquationBlock>
 
   <p>and its inverse:</p>
@@ -31,14 +31,14 @@
     the following approximation of equation \eqref{C-to-F-exact}:
   </p>
 
-  <EquationBlock boxed>
-    \FahrenheitSlim = 2 \cdot \CelsiusSlim + 30 \label{C-to-F-approximation}
+  <EquationBlock boxed label="C-to-F-approximation">
+    \FahrenheitSlim = 2 \cdot \CelsiusSlim + 30
   </EquationBlock>
 
   <p>and its inverse:</p>
 
-  <EquationBlock boxed>
-    \CelsiusSlim = (\FahrenheitSlim - 30) / 2 \label{F-to-C-approximation}
+  <EquationBlock boxed label="F-to-C-approximation">
+    \CelsiusSlim = (\FahrenheitSlim - 30) / 2
   </EquationBlock>
 
   <p>

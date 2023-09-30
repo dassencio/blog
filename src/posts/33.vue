@@ -105,10 +105,9 @@
     >:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="euler-lagrange">
     \DDo{t}\left(\PP{L}{\dot{\theta}_i}\right) - \PP{L}{\theta_i} = 0
     \Longrightarrow \DD{p_{\theta_i}}{t} - \PP{L}{\theta_i} = 0
-    \label{euler-lagrange}
   </EquationBlock>
 
   <p>for $i = 1, 2$. Since:</p>
@@ -146,10 +145,9 @@
     \label{euler-lagrange-1}
   </EquationBlock>
 
-  <EquationBlock>
+  <EquationBlock label="euler-lagrange-2">
     l_2 \ddot{\theta}_2 + l_1 \ddot{\theta}_1 \cos(\theta_1 - \theta_2) - l_1
     \dot{\theta}_1^2 \sin(\theta_1 - \theta_2) + g \sin\theta_2 = 0
-    \label{euler-lagrange-2}
   </EquationBlock>
 
   <p>
@@ -202,11 +200,10 @@
     \eqref{euler-lagrange-2-short} can be combined into a single equation:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="euler-lagrange-matrix-form">
     A \MatrixTwoOne{\ddot{\theta}_1}{\ddot{\theta}_2} =
     \MatrixTwoTwo{1}{\alpha_1}{\alpha_2}{1}
     \MatrixTwoOne{\ddot{\theta}_1}{\ddot{\theta}_2} = \MatrixTwoOne{f_1}{f_2}
-    \label{euler-lagrange-matrix-form}
   </EquationBlock>
 
   <p>
@@ -217,10 +214,9 @@
     directly:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="inverse-A">
     A^{-1} = \frac{1}{\det(A)} \MatrixTwoTwo{1}{-\alpha_1}{-\alpha_2}{1} =
     \frac{1}{1 - \alpha_1\alpha_2} \MatrixTwoTwo{1}{-\alpha_1}{-\alpha_2}{1}
-    \label{inverse-A}
   </EquationBlock>
 
   <p>Before we continue, note that $A$ is always invertible since:</p>
@@ -249,10 +245,9 @@
     $\theta_1$, $\theta_2$, $\omega_1$, $\omega_2$:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="euler-lagrange-system">
     \DDo{t} \MatrixFourOne{\theta_1}{\theta_2}{\omega_1}{\omega_2} =
     \MatrixFourOne{\omega_1}{\omega_2}{g_1(\theta_1,\theta_2,\omega_1,\omega_2)}{g_2(\theta_1,\theta_2,\omega_1,\omega_2)}
-    \label{euler-lagrange-system}
   </EquationBlock>
 
   <p>where:</p>

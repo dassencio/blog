@@ -47,9 +47,9 @@
     >, we can write:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="bernoulli">
     \frac{v_A^2(t)}{2} + \frac{p_A}{\rho} + gh_A(t) = \frac{v_B^2(t)}{2} +
-    \frac{p_B}{\rho} + gh_B(t) \label{bernoulli}
+    \frac{p_B}{\rho} + gh_B(t)
   </EquationBlock>
 
   <p>
@@ -69,7 +69,7 @@
 
   <p>which leads to:</p>
 
-  <EquationBlock> v_B(t) = \sqrt{2gh(t)} \label{flow-speed} </EquationBlock>
+  <EquationBlock label="flow-speed"> v_B(t) = \sqrt{2gh(t)} </EquationBlock>
 
   <p>
     This implies that the fluid exits the funnel at a speed $v(t) = v_B(t) =
@@ -92,9 +92,9 @@
     volume of fluid $V(t)$ contained within it at time $t$ as follows:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="volume">
     V(t) = \frac{1}{3}\pi r^2(t) h(t) =
-    \frac{\pi}{3}\left(\frac{b}{h_0}\right)^2h^3(t) \label{volume}
+    \frac{\pi}{3}\left(\frac{b}{h_0}\right)^2h^3(t)
   </EquationBlock>
 
   <p>
@@ -111,8 +111,8 @@
     the fluid exits the funnel is:
   </p>
 
-  <EquationBlock>
-    \Phi(t) = A v(t) = (\pi a^2) v(t) = \pi a^2 \sqrt{2gh(t)} \label{flow-rate}
+  <EquationBlock label="flow-rate">
+    \Phi(t) = A v(t) = (\pi a^2) v(t) = \pi a^2 \sqrt{2gh(t)}
   </EquationBlock>
 
   <p>
@@ -121,8 +121,8 @@
     decreases, we can write:
   </p>
 
-  <EquationBlock>
-    \dot{V}(t) = -\Phi(t) \label{volume-derivative}
+  <EquationBlock label="volume-derivative">
+    \dot{V}(t) = -\Phi(t)
   </EquationBlock>
 
   <p>Also, from equation \eqref{volume}, we have:</p>
@@ -143,9 +143,8 @@
 
   <p>Cancelling common terms on both sides of this equation, we arrive at:</p>
 
-  <EquationBlock>
+  <EquationBlock label="fluid-height-derivative">
     \left(\frac{b}{h_0}\right)^2 h^{3/2}(t) \dot{h}(t) = -a^2 \sqrt{2g}
-    \label{fluid-height-derivative}
   </EquationBlock>
 
   <p>Given that:</p>
@@ -182,9 +181,9 @@
 
   <p>After some algebraic manipulation, we arrive at:</p>
 
-  <EquationBlock>
+  <EquationBlock label="fluid-height">
     h(t) = h_0\left[ 1 - \frac{5}{2} \left(\frac{a}{b}\right)^2
-    \sqrt{\frac{2g}{h_0}} t \right]^{2/5} \label{fluid-height}
+    \sqrt{\frac{2g}{h_0}} t \right]^{2/5}
   </EquationBlock>
 
   <p>
@@ -198,9 +197,8 @@
 
   <p>Therefore, we have:</p>
 
-  <EquationBlock boxed>
+  <EquationBlock boxed label="flow-time">
     T = \frac{2}{5} \left(\frac{b}{a}\right)^2 \sqrt{\frac{h_0}{2g}}
-    \label{flow-time}
   </EquationBlock>
 
   <p>

@@ -50,17 +50,15 @@
     >. First, note that:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="p-divergent-form">
     p_d(x,y) = \DDo{x} \left( \SumSub{m,n=0}{m + n \leq d}^d c_{mn}
     \frac{x^{m+1}}{m+1}y^n \right) = \nabla\cdot(q_{d+1}(x,y), 0)
-    \label{p-divergent-form}
   </EquationBlock>
 
   <p>where</p>
 
-  <EquationBlock>
+  <EquationBlock label="definition-q">
     q_{d+1}(x,y) = \SumSub{m,n=0}{m + n \leq d}^d c_{mn} \frac{x^{m+1}}{m+1} y^n
-    \label{definition-q}
   </EquationBlock>
 
   <p>
@@ -85,9 +83,9 @@
     \eqref{integral-q-n1} as:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="integral-q">
     \int_{\Omega} p_d(x,y) \D{x}\D{y} = \sum_{i=1}^{n} n^1_i \int_{S_i}
-    q_{d+1}(x,y) \D{l} \label{integral-q}
+    q_{d+1}(x,y) \D{l}
   </EquationBlock>
 
   <p>
@@ -96,11 +94,11 @@
     the clockwise direction and normalizing the resulting vector:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="n_i">
     \Vec{n}_i = \frac{(\Delta{y_i}, -\Delta{x_i})}{\sqrt{\Delta{y_i}^2 +
     \Delta{x_i}^2}} \Longrightarrow n^1_i =
     \frac{\Delta{y_i}}{\sqrt{\Delta{x_i}^2 + \Delta{y_i}^2}} =
-    \frac{\Delta{y_i}}{L_i} \label{n_i}
+    \frac{\Delta{y_i}}{L_i}
   </EquationBlock>
 
   <p>
@@ -120,9 +118,9 @@
 
   <p>We can parameterize each such segment $S_i$ as shown below:</p>
 
-  <EquationBlock>
+  <EquationBlock label="S_i-parameterization">
     \Vec{r}_i(s) = \left(\tilde{x}_i(s), \tilde{y}_i(s)\right) = (x_i +
-    s\Delta{x_i}, y_i + s\Delta{y_i}) \label{S_i-parameterization}
+    s\Delta{x_i}, y_i + s\Delta{y_i})
   </EquationBlock>
 
   <p>
@@ -157,16 +155,15 @@
     explicitly consider only segments with $\Delta{y_i} \neq 0$):
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="y-in-terms-of-s">
     y = y_i + s\Delta{y_i} \Longrightarrow \Di{y} = \Delta{y_i} \D{s}
-    \label{y-in-terms-of-s}
   </EquationBlock>
 
   <p>As for the $x$ variable, \eqref{y-in-terms-of-s} implies:</p>
 
-  <EquationBlock>
+  <EquationBlock label="x-in-terms-of-s">
     x_i + s\Delta{x_i} = x_i + (y - y_i)\frac{\Delta{x_i}}{\Delta{y_i}} = x_i +
-    m_i (y - y_i) \label{x-in-terms-of-s}
+    m_i (y - y_i)
   </EquationBlock>
 
   <p>where $m_i = \Delta{x_i} / \Delta{y_i}$.</p>
@@ -199,10 +196,10 @@
 
   <p>then equation \eqref{integral-y} can be written as:</p>
 
-  <EquationBlock>
+  <EquationBlock label="integral-y-2">
     \int_{\Omega} p_d(x,y) \D{x}\D{y} = \SumSub{i=1}{\Delta{y_i} \neq 0}^{n}
     \SumSub{m,n=0}{m + n \leq d}^{d} \sum_{p=0}^{m+1}
-    \beta_{mnip}\int_{y_i}^{y_{i+1}} y^{m+1-p+n} \D{y} \label{integral-y-2}
+    \beta_{mnip}\int_{y_i}^{y_{i+1}} y^{m+1-p+n} \D{y}
   </EquationBlock>
 
   <p>where:</p>
@@ -218,11 +215,10 @@
     gives us our final result:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock boxed label="integral-polygonal-domain">
     \int_{\Omega} p_d(x,y) \D{x}\D{y} = \SumSub{i=1}{\Delta{y_i} \neq 0}^{n}
     \SumSub{m,n=0}{m + n \leq d}^{d} \sum_{p=0}^{m+1}
     \beta_{mnip}\frac{\left(y_{i+1}^{m+2-p+n} - y_i^{m+2-p+n}\right)}{m+2-p+n}
-    \label{integral-polygonal-domain}
   </EquationBlock>
 
   <p>

@@ -44,10 +44,10 @@
     vanish have been omitted below):
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="forces-S-prime">
     \Vec{F}^{\textrm{eff}}_{S'} = m \Vec{a}_{S'} = \Vec{F}_S - m \Vecg{\omega}
     \times (\Vecg{\omega} \times \Vec{x}') = \Vec{F}_S + m \omega^2 \rho
-    \Vecg{\hat \rho} \label{forces-S-prime}
+    \Vecg{\hat \rho}
   </EquationBlock>
 
   <p>
@@ -81,8 +81,8 @@
     equation below applies to any fluid element:
   </p>
 
-  <EquationBlock>
-    \Vec{F}_S = m \Vec{g} + \Vec{F}_{\textrm{fluid}} \label{forces-S}
+  <EquationBlock label="forces-S">
+    \Vec{F}_S = m \Vec{g} + \Vec{F}_{\textrm{fluid}}
   </EquationBlock>
 
   <p>
@@ -91,11 +91,10 @@
     \eqref{forces-S-prime} and \eqref{forces-S} leads to the following result:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="acceleration-S-prime">
     \Vec{0} = \Vec{F}_{\textrm{fluid}} + m \left(\Vec{g} - \Vecg{\omega} \times
     (\Vecg{\omega} \times \Vec{x}')\right) = \Vec{F}_{\textrm{fluid}} + m
     \left(\Vec{g} + \omega^2 \rho \Vecg{\hat \rho}\right)
-    \label{acceleration-S-prime}
   </EquationBlock>
 
   <p>
@@ -107,10 +106,10 @@
     isn't uniform in space:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="effective-gravity-S-prime">
     \Vec{g}^{\textrm{eff}} = \Vec{g} - \Vecg{\omega} \times (\Vecg{\omega}
     \times \Vec{x}') = \Vec{g} + \omega^2 \rho \Vecg{\hat \rho} = \Vec{g} +
-    \omega^2 R \sin\theta \Vecg{\hat \rho} \label{effective-gravity-S-prime}
+    \omega^2 R \sin\theta \Vecg{\hat \rho}
   </EquationBlock>
 
   <p>

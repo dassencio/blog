@@ -21,8 +21,8 @@
     $i\theta$, where $\theta$ is a real number:
   </p>
 
-  <EquationBlock>
-    e^{i\theta} \ColonEq \cos\theta + i\sin\theta \label{eulers-formula}
+  <EquationBlock label="eulers-formula">
+    e^{i\theta} \ColonEq \cos\theta + i\sin\theta
   </EquationBlock>
 
   <p>
@@ -32,9 +32,9 @@
     consider the Taylor series for $e^x$, where $x$ is a real number:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="exp-taylor-series">
     e^x = 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} +
-    \ldots = \sum_{n=0}^{\infty} \frac{x^n}{n!} \label{exp-taylor-series}
+    \ldots = \sum_{n=0}^{\infty} \frac{x^n}{n!}
   </EquationBlock>
 
   <p>
@@ -88,9 +88,8 @@
     This leads us to define the logarithm of a complex number $z \neq 0$ as:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="complex-log">
     \log{z} = \log(e^{\log|z| + i\theta}) \ColonEq \log|z| + i\theta
-    \label{complex-log}
   </EquationBlock>
 
   <p>
@@ -117,8 +116,8 @@
 
   <p>Therefore:</p>
 
-  <EquationBlock>
-    \log i = \log|i| + i\pi/2 = \log 1 + i\pi/2 = i\pi/2 \label{log-i}
+  <EquationBlock label="log-i">
+    \log i = \log|i| + i\pi/2 = \log 1 + i\pi/2 = i\pi/2
   </EquationBlock>
 
   <p>

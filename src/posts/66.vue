@@ -38,9 +38,8 @@
     keep the following quantity as small as possible:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="euclidean-distance-data">
     \|\Vec{\tilde{x}} - \Vec{x}\|^2_2 = \sum_{i=1}^n (\tilde{x}_i - x_i)^2
-    \label{euclidean-distance-data}
   </EquationBlock>
 
   <p>
@@ -64,9 +63,8 @@
     $\tilde{x}_i$ should minimize the following quantity:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="euclidean-distance-derivative">
     \sum_{i=1}^{n-1} (\tilde{x}_{i+1} - \tilde{x}_i)^2
-    \label{euclidean-distance-derivative}
   </EquationBlock>
 
   <p>
@@ -100,9 +98,9 @@
     following cost function:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="cost-function-1">
     J_\mu(\Vec{x}, \Vec{\tilde{x}}) = \sum_{i=1}^n (\tilde{x}_i - x_i)^2 + \mu
-    \sum_{i=1}^{n-1} (\tilde{x}_{i+1} - \tilde{x}_i)^2 \label{cost-function-1}
+    \sum_{i=1}^{n-1} (\tilde{x}_{i+1} - \tilde{x}_i)^2
   </EquationBlock>
 
   <p>
@@ -127,8 +125,8 @@
     problem in disguise. To prove this, let's first define:
   </p>
 
-  <EquationBlock>
-    \Vec{b} = \MatrixTwoOne{\Vec{x}}{\Vec{0}_{n-1}} \label{b}
+  <EquationBlock label="b">
+    \Vec{b} = \MatrixTwoOne{\Vec{x}}{\Vec{0}_{n-1}}
   </EquationBlock>
 
   <p>
@@ -137,14 +135,14 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock>
+  <EquationBlock label="D">
     D_{n-1} = \Matrix{
       -1     & 1      & 0      &      0 & \ldots & 0      & 0      \\
       0      & -1     & 1      &      0 & \ldots & 0      & 0      \\
       0      & 0      & -1     &      1 & \ldots & 0      & 0      \\
       \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
       0      & 0      & 0      &      0 & \ldots & -1     & 1
-    } \label{D}
+    }
   </EquationBlock>
 
   <p>
@@ -159,8 +157,8 @@
 
   <p>where:</p>
 
-  <EquationBlock>
-    A = \MatrixTwoOne{I_{n \times n}}{\sqrt{\mu} D_{n-1}} \label{A}
+  <EquationBlock label="A">
+    A = \MatrixTwoOne{I_{n \times n}}{\sqrt{\mu} D_{n-1}}
   </EquationBlock>
 
   <p>
@@ -169,10 +167,10 @@
     \eqref{D} and \eqref{A}, we find that:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="Ax-tilde-b">
     A \Vec{\tilde{x}} - \Vec{b} = \MatrixTwoOne{I_{n \times n} \Vec{\tilde{x}} -
     \Vec{x}}{\sqrt{\mu} D_{n-1} \Vec{\tilde{x}}} = \MatrixTwoOne{\Vec{\tilde{x}}
-    - \Vec{x}}{\sqrt{\mu} D_{n-1} \Vec{\tilde{x}}} \label{Ax-tilde-b}
+    - \Vec{x}}{\sqrt{\mu} D_{n-1} \Vec{\tilde{x}}}
   </EquationBlock>
 
   <p>
@@ -193,8 +191,8 @@
     for our linear least squares problem:
   </p>
 
-  <EquationBlock>
-    (A^T A) \Vec{\tilde{x}} = A^T \Vec{b} \label{normal-equations}
+  <EquationBlock label="normal-equations">
+    (A^T A) \Vec{\tilde{x}} = A^T \Vec{b}
   </EquationBlock>
 
   <p>
@@ -276,10 +274,9 @@
     formula, we derive the following cost function:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="cost-function-2">
     J^c_\mu(\Vec{x}, \Vec{\tilde{x}}) = \sum_{i=1}^n (\tilde{x}_i - x_i)^2 + \mu
     \sum_{i=2}^{n-1} (\tilde{x}_{i+1} - \tilde{x}_{i-1})^2
-    \label{cost-function-2}
   </EquationBlock>
 
   <p>
@@ -288,13 +285,13 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock>
+  <EquationBlock label="Dc">
     D^c_{n-2} = \Matrix{
       -1      & 0      & 1      & 0      & \ldots & 0      & 0      & 0 \\
       0       & -1     & 0      & 1      & \ldots & 0      & 0      & 0 \\
       \vdots  & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
       0       & 0      & 0      & 0      & \ldots & -1     & 0      & 1
-    } \label{Dc}
+    }
   </EquationBlock>
 
   <p>
@@ -348,10 +345,9 @@
     function:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="cost-function-3">
     J^{c,2}_\mu(\Vec{x}, \Vec{\tilde{x}}) = \sum_{i=1}^n (\tilde{x}_i - x_i)^2 +
     \mu \sum_{i=2}^{n-1} (\tilde{x}_{i+1} - 2 \tilde{x}_i + \tilde{x}_{i-1})^2
-    \label{cost-function-3}
   </EquationBlock>
 
   <p>
@@ -364,13 +360,13 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock>
+  <EquationBlock label="Lc">
     L_{n-2} = \Matrix{
       1      & -2     & 1      & 0      & \ldots & 0      & 0      & 0 \\
       0      & 1      & -2     & 1      & \ldots & 0      & 0      & 0 \\
       \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
       0      & 0      & 0      & 0      & \ldots & 1      & -2     & 1
-    } \label{Lc}
+    }
   </EquationBlock>
 
   <p>

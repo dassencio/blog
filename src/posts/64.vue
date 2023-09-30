@@ -40,10 +40,10 @@
     were omitted below):
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="F-eff-S-prime">
     \Vec{F}^{\textrm{eff}}_{S'} = m \Vec{a}_{S'} = \Vec{F}_S - m \Vecg{\omega}
     \times (\Vecg{\omega} \times \Vec{x}') = \Vec{F}_S + m \omega^2 \rho
-    \hat{\Vecg{\rho}} \label{F-eff-S-prime}
+    \hat{\Vecg{\rho}}
   </EquationBlock>
 
   <p>
@@ -76,8 +76,8 @@
     equation applies to any fluid element:
   </p>
 
-  <EquationBlock>
-    \Vec{F}_S = m \Vec{g} + \Vec{F}_{\textrm{fluid}} \label{F-S}
+  <EquationBlock label="F-S">
+    \Vec{F}_S = m \Vec{g} + \Vec{F}_{\textrm{fluid}}
   </EquationBlock>
 
   <p>
@@ -86,11 +86,11 @@
     following:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="acceleration">
     \Vec{0} = \Vec{F}_{\textrm{fluid}} + m \left(\Vec{g} - \Vecg{\omega} \times
     (\Vecg{\omega} \times \Vec{x}')\right) \Longrightarrow
     \Vec{F}_{\textrm{fluid}} = -m \left(\Vec{g} + \omega^2 \rho
-    \hat{\Vecg{\rho}}\right) \label{acceleration}
+    \hat{\Vecg{\rho}}\right)
   </EquationBlock>
 
   <p>
@@ -102,10 +102,9 @@
     uniform in space:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="effective-gravity">
     \Vec{g}^{\textrm{eff}} = \Vec{g} - \Vecg{\omega} \times (\Vecg{\omega}
     \times \Vec{x}') = \Vec{g} + \omega^2 \rho \hat{\Vecg{\rho}}
-    \label{effective-gravity}
   </EquationBlock>
 
   <p>
@@ -146,8 +145,8 @@
     form of $h(\rho)$:
   </p>
 
-  <EquationBlock boxed>
-    h(\rho) = h(0) + \frac{\omega^2 \rho^2}{2g} \label{surface-height}
+  <EquationBlock boxed label="surface-height">
+    h(\rho) = h(0) + \frac{\omega^2 \rho^2}{2g}
   </EquationBlock>
 
   <p>

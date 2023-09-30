@@ -62,8 +62,8 @@
     this sphere, we have:
   </p>
 
-  <EquationBlock>
-    \int_{S} \Vec{E} \cdot \D{\Vec{A}} \lt 0 \label{surface-integral}
+  <EquationBlock label="surface-integral">
+    \int_{S} \Vec{E} \cdot \D{\Vec{A}} \lt 0
   </EquationBlock>
 
   <p>

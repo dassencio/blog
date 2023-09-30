@@ -130,9 +130,9 @@
 
   <p>we obtain:</p>
 
-  <EquationBlock boxed>
+  <EquationBlock boxed label="Pn-factorial-form">
     P(n) = 1 - \prod_{i=1}^{n-1}\left(\frac{N-i}{N}\right) = 1 - \frac{N!}{N^n(N
-    - n)!} \label{Pn-factorial-form}
+    - n)!}
   </EquationBlock>
 
   <p>
@@ -221,8 +221,8 @@
 
   <p>we finally obtain:</p>
 
-  <EquationBlock>
-    P(n) \geq Q(n) \ColonEq 1 - e^{-n(n-1)/(2N)} \label{Qn}
+  <EquationBlock label="Qn">
+    P(n) \geq Q(n) \ColonEq 1 - e^{-n(n-1)/(2N)}
   </EquationBlock>
 
   <p>
@@ -263,8 +263,8 @@
 
   <p>This implies that any value of $n$ such that:</p>
 
-  <EquationBlock>
-    n \geq \sqrt{2N\log\left(\frac{1}{1-p}\right)} + 1 \label{birthday-paradox}
+  <EquationBlock label="birthday-paradox">
+    n \geq \sqrt{2N\log\left(\frac{1}{1-p}\right)} + 1
   </EquationBlock>
 
   <p>
@@ -282,8 +282,8 @@
     be estimated as:
   </p>
 
-  <EquationBlock>
-    n \approx 1.2\sqrt{N} \label{birthday-paradox-0.5}
+  <EquationBlock label="birthday-paradox-0.5">
+    n \approx 1.2\sqrt{N}
   </EquationBlock>
 
   <p>

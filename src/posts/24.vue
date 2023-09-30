@@ -35,9 +35,9 @@
     more manageable:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="P-approximate">
     P \approx |\psi(\Vec{0})|^2 \int_{\|\Vec{x}\| \leq r_0} \D{\Vec{x}} =
-    \frac{4\pi r_0^3}{3}|\psi(\Vec{0})|^2 \label{P-approximate}
+    \frac{4\pi r_0^3}{3}|\psi(\Vec{0})|^2
   </EquationBlock>
 
   <p>
@@ -61,9 +61,8 @@
     <ReferenceLink id="griffiths-quantum-mechanics" />, equations 4.73 - 4.75):
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="radial-wave-function">
     R_{nl}(r) = \frac{1}{r}\rho^{l+1} e^{-\rho} v(\rho)
-    \label{radial-wave-function}
   </EquationBlock>
 
   <p>Above, $\rho = r / (a_0 n)$, $v(\rho)$ is a polynomial function, and:</p>

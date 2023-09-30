@@ -165,8 +165,8 @@
 
   <p>and therefore:</p>
 
-  <EquationBlock>
-    P_N = \frac{N!^3}{2^{N - 1} N^2} \label{num-possibilities}
+  <EquationBlock label="num-possibilities">
+    P_N = \frac{N!^3}{2^{N - 1} N^2}
   </EquationBlock>
 
   <p>

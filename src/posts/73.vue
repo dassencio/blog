@@ -77,10 +77,10 @@
     $\Vec{x}_i$ is:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="force-discrete-band">
     \Delta\Vec{F}_i = k \left(\|\Delta\Vec{x}_i\| - \Delta{s}\right)
     \Vecg{\eta}_i + k \left(\|\Delta\Vec{x}_{i-1}\| - \Delta{s}\right)
-    (-\Vecg{\eta}_{i-1}) \label{force-discrete-band}
+    (-\Vecg{\eta}_{i-1})
   </EquationBlock>
 
   <p>
@@ -94,9 +94,8 @@
     the mass at that position:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="delta-L">
     \Delta{L}_i = \frac{\|\Delta\Vec{x}_i\| + \|\Delta\Vec{x}_{i-1}\|}{2}
-    \label{delta-L}
   </EquationBlock>
 
   <p>We then have:</p>
@@ -127,18 +126,18 @@
     when $n \rightarrow \infty$, we get:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="dx-ds-1">
     \frac{\|\Delta\Vec{x}_i\|}{\Delta{s}} = \left\|
     \frac{\Delta\Vec{x}_i}{\Delta{s}} \right\| \longrightarrow
-    \left\|\PP{\Vec{X}}{s} \right\| \label{dx-ds-1}
+    \left\|\PP{\Vec{X}}{s} \right\|
   </EquationBlock>
 
   <p>Similarly:</p>
 
-  <EquationBlock>
+  <EquationBlock label="dx-ds-2">
     \frac{\|\Delta\Vec{x}_{i-1}\|}{\Delta{s}} = \left\|
     \frac{\Delta\Vec{x}_{i-1}}{\Delta{s}} \right\| \longrightarrow
-    \left\|\PP{\Vec{X}}{s}\right\| \label{dx-ds-2}
+    \left\|\PP{\Vec{X}}{s}\right\|
   </EquationBlock>
 
   <p>
@@ -146,11 +145,11 @@
     equations \eqref{dx-ds-1} and \eqref{dx-ds-2}, we obtain:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="dL-ds">
     \frac{\Delta{L}_i}{\Delta{s}} = \frac{1}{2}
     \left(\frac{\|\Delta\Vec{x}_i\|}{\Delta{s}} +
     \frac{\|\Delta\Vec{x}_{i-1}\|}{\Delta{s}}\right) \longrightarrow
-    \left\|\PP{\Vec{X}}{s}\right\| \label{dL-ds}
+    \left\|\PP{\Vec{X}}{s}\right\|
   </EquationBlock>
 
   <p>Additionally, we have:</p>
@@ -163,9 +162,9 @@
 
   <p>Consequently (and the same applies to $\Vecg{\eta}_{i-1}$):</p>
 
-  <EquationBlock>
+  <EquationBlock label="eta-converges">
     \Vecg{\eta}_i \longrightarrow \PP{\Vec{X}}{s} \Big/
-    \left\|\PP{\Vec{X}}{s}\right\| = \Vecg{\tau}(s,t) \label{eta-converges}
+    \left\|\PP{\Vec{X}}{s}\right\| = \Vecg{\tau}(s,t)
   </EquationBlock>
 
   <p>
@@ -184,11 +183,10 @@
 
   <p>approaches, as $n \rightarrow \infty$, the following:</p>
 
-  <EquationBlock>
+  <EquationBlock label="partial-term">
     \PPo{s}\left[ \left(\left\|\PP{\Vec{X}}{s}\right\| - 1\right)
     \Vecg{\tau}\right] = \PPo{s} \left[\left(\left\|\PP{\Vec{X}}{s}\right\| -
     1\right) \PP{\Vec{X}}{s} \Big/ \left\|\PP{\Vec{X}}{s}\right\|\right]
-    \label{partial-term}
   </EquationBlock>
 
   <p>

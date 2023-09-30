@@ -42,8 +42,8 @@
 
   <p>From <FigureLink id="non-inertial-frame" />, we see that:</p>
 
-  <EquationBlock boxed>
-    \Vec{x}(t) = \Vec{R}(t) + \Vec{x}'(t) \label{x-x-prime}
+  <EquationBlock boxed label="x-x-prime">
+    \Vec{x}(t) = \Vec{R}(t) + \Vec{x}'(t)
   </EquationBlock>
 
   <p>
@@ -77,9 +77,9 @@
     small rotation:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="dx-prime-S-dx-prime-S-prime">
     (\Di{\Vec{x}'})_S = (\Di{\Vec{x}'})_{S'} + \Di{\Vecg{\theta}} \times
-    \Vec{x}' \label{dx-prime-S-dx-prime-S-prime}
+    \Vec{x}'
   </EquationBlock>
 
   <p>
@@ -88,10 +88,10 @@
     both sides of the equation above by $\Di{t}$, we obtain:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="ddt-x-prime-S-ddt-x-prime-S-prime">
     \left(\DD{\Vec{x}'}{t}\right)_S = \left(\DD{\Vec{x}'}{t}\right)_{S'} +
     \DD{\Vecg{\theta}}{t} \times \Vec{x}' = \left(\DD{\Vec{x}'}{t}\right)_{S'} +
-    \Vecg{\omega} \times \Vec{x}' \label{ddt-x-prime-S-ddt-x-prime-S-prime}
+    \Vecg{\omega} \times \Vec{x}'
   </EquationBlock>
 
   <p>
@@ -112,11 +112,10 @@
 
   <p>Dividing both sides by $\Di{t}$, we obtain:</p>
 
-  <EquationBlock>
+  <EquationBlock label="ddt-q-S-ddt-q-S-prime">
     \left(\DD{\Vec{q}}{t}\right)_S = \left(\DD{\Vec{q}}{t}\right)_{S'} +
     \left(\DD{\Vecg{\theta}}{t}\right)_S \times \Vec{q} =
     \left(\DD{\Vec{q}}{t}\right)_{S'} + \Vecg{\omega} \times \Vec{q}
-    \label{ddt-q-S-ddt-q-S-prime}
   </EquationBlock>
 
   <p>
@@ -125,9 +124,9 @@
     perspective from frame $S$. From equation \eqref{x-x-prime}, we have:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="ddt-x-S-ddt-x-prime-S">
     \left(\DD{\Vec{x}}{t}\right)_S = \left(\DD{\Vec{R}}{t}\right)_S +
-    \left(\DD{\Vec{x}'}{t}\right)_S \label{ddt-x-S-ddt-x-prime-S}
+    \left(\DD{\Vec{x}'}{t}\right)_S
   </EquationBlock>
 
   <p>
@@ -142,9 +141,8 @@
 
   <p>A better way to write the equation above is:</p>
 
-  <EquationBlock boxed>
+  <EquationBlock boxed label="v-S-v-S-prime">
     \Vec{v}_S = \dot{\Vec{R}} + \Vec{v}_{S'} + \Vecg{\omega} \times \Vec{x}'
-    \label{v-S-v-S-prime}
   </EquationBlock>
 
   <p>
@@ -162,11 +160,10 @@
     equation \eqref{v-S-v-S-prime}, we have:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="ddt-v-S-ddt-v-S-prime-1">
     \left(\DD{\Vec{v}_S}{t}\right)_S = \left(\DD{\dot{\Vec{R}}}{t}\right)_S +
     \left(\DD{\Vec{v}_{S'}}{t}\right)_S + \left(\DD{\Vecg{\omega}}{t}\right)_S
     \times \Vec{x}' + \Vecg{\omega} \times \left(\DD{\Vec{x}'}{t}\right)_S
-    \label{ddt-v-S-ddt-v-S-prime-1}
   </EquationBlock>
 
   <p>
@@ -197,10 +194,10 @@
     form:
   </p>
 
-  <EquationBlock boxed>
+  <EquationBlock boxed label="a-S-a-S-prime">
     \Vec{a}_S = \ddot{\Vec{R}} + \Vec{a}_{S'} + \dot{\Vecg{\omega}} \times
     \Vec{x}' + \Vecg{\omega} \times (\Vecg{\omega} \times \Vec{x}') + 2
-    \Vecg{\omega} \times \Vec{v}_{S'} \label{a-S-a-S-prime}
+    \Vecg{\omega} \times \Vec{v}_{S'}
   </EquationBlock>
 
   <p>
@@ -222,8 +219,8 @@
     $\Vec{F}_S$ acting on an object of constant mass $m$ satisfies:
   </p>
 
-  <EquationBlock>
-    \Vec{F}_S = m \Vec{a}_S \label{newtons-2nd-law}
+  <EquationBlock label="newtons-2nd-law">
+    \Vec{F}_S = m \Vec{a}_S
   </EquationBlock>
 
   <p>
@@ -231,11 +228,10 @@
     now define an "effective" force acting on the mass $m$ as measured in $S'$:
   </p>
 
-  <EquationBlock>
+  <EquationBlock label="F-effective-S-prime">
     \Vec{F}^{\textrm{eff}}_{S'} = m \Vec{a}_{S'} = \Vec{F}_S - m \ddot{\Vec{R}}
     - m \dot{\Vecg{\omega}} \times \Vec{x}' - m \Vecg{\omega} \times
     (\Vecg{\omega} \times \Vec{x}') - 2m \Vecg{\omega} \times \Vec{v}_{S'}
-    \label{F-effective-S-prime}
   </EquationBlock>
 
   <p>
