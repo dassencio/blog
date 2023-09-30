@@ -173,7 +173,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align label="ddt-v-S-ddt-v-S-prime-2">
+  <EquationBlock split label="ddt-v-S-ddt-v-S-prime-2">
     \left(\DD{\Vec{v}_S}{t}\right)_S = \left(\DD{\dot{\Vec{R}}}{t}\right)_S +
       \left(\DD{\Vec{v}_{S'}}{t}\right)_{S'}
     &+ \Vecg{\omega} \times \Vec{v}_{S'} + \left(\DD{\Vecg{\omega}}{t}\right)_S

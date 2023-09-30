@@ -85,7 +85,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     P(D|+) &= \frac{P(+|D)P(D)}{P(+|D)P(D)+ P(+|D^c)P(D^c)} \\
            &= \frac{P(+|D)P(D)}{P(+|D)P(D)+ [1 - P(-|D^c)][1 - P(D)]}
   </EquationBlock>

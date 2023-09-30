@@ -174,7 +174,7 @@
   <p>This leads us to an expression for the fluid height $h(t)$:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     h(t) &= \left[h_0^{5/2} - \frac{5}{2}\left(\frac{h_0}{b}\right)^2 a^2 \sqrt{2g} t \right]^{2/5} \\
          &= h_0 \left[1 - \frac{5}{2} \frac{1}{\sqrt{h_0}b^2} a^2 \sqrt{2g} t \right]^{2/5}
   </EquationBlock>

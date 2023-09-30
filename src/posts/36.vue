@@ -67,7 +67,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align label="integral-q-n1">
+  <EquationBlock split label="integral-q-n1">
     \int_{\Omega} p_d(x,y) \D{x}\D{y}
       &= \int_{\Omega} \nabla\cdot(q_{d+1}(x,y), 0) \D{x}\D{y} \\
       &= \int_{S} (q_{d+1}(x,y), 0) \cdot \Vec{n}(x,y) \D{l} \\
@@ -141,7 +141,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align label="integral-expansion">
+  <EquationBlock split label="integral-expansion">
     \int_{\Omega} p_d(x,y) \D{x}\D{y}
       &= \sum_{i=1}^{n} n^1_i \int_{S_i} q_{d+1}(x,y) \D{l} \\
       &= \sum_{i=1}^{n} n^1_i \int_{0}^{1} q_{d+1}(\tilde{x}_i(s),\tilde{y}_i(s))
@@ -174,7 +174,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align label="integral-y">
+  <EquationBlock split label="integral-y">
     \int_{\Omega} p_d(x,y) \D{x}\D{y}
       &= \SumSub{i=1}{\Delta{y_i} \neq 0}^{n} n^1_i L_i \int_{y_i}^{y_{i+1}}
          q_{d+1}(x_i + m_i (y - y_i), y) \frac{1}{\Delta{y_i}} \D{y} \\
@@ -241,7 +241,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     \int_{\Omega} p_2(x,y) \D{x}\D{y} = \sum_{i=1}^{n} \Delta{y_i} \Bigg[
       &  &&\; c_{00} \bigg( \frac{\Delta{x_i}}{2} + x_i \bigg) \\
       &+ &&\; c_{10} \bigg( \frac{\Delta{x_i}^2}{6} + \frac{\Delta{x_i} x_i}{2}

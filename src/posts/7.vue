@@ -43,7 +43,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     e^{i\theta}
     &= 1 + \frac{(i\theta)}{1!} + \frac{(i\theta)^2}{2!} +
        \frac{(i\theta)^3}{3!} + \frac{(i\theta)^4}{4!} +

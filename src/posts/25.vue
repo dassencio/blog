@@ -71,7 +71,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align label="integral-expansion">
+  <EquationBlock split label="integral-expansion">
     \int_{S} p_d(x,y) \D{l}
       &= \sum_{i=1}^{n} \int_{S_i} p_d(x,y) \D{l} \\
       &= \sum_{i=1}^{n} \int_0^1 p_d(\tilde{x}_i(s), \tilde{y}_i(s))
@@ -94,7 +94,7 @@
   <p>we have:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     (x_i + s\Delta{x_i})^m (y_i + s\Delta{y_i})^n
       &= \sum_{k=0}^{m} \binom{m}{k} x_i^{m-k} s^k \Delta{x_i}^k \sum_{p=0}^{n}
          \binom{n}{p} y_i^{n-p} s^p \Delta{y_i}^p \\
@@ -113,7 +113,7 @@
   <p>Therefore:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     \int_0^1 (x_i + s\Delta{x_i})^m (y_i + s\Delta{y_i})^n \D{s}
       &= \int_0^1 \sum_{k=0}^{m} \sum_{p=0}^{n} \alpha_{mnkpi} s^{k+p} \D{s} \\
       &= \sum_{k=0}^{m} \sum_{p=0}^{n} \alpha_{mnkpi} \int_0^1 s^{k+p} \D{s} \\
@@ -125,7 +125,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     \int_{S} p_d(x,y) \D{l}
       &= \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d}^d L_i c_{mn} \sum_{k=0}^{m}
          \sum_{p=0}^{n} \frac{\alpha_{mnkpi}}{k+p+1} \\
@@ -164,7 +164,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     \int_{S} p_2(x,y) \D{l} = \sum_{i=1}^{n} L_i \Bigg[
       &  &&\; c_{00} \\
       &+ &&\; c_{10}\left(x_i + \frac{\Delta{x_i}}{2}\right) \\

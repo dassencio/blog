@@ -152,7 +152,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     P_N &= \frac{N(N - 1)}{2} \cdot 2 \cdot \frac{(N - 1)(N - 2)}{2}
            \ldots (N - 2) \frac{3 \cdot 2}{2} (N - 1) \frac{2 \cdot 1}{2} \\
         &= \left[2 \ldots (N - 2)(N - 1)\right] \left[\frac{N(N - 1)}{2}

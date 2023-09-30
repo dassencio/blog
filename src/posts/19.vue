@@ -108,7 +108,7 @@
   </p>
 
   <!-- prettier-ignore-->
-  <EquationBlock align label="Pn-product-form">
+  <EquationBlock split label="Pn-product-form">
     P(n) &= 1 - P^*(n) \\
          &= 1 - P^{(2)} P^{(3)} \ldots P^{(n)} \\
          &= 1 - \left(\frac{N-1}{N}\right)\left(\frac{N-2}{N}\right) \ldots \left(\frac{N-(n-1)}{N}\right) \\
@@ -236,7 +236,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     Q(n) \geq p
       & \Longleftrightarrow 1 - e^{-n(n-1)/(2N)} \geq p \\
       & \Longleftrightarrow e^{-n(n-1)/(2N)} \leq 1 - p \\

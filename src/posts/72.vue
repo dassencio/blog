@@ -63,7 +63,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align label="N">
+  <EquationBlock split label="N">
     N &= N^{\small{(2)}} + N^{\small{(3)}} + \ldots + N^{\small{(n)}} \\
       &= \binom{n}{2} + \binom{n}{3} + \ldots + \binom{n}{n} \\
       &= \sum_{k=0}^n \binom{n}{k} - \binom{n}{1} - \binom{n}{0} \\

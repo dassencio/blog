@@ -102,7 +102,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     \Vec{v}(t)\cdot\Vec{x}(t)
       &= v_x(t)x(t) + v_y(t)y(t) \\
       &= \omega r^2\left[-\sin(\omega t)\cos(\omega t) +
@@ -123,7 +123,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align label="speed">
+  <EquationBlock split label="speed">
     v(t)
       &= \|\Vec{v}(t)\| \\
       &= \sqrt{v_x^2(t) + v_y^2(t)} \\
@@ -151,7 +151,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align label="speed-derivative">
+  <EquationBlock split label="speed-derivative">
     \DD{\|\Vec{v}(t)\|}{t}
     &= \DDo{t}\sqrt{v_x^2(t) + v_y^2(t)} \\
     &= \frac{2v_x(t)a_x(t) + 2v_y(t)a_y(t)}{2\sqrt{v_x^2(t) + v_y^2(t)}} \\

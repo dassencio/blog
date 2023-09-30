@@ -92,7 +92,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align label="position">
+  <EquationBlock split label="position">
     x(t) - x(0)
       &= \frac{\alpha}{2m}\left[ \int_{w = T}^{w = T
          - t}\frac{(-1)}{w^2}\D{w} - \frac{t}{T^2} \right] \\

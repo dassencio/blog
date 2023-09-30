@@ -101,7 +101,7 @@
   <p>We then have:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align label="force-density-discrete-band">
+  <EquationBlock split label="force-density-discrete-band">
     \Vec{f}_i &= \frac{\Delta\Vec{F}_i}{\Delta{L}_i} \\
               &= \frac{\Delta{s}}{\Delta{L}_i} \frac{\Delta\Vec{F}_i}{\Delta{s}} \\
               &= \frac{\Delta{s}}{\Delta{L}_i} k \left[

@@ -54,7 +54,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     T &= \frac{1}{2}m_1 v_1^2 + \frac{1}{2}m_2 v_2^2 \\
       &= \frac{1}{2}m_1(\dot{x}_1^2 + \dot{y}_1^2) + \frac{1}{2}m_2(\dot{x}_2^2 + \dot{y}_2^2) \\
       &= \frac{1}{2}m_1 l_1^2 \dot{\theta}_1^2 + \frac{1}{2}m_2\left[l_1^2 \dot{\theta}_1^2
@@ -68,7 +68,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     V &= m_1 g y_1 + m_2 g y_2 \\
       &= -m_1 g l_1 \cos\theta_1 - m_2 g (l_1 \cos\theta_1 + l_2 \cos\theta_2) \\
       &= -(m_1 + m_2) g l_1 \cos\theta_1 - m_2 g l_2\cos\theta_2
@@ -77,7 +77,7 @@
   <p>The Lagrangian of the double pendulum is therefore:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock split>
     L =\frac{1}{2}(m_1 + m_2) l_1^2 \dot{\theta}_1^2
       &+ \frac{1}{2}m_2 l_2^2 \dot{\theta}_2^2
         + m_2 l_1 l_2 \dot{\theta}_1\dot{\theta}_2 \cos(\theta_1 - \theta_2) \\
@@ -138,7 +138,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align label="euler-lagrange-1">
+  <EquationBlock split label="euler-lagrange-1">
     (m_1 + m_2) l_1 \ddot{\theta}_1
     &+ m_2 l_2 \ddot{\theta}_2 \cos(\theta_1 - \theta_2) \\
     &+ m_2 l_2 \dot{\theta}_2^2\sin(\theta_1 - \theta_2) + (m_1 + m_2) g \sin\theta_1 = 0

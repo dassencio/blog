@@ -3,7 +3,9 @@
     $$
     {{ boxed ? "\\boxed{" : "" }}
     {{ align ? "\\begin{alignat}{99}" : "" }}
+    {{ split ? "\\begin{split}" : "" }}
     {{ slotText }}
+    {{ split ? "\\end{split}" : "" }}
     {{ label ? "\\label{" + label + "}" : "" }}
     {{ align ? "\\end{alignat}" : "" }}
     {{ boxed ? "}" : "" }}
@@ -19,6 +21,7 @@ const props = defineProps<{
   boxed?: boolean;
   numberLines?: boolean;
   label?: string;
+  split?: boolean;
 }>();
 
 /**
