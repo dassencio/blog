@@ -119,13 +119,12 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="det-B">
     \det(B)
       &= m_1 m_2 l_1^2 l_2^2 + m_2^2 l_1^2 l_2^2
          \left[1 - \cos^2(\theta_1 - \theta_2)\right] \\
       &= m_1 m_2 l_1^2 l_2^2 + m_2^2 l_1^2 l_2^2 \sin^2(\theta_1 - \theta_2) \\
       &\geq m_1 m_2 l_1^2 l_2^2
-    \label{det-B}
   </EquationBlock>
 
   <p>
@@ -167,12 +166,11 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="hamiltonian">
     H &= \frac{m_2 l_2^2 p^2_{\theta_1} + (m_1 + m_2) l_1^2 p^2_{\theta_2}
          - 2 m_2 l_1 l_2 p_{\theta_1} p_{\theta_2} \cos(\theta_1 - \theta_2)}
          {2 m_2 l_1^2 l_2^2 \left[m_1 + m_2 \sin^2(\theta_1 - \theta_2)\right]} \\
       & \quad\quad - (m_1 + m_2) g l_1 \cos\theta_1 - m_2 g l_2\cos\theta_2
-    \label{hamiltonian}
   </EquationBlock>
 
   <p>

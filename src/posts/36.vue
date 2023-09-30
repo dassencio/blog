@@ -67,12 +67,12 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="integral-q-n1">
     \int_{\Omega} p_d(x,y) \D{x}\D{y}
       &= \int_{\Omega} \nabla\cdot(q_{d+1}(x,y), 0) \D{x}\D{y} \\
       &= \int_{S} (q_{d+1}(x,y), 0) \cdot \Vec{n}(x,y) \D{l} \\
       &= \int_{S} q_{d+1}(x,y) n^1(x,y) \D{l} \\
-      &= \sum_{i=1}^{n} \int_{S_i} q_{d+1}(x,y)n^1(x,y) \D{l} \label{integral-q-n1}
+      &= \sum_{i=1}^{n} \int_{S_i} q_{d+1}(x,y)n^1(x,y) \D{l}
   </EquationBlock>
 
   <p>
@@ -141,13 +141,13 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="integral-expansion">
     \int_{\Omega} p_d(x,y) \D{x}\D{y}
       &= \sum_{i=1}^{n} n^1_i \int_{S_i} q_{d+1}(x,y) \D{l} \\
       &= \sum_{i=1}^{n} n^1_i \int_{0}^{1} q_{d+1}(\tilde{x}_i(s),\tilde{y}_i(s))
          \left\|\Vec{r}'_i(s)\right\|\D{s} \\
       &= \sum_{i=1}^{n} n^1_i \int_{0}^{1} q_{d+1}(x_i + s\Delta{x_i}, y_i +
-         s\Delta{y_i}) L_i \D{s} \label{integral-expansion}
+         s\Delta{y_i}) L_i \D{s}
   </EquationBlock>
 
   <p>
@@ -174,7 +174,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="integral-y">
     \int_{\Omega} p_d(x,y) \D{x}\D{y}
       &= \SumSub{i=1}{\Delta{y_i} \neq 0}^{n} n^1_i L_i \int_{y_i}^{y_{i+1}}
          q_{d+1}(x_i + m_i (y - y_i), y) \frac{1}{\Delta{y_i}} \D{y} \\
@@ -184,7 +184,7 @@
          q_{d+1}(x_i - m_i y_i + m_i y, y) \D{y} \\
       &= \SumSub{i=1}{\Delta{y_i} \neq 0}^{n} \SumSub{m,n=0}{m + n \leq d}^d
          c_{mn} \int_{y_i}^{y_{i+1}} \frac{(x_i - m_i y_i + m_i y)^{m+1}}{m+1}
-         y^n \D{y} \label{integral-y}
+         y^n \D{y}
   </EquationBlock>
 
   <p>where equations \eqref{definition-q} and \eqref{n_i} were used. Since:</p>

@@ -28,10 +28,10 @@
   </EquationBlock>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="second-fact">
     P(A) &= P((A \cap B) \cup (A \cap B^c)) \\
          &= P(A \cap B) + P(A \cap B^c) \\
-         &= P(A|B)P(B) + P(A|B^c)P(B^c) \label{second-fact}
+         &= P(A|B)P(B) + P(A|B^c)P(B^c)
   </EquationBlock>
 
   <p>
@@ -41,10 +41,10 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="bayes-theorem">
     P(B|A) &= \frac{P(B \cap A)}{P(A)} \\
            &= \frac{P(A|B)P(B)}{P(A)} \\
-           &= \frac{P(A|B)P(B)}{P(A|B)P(B) + P(A|B^c)P(B^c)}\label{bayes-theorem}
+           &= \frac{P(A|B)P(B)}{P(A|B)P(B) + P(A|B^c)P(B^c)}
   </EquationBlock>
 
   <p>

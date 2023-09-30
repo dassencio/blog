@@ -71,7 +71,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="integral-expansion">
     \int_{S} p_d(x,y) \D{l}
       &= \sum_{i=1}^{n} \int_{S_i} p_d(x,y) \D{l} \\
       &= \sum_{i=1}^{n} \int_0^1 p_d(\tilde{x}_i(s), \tilde{y}_i(s))
@@ -81,7 +81,6 @@
          c_{mn} (x_i + s\Delta{x_i})^m (y_i + s\Delta{y_i})^n \D{s} \\
       &= \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d}^d L_i c_{mn}
          \int_0^1 (x_i + s\Delta{x_i})^m (y_i + s\Delta{y_i})^n \D{s}
-      \label{integral-expansion}
   </EquationBlock>
 
   <p>Using the polynomial expansions below:</p>

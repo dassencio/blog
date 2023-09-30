@@ -108,11 +108,11 @@
   </p>
 
   <!-- prettier-ignore-->
-  <EquationBlock align>
+  <EquationBlock align label="Pn-product-form">
     P(n) &= 1 - P^*(n) \\
          &= 1 - P^{(2)} P^{(3)} \ldots P^{(n)} \\
          &= 1 - \left(\frac{N-1}{N}\right)\left(\frac{N-2}{N}\right) \ldots \left(\frac{N-(n-1)}{N}\right) \\
-         &= 1 - \prod_{i=1}^{n-1}\left(\frac{N-i}{N}\right) \label{Pn-product-form}
+         &= 1 - \prod_{i=1}^{n-1}\left(\frac{N-i}{N}\right)
   </EquationBlock>
 
   <p>But since:</p>

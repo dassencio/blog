@@ -123,13 +123,13 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="speed">
     v(t)
       &= \|\Vec{v}(t)\| \\
       &= \sqrt{v_x^2(t) + v_y^2(t)} \\
       &= \sqrt{\omega^2 r^2 \sin^2(\omega t) + \omega^2 r^2\cos^2(\omega t)} \\
       &= \omega r \sqrt{\sin^2(\omega t) + \cos^2(\omega t)} \\
-      &= \omega r \label{speed}
+      &= \omega r
   </EquationBlock>
 
   <p>
@@ -151,11 +151,11 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="speed-derivative">
     \DD{\|\Vec{v}(t)\|}{t}
     &= \DDo{t}\sqrt{v_x^2(t) + v_y^2(t)} \\
     &= \frac{2v_x(t)a_x(t) + 2v_y(t)a_y(t)}{2\sqrt{v_x^2(t) + v_y^2(t)}} \\
-    &= \frac{ \Vec{v}(t)\cdot\Vec{a}(t) }{\|\Vec{v}(t)\|} \label{speed-derivative}
+    &= \frac{ \Vec{v}(t)\cdot\Vec{a}(t) }{\|\Vec{v}(t)\|}
   </EquationBlock>
 
   <p>

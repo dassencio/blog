@@ -24,8 +24,8 @@
     possible if we examine the elements of the Fibonacci sequence in pairs:
   </p>
 
-  <EquationBlock align>
-    F_{n+1} &= F_{n} + F_{n-1} \\ F_{n} &= F_{n} \label{fibonacci-pairs}
+  <EquationBlock align label="fibonacci-pairs">
+    F_{n+1} &= F_{n} + F_{n-1} \\ F_{n} &= F_{n}
   </EquationBlock>
 
   <p>

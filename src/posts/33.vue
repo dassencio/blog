@@ -138,11 +138,10 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="euler-lagrange-1">
     (m_1 + m_2) l_1 \ddot{\theta}_1
-    &+ m_2 l_2 \ddot{\theta}_2 \cos(\theta_1 - \theta_2) \nonumber \\
+    &+ m_2 l_2 \ddot{\theta}_2 \cos(\theta_1 - \theta_2) \\
     &+ m_2 l_2 \dot{\theta}_2^2\sin(\theta_1 - \theta_2) + (m_1 + m_2) g \sin\theta_1 = 0
-    \label{euler-lagrange-1}
   </EquationBlock>
 
   <EquationBlock label="euler-lagrange-2">

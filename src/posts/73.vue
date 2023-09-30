@@ -101,7 +101,7 @@
   <p>We then have:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="force-density-discrete-band">
     \Vec{f}_i &= \frac{\Delta\Vec{F}_i}{\Delta{L}_i} \\
               &= \frac{\Delta{s}}{\Delta{L}_i} \frac{\Delta\Vec{F}_i}{\Delta{s}} \\
               &= \frac{\Delta{s}}{\Delta{L}_i} k \left[
@@ -112,7 +112,6 @@
                  \left[\left(\frac{\|\Delta\Vec{x}_i\|}{\Delta{s}} - 1\right)
                  \Vecg{\eta}_i - \left(\frac{\|\Delta\Vec{x}_{i-1}\|}{\Delta{s}}
                  - 1\right) \Vecg{\eta}_{i-1}\right]
-                 \label{force-density-discrete-band}
   </EquationBlock>
 
   <p>

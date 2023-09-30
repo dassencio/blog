@@ -92,7 +92,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock align label="position">
     x(t) - x(0)
       &= \frac{\alpha}{2m}\left[ \int_{w = T}^{w = T
          - t}\frac{(-1)}{w^2}\D{w} - \frac{t}{T^2} \right] \\
@@ -102,7 +102,7 @@
          \frac{t}{T^2}\right] \\
       &= \frac{\alpha}{2m}\left[ \frac{T^2 - T(T- t) - t(T - t)}{T^2(T - t)} \right] \\
       &= \frac{\alpha}{2m}\left[ \frac{T^2 - T^2 + Tt - tT + t^2}{T^2(T - t)} \right] \\
-      &= \frac{\alpha}{2mT^2} \frac{t^2}{(T - t)} \label{position}
+      &= \frac{\alpha}{2mT^2} \frac{t^2}{(T - t)}
   </EquationBlock>
 
   <p>
