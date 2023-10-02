@@ -114,7 +114,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock multiple>
     \psi_{100}(r,\theta,\phi) &=
       \frac{1}{\sqrt{\pi a_0^3}}e^{-r/a_0} \\
     \psi_{200}(r,\theta,\phi) &=
@@ -126,7 +126,7 @@
 
   <p>At $r = 0$, we have:</p>
 
-  <EquationBlock align>
+  <EquationBlock multiple>
     \psi_{100}(0,\theta,\phi) &= \frac{1}{\sqrt{\pi a_0^3}} \\
     \psi_{200}(0,\theta,\phi) &= \frac{1}{\sqrt{8\pi a_0^3}} \\
     \psi_{300}(0,\theta,\phi) &= \frac{1}{\sqrt{27\pi a_0^3}}
@@ -139,7 +139,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align>
+  <EquationBlock multiple>
     P_{100} &= \frac{4\pi r_0^3}{3} \frac{1}{\pi a_0^3} =
       \frac{4}{3}\left(\frac{r_0}{a_0}\right)^3 \approx 9 \cdot 10^{-15} \\
     P_{200} &= \frac{4\pi r_0^3}{3} \frac{1}{8 \pi a_0^3} =

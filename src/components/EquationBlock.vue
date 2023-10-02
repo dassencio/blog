@@ -2,12 +2,12 @@
   <div class="equation">
     $$
     {{ boxed ? "\\boxed{" : "" }}
-    {{ align || multiple ? "\\begin{alignat}{99}" : "" }}
+    {{ multiple ? "\\begin{alignat}{99}" : "" }}
     {{ split ? "\\begin{split}" : "" }}
     {{ slotText }}
     {{ split ? "\\end{split}" : "" }}
     {{ label ? "\\label{" + label + "}" : "" }}
-    {{ align || multiple ? "\\end{alignat}" : "" }}
+    {{ multiple ? "\\end{alignat}" : "" }}
     {{ boxed ? "}" : "" }}
     $$
   </div>
@@ -16,8 +16,7 @@
 <script setup lang="ts">
 import { computed, useSlots } from "vue";
 
-const props = defineProps<{
-  align?: boolean;
+defineProps<{
   boxed?: boolean;
   label?: string;
   multiple?: boolean;
@@ -33,7 +32,7 @@ const props = defineProps<{
  */
 function fixNewlines(equation: string) {
   const matrixPrefix = "\\Matrix{";
-  const newline = `${props.multiple ? "" : "\\nonumber"}\\\\[6px]`;
+  const newline = `\\\\[6px]`;
 
   let result = "";
   let lastEnd = 0;
