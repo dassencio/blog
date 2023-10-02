@@ -87,7 +87,7 @@
 
   <!-- prettier-ignore -->
   <EquationBlock align>
-    (x_i + s\Delta{x_i})^m &= \sum_{k=0}^{m} \binom{m}{k} x_i^{m-k} s^k \Delta{x_i}^k  \\
+    (x_i + s\Delta{x_i})^m &= \sum_{k=0}^{m} \binom{m}{k} x_i^{m-k} s^k \Delta{x_i}^k \\
     (y_i + s\Delta{y_i})^n &= \sum_{p=0}^{n} \binom{n}{p} y_i^{n-p} s^p \Delta{y_i}^p
   </EquationBlock>
 
