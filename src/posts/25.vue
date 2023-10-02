@@ -130,7 +130,7 @@
       &= \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d}^d L_i c_{mn} \sum_{k=0}^{m}
          \sum_{p=0}^{n} \frac{\alpha_{mnkpi}}{k+p+1} \\
       &= \sum_{i=1}^{n} \SumSub{m,n=0}{m + n \leq d}^d \sum_{k=0}^{m}
-         \sum_{p=0}^{n} L_i c_{mn} \frac{\alpha_{mnkpi}}{k+p+1} \\
+         \sum_{p=0}^{n} L_i c_{mn} \frac{\alpha_{mnkpi}}{k+p+1}
   </EquationBlock>
 
   <p>
