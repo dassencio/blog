@@ -48,9 +48,19 @@ export function removeExcessIndentation(text: string) {
  * Scrolls to the page element associated with the current URL hash.
  */
 export function scrollToTarget() {
-  const hash = window.location.hash || "#app";
-  const targetId = decodeURIComponent(hash.substring(1));
-  document.getElementById(targetId)?.scrollIntoView();
+  if (window.location.hash) {
+    const targetElement = document.querySelector(window.location.hash);
+    if (targetElement instanceof HTMLElement) {
+      /*
+       * The timeout is needed to ensure that the element is scrolled into view
+       * after the DOM has been fully rendered, otherwise the scroll position
+       * may be incorrect.
+       */
+      setTimeout(() => targetElement.scrollIntoView(), 200);
+    }
+  } else {
+    window.scrollTo(0, 0);
+  }
 }
 
 /**
