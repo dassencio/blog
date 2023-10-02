@@ -1,6 +1,9 @@
 // Global MathJax configuration.
 // @ts-expect-error (no type definition available for MathJax).
 window.MathJax = {
+  // Custom flag that is not part of the official MathJax configuration.
+  readyToRender: false,
+
   chtml: {
     displayAlign: "left",
   },
@@ -18,7 +21,11 @@ window.MathJax = {
     },
   },
   startup: {
-    pageReady: render,
+    pageReady: () => {
+      // @ts-expect-error (no type definition available for MathJax).
+      window.MathJax.readyToRender = true;
+      render();
+    },
   },
   svg: {
     displayAlign: "left",
@@ -111,7 +118,8 @@ document.head.appendChild(script);
  * See https://docs.mathjax.org/en/latest/web/typeset.html for more details.
  */
 function render() {
-  if (document.readyState === "complete") {
+  // @ts-expect-error (no type definition available for MathJax).
+  if (window.MathJax.readyToRender && document.readyState === "complete") {
     // @ts-expect-error (no type definition available for MathJax).
     window.MathJax.texReset();
     // @ts-expect-error (no type definition available for MathJax).
