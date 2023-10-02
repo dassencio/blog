@@ -26,7 +26,7 @@
   <p>The equations of motion for the object are given by:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     x(t) &= r\cos\theta(t) &&= r\cos(\omega t) \label{position-x} \\
     y(t) &= r\sin\theta(t) &&= r\sin(\omega t) \label{position-y}
   </EquationBlock>
@@ -38,7 +38,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     v_x(t) &= \dot{x}(t) &&= -\omega r \sin(\omega t) \\
     v_y(t) &= \dot{y}(t) &&= \omega r \cos(\omega t)
   </EquationBlock>
@@ -46,7 +46,7 @@
   <p>and:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     a_x(t) &= \dot{v}_x(t) &&= -\omega^2 r \cos(\omega t) \\
     a_y(t) &= \dot{v}_y(t) &&= -\omega^2 r \sin(\omega t)
   </EquationBlock>
@@ -68,7 +68,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     \Vec{v}(t) &= \omega r (-\sin(\omega t), \cos(\omega t)) \\
     \Vec{a}(t) &= -\omega^2 r (\cos(\omega t), \sin(\omega t)) = -\omega^2
     \Vec{x}(t) \label{acceleration}

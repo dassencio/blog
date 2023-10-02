@@ -22,7 +22,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     x_1 &= l_1 \sin\theta_1 \\
     x_2 &= l_1 \sin\theta_1 + l_2 \sin\theta_2 \\
     y_1 &= -l_1 \cos\theta_1 \\
@@ -35,7 +35,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     \dot{x}_1 &= l_1 \dot{\theta}_1\cos\theta_1 \\
     \dot{x}_2 &= l_1 \dot{\theta}_1\cos\theta_1 + l_2 \dot{\theta}_2\cos\theta_2 \\
     \dot{y}_1 &= l_1 \dot{\theta}_1\sin\theta_1 \\
@@ -90,7 +90,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     p_{\theta_1} &= \PP{L}{\dot{\theta}_1}
       = (m_1 + m_2) l_1^2 \dot{\theta}_1 + m_2 l_1 l_2 \dot{\theta}_2\cos(\theta_1 - \theta_2) \\
     p_{\theta_2} &= \PP{L}{\dot{\theta}_2}
@@ -113,7 +113,7 @@
   <p>for $i = 1, 2$. Since:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     \DD{p_{\theta_1}}{t}
       &= (m_1 + m_2) l_1^2 \ddot{\theta}_1 + m_2 l_1 l_2
          \ddot{\theta}_2 \cos(\theta_1 - \theta_2) \nonumber \\
@@ -158,7 +158,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     \ddot{\theta}_1 + \alpha_1(\theta_1,\theta_2) \ddot{\theta}_2
       &= f_1(\theta_1, \theta_2, \dot{\theta}_1, \dot{\theta}_2)
       \label{euler-lagrange-1-short} \\
@@ -170,7 +170,7 @@
   <p>where:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     \alpha_1(\theta_1,\theta_2)
       &\ColonEq \frac{l_2}{l_1}\left(\frac{m_2}{m_1 + m_2}\right)\cos(\theta_1 - \theta_2)
        \label{alpha_1} \\
@@ -182,7 +182,7 @@
   <p>and:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     f_1(\theta_1, \theta_2, \dot{\theta}_1, \dot{\theta}_2)
       &\ColonEq - \frac{l_2}{l_1}\left(\frac{m_2}{m_1 + m_2}\right)
        \dot{\theta}_2^2\sin(\theta_1 - \theta_2) - \frac{g}{l_1} \sin\theta_1
@@ -252,7 +252,7 @@
   <p>where:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     g_1 &\ColonEq \frac{f_1 - \alpha_1 f_2}{1 - \alpha_1\alpha_2} \\
     g_2 &\ColonEq \frac{-\alpha_2 f_1 + f_2}{1 - \alpha_1\alpha_2}
   </EquationBlock>

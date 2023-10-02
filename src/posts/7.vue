@@ -100,7 +100,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     \cos(\theta + 2\pi n) &= \cos\theta \\
     \sin(\theta + 2\pi n) &= \sin\theta
   </EquationBlock>

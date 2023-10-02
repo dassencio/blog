@@ -69,7 +69,7 @@
   <p>Since $\Vec{\hat n}$ is a unit vector, we have:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     \Vec{x}_{\parallel}
       &= (\Vec{\hat n} \cdot \Vec{x}) \Vec{\hat n} \label{x-parallel} \\
     \Vec{x}_{\perp}

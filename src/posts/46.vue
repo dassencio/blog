@@ -36,7 +36,7 @@
   <p>From the Lagrangian, we can obtain the canonical momenta of the system:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     p_{\theta_1}
       &= \PP{L}{\dot{\theta}_1}
       &&= (m_1 + m_2) l_1^2 \dot{\theta}_1
@@ -70,7 +70,7 @@
     >:
   </p>
 
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     \dot{\theta}_i &= \PP{H}{p_{\theta_i}} \label{hamilton-equations-theta-i} \\
     \dot{p}_{\theta_i} &= -\frac{\partial H}{\partial \theta_i}
     \label{hamilton-equations-p-theta-i}
@@ -146,7 +146,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     \dot{\theta}_1
       &= \frac{l_2 p_{\theta_1} - l_1 p_{\theta_2} \cos(\theta_1 - \theta_2)}
          {l_1^2 l_2 \left[m_1 + m_2 \sin^2(\theta_1 - \theta_2)\right]}
@@ -180,7 +180,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     \dot{\theta}_1
       &= &&\PP{H}{p_{\theta_1}}
       &&= \frac{l_2 p_{\theta_1} - l_1 p_{\theta_2} \cos(\theta_1 - \theta_2)}
@@ -206,7 +206,7 @@
   <p>where:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     h_1 &= \frac{p_{\theta_1} p_{\theta_2} \sin(\theta_1 - \theta_2)}{l_1 l_2
            \left[m_1 + m_2 \sin^2(\theta_1 - \theta_2)\right]} \\
     h_2 &= \frac{m_2 l_2^2 p^2_{\theta_1} + (m_1 + m_2) l_1^2 p^2_{\theta_2} - 2

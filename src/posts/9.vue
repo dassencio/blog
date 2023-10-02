@@ -110,7 +110,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     N_r &= \|\Vec{N}_r\| &&= m_r \omega^2 r \\
     N_g &= \|\Vec{N}_g\| &&= m_g \omega^2 r \\
     N_b &= \|\Vec{N}_b\| &&= m_b \omega^2 r

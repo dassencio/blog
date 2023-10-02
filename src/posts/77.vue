@@ -225,7 +225,7 @@
   </p>
 
   <!-- prettier-ignore -->
-  <EquationBlock align numberLines>
+  <EquationBlock multiple>
     \PP{L}{x_i} &= \PP{f}{x_i} - \sum_{k=1}^m \lambda_k \PP{g_k}{x_i} = 0
       \label{partial-L-1} \\
     \PP{L}{\lambda_k} &= g_k(x_1, \ldots, x_n) = 0 \label{partial-L-2}
