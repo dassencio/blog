@@ -16,7 +16,7 @@ import { escapeHtml, removeExcessIndentation } from "@/functions";
 
 const props = withDefaults(
   defineProps<{
-    code: string;
+    code?: string;
     highlightDelimiter?: string;
     language?: string;
     paragraphMode?: boolean;
