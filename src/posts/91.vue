@@ -206,8 +206,7 @@
   <p>Thus, $\Vec{x}' = R(\Vec{\hat n}, \theta) \Vec{x}$, with:</p>
 
   <!-- prettier-ignore -->
-  <EquationBlock boxed>
-    \Split{
+  <EquationBlock split boxed>
       R(\Vec{\hat n}, \theta)
       &= \cos\theta \IdentityMatrixThree +
         (1 - \cos\theta) \MatrixThreeThree{n_x^2}{n_y n_x}{n_z n_x}
@@ -216,7 +215,6 @@
       & \quad \quad + \sin\theta \MatrixThreeThree{0}{-n_z}{n_y}
                                                   {n_z}{0}{-n_x}
                                                   {-n_y}{n_x}{0}
-    }
   </EquationBlock>
 
   <p>

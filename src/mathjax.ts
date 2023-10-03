@@ -50,7 +50,6 @@ window.MathJax = {
       ], // 3x3 matrix.
       Real: "\\mathbb{R}", // Real numbers.
       Size: "\\mathrm{size}", // Size operator.
-      Split: ["\\begin{split}#1\\end{split}", 1], // Split environment.
       SumSub: ["\\mathop{\\sum_{#1}}_{#2}", 2], // Sum with two subscripts.
       Vec: ["\\mathbf{#1}", 1], // Vector notation for Latin symbols.
       Vecg: ["\\pmb{#1}", 1], // Vector notation for Greek symbols.
