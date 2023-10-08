@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "d379f7e34709563115ebd4c41241ed5e",
+    component: () => import("@/posts/92.vue"),
+    date: dateToString(2016, 10, 15),
+    id: "92",
+    labels: [PostLabel.Physics, PostLabel.QuantumMechanics],
+    title: "Hydrogen energy levels: an algebraic derivation",
+  },
+  {
     compatibilityIndex: "b155574a293a5cbfdd0fbe82a9b8bf28",
     component: () => import("@/posts/91.vue"),
     date: dateToString(2016, 9, 23),
