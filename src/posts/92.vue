@@ -295,7 +295,7 @@
   <SectionTitle>Computation of $[A_i, A_j]$</SectionTitle>
 
   <p>
-    The computation of $[A_i, A_j]$ is lengthy and tedious. While it doesn't
+    The computation of $[A_i, A_j]$ is lengthy and tedious. Since it doesn't
     introduce any new techniques beyond what we have discussed above, we will
     simply state the result of this commutator. However, readers are strongly
     encouraged to prove the equation below on their own. This derivation is an
@@ -667,7 +667,8 @@
   <p>
     Since we used $4 \pi \epsilon_0 = 1$ in equation \eqref{hamiltonian}, we can
     substitute $e^2$ with $e^2 / 4 \pi \epsilon_0$ to obtain the
-    <a href="https://en.wikipedia.org/wiki/Hydrogen_atom#Bohr-Sommerfeld_Model"
+    <a
+      href="https://en.wikipedia.org/wiki/Hydrogen_atom#Bohr%E2%80%93Sommerfeld_Model"
       >energy levels</a
     >
     in SI units:
