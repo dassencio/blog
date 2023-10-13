@@ -3,7 +3,7 @@
     A function is a set of instructions that encapsulates a specific task. It
     receives input data from the caller in the form of
     <b>arguments</b> and processes them internally using
-    <b>parameters</b> (variables), which are
+    <b>parameters</b> (variables) that are
     <a href="https://en.wikipedia.org/wiki/Parameter_(computer_programming)"
       >initialized</a
     >
@@ -13,6 +13,7 @@
   </p>
 
   <CodeBlock
+    language="c++"
     code="
     ReturnType some_function(ParameterType1 p1, ..., ParameterTypeN pN) {
       ...
@@ -36,7 +37,7 @@
   </p>
 
   <p>
-    Although it might seem like we're just assigning names to concepts, the
+    Although it might seem like we're merely assigning names to concepts, the
     distinction between function parameters and function arguments is crucial,
     especially in C++. This distinction stems from the fact that, when a
     function is called:
@@ -127,7 +128,6 @@
   <p>The output of this program might surprise some readers:</p>
 
   <CodeBlock
-    language="c++"
     code="
     Message::Message(int)
     Message::Message(const std::string&)
@@ -142,15 +142,22 @@
     argument <code>3</code> is of type <code>int</code>. As a result,
     <code>msg</code> gets initialized using the constructor
     <code>Message::Message(int)</code>. On the second call to
-    <code>log_message</code>, since the argument <code>str</code> is an lvalue
+    <code>log_message</code>, since the argument <code>str</code> is an
+    <a href="https://en.cppreference.com/w/cpp/language/value_category"
+      >lvalue</a
+    >
     of type <code>std::string</code>, <code>msg</code> is initialized using the
     constructor <code>Message::Message(const std::string&amp;)</code>. Lastly,
     during the third call to <code>log_message</code>, as
-    <code>std::move(str)</code> creates an rvalue of type
-    <code>std::string&amp;&amp;</code>, <code>msg</code> is initialized through
-    the constructor <code>Message::Message(std::string&amp;&amp;)</code>. In
-    essence, the constructor chosen to initialize the function parameter
-    <code>msg</code> is directly influenced by the type of argument provided to
+    <code>std::move(str)</code> creates an
+    <a href="https://en.cppreference.com/w/cpp/language/value_category"
+      >rvalue</a
+    >
+    of type <code>std::string&amp;&amp;</code>, <code>msg</code> is initialized
+    through the constructor
+    <code>Message::Message(std::string&amp;&amp;)</code>. In essence, the
+    constructor chosen to initialize the function parameter <code>msg</code> is
+    directly influenced by the type of argument provided to
     <code>log_message</code>, even though the type of <code>msg</code> remains
     consistent as <code>Message</code>.
   </p>
@@ -158,8 +165,9 @@
   <p>
     In conclusion, a function parameter is a standard variable that is
     initialized by its corresponding input argument when the function is
-    invoked, implying that the type of a parameter does not necessarily have to
-    match the type of the argument used for its initialization.
+    invoked, further highlighting that the type of a parameter does not
+    necessarily have to match the type of the argument used for its
+    initialization.
   </p>
 </template>
 
