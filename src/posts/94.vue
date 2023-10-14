@@ -1,14 +1,13 @@
 <template>
   <p>
-    iPhones (and iPads) do not offer the possibility to automatically group
-    photos and videos by date into separate directories. If you prefer
-    organizing your photos and videos in this manner, you can transfer them to
-    your computer and then run the script below in the directory to which they
-    were transferred. This script will automatically determine the dates when
-    your photos and videos were created and place them into directories named in
-    the format <code>YYYY-MM-DD</code>. For example, all photos and videos
-    created on January 15, 2016, will be placed in the directory
-    <code>2016-01-15</code>.
+    iPhones (and iPads) don't provide a built-in feature to automatically group
+    photos and videos by date into separate directories. If you have a
+    preference for this kind of organization, you can transfer your media to
+    your computer and execute the script below in the target directory. This
+    script will determine the creation dates of your photos and videos and
+    organize them into directories named in the
+    <code>YYYY-MM-DD</code> format. As an illustration, media created on January
+    15, 2016, will be placed in the directory <code>2016-01-15</code>.
   </p>
 
   <p>
