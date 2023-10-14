@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "6420721864ebf9a8a0d9071e8fe78652",
+    component: () => import("@/posts/94.vue"),
+    date: dateToString(2016, 11, 25),
+    id: "94",
+    labels: [PostLabel.Linux, PostLabel.Shell],
+    title: "Organizing iPhone photos and videos by date on Linux",
+  },
+  {
     compatibilityIndex: "c3786420b609c854925a86014b9f1f7b",
     component: () => import("@/posts/93.vue"),
     date: dateToString(2016, 11, 22),
