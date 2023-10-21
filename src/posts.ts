@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "5f6f9b755477c6f3ba539be8a7832b32",
+    component: () => import("@/posts/95.vue"),
+    date: dateToString(2016, 11, 29),
+    id: "95",
+    labels: [PostLabel.Cpp, PostLabel.Programming],
+    title: "An implementation model for lambda functions in C++",
+  },
+  {
     compatibilityIndex: "6420721864ebf9a8a0d9071e8fe78652",
     component: () => import("@/posts/94.vue"),
     date: dateToString(2016, 11, 25),
