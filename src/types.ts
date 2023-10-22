@@ -19,6 +19,7 @@ export enum PostLabel {
   Kinematics = "Kinematics",
   LinearAlgebra = "Linear algebra",
   Linux = "Linux",
+  Maps = "Maps",
   Mathematics = "Mathematics",
   Mechanics = "Mechanics",
   NaturalLanguageProcessing = "Natural language processing",

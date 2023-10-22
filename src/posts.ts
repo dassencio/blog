@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "89ad9508e4a19affb93e3ca0e0b3f763",
+    component: () => import("@/posts/96.vue"),
+    date: dateToString(2017, 1, 6),
+    id: "96",
+    labels: [PostLabel.Maps, PostLabel.Technology],
+    title: "NMEA Generator: a drawing tool for creating GPS logs",
+  },
+  {
     compatibilityIndex: "5f6f9b755477c6f3ba539be8a7832b32",
     component: () => import("@/posts/95.vue"),
     date: dateToString(2016, 11, 29),
