@@ -321,7 +321,7 @@
     So far, all the lambda functions we have defined are valid in C++11. Our
     final example will be a generic lambda function, i.e., a lambda that has at
     least one parameter with the type <code>auto</code> (generic lambdas were
-    introduced in C++14.) There is nothing truly special about how an equivalent
+    introduced in C++14). There is nothing truly special about how an equivalent
     functor class is defined in this case; we simply use templates to
     accommodate the missing functionality:
   </p>
