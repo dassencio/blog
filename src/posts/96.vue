@@ -13,7 +13,7 @@
     Given the vast array of applications that understand NMEA data, I decided to
     create a tool to generate NMEA sentences from a path that can be manually
     drawn on a map. This path represents an object or person moving around with
-    a GPS device, which is assumed to provide its current position at regular
+    a GPS device that is assumed to provide its current position at regular
     intervals (e.g., once every second).
   </p>
 
