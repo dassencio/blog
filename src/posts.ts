@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "67e5393c40a627818513f9bcacd6a70d",
+    component: () => import("@/posts/98.vue"),
+    date: dateToString(2017, 2, 11),
+    id: "98",
+    labels: [PostLabel.Programming],
+    title: "Avoid using floating-point numbers as hash table keys",
+  },
+  {
     compatibilityIndex: "834995d09abc1386a8dc5ed84d019e17",
     component: () => import("@/posts/97.vue"),
     date: dateToString(2017, 2, 7),
