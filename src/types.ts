@@ -18,6 +18,7 @@ export enum PostLabel {
   IPv6 = "IPv6",
   Kinematics = "Kinematics",
   LinearAlgebra = "Linear algebra",
+  LinearProgramming = "Linear programming",
   Linux = "Linux",
   Maps = "Maps",
   Mathematics = "Mathematics",

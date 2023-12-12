@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "25ea1e49ca59de51b4ef6885dcc3ee3b",
+    component: () => import("@/posts/99.vue"),
+    date: dateToString(2017, 2, 28),
+    id: "99",
+    labels: [PostLabel.ComputerScience, PostLabel.LinearProgramming],
+    title: "Solving Sudoku puzzles using linear programming",
+  },
+  {
     compatibilityIndex: "67e5393c40a627818513f9bcacd6a70d",
     component: () => import("@/posts/98.vue"),
     date: dateToString(2017, 2, 11),
