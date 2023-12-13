@@ -46,7 +46,7 @@
     satisfies the constraints will be correct (note, however, that some Sudoku
     puzzles may contain
     <a
-      href="http://www.maa.org/external_archive/joma/Volume8/Bartlett/solvingPuzzle.html"
+      href="https://web.archive.org/web/20161121121205/https://maa.org/external_archive/joma/Volume8/Bartlett/solvingPuzzle.html"
       >more than one</a
     >
     solution, but I'm assuming the reader will be content with finding a single
