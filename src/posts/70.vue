@@ -289,7 +289,7 @@
   />
 
   <p>
-    Notice how we arranged the array elements into a valid heap in one operation
+    Note how we arranged the array elements into a valid heap in one operation
     instead of pushing one element at a time as in our previous examples. Since
     <code>std::make_heap</code> turns the input array into a max-heap by
     default, the output of the program above is:
