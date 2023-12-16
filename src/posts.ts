@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "e5f2a59886a83b5c7d2c0093dbf689f9",
+    component: () => import("@/posts/100.vue"),
+    date: dateToString(2017, 3, 7),
+    id: "100",
+    labels: [PostLabel.Cpp, PostLabel.Programming],
+    title: "How are virtual function table pointers initialized in C++?",
+  },
+  {
     compatibilityIndex: "25ea1e49ca59de51b4ef6885dcc3ee3b",
     component: () => import("@/posts/99.vue"),
     date: dateToString(2017, 2, 28),
