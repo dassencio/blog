@@ -69,10 +69,12 @@
   </p>
 
   <p>
-    Any experienced C++ developer will immediately recognize the term "slicing"
-    in this context. Indeed, taking a <code>Fruit</code> object by value means
-    that inside <code>analyze_fruit</code>, the object <code>f</code> is merely
-    a <code>Fruit</code>, and never an <code>Apple</code>, a
+    Any experienced C++ developer will immediately recognize the term "<a
+      href="https://en.wikipedia.org/wiki/Object_slicing"
+      >slicing</a
+    >" in this context. Indeed, taking a <code>Fruit</code> object by value
+    means that inside <code>analyze_fruit</code>, the object <code>f</code> is
+    merely a <code>Fruit</code>, and never an <code>Apple</code>, a
     <code>Banana</code>, or any other derived type:
   </p>
 
