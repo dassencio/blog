@@ -79,7 +79,7 @@
   />
 
   <p>
-    The code above was valid even before C++11 was introduced. Notice that it's
+    The code above was valid even before C++11 was introduced. Note that it's
     considerably longer than the first version.
   </p>
 
