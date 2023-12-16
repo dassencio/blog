@@ -208,9 +208,9 @@
   />
 
   <p>
-    Notice that now both <code>b</code> and <code>(b / a) * a</code> are no
-    longer considered to be two distinct numbers by the hash function since they
-    are truncated before being passed to it, and the same holds true for
+    Note that now both <code>b</code> and <code>(b / a) * a</code> are no longer
+    considered to be two distinct numbers by the hash function since they are
+    truncated before being passed to it, and the same holds true for
     <code>a</code> and <code>(a / b) * a</code>.
   </p>
 
