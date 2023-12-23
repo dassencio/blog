@@ -47,7 +47,7 @@
 
   <EquationBlock> M = \MatrixTwoTwo{1}{1}{1}{0} </EquationBlock>
 
-  <p>We then have that:</p>
+  <p>We then have:</p>
 
   <EquationBlock>
     \MatrixTwoOne{F_{n+1}}{F_n} = M \MatrixTwoOne{F_{n}}{F_{n-1}} = M^2
