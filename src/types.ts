@@ -13,6 +13,7 @@ export enum PostLabel {
   Electromagnetism = "Electromagnetism",
   FluidDynamics = "Fluid dynamics",
   Geolocation = "Geolocation",
+  Geometry = "Geometry",
   Git = "Git",
   Gravitation = "Gravitation",
   IPv6 = "IPv6",

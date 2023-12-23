@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "8d6ca3d82151bad815f78addf9b5c1c6",
+    component: () => import("@/posts/102.vue"),
+    date: dateToString(2017, 7, 12),
+    id: "102",
+    labels: [PostLabel.Geometry, PostLabel.Mathematics],
+    title: "The intersection area of two circles",
+  },
+  {
     compatibilityIndex: "5db4d0f53fcab93b38d543baa3564ead",
     component: () => import("@/posts/101.vue"),
     date: dateToString(2017, 4, 1),
