@@ -31,7 +31,7 @@
     caption="Two intersecting circles $C_1$ (blue) and $C_2$ (red) with radii
              $r_1$ and $r_2$, respectively. The distance between the centers of
              the circles is $d = d_1 + d_2$, where $d_1$ is the $x$ coordinate
-             of the intersection points and $d_2 = d - d_1$. Notice that $d_1
+             of the intersection points and $d_2 = d - d_1$. Note that $d_1
              \geq 0$ since these points are always located to the right of the
              center of $C_1$, but $d_2$ may be negative when $r_2 \lt r_1$
              since, in this case, the intersection points will eventually fall
