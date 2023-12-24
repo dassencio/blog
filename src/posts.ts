@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "f57f25fd5a187c70fc7f34fcf5374773",
+    component: () => import("@/posts/103.vue"),
+    date: dateToString(2017, 8, 7),
+    id: "103",
+    labels: [PostLabel.Cpp, PostLabel.Programming],
+    title: "How <code>std::move</code> breaks return value optimization",
+  },
+  {
     compatibilityIndex: "8d6ca3d82151bad815f78addf9b5c1c6",
     component: () => import("@/posts/102.vue"),
     date: dateToString(2017, 7, 12),
