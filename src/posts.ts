@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "7b86693a146a54352b9f5bbfeb3dc876",
+    component: () => import("@/posts/104.vue"),
+    date: dateToString(2017, 8, 9),
+    id: "104",
+    labels: [PostLabel.Linux],
+    title: "How to fix broken MathJax fonts on Linux",
+  },
+  {
     compatibilityIndex: "f57f25fd5a187c70fc7f34fcf5374773",
     component: () => import("@/posts/103.vue"),
     date: dateToString(2017, 8, 7),
