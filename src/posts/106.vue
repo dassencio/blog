@@ -48,7 +48,7 @@
 
   <p>
     Being a complex number, $\tilde{x}_{pq} = \rho_{pq} e^{i\phi_{pq}}$, where
-    $\rho_{pq}$ is its magnitude, and $\phi_{pq}$ is its phase. From equations
+    $\rho_{pq}$ is its magnitude and $\phi_{pq}$ is its phase. From equations
     \eqref{M} and \eqref{P}, we have $(\tilde{X}_{\textrm{mag}})_{pq} =
     \rho_{pq}$, and $(\tilde{X}_{\textrm{phase}})_{pq} = e^{i\phi_{pq}}$, so the
     matrices $\tilde{X}_{\textrm{mag}}$ and $\tilde{X}_{\textrm{phase}}$ contain
