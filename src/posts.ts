@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "81059bc883bd6156c2e83f83e2e38c2b",
+    component: () => import("@/posts/106.vue"),
+    date: dateToString(2017, 9, 1),
+    id: "106",
+    labels: [PostLabel.ComputerScience, PostLabel.DSP],
+    title: "The DFT of an image: phase vs. magnitude",
+  },
+  {
     compatibilityIndex: "05e466a9a1e6dfc958769f80bf986f65",
     component: () => import("@/posts/105.vue"),
     date: dateToString(2017, 8, 23),
