@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "143ab4f37feadc3ac69f33f43fde3a2a",
+    component: () => import("@/posts/107.vue"),
+    date: dateToString(2017, 10, 1),
+    id: "107",
+    labels: [PostLabel.Algorithms, PostLabel.ComputerScience],
+    title: "Runtime limits of comparison-based sorting algorithms",
+  },
+  {
     compatibilityIndex: "81059bc883bd6156c2e83f83e2e38c2b",
     component: () => import("@/posts/106.vue"),
     date: dateToString(2017, 9, 1),
