@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "c34662984364db1414f343cfee6f81a9",
+    component: () => import("@/posts/108.vue"),
+    date: dateToString(2017, 10, 22),
+    id: "108",
+    labels: [PostLabel.JavaScript, PostLabel.Programming],
+    title: "Asynchronous programming with promises in JavaScript",
+  },
+  {
     compatibilityIndex: "143ab4f37feadc3ac69f33f43fde3a2a",
     component: () => import("@/posts/107.vue"),
     date: dateToString(2017, 10, 1),

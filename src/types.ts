@@ -17,6 +17,7 @@ export enum PostLabel {
   Git = "Git",
   Gravitation = "Gravitation",
   IPv6 = "IPv6",
+  JavaScript = "JavaScript",
   Kinematics = "Kinematics",
   LinearAlgebra = "Linear algebra",
   LinearProgramming = "Linear programming",
