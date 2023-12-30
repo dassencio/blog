@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "0f43d6be45f8b465dfb74c37fa1a4833",
+    component: () => import("@/posts/110.vue"),
+    date: dateToString(2020, 8, 19),
+    id: "110",
+    labels: [PostLabel.Linux, PostLabel.Security],
+    title: "How to improve Signal Desktop's usability under Firejail",
+  },
+  {
     compatibilityIndex: "8fa64e773bf0cae5ef3b2d5b6b677573",
     component: () => import("@/posts/109.vue"),
     date: dateToString(2019, 7, 5),
