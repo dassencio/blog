@@ -3,6 +3,14 @@ import { PostLabel, type Post } from "@/types";
 
 const posts: Post[] = [
   {
+    compatibilityIndex: "8fa64e773bf0cae5ef3b2d5b6b677573",
+    component: () => import("@/posts/109.vue"),
+    date: dateToString(2019, 7, 5),
+    id: "109",
+    labels: [PostLabel.Maps, PostLabel.Technology],
+    title: "Generating maps with customizable markers",
+  },
+  {
     compatibilityIndex: "c34662984364db1414f343cfee6f81a9",
     component: () => import("@/posts/108.vue"),
     date: dateToString(2017, 10, 22),
