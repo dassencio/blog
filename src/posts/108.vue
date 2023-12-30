@@ -223,7 +223,7 @@
 
   <CodeBlock
     code='
-    file contents:
+    File contents:
     {
         "name": "John",
         "age": 35,
