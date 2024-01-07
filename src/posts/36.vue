@@ -45,7 +45,7 @@
 
   <p>
     To compute $\int_{\Omega} p_d(x,y) \D{x}\D{y}$, we can employ the
-    <a href=" https://en.wikipedia.org/wiki/Divergence_theorem"
+    <a href="https://en.wikipedia.org/wiki/Divergence_theorem"
       >divergence theorem</a
     >. First, note that:
   </p>
