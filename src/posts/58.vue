@@ -97,7 +97,7 @@
              \eqref{C-to-F-exact} and \eqref{C-to-F-approximation}
              respectively."
   >
-    <FlotChart class="conversions-graph" :data="data" :options="options" />
+    <FlotChart :data="data" :options="options" />
   </FigureBlock>
 </template>
 
@@ -138,10 +138,3 @@ const options = {
   },
 };
 </script>
-
-<style scoped lang="scss">
-.conversions-graph {
-  height: 20 * $base-length;
-  width: 35 * $base-length;
-}
-</style>

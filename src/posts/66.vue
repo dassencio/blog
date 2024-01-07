@@ -253,7 +253,7 @@
              discussed previously is then used, with $\mu = 5$, to (partially)
              filter out this added noise component."
   >
-    <FlotChart class="data-graph" :data="data1" :options="options" />
+    <FlotChart :data="data1" :options="options" />
   </FigureBlock>
 
   <SectionTitle>Additional insights on the differentiation term</SectionTitle>
@@ -305,7 +305,7 @@
     caption="Results obtained when the cost function provided in equation
              \eqref{cost-function-2} is minimized, with $\mu = 5$."
   >
-    <FlotChart class="data-graph" :data="data2" :options="options" />
+    <FlotChart :data="data2" :options="options" />
   </FigureBlock>
 
   <p>
@@ -388,7 +388,7 @@
     caption="Results obtained when the cost function provided in equation
              \eqref{cost-function-3} is minimized, with $\mu = 5$."
   >
-    <FlotChart class="data-graph" :data="data3" :options="options" />
+    <FlotChart :data="data3" :options="options" />
   </FigureBlock>
 </template>
 
@@ -972,10 +972,3 @@ const data3 = [
   },
 ];
 </script>
-
-<style scoped lang="scss">
-.data-graph {
-  height: 20 * $base-length;
-  width: 35 * $base-length;
-}
-</style>

@@ -63,7 +63,9 @@ const debouncedPlot = _.debounce(() => {
 
 <style scoped lang="scss">
 .chart {
+  height: 20 * $base-length;
   padding-bottom: $view-subfigure-vertical-gap !important;
+  width: 35 * $base-length;
 }
 :deep(.legend > div) {
   display: none;

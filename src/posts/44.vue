@@ -376,8 +376,6 @@ const data = [
 
 <style scoped lang="scss">
 .computation-time-graph {
-  height: 20 * $base-length;
-  width: 35 * $base-length;
   :deep(.yaxisLabel) {
     margin-left: 0.9 * $base-length;
   }

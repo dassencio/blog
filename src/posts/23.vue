@@ -217,7 +217,7 @@
     id="fluid-height"
     caption="Fluid height $h(t)/h_0$ as a function of $t/T$."
   >
-    <FlotChart class="fluid-height-graph" :data="data" :options="options" />
+    <FlotChart :data="data" :options="options" />
   </FigureBlock>
 
   <p>
@@ -262,10 +262,3 @@ const options = {
   },
 };
 </script>
-
-<style scoped lang="scss">
-.fluid-height-graph {
-  height: 20 * $base-length;
-  width: 35 * $base-length;
-}
-</style>

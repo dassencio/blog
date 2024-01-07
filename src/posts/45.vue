@@ -276,11 +276,7 @@
              tend to have fewer neighbor words than German words, resulting in a
              smaller WPL value."
   >
-    <FlotChart
-      class="neighbor-words-histogram"
-      :data="dataEnDeL5d2"
-      :options="optionsEnDeL5d2"
-    />
+    <FlotChart :data="dataEnDeL5d2" :options="optionsEnDeL5d2" />
   </FigureBlock>
 
   <FigureBlock
@@ -289,11 +285,7 @@
                $L = 6$ and $d = 3$. Note how the tail of the distribution for
                German words becomes more pronounced than in ${enDeL5d2Link}.`"
   >
-    <FlotChart
-      class="neighbor-words-histogram"
-      :data="dataEnDeL6d3"
-      :options="optionsEnDeL6d3"
-    />
+    <FlotChart :data="dataEnDeL6d3" :options="optionsEnDeL6d3" />
   </FigureBlock>
 </template>
 
@@ -510,10 +502,3 @@ const dataEnDeL6d3 = [
   },
 ];
 </script>
-
-<style scoped lang="scss">
-.neighbor-words-histogram {
-  height: 20 * $base-length;
-  width: 35 * $base-length;
-}
-</style>

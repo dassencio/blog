@@ -176,11 +176,7 @@
              selected people. $Q(n) = 1 - e^{-n(n-1)/(2N)}$ is a lower bound
              estimate of $P(n)$."
   >
-    <FlotChart
-      class="collision-probability-graph"
-      :data="data"
-      :options="options"
-    />
+    <FlotChart :data="data" :options="options" />
   </FigureBlock>
 
   <p>
@@ -389,10 +385,3 @@ const octaveFile = URL.createObjectURL(
   new Blob([octaveCode.trim()], { type: "text/plain" })
 );
 </script>
-
-<style scoped lang="scss">
-.collision-probability-graph {
-  height: 20 * $base-length;
-  width: 35 * $base-length;
-}
-</style>
