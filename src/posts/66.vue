@@ -17,12 +17,12 @@
     following two criteria:
   </p>
 
-  <ListBlock>
-    <ListBlockItem bullet="1.">
+  <ListBlock ordered>
+    <ListBlockItem>
       Each value $\tilde{x}_i$ should not deviate excessively from the value
       $x_i$.
     </ListBlockItem>
-    <ListBlockItem bullet="2.">
+    <ListBlockItem>
       The sequence of values $\tilde{x}_i$ should be smooth, meaning the
       differences between adjacent values $\tilde{x}_i$ and $\tilde{x}_{i+1}$
       should be small.
@@ -217,12 +217,12 @@
     $\Vec{\tilde{x}}$ of a noisy sequence $\Vec{x}$:
   </p>
 
-  <ListBlock>
-    <ListBlockItem bullet="1.">
+  <ListBlock ordered>
+    <ListBlockItem>
       Compute $\Vec{b}$ and $A$ according to equations \eqref{b} and \eqref{A},
       respectively.
     </ListBlockItem>
-    <ListBlockItem bullet="2.">
+    <ListBlockItem>
       Solve the linear system given in equation \eqref{normal-equations}; its
       solution $\Vec{\tilde{x}}$ is the denoised version of the sequence
       $\Vec{x}$.

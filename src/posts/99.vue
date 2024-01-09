@@ -23,14 +23,14 @@
     puzzle is solved. The rules for solving the puzzle are:
   </p>
 
-  <ListBlock>
-    <ListBlockItem bullet="1.">
+  <ListBlock ordered>
+    <ListBlockItem>
       Each integer value $k \in [1, N]$ must appear exactly once in each row.
     </ListBlockItem>
-    <ListBlockItem bullet="2.">
+    <ListBlockItem>
       Each integer value $k \in [1, N]$ must appear exactly once in each column.
     </ListBlockItem>
-    <ListBlockItem bullet="3.">
+    <ListBlockItem>
       Each integer value $k \in [1, N]$ must appear exactly once in each block.
     </ListBlockItem>
   </ListBlock>

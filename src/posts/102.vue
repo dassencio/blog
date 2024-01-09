@@ -204,16 +204,16 @@
     area of the circles is:
   </p>
 
-  <ListBlock>
-    <ListBlockItem bullet="1.">
+  <ListBlock ordered>
+    <ListBlockItem>
       Zero, if $d \geq r_1 + r_2$, since in this case the circles intersect at
       most up to a point.
     </ListBlockItem>
-    <ListBlockItem bullet="2.">
+    <ListBlockItem>
       $\pi r_2^2$, if $d \leq r_1 - r_2$, since in this case $C_2$ is entirely
       contained within $C_1$.
     </ListBlockItem>
-    <ListBlockItem bullet="3.">
+    <ListBlockItem>
       Given by equation \eqref{A-intersection} in all other cases.
     </ListBlockItem>
   </ListBlock>

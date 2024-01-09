@@ -21,17 +21,17 @@
 
   <p>Huffman coding works as follows:</p>
 
-  <ListBlock>
-    <ListBlockItem bullet="1.">
+  <ListBlock ordered>
+    <ListBlockItem>
       For each distinct symbol $s_i$ in the data, count its number of
       occurrences $n_{s_i}$, where $i = 1, \ldots, N$. Here, $N$ represents the
       size of the alphabet.
     </ListBlockItem>
-    <ListBlockItem bullet="2.">
+    <ListBlockItem>
       For each distinct symbol $s_i$, generate a tree containing a single node
       with key $s_i$ and weight $n_{s_i}$.
     </ListBlockItem>
-    <ListBlockItem bullet="3.">
+    <ListBlockItem>
       Select the two trees with the smallest root node weights and merge them
       under a new root node. The key of this new root node is the concatenation
       of the keys of the root nodes of the merged trees, and its weight is the
@@ -40,10 +40,10 @@
       respectively, we put them under a new root node with key
       $\alpha_j\alpha_k$ and weight $w_j + w_k$.
     </ListBlockItem>
-    <ListBlockItem bullet="4.">
+    <ListBlockItem>
       If only a single tree remains, stop. Otherwise, return to step 3.
     </ListBlockItem>
-    <ListBlockItem bullet="5.">
+    <ListBlockItem>
       The encoding of each symbol is derived from the bit sequence formed during
       the traversal of the final tree, starting from the root node and ending at
       the node containing the symbol as a key. We append a

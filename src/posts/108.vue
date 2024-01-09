@@ -305,18 +305,18 @@
     happen:
   </p>
 
-  <ListBlock>
-    <ListBlockItem bullet="1.">
+  <ListBlock ordered>
+    <ListBlockItem>
       If the result-handler callback invoked by the original promise returns a
       non-promise value, the then-promise will be resolved with that value,
       i.e., its success handler will be called with that value as an argument.
     </ListBlockItem>
-    <ListBlockItem bullet="2.">
+    <ListBlockItem>
       If the result-handler callback invoked by the original promise throws an
       exception, the then-promise will be rejected with that exception, i.e.,
       its failure handler will be invoked with that exception as an argument.
     </ListBlockItem>
-    <ListBlockItem bullet="3.">
+    <ListBlockItem>
       If the result-handler callback invoked by the original promise returns a
       promise, the success and failure handlers of the then-promise will be used
       as success and failure handlers for the returned promise, respectively.

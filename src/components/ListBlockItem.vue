@@ -9,9 +9,15 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+import { computed, inject } from "vue";
+
+const props = defineProps<{
   bullet?: string;
 }>();
+
+const bullet = computed(
+  () => props.bullet || (inject("bulletIterator") as () => string)()
+);
 </script>
 
 <style scoped lang="scss">

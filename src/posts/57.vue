@@ -73,15 +73,15 @@
     within $G$, it will manifest during the BFS in one of the following ways:
   </p>
 
-  <ListBlock>
-    <ListBlockItem bullet="1.">
+  <ListBlock ordered>
+    <ListBlockItem>
       There will be an integer $n$ such that after exploring all vertices from
       the $n$-th layer and proceeding to explore the vertices on the $(n+1)$-th
       layer, a vertex $z$ on the $(n+1)$-th layer will be reachable from two
       vertices $u$ and $w$ on the $n$-th layer (see
       <FigureLink id="possible-cases" subfigureId="case-1" />).
     </ListBlockItem>
-    <ListBlockItem bullet="2.">
+    <ListBlockItem>
       There will be an integer $n$ such that after exploring all vertices from
       the $n$-th layer and proceeding to explore the vertices on the $(n+1)$-th
       layer, it will be discovered that two vertices $u$ and $w$ on the $n$-th

@@ -91,14 +91,14 @@
     One way to transform "kitten" into "sitting" is described below:
   </p>
 
-  <ListBlock>
-    <ListBlockItem bullet="1.">
+  <ListBlock ordered>
+    <ListBlockItem>
       Substitute "k" by "s": <b>k</b>itten &#8594; <b>s</b>itten.
     </ListBlockItem>
-    <ListBlockItem bullet="2.">
+    <ListBlockItem>
       Substitute "e" by "i": sitt<b>e</b>n &#8594; sitt<b>i</b>n.
     </ListBlockItem>
-    <ListBlockItem bullet="3.">
+    <ListBlockItem>
       Insert "g" at the end: sittin &#8594; sittin<b>g</b>.
     </ListBlockItem>
   </ListBlock>

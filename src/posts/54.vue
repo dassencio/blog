@@ -31,12 +31,12 @@
     at $\Vec{z}$:
   </p>
 
-  <ListBlock>
-    <ListBlockItem bullet="1.">
+  <ListBlock ordered>
+    <ListBlockItem>
       The electric force $q\Vec{E}(\Vec{z})$ acting on $q$ must be zero, i.e.,
       $\Vec{E}(\Vec{z}) = \Vec{0}$.
     </ListBlockItem>
-    <ListBlockItem bullet="2.">
+    <ListBlockItem>
       For a small displacement $\delta\Vec{z}$ of $q$ around $\Vec{z}$, $q
       \Vec{E}(\Vec{z} + \delta\Vec{z})$ must point toward $\Vec{z}$.
     </ListBlockItem>

@@ -93,18 +93,18 @@
     applies if $\Vec{X}$ lies on $\Vec{PQ}$):
   </p>
 
-  <ListBlock>
-    <ListBlockItem bullet="1.">
+  <ListBlock ordered>
+    <ListBlockItem>
       Compute $\lambda_\Vec{S}$ using equation
       \eqref{lambda-closest-point-line}.
     </ListBlockItem>
-    <ListBlockItem bullet="2.">
+    <ListBlockItem>
       If $\lambda_\Vec{S} \leq 0$, then $\Vec{S} = \Vec{P}$.
     </ListBlockItem>
-    <ListBlockItem bullet="3.">
+    <ListBlockItem>
       If $\lambda_\Vec{S} \geq 1$, then $\Vec{S} = \Vec{Q}$.
     </ListBlockItem>
-    <ListBlockItem bullet="4.">
+    <ListBlockItem>
       If $0 \lt \lambda_\Vec{S} \lt 1$, then $\Vec{S} = \Vec{P} +
       \lambda_\Vec{S}(\Vec{Q} - \Vec{P})$.
     </ListBlockItem>

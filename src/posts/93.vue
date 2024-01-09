@@ -43,12 +43,12 @@
     function is called:
   </p>
 
-  <ListBlock>
-    <ListBlockItem bullet="1.">
+  <ListBlock ordered>
+    <ListBlockItem>
       The types of its parameters don't always match the types of their
       associated arguments.
     </ListBlockItem>
-    <ListBlockItem bullet="2.">
+    <ListBlockItem>
       User-defined types come with their own constructors, which means a
       parameter of a user-defined type can potentially be initialized in
       multiple ways.

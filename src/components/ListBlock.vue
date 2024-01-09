@@ -4,6 +4,20 @@
   </div>
 </template>
 
+<script setup lang="ts">
+import { provide } from "vue";
+
+const props = defineProps<{
+  ordered?: boolean;
+}>();
+
+let currentItemNumber = 1;
+
+provide("bulletIterator", () =>
+  props.ordered ? `${currentItemNumber++}.` : ""
+);
+</script>
+
 <style scoped lang="scss">
 .list {
   display: flex;
