@@ -1,35 +1,36 @@
 import { createStore } from "vuex";
 
-interface ElementWithId {
+interface Element {
   id: string;
+  parentId?: string;
 }
 
-type Figure = ElementWithId;
-type Reference = ElementWithId;
-type Table = ElementWithId;
+type ElementWithParent = Element & { parentId: string };
 
-interface Subfigure extends ElementWithId {
-  parentId: string;
-}
+type Figure = Element;
+type Reference = Element;
+type Subfigure = ElementWithParent;
+type Table = Element;
 
 interface State {
   figures: Figure[];
-  subfigures: Subfigure[];
   references: Reference[];
+  subfigures: Subfigure[];
   tables: Table[];
 }
 
-function findElementIndex(elements: ElementWithId[], element: ElementWithId) {
-  return elements.findIndex((_element) => _element.id === element.id);
-}
-
-function findSubfigureIndex(subfigures: Subfigure[], subfigure: Subfigure) {
-  return findElementIndex(
-    subfigures.filter(
-      (_subfigure) => _subfigure.parentId === subfigure.parentId
-    ),
-    subfigure
-  );
+/**
+ * Determines the index of an element among its siblings.
+ *
+ * @param elements Array of elements to search.
+ * @param element Element to find.
+ * @returns Index of the element, or -1 if not found.
+ */
+function findElementIndex(elements: Element[], element: Element) {
+  const siblings = element.parentId
+    ? elements.filter((_element) => _element.parentId === element.parentId)
+    : elements;
+  return siblings.findIndex((_sibling) => _sibling.id === element.id);
 }
 
 const store = createStore<State>({
@@ -49,7 +50,7 @@ const store = createStore<State>({
       return findElementIndex(state.references, reference) + 1;
     },
     subfigureLabel: (state) => (subfigure: Subfigure) => {
-      const subfigureIndex = findSubfigureIndex(state.subfigures, subfigure);
+      const subfigureIndex = findElementIndex(state.subfigures, subfigure);
       return subfigureIndex !== -1
         ? String.fromCharCode(97 + subfigureIndex)
         : "?";
@@ -72,7 +73,7 @@ const store = createStore<State>({
       state.references.push(reference);
     },
     storeSubfigure(state, subfigure: Subfigure) {
-      if (findSubfigureIndex(state.subfigures, subfigure) !== -1) {
+      if (findElementIndex(state.subfigures, subfigure) !== -1) {
         throw new Error(`Duplicate subfigure ID: ${subfigure.id}`);
       }
       state.subfigures.push(subfigure);
