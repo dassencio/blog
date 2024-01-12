@@ -77,7 +77,7 @@
 
     // Request a file. Handle success and failure separately.
     try {
-      const contents = getFile("files/John.json");
+      const contents = getFile("/files/John.json");
       console.log("File contents:\n" + contents);
     }
     catch (error) {
@@ -88,7 +88,7 @@
 
   <p>
     Our intention in the program above is to asynchronously download a
-    <a href="files/John.json">JSON file</a>
+    <a href="/files/John.json">JSON file</a>
     and handle success (file downloaded) by printing its contents and failure
     (file not downloaded) by throwing an exception. If you do not understand all
     the technical aspects of the program, read it this way:
@@ -142,7 +142,7 @@
   <CodeBlock
     language="js"
     code='
-    const fileUrl = "files/John.json";
+    const fileUrl = "/files/John.json";
 
     function getFile(succeed, fail) {
       // Prepare an asynchronous request for fileUrl.
@@ -280,15 +280,15 @@
     }
 
     // Request a file. Handle success and failure separately.
-    getFile("files/John.json").then(displayFile, printError);
+    getFile("/files/John.json").then(displayFile, printError);
     '
   />
 
   <p>
     The last line of this program deserves appreciation: it clearly communicates
-    that we want to fetch the file <code>files/John.json</code> and then display
-    its contents if the file request succeeds or print an error message if it
-    fails.
+    that we want to fetch the file <code>/files/John.json</code> and then
+    display its contents if the file request succeeds or print an error message
+    if it fails.
   </p>
 
   <p>
@@ -442,9 +442,9 @@ function printError(error) {
   console.log("Something went wrong: " + error);
 }
 
-getFile("files/John.json").then(getAge)
-                          .then(addTen)
-                          .then(printResult, printError);
+getFile("/files/John.json").then(getAge)
+                           .then(addTen)
+                           .then(printResult, printError);
 `;
 
 const jsCodeExample2 = `
@@ -468,9 +468,9 @@ function printError(error) {
   console.log("Something went wrong: " + error);
 }
 
-getFile("files/John.json").then(getAge)
-                          .then(addTen)
-                          .then(printResult, printError);
+getFile("/files/John.json").then(getAge)
+                           .then(addTen)
+                           .then(printResult, printError);
 `;
 
 const jsCodeExample3 = `
@@ -482,7 +482,7 @@ function getMotherFile(jsonData) {
   const motherName = JSON.parse(jsonData).mother;
 
   // Return a promise.
-  return getFile("files/" + motherName + ".json");
+  return getFile("/files/" + motherName + ".json");
 }
 
 function printAge(jsonData) {
@@ -493,7 +493,7 @@ function printError(error) {
   console.log("Something went wrong: " + error);
 }
 
-getFile("files/John.json").then(getMotherFile)
-                          .then(printAge, printError);
+getFile("/files/John.json").then(getMotherFile)
+                           .then(printAge, printError);
 `;
 </script>

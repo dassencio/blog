@@ -301,7 +301,7 @@
     encouraged to prove the equation below on their own. This derivation is an
     excellent opportunity to gain a deeper understanding of everything covered
     so far. For assistance, there is plenty of helpful material available
-    <a href="files/hydrogen-energy-eigenvalues.pdf">here</a>:
+    <a href="/files/hydrogen-energy-eigenvalues.pdf">here</a>:
   </p>
 
   <EquationBlock> [A_i, A_j] = -i \hbar 2m \epsilon_{ijk} L_k H </EquationBlock>
