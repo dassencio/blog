@@ -16,7 +16,7 @@ const props = defineProps<{
 }>();
 
 const bullet = computed(
-  () => props.bullet || (inject("bulletIterator") as () => string)()
+  () => props.bullet ?? (inject("bulletIterator") as () => string)()
 );
 </script>
 

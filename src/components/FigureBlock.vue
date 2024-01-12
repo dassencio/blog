@@ -19,7 +19,7 @@ const props = defineProps<{
 const store = useStore();
 
 const figure = {
-  id: props.id || _.uniqueId("__figure__"),
+  id: props.id ?? _.uniqueId("__figure__"),
 };
 
 store.dispatch("registerFigure", figure);

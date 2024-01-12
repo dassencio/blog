@@ -2,7 +2,7 @@
   <ListBlockItem :id="referenceHtmlId" :bullet="`[${referenceNumber}]`">
     <a :href="url"
       ><i>{{ title }}</i></a
-    >{{ displayAuthors(authors || []) }}
+    >{{ displayAuthors(authors ?? []) }}
   </ListBlockItem>
 </template>
 
@@ -31,7 +31,7 @@ const props = defineProps<{
 const store = useStore();
 
 const reference = {
-  id: props.id || _.uniqueId("__reference__"),
+  id: props.id ?? _.uniqueId("__reference__"),
 };
 
 store.dispatch("registerReference", reference);

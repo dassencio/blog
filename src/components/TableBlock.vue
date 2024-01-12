@@ -25,7 +25,7 @@ const props = defineProps<{
 const store = useStore();
 
 const table = {
-  id: props.id || _.uniqueId("__table__"),
+  id: props.id ?? _.uniqueId("__table__"),
 };
 
 store.dispatch("registerTable", table);

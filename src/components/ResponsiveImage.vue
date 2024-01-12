@@ -1,5 +1,5 @@
 <template>
-  <a class="image" :href="link || src">
+  <a class="image" :href="link ?? src">
     <img class="image__file" :alt="alt" :src="src" />
   </a>
 </template>

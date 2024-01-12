@@ -17,7 +17,7 @@ const props = defineProps<{
 const store = useStore();
 
 const subfigure = {
-  id: props.id || _.uniqueId("__subfigure__"),
+  id: props.id ?? _.uniqueId("__subfigure__"),
   parentId,
 };
 
