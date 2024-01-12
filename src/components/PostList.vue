@@ -20,7 +20,7 @@ import { useRoute } from "vue-router";
 import PostListItem from "@/components/PostListItem.vue";
 import { onViewMounted, onViewUpdated } from "@/functions";
 import posts from "@/posts";
-import type { PostLabel } from "@/types";
+import type { PostLabel } from "@/posts";
 
 const route = useRoute();
 const label = computed(() => route.query.label as PostLabel);

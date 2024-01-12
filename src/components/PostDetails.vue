@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Post } from "@/types";
+import type { Post } from "@/posts";
 
 defineProps<{
   post: Post;
