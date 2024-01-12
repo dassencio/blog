@@ -50,7 +50,6 @@ export enum PostLabel {
 }
 
 export interface Post {
-  author?: string;
   compatibilityIndex: string;
   component: () => Promise<RouteComponent>;
   date: string;
