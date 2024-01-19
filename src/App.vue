@@ -1,15 +1,19 @@
 <template>
   <NavBar />
-  <main class="view">
-    <PostHeader v-if="post" :post="post" />
-    <RouterView />
-  </main>
+  <div class="view">
+    <main>
+      <PostHeader v-if="post" :post="post" />
+      <RouterView />
+    </main>
+    <PostFooter v-if="post" :post="post" />
+  </div>
 </template>
 
 <script setup lang="ts">
 import { computed, watch } from "vue";
 import { useRoute } from "vue-router";
 import NavBar from "@/components/NavBar.vue";
+import PostFooter from "@/components/PostFooter.vue";
 import PostHeader from "@/components/PostHeader.vue";
 import posts from "@/posts";
 
