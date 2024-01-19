@@ -96,3 +96,13 @@ $view-title-font-size: 1.6 * $base-length;
  *                                            $view-paragraph-font-size)
  */
 $view-vertical-correction-padding: 0.3 * $base-length;
+
+// Styling for post footer.
+$post-footer-link-font-size: 0.9 * $base-length;
+$post-footer-links-horizontal-gap: 2 * $base-length;
+$post-footer-links-vertical-gap: $base-length;
+$post-footer-links-vertical-margin: $base-length;
+$post-footer-separator-circle-color: #a8a8a8;
+$post-footer-separator-circle-radius: 0.3125 * $base-length;
+$post-footer-separator-horizontal-gap: 1.5 * $base-length;
+$post-footer-separator-vertical-margin: 2.5 * $base-length;
