@@ -7,6 +7,7 @@
 </template>
 
 <script setup lang="ts">
+import { removeExcessIndentation } from "@/functions";
 import type { Post } from "@/posts";
 
 const props = defineProps<{
@@ -19,22 +20,6 @@ const blogUrl = `https://github.com/${blogUser}/${blogRepo}`;
 
 const postSourceUrl = `${blogUrl}/tree/main/src/posts/${props.post.id}.vue`;
 
-// Body of GitHub issue of type "error".
-const errorIssueBody = `
-**Post URL**\n
-${window.location.href}\n
-**Description**\n
-Please describe the error here.
-`;
-
-// Body of GitHub issue of type "question".
-const questionIssueBody = `
-**Post URL**\n
-${window.location.href}\n
-**Question**\n
-Please enter your question here.
-`;
-
 // GitHub issue labels.
 const issueLabel = {
   error: "Error",
@@ -43,12 +28,26 @@ const issueLabel = {
 
 // GitHub issue bodies.
 const issueBody = {
-  error: errorIssueBody,
-  question: questionIssueBody,
+  error: removeExcessIndentation(
+    `
+    **Post URL**\n
+    ${window.location.href}\n
+    **Description**\n
+    Please describe the error here.
+    `
+  ).trim(),
+  question: removeExcessIndentation(
+    `
+    **Post URL**\n
+    ${window.location.href}\n
+    **Question**\n
+    Please enter your question here.
+    `
+  ).trim(),
 };
 
 function issueTypeToUrl(issueType: keyof typeof issueLabel) {
-  const body = encodeURIComponent(issueBody[issueType].trim());
+  const body = encodeURIComponent(issueBody[issueType]);
   const label = issueLabel[issueType];
   return `${blogUrl}/issues/new?labels=${label}&assignees=${blogUser}&body=${body}`;
 }
