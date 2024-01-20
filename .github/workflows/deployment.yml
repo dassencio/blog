@@ -41,7 +41,7 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: Production
       url: ${{steps.deployment.outputs.page_url}}
     permissions:
       pages: write
