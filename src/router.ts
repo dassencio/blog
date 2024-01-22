@@ -22,12 +22,14 @@ const routes = [
        * navigation guard is used to redirect them to the new paths.
        */
       const index = to.query.index;
-      const post = posts.find((post) => post.compatibilityIndex === index);
-      if (post) {
-        next({ name: post.id });
-      } else {
-        next();
+      if (index) {
+        const post = posts.find((post) => post.compatibilityIndex === index);
+        if (post) {
+          next({ name: post.id });
+          return;
+        }
       }
+      next();
     },
     component: () => import("@/components/PostList.vue"),
     name: "post-list",

@@ -50,7 +50,7 @@ export enum PostLabel {
 }
 
 export interface Post {
-  compatibilityIndex: string;
+  compatibilityIndex?: string;
   component: () => Promise<RouteComponent>;
   date: string;
   id: string;
