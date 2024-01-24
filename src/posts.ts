@@ -39,6 +39,7 @@ export enum PostLabel {
   RealAnalysis = "Real analysis",
   RelationalAlgebra = "Relational algebra",
   Relativity = "Relativity",
+  Sales = "Sales",
   ScientificComputing = "Scientific computing",
   Security = "Security",
   Shell = "Shell",
@@ -59,6 +60,13 @@ export interface Post {
 }
 
 const posts: Post[] = [
+  {
+    component: () => import("@/posts/111.vue"),
+    date: dateToString(2024, 1, 24),
+    id: "111",
+    labels: [PostLabel.Mathematics, PostLabel.Sales],
+    title: "Splitting sales commission on a per-product basis",
+  },
   {
     compatibilityIndex: "0f43d6be45f8b465dfb74c37fa1a4833",
     component: () => import("@/posts/110.vue"),
