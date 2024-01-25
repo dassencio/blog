@@ -153,8 +153,8 @@
     structure splits commissions on a per-product basis, while preserving the
     same commission formula. For each product $P_i$, denote its sales quota by
     $q_i$, sales volume by $s_i$, on-target commission by $t_i$, and commission
-    earned by $c_i(q_i, s_i, t_i) = t_i h(r_i) = \alpha q_i h(r_i)$, where $r_i
-    = s_i / q_i$ is the quota attainment for $P_i$. The new commission earned is
+    earned by $c(q_i, s_i, t_i) = t_i h(r_i) = \alpha q_i h(r_i)$, where $r_i =
+    s_i / q_i$ is the quota attainment for $P_i$. The new commission earned is
     thus:
   </p>
 
@@ -181,7 +181,7 @@
       &= t
   </EquationBlock>
 
-  <p>where \eqref{on-target-commission} was used in the last step.</p>
+  <p>where equation \eqref{on-target-commission} was used in the last step.</p>
 
   <p>
     At this point, we have all the ingredients we need to define the goal in
