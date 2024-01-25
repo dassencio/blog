@@ -143,9 +143,10 @@
     The key fact to note here is that since $a(r)$ determines the rate at which
     the multiplying factor $h(r)$ increases with respect to the quota attainment
     $r$, $a(r)$ is the derivative of $h(r)$, i.e., $a(r) = h'(r)$. Because
-    $a(r)$ is monotonically increasing, $h(r)$ is a convex function. This
-    convexity property is precisely what will lead to the result that the new
-    commission structure cannot cause a seller to lose money.
+    $a(r)$ is monotonically increasing, $h(r)$ is a
+    <a href="https://en.wikipedia.org/wiki/Convex_function">convex function</a>.
+    This convexity property is precisely what will lead to the result that the
+    new commission structure cannot cause a seller to lose money.
   </p>
 
   <p>
@@ -222,7 +223,7 @@
   <p>Since:</p>
 
   <EquationBlock>
-    \frac{s_1 + s_2}{q_1 + q_2} = \frac{r_1 q_1 + r_2 q_2}{q_1 + q_2} = \lambda
+    \frac{s_1 + s_2}{q_1 + q_2} = \frac{q_1 r_1 + q_2 r_2}{q_1 + q_2} = \lambda
     r_1 + (1 - \lambda) r_2
   </EquationBlock>
 
@@ -261,7 +262,7 @@
     binary splits, and each of these splits will result in a non-negative
     increase in earnings in the same way as we have shown above. Additionally,
     the same result will hold even if the commission structure differs per
-    product, provided that the commission formula for each product has an
+    product, provided that the commission formula for each product $P_i$ has an
     associated function $h_i(r) \geq h(r)$, i.e., that the multiplying factors
     for each product are at least as high as those under the initial commission
     structure.
