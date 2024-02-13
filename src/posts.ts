@@ -61,6 +61,13 @@ export interface Post {
 
 const posts: Post[] = [
   {
+    component: () => import("@/posts/112.vue"),
+    date: dateToString(2024, 2, 13),
+    id: "112",
+    labels: [PostLabel.Physics, PostLabel.Thermodynamics],
+    title: "The energy equivalent of the mass in a human body",
+  },
+  {
     component: () => import("@/posts/111.vue"),
     date: dateToString(2024, 1, 24),
     id: "111",

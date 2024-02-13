@@ -78,6 +78,7 @@ window.MathJax = {
       Kilogram: "\\,\\mathrm{kg}",
       Kilojoule: "\\,\\mathrm{kJ}",
       Kilometer: "\\,\\mathrm{km}",
+      Megaton: "\\,\\mathrm{Mt}",
       Meter: "\\,\\mathrm{m}",
       Milliampere: "\\,\\mathrm{mA}",
       Picometer: "\\,\\mathrm{pm}",
