@@ -61,6 +61,13 @@ export interface Post {
 
 const posts: Post[] = [
   {
+    component: () => import("@/posts/113.vue"),
+    date: dateToString(2024, 2, 25),
+    id: "113",
+    labels: [PostLabel.Physics, PostLabel.Relativity],
+    title: "A deep dive into the twin paradox",
+  },
+  {
     component: () => import("@/posts/112.vue"),
     date: dateToString(2024, 2, 13),
     id: "112",
