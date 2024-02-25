@@ -65,7 +65,7 @@ const posts: Post[] = [
     date: dateToString(2024, 2, 25),
     id: "113",
     labels: [PostLabel.Physics, PostLabel.Relativity],
-    title: "A deep dive into the twin paradox",
+    title: "An in-depth exploration of the twin paradox",
   },
   {
     component: () => import("@/posts/112.vue"),
