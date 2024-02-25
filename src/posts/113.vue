@@ -24,10 +24,10 @@
   </p>
 
   <p>
-    Consider the following scenario: one of the twins, whom we shall refer to as
-    the "rocket twin", always travels along the $x$ axis. Their position at time
-    $t$ relative to the Earth is denoted by $x(t)$, where $t$ represents the
-    time measured by a clock on Earth. At any given time $t$, we will denote
+    Consider the following scenario: the traveling twin, whom we shall refer to
+    as the "rocket twin", always travels along the $x$ axis. Their position at
+    time $t$ relative to the Earth is denoted by $x(t)$, where $t$ represents
+    the time measured by a clock on Earth. At any given time $t$, we will denote
     $S_t'$ as the instantaneous rest frame of the rocket twin, that is, the
     frame whose origin coincides with the position of the rocket twin at time
     $t$ and moves at the same velocity as the rocket twin (see
@@ -63,15 +63,15 @@
 
   <p>
     Given that $S_t'$ is instantaneously traveling together with the rocket
-    twin, a clock situated at the origin of $S_t'$ will, for a brief period
-    $\Di{\tau}$ (experienced in $S_t'$), tick at the same rate as a clock
+    twin, a clock situated at the origin of $S_t'$ will, for a brief period of
+    time $\Di{\tau}$ (experienced in $S_t'$), tick at the same rate as a clock
     carried by the rocket twin (i.e., both clocks will remain synchronized
-    during $\Di{\tau}$). By dividing the journey of the rocket twin into
-    infinitesimal segments, we can determine the rocket twin's aging by summing
-    up the time experienced by the clock in each frame $S_t'$ associated with
-    these segments. This cumulative time is referred to as the
-    <a href="https://en.wikipedia.org/wiki/Proper_time">proper time</a>
-    ($\tau$) of the rocket twin, a key concept in special relativity.
+    during $\Di{\tau}$). Therefore, by dividing the journey of the rocket twin
+    into infinitesimal segments, we can determine their aging by summing up the
+    time experienced by the clocks in each frame $S_t'$ associated with these
+    segments. This cumulative time is referred to as the
+    <a href="https://en.wikipedia.org/wiki/Proper_time">proper time</a> ($\tau$)
+    of the rocket twin, a key concept in special relativity.
   </p>
 
   <p>
@@ -97,9 +97,7 @@
     moving relative to the Earth. If the rocket twin travels at a constant
     velocity, they will also perceive the Earth twin's clock to be ticking
     slower than their own. This time dilation effect is reciprocal and stems
-    from the relativity of simultaneity. Events deemed simultaneous in one frame
-    of reference may not be regarded as simultaneous in another frame of
-    reference in motion relative to the first.
+    from the relativity of simultaneity.
   </p>
 
   <p>
@@ -132,13 +130,15 @@
     returns and comes to rest at time $t = T_{\textrm{total}}$ (i.e.,
     $x(T_{\textrm{total}}) = 0$ and $v(T_{\textrm{total}}) = 0$). At both $t =
     0$ and $t = T_{\textrm{total}}$, the frame of reference for the rocket twin
-    is identical to that of the Earth twin. For such a journey, $v(t) \neq 0$
-    (and thus $\sqrt{1 - v(t)^2 / c^2} \lt 1$) must hold for at least parts of
-    the journey. Hence, equation \eqref{tau} implies that the rocket twin
-    experiences less time than the Earth twin. As mentioned earlier, it is the
-    acceleration that causes the rocket twin to age less than the Earth twin,
-    breaking the relativity of simultaneity between the two frames. This
-    phenomenon is the essence of the twin paradox.
+    is identical to that of the Earth twin, meaning their clocks tick at the
+    same rate. At $t = T_{\textrm{total}}$, being in identical frames of
+    reference, the twins can directly compare their clocks to determine their
+    age difference, if any. Given that $v(t) \neq 0$ (and thus $\sqrt{1 - v(t)^2
+    / c^2} \lt 1$) for portions of the journey, equation \eqref{tau} implies
+    that the rocket twin will have experienced less time than the Earth twin. As
+    mentioned earlier, it is the acceleration that leads the rocket twin to age
+    less than the Earth twin, disrupting the relativity of simultaneity between
+    the two frames. This phenomenon is the essence of the twin paradox.
   </p>
 
   <p>
@@ -149,9 +149,9 @@
   <SectionTitle>Example #1: One-way journey</SectionTitle>
 
   <p>
-    Our first example involves the rocket traveling away from the Earth and then
-    coming to a complete stop. The velocity of the rocket twin as observed by
-    the Earth twin is described by:
+    Our first example involves the rocket twin traveling away from the Earth and
+    then coming to a complete stop. The velocity of the rocket twin as observed
+    by the Earth twin is described by:
   </p>
 
   <!-- prettier-ignore -->
@@ -322,7 +322,7 @@
     Let us now explore the problem further by considering a round-trip journey.
     We assume that the rocket twin turns around at $t = 2T$ and heads back to
     Earth in a way that mirrors the initial motion. The equation of motion for
-    this return journey is described as follows:
+    the full journey is described as follows:
   </p>
 
   <!-- prettier-ignore -->
