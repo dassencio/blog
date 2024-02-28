@@ -207,10 +207,10 @@
     Since, at time $t = 2T$, both the Earth twin and the rocket twin no longer
     move with respect to each other, their clocks will start ticking at the same
     rate. The rocket twin can then send a signal to the Earth twin showing the
-    current time on their clock, allowing the Earth twin to compare that
-    measurement with the time at which the rocket stopped moving ($2T$). The
-    discrepancy between these two times will reveal whether the rocket twin has
-    aged more or less than the Earth twin.
+    current time $\tau_1$ on their clock, allowing the Earth twin to compare
+    that measurement with the time at which the rocket stopped moving ($2T$).
+    The discrepancy between these two times will reveal whether the rocket twin
+    has aged more or less than the Earth twin.
   </p>
 
   <p>From equation \eqref{tau}, we have:</p>
@@ -218,6 +218,7 @@
   <!-- prettier-ignore -->
   <EquationBlock split label="tau-1">
     \tau_1
+      &= \int_0^{2T} \sqrt{1 - \frac{v_1(t)^2}{c^2}} \D{t} \\
       &= \int_0^T \sqrt{1 - \frac{(at)^2}{c^2}} \D{t} +
          \int_T^{2T} \sqrt{1 - \frac{\left[
            v_{\textrm{max}} - a(t - T)
