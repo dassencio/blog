@@ -31,28 +31,28 @@
     between the features of a car. A car is indeed a complex system, and
     comprehending how its features interact is crucial for its effective
     operation. If a car possesses $n$ features, the total number of pairwise
-    feature interactions, denoted as $N^{\small{(2)}}$, equates to the total
-    number of possible
+    feature interactions, denoted as $N^\SupPar{2}$, equates to the total number
+    of possible
     <a href="https://en.wikipedia.org/wiki/Combinations">combinations</a> of two
     from those $n$ features:
   </p>
 
   <EquationBlock>
-    N^{\small{(2)}} = \binom{n}{2} = \frac{n!}{2!(n-2)!} = \frac{n(n-1)}{2} =
+    N^\SupPar{2} = \binom{n}{2} = \frac{n!}{2!(n-2)!} = \frac{n(n-1)}{2} =
     \frac{1}{2}(n^2 - n)
   </EquationBlock>
 
   <p>
     This result is quite revealing: the number of pairwise feature interactions
     grows quadratically as the number of features increases. Naturally, one
-    might inquire about the number of possible interactions, $N^{\small{(3)}}$,
+    might inquire about the number of possible interactions, $N^\SupPar{3}$,
     when three features are involved. This corresponds to the total number of
     possible combinations of three out of the $n$ features:
   </p>
 
   <EquationBlock>
-    N^{\small{(3)}} = \binom{n}{3} = \frac{n!}{3!(n-3)!} = \frac{n(n-1)(n-2)}{6}
-    = \frac{1}{6}(n^3 - 3n^2 + 2n)
+    N^\SupPar{3} = \binom{n}{3} = \frac{n!}{3!(n-3)!} = \frac{n(n-1)(n-2)}{6} =
+    \frac{1}{6}(n^3 - 3n^2 + 2n)
   </EquationBlock>
 
   <p>
@@ -64,7 +64,7 @@
 
   <!-- prettier-ignore -->
   <EquationBlock split label="N">
-    N &= N^{\small{(2)}} + N^{\small{(3)}} + \ldots + N^{\small{(n)}} \\
+    N &= N^\SupPar{2} + N^\SupPar{3} + \ldots + N^\SupPar{n} \\
       &= \binom{n}{2} + \binom{n}{3} + \ldots + \binom{n}{n} \\
       &= \sum_{k=0}^n \binom{n}{k} - \binom{n}{1} - \binom{n}{0} \\
       &= \sum_{k=0}^n \binom{n}{k} - n - 1

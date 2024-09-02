@@ -51,6 +51,7 @@ window.MathJax = {
       Real: "\\mathbb{R}", // Real numbers.
       Size: "\\mathrm{size}", // Size operator.
       SumSub: ["\\mathop{\\sum_{#1}}_{#2}", 2], // Sum with two subscripts.
+      SupPar: ["{\\small{(#1)}}", 1], // Superscripted label with parentheses.
       Vec: ["\\mathbf{#1}", 1], // Vector notation for Latin symbols.
       Vecg: ["\\pmb{#1}", 1], // Vector notation for Greek symbols.
 

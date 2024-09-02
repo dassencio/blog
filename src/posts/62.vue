@@ -164,14 +164,14 @@
 
   <p>
     The Huffman encoding of the text is clearly more efficient than the ASCII
-    one, but by how much? If $L^{\small{(\textrm{A})}}_{s_i}$ represents the
-    number of bits used to encode the letter $s_i$ in the alphabet using ASCII,
-    then the total number of bits needed to represent the character sequence
-    using ASCII is:
+    one, but by how much? If $L^\SupPar{\textrm{A}}_{s_i}$ represents the number
+    of bits used to encode the letter $s_i$ in the alphabet using ASCII, then
+    the total number of bits needed to represent the character sequence using
+    ASCII is:
   </p>
 
   <EquationBlock>
-    N^{\small{(\textrm{A})}} = \sum_i L^{\small{(\textrm{A})}}_{s_i} n_{s_i} = 8
+    N^\SupPar{\textrm{A}} = \sum_i L^\SupPar{\textrm{A}}_{s_i} n_{s_i} = 8
     n_{\textrm{A}} + 8 n_{\textrm{B}} + 8 n_{\textrm{C}} + 8 n_{\textrm{D}} =
     160
   </EquationBlock>
@@ -179,7 +179,7 @@
   <p>The equivalent quantity for the Huffman encoding is:</p>
 
   <EquationBlock>
-    N^{\small{(\textrm{H})}} = \sum_i L^{\small{(\textrm{H})}}_{s_i} n_{s_i} = 1
+    N^\SupPar{\textrm{H}} = \sum_i L^\SupPar{\textrm{H}}_{s_i} n_{s_i} = 1
     n_{\textrm{A}} + 2 n_{\textrm{B}} + 3 n_{\textrm{C}} + 3 n_{\textrm{D}} = 31
   </EquationBlock>
 

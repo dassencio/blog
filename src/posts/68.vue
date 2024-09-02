@@ -74,23 +74,23 @@
     \eqref{mean-recursive}, suppose we roll a six-faced dice $n$ times and
     compute the mean value of the face that lands upward (the dice does not have
     to be fair). Let's say each face $k = 1, 2, \ldots, 6$ lands upward $n_k$
-    times. The exact mean value $\mu^{\small{(e)}}_n$ of the top face is then
-    given by:
+    times. The exact mean value $\mu^\SupPar{e}_n$ of the top face is then given
+    by:
   </p>
 
   <EquationBlock label="dice-mean">
-    \mu^{\small{(e)}}_n = \frac{1}{n} \sum_{i=1}^n x_i = \frac{1}{\sum_{k=1}^6
-    n_k} \sum_{k=1}^6 k n_k = \frac{n_1 + 2 n_2 + 3 n_3 + 4 n_4 + 5 n_5 + 6
-    n_6}{n_1 + n_2 + n_3 + n_4 + n_5 + n_6}
+    \mu^\SupPar{e}_n = \frac{1}{n} \sum_{i=1}^n x_i = \frac{1}{\sum_{k=1}^6 n_k}
+    \sum_{k=1}^6 k n_k = \frac{n_1 + 2 n_2 + 3 n_3 + 4 n_4 + 5 n_5 + 6 n_6}{n_1
+    + n_2 + n_3 + n_4 + n_5 + n_6}
   </EquationBlock>
 
   <p>
     where $x_i$ represents the result of the $i$-th roll. Let's denote the mean
     values computed numerically using equations \eqref{mean} and
-    \eqref{mean-recursive} as $\mu^{\small{(s)}}_n$ and $\mu^{\small{(r)}}_n$,
-    where $s$ and $r$ stand for "sum" and "recursive", respectively. We can
-    assess the accuracy of each technique by comparing these computed values
-    with the exact value $\mu^{\small{(e)}}_n$.
+    \eqref{mean-recursive} as $\mu^\SupPar{s}_n$ and $\mu^\SupPar{r}_n$, where
+    $s$ and $r$ stand for "sum" and "recursive", respectively. We can assess the
+    accuracy of each technique by comparing these computed values with the exact
+    value $\mu^\SupPar{e}_n$.
     <TableLink id="mean-values" capitalized /> presents numerical results
     obtained for various combinations of values for each of the variables $(n_1,
     n_2, \ldots, n_6)$. These results were obtained using
@@ -117,14 +117,14 @@
              sequences of values are used to highlight the effects of finite
              precision arithmetic. All values of $n$ and $n_k$ for $k = 1, 2,
              \ldots, 6$ are shown in millions. Note that the accuracy of
-             $\mu^{\small{(r)}}_n$ is more robust than that of
-             $\mu^{\small{(s)}}_n$."
+             $\mu^\SupPar{r}_n$ is more robust than that of
+             $\mu^\SupPar{s}_n$."
   >
     <span>$n / 10^6$</span>
     <span>$(n_1, n_2, n_3, n_4, n_5, n_6) / 10^6$</span>
-    <span>$\mu^{\small{(e)}}_n$</span>
-    <span>$\mu^{\small{(s)}}_n$</span>
-    <span>$\mu^{\small{(r)}}_n$</span>
+    <span>$\mu^\SupPar{e}_n$</span>
+    <span>$\mu^\SupPar{s}_n$</span>
+    <span>$\mu^\SupPar{r}_n$</span>
 
     <span>$6$</span>
     <span>$(1, 1, 1, 1, 1, 1)$</span>
@@ -153,8 +153,8 @@
 
   <p>
     Below is the script (written in Python 3) that was used to compute the
-    values of $\mu^{\small{(e)}}_n$, $\mu^{\small{(s)}}_n$, and
-    $\mu^{\small{(r)}}_n$ in the table above. You can download it by clicking
+    values of $\mu^\SupPar{e}_n$, $\mu^\SupPar{s}_n$, and $\mu^\SupPar{r}_n$ in
+    the table above. You can download it by clicking
     <a :href="pythonFile" download="mean.py">here</a>.
   </p>
 
