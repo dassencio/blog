@@ -37,6 +37,7 @@ window.MathJax = {
       // General math.
       ColonEq: "\\mathrel{\\vcenter{:}}=", // Equal by definition sign.
       Digits: "\\mathrm{digits}", // Digits operator.
+      Floor: ["\\left\\lfloor#1\\right\\rfloor", 1], // Floor function.
       IdentityMatrixThree: "\\MatrixThreeThree{1}{0}{0}{0}{1}{0}{0}{0}{1}", // 3x3 identity matrix.
       Lev: "\\mathrm{lev}", // Levenshtein distance operator.
       Matrix: ["\\begin{pmatrix}#1\\end{pmatrix}", 1], // Matrix environment.

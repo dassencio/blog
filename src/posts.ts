@@ -13,6 +13,7 @@ export enum PostLabel {
   DSP = "Digital signal processing",
   Electromagnetism = "Electromagnetism",
   FluidDynamics = "Fluid dynamics",
+  GameTheory = "Game theory",
   Geolocation = "Geolocation",
   Geometry = "Geometry",
   Git = "Git",
@@ -60,6 +61,13 @@ export interface Post {
 }
 
 const posts: Post[] = [
+  {
+    component: () => import("@/posts/114.vue"),
+    date: dateToString(2024, 9, 5),
+    id: "114",
+    labels: [PostLabel.GameTheory, PostLabel.Mathematics],
+    title: "Loot division among pirates",
+  },
   {
     component: () => import("@/posts/113.vue"),
     date: dateToString(2024, 2, 25),
