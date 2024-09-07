@@ -82,14 +82,14 @@
     $P_i$ such that $i \lt N - 2$ having been thrown overboard, leaving $P_{N -
     2}$, $P_{N - 1}$, and $P_N$ as the only remaining ones. $P_N$ knows that if
     both he and $P_{N - 1}$ reject $P_{N - 2}$'s proposal, $P_{N - 2}$ will be
-    thrown overboard and $P_{N - 1}$ will become the captain, leading to the
-    coin division $\Vecg{\mu}^\SupPar{N - 1}$ in which $P_N$ will get no coins
-    since $\mu^\SupPar{N - 1}_N = 0$. Therefore, as long as $P_N$ is offered
-    more than zero coins, he will accept the proposal, and it will pass because
-    he and $P_{N - 2}$ form a majority. If $P_N$ is offered exactly zero coins,
-    he will reject the proposal out of spite, and $P_{N - 2}$ will be thrown
-    overboard. This means $P_{N - 2}$ can safely propose giving a single coin to
-    $P_N$ and keeping the rest for himself, with $P_{N - 1}$ receiving no coins.
+    thrown overboard and $P_{N - 1}$ will become captain, leading to coin
+    division $\Vecg{\mu}^\SupPar{N - 1}$ in which $P_N$ will get no coins since
+    $\mu^\SupPar{N - 1}_N = 0$. Therefore, as long as $P_N$ is offered more than
+    zero coins, he will accept the proposal, and it will pass because he and
+    $P_{N - 2}$ form a majority. If $P_N$ is offered exactly zero coins, he will
+    reject the proposal out of spite, and $P_{N - 2}$ will be thrown overboard.
+    This means $P_{N - 2}$ can safely propose giving a single coin to $P_N$ and
+    keeping the rest for himself, with $P_{N - 1}$ receiving no coins.
     Therefore:
   </p>
 
@@ -185,8 +185,8 @@
     \mu^\SupPar{k}_{k + 4} = \ldots = 1$. By doing that, $P_k$ wins the votes of
     $P_{k + 2}$, $P_{k + 4}$, $P_{k + 6}$, and so on, because these pirates know
     that if proposal $\Vecg{\mu}^\SupPar{k}$ is rejected, $P_{k + 1}$ will
-    become the new captain, and his proposal $\Vecg{\mu}^\SupPar{k + 1}$ will be
-    such that they will all get zero coins. Therefore, they will vote for the
+    become captain, and his proposal $\Vecg{\mu}^\SupPar{k + 1}$ will be such
+    that they will all get zero coins. Therefore, they will vote for the
     proposal $\Vecg{\mu}^\SupPar{k}$ from $P_k$, since it grants them at least
     one coin each. Combined with $P_k$'s own vote, proposal
     $\Vecg{\mu}^\SupPar{k}$ always gathers enough votes to be accepted, either
@@ -220,7 +220,7 @@
   </EquationBlock>
 
   <p>
-    Equation \eqref{C-k} gives us the number of coins that the original captain
+    Equation \eqref{C-k} gives us the number of coins that the initial captain
     $P_1$ can keep for himself:
   </p>
 
