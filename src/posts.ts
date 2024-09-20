@@ -62,6 +62,13 @@ export interface Post {
 
 const posts: Post[] = [
   {
+    component: () => import("@/posts/115.vue"),
+    date: dateToString(2024, 9, 21),
+    id: "115",
+    labels: [PostLabel.Electromagnetism, PostLabel.Physics],
+    title: "Light is an electromagnetic wave",
+  },
+  {
     component: () => import("@/posts/114.vue"),
     date: dateToString(2024, 9, 5),
     id: "114",

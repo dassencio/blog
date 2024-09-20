@@ -57,18 +57,25 @@ window.MathJax = {
       Vecg: ["\\pmb{#1}", 1], // Vector notation for Greek symbols.
 
       // Differential operators.
+      Curl: "\\nabla \\times", // Curl operator.
       D: ["\\mathop{d#1}", 1], // Differential (with spaces around).
       Di: ["d#1", 1], // Differential (inline, no spaces around).
+      Div: "\\nabla \\cdot", // Divergence operator.
       DD: ["\\frac{d#1}{d#2}", 2], // Derivative (fraction).
       DDi: ["d#1/d#2", 2], // Derivative (inline, flat fraction).
       DDo: ["\\frac{d}{d#1}", 1], // Derivative as an operator (fraction).
+      Grad: "\\nabla", // Gradient operator.
+      Lap: "\\nabla^2", // Laplacian operator.
+      P: ["\\partial_{#1}", 1], // Partial derivative (subscripted).
       PP: ["\\frac{\\partial #1}{\\partial #2}", 2], // Partial derivative (fraction).
       PPo: ["\\frac{\\partial}{\\partial #1}", 1], // Partial derivative as an operator (fraction).
+      PPno: ["\\frac{\\partial^{#1}}{\\partial #2^{#1}}", 2], // N-th partial derivative as an operator (fraction).
 
       // Measurement units.
       Ampere: "\\,\\mathrm{A}",
       Celsius: "\\,\\mathrm{^{\\circ}C}",
       CelsiusSlim: "\\mathrm{^{\\circ}C}",
+      Coulomb: "\\,\\mathrm{C}",
       Day: "\\,\\mathrm{d}",
       Fahrenheit: "\\,\\mathrm{^{\\circ}F}",
       FahrenheitSlim: "\\mathrm{^{\\circ}F}",
