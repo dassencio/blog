@@ -300,7 +300,7 @@
   </EquationBlock>
 
   <p>
-    This implies that $\Vec{E}_0 \cdot \Vec{k} = 0$ and therefore $\Vec{E} \cdot
+    Therefore, $\Vec{E}_0 \cdot \Vec{k} = 0$, which leads to $\Vec{E} \cdot
     \Vec{k} = 0$. In other words, the electric field $\Vec{E}$ is orthogonal to
     both the wave vector $\Vec{k}$ and the magnetic field $\Vec{B}$. Thus, the
     structure of electromagnetic plane waves is such that the electric and
