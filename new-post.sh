@@ -2,20 +2,22 @@
 
 set -e
 
-post_id=$1
-post_file="./src/posts/${post_id}.vue"
+posts_file="./src/posts.ts"
 
-if [ -z "$post_id" ]; then
-    echo "Usage: $0 <post-id>"
+if [ ! -f "$posts_file" ]; then
+    echo "Could not find '$posts_file'."
     exit 1
 fi
 
-if [ -f "$post_file" ]; then
-    echo "File '$post_file' already exists."
-    exit 1
-fi
+last_post_id=$(
+    grep -m1 'id: "' "$posts_file" |
+    sed -E 's/.*id: "([0-9]+)".*/\1/'
+)
 
-cat > "$post_file" <<EOF
+new_post_id=$((last_post_id + 1))
+new_post_file="./src/posts/${new_post_id}.vue"
+
+cat > "$new_post_file" <<EOF
 <template>
 </template>
 
